@@ -1,0 +1,89 @@
+body { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; background-color: black; }
+input[type=text] , textarea { font-family: ComingSoon, Helvetica, Arial, sans-serif; font-size: 92%; }
+textarea { width: 95%; height: 4em; }
+#slider-positioner { position: relative; width: 906px; height: 600px; margin: 0px auto; overflow: hidden; padding: 0px; background-color: #dadada; }
+
+.plusslider { background-color: #ffffff; }
+.plusslider .child {  }
+.child .header h2 { font-size: 150%; margin-left: 1.5em; font-weight: normal; }
+
+#slider-navigation {  }
+#slider-menu { background-color: rgb(209, 220, 227); background-color: rgba(209, 220, 227, 0.9); border-left: 2px solid #91B1C0; bottom: 0; overflow: visible; padding: 4px; position: absolute; right: 0; top: 0; z-index: 1000; }
+#slider-menu .access-control {
+	cursor: pointer; background-color: #91B1C0; border-radius: 5px 5px 0 0; left: -18px; padding: 4px; position: absolute; top: 24px;
+	font-size: 85%; line-height: .65em;
+	transform: rotate(-90deg) translateY(-.95em); transform-origin: center;
+}
+#slider-menu ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; max-width: 350px; overflow: auto; }
+#slider-menu li { list-style: none; display: block; margin: 0px; padding: 0px; border-bottom: 1px solid #999999; }
+#slider-menu a { display: block; padding: .5em; color: black; text-decoration: none; }
+#slider-menu a:hover { background-color: #AAC0CA; color: #ffffff; text-shadow: 0px 0px 4px #666; }
+#slider-menu a.current { background-color: #91B1C0; }
+#slider-menu .you-are-here { position: absolute; bottom: 0px; color: #999999; text-align: center; }
+#slider-navigation .prev, #slider-navigation .next { z-index: 999; position: absolute; bottom: 20px; background-color: #d1dce5; font-size: 18pt; font-weight: bold; cursor: pointer; border-color: #91b1c0; border-style: solid; }
+#slider-navigation .prev { left: 0px; padding: 10px 10px 10px 5px; border-radius: 0px 30px 30px 0px; border-width: 2px 2px 2px 0px; }
+#slider-navigation .next { right: 0px; padding: 10px 5px 10px 10px; border-radius: 30px 0px 0px 30px; border-width: 2px 0px 2px 2px; }
+
+.mCSB_scrollTools .mCSB_draggerRail { background-color: rgba(55,52,69,.85); }
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { width: 8px; background-color: rgba(209, 220, 227, 0.95); }
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar { background-color: rgba(170, 192, 202, 0.95); }
+.mCSB_scrollTools .mCSB_buttonUp { background-position: -96px 0 }
+.mCSB_scrollTools .mCSB_buttonDown { background-position: -96px -20px }
+
+.child > .scrollable.mCustomScrollbar {
+	background-color: rgb(142,171,197);
+	background-color: rgba(142,171,197,.2);
+	padding: .25em .5em;
+	border-radius: 10px;
+}
+
+.child.activity { background-color: #E4E9CA; }
+.child.activity > .header { height: 65px; left: 0; position: absolute; right: 0; top: 0; z-index: 100; overflow: hidden; }
+.child.activity > .workarea {
+	bottom: 100px; left: 0; overflow: visible; padding: 0 5px; position: absolute; right: 0; top: 65px; z-index: 300;
+	background-color: #e8f0f3; height: 405px; overflow: hidden; padding: 0; position: absolute; top: 65px; width: 100%;
+	box-shadow: 0px 0px 4px #999;
+}
+.child.activity > .workarea > * { overflow: auto; position: absolute; top: 0px; bottom: 0px; width: 100%; }
+
+.child.activity > .instructions {
+	color: black;
+	height: 90px; left: 0px; bottom: 0px; overflow: auto; position: absolute; right: 0px; z-index: 100;
+	margin: 15px 50px; height: 100px; overflow: hidden; left: 0px; right: 0px;
+	font-size: 90%; line-height: 1.4em;
+}
+/* .child.activity > .instructions ol , .child.activity .instructions ul { overflow: auto; max-height: 100%; padding: 0em; margin: .25em; display: block; }
+.child.activity > .instructions li { display: block; padding: 0em; margin: .65em .25em; } */
+.child.activity > .instructions .instructNav { color: orange; text-decoration: none; cursor: pointer; margin: 0em 1em; }
+.child.activity > .instructions p { margin: .35em 0em; }
+
+.child.activity > .instructions .plusslider { background-color: transparent; padding-bottom: 18px; }
+.child.activity > .instructions .plusslider .plusslider-pagination-wrapper { background-color: transparent; background-image: none; height: 16px; opacity: .35 }
+.child.activity > .instructions .plusslider .plusslider-pagination-wrapper ul { margin: 0px auto; padding: 0px; }
+.child.activity > .instructions .plusslider .plusslider-pagination-wrapper .plusslider-pagination li { width: 8px; height: 8px; background-image: url(../media/common/slidernav.png); }
+.child.activity > .instructions .plusslider .plusslider-pagination-wrapper .plusslider-pagination .current, .child.activity .instructions .plusslider .plusslider-pagination-wrapper .plusslider-pagination li:hover { background-position: -18px; }
+
+.child.activity .widget.dataSelect { background-color: #dbd3c1; height: auto; margin: 0 auto; padding: 0 0 1.85em; width: auto; border: none; }
+.child.activity .widget.dataSelect .map-canvas { height: 375px; width: 100%; background-color: #E5E3DF; overflow: hidden; position: relative; }
+.child.activity .widget.dataSelect .map-info { background-color: transparent; border-radius: 0px; box-shadow: none; }
+.child.activity .widget.dataSelect .map-date .toggle { background-color: transparent; border-radius: normal; box-shadow: none; }
+
+.child.activity .widget.statspanel table th { width: 200px; text-align: left; }
+.child.activity .widget.statspanel table th , .child.activity .widget.statspanel table td { border-top: none; border-bottom: 1px solid #c0c0a0; }
+.child.activity .widget.statspanel table tr:last-child th , .child.activity .widget.statspanel table tr:last-child td { border-bottom: none; }
+.child.activity .widget.statspanel table tr:nth-child(n+1) { background-color: #e4e9ca; }
+.child.activity .widget.statspanel table tr:nth-child(2n) { background-color: #faf0ea; }
+.child.activity .widget.statspanel .sunAngle img { max-width: 175px; max-height: 185px; }
+.child.activity .widget.linechart { width: 100%; max-height: none; }
+
+.tooltip { border-bottom: 1px dashed #003333; cursor: help; }
+
+@media print {
+	body { background-color: transparent; }
+	#slider-positioner { width: 100%; height: 100%; overflow: visible; background-color: transparent; padding: 0px; }
+	#slider-navigation { display: none; }
+	#slider .child { page-break-after: always; }
+	#slider > div { overflow: visible; page-break-after: always; }
+	
+	.plusslider .child { float: none; }
+}

@@ -1,0 +1,136 @@
+#introduction { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#introduction > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }
+#introduction ul { list-style-image: url(../media/introduction/bullet.png); }
+#introduction ul li { font-weight: bold; margin: .85em; }
+#introduction .p1 { text-align: center; margin: 2em 8em; }
+#introduction .invite { background-color: rgba(142,171,197,.4); padding: 1em 2em 1em .5em; display: inline-block; text-align: right; margin-left: 12em; }
+
+#the-sun { background-image: url(../media/sun/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
+#the-sun h2 { font-weight: normal; background-color: #6F7171; font-size: 160%; margin-top: 4em; padding-bottom: 0.5em; padding-left: 20px; }
+#the-sun p { margin: .25em; padding-left: 20px; }
+
+#sun-position { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; }
+#sun-position h2 { font-size: 180%; font-weight: normal; padding: .25em .5em; margin: .5em; }
+#sun-position table { margin: .5em 0em 0em 2em; }
+#sun-position td { padding: 1em; }
+#sun-position td:nth-child(2) { padding-top: 0em; }
+#sun-position td .caption { font-size: 80%; }
+
+#activity-intro { background-image: url(../media/activity-intro/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
+#activity-intro h3 { font-weight: normal; background-color: #919191; font-size: 160%; margin-top: 4em; padding: .5em 0em .5em 20px; }
+#activity-intro p { margin: 0; padding-left: 20px; }
+
+#locationExplorer-sample .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#locationExplorer-sample #dataSelector-sample { left: 0px; width: 35%; }
+#locationExplorer-sample #statspanel-sample { right: 0px; width: 63%; padding: 10px; }
+
+#locationExplorer #dataSelector1 { left: 0px; right: 0px; }
+#locationExplorer #statspanel1 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#locationExplorer2 #dataSelector2 { left: 0px; right: 0px; }
+#locationExplorer2 #statspanel2 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#locationExplorer3 #dataSelector3 { left: 0px; right: 0px; }
+#locationExplorer3 #statspanel3 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#locationExplorer-tryit #dataSelector-tryit { left: 0px; right: 0px; }
+#locationExplorer-tryit #statspanel-tryit { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-intro { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-intro > * { margin: .85em 2em; }
+#temperature-intro h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#temperature-select #dataSelector4 { left: 0px; right: 0px; }
+#temperature-select #tempchart1 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-explore #dataSelector5 { left: 0px; right: 0px; }
+#temperature-explore #tempchart3 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-lat #dataSelector6 { left: 0px; right: 0px; }
+#temperature-lat #tempchart4 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-elev-intro { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-elev-intro > * { margin: .85em 2em; }
+#temperature-elev-intro h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#temperature-elev #dataSelector7 { left: 0px; right: 0px; }
+#temperature-elev #tempchart5 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-elev-practice #dataSelector8 { left: 0px; right: 0px; }
+#temperature-elev-practice #tempchart6 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-water-intro { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-water-intro > * { margin: .85em 2em; }
+#temperature-water-intro h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#temperature-water #dataSelector9 { left: 0px; right: 0px; }
+#temperature-water #tempchart7 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-water-lesson { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-water-lesson > * { margin: .85em 2em; }
+#temperature-water-lesson h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#temperature-water-practice #dataSelector10 { left: 0px; right: 0px; }
+#temperature-water-practice #tempchart8 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-review { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-review > * { margin: .85em 2em; }
+#temperature-review h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+#temperature-review > .mCustomScrollBox { margin: 0em 1.5em 0em 0em; }
+#temperature-review > .mCustomScrollBox > .mCSB_container { margin: 0em; }
+#temperature-review > .mCustomScrollBox > .mCSB_container > * { margin: .85em 2em; }
+#temperature-review > .mCustomScrollBox > .mCSB_container > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#daylight-intro .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#daylight-intro #sun-hours-selector-sample { left: 0px; width: 35%; }
+#daylight-intro #sun-hours-graph-sample { right: 0px; width: 63%; padding: 10px; }
+
+#daylight-example1 .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#daylight-example1 #sun-hours-selector-1 { left: 0px; width: 35%; }
+#daylight-example1 #sun-hours-graph-1 { right: 0px; width: 63%; padding: 10px; }
+
+#daylight-example2 .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#daylight-example2 #sun-hours-selector-2 { left: 0px; width: 35%; }
+#daylight-example2 #sun-hours-graph-2 { right: 0px; width: 63%; padding: 10px; }
+
+#daylight-example3 .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#daylight-example3 #sun-hours-selector-3 { left: 0px; width: 35%; }
+#daylight-example3 #sun-hours-graph-3 { right: 0px; width: 63%; padding: 10px; }
+
+#daylight-practice #sun-hours-selector-4 { left: 0px; right: 0px; }
+#daylight-practice #sun-hours-graph-4 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#variable-exploration #variables-selector-1 { left: 0px; right: 0px; }
+#variable-exploration #variables-graph-1 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#relationships-intro { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#relationships-intro > * { margin: .85em 2em; }
+#relationships-intro h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#relationships-intro2 .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#relationships-intro2 #relations-intro2-map { left: 0px; width: 35%; }
+#relationships-intro2 #relations-intro2-graph { right: 0px; width: 63%; padding: 10px; }
+
+#relationships-intro3 .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#relationships-intro3 #relations-intro3-map { left: 0px; width: 35%; }
+#relationships-intro3 #relations-intro3-graph { right: 0px; width: 63%; padding: 10px; }
+
+#relationships-bonaire .workarea .shield { background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; width: 36%; z-index: 1000; }
+#relationships-bonaire #relations-bonaire-map { left: 0px; width: 35%;; }
+#relationships-bonaire #relations-bonaire-graph { right: 0px; width: 63%; padding: 10px; }
+
+#relationships-sun-energy #variables-selection-2 { left: 0px; right: 0px; }
+#relationships-sun-energy #variables-table-2 { right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+#relationships-sun-energy #variables-graph-2 { right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+
+#models-intro { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info1 { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info2 { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info3 { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info4 { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-interstitial1 { background-image: url(../media/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }

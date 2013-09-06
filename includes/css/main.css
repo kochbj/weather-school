@@ -1,0 +1,73 @@
+body {
+    color: #333333;
+    font-family: "Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+}
+a, a.hinted {
+    color: #003399;
+    text-decoration: none;
+}
+a.hinted:visited {
+    color: #660066;
+}
+a .hinted {
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img {
+    border: medium none;
+}
+fieldset {
+    margin: 1em 0;
+}
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin: 0.85em 0 0.5em;
+}
+h1 {
+    font-size: 190%;
+}
+h2 {
+    font-size: 145%;
+    font-weight: bold;
+}
+h3 {
+    font-size: 115%;
+    font-weight: bold;
+}
+h4 {
+    font-size: 100%;
+    font-weight: bold;
+}
+img {
+    box-sizing: content-box;
+}
+table {
+    border-collapse: collapse;
+}
+caption {
+    font-weight: bold;
+    margin-bottom: 0.15em;
+    text-align: left;
+}
+td {
+    vertical-align: top;
+}
+
+.panel-options {
+	float: right;
+	width: 140px;
+	overflow: visible;
+}
+.panel-display {
+	margin-right: 150px;
+	background-color: #f0f0f0;
+}
+
+#content {
+	overflow: visible;
+}

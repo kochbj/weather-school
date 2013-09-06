@@ -1,0 +1,26 @@
+.datepicker
+{
+	text-align: center;
+	padding: 5px;
+}
+.datepicker
+{
+	display: inline-block;
+	padding: 2px .5em 2px 2px;
+	border-radius: 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 78%;
+	font-variant: small-caps;
+}
+.datepicker
+{
+	background: none;
+	border: none;
+	width: 8em;
+	background-color: #ffffff;
+	padding: 2px;
+	border: 1px solid grey;
+	text-align: center;
+}
+
+#ui-datepicker-div { z-index: 1010 !important; }

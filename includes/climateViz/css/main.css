@@ -1,0 +1,20 @@
+.aaas-climate-viz .directions {
+	background-color: orange;
+	border-radius: 15px;
+}
+.aaas-climate-viz .directions .step {
+	background-color: yellow;
+	border: 2px solid orange;
+	border-radius: 14px 14px 14px 14px;
+	display: inline-block;
+	font-size: 78%;
+	line-height: 1.2em;
+	margin: -0.5em 0.5em -0.5em 0em;
+	padding: 0.5em;
+	text-align: center;
+	vertical-align: middle;
+}
+.aaas-climate-viz .directions .step .num {
+	font-size: 200%;
+	font-weight: bold;
+}

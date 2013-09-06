@@ -1,0 +1,65 @@
+.widget.output-table {
+    width: 95%;
+    margin: auto;
+    position: relative;
+}
+
+.widget.output-table > table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333333;
+    font-size: 80%;
+}
+.widget.output-table > table th {
+    border: 1px solid #333333;
+    cursor: pointer;
+}
+.widget.output-table > table td {
+    padding: .25em;
+    border: 1px solid #333333;
+}
+
+.widget.output-table > table .header {
+    background-color: #6699cc;
+}
+.widget.output-table > table .series-header {
+    background-color: #b0daf0;
+}
+
+.widget.output-table > table col.selected-for-graph {
+    background-color: #e0f0ff;
+}
+.widget.output-table > table th.selected-for-graph {
+    background-color: #336699;
+    color: white;
+}
+
+.widget.output-table .loading {
+	width: 100%;
+	height: 100%;
+	background-image: url(media/ajax-loader.gif);
+	background-color: rgba(255,255,255,.6);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+    min-height: 200px;
+}
+
+.widget.output-table .error {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,.6);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+    min-height: 200px;
+}
