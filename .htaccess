@@ -1,3 +1,5 @@
+php_value error_log /home/project2061/weatherschool.p2061.org/phperr.log
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-d

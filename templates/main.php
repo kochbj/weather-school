@@ -9,14 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/css/fonts/ComingSoon/ComingSoon.css" />
 	
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/farbtastic/farbtastic.css" />
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/css/extras.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/css/default.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/css/main.css" />
 	
 	<?php
-	$__local_css =  dirname( $page ) . DIRECTORY_SEPARATOR . basename( $page , '.php' ) . '.css';
+	$__local_css =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . '.css';
 	if ( file_exists( $__local_css ) ) {
 		echo '<link rel="stylesheet" type="text/css" href="' , CLIMATE_DIR_WWW , '/' , str_replace( CLIMATE_DIR , '' , $__local_css ) , '" />';
 	}
@@ -30,7 +29,6 @@
 	
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.regex-selector.js"></script>
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.cookie.js"></script>
-	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/farbtastic/farbtastic.js"></script>
 	
 	<script>
 		var _gaq = _gaq || [];
@@ -72,17 +70,22 @@
 <body>
 	<div class="site-header">
 		<div class="logo"><a href="http://www.project2061.org/"><img src="http://assessment.aaas.org/img/logo-p2061.png" alt="AAAS Project 2061" /></a></div>
-		<h1 style="font-size: 240%;">WeatherSchool@AAAS <sup>beta</sup></h1>
+		<h1 style="font-size: 240%;">WeatherSchool @ AAAS <sup>beta</sup></h1>
 	</div>
 	<div class="site-nav-panel">
 		<div class="navigation">
 			<ul>
 				<li class="<?php echo ( $page == 'home' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/">Home</a></p></li>
-				<li class="<?php echo ( $page == 'module' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/module">Module</a></p></li>
+				<li class="<?php echo ( $page == 'module' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/module">Start the Module</a></p></li>
+				<li class="<?php echo ( $page == 'reports' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/reports">Create &amp; View Reports</a></p></li>
 			</ul>
 		</div>
 		<div id="userControls">
+			<?php if ( isset( $_SESSION['user'] ) ) { ?>
+			Logged in as <?php echo $_SESSION['user']; ?>
+			<?php } else { ?>
 			<a href="<?php echo CLIMATE_DIR_WWW; ?>/login">Login</a> or <a href="<?php echo CLIMATE_DIR_WWW; ?>/register">Register</a>
+			<?php } ?>
 		</div>
 	</div>
 	<div id="body">

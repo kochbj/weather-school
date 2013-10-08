@@ -53,9 +53,9 @@ $( function( ) {
 		$.ajax( {
 			
 			type     : 'GET' ,
-			url      : 'weather-school-replay-data.php' ,
+			url      : 'ajax-data-replay' ,
 			dataType : 'jsonp json' , /* because of IE */
-			data     : { student_id : $.url( ).param( 'id' ) } ,
+			data     : { instance_id : $.url( ).param( 'instance_id' ) , student_id : $.url( ).param( 'student_id' ) } ,
 			
 			success  : function ( data , textStatus , jqXHR ) {
 				replayData = data;
@@ -115,6 +115,10 @@ $( function( ) {
 					onSlide            : function ( psobj ) { psobj.$currentSlide.mCustomScrollbar('scrollTo','top'); }
 				}
 			);
+		} );
+		
+		$( '[data-slide-type="key"]' ).each( function ( idx , el ) {
+			$( '#slider-menu ul' ).append( '<li><a href="#' + $( el ).attr( 'id' ) + '">' + $( el ).data( 'slide-title' ) + '</a></li>' );
 		} );
 		
 		if ( $( location.hash ).index() >= 0 ) {
@@ -241,7 +245,7 @@ function saveData ( evt ) {
 	if ( Object.keys(record).length > 0 ) {
 		$.ajax( {
 			type     : 'POST' ,
-			url      : 'weather-school-save.php' ,
+			url      : 'ajax-data-save' ,
 			dataType : 'jsonp json' , /* because of IE */
 			data     : { value : record }
 		} );

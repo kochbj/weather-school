@@ -1,0 +1,13 @@
+<?php
+
+define( 'DB_USER' , '' );
+define( 'DB_PASSWD' , '' );
+define( 'DB_HOST' , '' );
+define( 'DB_SCHEMA' , '' );
+
+define( 'ADMIN_EMAIL' , '' );
+define( 'ADMIN_NAME' , '' );
+
+define( 'APP_SECURITY_SALT' , '' );
+define( 'APP_SECURITY_HASH' , PASSWORD_BCRYPT );
+define( 'APP_SECURITY_HASH_COST' , 10 );

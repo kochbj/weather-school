@@ -19,7 +19,11 @@ switch ( count( $urlparts ) ) {
 			$page = '404';
 			$page_path = realpath( $handler . DIRECTORY_SEPARATOR . $page . '.php' );
 		}
-		$template = ( $handler == 'pages' ? 'main' : substr( $handler , 0 , -1 ) );
+		if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' ) {
+			$template = 'json';
+		} else {
+			$template = ( $handler == 'pages' ? 'main' : substr( $handler , 0 , -1 ) );
+		}
 }
 
 $__content = '';

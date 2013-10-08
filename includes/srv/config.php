@@ -25,16 +25,17 @@ session_start();
 
 $login = FALSE;
 if ( !isset( $_SESSION['user_id'] ) ) {
-	if ( !in_array( basename( $_SERVER['PHP_SELF'] ), array( 'login.php' , 'index.php' ) ) ) {
+	if ( in_array( basename( $_SERVER['SCRIPT_URL'] ), array( ) ) ) {
 		if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' ) {
 			header( 'X-Authenticated: 0' );
 		} else {
-			header ( 'Location: http://' . $_SERVER['HTTP_HOST'] . CLIMATE_DIR_WWW . '/weather-school/login.php?src=' . urlencode( $_SERVER['REQUEST_URI'] ) );
+			header ( 'Location: http://' . $_SERVER['HTTP_HOST'] . CLIMATE_DIR_WWW . '/login?src=' . urlencode( $_SERVER['REQUEST_URI'] ) );
 			exit( );
 		}
 	}
 } else {
 	$_SESSION['accesstime'] = time( );
+	$login = TRUE;
 	if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' ) {
 		header( 'X-Authenticated: 1' );
 	}

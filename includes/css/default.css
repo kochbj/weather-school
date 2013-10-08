@@ -1272,6 +1272,9 @@ a.button-sm
 input.button {
 	margin: .5em;
 }
+label.error { color: #660000; }
+label.error:after { content: '*'; }
+input.error { background-color: #fff0ea; }
 
 #UserLoginForm label {
 	float: left;
