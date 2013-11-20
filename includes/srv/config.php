@@ -17,7 +17,7 @@ mysql_select_db( DB_SCHEMA ) OR trigger_error( 'Could not select database: ' . m
 mysql_query( 'SET NAMES "utf8"' );
 
 session_name( 'aaas-p2061-climateviz' );
-session_set_cookie_params ( 1200 , CLIMATE_DIR_WWW , $_SERVER['HTTP_HOST'] );
+session_set_cookie_params ( 7200 , CLIMATE_DIR_WWW , $_SERVER['HTTP_HOST'] );
 session_start();
 
 //echo '<pre>',print_r($_SESSION,TRUE),'</pre>';
@@ -25,12 +25,12 @@ session_start();
 
 $login = FALSE;
 if ( !isset( $_SESSION['user_id'] ) ) {
-	if ( in_array( basename( $_SERVER['SCRIPT_URL'] ), array( ) ) ) {
+	if ( in_array( basename( $_SERVER['SCRIPT_URL'] ), array( 'reports' ) ) ) {
 		if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' ) {
 			header( 'X-Authenticated: 0' );
 		} else {
-			header ( 'Location: http://' . $_SERVER['HTTP_HOST'] . CLIMATE_DIR_WWW . '/login?src=' . urlencode( $_SERVER['REQUEST_URI'] ) );
-			exit( );
+			header ( 'Location: http://' . $_SERVER['HTTP_HOST'] . CLIMATE_DIR_WWW . '/login?src=' . urlencode( $_SERVER['REQUEST_URI'] ) , TRUE );
+			exit;
 		}
 	}
 } else {

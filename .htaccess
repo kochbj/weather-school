@@ -1,8 +1,9 @@
 php_value error_log /home/project2061/weatherschool.p2061.org/phperr.log
+php_value session.gc_maxlifetime 7200
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+    RewriteRule ^(.*)$ index.php?_ctrl_url=$1 [QSA,L]
 </IfModule>

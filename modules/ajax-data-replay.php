@@ -19,4 +19,4 @@ if ( isset( $_GET['instance_id'] , $_GET['student_id'] ) ) {
 	
 }
 	
-echo json_encode( $data );
+echo ( isset( $_GET['callback'] ) ? $_GET['callback'] . '(' . json_encode( $data ) . ')' : json_encode( $data ) );

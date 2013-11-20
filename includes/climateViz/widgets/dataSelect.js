@@ -3,6 +3,18 @@ var elevation;
 var places;
 var pService;
 var _colors = {
+	legend : {
+		'00ffff' : 'aqua',
+		'3366cc' : 'blue',
+		'33cc33' : 'green',
+		'00ff00' : 'light green',
+		'cc3333' : 'red',
+		'cccc33' : 'dark yellow',
+		'ffa500' : 'orange',
+		'cc66cc' : 'purple',
+		'ff6666' : 'pink',
+		'60b0b0' : 'teal'
+	} ,
 	colors : {
 		'00ffff' : '#00ffff',
 		'3366cc' : '#3366cc',
@@ -34,6 +46,7 @@ function dataSelect_initialize() {
 
 function dataSelect_instantiate(wInstance) {
 	var myLatlng = new google.maps.LatLng(38,-95);
+	pointInfo({latLng:myLatlng},wInstance);
 	var myOptions = {
 		zoom: 3,
 		center: myLatlng,
@@ -229,7 +242,7 @@ function dataSelect_instantiate(wInstance) {
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('M d', selectedDates[i]) + ' ';
+								displayStr += ' ' + $.datepicker.formatDate('MM d', selectedDates[i]) + ' ';
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 						} else {
@@ -248,7 +261,7 @@ function dataSelect_instantiate(wInstance) {
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('M d', selectedDates[i]) + ' ';
+								displayStr += ' ' + $.datepicker.formatDate('MM d', selectedDates[i]) + ' ';
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 						} else {
@@ -267,7 +280,7 @@ function dataSelect_instantiate(wInstance) {
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('M d', selectedDates[i]) + ' ';
+								displayStr += ' ' + $.datepicker.formatDate('MM d', selectedDates[i]) + ' ';
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 						} else {
@@ -331,7 +344,7 @@ function dataSelect_instantiate(wInstance) {
 				};*/
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+				wInstance.map.date.ui.addClass( wInstance.map.date.width() >= 410 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				wInstance.map.date.ui.events = {
 					onSelect : function ( value , ui ) {
@@ -361,7 +374,7 @@ function dataSelect_instantiate(wInstance) {
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('M d', selectedDates[i]) + ' ';
+								displayStr += ' ' + $.datepicker.formatDate('MM d', selectedDates[i]) + ' ';
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 						} else {
@@ -388,7 +401,7 @@ function dataSelect_instantiate(wInstance) {
 				};
 				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
 					altField        : wInstance.map.date.find( '.input input' ) ,
-					altFormat       : 'M dd' ,
+					altFormat       : 'MM dd' ,
 					changeMonth     : false ,
 					changeYear      : false ,
 					showButtonPanel : false ,
@@ -427,7 +440,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.find('.ui-datepicker').addClass('hideYear');
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
 				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'small' : 'full' ).addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+					$( this ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 					$( this ).parent( ).find( '.visual-control' ).slideToggle();
 				} );
 				wInstance.map.date.find( '.input input' ).val( '' );
@@ -436,7 +449,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				wInstance.map.date.ui.events = {
 					onSelect : function ( value , ui ) {
@@ -466,7 +479,7 @@ function dataSelect_instantiate(wInstance) {
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('M d', selectedDates[i]) + ' ';
+								displayStr += ' ' + $.datepicker.formatDate('MM d', selectedDates[i]) + ' ';
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 						} else {
@@ -495,7 +508,7 @@ function dataSelect_instantiate(wInstance) {
 				};
 				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
 					altField        : wInstance.map.date.find( '.input input' ) ,
-					altFormat       : 'M dd' ,
+					altFormat       : 'MM dd' ,
 					changeMonth     : false ,
 					changeYear      : false ,
 					showButtonPanel : false ,
@@ -549,11 +562,11 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.find('.ui-datepicker').addClass('hideYear');
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
 				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'small' : 'full' ).addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 					$( this ).parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeToggle();
 				} );
 				wInstance.map.date.find( '.input input' ).focus( function ( evt ) {
-					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'small' : 'full' ).addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 					$( this ).parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
 				} );
 				wInstance.map.date.find( '.input input' ).val( '' );
@@ -576,7 +589,7 @@ function dataSelect_instantiate(wInstance) {
 				};*/
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 400 ? 'full' : 'small' );
+				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 400 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
@@ -661,7 +674,7 @@ function dataSelect_instantiate(wInstance) {
 				} );
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
 				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'small' : 'full' ).addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+					$( this ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 					$( this ).parent( ).find( '.visual-control' ).slideToggle();
 				} );
 				wInstance.map.date.find( '.input input' ).val( '' );
@@ -670,7 +683,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.addClass( 'year-month-day-range-alt' ).html( '<div class="start-date"><div class="visual-control inline"><div class="input"><input type="text" placeholder="Start Date" /></div><div class="datepicker"></div></div><div class="toggle"></div></div><div class="end-date"><div class="visual-control inline"><div class="input"><input type="text" placeholder="End Date" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 400 ? 'full' : 'small' );
+				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 400 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
@@ -771,12 +784,12 @@ function dataSelect_instantiate(wInstance) {
 				} );
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
 				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parent( ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'small' : 'full' ).addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+					$( this ).parent( ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 					$( this ).parent( ).siblings( ).find( '.visual-control .datepicker' ).fadeOut();
 					$( this ).parent( ).find( '.visual-control .datepicker' ).fadeToggle();
 				} );
 				wInstance.map.date.find( '.input input' ).focus( function ( evt ) {
-					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'small' : 'full' ).addClass( wInstance.map.date.width() > 200 ? 'full' : 'small' );
+					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 					$( this ).parents( '.map-date' ).find( '.datepicker' ).fadeOut();
 					$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeIn();
 				} );
@@ -801,11 +814,10 @@ function dataSelect_reset () {
 
 // FIXME: make the info display part of the map (i.e. place it in one of the map layers
 function pointInfo (e,wInstance) {
-	wInstance.settings.container.find('.map-info .lat').html('Lat: '+Math.abs(Math.round(e.latLng.lat()*100)/100)+(e.latLng.lat()<0?'S':'N'));
-	wInstance.settings.container.find('.map-info .lng').html('Lng: '+Math.abs(Math.round(e.latLng.lng()*100)/100)+(e.latLng.lng()<0?'W':'E'));
-	wInstance.settings.container.find('.map-info .latlng').html(Math.abs(Math.round(e.latLng.lat()*100)/100)+(e.latLng.lat()<0?'S':'N')+' , '+Math.abs(Math.round(e.latLng.lng()*100)/100)+(e.latLng.lng()<0?'W':'E'));
+	wInstance.settings.container.find('.map-info .lat').html(Math.abs(Math.round(e.latLng.lat()*100)/100)+(e.latLng.lat()<0?'S':'N'));
+	wInstance.settings.container.find('.map-info .lng').html(Math.abs(Math.round(e.latLng.lng()*100)/100)+(e.latLng.lng()<0?'W':'E'));
 	clearTimeout(wInstance.elevUpdateID);
-	wInstance.elevUpdateID = setTimeout("elevation.getElevationForLocations( {locations:[new google.maps.LatLng("+e.latLng.lat()+","+e.latLng.lng()+")]}, function (elevations) { $('" + wInstance.settings.container.selector + "').find('.map-info .elev').html('Elev: '+Math.round((elevations[0].elevation*3.2808399))+'ft'); })",150);
+	wInstance.elevUpdateID = setTimeout("elevation.getElevationForLocations( {locations:[new google.maps.LatLng("+e.latLng.lat()+","+e.latLng.lng()+")]}, function (elevations) { $('" + wInstance.settings.container.selector + "').find('.map-info .elev').html(Math.round((elevations[0].elevation*3.2808399))+'ft'); })",150);
 }
 function pointInfoHide (e,wInstance) { /*wInstance.settings.container.find('.map-info').fadeOut('slow')*/ }
 function pointInfoShow (e,wInstance) { /*wInstance.settings.container.find('.map-info').fadeIn('slow')*/ }
@@ -1256,8 +1268,11 @@ function stationBasedDataFetchAjax ( evt ) {
 				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
 			}
 			// FIXME: use a jQuery-based dialog instead of the browser window so we can limit to one alert
+			console.log($.url( this.url ).param( 'queryID' ) , aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1)
 			if ( $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1 && confirm( 'There was an error retrieving data. Would you like to try again?' ) ) {
 				aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-refresh' } );
+			} else {
+				delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ];
 			}
 		} ,
 		
@@ -1419,7 +1434,7 @@ function calculatedSolarDataFetch( evt ) {
 							dataVal.sunAngle = parseFloat( sunInfo.output_altitude );
 							break;
 						case 'sunHours' :
-							dataVal.sunHours = sunInfo.output_day_length;
+							dataVal.sunHours = ( isNaN( sunInfo.output_day_length ) ? 0 : sunInfo.output_day_length );
 							break;
 						case 'sunEnergyT' :
 							dataVal.sunEnergyT = ( sunPower.length > 1 ? sunPower.reduce( function( a , b ) { return Math.abs( parseFloat( a ) ) + Math.abs( parseFloat( b ) ); } ) : ( sunPower.length == 1 ? sunPower[0] : 0 ) );
@@ -1574,7 +1589,7 @@ function fetchStatsAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
+				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'MM d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 				lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 				lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
@@ -1583,7 +1598,7 @@ function fetchStatsAjax ( evt ) {
 				tempmax : { type : 'float' , label : 'Average high temperature' , labelShort : 'Avg Hi Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F' ; } },
 				sunAngle : { type : 'float' , label : 'Maximum height of the sun in the sky' , labelShort : 'Max Sun Angle' , range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
 				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hrs Light' , range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + ' hours'; } },
-				sunEnergy : { type : 'float' , label : 'Average daily energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '--' : Math.round(val) ) + ' Watt-hours per meter<sup>2</sup> per day'; } },
+				sunEnergy : { type : 'float' , label : 'Energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' Watt-hours per meter<sup>2</sup> per day' ); } },
 				sunEnergyT : { type : 'float' , label : 'Energy from the sun (theoretical)' , labelShort : 'Avg Sun Energy (T)' , range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' Watt-hours per meter<sup>2</sup> per day'; } },
 				sunImage : { type : 'string' , label : 'How the sun appears at its highest point' , labelShort : 'Sun Appearance' , format : function ( val ) { return '<img src="' + val + '" />'; } }
 			};
@@ -1637,7 +1652,7 @@ function fetchStatsAjax ( evt ) {
 						dataVal.sunAngle = parseFloat( sunInfo.output_altitude );
 						break;
 					case 'sunHours' :
-						dataVal.sunHours = sunInfo.output_day_length;
+						dataVal.sunHours = ( isNaN( sunInfo.output_day_length ) ? 0 : sunInfo.output_day_length );
 						break;
 					case 'sunEnergy' :
 						dataVal.sunEnergy = parseFloat( servermsg.results[0].station.avg_energy );
@@ -1674,6 +1689,8 @@ function fetchStatsAjax ( evt ) {
 			// FIXME: use a jQuery-based dialog instead of the browser window so we can limit to one alert
 			if ( $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1 && confirm( 'There was an error retrieving data. Would you like to try again?' ) ) {
 				aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-refresh' } );
+			} else {
+				delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ];
 			}
 		} ,
 		

@@ -3,17 +3,18 @@ ob_start();
 
 require_once 'includes/srv/config.php';
 
-$urlparts = ( isset( $_GET['url'] ) && !empty( $_GET['url'] ) ? explode( '/' , $_GET['url'] ) : array( ) );
+$urlparts = ( isset( $_GET['_ctrl_url'] ) && !empty( $_GET['_ctrl_url'] ) ? explode( '/' , $_GET['_ctrl_url'] ) : array( ) );
 $handler = 'pages';
 $page = 'home';
+$is_deep = false;
 switch ( count( $urlparts ) ) {
-	case 2 :
+	case 2 : case 3 :
 		$handler = array_shift( $urlparts );
 		$handler = ( file_exists( realpath( CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler ) ) ? $handler : 'pages' );
 	case 1 :
 		$page = array_shift( $urlparts );
 	default :
-		$page_path = realpath( $handler . DIRECTORY_SEPARATOR . $page . '.php' );
+		$page_path = realpath( $handler . DIRECTORY_SEPARATOR . $page . ( count( $urlparts ) > 0 && $handler == 'modules' ? DIRECTORY_SEPARATOR . 'slides' : '' ) . '.php' );
 		if ( $page_path === FALSE || strpos( $page_path , CLIMATE_DIR ) === FALSE ) {
 			$handler = 'pages';
 			$page = '404';
@@ -28,7 +29,10 @@ switch ( count( $urlparts ) ) {
 
 $__content = '';
 if ( file_exists( $page_path ) ) {
-	include $page_path;
+	$__content_return = include $page_path;
+	if ( $__content_return == 302 ) {
+		ob_clean(); ob_end_flush(); exit;
+	}
 	$__content = ob_get_clean( );
 }
 

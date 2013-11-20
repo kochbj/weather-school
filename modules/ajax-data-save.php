@@ -19,4 +19,4 @@ if ( mysql_query( $sql_stmt ) && mysql_affected_rows() > 0 ) {
 	$data['status'] = 'not saved';
 }
 
-echo json_encode( $data );
+echo ( isset( $_GET['callback'] ) ? $_GET['callback'] . '(' . json_encode( $data ) . ')' : json_encode( $data ) );

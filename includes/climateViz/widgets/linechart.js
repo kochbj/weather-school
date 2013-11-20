@@ -1,5 +1,5 @@
 function linechart_initialize () {
-	$.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts/regression.js');
+	$.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts.regression.js');
 	
 	aaasClimateViz.widgetLibrary.linechart.status = 'initialized';
 	aaasClimateViz.widgetLibrary.linechart.load();
@@ -179,7 +179,7 @@ function createChart (wInstance) {
 		if (wInstance.chart.chart.type == 'scatter' && dataSeries.length > 1) {
 			wInstance.chart.series.push( {
 				dashStyle           : 'Dash' ,
-				data                : ( fitData( dataSeries ) ).data ,
+				data                : ( fitData( dataSeries ) ).data.sort( function ( a , b ) { return a[0] - b[0]; } ) ,
 				enableMouseTracking : false ,
 				lineWidth           : 1 ,
 				marker              : { enabled : false } ,
@@ -192,11 +192,9 @@ function createChart (wInstance) {
 				events : {
 					checkboxClick : function ( evt ) {
 						evt.checked ? this.show() : this.hide();
-						console.log(evt,this);
 					} ,
 					legendItemClick : function ( evt ) {
 						this.select( !this.visible );
-						console.log(evt,this);
 					}
 				}
 			} );

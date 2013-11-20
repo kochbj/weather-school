@@ -3,8 +3,11 @@ jQuery.fn.exists = function () {
 	return this.length !== 0 && this;
 }
 
-// FIXME: create a tutorial JS library that applies to elements that have a relevant class, e.g. "tutorial latlng"
+var ctrlSlider;
+var prevNextInterval;
+var replayData;
 var slideInit;
+
 function ctrlSlider_cb ( psobj ) {
 	// NOTE: `psobj` is the callback object, `this` contains the slider settings
 	var id = psobj.$currentSlide.attr( 'id' );
@@ -29,22 +32,73 @@ function ctrlSlider_cb ( psobj ) {
 		}
 	}
 	navItem.addClass( 'current' );
-	if ( psobj.currentSlideIndex == 0 ) {
-		$( '#slider-navigation .prev ').hide();
-		$( '#slider-navigation .next ').show();
-	} else if ( psobj.currentSlideIndex == psobj.slideIndexCount ) {
-		$( '#slider-navigation .prev ').show();
-		$( '#slider-navigation .next ').hide();
-	} else {
-		$( '#slider-navigation .prev ').show();
-		$( '#slider-navigation .next ').show();
-	}
-	
-	$( '#slider-menu .you-are-here .screen-num' ).html( psobj.currentSlideIndex + 1 );
+	//if ( psobj.currentSlideIndex == 0 ) {
+	//	$( '#slider-navigation .prev ').hide();
+	//	$( '#slider-navigation .next ').show();
+	//} else if ( psobj.currentSlideIndex == psobj.slideIndexCount ) {
+	//	$( '#slider-navigation .prev ').show();
+	//	$( '#slider-navigation .next ').hide();
+	//} else {
+	//	$( '#slider-navigation .prev ').show();
+	//	$( '#slider-navigation .next ').show();
+	//}
 }
-var ctrlSlider;
-var replayData;
+function locationUpdate ( ) {
+	var section , screen , instruction;
+	if ( ctrlSlider.$currentSlide.data( 'slide-type' ) == 'key' ) {
+		section = $( '[data-slide-type=key]' ).index( ctrlSlider.$currentSlide ) + 1;
+		screen = 1;
+	} else {
+		section = $( '[data-slide-type=key]' ).index( $( '#' + ctrlSlider.$currentSlide.data( 'slide-parent-id' ) ) ) + 1;
+		screen = $( '#' + ctrlSlider.$currentSlide.data( 'slide-parent-id' ) + ' , [data-slide-parent-id=' + ctrlSlider.$currentSlide.data( 'slide-parent-id' ) + ']' ).index( ctrlSlider.$currentSlide ) + 1;
+	}
+	var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
+	if ( instrSlider ) {
+		instruction = instrSlider.currentSlideIndex + 1;
+	}
+	$( '.you-are-here .screen-id' ).html(
+		'Screen ID: ' + String.fromCharCode( section + 64 ) +
+		'.' + screen +
+		( instruction ? '.' + instruction : '' )
+	);
+	$( '.you-are-here .screen-num' ).html( ctrlSlider.currentSlideIndex + 1 );
+}
+
 $( function( ) {
+	// http://stackoverflow.com/a/2104939/264628
+	$(function(){
+		var keyStop = {
+			8  : ':not(input:text, textarea, input:file, input:password)' , // stop backspace = back
+			9  : '*' ,
+			13 : 'input:text, input:password, input:radio, input:checkbox' , // stop enter = submit 
+			
+			end: null
+		};
+		$( document ).bind( "keydown" , function ( evt ) {
+			var selector = keyStop[evt.which];
+			
+			if ( selector !== undefined && $( evt.target ).is( selector ) ) {
+				evt.preventDefault(); //stop event
+				evt.stopPropagation();
+			}
+			return true;
+		});
+	});
+	
+	/* Show the student login */
+	$( '#login' ).dialog( {
+		modal : true ,
+		width : '65%'
+	} );
+	$( '.ui-dialog-titlebar' ).hide( );
+	$( '#login #skip-action' ).click( function ( evt ) {
+		evt.preventDefault();
+		$( '#login' ).dialog( 'close' );
+	} );
+	$( '#student-login' ).submit( function ( evt ) {
+		evt.preventDefault();
+	} );
+	
 	/* Look for a replay session ID and replay the user data if found. */
 	if ( typeof( sessionID = $.url( ).param( 'replay' ) ) !== 'undefined' ) {
 		// FIXME: make all activities and input elements read only
@@ -53,7 +107,7 @@ $( function( ) {
 		$.ajax( {
 			
 			type     : 'GET' ,
-			url      : 'ajax-data-replay' ,
+			url      : '../ajax-data-replay' ,
 			dataType : 'jsonp json' , /* because of IE */
 			data     : { instance_id : $.url( ).param( 'instance_id' ) , student_id : $.url( ).param( 'student_id' ) } ,
 			
@@ -93,7 +147,7 @@ $( function( ) {
 				sliderType         : 'slider',
 				speed              : 0,
 				width              : 906,
-				onSlide            : function ( psobj ) { if ( psobj.$currentSlide.find( '.scrollable' ).length > 0 ) { psobj.$currentSlide.find( '.scrollable' ).mCustomScrollbar('scrollTo','top'); } }
+				onSlide            : function ( psobj ) { if ( psobj.$currentSlide.find( '.scrollable.mCustomScrollbar' ).length > 0 ) { psobj.$currentSlide.find( '.scrollable' ).each( function ( idx , el ) { $( this ).mCustomScrollbar( 'scrollTo' , 'top' ); } ); } }
 			}
 		);
 		
@@ -102,6 +156,7 @@ $( function( ) {
 				$( this ),
 				{
 					autoPlay           : false,
+					afterSlide         : locationUpdate ,
 					createPagination   : true,
 					createArrows       : false,
 					disableLoop        : true,
@@ -118,16 +173,29 @@ $( function( ) {
 		} );
 		
 		$( '[data-slide-type="key"]' ).each( function ( idx , el ) {
-			$( '#slider-menu ul' ).append( '<li><a href="#' + $( el ).attr( 'id' ) + '">' + $( el ).data( 'slide-title' ) + '</a></li>' );
+			$( '#slider-menu ul' ).append( '<li><a href="#' + $( el ).attr( 'id' ) + '">' + $( el ).data( 'slide-group-title' ) + '</a></li>' );
 		} );
 		
-		if ( $( location.hash ).index() >= 0 ) {
+		var reSlideID = /[A-Z]\.[0-9]{1,2}/i;
+		if ( location.hash.length > 0 && reSlideID.test( location.hash.toUpperCase( ) ) ) {
+			var araSlideID = location.hash.split( '.' );
+			var groupKey = $( '.child' ).index( $( '[data-slide-type=key]' )[ araSlideID[0].toUpperCase().charCodeAt( 1 ) - 65 ] );
+			ctrlSlider.toSlide( groupKey + parseInt( araSlideID[1] , 10 ) - 1 );
+			if ( araSlideID.length == 3 ) {
+				var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
+				if ( instrSlider ) {
+					setTimeout( function ( ) { instrSlider.toSlide( parseInt( araSlideID[2] , 10 ) - 1 ); } , 1000 );
+				}
+			}
+		} else if ( location.hash.length > 0 && $( location.hash ).index() >= 0 ) {
 			ctrlSlider.toSlide( $( location.hash ).index() );
 		} else {
 			ctrlSlider.toSlide( 0 );
 		}
+		
 		$( '#slider-menu a' ).click( function ( evt ) {
 			ctrlSlider.toSlide( $( $( this ).attr( 'href' ) ).index() );
+			setTimeout( locationUpdate , 500 );
 		} );
 		
 		$( '#slider-menu' ).data( 'width' , $( '#slider-menu' ).width( ) );
@@ -145,44 +213,33 @@ $( function( ) {
 		
 		$( '#slider-navigation .prev' ).click( function ( evt ) {
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
-			if ( instrSlider && instrSlider.currentSlideIndex > 0 ) {
+			if ( instrSlider && instrSlider.currentSlideIndex > 0 && !evt.ctrlKey ) {
 				instrSlider.toSlide( 'prev' );
-			} else {
+			} else if ( ctrlSlider.currentSlideIndex > 0 ) {
 				ctrlSlider.toSlide( 'prev' );
 			}
-		} );
-		$( '#slider-navigation .prev' ).dblclick( function ( evt ) {
-			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
-			if ( instrSlider ) {
-				setTimeout( function () { instrSlider.toSlide( 0 ) } , 1000 );
-			}
-			ctrlSlider.toSlide( 'prev' );
+			setTimeout( locationUpdate , 500 );
 		} );
 		$( '#slider-navigation .next' ).click( function ( evt ) {
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
-			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount ) {
+			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
 				instrSlider.toSlide( 'next' );
-			} else {
+			} else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
 				ctrlSlider.toSlide( 'next' );
 			}
-		} );
-		$( '#slider-navigation .next' ).dblclick( function ( evt ) {
-			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
-			if ( instrSlider ) {
-				setTimeout( function () { instrSlider.toSlide( instrSlider.slideIndexCount ) } , 1000 );
-			}
-			ctrlSlider.toSlide( 'next' );
+			setTimeout( locationUpdate , 500 );
 		} );
 		
-		$( '#slider-menu .you-are-here .screen-total' ).html( ctrlSlider.slideCount );
+		$( '.you-are-here .screen-total' ).html( ctrlSlider.slideCount );
+		locationUpdate();
 	}
 	
 	$( '.tooltip' ).tooltip( { } );
 	
 	manageScroll( '.activity .plusslider .child' );
-	if ( ( el = $( '.child > .scrollable' ).exists() ) !== false ) {
-		el.height( el.parent( ).height() - el.position( ).top - 60 );
-	}
+	$( '.child > .scrollable' ).each( function ( idx , el ) {
+		$( this ).height( $( this ).parent( ).height( ) - $( this ).position( ).top - 60 );
+	} );
 	manageScroll( '.scrollable' );
 } );
 
@@ -203,11 +260,13 @@ function manageScroll ( el , userOpts ) {
 		}
 	};
 	if ( typeof( userOpts ) !== "undefined" ) { $.extend( true , defOpts , userOpts ); }
-	if ( !$( el ).hasClass( 'mCustomScrollbar' ) ) {
-		$( el ).mCustomScrollbar( defOpts );
-	} else {
-		$( el ).mCustomScrollbar( 'update' );
-	}
+	$( el ).each( function ( idx , el ) {
+		if ( !$( this ).hasClass( 'mCustomScrollbar' ) ) {
+			$( this ).mCustomScrollbar( defOpts );
+		} else {
+			$( this ).mCustomScrollbar( 'update' );
+		}
+	} );
 }
 
 function saveData ( evt ) {
@@ -245,7 +304,7 @@ function saveData ( evt ) {
 	if ( Object.keys(record).length > 0 ) {
 		$.ajax( {
 			type     : 'POST' ,
-			url      : 'ajax-data-save' ,
+			url      : '../ajax-data-save' ,
 			dataType : 'jsonp json' , /* because of IE */
 			data     : { value : record }
 		} );

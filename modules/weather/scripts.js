@@ -14,7 +14,7 @@ function locExSample ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , new Date( 1995 , 5 , 22 ) );
 			wInstance.map.date.ui.find('.ui-state-active').click();
@@ -27,8 +27,10 @@ function cbDaylightIntro ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
 		} , 1000 );
@@ -38,8 +40,10 @@ function cbDaylightEx1 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 44.70 , -73.45 ) } );
@@ -50,8 +54,10 @@ function cbDaylightEx2 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 5.07 , -74.53 ) } );
 		} , 1000 );
@@ -61,8 +67,10 @@ function cbDaylightEx3 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 0.15 , -78.35 ) } );
 		} , 1000 );
@@ -72,8 +80,10 @@ function cbRelation2 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71 , -74.0 ) } );
 		} , 1000 );
@@ -83,7 +93,7 @@ function cbRelation3 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			wInstance.map.date.data( 'value' , [ new Date(1995,0,15) , new Date(1995,1,15) , new Date(1995,2,15) , new Date(1995,3,15) , new Date(1995,4,15) , new Date(1995,5,15) , new Date(1995,6,15) , new Date(1995,7,15) , new Date(1995,8,15) , new Date(1995,9,15) , new Date(1995,10,15) , new Date(1995,11,15) ] );
  			wInstance.map.date.ui.find('.ui-state-active').click();
@@ -95,7 +105,7 @@ function cbBonaire ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'small' );
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 39.18 , -76.67 ) } );
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 12.16 , -68.23 ) } );
@@ -119,7 +129,7 @@ function cbRelationSunEnergy ( evt ) {
 					wInstance.map.setCenter(mapCenter);
 				}
 			)
-			.find( '.widget.dataSelect' ).addClass( 'small' );
+			.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		this.settings.displayWidgets[0].settings.container
 			.show()
 			.css( { 'width':'auto' } )
@@ -168,7 +178,7 @@ function mapXvis ( evt ) {
 					wInstance.map.setCenter(mapCenter);
 				}
 			)
-			.find( '.widget.dataSelect' ).addClass( 'small' );
+			.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		this.settings.displayWidgets[0].settings.container
 			.show()
 			.css( { 'width':'auto' } )
@@ -309,10 +319,10 @@ function cbTempLatitude ( evt ) {
 		var colorText = [];
 		for (colorKey in _colors.colors ) {
 			if ( _colors.colors[colorKey] == this.markers[ markerKeys[0] ].color ) {
-				colorText.push( colorKey );
+				colorText.push( _colors.legend[colorKey] );
 			}
 			if ( _colors.colors[colorKey] == this.markers[ markerKeys[1] ].color ) {
-				colorText.push( colorKey );
+				colorText.push( _colors.legend[colorKey] );
 			}
 		}
 		if ( this.markers[ markerKeys[0] ].userCoords.lat( ) > this.markers[ markerKeys[1] ].userCoords.lat( ) ) {
@@ -352,16 +362,7 @@ var slideInit = {
 							'statspanel',
 							{
 								container : $( '#statspanel-sample' ) ,
-								callbacks : [
-									widgetScroll ,
-									function ( evt ) {
-										var n = 2;
-										for ( mid in this.data ) {
-											this.settings.container.find( 'tr.place td:nth-child(' + n + ')' ).append( '<span style="border: 1px solid #999999; display: inline-block; height: 12px; margin: 0 0.5em; width: 12px; background-color: ' + this.data[mid].seriesMeta.color + '"></span>' );
-											n++;
-										}
-									}
-								]
+								callbacks : [ widgetScroll ]
 							}
 						)
 					],

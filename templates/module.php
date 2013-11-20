@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/css/modules.css" />
 	
 	<?php
-	$__local_css =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . '.css';
+	$__local_css =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . 'styles.css';
 	if ( file_exists( $__local_css ) ) {
 		echo '<link rel="stylesheet" type="text/css" href="' , CLIMATE_DIR_WWW , str_replace( CLIMATE_DIR , '' , $__local_css ) , '" />';
 	}
@@ -41,7 +41,8 @@
 	<script type='text/javascript' src='<?php echo CLIMATE_DIR_WWW; ?>/includes/js/modules.js'></script>
 	
 	<?php
-	$__local_js =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . '.js';
+	$__local_js =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . '/scripts.js';
+	echo $__local_css;
 	if ( file_exists( $__local_js ) ) {
 		echo '<script type="text/javascript" src="' , CLIMATE_DIR_WWW , str_replace( CLIMATE_DIR , '' , $__local_js ) , '" />';
 	}
@@ -83,7 +84,8 @@
 				<div class="access-control">menu</div>
 				<ul>
 				</ul>
-				<div class="you-are-here"><p>#<span class="screen-num"></span> of <span class="screen-total"></span></p></div>
+				<div id="login-nav">Log in as a: Student | Non-Student</div>
+				<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
 			</div>
 			<div class="prev">&lt;</div>
 			<div class="next">&gt;</div>
@@ -93,6 +95,25 @@
 			<?php if ( isset( $__content  ) ) { echo $__content; } ?>
 			
 		</div>
+	</div>
+	<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
+	<div id="login" style="display: none;" title="">
+		<p>Are you a student using the module in your classroom? Fill in the following information provided by your teacher and click on ENTER to start the module:</p>
+		<form id="student-login">
+			<p>
+				<label for="user">Student Code:</label>
+				<input name="student" type="text" id="student" size="24" value="<?php echo htmlentities( $student ); ?>" class="<?php echo ( isset( $errors['login']['student'] ) ? 'error' : '' ); ?>" title="<?php echo ( isset( $errors['login']['student'] ) ? trim( $errors['login']['student'] ) : '' ); ?>" />
+			</p>
+			<p>
+				<label for="teacher">Teacher Code:</label>
+				<input name="teacher" type="text" id="text" size="24" class="<?php echo ( isset( $errors['login']['teacher'] ) ? 'error' : '' ); ?>" title="<?php echo ( isset( $errors['login']['teacher'] ) ? trim( $errors['login']['teacher'] ) : '' ); ?>" />
+			</p>
+			<p>
+				<input type="submit" name="login-students" value="Start Module" />
+			</p>
+		</form>
+		<hr>
+		<div style="text-align: center;"><a href="#introduction" id="skip-action" class="button">skip this step</a></div>
 	</div>
 </body>
 </html>

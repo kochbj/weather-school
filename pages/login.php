@@ -20,7 +20,7 @@ if ( isset( $_POST['login'] ) ) {
 	if ( $user && $pass ) {
 		
 		$strSQL = sprintf(
-			'SELECT `users`.*, `groups`.`name` FROM `users` LEFT JOIN `groups` ON `users`.`group_id` = `groups`.`id` WHERE username=\'%s\'',
+			'SELECT `users`.*, `groups`.`name` AS `group_name` FROM `users` LEFT JOIN `groups` ON `users`.`group_id` = `groups`.`id` WHERE username=\'%s\'',
 			mysql_real_escape_string( $user )
 		);
 		
@@ -28,12 +28,9 @@ if ( isset( $_POST['login'] ) ) {
 			
 			$_SESSION['user_id'] = $row['id'];
 			$_SESSION['user'] = $row['username'];
-			if ( strlen( $src ) > 0 ) {
-				header( 'Location:  http://' . $_SERVER['HTTP_HOST'] . $src );
-			} else {
-				header( 'Location:  http://' . $_SERVER['HTTP_HOST'] . CLIMATE_DIR_WWW . '/' . ( $row['name'] == 'Teachers' ? 'reports' : 'module' ) );
-			}
-			exit( );
+			$_SESSION['group'] = $row['group_name'];
+			header( 'Location:  http://' . $_SERVER['HTTP_HOST'] . CLIMATE_DIR_WWW . '/reports' , TRUE );
+			return 302; exit;
 			
 		} else {
 			$errors['general'][] = 'The username or password were incorrect. Please try again.';
@@ -55,21 +52,17 @@ if ( isset( $_POST['login'] ) ) {
 	</div>
 <?php } ?>
 
-	<h2>Login</h2>
+	<h2>Site Login</h2>
 	<p>Log in to create teacher codes and view reponses from your students. If you do not have a username visit the <a href="<?php echo CLIMATE_DIR_WWW; ?>/register">registration page</a>.</p>
 	<div>
 		<form name="login" method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-			<p>
+			<p class="labelColumn">
 				<label for="user">Username:</label> &nbsp;
 				<input name="user" type="text" id="user" size="24" value="<?php echo htmlentities( $user ); ?>" class="<?php echo ( isset( $errors['form']['login']['user'] ) ? 'error' : '' ); ?>" title="<?php echo ( isset( $errors['form']['login']['user'] ) ? trim( $errors['form']['login']['user'] ) : '' ); ?>" />
 			</p>
-			<p>
+			<p class="labelColumn">
 				<label for="pass">Password:</label> &nbsp;
 				<input name="pass" type="password" id="pass" size="24" class="<?php echo ( isset( $errors['form']['login']['pass'] ) ? 'error' : '' ); ?>" title="<?php echo ( isset( $errors['form']['login']['pass'] ) ? trim( $errors['login']['form']['pass'] ) : '' ); ?>" />
-			</p>
-			<p>
-				<label for="teacher">Teacher Code:</label> &nbsp;
-				<input name="teacher" type="text" id="teacher" size="24" class="<?php echo ( isset( $errors['form']['login']['teacher'] ) ? 'error' : '' ); ?>" title="<?php echo ( isset( $errors['form']['login']['teacher'] ) ? trim( $errors['login']['form']['teacher'] ) : '' ); ?>" />
 			</p>
 			<p>
 				<input type="hidden" name="src" value="<?=htmlentities($src, ENT_QUOTES, 'UTF-8')?>" />
