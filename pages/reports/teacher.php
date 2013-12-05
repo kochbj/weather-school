@@ -129,17 +129,21 @@ if ( $instance_code ) {
 			<div id="detail-report-<?php echo $student_id ?>">
 				<div class="accordion">
 				<?php
+				$section_index = 0;
 				foreach ( $module as $section ) {
+					$section_index++;
 					if ( $section['label_count'] == 0 ) { continue; }
 					echo '
-						<h3>Section: ' , $section['title'] , '</h3>
+						<h3>' , chr( $section_index + 64 ) , '. ' , $section['title'] , '</h3>
 						<div>'
 					;
+					$slide_index = 0;
 					foreach ( $section['slides'] as $slide ) {
+						$slide_index++;
 						$labels = $xpath->query( './/label' , $slide );
 						if ( $labels->length == 0 ) { continue; }
 						echo '
-							<h4>' , $slide->getAttribute( 'data-slide-title' ) , '</h4>'
+							<h4>' , chr( $section_index + 64 ) , '.' , $slide_index , ' ' , $slide->getAttribute( 'data-slide-title' ) , '</h4>'
 						;
 						foreach ( $labels as $label ) {
 							if ( $label->hasAttribute( 'for' ) && ( $label_target = $label->getAttribute( 'for' ) ) !== '' ) {
@@ -162,23 +166,27 @@ if ( $instance_code ) {
 		<div id="summary-report">
 			<div class="accordion">
 			<?php
+			$section_index = 0;
 			foreach ( $module as $section ) {
+				$section_index++;
 				if ( $section['label_count'] == 0 ) { continue; }
 				echo '
-					<h3>Section: ' , $section['title'] , '</h3>
+					<h3>' , chr( $section_index + 64 ) , '. ' , $section['title'] , '</h3>
 					<div>'
 				;
+				$slide_index = 0;
 				foreach ( $section['slides'] as $slide ) {
+					$slide_index++;
 					$labels = $xpath->query( './/label' , $slide );
 					if ( $labels->length == 0 ) { continue; }
 					echo '
-						<h4>' , $slide->getAttribute( 'data-slide-title' ) , '</h4>'
+						<h4>' , chr( $section_index + 64 ) , '.' , $slide_index , ' ' , $slide->getAttribute( 'data-slide-title' ) , '</h4>'
 					;
 					foreach ( $labels as $label ) {
 						if ( $label->hasAttribute( 'for' ) && ( $label_target = $label->getAttribute( 'for' ) ) !== '' ) {
 							echo '
 								<div class="accordion2">
-									<p class="question"><i>' , $label->nodeValue , '</i></p><ul>'
+									<p class="question"><i>' , $label->nodeValue , '</i></p><ul class="grouped">'
 							;
 							foreach ( $students as $id => $student ) {
 								if ( strlen( trim( $student['data'][$label_target]['usrInput'] ) ) > 0 ) {

@@ -44,9 +44,6 @@ h4 {
 	font-weight: bold;
 	font-size: 100%;
 }
-li
-{
-}
 table
 {
 	border-collapse: collapse;
@@ -307,7 +304,7 @@ dd.topic.selected { display: inherit; }
 #itemList td p a { display: block; }
 #itemList .ui-helper-reset { list-style-type: circle; }
 #itemList .ui-accordion-content li { margin: .25em 0em; }
-#itemList .ui-accordion-content, #itemList .ui-widget-content { background-image: none; background-color: none; }
+#itemList .ui-accordion-content, #itemList .ui-widget-content { background-image: none; background-color: transparent; }
 #itemList .ui-accordion-content { padding-top: 0em; }
 #itemList .view-options { float: right; margin: 0em; font-size: 78%; }
 #itemList .view-options + * { clear: both }
@@ -896,7 +893,7 @@ div.tabs > * {
 	margin: 0px;
 	padding: 0em .25em;
 	background: none;
-	background-color: none;
+	background-color: transparent;
 }
 .ui-tabs .ui-tabs-nav li
 {
@@ -1428,7 +1425,7 @@ table.list th p, table.list td p { margin: .15em 0em 0em 0em; padding: .25em; }
 table.list td p a { display: block; }
 table.list .ui-helper-reset { list-style-type: circle; }
 table.list .ui-accordion-content li { margin: .25em 0em; }
-table.list .ui-accordion-content, #itemList .ui-widget-content { background-image: none; background-color: none; }
+table.list .ui-accordion-content, #itemList .ui-widget-content { background-image: none; background-color: transparent; }
 table.list .ui-accordion-content { padding-top: 0em; }
 table.list .view-options { float: right; margin: 0em; font-size: 78%; }
 table.list .view-options + * { clear: both }
@@ -1849,14 +1846,20 @@ ul.nostructure ul.nostructure {
 	cursor: pointer;
 }
 
+.grouped li {
+	border-bottom: 1px solid #cccccc;
+	padding: .5em 0em;
+}
+.grouped li:last-child {
+	border-bottom: none;
+}
 .student-code {
-	background-color: #FAFAFA;
-	border: 1px solid #F0F0F0;
+	background-color: #e0e0f0;
 	border-radius: 5px 5px 5px 5px;
 	display: inline-block;
 	font-size: 90%;
 	margin: 2px 0;
-	padding: 0 0.25em;
+	padding: .15em 0.35em;
 }
 .student-code a {
 	color: #333;

@@ -36,13 +36,12 @@
 	<script type='text/javascript' src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.mCustomScrollbar/jquery.mCustomScrollbar.min.js"></script>
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.cookie.js"></script>
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery-ui.multidatespicker.js"></script>
-	
+
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/climateViz/js/controller.js"></script>
 	<script type='text/javascript' src='<?php echo CLIMATE_DIR_WWW; ?>/includes/js/modules.js'></script>
 	
 	<?php
 	$__local_js =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . '/scripts.js';
-	echo $__local_css;
 	if ( file_exists( $__local_js ) ) {
 		echo '<script type="text/javascript" src="' , CLIMATE_DIR_WWW , str_replace( CLIMATE_DIR , '' , $__local_js ) , '" />';
 	}

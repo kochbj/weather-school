@@ -57,7 +57,7 @@ function locationUpdate ( ) {
 		instruction = instrSlider.currentSlideIndex + 1;
 	}
 	$( '.you-are-here .screen-id' ).html(
-		'Screen ID: ' + String.fromCharCode( section + 64 ) +
+		'Screen: ' + String.fromCharCode( section + 64 ) +
 		'.' + screen +
 		( instruction ? '.' + instruction : '' )
 	);
@@ -173,7 +173,7 @@ $( function( ) {
 		} );
 		
 		$( '[data-slide-type="key"]' ).each( function ( idx , el ) {
-			$( '#slider-menu ul' ).append( '<li><a href="#' + $( el ).attr( 'id' ) + '">' + $( el ).data( 'slide-group-title' ) + '</a></li>' );
+			$( '#slider-menu ul' ).append( '<li><a href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 1 + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a></li>' );
 		} );
 		
 		var reSlideID = /[A-Z]\.[0-9]{1,2}/i;

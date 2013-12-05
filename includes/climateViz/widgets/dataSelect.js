@@ -163,29 +163,6 @@ function dataSelect_instantiate(wInstance) {
 	if (wInstance.settings.date) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
-			case 'year' :
-				wInstance.map.date.ui = wInstance.map.date.find( '.datepicker' );
-				selectUI = '<div style="padding: .25em; background-color: #ccf0ff;">Select A Year</div><select style="width: 100%; border: none;" size="10">';
-				for ( selectUIOptions = 1917 ; selectUIOptions < ( new Date() ).getFullYear() ; selectUIOptions++ ) {
-					selectUI += '<option value="' + selectUIOptions + '">' + selectUIOptions + '</option>';
-				}
-				selectUI += '</select>';
-				wInstance.map.date.ui.html( selectUI );
-				wInstance.map.date.ui.find( 'select' ).change( function ( evt ) {
-					yearMin = parseInt( $( this ).val() , 10 ) - parseInt( ( wInstance.settings.date.range ? wInstance.settings.date.range : 0 ) , 10 );
-					yearMax = parseInt( $( this ).val() , 10 ) + parseInt( ( wInstance.settings.date.range ? wInstance.settings.date.range : 0 ) , 10 );
-					$( this ).parents( '.widget.dataSelect .map-date' ).data(
-						'value' ,
-						[ [ new Date( yearMin , 0 , 1 ) , new Date( yearMax , 11 , 31 ) ] ]
-					);
-					wInstance.map.date.attr( 'title' , 'Selected: '+$( this ).val() );
-					wInstance._callback({type:'user-select-date'});
-				} ).val( ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : 2000 ) ).change();
-				wInstance.map.date.ui.hide();
-				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parent().find( '.datepicker' ).slideToggle();
-				} );
-				break;
 			case 'z-month-day' :
 				/* Instance.map.date.months = {
 					'Jan':31,
@@ -680,16 +657,16 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.find( '.input input' ).val( '' );
 				break;
 			case 'year-month-day-range-alt' :
-				wInstance.map.date.addClass( 'year-month-day-range-alt' ).html( '<div class="start-date"><div class="visual-control inline"><div class="input"><input type="text" placeholder="Start Date" /></div><div class="datepicker"></div></div><div class="toggle"></div></div><div class="end-date"><div class="visual-control inline"><div class="input"><input type="text" placeholder="End Date" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
+				wInstance.map.date.addClass( 'year-month-day-range-alt' ).html( '<div class="visual-control inline"><div class="input date-start"><input type="text" size="3" placeholder="Start Date" /></div>&ndash;<div class="input date-end"><input type="text" size="3" placeholder="End Date" /></div><div class="toggle"></div><div class="datepicker"></div></div>' );
+				wInstance.map.date.find( '.input input' ).autogrow( );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 400 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
-						var startDate = $( this ).parents( '.map-date' ).find( '.start-date .datepicker' ).datepicker( 'getDate' );
-						var endDate = $( this ).parents( '.map-date' ).find( '.end-date .datepicker' ).datepicker( 'getDate' );
-						if ( startDate === null || endDate === null || startDate >= endDate || $( this ).parents( '.map-date' ).find( '.visual-control .input input' ).val() == '' ) {
+						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
+						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
+						if ( startDate === null || endDate === null || startDate >= endDate || $( this ).parents( '.map-date' ).find( '.input input' ).val() == '' ) {
 							wInstance.map.date.attr( 'title' , 'No date selected' );
 							$( this ).parents( '.widget.dataSelect .map-date' ).data(
 								'value' ,
@@ -706,12 +683,14 @@ function dataSelect_instantiate(wInstance) {
 							wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 						}
 						ui.dpDiv.parents( '.map-date' ).find( '.datepicker' ).datepicker( 'refresh' );
-						ui.dpDiv.parents( '.map-date' ).find( '.datepicker' ).fadeOut();
+						ui.dpDiv.parents( '.map-date' ).find( '.input input' ).autogrow( );
+						ui.dpDiv.parents( '.map-date' ).find( '.input' ).each( function ( idx , el ) { $( this ).toggleClass( 'active' ); } );
+						ui.dpDiv.parents( '.map-date' ).find( '.input.active input' ).focus( );
 						wInstance._callback({type:'user-select-date'});
 					} ,
 					beforeShowDay: function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
-						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
+						var selectedDates = $(this).parents('.map-date').data('value');
 						var testDateStart = new Date();
 						var testDateEnd = new Date();
 						for (i in selectedDates) {
@@ -732,8 +711,8 @@ function dataSelect_instantiate(wInstance) {
 				}
 				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
 					altFormat       : 'yy M dd' ,
-					changeMonth     : false ,
-					changeYear      : false ,
+					changeMonth     : true ,
+					changeYear      : true ,
 					showButtonPanel : false ,
 					defaultDate     : new Date(2000,0,1) ,
 					/* should be set based on data source
@@ -744,8 +723,6 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				} );
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
-				wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.start-date .input input' ) } );
-				wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.end-date .input input' ) } );
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
@@ -757,7 +734,7 @@ function dataSelect_instantiate(wInstance) {
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
 					if ( usrDate !== false ) {
 						usrDate = new Date( usrDate );
-						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.' + elInput.parents( '.visual-control' ).parent( ).attr( 'class' ) ).find( '.datepicker' );
+						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
 						dpDiv.datepicker( 'setDate' , usrDate );
 						if ( elInput.val() == '' ) {
 							wInstance.map.date.data( 'value' , [] );
@@ -766,7 +743,7 @@ function dataSelect_instantiate(wInstance) {
 						dpDiv.datepicker( 'setDate' , usrDate );
 						var selectedDates = elInput.parents('.widget.dataSelect .map-date').data('value');
 						for (i in selectedDates) {
-							if ( usrDate.getTime() == selectedDates[i][ dpDiv.parents( '.visual-control' ).parent( ).attr( 'clas' ) == 'start-date' ? 0 : 1 ].getTime() ) {
+							if ( usrDate.getTime() == selectedDates[i][ dpDiv.parent( ).hasClass( 'date-start' ) ? 0 : 1 ].getTime() ) {
 								return;
 							}
 						}
@@ -783,17 +760,118 @@ function dataSelect_instantiate(wInstance) {
 					}
 				} );
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
-				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parent( ).parent( ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
-					$( this ).parent( ).siblings( ).find( '.visual-control .datepicker' ).fadeOut();
-					$( this ).parent( ).find( '.visual-control .datepicker' ).fadeToggle();
-				} );
-				wInstance.map.date.find( '.input input' ).focus( function ( evt ) {
-					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
-					$( this ).parents( '.map-date' ).find( '.datepicker' ).fadeOut();
-					$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeIn();
-				} );
+				wInstance.map.date
+					.find( '.toggle' ).click( function ( evt ) {
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeToggle( {
+							done : function ( animation , jumpedToEnd ) {
+								if ( $( this ).css( 'display' ) == 'none' ) { $( this ).parents( ).find( '.input' ).removeClass( 'active' ); }
+								else { $( this ).parents( ).find( '.input.date-start input' ).focus( ); }
+							}
+						} );
+					} );
+				wInstance.map.date.find( '.input input' )
+					.focus( function ( evt ) {
+						$( this ).autogrow( );
+						$( this ).parents( '.visual-control' ).find( '.input' ).removeClass( 'active' );
+						$( this ).parent( ).addClass( 'active' );
+						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , selectedDate );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeIn();
+					} )
+					.blur( function ( evt ) {
+						$( this ).autogrow( );
+					} );
 				wInstance.map.date.find( '.input input' ).val( '' );
+				break;
+			case 'year' :
+				wInstance.map.date.addClass( 'year' ).html( '<div class="visual-control inline"><div class="input"><input type="text" size="3" placeholder="Select a year" /></div><div class="toggle"></div><div class="datepicker"></div></div>' );
+				wInstance.map.date.find( '.input input' ).autogrow( );
+				wInstance.map.date.attr( 'title' , 'No date selected' );
+				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
+				wInstance.map.date.ui.wInstance = wInstance;
+				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
+				var dates = '';
+				for ( yearInterval = 1920 ; yearInterval <= ( currentYear = ( new Date() ).getFullYear() ) ; yearInterval++ ) {
+					dates += '<a class="'+yearInterval+'">'+yearInterval+'</a>';
+				}
+				wInstance.map.date.ui.dpDiv.html(dates);
+				wInstance.map.date.ui.find( '.datepicker a' ).click( function ( evt ) {
+					$( this ).parent( ).find( 'a.selected' ).removeClass( 'selected' );
+					$( this ).addClass( 'selected' );
+					var startDate = new Date( $( this ).html( ) , 0 , 1 );
+					var endDate = new Date( $( this ).html( ) , 11 , 31 );
+					if ( wInstance.settings.date.range ) { endDate.setFullYear( endDate.getFullYear() + wInstance.settings.date.range ); }
+					if ( wInstance.settings.date.range ) { startDate.setFullYear( startDate.getFullYear() - wInstance.settings.date.range ); }
+					$( this ).parents( '.widget.dataSelect .map-date' ).data(
+						'value' ,
+						[ [ startDate , endDate ] ]
+					);
+					wInstance.map.date.attr( 'title' , 'Selected: ' + $( this ).html( ) );
+					$( this ).parents( '.map-date' ).find( '.input input' ).val( $( this ).html( ) ).autogrow( ).focus( );
+					wInstance._callback({type:'user-select-date'});
+				} );
+				wInstance.map.date.ui.dpDiv.scrollTop = wInstance.map.date.ui.dpDiv.scrollHeight;
+				wInstance.map.date.ui.dpDiv.hide();
+				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
+					var elInput = $( this );
+					var dpDiv = $( this ).parents( '.visual-control' ).find( '.datepicker' );
+					if ( elInput.val() == '' ) {
+						wInstance.map.date.data( 'value' , [] );
+						wInstance.map.date.attr( 'title' , 'No date selected' );
+						dpDiv.find( 'a.selected' ).removeClass('selected');
+					} else {
+						dpDiv.find( 'a.selected' ).removeClass('selected');
+						dpDiv.find( 'a.' + elInput.val() ).click( );
+					}
+				} );
+				wInstance.map.date
+					.find( '.toggle' ).click( function ( evt ) {
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeToggle( {
+							done : function ( animation , jumpedToEnd ) {
+								if ( $( this ).css( 'display' ) == 'none' ) { $( this ).parents( ).find( '.input' ).removeClass( 'active' ); }
+								else { $( this ).parents( ).find( '.input input' ).focus( ); }
+							}
+						} );
+					} );
+				wInstance.map.date.find( '.input input' )
+					.focus( function ( evt ) {
+						$( this ).autogrow( );
+						$( this ).parents( '.visual-control' ).find( '.input' ).removeClass( 'active' );
+						$( this ).parent( ).addClass( 'active' );
+						if ( $( this ).val( ) !== '' ) { 
+							$( this ).parents( '.visual-control' ).find( '.datepicker' ).find( 'a.'+selectedDate ).click( );
+						}
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeIn();
+					} )
+					.blur( function ( evt ) {
+						$( this ).autogrow( );
+					} );
+				wInstance.map.date.find( '.input input' ).val( '' );
+				break;
+			case 'year-alt' :
+				wInstance.map.date.addClass( 'year-alt' ).html( '<div class="visual-control inline"><div class="input"><select></select></div></div>' );
+				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
+				wInstance.map.date.ui.wInstance = wInstance;
+				var dates = '';
+				for ( yearInterval = 1920 ; yearInterval <= ( currentYear = ( new Date() ).getFullYear( ) ) ; yearInterval++ ) {
+					dates += '<option value="'+yearInterval+'">'+yearInterval+'</option>';
+				}
+				dates += '<option value="" selected="selected">Select a year</option>';
+				wInstance.map.date.ui.find( '.input select' ).html( dates ).change( function ( evt ) {
+					if ( $( this ).val( ) == '' ) {
+						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , [] );
+					} else {
+						var startDate = new Date( $( this ).val( ) , 0 , 1 );
+						var endDate = new Date( $( this ).val( ) , 11 , 31 );
+						if ( wInstance.settings.date.range ) { endDate.setFullYear( endDate.getFullYear() + wInstance.settings.date.range ); }
+						if ( wInstance.settings.date.range ) { startDate.setFullYear( startDate.getFullYear() - wInstance.settings.date.range ); }
+						$( this ).parents( '.widget.dataSelect .map-date' ).data(
+							'value' ,
+							[ [ startDate , endDate ] ]
+						);
+					}
+					wInstance._callback({type:'user-select-date'});
+				} );
 				break;
 		}
 	} else {
@@ -814,8 +892,8 @@ function dataSelect_reset () {
 
 // FIXME: make the info display part of the map (i.e. place it in one of the map layers
 function pointInfo (e,wInstance) {
-	wInstance.settings.container.find('.map-info .lat').html(Math.abs(Math.round(e.latLng.lat()*100)/100)+(e.latLng.lat()<0?'S':'N'));
-	wInstance.settings.container.find('.map-info .lng').html(Math.abs(Math.round(e.latLng.lng()*100)/100)+(e.latLng.lng()<0?'W':'E'));
+	wInstance.settings.container.find('.map-info .lat').html(Math.abs(Math.round(e.latLng.lat()*10)/10)+(e.latLng.lat()<0?'S':'N'));
+	wInstance.settings.container.find('.map-info .lng').html(Math.abs(Math.round(e.latLng.lng()*10)/10)+(e.latLng.lng()<0?'W':'E'));
 	clearTimeout(wInstance.elevUpdateID);
 	wInstance.elevUpdateID = setTimeout("elevation.getElevationForLocations( {locations:[new google.maps.LatLng("+e.latLng.lat()+","+e.latLng.lng()+")]}, function (elevations) { $('" + wInstance.settings.container.selector + "').find('.map-info .elev').html(Math.round((elevations[0].elevation*3.2808399))+'ft'); })",150);
 }
@@ -866,7 +944,7 @@ function addLocation (e,wInstance) {
 		var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
 		return v.toString(16);
 	});
-	marker.name = Math.round(e.latLng.lat()*100)/100+','+Math.round(e.latLng.lng()*100)/100;
+	marker.name = Math.round(e.latLng.lat()*10)/10+','+Math.round(e.latLng.lng()*10)/10;
 	marker.userCoords = new google.maps.LatLng(e.latLng.lat(),e.latLng.lng());
 	wInstance.markers[marker.id] = marker;
 	
@@ -896,12 +974,12 @@ function addLocation (e,wInstance) {
 			}
 			this.name = (this.location.city?this.location.city+', ':'') + (this.location.state?this.location.state+', ':'') + (this.location.country?this.location.country:'');
 		} else {
-			this.name = Math.round(this.userCoords.lat()*100)/100+','+Math.round(this.userCoords.lng()*100)/100
+			this.name = Math.round(this.userCoords.lat()*10)/10+','+Math.round(this.userCoords.lng()*10)/10;
 		}
 		
 		var contentString = '<div class="infoWindow">';
 		contentString += '<div class="name">'+(this.location.city?this.location.city:'')+'</div><div class="location">'+(this.location.state?this.location.state+', ':'')+(this.location.country?this.location.country:'')+'</div>';
-		contentString += '<div class="user coords">User Coordinates: '+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+','+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
+		contentString += '<div class="user coords">Coordinates: '+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
 		contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
 		contentString += '</div>';
 		var infowindow = new google.maps.InfoWindow({
@@ -921,7 +999,7 @@ function createListItem (marker) {
 	mlBlock = $('<li class="m'+marker.id+'"></li>');
 	mlName = $('<div class="m'+marker.id+' name">'+marker.name+'</div>');
 	mlName.appendTo(mlBlock);
-	mlCoords = $('<div class="m'+marker.id+'-coords">('+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+','+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+')</div>')
+	mlCoords = $('<div class="m'+marker.id+'-coords">('+Math.abs(Math.round(marker.userCoords.lat()*10)/10)+(marker.userCoords.lat()<0?'S':'N')+','+Math.abs(Math.round(marker.userCoords.lng()*10)/10)+(marker.userCoords.lng()<0?'W':'E')+')</div>')
 	mlCoords.appendTo(mlBlock);
 	mlBlock.click(function (evt) { if (!$('.view.map').hasClass('on')) { $('.view.map').click(); } map.setCenter(marker.userCoords); marker.infoWindow.open(map,marker); });
 	mlBlock.appendTo($('.locationList')).css('opacity', 0).animate({'opacity':1}, 'slow').css('cursor','pointer');
@@ -1268,7 +1346,6 @@ function stationBasedDataFetchAjax ( evt ) {
 				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
 			}
 			// FIXME: use a jQuery-based dialog instead of the browser window so we can limit to one alert
-			console.log($.url( this.url ).param( 'queryID' ) , aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1)
 			if ( $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1 && confirm( 'There was an error retrieving data. Would you like to try again?' ) ) {
 				aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-refresh' } );
 			} else {

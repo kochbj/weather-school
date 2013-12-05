@@ -10,7 +10,7 @@
 </div>
 <div id="the-sun" data-slide-type="normal" data-slide-title="The Sun" data-slide-parent-id="introduction">
 	<h2>The Sun</h2>
-	<p>Almost all the energy that warms up the earth comes from the sun.</p>
+	<p>Almost all the energy that heats up the earth comes from the sun.</p>
 	<p>Without the sun, nothing could live on the earth.</p>
 	<p>How much of the sun's energy reaches the earth at any given place depends on the position of the sun in the skey.</p>
 </div>
@@ -18,7 +18,7 @@
 	<h2>Position of the Sun</h2>
 	<table>
 		<tr>
-			<td><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/position/sun-in-winter.jpg" width="250"><div class="caption">Less energy reaches the earth at this place</div></td>
+			<td><img src="assets/position/sun-in-winter.jpg" width="250"><div class="caption">Less energy reaches the earth at this place</div></td>
 			<td rowspan="2">
 				<p>When you look up and the sun appears to be low in the sky, not much of the sun’s energy is reaching you, and the air around you tends to be cooler. </p>
 				<p>When the sun appears to be high in the sky, more of the sun’s energy is reaching you, and the air tends to be warmer.</p>
@@ -26,7 +26,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td><img src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/position/sun-in-summer2.jpg" width="250"><div class="caption">More energy reaches the earth at this place</div></td>
+			<td><img src="assets/position/sun-in-summer2.jpg" width="250"><div class="caption">More energy reaches the earth at this place</div></td>
 		</tr>
 	</table>
 </div>
@@ -53,11 +53,11 @@
 		</div>
 	</div>
 </div>
-<div id="activity-intro" data-slide-type="normal" data-slide-title="Activity Introduction" data-slide-parent-id="locationExplorer-sample">
+<!--<div id="activity-intro" data-slide-type="normal" data-slide-title="Activity Introduction" data-slide-parent-id="locationExplorer-sample">
 	<h3>Different Locations and Times of the Year</h3>
 	<p>Now choose your own locations and dates to see how high the sun gets in the sky and how many hours of daylight there are at those times and places. </p>
-</div>
-<div id="locationExplorer" class="activity" data-slide-type="normal" data-slide-title="Explore the Earth" data-slide-parent-id="locationExplorer-sample">
+</div>-->
+<div id="locationExplorer" class="activity" data-slide-type="normal" data-slide-title="Compare Different Locations on the Same Date" data-slide-parent-id="locationExplorer-sample">
 	<div class="header">
 		<h2>Compare Different Locations on the Same Date</h2>
 	</div>
@@ -67,6 +67,9 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
+			<div>
+				<p>Now choose your own locations and dates to see how high the sun gets in the sky and how many hours of daylight there are at those times and places. </p>
+			</div>
 			<div>
 				<p>First click on the calendar icon and then choose a date between January 1 and December 31.</p>
 			</div>
@@ -710,7 +713,7 @@
 </div>
 <div id="models-info1" data-slide-type="normal" data-slide-title="Sun-Earth Models" data-slide-parent-id="models-intro">
 	<h2>Sun-Earth Models</h2>
-	<p><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip15.png" width="512" height="246" /></p>
+	<p style="text-align: center;"><img src="assets/_default/sid-j2.jpg" style="width: 75%;" /></p>
 	<div class="scrollable">
 	<ul>
 		<li>First let&rsquo;s review some basic ideas about how  the earth and sun are related.</li>
@@ -726,7 +729,7 @@
 <div id="models-info2" data-slide-type="normal" data-slide-title="Sun-Earth Models" data-slide-parent-id="models-intro">
 	<h2>Sun-Earth Models</h2>
 	<hr />
-	<p><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip16.png" width="380" height="249" /></p>
+	<p><img src="assets/_default/sid-j3.jpg" style="width: 50%;" /></p>
 	<div class="scrollable">
 	<ul>
 		<li>As  the earth moves around the sun, different parts of the sun are pointed toward  or away from the sun at different times of the year.</li>
@@ -738,7 +741,7 @@
 <div id="models-info3" data-slide-type="normal" data-slide-title="Sun-Earth Models" data-slide-parent-id="models-intro">
 	<h2>Sun-Earth Models</h2>
 	<hr />
-	<p><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip17.png" width="155" height="181" /></p>
+	<p><img src="assets/_default/sid-j4.png" width="155" height="181" /></p>
 	<div class="scrollable">
 	<ul>
 		<li>One more thing to keep in mind is that the earth spins  on its axis once every 24 hours.  This is  the day night cycle. </li>
@@ -757,12 +760,12 @@
 		<li>Because  the earth is a sphere, the light from the sun strikes the earth at different  angles at different places.</li>
 		<li>Look  at the spheres below. Notice that when you shine a light on a sphere, the part  of the sphere that is closest to the light source is illuminated most brightly.  This is the place where the light strikes the sphere at a 90 degree angle.</li>
 	</ul>
-	<p><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip18.png" width="238" height="244" /><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip19.png" width="232" height="252" /></p>
+	<p><img src="assets/_default/sid-j5-1.png" width="238" height="244" /><img src="assets/_default/sid-j5-2.png" width="232" height="252" /></p>
 	<ul>
 		<li>Notice  that there is only one place on the surface of the sphere where the sun strikes  the sphere at a 90 degree angle. At all other places, the light strikes at less  than a 90 degree angle. The farther away from the place where the light strikes  at a 90 degree angle, the smaller the angle of the light is. </li>
 		<li>This  is also true on the surface of the earth. At any one time, there is only one  place where the sun strikes the earth at a 90 degree angle. The farther away  from that place a location is, the smaller the angle at which the sun strikes  the earth. At the North Pole, for example, the sun always strikes the earth at  a very low angle, and at some times of the year the sun is not visible at all.</li>
 	</ul>
-	<p><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip20.png" width="400" height="276" /></p>
+	<p><img src="assets/_default/sid-j5-3.png" width="400" height="276" /></p>
 	</div>
 </div>
 <div id="models-interstitial1" data-slide-type="normal" data-slide-title="Sun-Earth Models" data-slide-parent-id="models-intro">
@@ -780,7 +783,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip21.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j7.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -800,7 +803,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip21.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j8.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -817,7 +820,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip22.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j9.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -838,7 +841,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip23.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j10.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -858,7 +861,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip24.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j11.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -879,7 +882,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip25.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j12.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -892,7 +895,7 @@
 			<div><p>As  the earth rotates on its axis, creating the day night cycle, the maximum height  the sun will reach on June 22 at places that are 23.5o N latitude is  90 degrees. The sun will be directly overhead in the middle of the day at that  latitude, but nowhere else.</p></div>
 		<div class="questionBox">
 			<form onclick="return false;">
-					<div><p><label for="models-motion7-q1">Where  is the sun directly overhead on the first day of summer in the northern  hemisphere?</label> <input type="text" id="models-motion7-q1" name="models-motion7-q1"></p></div>
+				<div><p><label for="models-motion7-q1">Where  is the sun directly overhead on the first day of summer in the northern  hemisphere?</label> <input type="text" id="models-motion7-q1" name="models-motion7-q1"></p></div>
 			</form>
 		</div>
 		</div>
@@ -903,7 +906,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip26.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j13.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -930,7 +933,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip27.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j14.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -954,7 +957,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip28.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j15.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -975,7 +978,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip29.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j16.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -995,7 +998,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip30.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j17.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -1021,7 +1024,7 @@
 		<h2>Sun-Earth Models</h2>
 	</div>
 	<div class="workarea">
-		<div><img src="<?php echo CLIMATE_DIR_WWW; ?>/media/clip31.png" style="height: 100%; margin: auto;"></div>
+		<div style="text-align: center;"><img src="assets/_default/sid-j18.png" style="height: 100%;"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
