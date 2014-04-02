@@ -5,7 +5,7 @@ textarea { width: 95%; height: 4em; }
 .you-are-here { color: #999999; text-align: center; }
 .you-are-here * { margin: 0px; }
 
-#slider-positioner { position: relative; width: 906px; height: 600px; margin: 0px auto; overflow: hidden; padding: 0px; background-color: #dadada; }
+#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px auto; overflow: hidden; padding: 0px; background-color: #dadada; }
 
 .plusslider { background-color: #ffffff; }
 .plusslider .child {  }
@@ -54,9 +54,9 @@ textarea { width: 95%; height: 4em; }
 
 .child.activity > .instructions {
 	color: black;
-	height: 90px; left: 0px; bottom: 0px; overflow: auto; position: absolute; right: 0px; z-index: 50;
-	margin: 15px 50px; height: 100px; overflow: hidden; left: 0px; right: 0px;
-	font-size: 90%; line-height: 1.4em;
+	height: 190px; left: 0px; bottom: 0px; overflow: auto; position: absolute; right: 0px; z-index: 50;
+	margin: 15px 50px; height: 200px; overflow: hidden; left: 0px; right: 0px;
+	font-size: 150%; line-height: 1.4em;
 }
 /* .child.activity > .instructions ol , .child.activity .instructions ul { overflow: auto; max-height: 100%; padding: 0em; margin: .25em; display: block; }
 .child.activity > .instructions li { display: block; padding: 0em; margin: .65em .25em; } */
