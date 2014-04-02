@@ -1,6 +1,5 @@
 <?php
 require_once('config.php');
-
 $mid = (isset($_GET['mid']) ? trim($_GET['mid']) : NULL);
 $lat = (isset($_GET['lat']) && is_numeric($_GET['lat']) ? trim($_GET['lat']) : NULL);
 $lng = (isset($_GET['lng']) && is_numeric($_GET['lng']) ? trim($_GET['lng']) : NULL);
@@ -9,7 +8,8 @@ $doty = (isset($_GET['doty']) && strtotime($_GET['doty']) ? strtotime($_GET['dot
 
 $data = array('query' => $_GET , 'results' => array());
 $stations_gsod_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005' ) , TRUE );
-$stations_nsrdb_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&has_nsrdb=1' ) , TRUE );
+echo 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005';
+$stations_nsrdb_ret = json_encode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&has_nsrdb=1' ) , TRUE );
 $stations_gsod = $stations_gsod_ret[0]['stations'];
 $stations_nsrdb = $stations_nsrdb_ret[0]['stations'];
 

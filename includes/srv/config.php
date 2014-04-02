@@ -22,7 +22,7 @@ session_start();
 
 //echo '<pre>',print_r($_SESSION,TRUE),'</pre>';
 //echo '<pre>',session_id(),'</pre>';
-
+$_SERVER['SCRIPT_URL'] = $_SERVER['REQUEST_URI'];
 $login = FALSE;
 if ( !isset( $_SESSION['user_id'] ) ) {
 	if ( in_array( basename( $_SERVER['SCRIPT_URL'] ), array( 'reports' ) ) ) {
