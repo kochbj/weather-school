@@ -229,7 +229,6 @@ $( function( ) {
 			} 
 			else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
 					if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'key' ) {
-						console.log($('#slider-menu .current'));
 						$( '#slider-menu').addClass('active');
 						$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) - 10 } , 450 );
 						$( '#slider-menu .current' ).addClass( 'completed' );
