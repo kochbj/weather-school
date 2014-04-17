@@ -1,4 +1,25 @@
 function statspanel_createPanel(data, wInstance) {
+	var labelDisplacement = {
+		5  : [ 225 , 155 ] ,
+		10 : [ 220 , 155 ] ,
+		15 : [ 165 , 155 ] ,
+		20 : [ 135 , 150 ] ,
+		25 : [ 135 , 150 ] ,
+		30 : [ 135 , 145 ] ,
+		35 : [ 130 , 140 ] ,
+		40 : [ 128 , 138 ] ,
+		45 : [ 125 , 135 ] ,
+		50 : [ 123 , 133 ] ,
+		55 : [ 118 , 128 ] ,
+		60 : [ 115 , 125 ] ,
+		65 : [ 112 , 122 ] ,
+		70 : [ 110 , 120 ] ,
+		75 : [ 110 , 118 ] ,
+		80 : [ 110 , 115 ] ,
+		85 : [ 108 , 112 ] ,
+		90 : [ 105 , 110 ] ,
+	};
+	var posSunImg;
 	wInstance.data = data;
 	wInstance.settings.container.find('td:not(:first-child)').remove();
 	for (mid in data) { for ( idxData in data[mid].data ) {
@@ -10,7 +31,14 @@ function statspanel_createPanel(data, wInstance) {
 		wInstance.settings.container.find( '.sunEnergy' ).append( $( '<td>' + data[mid].dataMeta.sunEnergy.format( data[mid].data[idxData].sunEnergy ) + '</td>' ) );
 		wInstance.settings.container.find( '.sunEnergyT' ).append( $( '<td>' + data[mid].dataMeta.sunEnergyT.format( data[mid].data[idxData].sunEnergyT ) + '</td>' ) );
 		wInstance.settings.container.find( '.tempavg' ).append( $( '<td>' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempavg ) + ' <span class="minmax">H ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmax ) + '<br>L ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmin ) + '</span></td>' ) );
-		wInstance.settings.container.find( '.sunAngle' ).append( $( '<td>' + data[mid].dataMeta.sunImage.format( data[mid].data[idxData].sunImage ) + '</td>' ) );
+		wInstance.settings.container.find( '.sunAngle' ).append( $( '<td>' + data[mid].dataMeta.sunImage.format( data[mid].data[idxData].sunImage ) + '<span class="angle-val">' + data[mid].dataMeta.sunAngle.format( data[mid].data[idxData].sunAngle ) + '</span></td>' ) );
+		//position sun angle value
+		posSunImg = $('.sunAngle td:last-child img').position();
+		$('.sunAngle td:last-child .angle-val').addClass( 'positioned' ).css( {
+			position : 'absolute' ,
+			left     : posSunImg.left + labelDisplacement[ ( Math.round( data[mid].data[idxData].sunAngle / 5 ) * 5 ) ][0] ,
+			top      : posSunImg.top + labelDisplacement[ ( Math.round( data[mid].data[idxData].sunAngle / 5 ) * 5 ) ][1]
+		} );
 	} }
 	wInstance._callback({'type':'render'});
 }

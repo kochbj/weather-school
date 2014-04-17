@@ -1,5 +1,5 @@
 /* FIXME: width is 90% because the chart was being sized larger than the container. */
-.widget.linechart { width: 90%; max-height: 480px; height: 100%; margin: auto; }
+.widget.linechart { width: 90%; height: 100%; margin: auto; }
 .widget.linechart .canvas { width: 100%; height: 100%; position: relative; }
 .widget.linechart .ctrl-pan { position: absolute; right: 15px; top: 15px; width: 35px; height: 35px; background-image: url(media/nav-compass.png); background-repeat: no-repeat; background-position: center; opacity: .4; }
 .widget.linechart .controls { text-align: center; }
