@@ -21,8 +21,9 @@ textarea { width: 95%; height: 4em; }
 #slider-menu ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; max-width: 350px; overflow: auto; }
 #slider-menu li { list-style: none; display: block; margin: 0px; padding: 0px; border-bottom: 1px solid #999999; }
 #slider-menu a { display: block; padding: .5em; color: black; text-decoration: none; }
-#slider-menu a:hover { background-color: #AAC0CA; color: #ffffff; text-shadow: 0px 0px 4px #666; }
+#slider-menu a:hover { background-color: #AAC0CA; color: #ffffff !important; text-shadow: 0px 0px 4px #666; }
 #slider-menu a.current { background-color: #91B1C0; }
+#slider-menu a.completed {color: DimGray; }
 #slider-menu .you-are-here { position: absolute; bottom: 0px; color: #999999; text-align: center; }
 #slider-navigation .prev, #slider-navigation .next { z-index: 90; position: absolute; bottom: 20px; background-color: #d1dce5; font-size: 18pt; font-weight: bold; cursor: pointer; border-color: #91b1c0; border-style: solid; }
 #slider-navigation .prev { left: 0px; padding: 10px 10px 10px 5px; border-radius: 0px 30px 30px 0px; border-width: 2px 2px 2px 0px; }

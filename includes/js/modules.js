@@ -195,6 +195,8 @@ $( function( ) {
 		
 		$( '#slider-menu a' ).click( function ( evt ) {
 			ctrlSlider.toSlide( $( $( this ).attr( 'href' ) ).index() );
+			$('#slider-menu' ).removeClass( 'active' );
+			$('#slider-menu' ).animate( { left : '100%' } , 450 );
 			setTimeout( locationUpdate , 500 );
 		} );
 		
@@ -224,8 +226,17 @@ $( function( ) {
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
 			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
 				instrSlider.toSlide( 'next' );
-			} else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
-				ctrlSlider.toSlide( 'next' );
+			} 
+			else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
+					if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'key' ) {
+						console.log($('#slider-menu .current'));
+						$( '#slider-menu').addClass('active');
+						$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) - 10 } , 450 );
+						$( '#slider-menu .current' ).addClass( 'completed' );
+					}
+					else {
+						ctrlSlider.toSlide( 'next' );
+					}
 			}
 			setTimeout( locationUpdate , 500 );
 		} );

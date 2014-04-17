@@ -8,11 +8,11 @@ $doty = (isset($_GET['doty']) && strtotime($_GET['doty']) ? strtotime($_GET['dot
 
 $data = array('query' => $_GET , 'results' => array());
 $stations_gsod_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005' ) , TRUE );
-echo 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005';
-$stations_nsrdb_ret = json_encode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&has_nsrdb=1' ) , TRUE );
+//echo 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005';
+$stations_nsrdb_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&has_nsrdb=1' ) , TRUE );
+//echo '<pre>', print_r($stations_nsrdb_ret,true),'</pre>';
 $stations_gsod = $stations_gsod_ret[0]['stations'];
 $stations_nsrdb = $stations_nsrdb_ret[0]['stations'];
-
 $station_gsod = NULL;
 $avg_temp = NULL;
 foreach ( $stations_gsod as $station_id => $station_meta ) {
@@ -20,7 +20,11 @@ foreach ( $stations_gsod as $station_id => $station_meta ) {
 	if ( array_key_exists( 'gsod_years' , $station_meta ) && is_array( $station_meta['gsod_years'] ) && count( $station_meta['gsod_years'] ) > 0 ) {
 		$has_data = FALSE;
 		for ( $year = 1995 ; $year <= 2006 ; $year++ ) {
+			//if (!isset($station_meta['gsod_years'][$year])) {
+			//	error_log(print_r($station_meta,TRUE));
+			//}
 			if ( $station_meta['gsod_years'][$year]['has_data'] ) {
+				
 				$has_data = TRUE;
 				break;
 			}
@@ -29,7 +33,8 @@ foreach ( $stations_gsod as $station_id => $station_meta ) {
 	}
 	// FIXME can we check here to see if it's necessary to request a recordings update?
 	//file_get_contents('http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data/noaa/recordings_gsod.php?dbid=' . urlencode($station_id) . '&year_min=1995&year_max=2005');
-	$sql_stmt = 'SELECT AVG(temp) AS temp, AVG(temp_max) AS temp_max, AVG(temp_min) AS temp_min FROM recordings_gsod WHERE station_id = \'' . $station_id . '\' AND date_recorded >= \'1995-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . '\' GROUP BY RIGHT(date_recorded, 5);';
+$sql_stmt = 'SELECT AVG(temp) AS temp, AVG(temp_max) AS temp_max, AVG(temp_min) AS temp_min FROM recordings_gsod WHERE station_id = \'' . $station_id . '\' AND date_recorded >= \'1995-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . '\' GROUP BY RIGHT(date_recorded, 5);';
+echo $sql_stmt , "<br>";
 	$recordset = mysql_query( $sql_stmt );
 	if ( $recordset && mysql_num_rows( $recordset ) > 0 ) {
 		$result = mysql_fetch_assoc( $recordset );
