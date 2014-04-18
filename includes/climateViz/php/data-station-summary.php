@@ -34,7 +34,6 @@ foreach ( $stations_gsod as $station_id => $station_meta ) {
 	// FIXME can we check here to see if it's necessary to request a recordings update?
 	//file_get_contents('http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data/noaa/recordings_gsod.php?dbid=' . urlencode($station_id) . '&year_min=1995&year_max=2005');
 $sql_stmt = 'SELECT AVG(temp) AS temp, AVG(temp_max) AS temp_max, AVG(temp_min) AS temp_min FROM recordings_gsod WHERE station_id = \'' . $station_id . '\' AND date_recorded >= \'1995-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . '\' GROUP BY RIGHT(date_recorded, 5);';
-echo $sql_stmt , "<br>";
 	$recordset = mysql_query( $sql_stmt );
 	if ( $recordset && mysql_num_rows( $recordset ) > 0 ) {
 		$result = mysql_fetch_assoc( $recordset );
