@@ -490,7 +490,7 @@ function dataSelect_instantiate(wInstance) {
 						_deactivateDpicker($(this));
 					}
 					else {
-						_activateDpicker($(this));
+						$( this ).parent( ).find( 'input' ).focus( );
 					}
 				});
 				wInstance.map.date.find( '.input input' ).keydown( function ( evt ) {
