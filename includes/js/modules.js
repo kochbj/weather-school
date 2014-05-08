@@ -193,32 +193,62 @@ $( function( ) {
 			ctrlSlider.toSlide( 0 );
 		}
 		
+		_clickOutmenu = function (evt ){
+			$('#slider-menu').removeClass( 'active' );
+			$('#slider-menu').animate( { left : '100%' } , 450 );
+			$( '#click-cover').off('click', _clickOutmenu);
+			$( '#click-cover' ).hide();
+		}
+		
 		$( '#slider-menu a' ).click( function ( evt ) {
 			ctrlSlider.toSlide( $( $( this ).attr( 'href' ) ).index() );
 			$('#slider-menu' ).removeClass( 'active' );
 			$('#slider-menu' ).animate( { left : '100%' } , 450 );
+			$( '#click-cover').off('click', _clickOutmenu);
+			$('#click-cover').hide();
 			setTimeout( locationUpdate , 500 );
 		} );
-		
+	
+
 		$( '#slider-menu' ).data( 'width' , $( '#slider-menu' ).width( ) );
 		$( '#slider-menu' ).css( { 'right':'auto' , 'left':'100%' , 'width':$( '#slider-menu' ).data( 'width' )+'px' } );
 		$( '#slider-menu .access-control' ).click( function ( evt ) {
+			if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'key' ) { return; }
 			var el = $( this ).parent();
 			if ( el.hasClass( 'active' ) ) {
 				el.removeClass( 'active' );
 				el.animate( { left : '100%' } , 450 );
+				$( '#click-cover').off('click', _clickOutmenu);
+				$( '#click-cover').hide();
 			} else {
 				el.addClass( 'active' );
 				el.animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) - 10 } , 450 );
+				$( '#click-cover' ).show();
+				$( '#click-cover').on('click', _clickOutmenu);
 			}
 		} );
+		
 		
 		$( '#slider-navigation .prev' ).click( function ( evt ) {
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
 			if ( instrSlider && instrSlider.currentSlideIndex > 0 && !evt.ctrlKey ) {
+				if ( $('#slider-menu').hasClass( 'active' ) ) {
+					$('#slider-menu').removeClass( 'active' );
+					$('#slider-menu').animate( { left : '100%' } , 450 );
+					$( '#click-cover').off('click', _clickOutmenu);
+					$( '#click-cover').hide();
+				}
 				instrSlider.toSlide( 'prev' );
-			} else if ( ctrlSlider.currentSlideIndex > 0 ) {
-				ctrlSlider.toSlide( 'prev' );
+			}
+			else if ( ctrlSlider.currentSlideIndex > 0 && (ctrlSlider.$slides[ctrlSlider.currentSlideIndex-1].getAttribute('Class') != 'module-complete child') ) {
+				if ( $('#slider-menu').hasClass( 'active' ) ) {
+					$('#slider-menu').removeClass( 'active' );
+					$('#slider-menu').animate( { left : '100%' } , 450 );
+					$( '#click-cover').off('click', _clickOutmenu);
+					$( '#click-cover').hide();
+				}
+					ctrlSlider.toSlide( 'prev' );
+				
 			}
 			setTimeout( locationUpdate , 500 );
 		} );
@@ -227,16 +257,22 @@ $( function( ) {
 			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
 				instrSlider.toSlide( 'next' );
 			} 
-			else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
-					if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'key' ) {
-						console.log($('#slider-menu .current'));
+			else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount-1 ) {
+					if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+2].getAttribute('data-slide-type') == 'key' ) {
+						ctrlSlider.toSlide( 'next' );
 						$( '#slider-menu').addClass('active');
 						$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) - 10 } , 450 );
 						$( '#slider-menu .current' ).addClass( 'completed' );
 					}
-					else {
+					else if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') != 'key' ) {
 						ctrlSlider.toSlide( 'next' );
 					}
+			}
+			else if ( ctrlSlider.currentSlideIndex == ctrlSlider.slideIndexCount-1 ) {
+				ctrlSlider.toSlide( 'next' );
+				$( '#slider-menu').addClass('active');
+				$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) - 10 } , 450 );
+				$( '#slider-menu .current' ).addClass( 'completed' );
 			}
 			setTimeout( locationUpdate , 500 );
 		} );

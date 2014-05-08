@@ -81,6 +81,7 @@
 <body>
 	<div id="slider-positioner">
 		<div id="slider-navigation">
+			<div id="click-cover" class="cover"></div>
 			<div id="slider-menu">
 				<div class="access-control">menu</div>
 				<ul>

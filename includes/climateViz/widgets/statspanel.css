@@ -28,9 +28,13 @@
 	width: 250px;
 }
 .widget.statspanel table .sunAngle .angle-val.positioned {
-	background-color: rgba(255,255,255,.4);
+	background-color: rgba(255,255,255,0);
 	padding: 3px;
 	border-radius: 6px;
+}
+
+.widget.statspanel table .sunAngle td {
+	position: relative;
 }
 
 .widget.statspanel .readings-note {

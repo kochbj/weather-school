@@ -70,7 +70,6 @@ function dataSelect_instantiate(wInstance) {
 	//		wInstance.map.setCenter(this.mapCenter);
 	//	}
 	// });
-	
 	wInstance.map = new google.maps.Map(mapCanvas[0], myOptions);
 	
 	// https://developers.google.com/maps/documentation/javascript/examples/overlay-symbol-dashed
@@ -165,11 +164,41 @@ function dataSelect_instantiate(wInstance) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
 			case 'month-day' :
-				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
+				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
+				
+				//used for closing and opening datepicker
+				var tog = wInstance.map.date.find( '.toggle' );
+				var Dinput= wInstance.map.date.find( '.input input' );
+				_togoutside = function(e) {
+					var ele = $(e.target);
+					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
+						console.log("Clicked outside!");
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						tog.removeClass('active');
+						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+				 	}
+				};
+				_deactivateDpicker = function () {
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						console.log("clickoutside OFF");
+						tog.removeClass( 'active' );
+						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+					};
+				_activateDpicker = function () {
+						tog.addClass( 'active' );
+						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
+						$( '.widget-cover' ).show();
+						$( document ).on('click',_togoutside);
+				};
 				wInstance.map.date.ui.events = {
 					onSelect : function ( value , ui ) {
 						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
@@ -206,7 +235,7 @@ function dataSelect_instantiate(wInstance) {
 							wInstance.map.date.attr( 'title' , 'No date selected' );
 						}
 						ui.dpDiv.parent().datepicker( 'refresh' );
-						ui.dpDiv.parent().fadeOut();
+						_deactivateDpicker();
 						wInstance._callback({type:'user-select-date'});
 					} ,
 					beforeShowDay : function ( dateObj ) {
@@ -278,18 +307,214 @@ function dataSelect_instantiate(wInstance) {
 						);
 					}
 				} );
+				
 				wInstance.map.date.ui.find('.ui-datepicker').addClass('hideYear');
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
-				wInstance.map.date.find( '.toggle' ).click( function ( evt ) {
-					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
-					$( this ).parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeToggle();
+				//controlling open and closing toggle
+				tog.click( function ( evt ) {
+					if ( $( this ).hasClass( 'active' ) ) {
+						_deactivateDpicker();
+					}
+					else {
+						_activateDpicker();
+					}
+				});
+				Dinput.focus( function ( evt ) {
+						_activateDpicker();
 				} );
-				wInstance.map.date.find( '.input input' ).focus( function ( evt ) {
-					$( this ).parents( '.map-date' ).removeClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' ).addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
-					$( this ).parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
+				Dinput.keydown( function ( evt ) {
+					 var keycode = (evt.keyCode ? evt.keyCode : evt.which);
+					 if(keycode == '13'){
+						_deactivateDpicker(); 
+						 $( this ).blur();
+					 }
 				} );
+				
 				wInstance.map.date.find( '.input input' ).val( '' );
 				break;
+			case 'year-month-day-range-double' :
+				wInstance.map.date.addClass( 'year-month-day-range-double' ).html( '<div class="visual-control inline"><div class="input date-start"><p class ="date-label">Start:</p><div class="toggle start-toggle"></div><input type="text" size="3" placeholder="Start Date" /></div><div class="input date-end"><p class ="date-label">  End:</p><div class="toggle end-toggle"></div><input type="text" size="3" placeholder="End Date" /></div><div class="datepicker"></div></div>' );
+				wInstance.map.date.find( '.input input' ).autogrow( );
+				wInstance.map.date.attr( 'title' , 'No date selected' );
+				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
+				wInstance.map.date.ui.wInstance = wInstance;
+			
+			//used for widget cover	
+				_togoutside = function(e) {
+					var ele = $(e.target);
+		
+					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(e.data.toggle) && !ele.is(e.data.toggle.parent().find('input')) ){
+						console.log("Clicked outside!");
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						e.data.toggle.removeClass('active');
+						//e.data.toggle.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
+						e.data.toggle.parent().removeClass('active');
+						e.data.toggle.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
+							e.data.toggle.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
+						} );
+				 	}
+				};
+				_deactivateDpicker = function (tog,tog2) {
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						console.log("clickoutside OFF");
+						tog.removeClass( 'active' );
+						//tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
+						tog.parent().removeClass('active');
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
+							tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
+							if (typeof(tog2)!=='undefined'){_activateDpicker(tog2);}
+						} );
+					};
+				_activateDpicker = function (tog) {
+						_deactivateDpicker(wInstance.map.date.find('.toggle.active'));
+					//if (tog.hasClass('active')) {_deactivateDpicker(wInstance.map.date.find('.toggle.active'),tog);}
+						tog.addClass( 'active' );
+						console.log(tog);
+						console.log(tog.hasClass('end-toggle'));
+						if (tog.hasClass('end-toggle')) { tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).addClass("end-active"); }
+						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
+						$( '.widget-cover' ).show();
+						$( document ).on('click',{ toggle: tog}, _togoutside);
+						console.log("clickoutside ON");
+						tog.parent().addClass('active');
+				};
+				
+				wInstance.map.date.ui.events = {
+					onSelect : function (value,ui) {
+						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
+						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
+						if ( startDate === null || endDate === null || startDate >= endDate || $( this ).parents( '.map-date' ).find( '.input input' ).val() == '' ) {
+							wInstance.map.date.attr( 'title' , 'No date selected' );
+							$( this ).parents( '.widget.dataSelect .map-date' ).data(
+								'value' ,
+								null
+							);
+						} else {
+							if ( wInstance.settings.date.range ) { endDate.setFullYear( endDate.getFullYear() + wInstance.settings.date.range ); }
+							if ( wInstance.settings.date.range ) { startDate.setFullYear( startDate.getFullYear() - wInstance.settings.date.range ); }
+							$( this ).parents( '.widget.dataSelect .map-date' ).data(
+								'value' ,
+								[ [ startDate , endDate ] ]
+							);
+							displayStr = $.datepicker.formatDate('yy-M-d', startDate) + ' to ' + $.datepicker.formatDate('yy-M-d', endDate);
+							wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
+						}
+						ui.dpDiv.parents( '.map-date' ).find( '.datepicker' ).datepicker( 'refresh' );
+						ui.dpDiv.parents( '.map-date' ).find( '.input input' ).autogrow( );
+						ui.dpDiv.parents( '.map-date' ).find( '.toggle.active' ).each( function ( idx , el ) { 
+							//var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).parent().find('input').val( ) == '' ? '2000-01-01' : $( this ).parent().find('input').val( ) ) );
+							$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , value );
+							_deactivateDpicker($( this )); } );
+						
+						//part of closing properly 
+						wInstance._callback({type:'user-select-date'});
+					} ,
+					beforeShowDay: function ( dateObj ) {
+						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
+						var selectedDates = $(this).parents('.map-date').data('value');
+						var testDateStart = new Date();
+						var testDateEnd = new Date();
+						for (i in selectedDates) {
+							/* Enable date so it can be deselected. Set style to be highlighted */
+							testDateStart.setTime( selectedDates[0][0].getTime() );
+							if ( testDateStart && wInstance.settings.date.range ) { testDateStart.setFullYear( testDateStart.getFullYear() + wInstance.settings.date.range ); }
+							testDateEnd.setTime( selectedDates[0][1].getTime() );
+							if ( testDateEnd && wInstance.settings.date.range ) { testDateEnd.setFullYear( testDateEnd.getFullYear() - wInstance.settings.date.range ); }
+							if ( dateObj.getTime() >= testDateStart.getTime() && dateObj.getTime() <= testDateEnd.getTime() ) {
+								return [true,"selected"];
+							}
+							/* Dates not in the array are left enabled, but with no extra style */
+							return [true, ""];
+						}
+						/* Dates not in the array are left enabled, but with no extra style */
+						return [true, ""];
+					}
+				}
+				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
+					altFormat       : 'yy M dd' ,
+					changeMonth     : true ,
+					changeYear      : true ,
+					showButtonPanel : false ,
+					defaultDate     : new Date(2000,0,1) ,
+					/* should be set based on data source
+					minDate         : new Date(1995,0,1) ,
+					maxDate         : new Date(1995,11,31) ,
+					*/
+					onSelect        : wInstance.map.date.ui.events.onSelect ,
+					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
+				} );
+				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
+				wInstance.map.date.ui.dpDiv.hide();
+				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
+					var elInput = $( this );
+					if ( elInput.val() == '' ) {
+						wInstance.map.date.data( 'value' , [] );
+						wInstance.map.date.attr( 'title' , 'No date selected' );
+						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
+					}
+					var usrDate = aaasClimateViz.dateParser( elInput.val() );
+					if ( usrDate !== false ) {
+						usrDate = new Date( usrDate );
+						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
+						dpDiv.datepicker( 'setDate' , usrDate );
+						if ( elInput.val() == '' ) {
+							wInstance.map.date.data( 'value' , [] );
+							dpDiv.datepicker( 'refresh' );
+						}
+						dpDiv.datepicker( 'setDate' , usrDate );
+						var selectedDates = elInput.parents('.widget.dataSelect .map-date').data('value');
+						for (i in selectedDates) {
+							if ( usrDate.getTime() == selectedDates[i][ dpDiv.parent( ).hasClass( 'date-start' ) ? 0 : 1 ].getTime() ) {
+								return;
+							}
+						}
+						wInstance.map.date.ui.events.onSelect.call(
+							dpDiv[0] ,
+							$.datepicker.formatDate( 'mm/dd/yy' , usrDate ) ,
+							{
+								dpDiv         : dpDiv.find( 'div.ui-datepicker-inline' ) ,
+								input         : dpDiv ,
+								selectedDay   : usrDate.getDate() ,
+								selectedMonth : usrDate.getMonth()
+							}
+						);
+					}
+				} );
+				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
+				
+				wInstance.map.date.find('.toggle').click( function ( evt ) {
+					if ( $( this ).hasClass( 'active' ) ) {
+						_deactivateDpicker($(this));
+					}
+					else {
+						_activateDpicker($(this));
+					}
+				});
+				wInstance.map.date.find( '.input input' ).keydown( function ( evt ) {
+					 var keycode = (evt.keyCode ? evt.keyCode : evt.which);
+					 if(keycode == '13'){
+						tog= $(this).parent().find('.toggle');
+						_deactivateDpicker(tog); 
+						 $( this ).blur();
+					 }
+				} );
+				wInstance.map.date.find( '.input input' )
+					.focus( function ( evt ) {
+						console.log($(this));
+						$( this ).autogrow( );
+						_activateDpicker($( this ).parent().find('.toggle'));
+						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , selectedDate );
+					} )
+					.blur( function ( evt ) {
+						$( this ).autogrow( );
+					} );
+				wInstance.map.date.find( '.input input' ).val( '' );
+				break;
+
 			case 'year-month-day-range' :
 				wInstance.map.date.addClass( 'year-month-day-range-alt' ).html( '<div class="visual-control inline"><div class="input date-start"><input type="text" size="3" placeholder="Start Date" /></div>&ndash;<div class="input date-end"><input type="text" size="3" placeholder="End Date" /></div><div class="toggle"></div><div class="datepicker"></div></div>' );
 				wInstance.map.date.find( '.input input' ).autogrow( );
@@ -320,6 +545,8 @@ function dataSelect_instantiate(wInstance) {
 						ui.dpDiv.parents( '.map-date' ).find( '.input input' ).autogrow( );
 						ui.dpDiv.parents( '.map-date' ).find( '.input' ).each( function ( idx , el ) { $( this ).toggleClass( 'active' ); } );
 						ui.dpDiv.parents( '.map-date' ).find( '.input.active input' ).focus( );
+						
+						//part of closing properly 
 						wInstance._callback({type:'user-select-date'});
 					} ,
 					beforeShowDay: function ( dateObj ) {

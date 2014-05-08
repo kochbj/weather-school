@@ -30,6 +30,12 @@
 		</tr>
 	</table>
 </div>
+<div id="intro-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p class="invite"> You have completed the introduction. Select the next module you would like to explore from the menu. </p>
+	</div>
+</div>
 <div id="locationExplorer-sample" class="activity" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Location Summary">
 	<div class="header">
 		<h2>How high is the sun in…?</h2>
@@ -151,6 +157,12 @@
 		<p>You can explore more places and times of the year above. Go to the next page to continue to a new activity.</p>
 	</div>
 </div>
+<div id="locationExplorer-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="locationExplorer-sample">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Location Summary module. Select the next module you would like to explore from the menu. </p>
+	</div>
+</div>
 <div id="temperature-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Learning about Temperature Patterns">
 	<h2>Learning about Temperature Patterns</h2>
 	<p>So far you have seen that at any given place, the hours of daylight, the maximum height of the sun in the sky, the high, low, and average daily temperatures, and the average amount of energy from the sun change throughout the year. You also saw that those quantities vary from one place to another on the same day of the year.</p>
@@ -264,6 +276,12 @@
 		</div>
 	</div>
 </div>
+<div id="temperature-intro-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-intro">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Learning about Temperature Patterns module. Select the next module you would like to explore from the menu. </p>
+	</div>
+</div>
 <div id="temperature-lat" class="activity" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Exploring Temperature and Lattitude">
 	<div class="header">
 		<h2>Temperature and Latitude</h2>
@@ -306,6 +324,12 @@
 			<input type="submit" value="Save My Answers">
 			</form>
 		</div>
+	</div>
+</div>
+<div id="temperature-lat-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-lat">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Temperature and Latitude module. Select the next module you would like to explore from the menu. </p>
 	</div>
 </div>
 <div id="temperature-elev-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Elevation">
@@ -372,6 +396,12 @@
 				</form>
 			</div>
 		</div>
+	</div>
+</div>
+<div id="temperature-elev-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-elev-intro">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Temperature and Elevation module. Select the next module you would like to explore from the menu. </p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
@@ -470,6 +500,12 @@
 	<div style="text-align: center;">
 		<iframe width="420" height="315" src="http://www.youtube.com/embed/ULJpU1id6-M" frameborder="0" allowfullscreen></iframe>
 	</div>
+	</div>
+</div>
+<div id="temperature-water-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-water-intro">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Temperature and Large Bodies of Water module. Select the next module you would like to explore from the menu. </p>
 	</div>
 </div>
 <div id="daylight-intro" class="activity" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -588,6 +624,12 @@
 		</div>
 	</div>
 </div>
+<div id="daylight-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="daylight-intro">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Hours of Daylight module. Select the next module you would like to explore from the menu. </p>
+	</div>
+</div>
 <div id="variable-exploration" class="activity" data-slide-type="key" data-slide-title="Try It: Variable Exploration" data-slide-group-title="Variable Exploration">
 	<div class="header">
 		<h2>Explore Other Variables</h2>
@@ -605,6 +647,12 @@
 				<p>To  explore them, click on [maximum height of the sun in the sky] or [average energy  from the sun] on the menu above.</p>
 			</div>
 		</div>
+	</div>
+</div>
+<div id="variable-exploration" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="variable-exploration">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> If you're done exploring variables, select the next module you would like to explore from the menu. </p>
 	</div>
 </div>
 <div id="relationships-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Relationships Between Variables">
@@ -700,6 +748,12 @@
 				</form>
 			</div>
 		</div>
+	</div>
+</div>
+<div id="relationships-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="relationships-intro">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Relationships Between Variables module. Select the next module you would like to explore from the menu. </p>
 	</div>
 </div>
 <div id="models-intro" data-slide-type="key" data-slide-title="Sun-Earth Models Introduction" data-slide-group-title="Sun-Earth Models">
@@ -1044,5 +1098,11 @@
 			</form>
 		</div>
 		</div>
+	</div>
+</div>
+<div id="models-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="models-intro">
+	<h2>Module Complete</h2>
+	<div id ="completed-text">
+		<p> You have completed the Sun-Earth Models module. Select the next module you would like to explore from the menu. </p>
 	</div>
 </div>

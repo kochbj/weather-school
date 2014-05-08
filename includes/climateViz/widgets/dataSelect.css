@@ -9,6 +9,8 @@
   text-align: center;
   width: auto;
 }
+
+.widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
 .widget.dataSelect .map-canvas { height: 400px; width: 100%; }
 
 .widget.dataSelect .map-info {
@@ -32,6 +34,7 @@
   width: 95%;
   bottom: 0px;
   right: 15px;
+	z-index: 99;
   /* padding: .25em 10px;
   right: 15px; */
 }
@@ -53,6 +56,7 @@
   bottom: 0px;
   right: 10px;
 }
+
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control {
   position: absolute;
   font-size: 80%;
@@ -67,7 +71,11 @@
   bottom: 28px;
   right: 2px;
 }
-.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker { min-height: 198px; }
+.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker { min-height: 198px;  }
+//.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #D0DBE5; }
+.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #e4e9ca; }
+.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline .ui-datepicker-header { background-color: #dbd3c1; background-image: none; }
+
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control.inline {
   position: static;
   background-color: transparent;
@@ -86,7 +94,8 @@
 .ui-datepicker .selected a { background-color: #99ccff; background-image: none; }
 .hasDatepicker.hideNav .ui-datepicker-prev, .hasDatepicker.hideNav .ui-datepicker-next { display: none; }
 
-.widget.dataSelect .map-date .input input { text-align: center; }
+.widget.dataSelect .map-date .input input { text-align: center; display: inline; }
+.widget.dataSelect .map-date .input .date-label { text-align: right; display: inline; }
 
 /* styles for date control "month-day" selection */
 .widget.dataSelect .map-date.month-day { max-width: 200px; }
@@ -96,11 +105,13 @@
 
 /* styles for date control "month-day-alt" selection */
 .widget.dataSelect .map-date.month-day-alt { max-width: 200px; text-align: right; }
-.widget.dataSelect .map-date.month-day-alt > * { text-align: left; }
+.widget.dataSelect .map-date.month-day-alt > * { text-align: left;}
 .widget.dataSelect .map-date.month-day-alt .toggle, .widget.dataSelect .map-date.month-day-alt .date-selection { position: static; display: inline-block; }
 .widget.dataSelect .map-date.month-day-alt .input input { width: 6.75em; text-align: right; min-width: 3.25em; padding: .15em 26px .15em .25em; background-color: transparent; border: none; height: 18px; border: 2px solid transparent; border-radius: 10px 2px 2px 10px; }
 .widget.dataSelect .map-date.month-day-alt > div:hover .input input , .widget.dataSelect .map-date.month-day-alt .input input:focus { background-color: rgba(72,116,192,.1); }
 .widget.dataSelect .map-date.month-day-alt .toggle { margin-left: -30px; }
+
+
 
 /* styles for date control "year-month-day-range" selection */
 .widget.dataSelect .map-date.year-month-day-range { max-width: 400px; }
@@ -119,6 +130,27 @@
 .widget.dataSelect .map-date.year-month-day-range-alt .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
 /*.widget.dataSelect .map-date.year-month-day-range-alt .visual-control:hover { background-color: rgba(72,116,192,.1); }*/
 .widget.dataSelect .map-date.year-month-day-range-alt .toggle { margin-bottom: -4px; }
+
+
+
+
+/* styles for date control "year-month-day-range-double" selection */
+.widget.dataSelect .map-date.year-month-day-range-double { max-width: 400px; text-align: right; }
+.widget.dataSelect .map-date.year-month-day-range-double > * { text-align: left; }
+.widget.dataSelect .map-date.year-month-day-range-double .input { display: inline-block; }
+.widget.dataSelect .map-date.year-month-day-range-double .toggle , .widget.dataSelect .map-date.year-month-day-range-alt .start-date, .widget.dataSelect .map-date.year-month-day-range-alt .end-date { position: static; display: inline-block; }
+.widget.dataSelect .map-date.year-month-day-range-double .input input { width: 65px; text-align: center; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; height: 1.5em }
+.widget.dataSelect .map-date.year-month-day-range-double .input.active input { background-color: rgba(255, 255, 168, 0.3) }
+.widget.dataSelect .map-date.year-month-day-range-double .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
+//.widget.dataSelect .map-date.year-month-day-range-double .visual-control .input input :hover { background-color: rgba(72,116,192,.1); }
+//.widget.dataSelect .map-date.year-month-day-range-double .visual-control .input .toggle :hover { background-color: rgba(72,116,192,.1); }
+.widget.dataSelect .map-date.year-month-day-range-double .toggle { margin-bottom: -4px; }
+.widget.dataSelect .map-date.year-month-day-range-double .toggle.end-toggle { background-image: url("media/calendar-orange.png"); }
+//.widget.dataSelect .map-date.year-month-day-range-double .datepicker td a, .widget.dataSelect .map-date.year-month-day-range-alt .datepicker .ui-datepicker-header { border: 1px solid #8f4600 !important; }
+//.widget.dataSelect .map-date.year-month-day-range-double .datepicker td a, .widget.dataSelect .map-date.year-month-day-range-alt .datepicker .ui-datepicker-header { border: 1px solid #006290 !important; }
+.widget.dataSelect .map-date.year-month-day-range-double .datepicker .ui-datepicker-header { border: 2px solid #006290 !important; }
+.widget.dataSelect .map-date.year-month-day-range-double .datepicker.end-active .ui-datepicker-header { border: 2px solid #8f4600 !important; }
+
 
 /* styles for date control "year" selection */
 .widget.dataSelect .map-date.year { max-width: 200px; text-align: right; }

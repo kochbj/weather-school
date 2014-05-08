@@ -168,12 +168,15 @@ td {
 	background-repeat: no-repeat;
 	background-position: center left;
 	padding-left: 20px;
+	z-index: 999;
 }
 .ui-datepicker-calendar {
     display: none;
+		z-index: 999;
 }
 #ui-datepicker-div {
 	font-size: 80%;
+	z-index: 999;
 }
 
 #visport {

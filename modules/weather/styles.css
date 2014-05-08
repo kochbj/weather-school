@@ -18,6 +18,10 @@
 #sun-position td:nth-child(2) { padding-top: 0em; }
 #sun-position td .caption { font-size: 80%; }
 
+.module-complete { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+.module-complete > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }
+.module-complete #completed-text { background-color: rgba(142,171,197,.5); width: 53%; font-size:135%; margin-left: 23px; margin-top: 4em; padding: .01em 1em .01em 1em; }
+
 #activity-intro { background-image: url(assets/activity-intro/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
 #activity-intro h3 { font-weight: normal; background-color: #919191; font-size: 160%; margin-top: 4em; padding: .5em 0em .5em 20px; }
 #activity-intro p { margin: 0; padding-left: 20px; }

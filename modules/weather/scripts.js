@@ -353,7 +353,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' },
-					date           : { type:'month-day-alt' , max:1 },
+					date           : { type:'month-day' , max:1 },
 					maxPoints      : 2,
 					container      : $( '#dataSelector-sample' ),
 					readOnly       : true ,
@@ -378,7 +378,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' },
-					date           : { type:'month-day-alt' , max:1 },
+					date           : { type:'month-day' , max:1 },
 					maxPoints      : 1,
 					container      : $( '#dataSelector1' ),
 					displayWidgets : [
@@ -402,7 +402,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' },
-					date           : { type:'month-day-alt' , max:1 },
+					date           : { type:'month-day' , max:1 },
 					maxPoints      : 2,
 					container      : $( '#dataSelector2' ),
 					displayWidgets : [
@@ -426,7 +426,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' },
-					date           : { type:'month-day-alt' , max:1 },
+					date           : { type:'month-day' , max:1 },
 					maxPoints      : 2,
 					container      : $( '#dataSelector3' ),
 					displayWidgets : [
@@ -450,7 +450,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' },
-					date           : { type:'month-day-alt' , max:1 },
+					date           : { type:'month-day' , max:1 },
 					maxPoints      : 1,
 					container      : $( '#dataSelector-tryit' ),
 					displayWidgets : [
@@ -474,7 +474,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range-alt' , 'range':1 },
+					date           : { type:'year-month-day-range-double' , 'range':1 },
 					maxPoints      : 1,
 					container      : $( '#dataSelector4' ),
 					displayWidgets : [
@@ -523,7 +523,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					container      : $( '#dataSelector5' ),
 					displayWidgets : [
@@ -547,7 +547,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
 					container      : $( '#dataSelector6' ),
 					displayWidgets : [
@@ -571,7 +571,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					maxStations    : 2,
 					container      : $( '#dataSelector7' ),
@@ -596,7 +596,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					maxStations    : 2,
 					container      : $( '#dataSelector8' ),
@@ -621,7 +621,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					maxStations    : 2,
 					container      : $( '#dataSelector9' ),
@@ -646,7 +646,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					maxStations    : 2,
 					container      : $( '#dataSelector10' ),
@@ -671,7 +671,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range' , max:1 },
+					date           : { type:'year-month-day-range-double' , max:1 },
 					maxPoints      : 1,
 					container      : $( '#sun-hours-selector-sample' ),
 					displayWidgets : [
@@ -696,7 +696,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
 					container      : $( '#sun-hours-selector-1' ),
 					displayWidgets : [
@@ -720,7 +720,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
 					container      : $( '#sun-hours-selector-2' ),
 					displayWidgets : [
@@ -744,7 +744,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
 					container      : $( '#sun-hours-selector-3' ),
 					displayWidgets : [
@@ -768,7 +768,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours',] },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
 					container      : $( '#sun-hours-selector-4' ),
 					displayWidgets : [
@@ -792,7 +792,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunAngle'] },
-					date           : { type:'year-month-day-range' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					container      : $( '#variables-selector-1' ),
 					displayWidgets : [
@@ -840,7 +840,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['sunAngle','sunEnergyT'] },
-					date           : { type:'month-day-alt' },
+					date           : { type:'month-day' },
 					maxPoints      : 1,
 					container      : $( '#relations-intro3-map' ),
 					displayWidgets : [
@@ -906,7 +906,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day-alt' , max:12 },
+					date           : { type:'month-day' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#variables-selection-2' ),
 					displayWidgets : [
