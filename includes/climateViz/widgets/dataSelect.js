@@ -368,11 +368,11 @@ function dataSelect_instantiate(wInstance) {
 						} );
 					};
 				_activateDpicker = function (tog) {
-						_deactivateDpicker(wInstance.map.date.find('.toggle.active'));
-					//if (tog.hasClass('active')) {_deactivateDpicker(wInstance.map.date.find('.toggle.active'),tog);}
+						if ( tog.closest( '.map-date' ).find( '.visual-control .datepicker' ).is( ':visible' ) ) {
+							_deactivateDpicker( wInstance.map.date.find('.toggle.active') , tog );
+							return;
+						}
 						tog.addClass( 'active' );
-						console.log(tog);
-						console.log(tog.hasClass('end-toggle'));
 						if (tog.hasClass('end-toggle')) { tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).addClass("end-active"); }
 						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
