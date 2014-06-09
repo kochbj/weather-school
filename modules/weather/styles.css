@@ -39,7 +39,7 @@
 .workarea .restricted-tc { right: 0px; left: 36%; width: 64% !important; }
 
 .workarea .full-ds { left: 0px; right: 0px; }
-.workarea .full-tc { right: 0px; left: 100%; display: none;}
+.workarea .full-tc { right: 0px; left: 100%; width:64% !important; display: none;}
 
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }

@@ -199,7 +199,7 @@ function mapXvis ( evt ) {
 			.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		this.settings.displayWidgets[0].settings.container
 			.show()
-			.css( { 'width':'auto' } )
+			//.css( { 'width':'auto' } )
 			.animate(
 				{ left:'36%' } ,
 				1000 ,
