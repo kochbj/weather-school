@@ -230,8 +230,8 @@
 		<h2>Try It: Chart Temperature</h2>
 	</div>
 	<div class="workarea">
-		<div id="annual-temperature-explore-ds"></div>
-		<div id="annual-temperature-explore-tc"></div>
+		<div id="annual-temperature-explore-ds" class="full-ds"></div>
+		<div id="annual-temperature-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -342,8 +342,8 @@
 		<h2>Try It: Temperature versus Latitude</h2>
 	</div>
 	<div class="workarea">
-		<div id="temperature-lat-explore-ds"></div>
-		<div id="temperature-lat-explore-tc"></div>
+		<div id="temperature-lat-explore-ds" class="full-ds"></div>
+		<div id="temperature-lat-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -426,8 +426,8 @@
 		<h2>Try It: Temperature versus Elevation</h2>
 	</div>
 	<div class="workarea">
-		<div id="temperature-elevation-explore-ds"></div>
-		<div id="temperature-elevation-explore-tc"></div>
+		<div id="temperature-elevation-explore-ds" class="full-ds"></div>
+		<div id="temperature-elevation-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -512,8 +512,8 @@
 		<h2>Try It: Temperature and Large Bodies of Water</h2>
 	</div>
 	<div class="workarea">
-		<div id="temperature-water-explore-ds"></div>
-		<div id="temperature-water-explore-tc"></div>
+		<div id="temperature-water-explore-ds" class="full-ds"></div>
+		<div id="temperature-water-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -591,8 +591,8 @@
 		<h2>Try It: Height of the Sun in the Sky</h2>
 	</div>
 	<div class="workarea">
-		<div id="height-sun-explore-ds"></div>
-		<div id="height-sun-explore-tc"></div>
+		<div id="height-sun-explore-ds" class="full-ds"></div>
+		<div id="height-sun-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -622,7 +622,7 @@
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" ></div>
-		<div id="height-sun-air-temperature-example-tb "></div>
+		<div id="height-sun-air-temperature-example-tb"></div>
 		<div id="height-sun-air-temperature-example-tc"></div>
 	</div>
 	<div class="instructions">
@@ -647,9 +647,9 @@
 		<h2>Try It: Height of the Sun in the Sky and Air Temperature</h2>
 	</div>
 	<div class="workarea">
-		<div id="height-sun-air-temperature-explore-ds"></div>
+		<div id="height-sun-air-temperature-explore-ds" class="full-ds"></div>
 		<div id="height-sun-air-temperature-explore-tb"></div>
-		<div id="height-sun-air-temperature-explore-tc"></div>
+		<div id="height-sun-air-temperature-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -772,8 +772,8 @@
 		<h2>Daylight Exploration</h2>
 	</div>
 	<div class="workarea">
-		<div id="daylight-explore-ds"></div>
-		<div id="daylight-explore-tc"></div>
+		<div id="daylight-explore-ds" class="full-ds"></div>
+		<div id="daylight-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -837,9 +837,9 @@
 		<h2>Try It: Hours of Daylight and Air Temperature</h2>
 	</div>
 	<div class="workarea">
-		<div id="daylight-air-temperature-explore-ds"></div>
+		<div id="daylight-air-temperature-explore-ds" class="full-ds"></div>
 		<div id="daylight-air-temperature-explore-tb"></div>
-		<div id="daylight-air-temperature-explore-tc"></div>
+		<div id="daylight-air-temperature-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -886,9 +886,9 @@
 		<h2>Variable Relationship Explorer</h2>
 	</div>
 	<div class="workarea">
-		<div id="daylight-air-temperature-explore-ds"></div>
+		<div id="daylight-air-temperature-explore-ds" class="full-ds"></div>
 		<div id="daylight-air-temperature-explore-tb"></div>
-		<div id="daylight-air-temperature-explore-tc"></div>
+		<div id="daylight-air-temperature-explore-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">

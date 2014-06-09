@@ -24,7 +24,6 @@
 .module-complete ul li { font-weight: bold; margin: .85em; }
 .module-complete .guiding-questions { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
 .module-complete .completed-text {width: 53%; font-size:90%; margin-left: 50px; margin-top: 135px; }
-//.module-complete .completed-text { background-color: rgba(142,171,197,.5); width: 53%; font-size:85%; margin-left: 23px; margin-top: 100px; padding: .01em 1em .01em 1em; }
 
 .module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
 .module-intro > * { margin: .85em 2em; }
@@ -39,11 +38,14 @@
 .workarea .restricted-ds { left: 0px; width: 36% !important;}
 .workarea .restricted-tc { right: 0px; left: 36%; width: 64% !important; }
 
+.workarea .full-ds { left: 0px; right: 0px; }
+.workarea .full-tc { right: 0px; left: 100%; display: none;}
+
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }
 
-#annual-temperature-explore #annual-temperature-explore-ds { left: 0px; right: 0px; }
-#annual-temperature-explore #annual-temperature-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+//#annual-temperature-explore #annual-temperature-explore-ds { left: 0px; right: 0px; }
+//#annual-temperature-explore #annual-temperature-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
 //#temperature-lat-northern #temperature-lat-northern-ds { left: 0px; right: 0px; width: 36%}
 //#temperature-lat-northern #temperature-lat-northern-tc { right: 0px; left: 100%; display: none; padding: 10px; }
@@ -51,26 +53,26 @@
 //#temperature-lat-southern #temperature-lat-southern-ds { left: 0px; right: 0px; width 36%}
 //#temperature-lat-southern #temperature-lat-southern-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
-#temperature-lat-explore #temperature-lat-explore-ds { left: 0px; right: 0px; }
-#temperature-lat-explore #temperature-lat-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+//#temperature-lat-explore #temperature-lat-explore-ds { left: 0px; right: 0px; }
+//#temperature-lat-explore #temperature-lat-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
 //#temperature-elevation-example #temperature-elevation-example-ds { left: 0px; width: 36%; overflow: none;}
 //#temperature-elevation-example #temperature-elevation-example-tc { right: 0px; left: 36%; width: 64% }
 
-#temperature-elevation-explore #temperature-elevation-explore-ds { left: 0px; right: 0px; }
-#temperature-elevation-explore #temperature-elevation-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+//#temperature-elevation-explore #temperature-elevation-explore-ds { left: 0px; right: 0px; }
+//#temperature-elevation-explore #temperature-elevation-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
 //#temperature-water-example #temperature-water-example-ds { left: 0px; right: 0px; width: 36% }
 //#temperature-water-example #temperature-water-example-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
-#temperature-water-explore #temperature-water-explore-ds { left: 0px; right: 0px; }
-#temperature-water-explore #temperature-water-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+//#temperature-water-explore #temperature-water-explore-ds { left: 0px; right: 0px; }
+//#temperature-water-explore #temperature-water-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
 //#height-sun-example #height-sun-example-ds { left: 0px; right: 0px; width 36%}
 //#height-sun-example #height-sun-example-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
-#height-sun-explore #height-sun-explore-ds { left: 0px; right: 0px; }
-#height-sun-explore #height-sun-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+//#height-sun-explore #height-sun-explore-ds { left: 0px; right: 0px; }
+//#height-sun-explore #height-sun-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
 #height-sun-air-temperature-example #height-sun-air-temperature-example-ds { left: 0px; right: 0px; }
 #height-sun-air-temperature-example #height-sun-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
@@ -94,8 +96,8 @@
 */
 
 
-#daylight-explore #daylight-explore-ds { left: 0px; right: 0px; }
-#daylight-explore #daylight-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+//#daylight-explore #daylight-explore-ds { left: 0px; right: 0px; }
+//#daylight-explore #daylight-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
 #daylight-air-temperature-example #daylight-air-temperature-example-ds { left: 0px; right: 0px; }
 #daylight-air-temperature-example #daylight-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }

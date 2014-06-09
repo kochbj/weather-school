@@ -187,9 +187,9 @@ function mapXvis ( evt ) {
 		// FIXME: add a resize method to the wInstance so that the resizing can be done there, passing just the width, height, and delay. Let the wInstance take care of the map.
 		mapCenter = this.map.getCenter();
 		this.settings.container
-			.css( { 'border-right':'3px groove gray' , 'width':'auto' } )
+			.css( { 'width':'auto' } )
 			.animate(
-				{ right:'63%' } ,
+				{ right:'64%' } ,
 				1000 ,
 				function ( ) {
 					google.maps.event.trigger(wInstance.map, 'resize');
@@ -201,7 +201,7 @@ function mapXvis ( evt ) {
 			.show()
 			.css( { 'width':'auto' } )
 			.animate(
-				{ left:'37%' } ,
+				{ left:'36%' } ,
 				1000 ,
 				'swing' ,
 				function ( ) {
@@ -648,6 +648,30 @@ var slideInit = {
 			slideInit['daily-temperature-example'].initialize();
 			slideInit['daily-temperature-example'].is_initialized=true;
 		}
+		}
+	} ,
+	'annual-temperature-explore' : {
+		is_initialized : false ,
+		initialize : function ( ) {
+			aaasClimateViz.loadWidget(
+				'dataSelect',
+				{
+					data           : { source:'gsod' },
+					date           : { type:'year-month-day-range-double' },
+					maxPoints      : 1,
+					container      : $( '#annual-temperature-explore-ds' ),
+					displayWidgets : [
+						aaasClimateViz.loadWidget(
+							'linechart',
+							{
+								tooltip   : { position:'fixed' , detail:'short' } ,
+								container : $( '#annual-temperature-explore-tc' )
+							}
+						)
+					],
+					callbacks : [ mapXvis ]
+				}
+			);
 		}
 	} ,
 	'temperature-lat-northern' : {
