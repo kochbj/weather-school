@@ -197,19 +197,11 @@ function mapXvis ( evt ) {
 				}
 			)
 			.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		this.settings.displayWidgets[0].settings.container
+		setTimeout(function( ) {
+			this.settings.displayWidgets[0].settings.container
 			.show()
-			//.css( { 'width':'auto' } )
-			.animate(
-				{ left:'36%' } ,
-				1000 ,
-				'swing' ,
-				function ( ) {
-					//if ( wInstance.settings.displayWidgets[0].highChart ) {
-					//	wInstance.settings.displayWidgets[0].highChart.setSize( $( this ).width( ) , $( this ).height( ) );
-				//	}
-				}
-			);
+			.animate({ left:'36%' } ,1000 ,swing' );
+		},1000);
 		this.settings.displayStatus = 'vis';
 	} else if ( evtType == 'initialize' ) {
 		this.settings.displayStatus = 'map';
