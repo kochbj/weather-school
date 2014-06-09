@@ -205,9 +205,9 @@ function mapXvis ( evt ) {
 				1000 ,
 				'swing' ,
 				function ( ) {
-					if ( wInstance.settings.displayWidgets[0].highChart ) {
-						wInstance.settings.displayWidgets[0].highChart.setSize( $( this ).width( ) , $( this ).height( ) );
-					}
+					//if ( wInstance.settings.displayWidgets[0].highChart ) {
+					//	wInstance.settings.displayWidgets[0].highChart.setSize( $( this ).width( ) , $( this ).height( ) );
+				//	}
 				}
 			);
 		this.settings.displayStatus = 'vis';
