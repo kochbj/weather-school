@@ -53,7 +53,8 @@ function dataSelect_instantiate(wInstance) {
 		mapTypeId: google.maps.MapTypeId.TERRAIN,
 		streetViewControl: false,
 		overviewMapControl : false,
-		overviewMapControlOptions : { opened : true }
+		overviewMapControlOptions : { opened : true },
+		styles: [{featureType:"poi",elementType: "labels", stylers: [ {visibility: "off"} ] } ]
 	}
 	
 	var mapCanvas = wInstance.settings.container.find('.map-canvas');
@@ -135,7 +136,7 @@ function dataSelect_instantiate(wInstance) {
 			this._callbacks[cbIdx].call(this, evt);
 		}
 		if ( evtType[0] != 'data' ) {
-			this.dataProvider.call( this , evt )
+			this.dataProvider.call( this , evt );
 		}
 	}
 	
@@ -333,6 +334,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.find( '.input input' ).val( '' );
 				break;
 			case 'year-month-day-range-double' :
+			case 'year-month-day-range-double-restricted':  
 				wInstance.map.date.addClass( 'year-month-day-range-double' ).html( '<div class="visual-control inline"><div class="input date-start"><p class ="date-label">Start:</p><div class="toggle start-toggle"></div><input type="text" size="3" placeholder="Start Date" /></div><div class="input date-end"><p class ="date-label">  End:</p><div class="toggle end-toggle"></div><input type="text" size="3" placeholder="End Date" /></div><div class="datepicker"></div></div>' );
 				wInstance.map.date.find( '.input input' ).autogrow( );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
@@ -368,11 +370,11 @@ function dataSelect_instantiate(wInstance) {
 						} );
 					};
 				_activateDpicker = function (tog) {
-						_deactivateDpicker(wInstance.map.date.find('.toggle.active'));
-					//if (tog.hasClass('active')) {_deactivateDpicker(wInstance.map.date.find('.toggle.active'),tog);}
+						if ( tog.closest( '.map-date' ).find( '.visual-control .datepicker' ).is( ':visible' ) ) {
+							_deactivateDpicker( wInstance.map.date.find('.toggle.active') , tog );
+							return;
+						}				
 						tog.addClass( 'active' );
-						console.log(tog);
-						console.log(tog.hasClass('end-toggle'));
 						if (tog.hasClass('end-toggle')) { tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).addClass("end-active"); }
 						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
@@ -484,14 +486,13 @@ function dataSelect_instantiate(wInstance) {
 					}
 				} );
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
-				
+				if (wInstance.settings.date.type == 'year-month-day-range-double') {	
 				wInstance.map.date.find('.toggle').click( function ( evt ) {
 					if ( $( this ).hasClass( 'active' ) ) {
 						_deactivateDpicker($(this));
 					}
 					else {
-						_activateDpicker($(this));
-					}
+						$( this ).parent( ).find( 'input' ).focus( );					}
 				});
 				wInstance.map.date.find( '.input input' ).keydown( function ( evt ) {
 					 var keycode = (evt.keyCode ? evt.keyCode : evt.which);
@@ -503,7 +504,6 @@ function dataSelect_instantiate(wInstance) {
 				} );
 				wInstance.map.date.find( '.input input' )
 					.focus( function ( evt ) {
-						console.log($(this));
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
 						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
@@ -512,6 +512,8 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
+				}
+				else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
 				wInstance.map.date.find( '.input input' ).val( '' );
 				break;
 
@@ -697,6 +699,7 @@ function pointInfoHide (e,wInstance) { /*wInstance.settings.container.find('.map
 function pointInfoShow (e,wInstance) { /*wInstance.settings.container.find('.map-info').fadeIn('slow')*/ }
 
 function addLocation (e,wInstance) {
+	console.log(e,wInstance);
 	if (wInstance.settings.maxPoints && (Object.keys(wInstance.markers)).length >= wInstance.settings.maxPoints) {
 		for (i in wInstance.markers) {
 			removeLocation(i,wInstance);
@@ -749,7 +752,7 @@ function addLocation (e,wInstance) {
 	// setTimeout('aaasClimateViz.widgets['+wInstance.index+'].map.setZoom(5)',1500);
 	
 	// places service via google
-	marker.init = (function(results,status) {
+	marker.init = (function(results,status, staticmap) {
 		// https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingAddressTypes
 		this.location = { country:null , state:null , city:null };
 		
@@ -773,22 +776,27 @@ function addLocation (e,wInstance) {
 			this.name = Math.round(this.userCoords.lat()*10)/10+','+Math.round(this.userCoords.lng()*10)/10;
 		}
 		
-		var contentString = '<div class="infoWindow">';
+		var contentString = '<div class="infoWindow" style="width:170px;">';
 		contentString += '<div class="name">'+(this.location.city?this.location.city:'')+'</div><div class="location">'+(this.location.state?this.location.state+', ':'')+(this.location.country?this.location.country:'')+'</div>';
-		contentString += '<div class="user coords">Coordinates: '+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
-		contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
+		contentString += '<div class="user coords">'+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
+		if (!staticmap) contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
 		contentString += '</div>';
 		var infowindow = new google.maps.InfoWindow({
-			content: contentString
+			content: contentString,
+			maxWidth: 1000
 		});
-		google.maps.event.addListener(this, 'click', function() {
+		google.maps.event.addListener(this, 'mouseover', function() {
 			infowindow.open(wInstance.map,this);
 		});
 		this.infoWindow = infowindow;
 		
-		wInstance._callback({type:'user-select-location',data:{marker:marker}});
+		wInstance._callback({type:'user-select-location',data:{marker:marker,stationNames:e.stationNames}});
+		if (staticmap) {
+			google.maps.event.clearListeners(wInstance.map, 'click');
+			wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true});
+		}
 	});
-	geocoder.geocode( { latLng:marker.position } , function(results, status) { marker.init(results,status); } );
+	geocoder.geocode( { latLng:marker.position } , function(results, status) { marker.init(results,status,e.staticmap); } );
 }
 
 function createListItem (marker) {
@@ -809,6 +817,7 @@ function syncList (marker) {
 function refreshStations ( evt ) {
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
+	console.log("THIS",evt);
 	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
 	// TODO: implement station removal as a separate callback routine?
 	removeStations( evt.data.marker.id , this );
@@ -872,7 +881,7 @@ function refreshStations ( evt ) {
 				wInstance.markers[servermsg[0].mid].stations[i].marker.index = i;
 				wInstance.markers[servermsg[0].mid].stations[i].marker.parentMarker = servermsg[0].mid;
 				
-				var contentString = '<div class="infoWindow" style="background-color: #f0f0ff; border: 1px solid #9999cc; font-size: 78%">';
+				var contentString = '<div class="infoBox" style="background-color: #f0f0ff; border: 1px solid #9999cc; font-size: 78%">';
 				contentString += '<div class="title"><b>Station Information</b></div>';
 				contentString += '<div class="station name">Label: ' + ( wInstance.markers[servermsg[0].mid].stations[i].name ) + '</div>';
 				contentString += '<div class="station coords">Coordinates: ' + Math.abs( Math.round( wInstance.markers[servermsg[0].mid].stations[i].lat * 100 ) / 100 ) + ( wInstance.markers[servermsg[0].mid].stations[i].lat < 0 ? 'S' : 'N' ) + ',' + Math.abs( Math.round( wInstance.markers[servermsg[0].mid].stations[i].lng * 100 ) / 100 ) + ( wInstance.markers[servermsg[0].mid].stations[i].lng < 0 ? 'W' : 'E' ) + '</div>';
@@ -883,9 +892,9 @@ function refreshStations ( evt ) {
 					content                : contentString ,
 					disableAutoPan         : true ,
 					maxWidth               : 0 ,
-					pixelOffset            : new google.maps.Size( -20 , 8 ) ,
+					pixelOffset            : new google.maps.Size( -75 , 8 ) ,
 					zIndex                 : null ,
-					boxStyle               : { "width" : "220px" } ,
+					boxStyle               : { "width" : "150px" } ,
 					closeBoxMargin         : "10px 2px 2px 2px" ,
 					closeBoxURL            : "" ,
 					infoBoxClearance       : new google.maps.Size( 1 , 1 ) ,
@@ -907,10 +916,12 @@ function refreshStations ( evt ) {
 					this.infowindow.close();
 				});
 				google.maps.event.addListener( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' , function() {
+					console.log(this);
 					//FIXME: need to track if the user has selected more stations than allowed
 					if ( wInstance.settings.maxStations && wInstance.settings.maxStations == 1 ) {
 						for ( j in wInstance.markers[servermsg[0].mid].stations ) {
 							wInstance.markers[servermsg[0].mid].stations[j].marker.active = false;
+							console.log(servermsg);
 							wInstance.markers[servermsg[0].mid].stations[j].marker.setOptions( { icon : { path : google.maps.SymbolPath.CIRCLE , fillColor : 'yellow' , fillOpacity : 1 , strokeWeight : 1 , scale: 5 } } );
 							delete wInstance.data[j];
 						}
@@ -935,9 +946,17 @@ function refreshStations ( evt ) {
 				if ( !canSelectStation ) {
 					wInstance.markers[servermsg[0].mid].stations[i].marker.icon.fillColor = wInstance.markers[servermsg[0].mid].color;
 					google.maps.event.trigger( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' );
+					}
+				}
+				if ( evt.data.stationNames) {
+					for ( i in wInstance.markers[servermsg[0].mid].stations ) {
+						if  (evt.data.stationNames.indexOf(wInstance.markers[servermsg[0].mid].stations[i].name) == -1)  continue; 
+						google.maps.event.trigger( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' );}
+					for ( i in wInstance.markers[servermsg[0].mid].stations ) { google.maps.event.clearListeners( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' ); }
+					//google.maps.event.clearListeners(wInstance.map, 'click');
+					//wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true});
 				}
 			}
-		}
 	} );
 }
 function removeLocation ( markerID , wInstance ) {

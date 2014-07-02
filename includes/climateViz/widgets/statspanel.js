@@ -28,9 +28,9 @@ function statspanel_createPanel(data, wInstance) {
 		wInstance.settings.container.find( '.lat' ).append( $( '<td>' + data[mid].dataMeta.lat.format( data[mid].data[idxData].lat ) + '</td>' ) );
 		// wInstance.settings.container.find('.lng').append( $( '<td>' + data[mid].dataMeta.lng.format(data[mid].data[idxData].lng ) + '</td>' ) );
 		wInstance.settings.container.find( '.sunHours' ).append( $( '<td>' + data[mid].dataMeta.sunHours.format( data[mid].data[idxData].sunHours ) + '</td>' ) );
-		wInstance.settings.container.find( '.sunEnergy' ).append( $( '<td>' + data[mid].dataMeta.sunEnergy.format( data[mid].data[idxData].sunEnergy ) + '</td>' ) );
-		wInstance.settings.container.find( '.sunEnergyT' ).append( $( '<td>' + data[mid].dataMeta.sunEnergyT.format( data[mid].data[idxData].sunEnergyT ) + '</td>' ) );
-		wInstance.settings.container.find( '.tempavg' ).append( $( '<td>' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempavg ) + ' <span class="minmax">H ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmax ) + '<br>L ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmin ) + '</span></td>' ) );
+		//wInstance.settings.container.find( '.sunEnergy' ).append( $( '<td>' + data[mid].dataMeta.sunEnergy.format( data[mid].data[idxData].sunEnergy ) + '</td>' ) );
+		//wInstance.settings.container.find( '.sunEnergyT' ).append( $( '<td>' + data[mid].dataMeta.sunEnergyT.format( data[mid].data[idxData].sunEnergyT ) + '</td>' ) );
+		//wInstance.settings.container.find( '.tempavg' ).append( $( '<td>' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempavg ) + ' <span class="minmax">H ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmax ) + '<br>L ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmin ) + '</span></td>' ) );
 		wInstance.settings.container.find( '.sunAngle' ).append( $( '<td>' + data[mid].dataMeta.sunImage.format( data[mid].data[idxData].sunImage ) + '<span class="angle-val">' + data[mid].dataMeta.sunAngle.format( data[mid].data[idxData].sunAngle ) + '</span></td>' ) );
 		//position sun angle value
 		posSunImg = $('.sunAngle td:last-child img').position();

@@ -23,16 +23,30 @@ function locExSample ( evt ) {
 		} , 1000 );
 	}
 }
+function cbDaylightIntro ( evt ) {
+	if ( !evt ) { evt = { type : null }; }
+	var wInstance = this;
+	if ( evt.type == 'initialize' ) {
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+		setTimeout( function ( ) {
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
+ 			wInstance.map.date.ui.find('.ui-state-active').click();
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
+		} , 1000 );
+	}
+}
 function cbDaylightEx1 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap: true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 44.70 , -73.45 ) } );
 		} , 1000 );
 	}
 }
@@ -42,11 +56,10 @@ function cbDaylightEx2 ( evt ) {
 	if ( evt.type == 'initialize' ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 44.70 , -73.45 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 5.07 , -74.53 ) } );
 		} , 1000 );
 	}
 }
@@ -56,23 +69,10 @@ function cbDaylightEx3 ( evt ) {
 	if ( evt.type == 'initialize' ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 5.07 , -74.53 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
+			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
-		} , 1000 );
-	}
-}
-function cbDaylightEx4 ( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 0.15 , -78.35 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 0.15 , -78.35 ) } );
 		} , 1000 );
 	}
 }
@@ -112,24 +112,6 @@ function cbBonaire ( evt ) {
 		} , 1000 );
 	}
 }
-function cbHeightSunAirTempEx (evt) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		console.log(wInstance);
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
-			//wInstance.map.date.data( 'value' , [ new Date(1995,0,15) , new Date(1995,1,15)/* , new Date(1995,2,15) , new Date(1995,3,15) , new Date(1995,4,15) , new Date(1995,5,15) , new Date(1995,6,15) , new Date(1995,7,15) , new Date(1995,8,15) , new Date(1995,9,15) , new Date(1995,10,15) , new Date(1995,11,15) ] );
-			//wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.input input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 20 ) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
-		} , 1000 );
-	}
-}
-
-
-
-
 function cbRelationSunEnergy ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
@@ -245,41 +227,7 @@ function locExInstruct ( evt ) {
 	}
 }
 
-function cbDailyTempEx ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 1999 , 3 , 1 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2003 , 3 , 25 ) );
-		//total hack because of the filter thing
-		console.log(wInstance);
-		//wInstance.map.date.find('.date-start input' ).val('2003');
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-	} , 1000 );
-	}
-}
-function cbHeightSunEx ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 41.85, -87.62 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-	} , 1000 );
-	}
-}
-function cbDailyTempOld ( evt ) {
-	return;
+function cbTempPatterns ( evt ) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
@@ -318,6 +266,7 @@ function cbDailyTempOld ( evt ) {
 				}
 			}
 			if ( [8,9,10].indexOf( psobj.currentSlideIndex ) !== -1 ) {
+				wInstance.settings.displayWidgets[0].highChart.xAxis[0].setExtremes( new Date( 2000 , 0 , 1 ) , new Date( 2000 , 1 , 1 ) );
 				wInstance.settings.displayWidgets[0].highChart.yAxis[0].setExtremes( 20 , 80 );
 			} else {
 				wInstance.settings.displayWidgets[0].highChart.xAxis[0].setExtremes();
@@ -336,78 +285,6 @@ function cbDailyTempOld ( evt ) {
 		//}
 	}
 }
-
-function cbTempLatNorthern ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 43.7182712,-79.3777061 ), staticmap: true } );
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 32.0405369,-81.2003759 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-	} , 1000 );
-	}
-}
-
-function cbTempLatSouthern ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -25.2968332,-57.5984002 ), staticmap: true } );
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -34.6158526,-58.4332985 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-	} , 1000 );
-	}
-}	
-
-function cbElevExample ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		//console.log(wInstance.map.widget);
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 39.73,-104.98 ), stationNames: ["LAKE CO", "LIMON MUNI"], staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
-		wInstance.map.setZoom(6);
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-//		setTimeout( function () {
-//		google.maps.event.clearListeners(wInstance.map, 'click');
-//		wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true}); }, 2000 );
-	} , 1000 );
-	}
-}	
-function cbLargeBodiesWaterExample ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		//console.log(wInstance.map.widget);
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 37.297,-121.817 ), stationNames: ["SAN FRANCISCO INTL", "MODESTO CITY CO HAR"], staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
-		wInstance.map.setZoom(7);
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-	} , 1000 );
-	}
-}	
 
 function cbTempLatitude ( evt ) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
@@ -590,30 +467,28 @@ var slideInit = {
 			);
 		}
 	} ,
-	'daily-temperature-example' : {
+	'temperature-select' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range-double-restricted' , 'range':1 },
+					date           : { type:'year-month-day-range-double' , 'range':1 },
 					maxPoints      : 1,
-					container      : $( '#daily-temperature-example-ds' ),
+					container      : $( '#dataSelector4' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#daily-temperature-example-tc' ),
+								container : $( '#tempchart1' ),
 								filter : function ( data ) {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
 									var testDateStart = new Date( wInstance.map.date.data('value')[0][0].valueOf( ) );
-									var testDateStart = new Date( 2000, 3, 1 );
-									//if ( testDateStart && wInstance.settings.date.range ) { testDateStart.setFullYear( testDateStart.getFullYear() - 1 ); }
-									//var testDateEnd = new Date( wInstance.map.date.data('value')[0][1].valueOf( ) );
-									var testDateEnd = new Date( 2000, 3, 25 );
-									//if ( testDateEnd && wInstance.settings.date.range ) { testDateEnd.setFullYear( testDateEnd.getFullYear() + 1 ); }
+									if ( testDateStart && wInstance.settings.date.range ) { testDateStart.setFullYear( testDateStart.getFullYear() + wInstance.settings.date.range ); }
+									var testDateEnd = new Date( wInstance.map.date.data('value')[0][1].valueOf( ) );
+									if ( testDateEnd && wInstance.settings.date.range ) { testDateEnd.setFullYear( testDateEnd.getFullYear() - wInstance.settings.date.range ); }
 									filteredData = {};
 									for ( dataID in data ) {
 										filteredData[dataID] = { data:[] , dataMeta:data[dataID].dataMeta , seriesMeta:data[dataID].seriesMeta };
@@ -632,73 +507,40 @@ var slideInit = {
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#annual-temperature-display-tc' )
+								container : $( '#tempchart2' )
 							}
 						)
 					],
-					callbacks : [ cbDailyTempEx ]
+					callbacks : [ cbTempPatterns , mapXvis ]
 				}
 			);
 		}
 	} ,
-	'annual-temperature-display' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-		if (!(slideInit['daily-temperature-example'].is_initialized)) {
-			slideInit['daily-temperature-example'].initialize();
-			slideInit['daily-temperature-example'].is_initialized=true;
-		}
-		}
-	} ,
-	'temperature-lat-northern' : {
+	'temperature-explore' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 2,
-					container      : $( '#temperature-lat-northern-ds' ),
+					date           : { type:'year-month-day-range-double' },
+					maxPoints      : 1,
+					container      : $( '#dataSelector5' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-lat-northern-tc' )
+								container : $( '#tempchart3' )
 							}
 						)
 					],
-					callbacks : [ cbTempLatNorthern ]
+					callbacks : [ mapXvis ]
 				}
 			);
 		}
 	} ,
-	'temperature-lat-southern' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 2,
-					container      : $( '#temperature-lat-southern-ds' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-lat-southern-tc' )
-							}
-						)
-					],
-					callbacks : [ cbTempLatSouthern  ]
-				}
-			);
-		}
-	} ,
-	'temperature-lat-explore' : {
+	'temperature-lat' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
@@ -707,13 +549,13 @@ var slideInit = {
 					data           : { source:'gsod' },
 					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
-					container      : $( '#temperature-lat-explore-ds' ),
+					container      : $( '#dataSelector6' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-lat-explore-tc' )
+								container : $( '#tempchart4' )
 							}
 						)
 					],
@@ -722,32 +564,7 @@ var slideInit = {
 			);
 		}
 	} ,
-	'temperature-elevation-example' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 1,
-					maxStations    : 2,
-					container      : $( '#temperature-elevation-example-ds' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-elevation-example-tc' )
-							}
-						)
-					],
-					callbacks : [ cbElevExample ]
-				}
-			);
-		}
-	} ,
-	'temperature-elevation-explore' : {
+	'temperature-elev' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
@@ -757,13 +574,13 @@ var slideInit = {
 					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					maxStations    : 2,
-					container      : $( '#temperature-elevation-explore-ds' ),
+					container      : $( '#dataSelector7' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-elevation-explore-tc' )
+								container : $( '#tempchart5' )
 							}
 						)
 					],
@@ -772,32 +589,7 @@ var slideInit = {
 			);
 		}
 	} ,
-	'temperature-water-example' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 1,
-					maxStations    : 2,
-					container      : $( '#temperature-water-example-ds' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-water-example-tc' )
-							}
-						)
-					],
-					callbacks : [ cbLargeBodiesWaterExample ]
-				}
-			);
-		}
-	} ,
-	'temperature-water-explore' : {
+	'temperature-elev-practice' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
@@ -807,13 +599,13 @@ var slideInit = {
 					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
 					maxStations    : 2,
-					container      : $( '#temperature-water-explore-ds' ),
+					container      : $( '#dataSelector8' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#temperature-water-explore-tc' )
+								container : $( '#tempchart6' )
 							}
 						)
 					],
@@ -822,46 +614,23 @@ var slideInit = {
 			);
 		}
 	} ,
-	'height-sun-example' : {
+	'temperature-water' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
-					data           : { source:'sunangle' , fields:['date','sunAngle'] },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 1,
-					container      : $( '#height-sun-example-ds' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#height-sun-example-tc' )
-							}
-						)
-					],
-					callbacks : [ cbHeightSunEx ]
-				}
-			);
-		}
-	},
-	'height-sun-explore' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'sunangle' , fields:['date','sunAngle'] },
+					data           : { source:'gsod' },
 					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
-					container      : $( '#height-sun-explore-ds' ),
+					maxStations    : 2,
+					container      : $( '#dataSelector9' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#height-sun-explore-tc' )
+								container : $( '#tempchart7' )
 							}
 						)
 					],
@@ -869,75 +638,57 @@ var slideInit = {
 				}
 			);
 		}
-	},
-	'height-sun-air-temperature-example' : {
+	} ,
+	'temperature-water-practice' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
-					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					data           : { source:'gsod' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
-					container      : $( '#height-sun-air-temperature-example-ds' ),
+					maxStations    : 2,
+					container      : $( '#dataSelector10' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
-							'table',
+							'linechart',
 							{
-								container : $( '#height-sun-air-temperature-example-tb' ) ,
-								selectForOutput : 2,
-								displayWidgets : [
-									aaasClimateViz.loadWidget(
-										'linechart',
-										{
-											tooltip   : { position:'fixed' , detail:'short' } ,
-											container : $( '#height-sun-air-temperature-example-tc' )
-										}
-									)
-								] ,
-								callbacks : [ widgetScroll ]
+								tooltip   : { position:'fixed' , detail:'short' } ,
+								container : $( '#tempchart8' )
 							}
 						)
 					],
-					callbacks : [ cbHeightSunAirTempEx, cbRelationSunEnergy ]
+					callbacks : [ mapXvis ]
 				}
 			);
 		}
-	},
-	'height-sun-air-temperature-explore' : {
+	} ,
+	'daylight-intro' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
-					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					data           : { source:'sunangle' , fields:['date','sunHours'] },
+					date           : { type:'year-month-day-range-double' , max:1 },
 					maxPoints      : 1,
-					container      : $( '#height-sun-air-temperature-explore-ds' ),
+					container      : $( '#sun-hours-selector-sample' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
-							'table',
+							'linechart',
 							{
-								container : $( '#height-sun-air-temperature-explore-tb' ) ,
-								selectForOutput : 2,
-								displayWidgets : [
-									aaasClimateViz.loadWidget(
-										'linechart',
-										{
-											tooltip   : { position:'fixed' , detail:'short' } ,
-											container : $( '#height-sun-air-temperature-explore-tc' )
-										}
-									)
-								] ,
-								callbacks : [ widgetScroll ]
+								tooltip   : { position:'fixed' , detail:'short' } ,
+								container : $( '#sun-hours-graph-sample' ) ,
+								callbacks : [ ]
 							}
 						)
 					],
-					callbacks : [ cbRelationSunEnergy ]
+					callbacks : [ cbDaylightIntro ]
 				}
 			);
 		}
-	},
+	} ,
 	'daylight-example1' : {
 		is_initialized : false ,
 		initialize : function ( ) {
@@ -945,16 +696,15 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range-double-restricted' , max:1 },
-					maxPoints      : 1,
-					container      : $( '#daylight-example1-ds' ),
+					date           : { type:'year-month-day-range-double' },
+					maxPoints      : 2,
+					container      : $( '#sun-hours-selector-1' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#daylight-example1-tc' ) ,
-								callbacks : [ ]
+								container : $( '#sun-hours-graph-1' )
 							}
 						)
 					],
@@ -970,15 +720,15 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range-double-restricted' },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
-					container      : $( '#daylight-example2-ds' ),
+					container      : $( '#sun-hours-selector-2' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#daylight-example2-tc' )
+								container : $( '#sun-hours-graph-2' )
 							}
 						)
 					],
@@ -994,43 +744,19 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 1,
-					container      : $( '#daylight-example3-ds' ),
+					date           : { type:'year-month-day-range-double' },
+					maxPoints      : 2,
+					container      : $( '#sun-hours-selector-3' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#daylight-example3-tc' )
+								container : $( '#sun-hours-graph-3' )
 							}
 						)
 					],
 					callbacks : [ cbDaylightEx3 ]
-				}
-			);
-		}
-	} ,
-	'daylight-example4' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'sunangle' , fields:['date','sunHours'] },
-					date           : { type:'year-month-day-range-double-restricted' },
-					maxPoints      : 1,
-					container      : $( '#daylight-example4-ds' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#daylight-example4-tc' )
-							}
-						)
-					],
-					callbacks : [ cbDaylightEx4 ]
 				}
 			);
 		}
@@ -1044,13 +770,13 @@ var slideInit = {
 					data           : { source:'sunangle' , fields:['date','sunHours',] },
 					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 2,
-					container      : $( '#daylight-explore-ds' ),
+					container      : $( '#sun-hours-selector-4' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'linechart',
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#daylight-explore-tc' )
+								container : $( '#sun-hours-graph-4' )
 							}
 						)
 					],
@@ -1059,74 +785,30 @@ var slideInit = {
 			);
 		}
 	} ,
-	'daylight-air-temperature-example' : {
+	'variable-exploration' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
-					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					data           : { source:'sunangle' , fields:['date','sunAngle'] },
+					date           : { type:'year-month-day-range-double' },
 					maxPoints      : 1,
-					container      : $( '#daylight-air-temperature-example-ds' ),
+					container      : $( '#variables-selector-1' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
-							'table',
+							'linechart',
 							{
-								container : $( '#daylight-air-temperature-example-tb' ) ,
-								selectForOutput : 2,
-								displayWidgets : [
-									aaasClimateViz.loadWidget(
-										'linechart',
-										{
-											tooltip   : { position:'fixed' , detail:'short' } ,
-											container : $( '#daylight-air-temperature-example-tc' )
-										}
-									)
-								] ,
-								callbacks : [ widgetScroll ]
+								tooltip   : { position:'fixed' , detail:'short' } ,
+								container : $( '#variables-graph-1' )
 							}
 						)
 					],
-					callbacks : [ cbRelationSunEnergy ]
+					callbacks : [ mapXvis ]
 				}
 			);
 		}
-	},
-	'daylight-air-temperature-explore' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
-					maxPoints      : 1,
-					container      : $( '#daylight-air-temperature-explore-ds' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'table',
-							{
-								container : $( '#daylight-air-temperature-explore-tb' ) ,
-								selectForOutput : 2,
-								displayWidgets : [
-									aaasClimateViz.loadWidget(
-										'linechart',
-										{
-											tooltip   : { position:'fixed' , detail:'short' } ,
-											container : $( '#daylight-air-temperature-explore-tc' )
-										}
-									)
-								] ,
-								callbacks : [ widgetScroll ]
-							}
-						)
-					],
-					callbacks : [ cbRelationSunEnergy ]
-				}
-			);
-		}
-	},
+	} ,
 	'relationships-intro2' : {
 		is_initialized : false ,
 		initialize : function ( ) {

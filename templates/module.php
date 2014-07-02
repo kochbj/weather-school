@@ -84,8 +84,10 @@
 			<div id="click-cover" class="cover"></div>
 			<div id="slider-menu">
 				<div class="access-control">menu</div>
-				<ul>
-				</ul>
+				<!--<ul>
+				</ul>-->
+				<div id="accordion">
+			</div>
 				<div id="login-nav">Log in as a: Student | Non-Student</div>
 				<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
 			</div>

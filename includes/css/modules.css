@@ -13,23 +13,60 @@ textarea { width: 95%; height: 4em; }
 
 #slider-navigation {  }
 #click-cover{ position: absolute; width: 906px; height: 700px; margin: 0px auto; z-index:98; overflow: visible; padding: 0px; background-color: transparent; display: none; }
-#slider-menu { background-color: rgb(209, 220, 227); background-color: rgba(209, 220, 227, 0.9); border-left: 2px solid #91B1C0; bottom: 0; overflow: visible; padding: 4px; position: absolute; right: 0; top: 0; z-index: 99; }
+#slider-menu {background-color: rgba(209, 220, 227, 0.9); border-left: 2px solid #91B1C0; bottom: 0; overflow: visible; position: absolute; right: 0; top: 0; z-index: 99; width: 350px }
 
 #slider-menu .access-control {
 	cursor: pointer; background-color: #91B1C0; border-radius: 5px 5px 0 0; left: -18px; padding: 4px; position: absolute; top: 24px;
 	font-size: 85%; line-height: .65em;
 	transform: rotate(-90deg) translateY(-.95em); transform-origin: center;
 }
-#slider-menu ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; max-width: 350px; overflow: auto; z-index:99; }
+
+
+
+#slider-menu .ui-accordion { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; border-radius: 0px; } 
+#slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px;  }
+#slider-menu .ui-accordion .ui-accordion-header-active { background-color: rgba(170, 192, 202, .9); solid #999999; solid #999999; margin 0px; padding 0px; color: #ffffff !important; text-shadow: 0px 0px 4px #666; box-shadow: 0px 1px 1px #666; }
+#slider-menu a.completed {color: DimGray !important; }
+#slider-menu .ui-accordion .ui-accordion-header:last-of-type {border-top: 1px solid black; }
+
+#slider-menu .ui-accordion .ui-accordion-header a { display: block; padding: .6em; color: black; z-index:99; text-decoration: none; }
+#slider-menu .ui-accordion .ui-accordion-content {background: none; line-height: 1; padding: 0px; border-radius: 0px;]}
+#slider-menu .ui-accordion .ui-accordion-content ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; overflow: visible; }
+#slider-menu .ui-accordion .ui-accordion-content li { list-style: none; display: block; margin: 0px; border-top: 1px solid #999999; z-index:99; }
+#slider-menu .ui-accordion .ui-accordion-content a { display: block; padding: .6em 2.5em; color: black; z-index:99; text-decoration: none; font-size: 10pt; }
+#slider-menu a:hover {color: #ffffff !important; background-color: rgba(170, 192, 202, .9);text-shadow: 0px 0px 4px #666; }
+#slider-menu a.current { background-color: rgba(145, 177, 192, .9) !important; }
+
+/*
+.ui-accordion.ui-state-default .ui-accordion .ui-accordion-header.ui-state-default {
+	background-color: rgba(209, 220, 227, 0.9);
+}
+#accordion .ui-accordion {max-width:350px; padding: none; }
+#accordion .ui-accordion-content {
+	background-color: rgba(209, 220, 227, 0.9);
+	font-size: 10pt;
+	line-height: 16pt;
+	padding: none
+}
+#accordion .ui-accordion-header {
+	background-color: rgba(209, 220, 227, 0.9);
+	margin: 0px;
+}
+
+
+//#accordion .ui-accordion-header-icon { display: none; padding: none;}
+#slider-menu ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; max-width: 350px; overflow: auto; }
 #slider-menu li { list-style: none; display: block; margin: 0px; padding: 0px; border-bottom: 1px solid #999999; z-index:99; }
-#slider-menu a { display: block; padding: .5em; color: black; z-index:99; text-decoration: none; }
+#slider-menu a { display: block; padding: .5em; color: black; z-index:99; text-decoration: none;}
 #slider-menu a:hover { background-color: #AAC0CA; color: #ffffff !important; text-shadow: 0px 0px 4px #666; }
+#slider-menu a.highlighted { background-color: #AAC0CA; color: #ffffff !important; text-shadow: 0px 0px 4px #666; }
 #slider-menu a.current { background-color: #91B1C0; }
 #slider-menu a.completed {color: DimGray; }
+*/
 #slider-menu .you-are-here { position: absolute; bottom: 0px; color: #999999; text-align: center; }
 #slider-navigation .prev, #slider-navigation .next { z-index: 90; position: absolute; bottom: 20px; background-color: #d1dce5; font-size: 18pt; font-weight: bold; cursor: pointer; border-color: #91b1c0; border-style: solid; }
-#slider-navigation .prev { left: 0px; padding: 10px 10px 10px 5px; border-radius: 0px 30px 30px 0px; border-width: 2px 2px 2px 0px; z-index: 99; }
-#slider-navigation .next { right: 0px; padding: 10px 5px 10px 10px; border-radius: 30px 0px 0px 30px; border-width: 2px 0px 2px 2px; }
+#slider-navigation .prev { left: 0px; padding: 10px 10px 10px 5px; border-radius: 0px 30px 30px 0px; border-width: 2px 2px 2px 0px; z-index: 100; }
+#slider-navigation .next { right: 0px; padding: 10px 5px 10px 10px; border-radius: 30px 0px 0px 30px; border-width: 2px 0px 2px 2px; z-index:100; }
 
 #slider-navigation #login-nav { position: absolute; bottom: 2em; }
 
@@ -53,7 +90,7 @@ textarea { width: 95%; height: 4em; }
 	background-color: #e8f0f3; height: 405px; overflow: hidden; padding: 0; position: absolute; top: 65px; width: 100%;
 	box-shadow: 0px 0px 4px #999;
 }
-.child.activity > .workarea > * { overflow: auto; position: absolute; top: 0px; bottom: 0px; width: 100%; }
+.child.activity > .workarea > * {/* overflow: auto; */position: absolute; top: 0px; bottom: 0px; width: 100%; }
 
 .child.activity > .instructions {
 	color: black;

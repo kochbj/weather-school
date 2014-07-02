@@ -11,6 +11,7 @@
 }
 
 .widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
+.widget.dataSelect .calendar-cover { height: 36px; width: 100%; background-color: transparent; display: none; z-index: 100; bottom: 0; left: 0; position: absolute; cursor:not-allowed;}
 .widget.dataSelect .map-canvas { height: 400px; width: 100%; }
 
 .widget.dataSelect .map-info {
@@ -27,7 +28,7 @@
 .widget.dataSelect .map-info .full-width .lat , .widget.dataSelect .map-info .full-width .lng , .widget.dataSelect .map-info .full-width .elev { text-align: left; display: inline-block; width: 4.5em; }
 .widget.dataSelect.width-200 .full-width  { display: none; }
 .widget.dataSelect .map-info .restricted-width { margin-left: -15px; display: none; }
-.widget.dataSelect.width-200 .map-info .restricted-width { display: inline-block; }
+.widget.dataSelect.width-200 .map-info .restricted-width { display: none; }
 
 .widget.dataSelect .map-date {
   position: absolute;
@@ -73,7 +74,7 @@
 }
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker { min-height: 198px;  }
 //.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #D0DBE5; }
-.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #e4e9ca; }
+.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #e4e9ca; padding: 0 }
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline .ui-datepicker-header { background-color: #dbd3c1; background-image: none; }
 
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control.inline {
@@ -171,3 +172,4 @@
 .widget.dataSelect .map-date.year-alt .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
 .widget.dataSelect .map-date.year-alt .input { display: inline-block; }
 .widget.dataSelect .map-date.year-alt .input select { width: 5em; text-align: center; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; }
+

@@ -8,6 +8,36 @@
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.</p>
 </div>
+<div id="contents-1" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div id ="completed-text">
+		<p class="invite"> These modules and acivities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner.</p>
+	</div>
+</div>
+<div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div id ="completed-text">
+		<p class="invite">The first module explores the relationship between height of the sun in the sky and latitude.</p>
+	</div>
+</div>
+<div id="contents-3" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div id ="completed-text">
+		<p class="invite">The next four modules focus on temperature. Module C explores how temperature changes over time.</p>
+	</div>
+</div>
+<div id="contents-4" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div id ="completed-text">
+		<p class="invite">Modules D-F investigate how temperature varies with three different geographic variables: latitude, elevation and proximity to bodies of water.</p>
+	</div>
+</div>
+<div id="contents-5" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div id ="completed-text">
+		<p class="invite">Module G explores the relationships between hours of daylight and other variables such as time and temperature.</p>
+	</div>
+</div>
 <div id="the-sun" data-slide-type="normal" data-slide-title="The Sun" data-slide-parent-id="introduction">
 	<h2>The Sun</h2>
 	<p>Almost all the energy that heats up the earth comes from the sun.</p>
@@ -30,7 +60,7 @@
 		</tr>
 	</table>
 </div>
-<div id="intro-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="intro-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p class="invite"> You have completed the introduction. Select the next module you would like to explore from the menu. </p>
@@ -157,7 +187,7 @@
 		<p>You can explore more places and times of the year above. Go to the next page to continue to a new activity.</p>
 	</div>
 </div>
-<div id="locationExplorer-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="locationExplorer-sample">
+<div id="locationExplorer-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="locationExplorer-sample">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Location Summary module. Select the next module you would like to explore from the menu. </p>
@@ -276,7 +306,7 @@
 		</div>
 	</div>
 </div>
-<div id="temperature-intro-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-intro">
+<div id="temperature-intro-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="temperature-intro">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Learning about Temperature Patterns module. Select the next module you would like to explore from the menu. </p>
@@ -326,7 +356,7 @@
 		</div>
 	</div>
 </div>
-<div id="temperature-lat-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-lat">
+<div id="temperature-lat-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="temperature-lat">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Temperature and Latitude module. Select the next module you would like to explore from the menu. </p>
@@ -398,7 +428,7 @@
 		</div>
 	</div>
 </div>
-<div id="temperature-elev-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-elev-intro">
+<div id="temperature-elev-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="temperature-elev-intro">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Temperature and Elevation module. Select the next module you would like to explore from the menu. </p>
@@ -502,7 +532,7 @@
 	</div>
 	</div>
 </div>
-<div id="temperature-water-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="temperature-water-intro">
+<div id="temperature-water-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="temperature-water-intro">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Temperature and Large Bodies of Water module. Select the next module you would like to explore from the menu. </p>
@@ -624,7 +654,7 @@
 		</div>
 	</div>
 </div>
-<div id="daylight-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="daylight-intro">
+<div id="daylight-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="daylight-intro">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Hours of Daylight module. Select the next module you would like to explore from the menu. </p>
@@ -649,7 +679,7 @@
 		</div>
 	</div>
 </div>
-<div id="variable-exploration" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="variable-exploration">
+<div id="variable-exploration" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="variable-exploration">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> If you're done exploring variables, select the next module you would like to explore from the menu. </p>
@@ -750,7 +780,7 @@
 		</div>
 	</div>
 </div>
-<div id="relationships-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="relationships-intro">
+<div id="relationships-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="relationships-intro">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Relationships Between Variables module. Select the next module you would like to explore from the menu. </p>
@@ -1100,7 +1130,7 @@
 		</div>
 	</div>
 </div>
-<div id="models-complete" class="module-complete" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="models-intro">
+<div id="models-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="models-intro">
 	<h2>Module Complete</h2>
 	<div id ="completed-text">
 		<p> You have completed the Sun-Earth Models module. Select the next module you would like to explore from the menu. </p>
