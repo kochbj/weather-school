@@ -193,23 +193,14 @@ function mapXvis ( evt ) {
 				1000 ,
 				function ( ) {
 					google.maps.event.trigger(wInstance.map, 'resize');
-					wInstance.map.setCenter(mapCenter);
 				}
 			)
 			.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		this.settings.displayWidgets[0].settings.container
 			.show()
-			//.css( { 'width':'auto' } )
-			.animate(
-				{ left:'36%' } ,
-				1000 ,
-				'swing' ,
-				function ( ) {
-					//if ( wInstance.settings.displayWidgets[0].highChart ) {
-					//	wInstance.settings.displayWidgets[0].highChart.setSize( $( this ).width( ) , $( this ).height( ) );
-				//	}
-				}
-			);
+			.animate( { left:'36%' } , 1000 , 'swing',function() {
+					wInstance.map.setCenter(mapCenter);
+			});
 		this.settings.displayStatus = 'vis';
 	} else if ( evtType == 'initialize' ) {
 		this.settings.displayStatus = 'map';
