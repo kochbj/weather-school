@@ -1,4 +1,4 @@
-<h2>Welcome to WeatherSchool @ AAAS.org!</h2>
+<h2>Hello World Welcome to WeatherSchool @ AAAS.org!</h2>
 <p>This interactive learning module lets you access data collected mostly by the <a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration</a> (NOAA) and the <a href="http://www.nasa.gov">National Aeronautics and Space Administration</a> (NASA) from weather stations, satellites, and other observation sites on land and sea around the world. These data give you a picture of how different factors—time of the year, location, or elevation, for example—work together to produce the day-to-day weather you experience in your local community  as well as the overall climate for the region of the world where you live (for example, the New England area of the U.S. or the southernmost part of India).</p>
 <p>To help you explore these weather-related factors, WeatherSchool @ AAAS.org  includes the following features:</p>
 <ul>
