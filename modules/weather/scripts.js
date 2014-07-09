@@ -196,9 +196,9 @@ function mapXvis ( evt ) {
 					wInstance.map.setCenter(mapCenter);
 				}
 			)
-			.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		this.settings.displayWidgets[0].settings.container
 			.show()
+			.delay(1000);
 			//.css( { 'width':'auto' } )
 			/*.animate(
 				{ left:'36%' } ,
