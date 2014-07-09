@@ -362,8 +362,8 @@ function cbTempLatSouthern ( evt ) {
 	if ( evt.type == 'initialize' ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -25.2968332,-57.5984002 ), staticmap: true } );
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -34.6158526,-58.4332985 ), staticmap: true } );
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -17.800000,-63.166670 ), staticmap: true } );
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -31.398930,-64.182129 ), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
