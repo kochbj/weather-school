@@ -453,8 +453,15 @@
 </div>
 <div id="temperature-elevation-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="temperature-elevation-intro">
 	<h2>Module Complete</h2>
-	<div class="completed-text">
-		<p> You have completed the Temperature and Elevation module. Select the next module you would like to explore from the menu. </p>
+<div class="guiding-questions">
+	<h2>Quiz Yourself:</h2>	
+	<ul>
+		<li>In the Northern Hemisphere, what is the relationship between how far north you are and temperature?</li>
+		<li>In the Southern Hemisphere, what is the relationship between how far south you are and temperature?</li>
+		<li>What is the relationship between the distance of a location from the equator (latitude) and its average daily temperature?</li>
+	</ul>
+	<h2>Expand Your Knowledge</h2>	
+	<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
