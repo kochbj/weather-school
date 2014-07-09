@@ -275,10 +275,10 @@
 				<p>In this activity you will look at the relationship between latitude and daily average temperature.</p>
 			</div>
 			<div>
-				<p>In the map above Toronto, Ontario in Canada and Savannah, Georgia in the United States are pinpointed. These two location are about 1,000 miles apart.</p>
+				<p>In the map above Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two location are about 1,000 miles apart.</p>
 			</div>
 			<div>			
-				<p>The graph above shows the average daily temperatures in Toronto and Savannah from December 31, 2003 to December 30, 2004. </p>
+				<p>The graph above shows the average daily temperatures in Winnipeg and San Antonio from December 31, 2003 to December 30, 2004. </p>
 			</div>
 			<div>
 				<p>Look at the pattern of temperatures at the two places.</p>
