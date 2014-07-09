@@ -456,9 +456,8 @@
 <div class="guiding-questions">
 	<h2>Quiz Yourself:</h2>	
 	<ul>
-		<li>In the Northern Hemisphere, what is the relationship between how far north you are and temperature?</li>
-		<li>In the Southern Hemisphere, what is the relationship between how far south you are and temperature?</li>
-		<li>What is the relationship between the distance of a location from the equator (latitude) and its average daily temperature?</li>
+		<li>As the elevation of a particular location increases, what happens to the average daily temperature of that location?</li>
+	
 	</ul>
 	<h2>Expand Your Knowledge</h2>	
 	<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
