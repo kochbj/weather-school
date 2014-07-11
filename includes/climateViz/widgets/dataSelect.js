@@ -776,7 +776,7 @@ function addLocation (e,wInstance) {
 			this.name = Math.round(this.userCoords.lat()*10)/10+','+Math.round(this.userCoords.lng()*10)/10;
 		}
 		
-		var contentString = '<div class="infoWindow" style="width:170px;">';
+		var contentString = '<div class="infoWindow" style="width:170px; line-height:1.35; overflow:hidden; white-space:nowrap;">';
 		contentString += '<div class="name">'+(this.location.city?this.location.city:'')+'</div><div class="location">'+(this.location.state?this.location.state+', ':'')+(this.location.country?this.location.country:'')+'</div>';
 		contentString += '<div class="user coords">'+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
 		if (!staticmap) contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
