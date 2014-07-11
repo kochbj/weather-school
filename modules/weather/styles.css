@@ -41,6 +41,16 @@
 .workarea .full-ds { left: 0px; right: 0px; }
 .workarea .full-tc { right: 0px; left: 100%; width:64% !important; display: none;}
 
+#daily-temperature-intro {background-image: url(assets/introduction/Wind_olive.jpg);}
+#annual-temperature-intro {background-image: url(assets/introduction/Seasons2010.jpg);}
+#temperature-lat-intro {background-image: url(assets/introduction/Rj_north_york_moors.jpg);}
+#temperature-elevation-intro {background-image: url(assets/introduction/Aerial_photo_of_the_Andes.jpg);}
+#temperature-water-intro {background-image: url(assets/introduction/South_coast_of_CubaNeedAttribution.jpg);}
+#height-sun-intro {background-image: url(assets/introduction/Sunset_TreeNeedAttribution.jpg);}
+#height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
+#daylight-intro {background-image: url(assets/introduction/Sunset_at_Halong_Bay.jpg);}
+#daylight-air-temperature-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
+#data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }
 
