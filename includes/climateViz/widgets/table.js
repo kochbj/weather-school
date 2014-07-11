@@ -19,7 +19,10 @@ function createTable(data, wInstance) {
 	}
 	if (wInstance.settings.selectForOutput) {
 		tbl.find( '.header th' ).click( function ( evt ) {
-			var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );
+			if ( evt.data ) var datapoint = evt.data.clickCol;
+			else {var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );}
+			console.log(this);
+			console.log(datapoint);
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {
 				wInstance.selection.splice( wInstance.selection.indexOf( datapoint ) , 1 );
 				$( this ).removeClass( 'selected-for-graph' );

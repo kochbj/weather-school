@@ -817,7 +817,6 @@ function syncList (marker) {
 function refreshStations ( evt ) {
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
-	console.log("THIS",evt);
 	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
 	// TODO: implement station removal as a separate callback routine?
 	removeStations( evt.data.marker.id , this );

@@ -898,6 +898,25 @@
 		</div>
 	</div>
 </div>
+<div id="vis-sim-eliptic" class="activity" data-slide-type="tool" data-slide-title="Rotation Simulator" data-slide-parent-id="data-tools-intro">
+	<div class="header">
+		<h2>Seasons and Ecliptic Simulator</h2>
+	</div>
+	<div class="workonly">
+	<div align="center">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
+				<param name="movie" value="media/sims/vis-sim-eliptic.swf" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-eliptic.swf" width="906" height="635">
+					<!--<![endif]-->
+					<p>flash animation</p>
+					<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+</div>
+</div>
 <div id="data-tools-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="data-tools-intro">
 	<h2>Module Complete</h2>
 	<div class="completed-text">
