@@ -511,32 +511,8 @@
 			<div>
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. As long as the water isn't frozen, the water makes the air above it warmer than it would otherwise be in the winter, and it makes the air above it cooler than it would otherwise be in the summer. Being closer to water also makes the difference between high and low temperatures smaller than if you were farther from the water.</p>
 			</div>
-			<div>
-				<p>Now use the map above to choose two locations that are at different distances from the ocean.</p>
-				<p>Start by locating and then zooming in on the state of California and the city of San Francisco.</p>
-				<p>Click as close to San Francisco as you can. You will see 20 yellow dots that represent reporting stations near San Francisco.</p>
-				<p>Choose San Mateo as your first reporting station. This is where the San Francisco International Airport is located. Then choose Modesto, a little to the east of San Francisco as your second location.</p>
-				<p>Click on each those two locations.</p>
-			</div>
-			<div>
-				<form onclick="return false;">
-				<p class="question-1"><label for="temperature-water-q1">What do you notice about the graph of the temperature at the two locations?</label><br>
-					<textarea id="temperature-water-q1" name="temperature-water-q1"></textarea>
-				</p>
-				<p class="question-2"><label for="temperature-water-q2">Which place has the warmer temperatures in the summer?</label><br>
-					<textarea id="temperature-water-q2" name="temperature-water-q2"></textarea>
-				</p>
-				<p class="question-3"><label for="temperature-water-q3">Which place has the warmer temperatures in the winter?</label><br>
-					<textarea id="temperature-water-q3" name="temperature-water-q3"></textarea>
-				</p>
-				<p class="question-4"><label for="temperature-water-q4">What about the difference between the high and low temperature on any given day? Does one place seem to have a bigger difference between the daily high and the daily low temperature?</label><br>
-					<textarea id="temperature-water-q4" name="temperature-water-q4"></textarea>
-				</p>
-				<p class="question-5"><label for="temperature-water-q5">What evidence do you have to support your idea about that?</label><br>
-					<textarea id="temperature-water-q5" name="temperature-water-q5"></textarea>
-				</p>
-				</form>
-			</div>
+		
+			
 		</div>
 	</div>
 </div>
