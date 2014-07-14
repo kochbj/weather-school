@@ -503,6 +503,15 @@
 				<p>The graph above show the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
+				<p>What you should see is that at some times of the year the place that is closer to the water is cooler than the place that is farther from the water, but at other times of the year it is just the opposite. Then it's colder farther away from the water.</p>
+			</div>
+			<div>
+				<p>You should also notice that the line on teh graph for the place that is closer to the water is flatter than the line for the place that is farther from the water. There is a bigger range between high and low temperatures during the year in teh place that is farther from the water. The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
+			</div>
+			<div>
+				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. As long as the water isn't frozen, the water makes the air above it warmer than it would otherwise be in the winter, and it makes the air above it cooler than it woudl otherwise be in the summer. Being closer to water also makes teh difference between high and low temperatures smaller than if you were farther from the water.</p>
+			</div>
+			<div>
 				<p>Now use the map above to choose two locations that are at different distances from the ocean.</p>
 				<p>Start by locating and then zooming in on the state of California and the city of San Francisco.</p>
 				<p>Click as close to San Francisco as you can. You will see 20 yellow dots that represent reporting stations near San Francisco.</p>
