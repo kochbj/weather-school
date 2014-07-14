@@ -406,6 +406,7 @@
 			<div>
 				<p>The map above pinpoints Kathmandu, Nepal. Two weater stations, Tingri, Tibet in China and Gorakhpur in India have been chosen for you.</p>
 				
+			</div>
 			<div>
 				<p>The elevation in Tingri is about 14,000 feet above sea level whereas Gorakhpur is only about 250 feet above sea level.</p>
 				
