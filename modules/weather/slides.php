@@ -401,7 +401,7 @@
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>Now use the map above to choose two locations that are at different elevations above sea level.</p>
+				<p>In this activity you will see how elevation affects air temperature.</p>
 			</div>
 			<div>
 				<p>Start by locating and then zooming in on the state of Colorado and the city of Denver.</p>
@@ -433,6 +433,7 @@
 		<div class="slider">
 			<div>
 				<p>Now try to find other locations around the world where you can observe the effect of elevation on temperature.</p>
+				<p>Use the map above to choose two locations that are at different elevations above sea level.</p>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
 				<p>Also note that you may have difficulty finding reporting stations at very high elevations because those areas are often very remote and not easily accessible by humans.</p>
 			</div>
