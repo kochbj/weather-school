@@ -552,12 +552,23 @@
 		<div class="slider">
 			<div>
 				<p>Now try to find other locations around the world where you can observe the effect of proximity to a large body of water on temperature.</p>
+			</div>
+			<div>
+				<p>Use the map above to zoom in on a location you would like to explore near a large body of water. Click on a specific location on the map.</p>
+			</div>
+			<div>
+				<p>The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
+			</div>
+			<div>
+				<p>Now click on the start calendar to dhoose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+			</div>
+			<div>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
 				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
 			</div>
 			<div>
 				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
-				<p>When you are finished exploring these other places, write your observations in the NOTE BOX and then move on to the next activity.</p>
+			
 			</div>
 			<div>
 				<form onclick="return false;">
