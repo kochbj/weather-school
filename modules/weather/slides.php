@@ -318,7 +318,7 @@
 				<p>Now lets look at two locations in the Southern Hemisphere. In the map above Santa Cruz de la Sierra, Boliva and Cordoba, Argentina are pinpointed. These two locations are about 1,000 miles apart.</p>
 			</div>
 			<div>
-				<p>The graph above shows the average daily temperatures in Santa Cruz de la Sierra and Cordoba from January 1, 2000 to January 1, 2001.</p>
+				<p>The graph above shows the average daily temperatures in Santa Cruz de la Sierra and Cordoba from December 31, 2003 to December 30, 2004.</p>
 			</div>
 			<div>
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is <i>colder</i> almost every day of the year in the place that is farther south. As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther north (farther from the tropical zone). Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
