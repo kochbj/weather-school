@@ -404,7 +404,7 @@
 				<p>In this activity you will see how elevation affects air temperature.</p>
 			</div>
 			<div>
-				<p>The map above pinpoints Kathmandu, Nepal. Two weater stations, Tingri, Tibet in China and Gorakhpur in India have been chosen for you.</p>
+				<p>The map above pinpoints Kathmandu, Nepal. This activity will explore the temperature patterns in two locations near Kathmandu: Tingri, Tibet in China and Gorakhpur in India. Both those locations are highlighted on the map.</p>
 				
 			</div>
 			<div>
