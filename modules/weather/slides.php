@@ -599,6 +599,7 @@
 		<div class="slider">
 			<div>
 				<p>The map above pinpoints New York City. The graph shows the height of the sun in the sky in New York City for each day of the year.</p>
+			</div>
 			<div>
 				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. How high the sun gets in teh sky changes smoothly from day to day because there is nothing besides teh continuous movement of the earth and sun to affect it.</p>
 			
