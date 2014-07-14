@@ -628,8 +628,16 @@
 </div>
 <div id="height-sun-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="height-sun-intro">
 	<h2>Module Complete</h2>
-	<div class="completed-text">
-		<p> If you're done exploring variables, select the next module you would like to explore from the menu. </p>
+	<div class="guiding-questions">
+		<h2>Quiz Yourself:</h2>	
+		<ul>
+			<li>What effect does a large body of water have on a particular place in the winter?</li>
+			<li>What effect does a large body of water have on a particular place in the summer?</li>
+			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year at a particular place?</li>
+	
+		</ul>
+		<h2>Expand Your Knowledge</h2>	
+		<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
