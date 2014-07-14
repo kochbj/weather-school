@@ -454,7 +454,7 @@
 			<div>
 				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
 				
-			<div
+			<div/>
 				<form onclick="return false;">
 				<p><label for="temperature-elev-practice-q1">What is the relationship between how far a place is above sea level and the temperature of that place?</label><br>
 					<textarea id="temperature-elev-practice-q1" name="temperature-elev-practice-q1"></textarea></p>
