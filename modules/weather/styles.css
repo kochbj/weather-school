@@ -23,7 +23,8 @@
 .module-complete ul { list-style-image: url(assets/introduction/bullet.png); }
 .module-complete ul li { font-weight: bold; margin: .85em; }
 .module-complete .guiding-questions { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
-.module-complete .completed-text {width: 53%; font-size:90%; margin-left: 50px; margin-top: 135px; }
+.module-complete .completed-text { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
+//.module-complete .completed-text {width: 53%; font-size:90%; margin-left: 50px; margin-top: 135px; }
 
 .module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
 .module-intro > * { margin: .85em 2em; }

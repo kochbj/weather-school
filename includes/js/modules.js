@@ -18,7 +18,7 @@ function	nextClickevt ( evt ) {
 						if ( $('#slider-menu').hasClass( 'active' ) ) {
 							$('#slider-menu').removeClass( 'active' );
 							$('#slider-menu').animate( { left : '100%' } , 450 );
-							$( '#slider-menu a').removeClass('highlighted');
+							$( '#slider-menu a').removeClass('ui-accordion-header-active');
 							$( '#click-cover').off('click', _clickOutmenu);
 							$( '#click-cover').hide();
 						}
@@ -49,24 +49,28 @@ function	nextClickevt ( evt ) {
 } );
 							//$('#slider-menu').addClass( 'active' );
 							ctrlSlider.toSlide( 'next' );
-							$( '#slider-menu a').removeClass('highlighted');
+							$( '#slider-menu a').removeClass('ui-accordion-header-active');
 							$( '#slider-menu a').removeClass('current');
 							switch(ctrlSlider.$slides[ctrlSlider.currentSlideIndex].getAttribute('id')) {
 							case 'contents-2':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#locationExplorer-sample") $(this).addClass('highlighted');});
+								$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
 									break;
 							case 'contents-3':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#temperature-intro") $(this).addClass('highlighted');});
+								$('#slider-menu a[href="#temperature-lat-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#temperature-elevation-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#temperature-water-intro"]').addClass('ui-accordion-header-active');
 								break;
 							case 'contents-4':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#temperature-lat" || $(this).attr("href")=="#temperature-elev-intro" || $(this).attr("href")=="#temperature-water-intro" ) $(this).addClass('highlighted');});
-									break;
+								$('#slider-menu a[href="#height-sun-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#height-sun-air-temperature-intro"]').addClass('ui-accordion-header-active');
+								break;
 							case 'contents-5':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#daylight-intro") $(this).addClass('highlighted');});
+								$('#slider-menu a[href="#daylight-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#daylight-air-temperature-intro"]').addClass('ui-accordion-header-active');
+									break;
+							case 'contents-6':
+								$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
 									break;
 																								
 							}
@@ -77,7 +81,7 @@ function	nextClickevt ( evt ) {
 						if ( $('#slider-menu').hasClass( 'active' ) ) {
 							$('#slider-menu').removeClass( 'active' );
 							$('#slider-menu').animate( { left : '100%' } , 450 );
-							$( '#slider-menu a').removeClass('highlighted');
+							$( '#slider-menu a').removeClass('ui-accordion-header-active');
 							$( '#click-cover').off('click', _clickOutmenu);
 							$( '#click-cover').hide();
 						}
@@ -99,7 +103,7 @@ function	prevClickevt ( evt ) {
 					if ( $('#slider-menu').hasClass( 'active' ) ) {
 						$('#slider-menu').removeClass( 'active' );
 						$('#slider-menu').animate( { left : '100%' } , 450 );
-						$( '#slider-menu a').removeClass('highlighted');
+						$( '#slider-menu a').removeClass('ui-accordion-header-active');
 						$( '#click-cover').off('click', _clickOutmenu);
 						$( '#click-cover').hide();
 						}
@@ -110,23 +114,27 @@ function	prevClickevt ( evt ) {
 						//$('#slider-menu').addClass( 'active' );
 						ctrlSlider.toSlide( 'prev' );
 						$( '#slider-menu a').removeClass('current');
-						$('#slider-menu a').removeClass('highlighted');
+						$('#slider-menu a').removeClass('ui-accordion-header-active');
 						switch(ctrlSlider.$slides[ctrlSlider.currentSlideIndex].getAttribute('id')) {
 							case 'contents-2':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#locationExplorer-sample") $(this).addClass('highlighted');});
+								$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
 									break;
 							case 'contents-3':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#temperature-intro") $(this).addClass('highlighted');});
+								$('#slider-menu a[href="#temperature-lat-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#temperature-elevation-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#temperature-water-intro"]').addClass('ui-accordion-header-active');
 								break;
 							case 'contents-4':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#temperature-lat" || $(this).attr("href")=="#temperature-elev-intro" || $(this).attr("href")=="#temperature-water-intro" ) $(this).addClass('highlighted');});
-									break;
+								$('#slider-menu a[href="#height-sun-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#height-sun-air-temperature-intro"]').addClass('ui-accordion-header-active');
+								break;
 							case 'contents-5':
-								$('#slider-menu a').each(function (idx,el) { 
-									if ($(this).attr("href")=="#daylight-intro") $(this).addClass('highlighted');});
+								$('#slider-menu a[href="#daylight-intro"]').addClass('ui-accordion-header-active');
+								$('#slider-menu a[href="#daylight-air-temperature-intro"]').addClass('ui-accordion-header-active');
+									break;
+							case 'contents-6':
+								$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
 									break;
 							}
 						}
@@ -136,7 +144,7 @@ function	prevClickevt ( evt ) {
 						$('#slider-menu').animate( { left : '100%' } , 450 );
 						$( '#click-cover').off('click', _clickOutmenu);
 						$( '#click-cover').hide();
-						$( '#slider-menu a').removeClass('highlighted');
+						$( '#slider-menu a').removeClass('ui-accordion-header-active');
 				}
 					ctrlSlider.toSlide( 'prev' );
 				}		

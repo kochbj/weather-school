@@ -17,7 +17,7 @@
 <div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">The first five modules focus on temperature. Module A explores daily temperature changes and module B explores annual temperature patterns. </p>
+		<p class="invite">The first two modules focus on variation over temperature. Module B explores daily temperature changes and module C explores how temperature changes over the course of a year. </p>
 	</div>
 </div>
 <div id="contents-3" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -29,13 +29,19 @@
 <div id="contents-4" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite"> Modules G and H explore the height of the Sun in the sky and its relationship to temperature. </p>
+		<p class="invite"> Modules G and H explore how changes in the height of the sun in the sky throughout the year affect temperature. </p>
 	</div>
 </div>
 <div id="contents-5" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">Module I explores hours of daylight annual patterns and the relationship between hours of daylight and latitude.  </p>
+		<p class="invite">Module I looks at the relationship between hours of daylight and latitude. Module J investigates the effects of this relationship on temperature.</p>
+	</div>
+</div>
+<div id="contents-6" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div class="completed-text">
+		<p class="invite">The additional data tools tab contains tools for further exploring the climate recording data sets used in these modules. It also includes an interactive astronomical model for users who want to investigate the phenomenological causes for these climate trends.</p>
 	</div>
 </div>
 <?php
@@ -67,7 +73,7 @@
 <div id="intro-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Module Complete</h2>
 	<div class="completed-text">
-		<p class="invite"> You have completed the introduction. Select the next module you would like to explore from the menu. </p>
+		<p class="invite"> You have completed the introduction. Hit the next button to continue to the first module or select a different one to explore from the menu. </p>
 	</div>
 </div>
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
