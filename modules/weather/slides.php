@@ -631,9 +631,9 @@
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What effect does a large body of water have on a particular place in the winter?</li>
-			<li>What effect does a large body of water have on a particular place in the summer?</li>
-			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year at a particular place?</li>
+			<li>For any place in the United States, how does the maximum height of the Sun in the sky during winter compare to the maximum height of the Sun in the sky during summer?</li>
+			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
+
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
