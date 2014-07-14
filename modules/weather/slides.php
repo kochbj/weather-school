@@ -442,7 +442,7 @@
 				<p>Zoom in on that area of the world. Click on a specific location. The 20 closest reporting stations will appears as yellow dots around the location you chose.</p>
 	
 				Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.)</p>
-				<div/>
+				</div>
 				<div>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
 				<p>Also note that you may have difficulty finding reporting stations at very high elevations because those areas are often very remote and not easily accessible by humans.</p>
