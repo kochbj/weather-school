@@ -500,7 +500,7 @@
 				<p>The map above pinpoints Troms, Norway, which is located on the Norwegian Sea. In this activity you will explore the temperature patterns in Troms and a town 125 miles southest of Troms, Kautokeino. Both locations are highlighted on the map.</p>
 			</div>
 			<div>
-				<p>The graph above show the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
+				<p>The graph above shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
 				<p>What you should see is that at some times of the year the place that is closer to the water is cooler than the place that is farther from the water, but at other times of the year it is just the opposite. Then it's colder farther away from the water.</p>
