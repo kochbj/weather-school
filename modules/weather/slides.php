@@ -497,7 +497,7 @@
 				<p>In this activity, you are going to see what effect being close to a large body of water has on air temperature at a place.</p>
 			</div>
 			<div>	
-				<p>The map above pinpoints Troms, Norway, which is located on the Norwegian Sea. In this activity you will explore the temperature patterns in Troms and Kautokeino, which is about 125 miles southeast of Troms and located inland. Both these locations are highlighted on the map.</p>
+				<p>The map above pinpoints Troms, Norway, which is located on the Norwegian Sea. In this activity you will explore the temperature patterns in Troms and town 125 miles southest of Troms, Kautokeino. Both locations are highlighted on the map.</p>
 			</div>
 			<div>
 				<p>The graph above show the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
