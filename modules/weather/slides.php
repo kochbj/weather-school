@@ -439,7 +439,7 @@
 				<p>Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
 			<div>
-				<p>Click on a specific location on the map. The 20 closest reporting stations appears as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations.</p>
+				<p>Click on a specific location on the map. The 20 closest reporting stations appears as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
 	
 			</div>
 			<div>	
