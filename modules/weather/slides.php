@@ -597,11 +597,11 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>So  far, you have looked at graphs of how temperature changes from day to day and over  the course of a year in different locations. You have also seen how the length  of the day changes at different locations over the course of the year.</p></div>
 			<div>
-				<p>There  were two other variables that you looked at briefly at the beginning of this  module. These were the maximum height of the sun in the sky and the average  energy from the sun at a place.</p>
-				<p>You  can explore those variables in the same way you explored average temperature  and length of the day.</p>
-				<p>To  explore them, click on [maximum height of the sun in the sky] or [average energy  from the sun] on the menu above.</p>
+				<p>The map above pinpoints New York City. The graph shows the height of the sun in the sky in New York City for each day of the year.</p>
+			<div>
+				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. How high the sun gets in teh sky changes smoothly from day to day because there is nothing besides teh continuous movement of the earth and sun to affect it.</p>
+			
 			</div>
 		</div>
 	</div>
