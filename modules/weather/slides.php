@@ -554,13 +554,13 @@
 				<p>Now try to find other locations around the world where you can observe the effect of proximity to a large body of water on temperature.</p>
 			</div>
 			<div>
-				<p>Use the map above to zoom in on a location you would like to explore near a large body of water. Click on a specific location on the map.</p>
+				<p>Use the map above to zoom in on a location near a large body of water that you would like to explore. Click on a specific location on the map.</p>
 			</div>
 			<div>
 				<p>The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
 			</div>
 			<div>
-				<p>Now click on the start calendar to dhoose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
@@ -570,16 +570,8 @@
 				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
 			
 			</div>
-			<div>
-				<form onclick="return false;">
-					<p><label for="temperature-water-practice-q1">What is the relationship between how far a place is above sea level and the temperature of that place?</label><br>
-						<textarea id="temperature-water-practice-q1" name="temperature-water-practice-q1"></textarea>
-					</p>
-					<p><label for="temperature-water-practice-q2">What evidence do you have to support your claim?</label><br>
-						<textarea id="temperature-water-practice-q2" name="temperature-water-practice-q2"></textarea>
-					</p>
-				</form>
-			</div>
+			
+				
 		</div>
 	</div>
 </div>
