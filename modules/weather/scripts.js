@@ -393,7 +393,7 @@ function cbLargeBodiesWaterExample ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		//console.log(wInstance.map.widget);
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 37.297,-121.817 ), stationNames: ["SAN FRANCISCO INTL", "MODESTO CITY CO HAR"], staticmap: true } );
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 69.38,20.71 ), stationNames: ["TROMSO/LANGNES", "KAUTOKEINO"], staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
 		wInstance.map.setZoom(7);
