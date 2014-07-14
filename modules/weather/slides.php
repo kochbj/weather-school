@@ -439,8 +439,13 @@
 				<p>Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
 			<div>
-				<p>Click on a specific location on the map. The 20 closest reporting stations appears as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.)</p>
+				<p>Click on a specific location on the map. The 20 closest reporting stations appears as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on one of the reporting stations.</p>
 	
+			</div>
+			<div>	
+				<p>Now click on the calendar to choose a starting and ending date. Pick dates at least a year apart.</p>
+				<p>The average daily temperatures of the first location should appear on the graph.</p>
+				<p>Now choose the second location.</p>
 			</div>
 			<div>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
@@ -448,9 +453,8 @@
 			</div>
 			<div>
 				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
-				<p>When you are finished exploring these other places, write your observations in the NOTE BOX and then move on to the next activity.</p>
-			</div>
-			<div>
+				
+			<div
 				<form onclick="return false;">
 				<p><label for="temperature-elev-practice-q1">What is the relationship between how far a place is above sea level and the temperature of that place?</label><br>
 					<textarea id="temperature-elev-practice-q1" name="temperature-elev-practice-q1"></textarea></p>
