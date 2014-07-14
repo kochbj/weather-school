@@ -443,7 +443,7 @@
 	
 			</div>
 			<div>	
-				<p>Now click on the start calendar to choose a starting and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			
 				
 			</div>
