@@ -404,13 +404,15 @@
 				<p>In this activity you will see how elevation affects air temperature.</p>
 			</div>
 			<div>
-				<p>Start by locating and then zooming in on the state of Colorado and the city of Denver.</p>
-				<p>Click as close to Denver as you can. You will see 20 yellow dots that represent reporting stations near Denver.</p>
+				<p>The map above pinpoints Kathmandu, Nepal. Two weater stations, Tingri, Tibet in China and Gorakhpur in India have been chosen for you.</p>
+				
+			<div>
+				<p>The elevation in Tingri is about 14,000 feet above sea level whereas Gorakhpur is only about 250 feet above sea level.</p>
+				
 			</div>
 			<div>
-				<p>Denver itself is at an elevation of about 5400 feet above sea level.  Some of the reporting stations around Denver are in the mountains at higher elevations.</p>
-				<p>Mouse over each of the yellow dots until you find two reporting stations that are about a thousand feet apart in elevation.</p>
-				<p>After you have decided which two to choose, click on each one of them.</p>
+				<p>The graph above shows the average daily temperatures in Tingri and Gorakhpur from _____ to _______.</p>
+				
 			</div>
 			<div>
 				<form onclick="return false;">
@@ -434,6 +436,8 @@
 			<div>
 				<p>Now try to find other locations around the world where you can observe the effect of elevation on temperature.</p>
 				<p>Use the map above to choose two locations that are at different elevations above sea level.</p>
+				<p>Mouse over each of the yellow dots until you find two reporting stations that are about a thousand feet apart in elevation.</p>
+				<p>After you have decided which two to choose, click on each one of them.</p>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
 				<p>Also note that you may have difficulty finding reporting stations at very high elevations because those areas are often very remote and not easily accessible by humans.</p>
 			</div>
