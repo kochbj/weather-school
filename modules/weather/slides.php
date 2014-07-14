@@ -418,12 +418,7 @@
 			<div>
 				<p>What do you notice about the graph of the temperatures at the two locations? You should see that the place at the higher elevation has lower temperatures throughout the year.</p>
 			</div>
-			<div>
-				<form onclick="return false;">
-				<p><label for="temperature-elev-q1">What do you notice about the graph of the temperature at the two locations?</label><br>
-				<textarea name="temperature-elev-q1" id="temperature-elev-q1"></textarea></p>
-				</form>
-			</div>
+		
 		</div>
 	</div>
 </div>
