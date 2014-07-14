@@ -445,7 +445,7 @@
 			<div>	
 				<p>Now click on the calendar to choose a starting and ending date. Pick dates at least a year apart.</p>
 				<p>The average daily temperatures of the first location should appear on the graph.</p>
-				<p>Now choose the second location.</p>
+				<p>Now click on the second location to compare average daily temperatures of the two locations on the graph.</p>
 			</div>
 			<div>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
