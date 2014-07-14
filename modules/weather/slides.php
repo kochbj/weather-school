@@ -439,13 +439,13 @@
 				<p>Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
 			<div>
-				<p>Click on a specific location on the map. The 20 closest reporting stations appears as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on one of the reporting stations.</p>
+				<p>Click on a specific location on the map. The 20 closest reporting stations appears as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations.</p>
 	
 			</div>
 			<div>	
-				<p>Now click on the calendar to choose a starting and ending date. Pick dates at least a year apart.</p>
-				<p>The average daily temperatures of the first location should appear on the graph.</p>
-				<p>Now click on the second location to compare average daily temperatures of the two locations on the graph.</p>
+				<p>Now click on the start calendar to choose a starting and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+			
+				
 			</div>
 			<div>
 				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
