@@ -573,7 +573,9 @@
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>As the elevation of a particular location increases, what happens to the average daily temperature of that location?</li>
+			<li>What effect does a large body of water have on a particular place in the winter?</li>
+			<li>What effect does a large body of water have on a particular place in the summer?</li>
+			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year at a particular place?</li>
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
