@@ -17,25 +17,25 @@
 <div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">The first two modules focus on variation over temperature. Module B explores daily temperature changes and module C explores how temperature changes over the course of a year. </p>
+		<p class="invite">The first two modules focus on variation over temperature. Module A explores daily temperature changes and module B explores how temperature changes over the course of a year. </p>
 	</div>
 </div>
 <div id="contents-3" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">Modules D-F investigate how temperature varies with three different geographic variables: latitude, elevation and proximity to bodies of water.</p>
+		<p class="invite">Modules C-E investigate how temperature varies with three different geographic variables: latitude, elevation and proximity to bodies of water.</p>
 	</div>
 </div>
 <div id="contents-4" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite"> Modules G and H explore how changes in the height of the sun in the sky throughout the year affect temperature. </p>
+		<p class="invite"> Modules F and G explore how changes in the height of the sun in the sky throughout the year affect temperature. </p>
 	</div>
 </div>
 <div id="contents-5" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">Module I looks at the relationship between hours of daylight and latitude. Module J investigates the effects of this relationship on temperature.</p>
+		<p class="invite">Module H looks at the relationship between hours of daylight and latitude. Module I investigates the effects of this relationship on temperature.</p>
 	</div>
 </div>
 <div id="contents-6" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">

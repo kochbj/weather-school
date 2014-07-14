@@ -205,8 +205,11 @@ function locationUpdate ( ) {
 	if ( instrSlider ) {
 		instruction = instrSlider.currentSlideIndex + 1;
 	}
+	if (section == 1) section="INT";
+	else if (section == $( '[data-slide-type=key]' ).length) section="TLS";
+	else section = String.fromCharCode( section + 64 - 1 );
 	$( '.you-are-here .screen-id' ).html(
-		'Screen: ' + String.fromCharCode( section + 64 ) +
+		'Screen: ' + section +
 		'.' + screen +
 		( instruction ? '.' + instruction : '' )
 	);
@@ -408,7 +411,7 @@ function decimalToRomanSimple(value) {
 				$('#accordion').append( '<a href="#' + $( el ).attr( 'id' ) + '"> &nbsp &nbsp ' + $( el ).data( 'slide-group-title' ) + '</a>' );
 				 //$('#accordion a:last-child').css( { 'border-top':'2px solid black'});
 				}
-			else $('#accordion').append( '<a href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 1 + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a>' );
+			else $('#accordion').append( '<a href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a>' );
 			$('#accordion').append('<div><ul></ul></div>');
 			var menuidxx=1;
 		$("[data-slide-parent-id='"+$( el ).attr( 'id')+"']").each( function (idxx, ell) {

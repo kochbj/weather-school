@@ -28,6 +28,7 @@ textarea { width: 95%; height: 4em; }
 #slider-menu .ui-accordion .ui-accordion-header-active { background-color: rgba(170, 192, 202, .9); solid #999999; solid #999999; margin 0px; padding 0px; color: #ffffff !important; text-shadow: 0px 0px 4px #666; box-shadow: 0px 1px 1px #666; }
 #slider-menu a.completed {color: DimGray !important; }
 #slider-menu .ui-accordion .ui-accordion-header:last-of-type {border-top: 1px solid black; }
+#slider-menu .ui-accordion .ui-accordion-header:first-of-type {border-bottom: 1px solid black; }
 
 #slider-menu .ui-accordion .ui-accordion-header a { display: block; padding: .6em; color: black; z-index:99; text-decoration: none; }
 #slider-menu .ui-accordion .ui-accordion-content {background: none; line-height: 1; padding: 0px; border-radius: 0px;]}
