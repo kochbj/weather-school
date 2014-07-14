@@ -412,8 +412,11 @@
 				
 			</div>
 			<div>
-				<p>The graph above shows the average daily temperatures in Tingri and Gorakhpur from _____ to _______.</p>
+				<p>The graph above shows the average daily temperatures in Tingri and Gorakhpur from December 31, 2003 to December 30, 2004.</p>
 				
+			</div>
+			<div>
+				<p>What do you notice about the graph of the temperatures at the two locations? You should see that the place at the higher elevation has lower temperatures throughout the year.</p>
 			</div>
 			<div>
 				<form onclick="return false;">
