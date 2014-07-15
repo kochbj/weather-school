@@ -128,7 +128,7 @@ function cbHeightSunAirTempEx (evt) {
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['date']);
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
 			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
-			}, 20000	);
+			}, 10000	);
 	}
 }
 
