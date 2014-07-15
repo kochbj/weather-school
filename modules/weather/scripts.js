@@ -123,14 +123,12 @@ function cbHeightSunAirTempEx (evt) {
 			wInstance.map.date.data( 'value' , [ new Date(1995,0,15) , new Date(1995,1,15) , new Date(1995,2,15) , new Date(1995,3,15) , new Date(1995,4,15) , new Date(1995,5,15) , new Date(1995,6,15) , new Date(1995,7,15) , new Date(1995,8,15) , new Date(1995,9,15) , new Date(1995,10,15) , new Date(1995,11,15) ] );
 			//wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.input input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 20 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
-			console.log(wInstance);
-			setTimeout( function() {
+		} , 1000 );
+		setTimeout( function() {
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['date']);
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
 			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
-			}, 1000
-								 );
-		} , 1000 );
+			}, 20000	);
 	}
 }
 
