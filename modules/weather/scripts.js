@@ -125,10 +125,10 @@ function cbHeightSunAirTempEx (evt) {
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			console.log(wInstance);
 			setTimeout( function() {
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['lat']);
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['lng']);
+			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['date']);
+			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
 			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
-			}, 10000
+			}, 1000
 								 );
 		} , 1000 );
 	}
