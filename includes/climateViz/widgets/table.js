@@ -18,19 +18,33 @@ function createTable(data, wInstance) {
 		tbl.find('tr.header').append('<th>'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
 	}
 	if (wInstance.settings.selectForOutput) {
-		tbl.find( '.header th' ).click( function ( evt ) {
-			if ( evt.data ) var datapoint = evt.data.clickCol;
-			else {var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );}
-			console.log(this);
-			console.log(datapoint);
+		tbl.find( '.header th' ).click( function ( evt, clickId ) {
+			console.log(clickCol);
+			if ( clickId ) {
+				var datapoint = clickId; 
+				var clickIdx = $( this ).closest( 'table' ).find('col').map(function() { return this.id}).get().indexOf(clickId) + 1;
+				
+				if (clickIdx == -1) return;
+
+				var clickCol= $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + clickIdx + ')' );
+				var clickTh=tbl.find( 'tr.header th:nth-child(' + clickIdx + ')');
+				console.log(clickTh);
+			}
+			else {
+				var clickTh= $(this);
+				var clickIdx = clickTh.index() + 1;
+				var clickCol = clickTh.closest( 'table' ).find( 'colgroup col:nth-child(' + clickIdx + ')' );
+				var datapoint = clickCol.attr( 'id' );
+			}
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {
 				wInstance.selection.splice( wInstance.selection.indexOf( datapoint ) , 1 );
-				$( this ).removeClass( 'selected-for-graph' );
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph' );
-			} else {
+				clickTh.removeClass( 'selected-for-graph' );
+				clickCol.removeClass( 'selected-for-graph' );
+			}
+			else {
 				wInstance.selection.push( datapoint );
-				$( this ).addClass( 'selected-for-graph' );
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph' );
+				clickTh.addClass( 'selected-for-graph' );
+				clickCol.addClass( 'selected-for-graph' );
 			}
 			if ( wInstance.settings.selectForOutput && wInstance.selection.length > wInstance.settings.selectForOutput ) {
 				overflowColumn = wInstance.selection.shift();
