@@ -785,6 +785,7 @@
 			<div><p>Now the curve is  completely flat. There are 12 hours of daylight all year long. There is no variation in how much daylight there is.</div> 
 			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same.</div>
 			<div>It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
+			<div>On the next screen you will have a chance to compare how the number of hours of daylight changes at two different locations throughout the year.</div>
 		</div>
 	</div>
 </div>
