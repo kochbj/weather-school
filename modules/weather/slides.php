@@ -719,15 +719,12 @@
 		<div class="slider">
 			<div>Now  let&rsquo;s look at how the number of hours of daylight changes at different places  over the course of a year.</div>
 			<div>The  graph that you see here shows the number of hours of daylight at Morningside  Heights, a section of New York City for a two-year period, from September 22nd,  the first day of fall, through December 31st, the last day of the  year two years later.</div>
-			<div>Notice  first that the hours of daylight changes throughout the year at this location.  On the first day of fall there are about 12 hours of daylight, in late June  there are about 15 hours of daylight, and in late December there are just over  9 hours of daylight. (On the next screen you will be able to see the exact  number of hours of daylight on any particular day by hovering over different  parts of the curve with the cursor.) </div>
-			<div>Also  notice that the line is not jagged like the line for air temperature was. The  change in the number of hours of daylight is about the same from day to day.  (Remember that we are talking about hours of &ldquo;daylight,&rdquo; not hours of  &ldquo;sunlight.&rdquo; Because some days are rainy or cloudy and others are clear, there  are big changes in the number of hours of sunlight each day, but the time the  sun rises and sets changes very gradually from day to day.) </div>
-			<div>
-				<form>
-					<p><label for="daylight-intro-q1">Remember  that when you looked at the graph for air temperature, there was variation not  only from day to day but also from year to year. Is that also true for the number  of hours of daylight? What can you say about the change in hours of daylight at  a place on a particular date (for example, October 1st) from one  year to the next?</label><br>
-						<textarea id="daylight-intro-q1" name="daylight-intro-q1"></textarea>
-					</p>
-				</form>
-			</div>
+			<div>Notice  first that the hours of daylight changes throughout the year at this location.  On the first day of fall there are about 12 hours of daylight, in late June  there are about 15 hours of daylight, and in late December there are just over  9 hours of daylight.</div>
+			<div>You can see the exact  number of hours of daylight on any particular day by hovering over different  parts of the curve with the cursor. </div>
+			<div>Also  notice that the line is not jagged like the line for air temperature was. The  change in the number of hours of daylight is about the same from day to day.</div>
+			<div>Remember that we are talking about hours of &ldquo;daylight,&rdquo; not hours of  &ldquo;sunlight.&rdquo; Because some days are rainy or cloudy and others are clear, there  are big changes in the number of hours of sunlight each day, but the time the sun rises and sets changes very gradually from day to day.</div>
+			<div>Remember that when you looked at the graph for air temperature, there was variation not only from day to day but also from year to year. Is that also true for the number of hours of daylight? What can you say about the change in hours of daylight at a place on a particular date (for example, October 1st) from one year to the next?</div>
+			<div>What you should see is that the number of hours of daylight does not change from year to year. There are the same number of hours of daylight on October 1st, no matter what year it is.</div>
 		</div>
 	</div>
 </div>
