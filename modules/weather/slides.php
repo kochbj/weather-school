@@ -783,7 +783,8 @@
 			<div><p>Now let&rsquo;s look at  one more place before you start to experiment yourself with different  locations.</p></div>
 			<div><p>This time we are  going to look at a place in Equador, very close to the equator.</p></div>
 			<div><p>Now the curve is  completely flat. There are 12 hours of daylight all year long. There is no variation in how much daylight there is.</div> 
-			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same. It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
+			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same.</div>
+			<div>It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
 		</div>
 	</div>
 </div>
