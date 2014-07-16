@@ -661,17 +661,9 @@
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000. Notice that the "Average air temperature" and "Maximum height of the sun in the sky" columns are highlighted.</p></div>
 			<div><p>The graph above is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the average height of the sun in the sky.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div><p>The line that you see going through teh scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between teh two variables. It tells you how the maximum height of the sun in teh sky and average daily temperature are related.</p></div>
-			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in teh sky, it tends to be cooler.</p></div>
-			<div>
-				<form onclick="return false;">
-					<p><label for="relationships-sun-energy-q1">Which  variable is increasing from left to right on the x-axis?</label> <input type="text" id="relationships-sun-energy-q1" name="relationships-sun-energy-q1"></p>
-					<p><label for="relationships-sun-energy-q2">Which  variable is increasing on the y-axis?</label> <input type="text" id="relationships-sun-energy-q2" name="relationships-sun-energy-q2"></p>
-					<p><label for="relationships-sun-energy-q3">What  happens to the average amount of solar energy that reaches the earth as the  maximum angle of the sun increases?</label> <textarea id="relationships-sun-energy-q3" name="relationships-sun-energy-q3"></textarea></p>
-					<p><label for="relationships-sun-energy-q4">Approximately  how much additional solar energy does this location receive for every 10  degrees that the sun is higher in the sky?</label> <input type="text" id="relationships-sun-energy-q4" name="relationships-sun-energy-q4"></p>
-					<p><label for="relationships-sun-energy-q5">As you can see, there is a pretty strong  relationship between the maximum angle of the sun and average solar energy, but  it&rsquo;s not a perfect relationship.  Not all  the points are on the line. What other  factors besides maximum angle of the sun could be affecting the amount of solar  energy that reaches the earth at this location?</label> <textarea id="relationships-sun-energy-q5" name="relationships-sun-energy-q5"></textarea></p>
-				</form>
-			</div>
+			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
+			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler.</p></div>
+		
 		</div>
 	</div>
 </div>
