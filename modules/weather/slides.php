@@ -785,7 +785,7 @@
 			<div><p>Now the curve is  completely flat. There are 12 hours of daylight all year long. There is no variation in how much daylight there is.</div> 
 			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same.</div>
 			<div>It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
-			<div>On the next screen you will have a chance to compare how the number of hours of daylight changes at two different locations throughout the year.</div>
+			<div>On the next screen you will have a chance to compare the hours of daylight throughout the year at two different locations of your choice.</div>
 		</div>
 	</div>
 </div>
@@ -799,21 +799,12 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Now you try it.</p></div>
-			<div><p>First choose a range  of dates that covers between two and three years.</p></div>
-			<div><p>Then choose two  locations and create a graph that compares the length of day at those two  locations.</p></div>
-			<div><p>Write your  observations in your scratch pad.</p></div>
-			<div><p>Repeat the  activity as many times as you like until you recognize a pattern in the data.</p></div>
-			<div>
-				<form onclick="return false;">
-					<p><label for="daylight-practice-q1">How many hours of  daylight are there on the first day of spring and the first day of fall  everywhere in the world?</label> <input type="text" id="daylight-practice-q1" name="daylight-practice-q1"></p>
-					<p><label for="daylight-practice-q2">What happens to  the difference between the longest and shortest day the closer you are to the  equator?</label> <textarea id="daylight-practice-q2" name="daylight-practice-q2"></textarea></p>
-					<p><label for="daylight-practice-q3">What happens to  the difference between the longest and the shortest day the farther you are  from the equator?</label> <textarea id="daylight-practice-q3" name="daylight-practice-q3"></textarea></p>
-					<p><label for="daylight-practice-q4">What is the  shortest day of the year in the northern hemisphere?</label> <input type="text" id="daylight-practice-q4" name="daylight-practice-q4"></p>
-					<p><label for="daylight-practice-q5">What is the  longest day of the year in the northern hemisphere?</label> <input type="text" id="daylight-practice-q5" name="daylight-practice-q5"></p>
-					<p><label for="daylight-practice-q6">How would you state the relationship between hours of daylight at a place and how close the place is to the equator?</label> <textarea id="daylight-practice-q6" name="daylight-practice-q6"></textarea></p>
-				</form>
+			
+			<div>	<p>1. Choose a range of dates that covers between two and three years.</p>
+				<p>2. Choose two locations.</p>
+				<p>3. Repeat the activity as many times as you like until you recognize a pattern in the data.</p>
 			</div>
+		
 		</div>
 	</div>
 </div>
