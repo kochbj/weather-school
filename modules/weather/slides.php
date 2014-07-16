@@ -703,8 +703,8 @@
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
 	<h2>Hours of Daylight</h2>
-	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
-	<p>In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	<p>In the last module you saw that there is a relationship between the height of the Sun in the sky and air temperature. When the Sun is high in the sky it tends to be warmer than when teh sun is low in the sky.</p>
+	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
 </div>
 <div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight I" data-slide-parent-id="daylight-intro">
 	<div class="header">
