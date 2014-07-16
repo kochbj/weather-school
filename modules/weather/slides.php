@@ -678,7 +678,7 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Now choose one location and see what happens at that location at 12 different times of the year. After your selection click on the SAVE button to save your results. You will make a table and some graphs of the data for the place your selected.</p></div>
+			<div><p>Now you will a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
 			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
 			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
 			<div>
