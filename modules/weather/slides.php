@@ -656,7 +656,7 @@
 	<div class="instructions">
 		<div class="slider">
 			<div><p>In this module you will look at the relationship between the height of the sun in the sky and air temperature at a given place.</p></div>
-			<div><p>The map above pinpoints Chicago, Illinois. In previous modules the graphs created showed how different variables changed over time. In this module, you can create different types of graphs. Most of the graphs you can create allow you to see how two variables compare without considering how they change over time.</p></div>
+			<div><p>The map above pinpoints Chicago, Illinois. In previous modules the graphs created showed how different variables changed over time. In this module, you will graph two variables to compare them without considering how they change over time.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000. Notice that the "Average air temperature" and "Maximum height of the sun in the sky" columns are highlighted.</p></div>
 			<div><p>The graph above is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the average height of the sun in the sky.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
