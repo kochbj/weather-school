@@ -663,7 +663,7 @@
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
 			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler.</p></div>
-		
+			<div><p>On the next screen you will have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
 		</div>
 	</div>
 </div>
@@ -678,7 +678,7 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Now you will have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
+			
 			<div>
 				<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least ten dates scattered throughout the year.</p>
