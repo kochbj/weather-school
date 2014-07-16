@@ -357,7 +357,7 @@
 		<div class="slider">
 			
 			<div>
-				<p>1. Choose two places on the map that are directly north and south of each other (on the same line of longitude) and at least 1000 miles apart.</p>
+				<p>1. Choose two places on the map that are directly north and south of each other (on the same line of longitude) and at least 1000 miles apart (<span class="tooltip" title="The relationship between latitude and temperature is true north of the tropical zone in the northern hemisphere and south of the tropical zone in the southern hemisphere. There is a slightly different pattern inside the tropical region that depends on what time of year it is. {Show the location of the Tropic of Cancer and the Tropic of Capricorn in relation to the equator}">closer to the tropical zone</span>).</p>
 				<p>To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.</p>
 				<p>2. Now use the calendar to choose a date range. Choose two dates that are one year apart. For example, you could choose January 1, 2000 and December 31, 2000.</p>
 				<p>3. Choose two other places and see if the pattern holds in those places too. Just make sure they are far enough apart so that differences in air temperature are large enough to show up on the graph. Try as many additional pairs of places as you would like.</p>
