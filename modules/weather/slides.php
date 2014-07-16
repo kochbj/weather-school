@@ -329,7 +329,9 @@
 			<div>
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is <i>colder</i> almost every day of the year in the place that is farther south. As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther north (farther from the tropical zone). Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
 			</div>
-		
+			<div>
+				<p>Now you will have a chance to observe more patterns in air temperature and latitude at two locations that you choose.</p>
+			</div>
 		</div>
 		<div class="questionBox">
 			<form onclick="return false;">
@@ -353,9 +355,7 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>
-				<p>Now you will have a chance to observe more patterns in air temperature and latitude at two locations that you choose.</p>
-			</div>
+			
 			<div>
 				<p>Choose two places on the map that are directly north and south of each other (on the same line of longitude) and at least 1000 miles apart.</p>
 				<p>To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.</p>
