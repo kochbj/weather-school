@@ -678,17 +678,13 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Now you will a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
-			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
-			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
+			<div><p>Now you will have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
 			<div>
-				<form onclick="return false;">
-					<p><label for="relationships-sun-energy-q1">Which  variable is increasing from left to right on the x-axis?</label> <input type="text" id="relationships-sun-energy-q1" name="relationships-sun-energy-q1"></p>
-					<p><label for="relationships-sun-energy-q2">Which  variable is increasing on the y-axis?</label> <input type="text" id="relationships-sun-energy-q2" name="relationships-sun-energy-q2"></p>
-					<p><label for="relationships-sun-energy-q3">What  happens to the average amount of solar energy that reaches the earth as the  maximum angle of the sun increases?</label> <textarea id="relationships-sun-energy-q3" name="relationships-sun-energy-q3"></textarea></p>
-					<p><label for="relationships-sun-energy-q4">Approximately  how much additional solar energy does this location receive for every 10  degrees that the sun is higher in the sky?</label> <input type="text" id="relationships-sun-energy-q4" name="relationships-sun-energy-q4"></p>
-					<p><label for="relationships-sun-energy-q5">As you can see, there is a pretty strong  relationship between the maximum angle of the sun and average solar energy, but  it&rsquo;s not a perfect relationship.  Not all  the points are on the line. What other  factors besides maximum angle of the sun could be affecting the amount of solar  energy that reaches the earth at this location?</label> <textarea id="relationships-sun-energy-q5" name="relationships-sun-energy-q5"></textarea></p>
-				</form>
+				<p>1. Choose a location anywhere in the world.</p>
+				<p>2. Open the calendar and choose at least ten dates scattered throughout the year.</p>
+				<p>3. Click on Maximum Height of the Sun in the Sky and Average Daily Temperature at the top of the table.</p>
+				<p>4. Click "Line of Best Fit" at the bottom of the page.</p>
+				<p>5. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
 			</div>
 		</div>
 	</div>
