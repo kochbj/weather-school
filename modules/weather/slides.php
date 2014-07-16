@@ -764,8 +764,7 @@
 				<p>The place we have chosen in Columbia, South America.</p>
 			</div>
 			<div><p>Notice how flat  the curve is getting? In late December there is just a little less than 12  hours of daylight, and in late June, there is just a little more than 12 hours  of daylight. In late March (the first day of spring) and in late September (the  first day of fall), there are 12 hours of daylight, just as there are in New  York City.</p></div>
-			<div>Another way to describe the difference in daylight at these different places is to say that the range in daylight hours is different from place to place.</div>
-			<div>The annual range of daylight hours in Columbia, which is near the equator in South America, is very small; its quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
+			<div>Another way to describe the difference in daylight at these different places is to say that the range in daylight hours is different from place to place. The annual range of daylight hours in Columbia, which is near the equator in South America, is very small; its quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
 			</div>
 		</div>
 	</div>
