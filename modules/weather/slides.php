@@ -602,7 +602,7 @@
 				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
 			</div>
 			<div>	<p>On the next screen you will have the chance to observe the height of the sun in the sky for a location that you choose.</p>
-			<div>
+			</div>
 		</div>
 	</div>
 </div>
