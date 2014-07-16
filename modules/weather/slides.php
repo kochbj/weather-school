@@ -642,8 +642,8 @@
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
 	<h2>Height of the Sun in the Sky and Air Temperature</h2>
-	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
-	<p>In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	<p>In the last module you saw that the maximum height of the sun in teh sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
+	
 </div>
 <div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
