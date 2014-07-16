@@ -642,7 +642,7 @@
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
 	<h2>Height of the Sun in the Sky and Air Temperature</h2>
-	<p>In the last module you saw that the maximum height of the sun in teh sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
+	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
 	
 </div>
 <div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
