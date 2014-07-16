@@ -801,7 +801,7 @@
 		<div class="slider">
 			
 			<div>	<p>1. Choose a range of dates that covers between two and three years.</p>
-				<p>2. Choose two locations to create a graph to see the difference in teh length of day at those two locations.</p>
+				<p>2. Choose two locations to create a graph to see the difference in the length of day at those two locations.</p>
 				<p>3. Repeat the activity as many times as you like until you recognize a pattern in the data.</p>
 			</div>
 		
