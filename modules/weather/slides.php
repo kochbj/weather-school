@@ -824,8 +824,15 @@
 </div>
 <div id="daylight-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="daylight-intro">
 	<h2>Module Complete</h2>
-	<div class="completed-text">
-		<p> You have completed the Hours of Daylight module. Select the next module you would like to explore from the menu. </p>
+	<div class="guiding-questions">
+		<h2>Quiz Yourself:</h2>	
+		<ul>
+			<li>During what months of the year does the United States experience the greatest hours of daylight?</li>
+			<li>During what months of the year does the United States experience the least hours of daylight?</li>
+			<li>What is the relationship between the range of daylight hours at a particular location throughout the year and proximity of that locatoin to the equator?</li>
+		</ul>
+		<h2>Expand Your Knowledge</h2>	
+		<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
