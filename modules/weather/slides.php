@@ -771,7 +771,7 @@
 </div>
 <div id="daylight-example4" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight IV" data-slide-parent-id="daylight-intro">
 	<div class="header">
-		<h2>Daylight Example</h2>
+		<h2>Daylight Example 4</h2>
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
