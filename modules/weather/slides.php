@@ -839,8 +839,8 @@
 		<div class="slider">
 			<div>	<p>In this module you will look at the relationship between the hours of daylight at a place and the air temperature at that place.</p></div>
 			<div>	<p>The map above pinpoints Chicago, Illinois. The table above is the same table you saw before. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
-			<div>	<p>Notice that this time "Average air temperature" and "Hours of daylight" have been highlighted for you.</p></div>
-			<div>	<p>The graph above shows a scatter plot of the "Average air temperature" and "Hours of daylight" variables for the 12 selected dates.</p></div>
+			<div>	<p>Notice that this time Average Air Temperature and Hours of Daylight have been highlighted for you.</p></div>
+			<div>	<p>The graph above shows a scatter plot of the Average Air Temperature and Hours of Daylight variables for the 12 selected dates.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
 			<div>	<p>On the next screen you will have a chance to explore the relationship between the Average Daily Temperature and Hours of Daylight at locations that you choose.</p></div>
