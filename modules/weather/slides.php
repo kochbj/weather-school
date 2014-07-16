@@ -871,8 +871,15 @@
 </div>
 <div id="daylight-air-temperature-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="daylight-air-temperature-intro">
 	<h2>Module Complete</h2>
-	<div class="completed-text">
-		<p> If you're done exploring variables, select the next module you would like to explore from the menu. </p>
+	<div class="guiding-questions">
+		<h2>Quiz Yourself:</h2>	
+		<ul>
+			<li>Describe the relationship between the hours of daylight and the average daily air temperature at a particular location.</li>
+			<li>Is the relationship between the hours of daylight and the average daily air temperature a direct or indirect relationship?</li>
+
+		</ul>
+		<h2>Expand Your Knowledge</h2>	
+		<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
 	</div>
 </div>
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
