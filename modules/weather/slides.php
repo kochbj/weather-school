@@ -2,11 +2,21 @@
 	<h2>Did you ever wonder&#8230;</h2>
 	<ul>
 		<li>Why is it warmer on some days than on other days?</li>
-		<li>Why are some months of the year colder than others?</li>
+		<li>Why some months of the year colder than others?</li>
 		<li>Why is it almost always colder at the North Pole than at the equator?</li>
 	</ul>
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.</p>
+</div>
+<div id="contents-intro" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Table of Contents</h2>
+	<div class="completed-text">
+		<p class="invite"> This website contains a series of interactive modules which will help you explore trends in air temperature caused by different atmospheric and geographic variables. In these activities, you will explore a rich dataset of climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010. 
+</p>
+	<p class="invite"> 
+		Each module begins with a guided activity to illustrate the relationship being taught, followed by an open-ended "Try It" sections. In the "Try It" sectiosn, you can select and analyze your own data by picking a location on Google Maps and choosing a range of dates.
+	<p> 
+	</div>
 </div>
 <div id="contents-1" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
