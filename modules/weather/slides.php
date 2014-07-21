@@ -15,7 +15,9 @@
 <br>
 <br>
 <br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided activity to illustrate the relationship being taught, followed by an open-ended "Try It" sections. In the "Try It" sectiosn, you can select and analyze your own data by picking a location on Google Maps and choosing a range of dates.
+<br> 
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate the relationship being taught, followed by an open-ended <b>Try It</b> sections. In the <b>Try It</b> sections, you can select and analyze your own data by picking a location on Google Maps and choosing a range of dates.
 	<p> 
 	</div>
 </div>
