@@ -8,8 +8,8 @@
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.</p>
 </div>
-<div id="contents-intro" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
-	<h2>Table of Contents</h2>
+<div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Introduction</h2>
 	<div class="completed-text">
 		<p class="invite"> This website contains a series of interactive modules which will introduce you to different factors that can cause trends in air temperature over time. In these activities, you will explore a rich dataset of climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010. 
 </p>
