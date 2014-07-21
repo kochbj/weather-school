@@ -10,11 +10,12 @@
 </div>
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
-	<div class="completed-text">
-		<p class="invite"> This website contains a series of interactive modules which will introduce you to different factors that can cause trends in air temperature over time. In these activities, you will explore a rich dataset of climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010. 
-</p>
-	<p class="invite"> 
-		Each module begins with a guided activity to illustrate the relationship being taught, followed by an open-ended "Try It" sections. In the "Try It" sectiosn, you can select and analyze your own data by picking a location on Google Maps and choosing a range of dates.
+	<div class="intro-text">
+		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website contains a series of interactive modules which will introduce you to different factors that can cause trends in air temperature over time. In these activities, you will explore a rich dataset of climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010.
+<br>
+<br>
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided activity to illustrate the relationship being taught, followed by an open-ended "Try It" sections. In the "Try It" sectiosn, you can select and analyze your own data by picking a location on Google Maps and choosing a range of dates.
 	<p> 
 	</div>
 </div>
