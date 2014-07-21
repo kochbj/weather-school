@@ -30,7 +30,7 @@
 <div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">The first two modules focus on variation over temperature. Module A explores daily temperature changes and module B explores how temperature changes over the course of a year. </p>
+		<p class="invite">The first two modules focus on variation in air temperature over time. Module A explores temperature changes throughout the day, and module B explores temperature changes over the course of a year.</p>
 	</div>
 </div>
 <div id="contents-3" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -42,19 +42,19 @@
 <div id="contents-4" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite"> Modules F and G explore how changes in the height of the sun in the sky throughout the year affect temperature. </p>
+		<p class="invite">Modules F and G explore how air temperature is affected by changes in the height of the sun in the sky throughout the year.</p>
 	</div>
 </div>
 <div id="contents-5" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">Module H looks at the relationship between hours of daylight and latitude. Module I investigates the effects of this relationship on temperature.</p>
+		<p class="invite">Module H looks at the relationship between hours of daylight and latitude, and Module I investigates the effects of this relationship on temperature.</p>
 	</div>
 </div>
 <div id="contents-6" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
-		<p class="invite">The additional data tools tab contains tools for further exploring the climate recording data sets used in these modules. It also includes an interactive astronomical model for users who want to investigate the phenomenological causes for these climate trends.</p>
+		<p class="invite">The Additional Data Tools tab contains tools for further exploring the temperature data used in these modules.</p>
 	</div>
 </div>
 <?php
@@ -86,7 +86,7 @@
 <div id="intro-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Module Complete</h2>
 	<div class="completed-text">
-		<p class="invite"> You have completed the introduction. Hit the next button to continue to the first module or select a different one to explore from the menu. </p>
+		<p class="invite">You have now seen brief introductions to each of the modules in WeatherSchool. Click on the right arrow at the bottom of the page to continue to Module A: Daily Temperature Changes, or select a different module from the menu.</p>
 	</div>
 </div>
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
