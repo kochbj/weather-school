@@ -112,7 +112,10 @@
 				<p>If you hover the mouse over the line on the graph, the date and temperature for each point of the line appear. You can see how much change there is in the average temperature from day to day.</p>
 			</div>
 			<div>
-				<p>Notice that in this example, on April 9, 2000, the average temperature for that day was 43 degrees Fahrenheit. But the day before, on April 8, the average temperature was 65 degrees Fahrenheit. That's a big change in one day. The second part of this module will help you understand how the temperature in a particular location chan change so much from one day to the next. </p>
+				<p>Notice that in this example, on April 9, 2000, the average temperature for that day was 43 degrees Fahrenheit. But the day before, on April 8, the average temperature was 65 degrees Fahrenheit.</p>
+			</div>
+			<div>	
+				<p>That's a big change in one day. The second part of this module will help you understand how the temperature in a particular location can change so much from one day to the next. </p>
 			</div>
 					</div>
 	</div>
