@@ -106,7 +106,7 @@
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints Washington, DC, and the graph shows the <u><i>average daily temperatures</i></u> in Washington, DC from April 1, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
+				<p>The map above pinpoints Washington, DC, and the graph shows the <span class="tooltip" title="The temperature that you see reported for a given day is the average of hte temperature measurements that were taken at that reporting station for that day. Some stations collect air temperature data every hour, and some collect air temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span> in Washington, DC from April 1, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
 			</div>
 			<div>
 				<p>If you hover the mouse over the line on the graph, the date and temperature for each point of the line appear. You can see how much change there is in the average temperature from day to day.</p>
