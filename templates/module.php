@@ -101,7 +101,8 @@
 		</div>
 	</div>
 	<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
-	<div id="login" style="display: none;" title="">
+<?php /*
+<div id="login" style="display: none;" title="">
 		<p>Are you a student using the module in your classroom? Fill in the following information provided by your teacher and click on ENTER to start the module:</p>
 		<form id="student-login">
 			<p>
@@ -118,6 +119,7 @@
 		</form>
 		<hr>
 		<div style="text-align: center;"><a href="#introduction" id="skip-action" class="button">skip this step</a></div>
-	</div>
+		</div>
+ */?>
 </body>
 </html>

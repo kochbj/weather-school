@@ -120,10 +120,11 @@ function cbHeightSunAirTempEx (evt) {
 		console.log(wInstance);
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
-			//for (i=1; i<12; i++) { 
-			//	wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.input input' } ).datepicker( 'setDate' ,  new Date( 1995 , i , 15 ) );
-			//}
-			wInstance.map.date.data( 'value' , [ new Date(1995,1,15) , new Date(1995,2,15) , new Date(1995,3,15) , new Date(1995,4,15) , new Date(1995,5,15) , new Date(1995,6,15) , new Date(1995,7,15) , new Date(1995,8,15) , new Date(1995,9,15) , new Date(1995,10,15) , new Date(1995,11,15) ] );
+			var dateVals=[];
+			for (i=0; i<12; i++) dateVals.push(new Date(2000,i,15));
+			wInstance.map.date.data( 'value', dateVals);
+			
+			//wInstance.map.date.data( 'value' , [ new Date(2000,0,15) , new Date(20,2,15) , new Date(1995,3,15) , new Date(1995,4,15) , new Date(1995,5,15) , new Date(1995,6,15) , new Date(1995,7,15) , new Date(1995,8,15) , new Date(1995,9,15) , new Date(1995,10,15) , new Date(1995,11,15) ] );
 			//wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.input input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 20 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 		} , 1000 );
@@ -900,7 +901,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					date           : { type:'year-month-day-alt' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#height-sun-air-temperature-example-ds' ),
 					displayWidgets : [

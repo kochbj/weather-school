@@ -164,6 +164,178 @@ function dataSelect_instantiate(wInstance) {
 	if (wInstance.settings.date) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
+			case 'year-month-day-alt' :
+				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
+				wInstance.map.date.attr( 'title' , 'No date selected' );
+				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
+				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
+				wInstance.map.date.ui.wInstance = wInstance;
+				
+				//used for closing and opening datepicker
+				var tog = wInstance.map.date.find( '.toggle' );
+				var Dinput= wInstance.map.date.find( '.input input' );
+				_togoutside = function(e) {
+					var ele = $(e.target);
+					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						tog.removeClass('active');
+						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+				 	}
+				};
+				_deactivateDpicker = function () {
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						tog.removeClass( 'active' );
+						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+					};
+				_activateDpicker = function () {
+						tog.addClass( 'active' );
+						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
+						$( '.widget-cover' ).show();
+						$( document ).on('click',_togoutside);
+				};
+				wInstance.map.date.ui.events = {
+					onSelect : function ( value , ui ) {
+						console.log("ONSELECT", value);
+						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
+						var selectedDate = new Date(ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val() != '' ? ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val() : null) ; 
+						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
+						if (typeof(selectedDates) !== 'array' && typeof(selectedDates) !== 'object') {
+							selectedDates = [];
+						}
+						/* Remove the date if it already exists */
+						duplicateDate = false;
+						if (userTouch) {
+						for (i in selectedDates) {
+							if ( selectedDate.getTime() == selectedDates[i].getTime() ) {
+								selectedDates.splice(i,1);
+								duplicateDate = true;
+							}
+						}
+						if (!duplicateDate) {
+							/* Check to see if the max number of dates have been selected and remove the date at the top of the array if so */
+							if (wInstance.settings.date.max && selectedDates.length == wInstance.settings.date.max) {
+								selectedDates.shift();
+							}
+							selectedDates.push(selectedDate);
+						}
+						}
+						// FIXME: add sorting of `selectedDates` and update the display (for multiple date selections)
+						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
+						if (selectedDates.length > 0) {
+							displayStr = '';
+							for (i in selectedDates) {
+								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
+								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
+							}
+						} else {
+							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val( null );
+							wInstance.map.date.attr( 'title' , 'No date selected' );
+						}
+						ui.dpDiv.parent().datepicker( 'refresh' );
+						_deactivateDpicker();
+						wInstance._callback({type:'user-select-date'});
+					} ,
+					beforeShowDay : function ( dateObj ) {
+						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
+						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
+						var testDate = new Date();
+						for (i in selectedDates) {
+							/* Enable date so it can be deselected. Set style to be highlighted. */
+							testDate.setTime( selectedDates[i].getTime() );
+							//testDate.setFullYear( 1995 );
+							if ( dateObj.getTime() == testDate.getTime() ) {
+								return [true,"selected"];
+							}
+						}
+						/* Dates not in the array are left enabled, but with no extra style */
+						return [true, ""];
+					}
+				}
+				var userTouch = false;
+				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
+					altField        : wInstance.map.date.find( '.input input' ) ,
+					altFormat       : 'yy M dd' ,
+					changeMonth     : true ,
+					changeYear      : true ,
+					showButtonPanel : false ,
+					defaultDate     : new Date( 2000 , 0 , 1 ) ,
+					//minDate         : new Date( 1995 , 0 , 1 ) ,
+					//maxDate         : new Date( 1995 , 11 , 31 ) ,
+					onSelect        : wInstance.map.date.ui.events.onSelect ,
+					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
+				});
+				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
+				wInstance.map.date.ui.dpDiv.hide();
+				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
+					var elInput = $( this );
+					console.log("CHANGE EVENT", elInput);
+					if ( elInput.val() == '' ) {
+						wInstance.map.date.data( 'value' , [] );
+						wInstance.map.date.attr( 'title' , 'No date selected' );
+						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
+					}
+					var usrDate = aaasClimateViz.dateParser( elInput.val() );
+					if ( usrDate !== false ) {
+						usrDate = new Date( usrDate );
+						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
+						dpDiv.datepicker( 'setDate' , usrDate );
+						if ( elInput.val() == '' ) {
+							wInstance.map.date.data( 'value' , [] );
+							dpDiv.datepicker( 'refresh' );
+						}
+						dpDiv.datepicker( 'setDate' , usrDate );
+						var selectedDates = elInput.parents('.widget.dataSelect .map-date').data('value');
+						for (i in selectedDates) {
+							if ( usrDate.getTime() == selectedDates[i].getTime() ) {
+								return;
+							}
+						}
+					wInstance.map.date.ui.events.onSelect.call(
+							dpDiv[0] ,
+							$.datepicker.formatDate( 'mm/dd/yy' , usrDate ) ,
+							{
+								input					:	dpDiv,
+								selectedDay   : usrDate.getDate() ,
+								selectedMonth : usrDate.getMonth() ,
+								dpDiv         : dpDiv.find( 'div.ui-datepicker-inline' ) 
+							}
+					);
+					}
+				} );
+				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
+				//controlling open and closing toggle
+				tog.click( function ( evt ) {
+					if ( $( this ).hasClass( 'active' ) ) {
+						_deactivateDpicker();
+					}
+					else {
+						_activateDpicker();
+					}
+				});
+				Dinput.keydown( function ( evt ) {
+					 var keycode = (evt.keyCode ? evt.keyCode : evt.which);
+					 if(keycode == '13'){
+						_deactivateDpicker(); 
+						 $( this ).blur();
+					 }
+				} )
+					.focus( function ( evt ) {
+						userTouch=true;
+						$( this ).autogrow( );
+						_activateDpicker();
+						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , selectedDate );
+					} )
+					.blur( function ( evt ) {
+						$( this ).autogrow( );
+					} );
+				wInstance.map.date.find( '.input input' ).val( '' );
+				break;
 			case 'month-day' :
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
@@ -177,7 +349,6 @@ function dataSelect_instantiate(wInstance) {
 				_togoutside = function(e) {
 					var ele = $(e.target);
 					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
-						console.log("Clicked outside!");
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
@@ -188,7 +359,6 @@ function dataSelect_instantiate(wInstance) {
 				_deactivateDpicker = function () {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
-						console.log("clickoutside OFF");
 						tog.removeClass( 'active' );
 						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
@@ -346,7 +516,6 @@ function dataSelect_instantiate(wInstance) {
 					var ele = $(e.target);
 		
 					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(e.data.toggle) && !ele.is(e.data.toggle.parent().find('input')) ){
-						console.log("Clicked outside!");
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						e.data.toggle.removeClass('active');
@@ -360,7 +529,6 @@ function dataSelect_instantiate(wInstance) {
 				_deactivateDpicker = function (tog,tog2) {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
-						console.log("clickoutside OFF");
 						tog.removeClass( 'active' );
 						//tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
 						tog.parent().removeClass('active');
@@ -380,7 +548,6 @@ function dataSelect_instantiate(wInstance) {
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
 						$( '.widget-cover' ).show();
 						$( document ).on('click',{ toggle: tog}, _togoutside);
-						console.log("clickoutside ON");
 						tog.parent().addClass('active');
 				};
 				
@@ -915,12 +1082,10 @@ function refreshStations ( evt ) {
 					this.infowindow.close();
 				});
 				google.maps.event.addListener( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' , function() {
-					console.log(this);
 					//FIXME: need to track if the user has selected more stations than allowed
 					if ( wInstance.settings.maxStations && wInstance.settings.maxStations == 1 ) {
 						for ( j in wInstance.markers[servermsg[0].mid].stations ) {
 							wInstance.markers[servermsg[0].mid].stations[j].marker.active = false;
-							console.log(servermsg);
 							wInstance.markers[servermsg[0].mid].stations[j].marker.setOptions( { icon : { path : google.maps.SymbolPath.CIRCLE , fillColor : 'yellow' , fillOpacity : 1 , strokeWeight : 1 , scale: 5 } } );
 							delete wInstance.data[j];
 						}
@@ -1366,7 +1531,6 @@ function fetchStats( evt ) {
 	}
 	
 	// FIXME: we should first generate simulated data, then retrieve the actual data so that the site dashboard is filled out quickly
-	console.log(this.map.date.data('value'));
 	for (mid in this.markers) {
 		this.data[mid] = {seriesMeta:{},dataMeta:{},data:[]};
 		for (idxDoty in this.map.date.data('value')) {
