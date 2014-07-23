@@ -248,7 +248,7 @@
 		</div>
 	</div>
 </div>
-<div id="annual-temperature-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Charting Temperatures" data-slide-parent-id="annual-temperature-intro">
+<div id="annual-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Charting Temperatures" data-slide-parent-id="annual-temperature-intro">
 	<div class="header">
 		<h2>Try It: Chart Temperature</h2>
 	</div>
@@ -362,7 +362,7 @@
 		</div>
 	</div>
 </div>
-<div id="temperature-lat-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Temperature versus Latitude" data-slide-parent-id="temperature-lat-intro">
+<div id="temperature-lat-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Temperature versus Latitude" data-slide-parent-id="temperature-lat-intro">
 	<div class="header">
 		<h2>Try It: Temperature versus Latitude</h2>
 	</div>
@@ -443,7 +443,7 @@
 		</div>
 	</div>
 </div>
-<div id="temperature-elevation-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
+<div id="temperature-elevation-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
 	<div class="header">
 		<h2>Try It: Temperature versus Elevation</h2>
 	</div>
@@ -531,7 +531,7 @@
 		</div>
 	</div>
 </div>
-<div id="temperature-water-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Exploring Temperature &amp; Large Bodies of Water" data-slide-parent-id="temperature-water-intro">
+<div id="temperature-water-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Exploring Temperature &amp; Large Bodies of Water" data-slide-parent-id="temperature-water-intro">
 	<div class="header">
 		<h2>Try It: Temperature and Large Bodies of Water</h2>
 	</div>
@@ -623,7 +623,7 @@
 		</div>
 	</div>
 </div>
-<div id="height-sun-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Height of the Sun in the Sky" data-slide-parent-id="height-sun-intro">
+<div id="height-sun-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Height of the Sun in the Sky" data-slide-parent-id="height-sun-intro">
 	<div class="header">
 		<h2>Try It: Height of the Sun in the Sky</h2>
 	</div>
@@ -683,7 +683,7 @@
 		</div>
 	</div>
 </div>
-<div id="height-sun-air-temperature-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
+<div id="height-sun-air-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
 		<h2>Try It: Height of the Sun in the Sky and Air Temperature</h2>
 	</div>
@@ -806,7 +806,7 @@
 		</div>
 	</div>
 </div>
-<div id="daylight-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Exploring Daylight" data-slide-parent-id="daylight-intro">
+<div id="daylight-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Exploring Daylight" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Exploration</h2>
 	</div>
@@ -865,7 +865,7 @@
 		</div>
 	</div>
 </div>
-<div id="daylight-air-temperature-explore" class="activity" data-slide-type="normal" data-slide-title="Try It: Hours of Daylight and Air Temperature" data-slide-parent-id="daylight-air-temperature-intro">
+<div id="daylight-air-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Hours of Daylight and Air Temperature" data-slide-parent-id="daylight-air-temperature-intro">
 	<div class="header">
 		<h2>Try It: Hours of Daylight and Air Temperature</h2>
 	</div>
