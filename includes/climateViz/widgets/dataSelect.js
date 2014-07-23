@@ -1366,6 +1366,7 @@ function fetchStats( evt ) {
 	}
 	
 	// FIXME: we should first generate simulated data, then retrieve the actual data so that the site dashboard is filled out quickly
+	console.log(this.map.date.data('value'));
 	for (mid in this.markers) {
 		this.data[mid] = {seriesMeta:{},dataMeta:{},data:[]};
 		for (idxDoty in this.map.date.data('value')) {
