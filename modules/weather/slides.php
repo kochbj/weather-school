@@ -2,7 +2,7 @@
 	<h2>Did you ever wonder&#8230;</h2>
 	<ul>
 		<li>Why is it warmer on some days than on other days?</li>
-		<li>Why some months of the year colder than others?</li>
+		<li>Why some months of the year are colder than others?</li>
 		<li>Why is it almost always colder at the North Pole than at the equator?</li>
 	</ul>
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
@@ -25,7 +25,7 @@
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
 		<p class="invite"> These modules and acivities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner.</p>
-	</div>
+	</div>				<p>The next five screens provide brief descriptions of the themes of each of the modules.</p>
 </div>
 <div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
