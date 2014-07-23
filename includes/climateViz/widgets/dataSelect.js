@@ -164,7 +164,8 @@ function dataSelect_instantiate(wInstance) {
 	if (wInstance.settings.date) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
-			case 'year-month-day-alt' :
+			case 'year-month-day-restricted' :
+			case 'year-month-day' :
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
@@ -229,7 +230,8 @@ function dataSelect_instantiate(wInstance) {
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
+								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ', ';
+								wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'Selected: '+displayStr );
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val('(Hover to See)');
@@ -309,7 +311,7 @@ function dataSelect_instantiate(wInstance) {
 					}
 				} );
 				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
-				//controlling open and closing toggle
+				if (wInstance.settings.date.type == 'year-month-day-range-double') {	
 				tog.click( function ( evt ) {
 					if ( $( this ).hasClass( 'active' ) ) {
 						_deactivateDpicker();
@@ -335,6 +337,7 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
+				} else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
 				wInstance.map.date.find( '.input input' ).val( '' );
 				break;
 			case 'month-day' :
