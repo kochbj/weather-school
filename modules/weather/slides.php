@@ -25,7 +25,8 @@
 	<h2>Table of Contents</h2>
 	<div class="completed-text">
 		<p class="invite"> These modules and acivities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner.</p>
-	</div>				<p>The next five screens provide brief descriptions of the themes of each of the modules.</p>
+		<p>The next five screens provide brief descriptions of the themes of each of the modules.</p>
+	</div>
 </div>
 <div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
