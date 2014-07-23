@@ -232,7 +232,7 @@ function dataSelect_instantiate(wInstance) {
 								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
 								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
-							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val( $.datepicker.formatDate( 'yy M dd' , selectedDates.pop() )  );
+							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val('(Hover to See)');
 						} else {
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val( null );
 							wInstance.map.date.attr( 'title' , 'No date selected' );
