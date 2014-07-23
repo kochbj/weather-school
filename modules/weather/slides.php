@@ -106,13 +106,13 @@
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints Washington, DC. The graph above shows the <u><i>average daily temperatures</i></u> in Washington, DC from March 3, 2000 to March 23, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
+				<p>The map above pinpoints Washington, DC, and the graph shows the <u><i>average daily temperatures</i></u> in Washington, DC from April 1, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
 			</div>
 			<div>
 				<p>If you hover the mouse over the line on the graph, the date and temperature for each point of the line appear. You can see how much change there is in the average temperature from day to day.</p>
 			</div>
 			<div>
-				<p>Notice that in this example, on March 18, 2000, the average temperature for that day was 35 degrees Fahrenheit. But the day before, on March 17, the average temperature was 52 degrees Fahrenheit. That's a big change in one day. The second part of this module will help you understand how the temperature in a particular location chan change so much from one day to the next. </p>
+				<p>Notice that in this example, on April 9, 2000, the average temperature for that day was 43 degrees Fahrenheit. But the day before, on April 8, the average temperature was 65 degrees Fahrenheit. That's a big change in one day. The second part of this module will help you understand how the temperature in a particular location chan change so much from one day to the next. </p>
 			</div>
 					</div>
 	</div>
