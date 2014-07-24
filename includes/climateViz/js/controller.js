@@ -76,7 +76,7 @@ var aaasClimateViz = aaasClimateViz || {
 	widgetLibrary : {
 		'dataSelect':{
 			'__prototype' : {
-				data : {}, 
+				data : {},
 				settings : { callbacks : [] },
 				type : 'dataSelect'
 			},

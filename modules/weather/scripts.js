@@ -121,7 +121,6 @@ function cbHeightSunAirTempEx (evt) {
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
 			var dateVals=[];
-			wInstance.map.date.data('hidden',false);
 			for (i=0; i<12; i++) dateVals.push(new Date(2000,i,15));
 			wInstance.map.date.data( 'value', dateVals);
  			wInstance.map.date.ui.find('.ui-state-active').click();
@@ -252,7 +251,11 @@ function cbDailyTempEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.data('value',[[new Date( 1999 , 3 , 1 ),new Date( 2001 , 3 , 25 )]]);
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 1999 , 3 , 1 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2003 , 3 , 25 ) );
+		//total hack because of the filter thing
+		console.log(wInstance);
+		//wInstance.map.date.find('.date-start input' ).val('2003');
  		wInstance.map.date.ui.find('.ui-state-active').click();
 	} , 1000 );
 	}
@@ -341,8 +344,8 @@ function cbTempLatNorthern ( evt ) {
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 49.886083,-97.152921 ), staticmap: true } );
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 29.461029,-98.697739 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2001 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2001 , 11 , 30 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 	} , 1000 );
 	}
@@ -600,24 +603,24 @@ var slideInit = {
 							{
 								tooltip   : { position:'fixed' , detail:'short' } ,
 								container : $( '#daily-temperature-example-tc' ),
-								//Need to select larger range for annual temperature. Filter then reduces this for daily.
 								filter : function ( data ) {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
-									var DailyDateStart = new Date( 2000, 3, 1 );
-									var DailyDateEnd = new Date( 2000, 3, 25 );
+									var testDateStart = new Date( wInstance.map.date.data('value')[0][0].valueOf( ) );
+									var testDateStart = new Date( 2000, 3, 1 );
+									//if ( testDateStart && wInstance.settings.date.range ) { testDateStart.setFullYear( testDateStart.getFullYear() - 1 ); }
+									//var testDateEnd = new Date( wInstance.map.date.data('value')[0][1].valueOf( ) );
+									var testDateEnd = new Date( 2000, 3, 25 );
+									//if ( testDateEnd && wInstance.settings.date.range ) { testDateEnd.setFullYear( testDateEnd.getFullYear() + 1 ); }
 									filteredData = {};
 									for ( dataID in data ) {
 										filteredData[dataID] = { data:[] , dataMeta:data[dataID].dataMeta , seriesMeta:data[dataID].seriesMeta };
 										for ( i in data[dataID].data ) {
-											if ( data[dataID].data[i].date_recorded >= DailyDateStart && data[dataID].data[i].date_recorded <= DailyDateEnd ) {
+											if ( data[dataID].data[i].date_recorded >= testDateStart && data[dataID].data[i].date_recorded <= testDateEnd ) {
 												filteredData[dataID].data.push( data[dataID].data[i] );
 											}
 										}
 									}
 									// http://stackoverflow.com/questions/1669190/javascript-min-max-array-values
-									//Visually reset datepicker to these dates
-									wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  DailyDateStart);
-									wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  DailyDateEnd );
 									return filteredData;
 								}
 							}
