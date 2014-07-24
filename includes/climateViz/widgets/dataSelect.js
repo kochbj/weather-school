@@ -162,6 +162,7 @@ function dataSelect_instantiate(wInstance) {
 	
 	wInstance.map.date = wInstance.settings.container.find('.map-date');
 	wInstance.map.date.data('hidden',true); 
+	wInstance.map.date.data('value',[]); 
 	if (wInstance.settings.date) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
@@ -559,6 +560,9 @@ function dataSelect_instantiate(wInstance) {
 					onSelect : function (value,ui) {
 						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
 						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
+						console.log($( this ).parents( '.map-date' ));
+						console.log(wInstance.map.date);
+						conole.log(ui.dpDiv.parents( '.map-date' ));
 						if (wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
@@ -588,8 +592,7 @@ function dataSelect_instantiate(wInstance) {
 							wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 						}
 						ui.dpDiv.parents( '.map-date' ).find( '.datepicker' ).datepicker( 'refresh' );
-						ui.dpDiv.parents( '.map-date' ).find( '.date-start input' ).autogrow( );
-						ui.dpDiv.parents( '.map-date' ).find( '.date-end input' ).autogrow( );
+						ui.dpDiv.parents( '.map-date' ).find( '.input input' ).autogrow( );
 						if (!wInstance.map.date.data('hidden')) {
 							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , startDate);
 							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  endDate) ;
