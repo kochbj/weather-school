@@ -1,5 +1,5 @@
 .widget.output-table {
-    width: 95%;
+    width: 100%;
     margin: auto;
     position: relative;
 }
@@ -63,3 +63,5 @@
 	left: 0px;
     min-height: 200px;
 }
+.widget.output-table .tooltip { border-bottom: 1px dashed #003333; cursor: help; }
+

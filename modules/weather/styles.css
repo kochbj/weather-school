@@ -44,6 +44,12 @@
 .workarea .full-ds { left: 0px; right: 0px; }
 .workarea .full-tc { right: 0px; left: 100%; width:64% !important; display: none;}
 
+.workarea .split-tb { right: 0px; left: 36%; width: 64% !important; bottom: 50% !important; top: 0px !important; border-bottom:1px dashed grey;}
+.workarea .split-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
+.workarea .split-tc { right: 0px; left: 36%; width: 64% !important; top: 50% !important; bottom: 0px !important;}
+
+}
+
 #daily-temperature-intro {background-image: url(assets/introduction/Wind_olive.jpg);}
 #annual-temperature-intro {background-image: url(assets/introduction/Seasons2010.jpg);}
 #temperature-lat-intro {background-image: url(assets/introduction/Rj_north_york_moors.jpg);}
@@ -87,9 +93,9 @@
 //#height-sun-explore #height-sun-explore-ds { left: 0px; right: 0px; }
 //#height-sun-explore #height-sun-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
 
-#height-sun-air-temperature-example #height-sun-air-temperature-example-ds { left: 0px; right: 0px; }
-#height-sun-air-temperature-example #height-sun-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
-#height-sun-air-temperature-example #height-sun-air-temperature-example-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+//#height-sun-air-temperature-example #height-sun-air-temperature-example-ds { left: 0px; right: 0px; }
+//#height-sun-air-temperature-example #height-sun-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+//#height-sun-air-temperature-example #height-sun-air-temperature-example-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
 
 #height-sun-air-temperature-explore #height-sun-air-temperature-explore-ds { left: 0px; right: 0px; width: 36%}
 #height-sun-air-temperature-explore #height-sun-air-temperature-explore-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }

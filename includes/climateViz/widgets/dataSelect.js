@@ -168,7 +168,10 @@ function dataSelect_instantiate(wInstance) {
 			case 'year-month-day-restricted' :
 			case 'year-month-day' :
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date(s): </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
+				wInstance.map.date.addClass('tooltip');
+				wInstance.settings.container.find('.calendar-cover').addClass('tooltip');	
 				wInstance.map.date.attr( 'title' , 'No date selected' );
+				
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
@@ -864,7 +867,7 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
-	
+	$( '.tooltip' ).tooltip( { } );	
 	wInstance._callback({'type':'initialize'});
 }
 
@@ -1545,7 +1548,7 @@ function fetchStats( evt ) {
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficient.
 	this.data = {};
-	
+	console.log("FETCHSTATSCALLED");	
 	this._callback({type:'data-load'});
 	for (i in this.settings.displayWidgets) {
 		this.settings.displayWidgets[i].notify('loading');
@@ -1658,6 +1661,8 @@ function fetchStatsAjax ( evt ) {
 				seriesMeta : {
 					series : mid+'-'+aaasClimateViz.dateParser(servermsg.query.doty),
 					label : aaasClimateViz.widgets[widgetIndex].markers[mid].name,
+					lat : Math.abs(Math.round( parseFloat(servermsg.query.lat) * 10 ) / 10 ) + '°' + ( parseFloat(servermsg.query.lat) < 0 ? 'S' : 'N' ),
+					lng : Math.abs( Math.round( parseFloat(servermsg.query.lng) * 10 ) / 10 )+ '°' + ( parseFloat(servermsg.query.lng) < 0 ? 'W' : 'E' ),
 					seriesSort : function (a,b) { return 0; },
 					dataSort : function (a,b) { return a.date.getTime()-b.date.getTime(); } ,
 					color : aaasClimateViz.widgets[widgetIndex].markers[mid].color
@@ -1666,17 +1671,18 @@ function fetchStatsAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'MM d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
+				date : { type : 'datetime' , label : 'Date' , labelShort : 'Date' , format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy-M-d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
-				lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
-				lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
+				//lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
+				//lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
 				tempavg : { type : 'float' , label : 'Average air temperature' , labelShort : 'Avg Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
-				tempmin : { type : 'float' , label : 'Average low temperature' , labelShort : 'Avg Lo Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
-				tempmax : { type : 'float' , label : 'Average high temperature' , labelShort : 'Avg Hi Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F' ; } },
-				sunAngle : { type : 'float' , label : 'Maximum height of the sun in the sky' , labelShort : 'Max Sun Angle' , range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
+				//tempmin : { type : 'float' , label : 'Average low temperature' , labelShort : 'Avg Lo Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
+				//tempmax : { type : 'float' , label : 'Average high temperature' , labelShort : 'Avg Hi Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F' ; } },
+				sunAngle : { type : 'float' , label : 'Max height of sun in sky' , labelShort : 'Max Sun Angle' , range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
 				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hrs Light' , range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + ' hours'; } },
-				sunEnergy : { type : 'float' , label : 'Energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' Watt-hours per meter<sup>2</sup> per day' ); } },
-				sunEnergyT : { type : 'float' , label : 'Energy from the sun (theoretical)' , labelShort : 'Avg Sun Energy (T)' , range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' Watt-hours per meter<sup>2</sup> per day'; } },
+				//sunEnergy : { type : 'float' , label : 'Energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' Watt-hours per meter<sup>2</sup> per day' ); } },
+				sunEnergy : { type : 'float' , label : 'Energy from sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' kWh/m<sup>2</sup>/d' ); } },
+				sunEnergyT : { type : 'float' , label : 'Energy from sun (theoretical)' , labelShort : 'Avg Sun Energy (T)' , range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' kWh/m<sup>2</sup>/d'; } },
 				sunImage : { type : 'string' , label : 'How the sun appears at its highest point' , labelShort : 'Sun Appearance' , format : function ( val ) { return '<img src="' + val + '" />'; } }
 			};
 			if (aaasClimateViz.widgets[widgetIndex].settings.data.fields && aaasClimateViz.widgets[widgetIndex].settings.data.fields.length > 0) {
@@ -1719,12 +1725,12 @@ function fetchStatsAjax ( evt ) {
 					case 'tempavg' :
 						dataVal.tempavg = parseFloat( servermsg.results[0].station.temp_avg );
 						break;
-					case 'tempmin' :
+					/*case 'tempmin' :
 						dataVal.tempmin = parseFloat( servermsg.results[0].station.temp_min );
 						break;
 					case 'tempmax' :
 						dataVal.tempmax = parseFloat( servermsg.results[0].station.temp_max );
-						break;
+						break;*/
 					case 'sunAngle' :
 						dataVal.sunAngle = parseFloat( sunInfo.output_altitude );
 						break;

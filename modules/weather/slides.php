@@ -668,9 +668,9 @@
 		<h2>Example: Height of the Sun in the Sky and Air Temperature</h2>
 	</div>
 	<div class="workarea">
-		<div id="height-sun-air-temperature-example-ds" ></div>
-		<div id="height-sun-air-temperature-example-tb"></div>
-		<div id="height-sun-air-temperature-example-tc"></div>
+		<div id="height-sun-air-temperature-example-ds" class="restricted-ds"></div>
+		<div id="height-sun-air-temperature-example-tb" class="split-tb"></div>
+		<div id="height-sun-air-temperature-example-tc" class="split-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">

@@ -119,7 +119,7 @@ function cbHeightSunAirTempEx (evt) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		console.log(wInstance);
 		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ) } );
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
 			var dateVals=[];
 			wInstance.map.date.data('hidden',false);
 			for (i=0; i<12; i++) dateVals.push(new Date(2000,i,15));
@@ -917,7 +917,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunAirTempEx, cbRelationSunEnergy ]
+					callbacks : [ cbHeightSunAirTempEx ]
 				}
 			);
 		}

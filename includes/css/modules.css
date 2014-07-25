@@ -129,6 +129,7 @@ textarea { width: 95%; height: 4em; }
 .child.activity .widget.statspanel .sunAngle img { max-width: 175px; max-height: 185px; }
 .child.activity .widget.linechart { width: 100%; max-height: none; }
 
+
 .tooltip { border-bottom: 1px dashed #003333; cursor: help; }
 
 .ui-widget-overlay {
