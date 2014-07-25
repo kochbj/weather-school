@@ -9,7 +9,7 @@
   text-align: center;
   width: auto;
 }
-
+.widget.dataSelect .tooltip {font-size:8pt;}
 .widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
 .widget.dataSelect .calendar-cover { height: 36px; width: 100%; background-color: transparent; display: none; z-index: 100; bottom: 0; left: 0; position: absolute; cursor:not-allowed;}
 .widget.dataSelect .map-canvas { height: 400px; width: 100%; }
