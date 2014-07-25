@@ -61,7 +61,7 @@
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control {
   position: absolute;
   font-size: 80%;
-  overflow: auto;
+  overflow: none;
   bottom: 25px;
   box-shadow: 0px 0px 2px gray;
   right: 2px;
