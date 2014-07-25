@@ -16,7 +16,8 @@
     cursor: pointer;
 }
 .widget.output-table > table td {
-    padding: .25em;
+    min-width: 75px;
+		padding: .25em;
     border: 1px solid #333333;
 }
 

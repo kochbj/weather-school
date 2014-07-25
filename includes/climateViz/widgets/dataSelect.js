@@ -168,10 +168,8 @@ function dataSelect_instantiate(wInstance) {
 			case 'year-month-day-restricted' :
 			case 'year-month-day' :
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date(s): </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
-				wInstance.map.date.addClass('tooltip');
-				wInstance.settings.container.find('.calendar-cover').addClass('tooltip');	
+				wInstance.settings.date.type == 'year-month-day-range-double-restricted' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
 				wInstance.map.date.attr( 'title' , 'No date selected' );
-				
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
@@ -867,7 +865,8 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
-	$( '.tooltip' ).tooltip( { } );	
+	$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-15" } } );	
+	$( '.Dstooltip' ).tooltip( "close" );
 	wInstance._callback({'type':'initialize'});
 }
 
