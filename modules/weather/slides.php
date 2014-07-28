@@ -142,8 +142,8 @@
 	<div class="guiding-questions">
 	<h2>Quiz Yourself:</h2>	
 	<ul>
-		<li>Does the average daily temperature of a particular location change in a pattern that is noticeable over a one week period?</li>
-		<li>Describe the effect of the movement of large air masses on daily temperature patterns.</li>
+		<li>Does the average temperature at a place change from day to day in a regular pattern or are there both up and down changes from day to day?</li>
+		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
 	<h2><br><br>Expand Your Knowledge</h2>	
 	<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
