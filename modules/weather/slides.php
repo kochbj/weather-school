@@ -12,13 +12,13 @@
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
 	<div class="intro-text">
-		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website contains a series of interactive modules which will introduce you to different factors that effect trends in air temperature. You will learn how solar pattern affect air temperature over time and how geographic variables can influence air temperature at any given location. In these activities, you will explore a rich dataset of climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010.
+		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website contains a series of interactive modules which introduce you to factors that effect trends in air temperature. You will learn how solar patterns affect air temperature over time, and how geographic variables can influence air temperature at any given location. In these activities, you will explore a rich dataset of daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010.
 <br>
 <br>
 <br> 
 <br> 
 <br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> sections. In the <b>Try It</b> sections, you can further explore these patterns by picking different locations in Google Maps and choosing your own dates.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.
 	<p> 
 	</div>
 </div>
