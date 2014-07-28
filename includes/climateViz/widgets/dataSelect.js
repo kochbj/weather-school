@@ -1143,9 +1143,9 @@ function refreshStations ( evt ) {
 					//google.maps.event.clearListeners(wInstance.map, 'click');
 					//wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true});
 				}
+			wInstance.map.setZoom(5);
 			}
 	} );
-wInstance.map.setZoom(5);
 }
 function removeLocation ( markerID , wInstance ) {
 	removeStations( markerID , wInstance );
