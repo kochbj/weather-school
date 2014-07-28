@@ -444,6 +444,9 @@
 			<div>
 				<p>What do you notice about the graph of the temperatures at the two locations? You should see that the place at the higher elevation has lower temperatures throughout the year.</p>
 			</div>
+			<div>
+				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to lower elevations nearby.</p>
+			</div>
 		
 		</div>
 	</div>
@@ -458,9 +461,7 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>
-				<p>Now you can try to find other locations around the world where you can observe the effect of elevation on temperature.</p>
-			</div>
+			
 			<div>
 				<p>Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
