@@ -533,7 +533,7 @@
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. As long as the water isn't frozen, the water makes the air above it warmer than it would otherwise be in the winter, and it makes the air above it cooler than it would otherwise be in the summer. Being closer to water also makes the difference between high and low temperatures smaller than if you were farther from the water.</p>
 			</div>
 			<div>
-				<p>You will now have a chance to observe the effect of proximity to a large bodies of water on temperature. See if other locaitons near large bodies of water experience cooler summers and warmer winters compared to nearby locations further inland.</p>
+				<p>You will now have a chance to observe the effect of proximity to a large bodies of water on temperature at locations of your choosing. See if other locaitons near large bodies of water experience cooler summers and warmer winters compared to nearby locations further inland.</p>
 			</div>
 			
 		</div>
@@ -624,7 +624,7 @@
 			<div>
 				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
 			</div>
-			<div>	<p>On the next screen you will have the chance to observe the height of the sun in the sky for a location that you choose.</p>
+			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky at locations and dates of your choosing. See if other locations in the United States have similar annual sun patterns compared to New York City.</p>
 			</div>
 		</div>
 	</div>
@@ -685,7 +685,7 @@
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
 			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler.</p></div>
-			<div><p>On the next screen you will have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
+			<div><p>You will now have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a direct relationship between the maximum angle of the sun in teh sky and average daily temperature in other locations.</p></div>
 		</div>
 	</div>
 </div>
