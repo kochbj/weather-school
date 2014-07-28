@@ -1010,6 +1010,7 @@ function refreshStations ( evt ) {
 	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
 	// TODO: implement station removal as a separate callback routine?
 	removeStations( evt.data.marker.id , this );
+	
 	var date_ranges_selection , date_ranges_array = [];
 	if ( this.map.date && ( date_ranges_selection = this.map.date.data( 'value' ) ) ) {
 		for ( date_ranges_selection_index in date_ranges_selection ) {
@@ -1037,6 +1038,7 @@ function refreshStations ( evt ) {
 		date_ranges_array[i].end = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].end ) + ' ' + date_ranges_array[i].end.toLocaleTimeString();
 	}
 	var canSelectStation = ( ('maxStations' in this.settings) && this.settings.maxStations > 0 );
+	//wInstance.map.setZoom(5);
 	var query = {
 		mid          : evt.data.marker.id,
 		lat          : evt.data.marker.getPosition().lat(),
