@@ -134,7 +134,27 @@ function cbHeightSunAirTempEx (evt) {
 	}
 }
 
-
+function cbDaylightAirTempEx (evt) {
+	if ( !evt ) { evt = { type : null }; }
+	var wInstance = this;
+	if ( evt.type == 'initialize' ) {
+		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+		console.log(wInstance);
+		setTimeout( function ( ) {
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 41.87 , -87.61 ), staticmap:true } );
+			var dateVals=[];
+			wInstance.map.date.data('hidden',false);
+			for (i=0; i<12; i++) dateVals.push(new Date(2000,i,15));
+			wInstance.map.date.data( 'value', dateVals);
+ 			wInstance.map.date.ui.find('.ui-state-active').click();
+		} , 1000 );
+		setTimeout( function() {
+			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
+			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunHours']);
+			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
+			}, 15000	);
+	}
+}
 
 
 function cbRelationSunEnergy ( evt ) {
@@ -186,6 +206,7 @@ function cbRelationSunEnergy ( evt ) {
 		this.settings.displayStatus = 'map';
 	}
 }
+
 function mapXvis ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
@@ -208,6 +229,12 @@ function mapXvis ( evt ) {
 			.animate( { left:'36%' } , 1000 , 'swing',function() {
 					wInstance.map.setCenter(mapCenter);
 			});
+		if (typeof( this.settings.displayWidgets[0].settings.displayWidgets ) != 'undefined'  && this.settings.displayWidgets[0].settings.displayWidgets.length==1 ) {
+			this.settings.displayWidgets[0].settings.displayWidgets[0].settings.container
+			.show()
+			.animate( { left:'36%' } , 1000 , 'swing' );
+			console.log(this.settings.displayWidgets[0].settings);
+		}
 		this.settings.displayStatus = 'vis';
 	} else if ( evtType == 'initialize' ) {
 		this.settings.displayStatus = 'map';
@@ -927,7 +954,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					date           : { type:'year-month-day' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#height-sun-air-temperature-explore-ds' ),
 					displayWidgets : [
@@ -949,7 +976,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbRelationSunEnergy ]
+					callbacks : [ mapXvis ]
 				}
 			);
 		}
@@ -1082,7 +1109,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					date           : { type:'year-month-day-restricted' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#daylight-air-temperature-example-ds' ),
 					displayWidgets : [
@@ -1104,7 +1131,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbRelationSunEnergy ]
+					callbacks : [ cbDaylightAirTempEx ]
 				}
 			);
 		}
@@ -1116,7 +1143,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
+					date           : { type:'year-month-day' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#daylight-air-temperature-explore-ds' ),
 					displayWidgets : [
@@ -1138,7 +1165,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbRelationSunEnergy ]
+					callbacks : [ mapXvis ]
 				}
 			);
 		}
