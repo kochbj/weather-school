@@ -248,7 +248,7 @@
 				<p>Look closely to see if you can locate some other differences and think about why they might occur.</p>
 			</div>
 			<div>
-				<p>On the next screen you will have a chance to observe more patterns in the air temperature at a location that you choose.</p>
+				<p>You will now have a chance to observe annual tempearture patterns at locations and dates of your choosing. See if other locations in the United States have similar patterns to the pattern you just observed.</p>
 			</div>
 		</div>
 	</div>
