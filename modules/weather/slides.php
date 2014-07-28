@@ -283,6 +283,7 @@
 	<h2>Quiz Yourself:</h2>	
 	<ul>
 		<li>For most places in the United States, does the average daily temperature change in a consistent pattern throughout the year? If so, describe the pattern.</li>
+		<li>For most places in the United States, is the pattern of average daily temperature exactly the same from year to year?</li>
 	</ul>
 	<h2><br><br>Expand Your Knowledge</h2>	
 	<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
