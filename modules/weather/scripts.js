@@ -149,8 +149,8 @@ function cbDaylightAirTempEx (evt) {
  			wInstance.map.date.ui.find('.ui-state-active').click();
 		} , 1000 );
 		setTimeout( function() {
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunHours']);
+			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
 			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
 			}, 15000	);
 	}
