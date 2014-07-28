@@ -1010,7 +1010,6 @@ function refreshStations ( evt ) {
 	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
 	// TODO: implement station removal as a separate callback routine?
 	removeStations( evt.data.marker.id , this );
-	
 	var date_ranges_selection , date_ranges_array = [];
 	if ( this.map.date && ( date_ranges_selection = this.map.date.data( 'value' ) ) ) {
 		for ( date_ranges_selection_index in date_ranges_selection ) {
@@ -1143,7 +1142,6 @@ function refreshStations ( evt ) {
 					//google.maps.event.clearListeners(wInstance.map, 'click');
 					//wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true});
 				}
-			wInstance.map.setZoom(5);
 			}
 	} );
 }
