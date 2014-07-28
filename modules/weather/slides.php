@@ -264,12 +264,14 @@
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<ol>
-					<li><p>Choose a place on the map. Choose a range of dates that covers more than just a single year. You can make the range of dates up to five years long.</p></li>
-					<li><p>Observe the pattern in air temperature at that place.</p></li>
-					<li><p>Repeat this activity for as many different locations as you like before moving to the next activity.</p></li>
+				
+					<p>1. Choose a place on the map. Choose a range of dates that covers more than just a single year. You can make the range of dates up to five years long.</p>
+			</div>
+			<div>
+					<p>2. Observe the pattern in air temperature at that place.</p>
+					<p>3. Repeat this activity for as many different locations as you like before moving to the next activity.</p>
 			
-				</ol>
+			
 			</div>
 		
 		</div>
