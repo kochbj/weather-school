@@ -266,10 +266,12 @@
 			<div>
 				<ol>
 					<li><p>Choose a place on the map. Choose a range of dates that covers more than just a single year. You can make the range of dates up to five years long.</p></li>
+			<div>
 					<li><p>Observe the pattern in air temperature at that place.</p></li>
 					<li><p>Repeat this activity for as many different locations as you like before moving to the next activity.</p></li>
+			
 				</ol>
-			</div>
+		
 		</div>
 	</div>
 </div>
@@ -673,7 +675,6 @@
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" class="restricted-ds"></div>
-		<div class="split-tb-shield"></div>
 		<div id="height-sun-air-temperature-example-tb" class="split-tb"></div>
 		<div id="height-sun-air-temperature-example-tc" class="split-tc"></div>
 	</div>
