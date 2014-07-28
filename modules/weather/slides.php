@@ -12,11 +12,8 @@
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
 	<div class="intro-text">
-		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn about how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.
+		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.
 <br>
-<br>
-<br> 
-<br> 
 <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.
 	<p> 
