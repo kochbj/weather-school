@@ -283,7 +283,7 @@
 </div>
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Latitude">
 	<h2>Temperature and Latitude</h2>
-	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the location of a place has an effect on the pattern of daily average temperature.</p>
+	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator has an effect on the pattern of daily average temperature.</p>
 </div>
 <div id="temperature-lat-northern" class="activity" data-slide-type="normal" data-slide-title="Northern Hemisphere" data-slide-parent-id="temperature-lat-intro">
 	<div class="header">
