@@ -4,6 +4,7 @@
 		<li>Why is it warmer on some days than on other days?</li>
 		<li>Why some months of the year are colder than others?</li>
 		<li>Why is it almost always colder at the North Pole than at the equator?</li>
+		<li>How do large bodies of water and mountains affect temperature?</li>
 	</ul>
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.</p>
@@ -11,14 +12,16 @@
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
 	<div class="intro-text">
-		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website contains a series of interactive modules which will introduce you to different factors that can cause trends in air temperature over time. In these activities, you will explore a rich dataset of climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA) from 1929 to 2010.
+		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.
+<br>
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.
 <br>
 <br>
-<br> 
-<br> 
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate the relationship being taught, followed by an open-ended <b>Try It</b> sections. In the <b>Try It</b> sections, you can select and analyze your own data by picking a location on Google Maps and choosing a range of dates.
-	<p> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about the phenomena causing the trends by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.
+	</p> 
+
+
 	</div>
 </div>
 <div id="contents-1" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -245,7 +248,7 @@
 				<p>Look closely to see if you can locate some other differences and think about why they might occur.</p>
 			</div>
 			<div>
-				<p>On the next screen you will have a chance to observe more patterns in the air temperature at a location that you choose.</p>
+				<p>You will now have a chance to observe annual tempearture patterns at locations and dates of your choosing. See if other locations in the United States have similar patterns to the pattern you just observed.</p>
 			</div>
 		</div>
 	</div>
@@ -283,7 +286,7 @@
 </div>
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Latitude">
 	<h2>Temperature and Latitude</h2>
-	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the location of a place has an effect on the pattern of daily average temperature.</p>
+	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator has an effect on the pattern of daily average temperature.</p>
 </div>
 <div id="temperature-lat-northern" class="activity" data-slide-type="normal" data-slide-title="Northern Hemisphere" data-slide-parent-id="temperature-lat-intro">
 	<div class="header">
@@ -349,7 +352,7 @@
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is <i>colder</i> almost every day of the year in the place that is farther south. As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther north (farther from the tropical zone). Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
 			</div>
 			<div>
-				<p>Now you will have a chance to observe more patterns in air temperature and latitude at two locations that you choose.</p>
+				<p>You will now have a chance to compare annual air temperature patterns at two locations that you choose. See if the relationship between latitude and air temperature you observed in these examples exists in other locations. </p>
 			</div>
 		</div>
 		<div class="questionBox">
@@ -441,6 +444,9 @@
 			<div>
 				<p>What do you notice about the graph of the temperatures at the two locations? You should see that the place at the higher elevation has lower temperatures throughout the year.</p>
 			</div>
+			<div>
+				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to lower elevations nearby.</p>
+			</div>
 		
 		</div>
 	</div>
@@ -455,27 +461,25 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
+			
 			<div>
-				<p>Now you can try to find other locations around the world where you can observe the effect of elevation on temperature.</p>
+				<p>1. Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
 			<div>
-				<p>Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
-			</div>
-			<div>
-				<p>Click on a specific location on the map. The 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
+				<p>2. Click on a specific location on the map. The 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
 	
 			</div>
 			<div>	
-				<p>Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			
 				
 			</div>
 			<div>
-				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
 				<p>Also note that you may have difficulty finding reporting stations at very high elevations because those areas are often very remote and not easily accessible by humans.</p>
 			</div>
 			<div>
-				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
+				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
 				
 			</div>
 				
@@ -528,7 +532,9 @@
 			<div>
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. As long as the water isn't frozen, the water makes the air above it warmer than it would otherwise be in the winter, and it makes the air above it cooler than it would otherwise be in the summer. Being closer to water also makes the difference between high and low temperatures smaller than if you were farther from the water.</p>
 			</div>
-		
+			<div>
+				<p>You will now have a chance to observe the effect of proximity to a large bodies of water on temperature at locations of your choosing. See if other locaitons near large bodies of water experience cooler summers and warmer winters compared to nearby locations further inland.</p>
+			</div>
 			
 		</div>
 	</div>
@@ -543,24 +549,22 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
+			
 			<div>
-				<p>Now try to find other locations around the world where you can observe the effect of proximity to a large body of water on temperature.</p>
+				<p>1. Use the map above to zoom in on a location near a large body of water that you would like to explore. Click on a specific location on the map.</p>
 			</div>
 			<div>
-				<p>Use the map above to zoom in on a location near a large body of water that you would like to explore. Click on a specific location on the map.</p>
+				<p>2. The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
 			</div>
 			<div>
-				<p>The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
+				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
-				<p>Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
-			</div>
-			<div>
-				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
 				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
 			</div>
 			<div>
-				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
+				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
 			
 			</div>
 			
@@ -620,7 +624,7 @@
 			<div>
 				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
 			</div>
-			<div>	<p>On the next screen you will have the chance to observe the height of the sun in the sky for a location that you choose.</p>
+			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky at locations and dates of your choosing. See if other locations in the United States have similar annual sun patterns compared to New York City.</p>
 			</div>
 		</div>
 	</div>
@@ -680,9 +684,9 @@
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000. Notice that the "Average air temperature" and "Maximum height of the sun in the sky" columns are highlighted.</p></div>
 			<div><p>The graph above is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the average height of the sun in the sky.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
+			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the Sun in the sky and average daily temperature are related.</p></div>
 			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler.</p></div>
-			<div><p>On the next screen you will have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations you choose.</p></div>
+			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a direct relationship between the maximum height of the sun in the sky and average daily temperature in other locations.</p></div>
 		</div>
 	</div>
 </div>
@@ -805,7 +809,7 @@
 			<div><p>Now the curve is  completely flat. There are 12 hours of daylight all year long. There is no variation in how much daylight there is.</div> 
 			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same.</div>
 			<div>It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
-			<div>On the next screen you will have a chance to compare the hours of daylight throughout the year at two different locations of your choice.</div>
+			<div>You will now have a chance to compare the hours of daylight throughout the year at two different locations of your choice. See if the range of daylight hours decreases with proximity to the equator.</div>
 		</div>
 	</div>
 </div>
@@ -863,7 +867,7 @@
 			<div>	<p>The graph above shows a scatter plot of the Average Air Temperature and Hours of Daylight variables for the 12 selected dates.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
-			<div>	<p>On the next screen you will have a chance to explore the relationship between the Average Daily Temperature and Hours of Daylight at locations that you choose.</p></div>
+			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a direct relationship between the hours of daylight and average daily temperature at other locations.</p></div>
 		
 		</div>
 	</div>
