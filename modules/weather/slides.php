@@ -463,23 +463,23 @@
 		<div class="slider">
 			
 			<div>
-				<p>Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
+				<p>1. Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
 			<div>
-				<p>Click on a specific location on the map. The 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
+				<p>2. Click on a specific location on the map. The 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
 	
 			</div>
 			<div>	
-				<p>Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			
 				
 			</div>
 			<div>
-				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
 				<p>Also note that you may have difficulty finding reporting stations at very high elevations because those areas are often very remote and not easily accessible by humans.</p>
 			</div>
 			<div>
-				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
+				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
 				
 			</div>
 				
@@ -532,7 +532,9 @@
 			<div>
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. As long as the water isn't frozen, the water makes the air above it warmer than it would otherwise be in the winter, and it makes the air above it cooler than it would otherwise be in the summer. Being closer to water also makes the difference between high and low temperatures smaller than if you were farther from the water.</p>
 			</div>
-		
+			<div>
+				<p>You will now have a chance to observe the effect of proximity to a large bodies of water on temperature. See if other locaitons near large bodies of water experience cooler summers and warmer winters compared to nearby locations further inland.</p>
+			</div>
 			
 		</div>
 	</div>
@@ -547,24 +549,22 @@
 	</div>
 	<div class="instructions">
 		<div class="slider">
+			
 			<div>
-				<p>Now try to find other locations around the world where you can observe the effect of proximity to a large body of water on temperature.</p>
+				<p>1. Use the map above to zoom in on a location near a large body of water that you would like to explore. Click on a specific location on the map.</p>
 			</div>
 			<div>
-				<p>Use the map above to zoom in on a location near a large body of water that you would like to explore. Click on a specific location on the map.</p>
+				<p>2. The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
 			</div>
 			<div>
-				<p>The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
+				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
-				<p>Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
-			</div>
-			<div>
-				<p>Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
 				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
 			</div>
 			<div>
-				<p>You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
+				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
 			
 			</div>
 			
