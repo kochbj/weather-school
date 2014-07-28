@@ -252,7 +252,7 @@ function cbDailyTempEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.data('value',[[new Date( 1999 , 3 , 1 ),new Date( 2001 , 3 , 25 )]]);
+		wInstance.map.date.data('value',[[new Date( 2000 , 0 , 0 ),new Date( 2003 , 0 , 0 )]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 	} , 1000 );
 	}
