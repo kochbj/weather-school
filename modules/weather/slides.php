@@ -683,9 +683,9 @@
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000. Notice that the "Average air temperature" and "Maximum height of the sun in the sky" columns are highlighted.</p></div>
 			<div><p>The graph above is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the average height of the sun in the sky.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
+			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the Sun in the sky and average daily temperature are related.</p></div>
 			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler.</p></div>
-			<div><p>You will now have a chance to explore the relationship between the maximum angle of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a direct relationship between the maximum angle of the sun in teh sky and average daily temperature in other locations.</p></div>
+			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a direct relationship between the maximum height of the sun in the sky and average daily temperature in other locations.</p></div>
 		</div>
 	</div>
 </div>
@@ -808,7 +808,7 @@
 			<div><p>Now the curve is  completely flat. There are 12 hours of daylight all year long. There is no variation in how much daylight there is.</div> 
 			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same.</div>
 			<div>It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
-			<div>On the next screen you will have a chance to compare the hours of daylight throughout the year at two different locations of your choice.</div>
+			<div>You will now have a chance to compare the hours of daylight throughout the year at two different locations of your choice. See if the range of daylight hours decreases with proximity to the equator.</div>
 		</div>
 	</div>
 </div>
@@ -866,7 +866,7 @@
 			<div>	<p>The graph above shows a scatter plot of the Average Air Temperature and Hours of Daylight variables for the 12 selected dates.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
-			<div>	<p>On the next screen you will have a chance to explore the relationship between the Average Daily Temperature and Hours of Daylight at locations that you choose.</p></div>
+			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a direct relationship between the hours of daylight and average daily temperature at other locations.</p></div>
 		
 		</div>
 	</div>
