@@ -1,4 +1,5 @@
 .shield { cursor: not-allowed; background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; z-index: 1000; }
+.split-tb-shield { cursor: not-allowed; background-color: transparent;  right: 0px; left: 36%; width: 62.2% !important; bottom: 50% !important; top: 0px !important; z-index: 1000; }
 
 #introduction { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
 #introduction > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }

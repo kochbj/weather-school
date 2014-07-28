@@ -562,7 +562,7 @@ function dataSelect_instantiate(wInstance) {
 						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
 						console.log($( this ).parents( '.map-date' ));
 						console.log(wInstance.map.date);
-						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && wInstance.map.date.data('value').length==1){
+						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
 							if ( wInstance.settings.date.range ) { endDate.setFullYear( endDate.getFullYear() + wInstance.settings.date.range ); }
@@ -1145,6 +1145,7 @@ function refreshStations ( evt ) {
 				}
 			}
 	} );
+wInstance.map.setZoom(5);
 }
 function removeLocation ( markerID , wInstance ) {
 	removeStations( markerID , wInstance );
@@ -1195,6 +1196,7 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 	
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficent.
+	
 	wInstance.data = {};
 	
 	wInstance._callback({type:'data-load'});

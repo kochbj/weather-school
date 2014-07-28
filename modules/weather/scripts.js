@@ -127,8 +127,8 @@ function cbHeightSunAirTempEx (evt) {
  			wInstance.map.date.ui.find('.ui-state-active').click();
 		} , 1000 );
 		setTimeout( function() {
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['date']);
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
+			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunAngle']);
 			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
 			}, 15000	);
 	}
@@ -252,7 +252,7 @@ function cbDailyTempEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.data('value',[[new Date( 1999 , 3 , 1 ),new Date( 2001 , 3 , 25 )]]);
+		wInstance.map.date.data('value',[[new Date( 2001 , 0 , 1 ),new Date( 2002 , 0, 1 )]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 	} , 1000 );
 	}
@@ -377,7 +377,6 @@ function cbElevExample ( evt ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 27.71,85.33 ), stationNames: ["TINGRI", "GORAKHPUR"], staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
-		wInstance.map.setZoom(5);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 //		setTimeout( function () {
 //		google.maps.event.clearListeners(wInstance.map, 'click');
@@ -397,7 +396,6 @@ function cbLargeBodiesWaterExample ( evt ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 69.38,20.71 ), stationNames: ["TROMSO", "KAUTOKEINO"], staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
-		wInstance.map.setZoom(5);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 	} , 1000 );
 	}

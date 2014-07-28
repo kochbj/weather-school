@@ -669,6 +669,7 @@
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" class="restricted-ds"></div>
+		<div class="split-tb-shield"></div>
 		<div id="height-sun-air-temperature-example-tb" class="split-tb"></div>
 		<div id="height-sun-air-temperature-example-tc" class="split-tc"></div>
 	</div>
