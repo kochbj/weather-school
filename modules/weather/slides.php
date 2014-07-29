@@ -11,7 +11,6 @@
 </div>
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
-	<div class="main-intro-text">
 		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.
 <br>
 <br> 
@@ -20,9 +19,6 @@
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about the phenomena causing the trends by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.
 	</p> 
-
-
-	</div>
 </div>
 <div id="contents-1" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
