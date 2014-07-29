@@ -326,7 +326,7 @@
 				<p>You should also see that the difference between the high and low temperatures over the course of a year is less the closer you are to the tropical zone. </p>
 			</div>
 			<div>
-				<p>Notice that the<span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of temperatures at the higher latitude (the <span class="lat-high">higher</span> line) is greater than the range of temperatures at the lower latitude. Another way to say this is that the line that is closer to the tropical zone (the <span class="lat-low">lower</span> line) is a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">higher</span> line).</p>
+				<p>Notice that the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of temperatures at the higher latitude (the <span class="lat-high">higher</span> line) is greater than the range of temperatures at the lower latitude. Another way to say this is that the line that is closer to the tropical zone (the <span class="lat-low">lower</span> line) is a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">higher</span> line).</p>
 			</div>
 					</div>
 		<div class="questionBox">
