@@ -308,20 +308,23 @@
 				<p>In this activity you will look at the relationship between latitude and daily average temperature.</p>
 			</div>
 			<div>
-				<p>In the map above Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two location are about 1,000 miles apart.</p>
+				<p>In the map above Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
 			</div>
 			<div>			
-				<p>The graph above shows the average daily temperatures in Winnipeg and San Antonio from December 31, 2003 to December 30, 2004. </p>
+				<p>The graph shows the average daily temperatures in Winnipeg and San Antonio from December 31, 2003 to December 30, 2004. </p>
 			</div>
 			<div>
 				<p>Look at the pattern of temperatures at the two places.</p>
-				<p>Notice that it is warmer on almost every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
+				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
 				<p>As a general rule, in the northern hemisphere, places that are farther south (<span class="tooltip" title="The relationship between latitude and temperature is true north of the tropical zone in the northern hemisphere and south of the tropical zone in the southern hemisphere. There is a slightly different pattern inside the tropical region that depends on what time of year it is. {Show the location of the Tropic of Cancer and the Tropic of Capricorn in relation to the equator}">closer to the tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
 			</div>
 			<div>
-				<p>You should also see that the difference between the high and low temperatures over the course of a year is less the closer you are to the tropical zone. Notice that the range of temperatures at the higher latitude (the <span class="lat-high">higher</span> line) is greater than the range of temperatures at the lower latitude. Another way to say this is that the line that is closer to the tropical zone (the <span class="lat-low">lower</span> line) is a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">higher</span> line).</p>
+				<p>You should also see that the difference between the high and low temperatures over the course of a year is less the closer you are to the tropical zone. </p>
+			</div>
+			<div>
+				<p>Notice that the<span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of temperatures at the higher latitude (the <span class="lat-high">higher</span> line) is greater than the range of temperatures at the lower latitude. Another way to say this is that the line that is closer to the tropical zone (the <span class="lat-low">lower</span> line) is a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">higher</span> line).</p>
 			</div>
 					</div>
 		<div class="questionBox">
