@@ -51,9 +51,8 @@
 
 .workarea .split-tc.unrestricted{display: none; }
 .workarea .split-tb.unrestricted{display: none; }
-}
 
-#daily-temperature-intro {background-image: url(assets/introduction/Wind_olive.jpg);}
+#daily-temperature-intro {background-image: url(assets/introduction/MoscowColdFront.jpg);}
 #annual-temperature-intro {background-image: url(assets/introduction/Seasons2010.jpg);}
 #temperature-lat-intro {background-image: url(assets/introduction/Rj_north_york_moors.jpg);}
 #temperature-elevation-intro {background-image: url(assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg);}
