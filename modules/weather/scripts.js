@@ -1329,7 +1329,7 @@ function onPlayerReady(event) {
     event.target.mute();
 }
 function onPlayerStateChange(event) {
-	console.log(event.data);
+	//console.log(event.data);
 	if (event.data == 0) event.target.playVideo();
 }
 onYouTubeIframeAPIReady1();
