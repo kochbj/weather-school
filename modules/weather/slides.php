@@ -95,7 +95,10 @@
 </div>
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
 	<h2>Learning about Daily Temperature Changes</h2>
+	<div>
+	<div>
 	<p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the air temperature changes from day to day at different places around the world.</p>
+	</div>
 </div>
 <div id="daily-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Daily Temperature Variation over a Two Week Period" data-slide-parent-id="daily-temperature-intro">
 	<div class="header">
