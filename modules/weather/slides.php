@@ -11,7 +11,7 @@
 </div>
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
-	<div class="intro-text">
+	<div class="main-intro-text">
 		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.
 <br>
 <br> 
@@ -95,7 +95,7 @@
 </div>
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
 	<h2>Learning about Daily Temperature Changes</h2>
-	<div>
+	<div id="dtc-intro">
 	<p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the air temperature changes from day to day at different places around the world.</p>
 	</div>
 </div>
@@ -431,8 +431,8 @@
 </div>
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Elevation">
 	<h2>Temperature and Elevation</h2>
-	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
-	<p>In this activity, you are going to use the maps to find out if how far a place is above sea level affects the air temperature at that place.</p>
+	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.<br><br>
+	In this activity, you are going to use the maps to find out if how far a place is above sea level affects the air temperature at that place.</p>
 </div>
 <div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
 	<div class="header">
@@ -519,8 +519,8 @@
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
 	<h2>Temperature and Large Bodies of Water</h2>
-	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
-	<p>In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.<br><br>
+	In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
 </div>
 <div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Water" data-slide-parent-id="temperature-water-intro">
 	<div class="header">
