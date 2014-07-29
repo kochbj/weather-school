@@ -132,12 +132,8 @@
 	<div style="text-align: center; display: block;">
 		<div id="air-movement-yt-1"></div>
 		<div id="air-movement-yt-2"></div>
-		<?php//<iframe id="air-vid-1" width="420" height="315" src="http://www.youtube.com/embed/VFsWU2j5bPc?wmode=opaque&autohide=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe>
-		//<iframe id="air-vid-2" width="420" height="315" src="http://www.youtube.com/embed/ULJpU1id6-M?wmode=opaque&autohide=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe> ?>
-</div>
-<?php //<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>	
-//<script>	$(function() {iframe.getElementById('air-vid-1').mute(); 	iframe.getElementById('air-vid-2').mute();}); </script> ?>
 	</div>
+</div>
 </div>
 <div id="daily-temperature-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="daily-temperature-intro">
 	<h2>Module Complete</h2>
