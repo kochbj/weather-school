@@ -1325,11 +1325,10 @@ function onYouTubeIframeAPIReady2() {
 function onPlayerReady(event) {
 		console.log("I RAN THIS 4");	
     //event.target.playVideo();
-    event.target.setPlaybackQuality("hd720");
+    //event.target.setPlaybackQuality("hd720");
     event.target.mute();
 }
 function onPlayerStateChange(event) {
-	//console.log(event.data);
 	if (event.data == 0) event.target.playVideo();
 }
 onYouTubeIframeAPIReady1();
