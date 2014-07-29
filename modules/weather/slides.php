@@ -362,7 +362,11 @@
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is <i>colder</i> almost every day of the year in the place that is farther south.</p>
 			</div>
 			<div>
-				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther north (farther from the tropical zone). Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
+				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther north (farther from the tropical zone).</p>
+			</div>
+			<div>
+				
+				<p>Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to compare annual air temperature patterns at two locations that you choose. See if the relationship between latitude and air temperature you observed in these examples exists in other locations. </p>
