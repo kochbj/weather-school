@@ -1295,3 +1295,43 @@ var slideInit = {
 		}
 	}
 };
+
+var loadAirMovementVids = function() {
+var player1;
+var player2;
+function onYouTubeIframeAPIReady1() {
+    player1 = new YT.Player('air-movement-yt-1', {
+        height: '315',
+        width: '420',
+    videoId: 'VFsWU2j5bPc',
+    events: {
+      'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+    }
+  });
+}
+function onYouTubeIframeAPIReady2() {
+    player2 = new YT.Player('air-movement-yt-2', {
+        height: '315',
+        width: '420',
+    videoId: 'ULJpU1id6-M',
+    events: {
+      'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
+		console.log("I RAN THIS 4");	
+    //event.target.playVideo();
+    //event.target.setPlaybackQuality("hd720");
+    event.target.mute();
+}
+function onPlayerStateChange(event) {
+	if (event.data == 0) event.target.playVideo();
+}
+onYouTubeIframeAPIReady1();
+onYouTubeIframeAPIReady2();
+}
+

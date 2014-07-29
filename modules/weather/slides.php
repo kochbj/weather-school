@@ -130,8 +130,10 @@
 	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
 	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
 	<div style="text-align: center; display: block;">
-		<iframe id="air-vid-1" width="420" height="315" src="http://www.youtube.com/embed/VFsWU2j5bPc?wmode=opaque&autohide=1&enablejsapi=1" allowfullscreen></iframe>
-		<iframe id="air-vid-2" width="420" height="315" src="http://www.youtube.com/embed/ULJpU1id6-M?wmode=opaque&autohide=1&enablejsapi=1" allowfullscreen></iframe>
+		<div id="air-movement-yt-1"></div>
+		<div id="air-movement-yt-2"></div>
+		<?php//<iframe id="air-vid-1" width="420" height="315" src="http://www.youtube.com/embed/VFsWU2j5bPc?wmode=opaque&autohide=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe>
+		//<iframe id="air-vid-2" width="420" height="315" src="http://www.youtube.com/embed/ULJpU1id6-M?wmode=opaque&autohide=1&enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe> ?>
 </div>
 <?php //<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>	
 //<script>	$(function() {iframe.getElementById('air-vid-1').mute(); 	iframe.getElementById('air-vid-2').mute();}); </script> ?>

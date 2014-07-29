@@ -7,82 +7,13 @@ var ctrlSlider;
 var prevNextInterval;
 var replayData;
 var slideInit;
+var loadAirMovementVids;
 function	nextClickevt ( evt ) {
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
 			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
 				instrSlider.toSlide( 'next' );
-			} 
-			else {
-					if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex].getAttribute('data-slide-type') == 'key' ) { 
-						$('#slider-navigation .prev').show();
-						if ( $('#slider-menu').hasClass( 'active' ) ) {
-							$('#slider-menu').removeClass( 'active' );
-							$('#slider-menu').animate( { left : '100%' } , 450 );
-							$( '#slider-menu a').removeClass('ui-accordion-header-active');
-							$( '#click-cover').off('click', _clickOutmenu);
-							$( '#click-cover').hide();
-						}
-						var nextMod= $('#'+ctrlSlider.$slides[ctrlSlider.currentSlideIndex].getAttribute('id'));
-						var instrSlider = nextMod.find( '.instructions .slider' );
-						if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
-						 $("[data-slide-parent-id='"+nextMod.attr( 'id' )+"']").each( function ( idx, el ) {
-							var instrSlider = $(el).find( '.instructions .slider' );
-							if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
-							});
-						
-					}
-					if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'contents' ) {
-						if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+2].getAttribute('data-slide-type') == 'key' ){
-							$('#slider-menu a').removeClass('ui-accordion-header-active');
-							$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) + 4 } , 450, function() {$('#slider-menu').addClass( 'active' );
-} );
-							//$('#slider-menu').addClass( 'active' );
-							ctrlSlider.toSlide( 'next' );
-
-						}
-						else {
-							$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) + 4 } , 450, function() {$('#slider-menu').addClass( 'active' );
-} );
-							//$('#slider-menu').addClass( 'active' );
-							ctrlSlider.toSlide( 'next' );
-							$( '#slider-menu a').removeClass('ui-accordion-header-active');
-							$( '#slider-menu a').removeClass('current');
-							switch(ctrlSlider.$slides[ctrlSlider.currentSlideIndex].getAttribute('id')) {
-							case 'contents-2':
-								$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
-									break;
-							case 'contents-3':
-								$('#slider-menu a[href="#temperature-lat-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#temperature-elevation-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#temperature-water-intro"]').addClass('ui-accordion-header-active');
-								break;
-							case 'contents-4':
-								$('#slider-menu a[href="#height-sun-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#height-sun-air-temperature-intro"]').addClass('ui-accordion-header-active');
-								break;
-							case 'contents-5':
-								$('#slider-menu a[href="#daylight-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#daylight-air-temperature-intro"]').addClass('ui-accordion-header-active');
-									break;
-							case 'contents-6':
-								$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
-									break;
-																								
-							}
-						}
-					}
-					else if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'normal' || ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'key'  ) {
-						if  (ctrlSlider.$slides[ctrlSlider.currentSlideIndex+1].getAttribute('data-slide-type') == 'key') $($( '#slider-navigation .prev' ).hide());
-						if ( $('#slider-menu').hasClass( 'active' ) ) {
-							$('#slider-menu').removeClass( 'active' );
-							$('#slider-menu').animate( { left : '100%' } , 450 );
-							$( '#slider-menu a').removeClass('ui-accordion-header-active');
-							$( '#click-cover').off('click', _clickOutmenu);
-							$( '#click-cover').hide();
-						}
-						ctrlSlider.toSlide( 'next' );
-					}
+			} else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
+				ctrlSlider.toSlide( 'next' );
 			}			
 			setTimeout( locationUpdate , 500 );
 			$(this).off();
@@ -93,57 +24,8 @@ function	prevClickevt ( evt ) {
 			if ( instrSlider && instrSlider.currentSlideIndex > 0 && !evt.ctrlKey ) {
 				instrSlider.toSlide( 'prev' );
 			}
-			else {
-				if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex-1].getAttribute('data-slide-type') == 'key' ) { 
-					$('#slider-navigation .prev').hide();
-					if ( $('#slider-menu').hasClass( 'active' ) ) {
-						$('#slider-menu').removeClass( 'active' );
-						$('#slider-menu').animate( { left : '100%' } , 450 );
-						$( '#slider-menu a').removeClass('ui-accordion-header-active');
-						$( '#click-cover').off('click', _clickOutmenu);
-						$( '#click-cover').hide();
-						}
-						ctrlSlider.toSlide( 'prev' );
-				}
-			 else if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex-1].getAttribute('data-slide-type') == 'contents' ) {
-						$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) + 4 } , 450, function() {$('#slider-menu').addClass( 'active' );} );
-						//$('#slider-menu').addClass( 'active' );
-						ctrlSlider.toSlide( 'prev' );
-						$( '#slider-menu a').removeClass('current');
-						$('#slider-menu a').removeClass('ui-accordion-header-active');
-						switch(ctrlSlider.$slides[ctrlSlider.currentSlideIndex].getAttribute('id')) {
-							case 'contents-2':
-								$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
-									break;
-							case 'contents-3':
-								$('#slider-menu a[href="#temperature-lat-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#temperature-elevation-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#temperature-water-intro"]').addClass('ui-accordion-header-active');
-								break;
-							case 'contents-4':
-								$('#slider-menu a[href="#height-sun-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#height-sun-air-temperature-intro"]').addClass('ui-accordion-header-active');
-								break;
-							case 'contents-5':
-								$('#slider-menu a[href="#daylight-intro"]').addClass('ui-accordion-header-active');
-								$('#slider-menu a[href="#daylight-air-temperature-intro"]').addClass('ui-accordion-header-active');
-									break;
-							case 'contents-6':
-								$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
-									break;
-							}
-						}
-				else if ( ctrlSlider.$slides[ctrlSlider.currentSlideIndex-1].getAttribute('data-slide-type') == 'normal' ) {
-					if ( $('#slider-menu').hasClass( 'active' ) ) {
-						$('#slider-menu').removeClass( 'active' );
-						$('#slider-menu').animate( { left : '100%' } , 450 );
-						$( '#click-cover').off('click', _clickOutmenu);
-						$( '#click-cover').hide();
-						$( '#slider-menu a').removeClass('ui-accordion-header-active');
-				}
-					ctrlSlider.toSlide( 'prev' );
-				}		
+			else if ( ctrlSlider.currentSlideIndex > 0 ) {
+				ctrlSlider.toSlide( 'prev' );
 			}
 			setTimeout( locationUpdate , 500 );
 			$(this).off();
@@ -155,11 +37,19 @@ function ctrlSlider_cb ( psobj ) {
 	location.hash = '#'+id;
 	
 	/* Initialize the slide if necessary. */
+	console.log(psobj.$currentSlide.attr('data-slide-type'));
 	if ( slideInit.hasOwnProperty( id ) && !slideInit[id].is_initialized ) {
 		slideInit[id].initialize();
 		slideInit[id].is_initialized = true;
 	}
-	
+	if (id == "daily-temperature-air") setTimeout(loadAirMovementVids, 500);
+	/*reset Instruction sliders for key slides*/
+	if (psobj.$currentSlide.attr( 'data-slide-type' ) == "key" ) { 
+		$("[data-slide-parent-id='"+id+"']").each( function ( idx, el ) {
+				var instrSlider = $(el).find( '.instructions .slider' );
+				if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
+			});
+	}
 	/* Determine which nav manu item to highlight. */
 	$( '#slider-menu .current' ).removeClass( 'current' );
 	var navItem = $( '#slider-menu a[href=#'+id+']' );
@@ -179,16 +69,59 @@ function ctrlSlider_cb ( psobj ) {
 		}}
 	}
 	navItem.addClass( 'current' );
-	//if ( psobj.currentSlideIndex == 0 ) {
-	//	$( '#slider-navigation .prev ').hide();
-	//	$( '#slider-navigation .next ').show();
-	//} else if ( psobj.currentSlideIndex == psobj.slideIndexCount ) {
-	//	$( '#slider-navigation .prev ').show();
-	//	$( '#slider-navigation .next ').hide();
-	//} else {
-	//	$( '#slider-navigation .prev ').show();
-	//	$( '#slider-navigation .next ').show();
-	//}
+	//navParent.addClass('ui-accordion-header-active');
+	/* pop out menu for contents slides*/
+	if ( psobj.$currentSlide.attr('data-slide-type') == 'contents' ) {
+			setTimeout(function () {
+			$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) + 4 } , 450, function() {$('#slider-menu').addClass( 'active' );} );
+			//$( '#slider-menu a').removeClass('current');
+			$('#slider-menu a').removeClass('ui-accordion-header-active');
+			switch(id) {
+				case 'contents-2':
+					$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-3':
+					$('#slider-menu a[href="#temperature-lat-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#temperature-elevation-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#temperature-water-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-4':
+					$('#slider-menu a[href="#height-sun-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#height-sun-air-temperature-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-5':
+					$('#slider-menu a[href="#daylight-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#daylight-air-temperature-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-6':
+					$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
+					break;
+							}
+					}, 100);
+	}
+	/*close menu if open */
+	else if ( $('#slider-menu').hasClass( 'active' ) ) {
+		$('#slider-menu').removeClass( 'active' );
+		$('#slider-menu').animate( { left : '100%' } , 450 );
+		$( '#click-cover').off('click', _clickOutmenu);
+		$( '#click-cover').hide();
+		$( '#slider-menu a').removeClass('ui-accordion-header-active');
+	}	
+	
+	/*buttons for book end slides */
+	if ( psobj.currentSlideIndex == 0 ) {
+		$( '#slider-navigation .prev ').hide();
+		$( '#slider-navigation .next ').show();
+	} else if ( psobj.currentSlideIndex == psobj.slideIndexCount ) {
+		$( '#slider-navigation .prev ').show();
+		$( '#slider-navigation .next ').hide();
+	} else {
+		$( '#slider-navigation .prev ').show();
+		$( '#slider-navigation .next ').show();
+	}
+
+	/* keep user from hitting next before page load */
 	if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
 	if( typeof(jQuery( '#slider-navigation .prev' ).data( "events" ))==="undefined") $( '#slider-navigation .prev' ).on('click',prevClickevt);
 }
@@ -205,8 +138,8 @@ function locationUpdate ( ) {
 	if ( instrSlider ) {
 		instruction = instrSlider.currentSlideIndex + 1;
 	}
-	if (section == 1) section="INT";
-	else if (section == $( '[data-slide-type=key]' ).length) section="TLS";
+	if (section == 1) section="INTRO";
+	else if (section == $( '[data-slide-type=key]' ).length) section="TOOLS";
 	else section = String.fromCharCode( section + 64 - 1 );
 	$( '.you-are-here .screen-id' ).html(
 		'Screen: ' + section +
@@ -455,18 +388,9 @@ function decimalToRomanSimple(value) {
 		
 		$( '#slider-menu a' ).click( function ( evt ) {
 			$('#slider-menu a').removeClass('ui-accordion-header-active');
-			if ($( this ).hasClass('ui-accordion-header'))	$('#slider-navigation .prev').hide();
 			var instrSlider = $($(this).attr( 'href' )).find( '.instructions .slider' );
 			if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
-			$("[data-slide-parent-id='"+$( this ).attr( 'href' ).slice(1)+"']").each( function ( idx, el ) {
-				var instrSlider = $(el).find( '.instructions .slider' );
-				if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
-			});
 			ctrlSlider.toSlide( $( $( this ).attr( 'href' ) ).index() );
-			$('#slider-menu' ).removeClass( 'active' );
-			$('#slider-menu' ).animate( { left : '100%' } , 450 );
-			$( '#click-cover').off('click', _clickOutmenu);
-			$('#click-cover').hide();
 			setTimeout( locationUpdate , 500 );
 		} );
 	
