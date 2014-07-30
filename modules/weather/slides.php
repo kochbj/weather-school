@@ -239,7 +239,7 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 
 			<div>
-				<p>Variation may be due to the reliability of the measuring instrument, or it could be due to colder or warmer air moving in from another location.  Just remember that there is always an explanation for the variability that you see in your data even though you don’t always know what that explanation is.</p>
+				<p>Because air temperature varies from day to day, not every July 1st is going to have the same air temperature and not every January 1st is going to have the same temperature. That is why you see variation in the pattern of temperatures from year to year.</p>
 			</div>
 			<div>
 				<p>Look closely to see if you can locate some other differences and think about why they might occur.</p>
