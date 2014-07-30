@@ -31,6 +31,9 @@
 .module-intro h2 { opacity: .7; font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
 .module-intro .intro-text {position:absolute; top: 230px; opacity: .7; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em;}
 .module-intro .intro-text p {margin: 15px 0 0 0;}
+.module-intro .contents-text {position:absolute; top: 230px; opacity: .7; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em; margin-left: 15px; width:470px; background-color:  #B7CCE0;}
+.module-intro .intro-text p {margin: 15px 0 0 0;}
+
 
 #activity-intro { background-image: url(assets/activity-intro/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
 #activity-intro h3 { font-weight: normal; background-color: #919191; font-size: 160%; margin-top: 4em; padding: .5em 0em .5em 20px; }
@@ -74,10 +77,25 @@
 #temperature-water-intro .intro-text {background-color: #E3E3E3; top:403px;}
 
 #height-sun-intro {background-image: url(assets/introduction/Sunset_TreeNeedAttribution.jpg);}
-//#height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
+#height-sun-intro h2 {background-color:#dc8a61;}
+#height-sun-intro .intro-text {background-color: #F28252; top: 125px;}
+
+#height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
+#height-sun-air-temperature-intro h2 {background-color:#4b6e8c;}
+#height-sun-air-temperature-intro .intro-text {background-color: #bb8f76; top: 560px;}
+
 #daylight-intro {background-image: url(assets/introduction/Sunset_at_Halong_Bay.jpg);}
-#daylight-air-temperature-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
+#daylight-intro h2 {background-color:#8c4048;}
+#daylight-intro .intro-text {background-color: #a5666b; top:180px;}
+
+#daylight-air-temperature-intro {background-image: url(assets/introduction/Sunset_Libya.jpg);}
+#daylight-air-temperature-intro h2 {background-color: #f4c3c2; }
+#daylight-air-temperature-intro .intro-text {background-color: #674b47; opacity: .9; top:445px;}
+
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
+#data-tools-intro h2 {background-color:#cbbaab;}
+#data-tools-intro .intro-text {background-color:#cbbaab; top:430px;}
+
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }
 

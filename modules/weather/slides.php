@@ -19,41 +19,41 @@ Each module begins with a guided <b>Activity</b> to illustrate a pattern in air 
 At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about the phenomena causing the trends by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.</p>
 </div> 
 </div>
-<div id="contents-1" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="contents-1" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
-	<div class="completed-text">
-		<p class="invite"> These modules and acivities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner.</p>
+	<div class="contents-text">
+		<p> The modules and activities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner. The current module/activity is highlighted in teal.</p>
 		<p>The next five screens provide brief descriptions of the themes of each of the modules.</p>
 	</div>
 </div>
-<div id="contents-2" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="contents-2" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
-	<div class="completed-text">
-		<p class="invite">The first two modules focus on variation in air temperature over time. Module A explores temperature changes throughout the day, and module B explores temperature changes over the course of a year.</p>
+	<div class="contents-text">
+		<p>The first two modules focus on variation in air temperature over time. Module A explores temperature changes throughout the day, and module B explores temperature changes over the course of a year.</p>
 	</div>
 </div>
-<div id="contents-3" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="contents-3" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
-	<div class="completed-text">
-		<p class="invite">Modules C-E investigate how temperature varies with three different geographic variables: latitude, elevation and proximity to bodies of water.</p>
+	<div class="contents-text">
+		<p>Modules C-E investigate how temperature varies with three different geographic variables: latitude, elevation and proximity to bodies of water.</p>
 	</div>
 </div>
-<div id="contents-4" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="contents-4" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
-	<div class="completed-text">
-		<p class="invite">Modules F and G explore how air temperature is affected by changes in the height of the sun in the sky throughout the year.</p>
+	<div class="contents-text">
+		<p>Modules F and G explore how air temperature is affected by changes in the height of the sun in the sky throughout the year.</p>
 	</div>
 </div>
-<div id="contents-5" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="contents-5" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
-	<div class="completed-text">
-		<p class="invite">Module H looks at the relationship between hours of daylight and latitude, and Module I investigates the effects of this relationship on temperature.</p>
+	<div class="contents-text">
+		<p>Module H looks at the relationship between hours of daylight and latitude, and Module I investigates the effects of this relationship on temperature.</p>
 	</div>
 </div>
-<div id="contents-6" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+<div id="contents-6" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
-	<div class="completed-text">
-		<p class="invite">The Additional Data Tools tab contains tools for further exploring the temperature data used in these modules.</p>
+	<div class="contents-text">
+		<p>The Additional Data Tools tab contains tools for further exploring the temperature data used in these modules.</p>
 	</div>
 </div>
 <?php
@@ -82,10 +82,10 @@ At the completion of each module you can check your understanding of the feature
 </div>
  */
 ?>
-<div id="intro-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
-	<h2>Module Complete</h2>
-	<div class="completed-text">
-		<p class="invite">You have now seen brief introductions to each of the modules in WeatherSchool. Click on the right arrow at the bottom of the page to continue to Module A: Daily Temperature Changes, or select a different module from the menu.</p>
+<div id="intro-complete" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
+	<h2>Intro Complete</h2>
+	<div class="contents-text">
+		<p>You have now seen brief introductions to each of the modules in WeatherSchool. Click on the right arrow at the bottom of the page to continue to Module A: Daily Temperature Changes, or select a different module from the menu.</p>
 	</div>
 </div>
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
