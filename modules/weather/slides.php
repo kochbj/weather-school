@@ -519,7 +519,7 @@ At the completion of each module you can check your understanding of the feature
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Find out why <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/">elevation</a> effects air temperature.</p>
+		<p>Find out why <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a> effects air temperature.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
