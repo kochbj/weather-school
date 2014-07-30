@@ -441,10 +441,10 @@
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will see how elevation affects air temperature.</p>
+				<p>In this activity you will see how elevation affects air temperature. The map above pinpoints the Himalayas, a mountain range in Southeast Asia, which is home to the planet's highest peaks including Mt. Everest.</p>
 			</div>
 			<div>
-				<p>The map above pinpoints Kathmandu, Nepal. This activity will explore the temperature patterns in two locations near Kathmandu: Tingri, Tibet and Gorakhpur in India. Both those locations are highlighted on the map.</p>
+				<p>Zoom two times. You can now see that Kathmandu, Nepal is pinpointed. North of Nepal is Tibet and south of Nepal is India. This activity will explore the temperature patterns in Tingri, Tibet and Gorakhpur, India. Both those locations are highlighted on the map.</p>
 				
 			</div>
 			<div>
