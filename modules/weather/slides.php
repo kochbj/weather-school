@@ -486,7 +486,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>1. Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
 			</div>
 			<div>
-				<p>2. Click on a specific location on the map. The 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
+				<p>2. Click on a specific location on the map. Remember that the 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
 	
 			</div>
 			<div>	
@@ -496,6 +496,9 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 			<div>
 				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
+			
+			</div>
+			<div>
 				<p>Also note that you may have difficulty finding reporting stations at very high elevations because those areas are often very remote and not easily accessible by humans.</p>
 			</div>
 			<div>
@@ -516,7 +519,7 @@ At the completion of each module you can check your understanding of the feature
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
+		<p>Find out why <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/">elevation</a> effects air temperature.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
