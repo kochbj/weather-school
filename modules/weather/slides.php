@@ -450,7 +450,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>In this activity you will see how elevation affects air temperature. The map above pinpoints the Himalayas, a mountain range in Southeast Asia, which is home to the planet's highest peaks including Mt. Everest.</p>
 			</div>
 			<div>
-				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closet reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
+				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closest reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
 			</div>
 			<div>
 			<p>This activity will explore the temperature patterns in Tingri, which is 14,000 feet above sea level, and Gorakhpur, which is only about 250 feet above sea level.</p>
@@ -495,7 +495,7 @@ At the completion of each module you can check your understanding of the feature
 				
 			</div>
 			<div>
-				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature.</p>
 			
 			</div>
 			<div>
