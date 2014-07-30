@@ -229,7 +229,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In the graph above, you can see how average daily temperature changes at a particular location over a three-year period. The graph shows average daily temperature in Washington DC from January 1, 2000 to January 1, 2003.</p>
+				<p>The graph above shows how average daily temperature in Washington DC changed between January 1, 2000 and January 1, 2003.</p>
 			</div>
 			<div>
 				<p>What do you notice? Does the graph have a pattern? How often does the pattern repeat? </p>
