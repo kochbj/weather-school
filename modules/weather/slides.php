@@ -11,14 +11,13 @@
 </div>
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
-		<p class="invite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.
-<br>
-<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.
-<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about the phenomena causing the trends by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.
-	</p> 
+	<div class="intro-text">	
+	<p>This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.</p>
+<p>
+Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.</p>
+<p>
+At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about the phenomena causing the trends by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.</p>
+</div> 
 </div>
 <div id="contents-1" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
@@ -91,8 +90,8 @@
 </div>
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
 	<h2>Learning about Daily Temperature Changes</h2>
-	<div id="dtc-intro">
-	<p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the air temperature changes from day to day at different places around the world.</p>
+	<div class="intro-text">
+<p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the air temperature changes from day to day at different places around the world.</p>
 	</div>
 </div>
 <div id="daily-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Daily Temperature Variation over a Two Week Period" data-slide-parent-id="daily-temperature-intro">
@@ -151,7 +150,9 @@
 
 <div id="annual-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Annual Temperature Patterns">
 	<h2>Learning about Temperature Patterns</h2>
+	<div class="intro-text">
 	<p>In the last module you saw that temperature can change considerably from one day to the next. In this module you will explore how temperature changes over the course of a year and over the course of multiple years. </p>
+</div>
 </div>
 <?php /*
 <div id="temperature-select" class="activity" data-slide-type="normal" data-slide-title="Exploring Temperature Patterns Step by Step" data-slide-parent-id="annual-temperature-intro">
@@ -287,7 +288,9 @@
 </div>
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Latitude">
 	<h2>Temperature and Latitude</h2>
+	<div class="intro-text">	
 	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator has an effect on the pattern of daily average temperature.</p>
+	</div>
 </div>
 <div id="temperature-lat-northern" class="activity" data-slide-type="normal" data-slide-title="Northern Hemisphere" data-slide-parent-id="temperature-lat-intro">
 	<div class="header">
@@ -427,8 +430,11 @@
 </div>
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Elevation">
 	<h2>Temperature and Elevation</h2>
-	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.<br><br>
+	<div class="intro-text">	
+	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
+	<p>
 	In this activity, you are going to use the maps to find out if how far a place is above sea level affects the air temperature at that place.</p>
+	</div>
 </div>
 <div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
 	<div class="header">
@@ -512,8 +518,11 @@
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
 	<h2>Temperature and Large Bodies of Water</h2>
-	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.<br><br>
+	<div class="intro-text">	
+	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
+	<p>
 	In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	</div>
 </div>
 <div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Water" data-slide-parent-id="temperature-water-intro">
 	<div class="header">
@@ -616,8 +625,9 @@
 	</div>
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
 	<h2>Height of the Sun in the Sky</h2>
+	<div class="intro-text">
 	<p>In the last three modules you saw that latitude, elevation, and proximity to water has an effect on the temperature at that place. In this module you will see that how high the sun is in the sky at a place changes throughout the year.</p>
-	
+	</div>	
 </div>
 <div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Example: Height of the Sun in the Sky" data-slide-parent-id="height-sun-intro">
 	<div class="header">
@@ -675,8 +685,9 @@
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
 	<h2>Height of the Sun in the Sky and Air Temperature</h2>
+	<div class="intro-text">
 	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
-	
+	</div>	
 </div>
 <div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
@@ -738,8 +749,10 @@
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
 	<h2>Hours of Daylight</h2>
+	<div class="intro-text">
 	<p>In the last module you saw that there is a relationship between the height of the Sun in the sky and air temperature. When the Sun is high in the sky it tends to be warmer than when teh sun is low in the sky.</p>
 	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
+	</div>
 </div>
 <div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight I" data-slide-parent-id="daylight-intro">
 	<div class="header">
@@ -858,8 +871,10 @@
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
 	<h2>Hours of Daylight and Air Temperature</h2>
+	<div class="intro-text">
 	<p>In the last module you saw that the hours of daylight at a location changes over the course of the year in a way that is very similar to the pattern for changes in air temperature and maximum height of the Sun in the sky. You have also seen that there is a relationship between the maximum height of the Sun in the sky and air temperature. The higher the Sun in the sky, the warmer it tends to be.</p>
 	<p>In this module you will look at the relationship between hours of daylight and air temperature at a given place. You will see if hours of daylight at a place is related to air temperature at that place.</p>
+	</div>
 </div>
 <div id="daylight-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Hours of Daylight and Air Temperature" data-slide-parent-id="daylight-air-temperature-intro">
 	<div class="header">
@@ -920,8 +935,10 @@
 </div>
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
 	<h2>Additional Data Tools</h2>
+	<div class="intro-text">
 	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	</div>
 </div>
 <div id="location-data-finder" class="activity" data-slide-type="tool" data-slide-title="Location Data Finder" data-slide-parent-id="data-tools-intro">
 	<div class="header">
