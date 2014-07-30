@@ -245,7 +245,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>Look closely to see if you can locate some other differences and think about why they might occur.</p>
 			</div>
 			<div>
-				<p>You will now have a chance to observe annual tempearture patterns at locations and dates of your choosing. See if other locations in the United States have annual temperature patterns of warmer summers and cooler winters. See if the daily temeratures over 3 year periods show variation between years.</p>
+				<p>You will now have a chance to observe annual temperature patterns at locations and dates of your choosing. See if other locations in the United States have annual temperature patterns of warmer summers and cooler winters. Do the daily temperatures over 3 year periods show variation between years?</p>
 			</div>
 		</div>
 	</div>
