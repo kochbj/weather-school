@@ -141,7 +141,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
 	<h2><br><br>Expand Your Knowledge</h2>	
-	<p>Find out how changes in the <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure" target="_blank">movement of air</a> are caused by temperature and pressure differences in the atmosphere.</p>
+	<p>Find out how changes in the <a href="http://www.enviropedia.org.uk/Weather/Movement_of_Air.php" target="_blank">movement of air</a> are caused by temperature and pressure differences in the atmosphere.</p>
 	</div>
 	<div class="completed-text">
 		<p> Hit the next button to continue to the next module or select a different one to explore from the menu. </p>
