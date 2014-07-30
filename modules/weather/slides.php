@@ -425,7 +425,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>What is the relationship between the distance of a location from the equator (latitude) and its average daily temperature?</li>
 	</ul>
 	<h2>Expand Your Knowledge</h2>	
-	<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
+	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> affects the temperature of a place.</p>
 	</div>
 </div>
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Elevation">
