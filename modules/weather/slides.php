@@ -232,10 +232,17 @@ At the completion of each module you can check your understanding of the feature
 				<p>In the graph above, you can see how average daily temperature changes at a particular location over a three-year period. The graph shows average daily temperature in Washington DC from January 1, 2000 to January 1, 2003.</p>
 			</div>
 			<div>
-				<p>What do you notice? You should see that the temperature rises and falls throughout each year. For example, it’s coldest in January and warmest in July.</p>
+				<p>What do you notice? Does the graph have a pattern? How often does the pattern repeat? </p>
 			</div>
 			<div>
-				<p>But is it identical from year to year? No, even though the pattern is very similar from one year to the next, there is also variation from year to year.  For example, the highest temperature in July 2002 is higher than the highest temperature in either July of 2000 or July of 2001.</p>
+				<p>You should see that the temperature rises and falls throughout each year. Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a certain section of the graph in more detail, drag a box around your region of interest. You can always zoom back out by hitting "Reset View".</p>
+			</div>
+			<div>
+				<p>You should see that in some years the coldest day falls in December and sometimes it falls in January. The warmest day can fall in July or August. Notice the highest temperature in 2002 is higher than the highest temperature in either 2000 or 2001.</p>
+			</div>
+			
+			<div>
+				<p>You can see the pattern is not identical from year to year. No, even though the pattern is very similar from one year to the next, there is also variation from year to year.  For example, the highest temperature in July 2002 is higher than the highest temperature in either July of 2000 or July of 2001.</p>
 			</div>
 
 			<div>
