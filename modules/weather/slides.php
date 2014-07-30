@@ -235,18 +235,18 @@ At the completion of each module you can check your understanding of the feature
 				<p>What do you notice? Does the graph have a pattern? How often does the pattern repeat? </p>
 			</div>
 			<div>
-				<p>You should see that the temperature rises and falls throughout each year. Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a certain section of the graph in more detail, drag a box around your region of interest. You can always zoom back out by hitting "Reset View".</p>
+				<p>You should see that the temperature rises and falls consistently throughout each year. But is it always the same? Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a section of the graph in more detail, just drag a box around it. You can always zoom back out by hitting "Reset View".</p>
 			</div>
 			<div>
-				<p>You should see that in some years the coldest day falls in December and sometimes it falls in January. The warmest day can fall in July or August. Furthermore, the highest temperature in 2002 is higher than the other two years. While the pattern is similar from year to year, it is not identical.</p>
+				<p>In some years the coldest day falls in December. In others it falls in January. The warmest day can fall in July or August. Note that the actual temperature varies between these warmest days as well. The warmest day in 2002 is warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
 			</div>
 			
 			<div>
-				<p>Does the line increase smoothly from the lowest temperature to the highest temperature?</p>
+				<p>Another way to think about annual temperature variation is by looking at the line on the graph. Does the line increase smoothly from the lowest temperature to the highest temperature of each year? Is the shape of the line the same from year to year?</p>
 			</div>
 				
 			<div>
-				<p>It is jagged because of daily variation in temperatures. Because air temperature varies from day to day, not every July 1st is going to have the same air temperature and not every January 1st is going to have the same temperature. That is why you see variation in the pattern of temperatures from year to year.</p>
+				<p>The line is jagged because air temperature varies from day to day. Because of daily temperature variation, not every July 1st is going to have the same air temperature and not every July 2nd is going to have the same air temperature. If the difference in temperature from day to day is not always the same, then the annual temperature pattern will be different from year to year as well.</p>
 			</div>
 		
 			<div>
