@@ -238,19 +238,17 @@ At the completion of each module you can check your understanding of the feature
 				<p>You should see that the temperature rises and falls throughout each year. Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a certain section of the graph in more detail, drag a box around your region of interest. You can always zoom back out by hitting "Reset View".</p>
 			</div>
 			<div>
-				<p>You should see that in some years the coldest day falls in December and sometimes it falls in January. The warmest day can fall in July or August. Notice the highest temperature in 2002 is higher than the highest temperature in either 2000 or 2001.</p>
+				<p>You should see that in some years the coldest day falls in December and sometimes it falls in January. The warmest day can fall in July or August. Furthermore, the highest temperature in 2002 is higher than the other two years. While the pattern is similar from year to year, it is not identical.</p>
 			</div>
 			
 			<div>
-				<p>You can see the pattern is not identical from year to year. No, even though the pattern is very similar from one year to the next, there is also variation from year to year.  For example, the highest temperature in July 2002 is higher than the highest temperature in either July of 2000 or July of 2001.</p>
+				<p>Does the line increase smoothly from the lowest temperature to the highest temperature?</p>
 			</div>
-
+				
 			<div>
-				<p>Because air temperature varies from day to day, not every July 1st is going to have the same air temperature and not every January 1st is going to have the same temperature. That is why you see variation in the pattern of temperatures from year to year.</p>
+				<p>It is jagged because of daily variation in temperatures. Because air temperature varies from day to day, not every July 1st is going to have the same air temperature and not every January 1st is going to have the same temperature. That is why you see variation in the pattern of temperatures from year to year.</p>
 			</div>
-			<div>
-				<p>Look closely to see if you can locate some other differences and think about why they might occur.</p>
-			</div>
+		
 			<div>
 				<p>You will now have a chance to observe annual temperature patterns at locations and dates of your choosing. See if other locations in the United States have annual temperature patterns of warmer summers and cooler winters. Do the daily temperatures over 3 year periods show variation between years?</p>
 			</div>
