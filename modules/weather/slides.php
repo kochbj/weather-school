@@ -453,8 +453,11 @@ At the completion of each module you can check your understanding of the feature
 				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closest reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
 			</div>
 			<div>
-			<p>This activity will explore the temperature patterns in Tingri, which is 14,000 feet above sea level, and Gorakhpur, which is only about 250 feet above sea level.</p>
+			<p>Hover over the stations labeled Tingri and Gorakhpur. How do their elevations compare? </p>
 				
+			</div>
+			<div>
+				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
 			</div>
 		
 			<div>
@@ -462,7 +465,10 @@ At the completion of each module you can check your understanding of the feature
 				
 			</div>
 			<div>
-				<p>What do you notice about the graph of the temperatures at the two locations? You should see that the place at the higher elevation has lower temperatures throughout the year.</p>
+				<p>What do you notice about the graph of the temperatures at the two locations?</p>
+			</div>
+			<div>
+				<p>You should see that even though both places have a similar rise and fall of tempeartures, the place at the higher elevation (Tingri) has a consistently lower temperatures throughout the year.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
