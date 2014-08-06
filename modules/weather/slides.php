@@ -705,7 +705,7 @@ At the completion of each module you can check your understanding of the feature
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic">Earth-Sun Simulator</a>, to see how the location of the earth at different times of the year causes the maximum angle of the sun in the sky to change in a cyclical pattern.</p>
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic"target="_blank">Earth-Sun Simulator</a>, to see how the location of the earth at different times of the year causes the maximum angle of the sun in the sky to change in a cyclical pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
