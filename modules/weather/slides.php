@@ -229,23 +229,28 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In the graph above, you can see how average daily temperature changes at a particular location over a three-year period. The graph shows average daily temperature in Washington DC from January 1, 2000 to January 1, 2003.</p>
+				<p>The graph above shows how average daily temperature in Washington DC changed between January 1, 2000 and January 1, 2003.</p>
 			</div>
 			<div>
-				<p>What do you notice? You should see that the temperature rises and falls throughout each year. For example, it’s coldest in January and warmest in July.</p>
+				<p>What do you notice? Does the graph have a pattern? How often does the pattern repeat? </p>
 			</div>
 			<div>
-				<p>But is it identical from year to year? No, even though the pattern is very similar from one year to the next, there is also variation from year to year.  For example, the highest temperature in July 2002 is higher than the highest temperature in either July of 2000 or July of 2001.</p>
-			</div>
-
-			<div>
-				<p>Because air temperature varies from day to day, not every July 1st is going to have the same air temperature and not every January 1st is going to have the same temperature. That is why you see variation in the pattern of temperatures from year to year.</p>
+				<p>You should see that the temperature rises and falls consistently throughout each year. But is it always the same? Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a section of the graph in more detail, just drag a box around it. You can always zoom back out by hitting "Reset View".</p>
 			</div>
 			<div>
-				<p>Look closely to see if you can locate some other differences and think about why they might occur.</p>
+				<p>In some years the coldest day falls in December. In others it falls in January. The warmest day can fall in July or August. Note that the actual temperature varies between these warmest days as well. The warmest day in 2002 is warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
 			</div>
+			
 			<div>
-				<p>You will now have a chance to observe annual tempearture patterns at locations and dates of your choosing. See if other locations in the United States have similar patterns to the pattern you just observed.</p>
+				<p>Another way to think about annual temperature variation is by looking at the line on the graph. Does the line increase smoothly from the lowest temperature to the highest temperature of each year? Is the shape of the line the same from year to year?</p>
+			</div>
+				
+			<div>
+				<p>The line is jagged because air temperature varies from day to day. Because of daily temperature variation, not every July 1st is going to have the same air temperature and not every July 2nd is going to have the same air temperature. If the difference in temperature from day to day is not always the same, then the annual temperature pattern will be different from year to year as well.</p>
+			</div>
+		
+			<div>
+				<p>You will now have a chance to observe annual temperature patterns at locations and dates of your choosing. See if other locations in the United States have annual temperature patterns of warmer summers and cooler winters. Do the daily temperatures over 3 year periods show variation between years?</p>
 			</div>
 		</div>
 	</div>
@@ -450,11 +455,24 @@ At the completion of each module you can check your understanding of the feature
 				<p>In this activity you will see how elevation affects air temperature. The map is centered on the Himalayas, a mountain range between India and China which is home to the planet's highest peaks, including Mt. Everest.</p>
 			</div>
 			<div>
+<<<<<<< HEAD
 				<p>Kathmandu, Nepal is pinpointed. Zoom two times. The yellow dots represent the 20 closet reporting stations to Kathmandu.<p>
 			</div>
 			<div>
 				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
 			</div>
+=======
+				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closest reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
+			</div>
+			<div>
+			<p>Hover over the stations labeled Tingri and Gorakhpur. How do their elevations compare? </p>
+				
+			</div>
+			<div>
+				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
+			</div>
+		
+>>>>>>> FETCH_HEAD
 			<div>
 				<p>Now click on the reporting stations in Tingri, Tibet (northeast of Kathmandu) and Gorakhpur, India (southwest of Kathmandu).</p>
 			</div>		
@@ -462,9 +480,16 @@ At the completion of each module you can check your understanding of the feature
 				<p>The graph shows the average daily temperatures in Tingri (14,108 feet above sea level) and Gorakhpur (253 feet above sea level) from December 31, 2003 to December 30, 2004.</p>
 			</div>
 			<div>
+<<<<<<< HEAD
 				<p>What do you notice about the graph of the temperatures at the two locations?</p> 
 			</div>
 			<div><p>You should see that the place at the higher elevation, Tingri, has consistently lower temperatures throughout the year.</p>
+=======
+				<p>What do you notice about the graph of the temperatures at the two locations?</p>
+			</div>
+			<div>
+				<p>You should see that even though both places have a similar rise and fall of tempeartures, the place at the higher elevation (Tingri) has a consistently lower temperatures throughout the year.</p>
+>>>>>>> FETCH_HEAD
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
@@ -496,7 +521,7 @@ At the completion of each module you can check your understanding of the feature
 				
 			</div>
 			<div>
-				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature. For example, a cold air mass may have moved in to an area from somewhere else.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than elevation may be responsible for the difference in temperature.</p>
 			
 			</div>
 			<div>
