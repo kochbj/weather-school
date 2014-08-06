@@ -575,7 +575,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>You should also notice that the line on the graph for the place that is closer to the water is flatter than the line for the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water. The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
-				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. As long as the water isn't frozen, the water makes the air above it warmer than it would otherwise be in the winter, and it makes the air above it cooler than it would otherwise be in the summer. Being closer to water also makes the difference between high and low temperatures smaller than if you were farther from the water.</p>
+				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of proximity to a large bodies of water on temperature at locations of your choosing. See if other locaitons near large bodies of water experience cooler summers and warmer winters compared to nearby locations further inland.</p>
