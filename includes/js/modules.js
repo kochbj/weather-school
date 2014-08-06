@@ -9,16 +9,19 @@ var replayData;
 var slideInit;
 var loadAirMovementVids;
 function	nextClickevt ( evt ) {
+			$(this).data("currSlide",-1);
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
 			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
+				$(this).data("currSlide",instrSlider.currentSlideIndex);
 				instrSlider.toSlide( 'next' );
 			} else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
+				$(this).data("currSlide",-1);
 				ctrlSlider.toSlide( 'next' );
 			}			
 			setTimeout( locationUpdate , 500 );
-			$(this).off();
+			$(this).off('click',nextClickevt);
 		}
-$( '#slider-navigation .next' ).on(')click',nextClickevt);
+$( '#slider-navigation .next' ).on('click',nextClickevt);
 function	prevClickevt ( evt ) {		
 			var instrSlider = ( ctrlSlider.$currentSlide.find( '.instructions .slider' ).length > 0 ? ctrlSlider.$currentSlide.find( '.instructions .slider' )[0].sliderObj : false );
 			if ( instrSlider && instrSlider.currentSlideIndex > 0 && !evt.ctrlKey ) {
@@ -28,7 +31,7 @@ function	prevClickevt ( evt ) {
 				ctrlSlider.toSlide( 'prev' );
 			}
 			setTimeout( locationUpdate , 500 );
-			$(this).off();
+			$(this).off('click',prevClickevt);
 		}
 $( '#slider-navigation .prev' ).on('click',prevClickevt);
 function ctrlSlider_cb ( psobj ) {
@@ -37,10 +40,19 @@ function ctrlSlider_cb ( psobj ) {
 	location.hash = '#'+id;
 	
 	/* Initialize the slide if necessary. */
-	console.log(psobj.$currentSlide.attr('data-slide-type'));
+	//console.log(jQuery('#slider-navigation .next').data('events'));
+	//console.log(jQuery(psobj.$currentSlide.find('.plusslider-pagination li').data('events')));
+	$('#slider-navigation .next').off('click.animate');
 	if ( slideInit.hasOwnProperty( id ) && !slideInit[id].is_initialized ) {
 		slideInit[id].initialize();
+		psobj.$currentSlide.find('.plusslider-pagination li').on('click.animate', function(evt){
+			$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
+			$('#slider-navigation .next').trigger('click.animate');
+			});
 		slideInit[id].is_initialized = true;
+	}
+	else if (slideInit.hasOwnProperty( id ) && typeof(slideInit[id].animate)!='undefined' ){
+		$( '#slider-navigation .next' ).on('click.animate', aaasClimateViz.widgets[aaasClimateViz.widgetLookup[id]].settings.animate);
 	}
 	if (id == "daily-temperature-air") setTimeout(loadAirMovementVids, 500);
 	/*reset Instruction sliders for key slides*/
@@ -122,8 +134,12 @@ function ctrlSlider_cb ( psobj ) {
 	}
 
 	/* keep user from hitting next before page load */
-	if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
-	if( typeof(jQuery( '#slider-navigation .prev' ).data( "events" ))==="undefined") $( '#slider-navigation .prev' ).on('click',prevClickevt);
+	$( '#slider-navigation .next' ).off('click',nextClickevt);
+	$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
+	$( '#slider-navigation .prev' ).off('click',prevClickevt);
+	$( '#slider-navigation .prev' ).on('click',prevClickevt);
+	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
+	//if( typeof(jQuery( '#slider-navigation .prev' ).data( "events" ))==="undefined") $( '#slider-navigation .prev' ).on('click',prevClickevt);
 }
 function locationUpdate ( ) {
 	var section , screen , instruction;
@@ -147,8 +163,11 @@ function locationUpdate ( ) {
 		( instruction ? '.' + instruction : '' )
 	);
 	$( '.you-are-here .screen-num' ).html( ctrlSlider.currentSlideIndex + 1 );
-	if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
-	if( typeof(jQuery( '#slider-navigation .prev' ).data( "events" ))==="undefined") $( '#slider-navigation .prev' ).on('click',prevClickevt);
+	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
+	$( '#slider-navigation .next' ).off('click',nextClickevt);
+	$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
+	$( '#slider-navigation .prev' ).off('click',prevClickevt);
+	$( '#slider-navigation .prev' ).on('click',prevClickevt);
 }
 
 $( function( ) {

@@ -100,8 +100,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="daily-temperature-example-ds" class="restricted-ds"></div>
-		<div id="daily-temperature-example-tc" class="restricted-tc"></div>
+		<div id="daily-temperature-example-ds" class="full-ds"></div>
+		<div id="daily-temperature-example-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -298,8 +298,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="temperature-lat-northern-ds" class="restricted-ds"></div>
-		<div id="temperature-lat-northern-tc" class="restricted-tc"></div>
+		<div id="temperature-lat-northern-ds" class="full-ds"></div>
+		<div id="temperature-lat-northern-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -344,8 +344,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="temperature-lat-southern-ds" class="restricted-ds"></div>
-		<div id="temperature-lat-southern-tc" class="restricted-tc"></div>
+		<div id="temperature-lat-southern-ds" class="full-ds"></div>
+		<div id="temperature-lat-southern-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -441,33 +441,34 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Temperature and Elevation</h2>
 	</div>
 	<div class="workarea">
-		<div id="temperature-elevation-example-ds" class="restricted-ds"></div>
-		<div id="temperature-elevation-example-tc" class="restricted-tc"></div>
+		<div id="temperature-elevation-example-ds" class="full-ds"></div>
+		<div id="temperature-elevation-example-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will see how elevation affects air temperature. The map above pinpoints the Himalayas, a mountain range in Southeast Asia, which is home to the planet's highest peaks including Mt. Everest.</p>
+				<p>In this activity you will see how elevation affects air temperature. The map is centered on the Himalayas, a mountain range between India and China which is home to the planet's highest peaks, including Mt. Everest.</p>
 			</div>
 			<div>
-				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closet reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
+				<p>Kathmandu, Nepal is pinpointed. Zoom two times. The yellow dots represent the 20 closet reporting stations to Kathmandu.<p>
 			</div>
 			<div>
-			<p>This activity will explore the temperature patterns in Tingri, which is 14,000 feet above sea level, and Gorakhpur, which is only about 250 feet above sea level.</p>
-				
-			</div>
-		
-			<div>
-				<p>The graph shows the average daily temperatures in Tingri and Gorakhpur from December 31, 2003 to December 30, 2004.</p>
-				
+				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
 			</div>
 			<div>
-				<p>What do you notice about the graph of the temperatures at the two locations? You should see that the place at the higher elevation has lower temperatures throughout the year.</p>
+				<p>Now click on the reporting stations in Tingri, Tibet (northeast of Kathmandu) and Gorakhpur, India (southwest of Kathmandu).</p>
+			</div>		
+			<div>
+				<p>The graph shows the average daily temperatures in Tingri (14,108 feet above sea level) and Gorakhpur (253 feet above sea level) from December 31, 2003 to December 30, 2004.</p>
+			</div>
+			<div>
+				<p>What do you notice about the graph of the temperatures at the two locations?</p> 
+			</div>
+			<div><p>You should see that the place at the higher elevation, Tingri, has consistently lower temperatures throughout the year.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
 			</div>
-		
 		</div>
 	</div>
 </div>
@@ -535,8 +536,8 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Temperature and Large Bodies of Water</h2>
 	</div>
 	<div class="workarea">
-		<div id="temperature-water-example-ds" class="restricted-ds"></div>
-		<div id="temperature-water-example-tc" class="restricted-tc"></div>
+		<div id="temperature-water-example-ds" class="full-ds"></div>
+		<div id="temperature-water-example-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -640,8 +641,8 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Example: Height of the Sun in the Sky</h2>
 	</div>
 	<div class="workarea">
-		<div id="height-sun-example-ds" class="restricted-ds"></div>
-		<div id="height-sun-example-tc" class="restricted-tc"></div>
+		<div id="height-sun-example-ds" class="full-ds"></div>
+		<div id="height-sun-example-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -766,8 +767,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="daylight-example1-ds" class="restricted-ds"></div>
-		<div id="daylight-example1-tc" class="restricted-tc"></div>
+		<div id="daylight-example1-ds" class="full-ds"></div>
+		<div id="daylight-example1-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -788,8 +789,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="daylight-example2-ds" class="restricted-ds"></div>
-		<div id="daylight-example2-tc" class="restricted-tc"></div>
+		<div id="daylight-example2-ds" class="full-ds"></div>
+		<div id="daylight-example2-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -808,8 +809,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="daylight-example3-ds" class="restricted-ds"></div>
-		<div id="daylight-example3-tc" class="restricted-tc"></div>
+		<div id="daylight-example3-ds" class="full-ds"></div>
+		<div id="daylight-example3-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -829,8 +830,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
-		<div id="daylight-example4-ds" class="restricted-ds"></div>
-		<div id="daylight-example4-tc" class="restricted-tc"></div>
+		<div id="daylight-example4-ds" class="full-ds"></div>
+		<div id="daylight-example4-tc" class="full-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">

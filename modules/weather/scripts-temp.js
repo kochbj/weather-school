@@ -29,11 +29,10 @@ function cbDaylightEx1 ( evt ) {
 	if ( evt.type == 'initialize' ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
-			/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap: true } );
+			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap: true } );
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();*/
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);	
+ 			wInstance.map.date.ui.find('.ui-state-active').click();
 		} , 1000 );
 	}
 }
@@ -48,7 +47,6 @@ function cbDaylightEx2 ( evt ) {
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
-			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
 	}
 }
@@ -62,7 +60,6 @@ function cbDaylightEx3 ( evt ) {
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
-			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
 	}
 }
@@ -76,7 +73,6 @@ function cbDaylightEx4 ( evt ) {
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
-			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
 	}
 }
@@ -121,7 +117,7 @@ function cbHeightSunAirTempEx (evt) {
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		//console.log(wInstance);
+		console.log(wInstance);
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
 			var dateVals=[];
@@ -133,7 +129,7 @@ function cbHeightSunAirTempEx (evt) {
 		setTimeout( function() {
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunAngle']);
-			//console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
+			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
 			}, 15000	);
 	}
 }
@@ -143,7 +139,7 @@ function cbDaylightAirTempEx (evt) {
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		//console.log(wInstance);
+		console.log(wInstance);
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 41.87 , -87.61 ), staticmap:true } );
 			var dateVals=[];
@@ -155,7 +151,7 @@ function cbDaylightAirTempEx (evt) {
 		setTimeout( function() {
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunHours']);
 			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
-			//console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
+			console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
 			}, 15000	);
 	}
 }
@@ -237,7 +233,7 @@ function mapXvis ( evt ) {
 			this.settings.displayWidgets[0].settings.displayWidgets[0].settings.container
 			.show()
 			.animate( { left:'36%' } , 1000 , 'swing' );
-			//console.log(this.settings.displayWidgets[0].settings);
+			console.log(this.settings.displayWidgets[0].settings);
 		}
 		this.settings.displayStatus = 'vis';
 	} else if ( evtType == 'initialize' ) {
@@ -285,7 +281,6 @@ function cbDailyTempEx ( evt ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
 		wInstance.map.date.data('value',[[new Date( 2001 , 0 , 1 ),new Date( 2002 , 0 , 1 )]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
 	}
 }
@@ -301,7 +296,6 @@ function cbHeightSunEx ( evt ) {
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
 	}
 }
@@ -364,19 +358,20 @@ function cbDailyTempOld ( evt ) {
 	}
 }
 
+function TempLatNorthernCl1 (evt) {
+		var wInstance = evt.data.wInstance;
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : ( 49.886083,-97.152921 ), staticmap: true } );
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 29.461029,-98.697739 ), staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2001 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2001 , 11 , 30 ) );
+		wInstance.map.date.ui.find('.ui-state-active').click();
+		//$(this).off(TempLatNorthernCl1);
+}
 var widgetAnimations = {
 	placemarkers: function(wInstance,marker1,marker2,date1,date2) {
 		if (wInstance.map.date.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
 		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
-		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.map.date.addClass('clicked');
-		},
-	placestations: function(wInstance,marker1,stations,date1,date2) {
-		if (wInstance.map.date.hasClass('clicked')) return;
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
@@ -409,16 +404,16 @@ function cbTempLatNorthern ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
-	//console.log(wInstance);
+	console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	/*wInstance.settings.animate= function(evt){
-				//console.log(wInstance);
-				//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
+				console.log(wInstance);
+				if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 				var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 				if (currSlide == 1) widgetAnimations.placemarkers(wInstance, new google.maps.LatLng( 49.886083,-97.152921 ), new google.maps.LatLng( 29.461029,-98.697739 ), new Date( 2001 , 0 , 0 ), new Date( 2001 , 11 , 30 ) );
 				if (currSlide == 3) widgetAnimations.swinggraph(wInstance);
-				//console.log("GOT HERE");
+				console.log("GOT HERE");
 	}*/
 	setTimeout( function ( ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
@@ -448,7 +443,7 @@ function cbTempLatSouthern ( evt ) {
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+		$( '#slider-navigation .next' ).on('click',wInstance.settings.animate);
 	} , 1000 );
 	}
 }	
@@ -461,15 +456,14 @@ function cbElevExample ( evt ) {
 	if ( evt.type == 'initialize' ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-		////console.log(wInstance.map.widget);
-		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 27.71,85.33 ), stationNames: ["TINGRI", "GORAKHPUR"], staticmap: true } );
+		//console.log(wInstance.map.widget);
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 27.71,85.33 ), stationNames: ["TINGRI", "GORAKHPUR"], staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 //		setTimeout( function () {
 //		google.maps.event.clearListeners(wInstance.map, 'click');
-//		wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true}); }, 2000 );*/
+//		wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true}); }, 2000 );
 	} , 1000 );
 	}
 }	
@@ -481,12 +475,11 @@ function cbLargeBodiesWaterExample ( evt ) {
 	if ( evt.type == 'initialize' ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-/*////console.log(wInstance.map.widget);
+		//console.log(wInstance.map.widget);
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 69.38,20.71 ), stationNames: ["TROMSO", "KAUTOKEINO"], staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();*/
+ 		wInstance.map.date.ui.find('.ui-state-active').click();
 	} , 1000 );
 	}
 }	
@@ -718,17 +711,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDailyTempEx ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daily-temperature-example-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide >= 1) {
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#daily-temperature-example .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbDailyTempEx ]
 				}
 			);
 		}
@@ -769,6 +752,8 @@ var slideInit = {
 	'temperature-lat-northern' : {
 		is_initialized : false ,
 		initialize : function ( ) {
+			console.log(this);
+			console.log(Object.keys(this));
 			aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
@@ -786,18 +771,7 @@ var slideInit = {
 						)
 					],
 					callbacks : [ cbTempLatNorthern ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
-						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#temperature-lat-northern .plusslider-pagination li').off('click.animate');
-						}
-					}
+
 			}
 			);
 		}
@@ -824,9 +798,12 @@ var slideInit = {
 					callbacks : [ cbTempLatSouthern  ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-southern-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
+						if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide >= 1) {
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
+						else if (currSlide == 3) widgetAnimations.swinggraph(wInstance); 
+						else if (currSlide > 3) {
+							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-lat-southern .plusslider-pagination li').off('click.animate');
@@ -880,19 +857,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbElevExample ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-elevation-example-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
-						else if (currSlide >= 4) {
-							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#temperature-elevation-example .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbElevExample ]
 				}
 			);
 		}
@@ -942,19 +907,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbLargeBodiesWaterExample ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-water-example-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
-						else if (currSlide >= 2) {
-						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#temperature-water-example .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbLargeBodiesWaterExample ]
 				}
 			);
 		}
@@ -1003,17 +956,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunEx ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-example-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide >= 1) {
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#height-sun-example .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbHeightSunEx ]
 				}
 			);
 		}
@@ -1130,19 +1073,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx1 ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example1-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2004 , 0 , 0], [2004 , 11 , 30 ] );
-						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2004 , 0 , 0], [2004 , 11 , 30 ] );
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#daylight-example1 .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbDaylightEx1 ]
 				}
 			);
 		}
@@ -1166,17 +1097,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx2 ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example2-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide >= 1) {
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#daylight-example2 .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbDaylightEx2 ]
 				}
 			);
 		}
@@ -1200,17 +1121,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx3 ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example3-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide >= 1) {
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#daylight-example3 .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbDaylightEx3 ]
 				}
 			);
 		}
@@ -1234,17 +1145,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx4 ],
-					animate: function (evt) {
-						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example4-ds']];
-						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide >= 1) {
-							widgetAnimations.swinggraph(wInstance);
-							$('#slider-navigation .next').off('click.animate');
-							$('#daylight-example4 .plusslider-pagination li').off('click.animate');
-						}
-					}
+					callbacks : [ cbDaylightEx4 ]
 				}
 			);
 		}
@@ -1500,6 +1401,7 @@ function onYouTubeIframeAPIReady2() {
 }
 
 function onPlayerReady(event) {
+		console.log("I RAN THIS 4");	
     //event.target.playVideo();
     event.target.setPlaybackQuality("hd720");
     event.target.mute();

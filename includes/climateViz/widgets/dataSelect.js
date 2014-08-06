@@ -560,8 +560,6 @@ function dataSelect_instantiate(wInstance) {
 					onSelect : function (value,ui) {
 						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
 						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
-						console.log($( this ).parents( '.map-date' ));
-						console.log(wInstance.map.date);
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
@@ -1138,9 +1136,11 @@ function refreshStations ( evt ) {
 				}
 				if ( evt.data.stationNames) {
 					for ( i in wInstance.markers[servermsg[0].mid].stations ) {
-						if  (evt.data.stationNames.indexOf(wInstance.markers[servermsg[0].mid].stations[i].name) == -1)  continue; 
-						google.maps.event.trigger( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' );}
-					for ( i in wInstance.markers[servermsg[0].mid].stations ) { google.maps.event.clearListeners( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' ); }
+						wInstance.selectedStations=[];
+						if  (evt.data.stationNames.indexOf(wInstance.markers[servermsg[0].mid].stations[i].name) == -1) google.maps.event.clearListeners( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' ); 
+						else wInstance.selectedStations.push(wInstance.markers[servermsg[0].mid].stations[i].marker );}
+						//google.maps.event.trigger( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' );}
+					//for ( i in wInstance.markers[servermsg[0].mid].stations ) { google.maps.event.clearListeners( wInstance.markers[servermsg[0].mid].stations[i].marker , 'click' ); }
 					//google.maps.event.clearListeners(wInstance.map, 'click');
 					//wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true});
 				}
@@ -1549,7 +1549,6 @@ function fetchStats( evt ) {
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficient.
 	this.data = {};
-	console.log("FETCHSTATSCALLED");	
 	this._callback({type:'data-load'});
 	for (i in this.settings.displayWidgets) {
 		this.settings.displayWidgets[i].notify('loading');

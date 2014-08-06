@@ -34,7 +34,6 @@ function statspanel_createPanel(data, wInstance) {
 		wInstance.settings.container.find( '.sunAngle' ).append( $( '<td>' + data[mid].dataMeta.sunImage.format( data[mid].data[idxData].sunImage ) + '<span class="angle-val">' + data[mid].dataMeta.sunAngle.format( data[mid].data[idxData].sunAngle ) + '</span></td>' ) );
 		//position sun angle value
 		posSunImg = $('.sunAngle td:last-child img').position();
-		console.log($('.sunAngle td').position());
 		$('.sunAngle td:last-child .angle-val').addClass( 'positioned' ).css( {
 			position : 'absolute' ,
 			left     : labelDisplacement[ ( Math.round( data[mid].data[idxData].sunAngle / 5 ) * 5 ) ][0] ,

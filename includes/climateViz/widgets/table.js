@@ -19,7 +19,6 @@ function createTable(data, wInstance) {
 	}
 	if (wInstance.settings.selectForOutput) {
 		tbl.find( '.header th' ).click( function ( evt, clickId ) {
-			console.log(clickCol);
 			if ( clickId ) {
 				var datapoint = clickId; 
 				var clickIdx = $( this ).closest( 'table' ).find('col').map(function() { return this.id}).get().indexOf(clickId) + 1;
@@ -28,7 +27,6 @@ function createTable(data, wInstance) {
 
 				var clickCol= $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + clickIdx + ')' );
 				var clickTh=tbl.find( 'tr.header th:nth-child(' + clickIdx + ')');
-				console.log(clickTh);
 			}
 			else {
 				var clickTh= $(this);
