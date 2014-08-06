@@ -51,8 +51,9 @@ function ctrlSlider_cb ( psobj ) {
 			});
 		slideInit[id].is_initialized = true;
 	}
-	else if (slideInit.hasOwnProperty( id ) && typeof(slideInit[id].animate)!='undefined' ){
-		$( '#slider-navigation .next' ).on('click.animate', aaasClimateViz.widgets[aaasClimateViz.widgetLookup[id]].settings.animate);
+	else if (slideInit.hasOwnProperty( id ) && typeof(aaasClimateViz.widgets[aaasClimateViz.widgetLookup[location.hash+'-ds']])!='undefined' && typeof(aaasClimateViz.widgets[aaasClimateViz.widgetLookup[location.hash+'-ds']].settings.animate)!='undefined'){
+		$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
+		$( '#slider-navigation .next' ).on('click.animate', aaasClimateViz.widgets[aaasClimateViz.widgetLookup[location.hash+'-ds']].settings.animate);
 	}
 	if (id == "daily-temperature-air") setTimeout(loadAirMovementVids, 500);
 	/*reset Instruction sliders for key slides*/
