@@ -460,11 +460,11 @@ At the completion of each module you can check your understanding of the feature
 			<div>
 				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
 			</div>
+			<div>
 				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closest reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
 			</div>
 			<div>
 			<p>Hover over the stations labeled Tingri and Gorakhpur. How do their elevations compare? </p>
-				
 			</div>
 			<div>
 				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
