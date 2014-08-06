@@ -455,13 +455,11 @@ At the completion of each module you can check your understanding of the feature
 				<p>In this activity you will see how elevation affects air temperature. The map is centered on the Himalayas, a mountain range between India and China which is home to the planet's highest peaks, including Mt. Everest.</p>
 			</div>
 			<div>
-<<<<<<< HEAD
 				<p>Kathmandu, Nepal is pinpointed. Zoom two times. The yellow dots represent the 20 closet reporting stations to Kathmandu.<p>
 			</div>
 			<div>
 				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
 			</div>
-=======
 				<p>Zoom two times. Kathmandu, Nepal is pinpointed and the yellow dots represent the 20 closest reporting stations to Kathmandu. Tingri, Tibet (north of Kathmandu) and Gorakhpur, India (south of Kathmandu) are highlighted.</p>
 			</div>
 			<div>
@@ -471,8 +469,6 @@ At the completion of each module you can check your understanding of the feature
 			<div>
 				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
 			</div>
-		
->>>>>>> FETCH_HEAD
 			<div>
 				<p>Now click on the reporting stations in Tingri, Tibet (northeast of Kathmandu) and Gorakhpur, India (southwest of Kathmandu).</p>
 			</div>		
@@ -480,16 +476,13 @@ At the completion of each module you can check your understanding of the feature
 				<p>The graph shows the average daily temperatures in Tingri (14,108 feet above sea level) and Gorakhpur (253 feet above sea level) from December 31, 2003 to December 30, 2004.</p>
 			</div>
 			<div>
-<<<<<<< HEAD
 				<p>What do you notice about the graph of the temperatures at the two locations?</p> 
 			</div>
 			<div><p>You should see that the place at the higher elevation, Tingri, has consistently lower temperatures throughout the year.</p>
-=======
 				<p>What do you notice about the graph of the temperatures at the two locations?</p>
 			</div>
 			<div>
 				<p>You should see that even though both places have a similar rise and fall of tempeartures, the place at the higher elevation (Tingri) has a consistently lower temperatures throughout the year.</p>
->>>>>>> FETCH_HEAD
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
