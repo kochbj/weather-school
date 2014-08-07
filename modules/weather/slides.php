@@ -141,7 +141,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
 	<h2><br><br>Expand Your Knowledge</h2>	
-	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a> and how <a href="http://www.enviropedia.org.uk/Weather/Movement_of_Air.php" target="_blank">air masses move</a> because of temperature and pressure differences in the atmosphere.</p>
+	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>. Learn how <a href="http://www.enviropedia.org.uk/Weather/Movement_of_Air.php" target="_blank">air masses move</a> because of temperature and pressure differences in the atmosphere.</p>
 	</div>
 	<div class="completed-text">
 		<p> Hit the next button to continue to the next module or select a different one to explore from the menu. </p>
