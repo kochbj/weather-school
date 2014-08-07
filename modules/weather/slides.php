@@ -141,7 +141,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
 	<h2><br><br>Expand Your Knowledge</h2>	
-	<p>Find out how changes in the <a href="http://www.enviropedia.org.uk/Weather/Movement_of_Air.php" target="_blank">movement of air</a> are caused by temperature and pressure differences in the atmosphere.</p>
+	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a> and how <a href="http://www.enviropedia.org.uk/Weather/Movement_of_Air.php" target="_blank">air masses move</a> because of temperature and pressure differences in the atmosphere.</p>
 	</div>
 	<div class="completed-text">
 		<p> Hit the next button to continue to the next module or select a different one to explore from the menu. </p>
@@ -701,8 +701,6 @@ At the completion of each module you can check your understanding of the feature
 		<ul>
 			<li>For any place in the United States, how does the maximum height of the Sun in the sky during winter compare to the maximum height of the Sun in the sky during summer?</li>
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
-
-	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
 		<p>Use the <a href="#vis-sim-eliptic"target="_blank">Earth-Sun Simulator</a>, to see how the location of the earth at different times of the year causes the maximum angle of the sun in the sky to change in a cyclical pattern.</p>
