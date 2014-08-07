@@ -767,7 +767,7 @@ At the completion of each module you can check your understanding of the feature
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
+		<p>Find out how the height of the sun in the sky impacts the amount of energy that reaches the earth by viewing the direct vs. indirect diagram on <a href="http://www.astronomy.org/programs/seasons/">this website</a>.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
