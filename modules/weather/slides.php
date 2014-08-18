@@ -673,10 +673,16 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints New York City. The graph shows the height of the sun in the sky in New York City for each day of the year.</p>
+				<p>The map above pinpoints New York City.</p>
 			</div>
 			<div>
-				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
+				<p>The graph shows the <span class="tooltip" title="Maximum height of the sun in the sky is the highest the sun gets on a given day. It is measured as an angle, which can range from zero degrees to 90 degrees.">maximum height of the sun in the sky</span> in New York City for each day of the year.</p>
+			</div>
+			<div>
+				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. </p>
+			</div>
+			<div>
+				<p>How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
 			</div>
 			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky at locations and dates of your choosing. See if other locations in the United States have similar annual sun patterns compared to New York City.</p>
 			</div>
