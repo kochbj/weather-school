@@ -465,7 +465,7 @@ At the completion of each module you can check your understanding of the feature
 			<p>Hover over the stations labeled Tingri, Tibet (northest of Kathmandu) and Gorakhpur, India (southwest of Kathmandu). How do their elevations compare? </p>
 			</div>
 			<div>
-				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.Now click on the reporting stations in Tingri and Gorakhpur.</p>
+				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level. Now click on the reporting stations in Tingri and Gorakhpur.</p>
 			</div>
 					
 			<div>
