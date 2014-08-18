@@ -60,9 +60,10 @@ function ctrlSlider_cb ( psobj ) {
 	if (psobj.$currentSlide.attr( 'data-slide-type' ) == "key" ) { 
 		$("[data-slide-parent-id='"+id+"']").each( function ( idx, el ) {
 				var instrSlider = $(el).find( '.instructions .slider' );
-				if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
+				if (instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined' && slideInit[el.id].is_initialized ) instrSlider[0].sliderObj.toSlide( '0' );
 			});
 	}
+
 	/* Determine which nav manu item to highlight. */
 	$( '#slider-menu .current' ).removeClass( 'current' );
 	var navItem = $( '#slider-menu a[href=#'+id+']' );
@@ -121,7 +122,6 @@ function ctrlSlider_cb ( psobj ) {
 		$( '#click-cover').hide();
 		$( '#slider-menu a').removeClass('ui-accordion-header-active');
 	}	
-	
 	/*buttons for book end slides */
 	if ( psobj.currentSlideIndex == 0 ) {
 		$( '#slider-navigation .prev ').hide();
