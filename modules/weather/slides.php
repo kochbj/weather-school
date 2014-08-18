@@ -462,23 +462,19 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 		
 			<div>
-			<p>Hover over the stations labeled Tingri and Gorakhpur. How do their elevations compare? </p>
+			<p>Hover over the stations labeled Tingri, Tibet (northest of Kathmandu) and Gorakhpur, India (southwest of Kathmandu). How do their elevations compare? </p>
 			</div>
 			<div>
-				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
+				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.Now click on the reporting stations in Tingri and Gorakhpur.</p>
 			</div>
-			<div>
-				<p>Now click on the reporting stations in Tingri, Tibet (northeast of Kathmandu) and Gorakhpur, India (southwest of Kathmandu).</p>
-			</div>		
+					
 			<div>
 				<p>The graph shows the average daily temperatures in Tingri (14,108 feet above sea level) and Gorakhpur (253 feet above sea level) from December 31, 2003 to December 30, 2004.</p>
 			</div>
 			<div>
 				<p>What do you notice about the graph of the temperatures at the two locations?</p> 
 			</div>
-			<div><p>You should see that the place at the higher elevation, Tingri, has consistently lower temperatures throughout the year.</p>
-				<p>What do you notice about the graph of the temperatures at the two locations?</p>
-			</div>
+		
 			<div>
 				<p>You should see that even though both places have a similar rise and fall of tempeartures, the place at the higher elevation (Tingri) has a consistently lower temperatures throughout the year.</p>
 			</div>
