@@ -560,16 +560,22 @@ At the completion of each module you can check your understanding of the feature
 				<p>In this activity, you are going to see what effect being close to a large body of water has on air temperature at a place.</p>
 			</div>
 			<div>	
-				<p>The map above pinpoints Troms, Norway, which is located on the Norwegian Sea. Zoom two times. In this activity you will explore the temperature patterns in Troms and a town 125 miles southest of Troms, Kautokeino. Both locations are highlighted on the map.</p>
+				<p>The map pinpoints Troms, a city in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Troms and in Kautokeino, a small town in Norway about 125 miles southeast of Troms.</p>
+			</div>
+			<div>
+			<p>Zoom two times.The yellow dots represent the 20 closest reporting stations to Troms. </p>
+			</div>
+			<div>
+			<p>Click on the reporting stations labeled Tromso and Kautokeino. </p>
 			</div>
 			<div>
 				<p>The graph above shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
-				<p>What you should see is that at some times of the year the place that is closer to the water is cooler than the place that is farther from the water, but at other times of the year it is just the opposite. Then it's colder farther away from the water.</p>
+				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Troms, which is close to the water, but in the summer, Troms is a little cooler than Kautokeino.</p>
 			</div>
 			<div>
-				<p>You should also notice that the line on the graph for the place that is closer to the water is flatter than the line for the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water. The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
+				<p>You should also notice that the line on the graph for Troms, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water. The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
