@@ -575,7 +575,10 @@ At the completion of each module you can check your understanding of the feature
 				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Troms, which is close to the water, but in the summer, Troms is a little cooler than Kautokeino.</p>
 			</div>
 			<div>
-				<p>You should also notice that the line on the graph for Troms, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water. The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
+				<p>You should also notice that the line on the graph for Troms, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water.</p>
+			</div>
+			<div>
+				<p>The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
