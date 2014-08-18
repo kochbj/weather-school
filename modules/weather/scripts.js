@@ -948,7 +948,7 @@ var slideInit = {
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
-						else if (currSlide >= 2) {
+						else if (currSlide >= 4) {
 						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
