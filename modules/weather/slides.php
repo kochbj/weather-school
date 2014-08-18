@@ -611,7 +611,9 @@ At the completion of each module you can check your understanding of the feature
 				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
-				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, a cold air mass may have moved into an area from somewhere else or the places may be at different latitudes or elevations above sea level.</p>
+				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, the places may be at different latitudes or elevations above sea level.</p>
+			</div>
+			<div>
 				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
 			</div>
 			<div>
