@@ -452,10 +452,10 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will see how elevation affects air temperature. The map is centered on the Himalayas, a mountain range between India and China which is home to the planet's highest peaks, including Mt. Everest.</p>
+				<p>In this activity you will see how elevation affects air temperature.</p>
 			</div>
 			<div>
-				<p>Kathmandu, Nepal is pinpointed. Zoom two times. The yellow dots represent the 20 closet reporting stations to Kathmandu.<p>
+				<p>The map is centered on the Himalayas, a mountain range between India and China which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, Nepal is pinpointed. Zoom two times. The yellow dots represent the 20 closet reporting stations to Kathmandu.<p>
 			</div>
 			<div>
 				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
@@ -465,7 +465,10 @@ At the completion of each module you can check your understanding of the feature
 			<p>Hover over the stations labeled Tingri, Tibet (northest of Kathmandu) and Gorakhpur, India (southwest of Kathmandu). How do their elevations compare? </p>
 			</div>
 			<div>
-				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level. Now click on the reporting stations in Tingri and Gorakhpur.</p>
+				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
+			</div>
+			<div>
+			<p> Click on the reporting stations in Tingri and Gorakhpur.</p>
 			</div>
 					
 			<div>
@@ -697,7 +700,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="#vis-sim-eliptic"target="_blank">Earth-Sun Simulator</a>, to see how the location of the earth at different times of the year causes the maximum angle of the sun in the sky to change in a cyclical pattern.</p>
+		<p>Use the <a href="#vis-sim-eliptic"target="_blank">Seasons Simulator</a>, to see how the location of the earth at different times of the year causes the maximum angle of the sun in the sky to change in a cyclical pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
