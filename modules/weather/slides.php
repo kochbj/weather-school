@@ -639,7 +639,7 @@ At the completion of each module you can check your understanding of the feature
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">chemical properties of water</a> cause large bodies of water to have a moderating effect on air temperature.</p>
+		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">chemical properties of water</a> cause large bodies of water to have a moderating effect on air temperature on nearby land.</p>
 	</div>
 	</div>
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
