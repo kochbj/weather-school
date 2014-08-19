@@ -427,6 +427,7 @@ var widgetAnimations = {
 		},
 elevatetable: function(wInstance) {
 		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('elevated')) return;
+		wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
 		wInstance.settings.displayWidgets[0].settings.container
 			.animate( { height:'50%' } , {step: function(now, fx){
 			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");

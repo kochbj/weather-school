@@ -53,7 +53,7 @@
 
 .workarea .full-tb { right: 0px; left: 100%; width: 64%; top: 0px;  display: none;}
 .workarea .full-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
-.workarea .full-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; border-top:1px dashed grey; }
+.workarea .full-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
 
 .workarea .split-tc.unrestricted{display: none; }
 .workarea .split-tb.unrestricted{display: none; }
