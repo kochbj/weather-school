@@ -429,9 +429,9 @@ elevatetable: function(wInstance) {
 		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('elevated')) return;
 		wInstance.settings.displayWidgets[0].settings.container
 			.animate( { height:'50%' } , {step: function(now, fx){
-			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("height", 100-now+"%");
+			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
 			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
-			}}, 1000, "swing");
+			}}, 1000, "linear");
 }
 }
 function cbTempLatNorthern ( evt ) {
