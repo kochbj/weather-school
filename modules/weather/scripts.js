@@ -429,7 +429,8 @@ elevatetable: function(wInstance) {
 		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('elevated')) return;
 		wInstance.settings.displayWidgets[0].settings.container
 			.animate( { height:'50%' } , {step: function(now, fx){
-			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("top", 100-now+"%");
+			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("height", 100-now+"%");
+			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
 			}}, 1000, "swing");
 }
 }
