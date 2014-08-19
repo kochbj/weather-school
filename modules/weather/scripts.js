@@ -116,7 +116,7 @@ function cbBonaire ( evt ) {
 		} , 1000 );
 	}
 }
-function cbHeightSunAirTempEx (evt) {
+/*function cbHeightSunAirTempEx (evt) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
@@ -137,7 +137,20 @@ function cbHeightSunAirTempEx (evt) {
 			}, 15000	);
 	}
 }
-
+*/
+function cbHeightSunAirTempEx (evt) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	//console.log(wInstance);
+	if ( evt.type == 'initialize' ) {
+	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+	setTimeout( function ( ) {
+		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+	} , 1000 );
+	}
+}
 function cbDaylightAirTempEx (evt) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -374,6 +387,16 @@ var widgetAnimations = {
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.map.date.addClass('clicked');
 		},
+	placetablemarker: function(wInstance,marker,year) {
+		if (wInstance.map.date.hasClass('clicked')) return;
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
+		var dateVals=[];
+		wInstance.map.date.data('hidden',false);
+		for (i=0; i<12; i++) dateVals.push(new Date(year,i,15));
+		wInstance.map.date.data( 'value', dateVals);
+ 		wInstance.map.date.ui.find('.ui-state-active').click();
+		wInstance.map.date.addClass('clicked');
+		},
 	placestations: function(wInstance,marker1,stations,date1,date2) {
 		if (wInstance.map.date.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
@@ -400,10 +423,16 @@ var widgetAnimations = {
 			.animate( { left:'36%' } , 1000 , 'swing',function() {
 					wInstance.map.setCenter(mapCenter);
 			});
-		wInstance.settings.displayWidgets[0].settings.container.addClass('clicked');
-		}
+		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
+		},
+elevatetable: function(wInstance) {
+		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('elevated')) return;
+		wInstance.settings.displayWidgets[0].settings.container
+			.animate( { height:'50%' } , {step: function(now, fx){
+			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("top", 100-now+"%");
+			}}, 1000, "swing");
 }
-
+}
 function cbTempLatNorthern ( evt ) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
 	if ( !evt ) { evt = { type : null }; }
@@ -1071,7 +1100,24 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunAirTempEx ]
+					callbacks : [ cbHeightSunAirTempEx ],
+					animate: function (evt) {
+						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-air-temperature-example-ds']];
+						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
+						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
+						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+						else if (currSlide == 2) {
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+							widgetAnimations.swinggraph(wInstance);
+						}
+						else if (currSlide>=3) {
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+							widgetAnimations.swinggraph(wInstance);
+							widgetAnimations.elevatetable(wInstance);
+							$('#slider-navigation .next').off('click.animate');
+							$('#height-sun-air-temperature-example .plusslider-pagination li').off('click.animate');
+						}
+					}
 				}
 			);
 		}
