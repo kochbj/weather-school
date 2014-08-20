@@ -45,15 +45,16 @@
 .workarea .restricted-tc { right: 0px; left: 36%; width: 64%; }
 
 .workarea .full-ds { left: 0px; right: 0px; }
-//.workarea .full-tc { right: 0px; left: 100%; width:64%; display: none;}
+.workarea .full-tc { right: 0px; left: 100%; width:64%; display: none;}
+.workarea .display-tc { left: 0px; right: 0px; }
 
 .workarea .split-tb { right: 0px; left: 36%; width: 64%; bottom: 50% !important; top: 0px; border-bottom:1px dashed grey;}
 .workarea .split-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
-.workarea .split-tc { right: 0px; left: 36%; width: 64%; top: 50%; bottom: 0px;}
+//.workarea .split-tc { right: 0px; left: 36%; width: 64%; top: 50%; bottom: 0px;}
 
 .workarea .full-tb { right: 0px; left: 100%; width: 64%; top: 0px;  display: none;}
 .workarea .full-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
-.workarea .full-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
+.workarea .split-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
 
 .workarea .split-tc.unrestricted{display: none; }
 .workarea .split-tb.unrestricted{display: none; }

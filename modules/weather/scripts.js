@@ -10,6 +10,22 @@ function widgetScroll ( evt ) {
 	}
 }
 
+function elevate( evt ) {
+	if ( !evt ) { evt = { type : null }; }
+	var wInstance = this;
+	console.log(evt.type);
+	if ( evt.type == 'initialize' ) {
+		console.log(wInstance);
+		console.log("GOT HERE1");
+	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
+	if (wInstance.settings.container.find('.output-table table tbody .header th.selected-for-graph').length==2) {
+		console.log("GOT HERE3");
+		widgetAnimations.elevatetable(evt.data.widget);
+		wInstance.settings.container.find('.output-table table tbody .header').off('click.elevate');
+	}
+	});
+	}
+}
 function locExSample ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -425,16 +441,39 @@ var widgetAnimations = {
 			});
 		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
 		},
-elevatetable: function(wInstance) {
-		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('elevated')) return;
-		wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
+	swingtable: function(wInstance) {
+		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
+				mapCenter = wInstance.map.getCenter();
+		wInstance.settings.container
+			.css( { 'width':'auto' } )
+			.animate(
+				{ right:'64%' } ,
+				1000 ,
+				function ( ) {
+					google.maps.event.trigger(wInstance.map, 'resize');
+				}
+			)
+			.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		wInstance.settings.displayWidgets[0].settings.container
+			.show()
+			.animate( { left:'36%' } , 1000 , 'swing',function() {
+					wInstance.map.setCenter(mapCenter);
+			});
+		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
+		
+		},
+	elevatetable: function(wInstance) {
+		//THIS ONE IS CALLED ON THE TABLE NOT THE DATASELECT
+		if (wInstance.settings.container.hasClass('elevated')) return;
+		wInstance.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
+		wInstance.settings.container
 			.animate( { height:'50%' } , {step: function(now, fx){
-			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
+			wInstance.settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
 			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
-			}}, 1000, "linear", function() {wInstance.settings.displayWidgets[0].settings.container.children()
+			}}, 1000, "linear", function() {wInstance.settings.container.children()
 			.css("overflow","auto")
 			.css("overflow","hidden");});
+		wInstance.settings.container.addClass('elevated');
 }
 }
 function cbTempLatNorthern ( evt ) {
@@ -1100,7 +1139,7 @@ var slideInit = {
 										}
 									)
 								] ,
-								callbacks : [ widgetScroll ]
+								callbacks : [ widgetScroll, elevate ]
 							}
 						)
 					],

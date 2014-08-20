@@ -4,7 +4,7 @@ function createTable(data, wInstance) {
 	if (wInstance.settings.filter) {
 		data = wInstance.settings.filter(data);
 	}
-	if (wInstance.settings.selectForOutput && typeof(wInstance.selection)=='undefined') {
+	if (wInstance.settings.selectForOutput) {
 		wInstance.selection = [];
 	}
 	tbl = wInstance.settings.container.find('.output-table table tbody');
@@ -16,11 +16,6 @@ function createTable(data, wInstance) {
 	for (datapoint in data[seriesKeys[0]].dataMeta) {
 		tblCols.append('<col id="'+datapoint+'">');
 		tbl.find('tr.header').append('<th>'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
-		if (wInstance.settings.selectForOutput && typeof(wInstance.selection)!='undefined'){
-			for (i in wInstance.selection){
-				if (wInstance.selection[i] == datapoint) tbl.find('tr.header th:last-child').addClass('selected-for-graph');
-			}
-		} 
 	}
 	if (wInstance.settings.selectForOutput) {
 		tbl.find( '.header th' ).click( function ( evt, clickId ) {
@@ -75,26 +70,6 @@ function createTable(data, wInstance) {
 			}
 			wInstance._callback( { 'type':'selectData' } );
 		} );
-		if (wInstance.selection.length == wInstance.settings.selectForOutput) {
-				var dataPass = {};
-				for (idxSeries in data) {
-					dataPass[idxSeries] = { seriesMeta : data[idxSeries].seriesMeta , dataMeta : {} , data : [] };
-					for (i = 0; i < wInstance.selection.length; i++) {
-						dataPass[idxSeries].dataMeta[wInstance.selection[i]] = data[idxSeries].dataMeta[wInstance.selection[i]];
-					}
-					for (idxData in data[idxSeries].data) {
-						dataPush = {};
-						for (i = 0; i < wInstance.selection.length; i++) {
-							dataPush[wInstance.selection[i]] = data[idxSeries].data[idxData][wInstance.selection[i]];
-						}
-						dataPass[idxSeries].data.push(dataPush);
-					}
-				}
-				for (i in wInstance.settings.displayWidgets) {
-					wInstance.settings.displayWidgets[i].loadData(dataPass);
-				}
-			}
-		wInstance._callback( { 'type':'updateData' } );
 	} else {
 		for (i in wInstance.settings.displayWidgets) {
 			wInstance.settings.displayWidgets[i].loadData(data);

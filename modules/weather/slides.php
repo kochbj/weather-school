@@ -224,7 +224,7 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Review three-year period of temperature recordings</h2>
 	</div>
 	<div class="workarea">
-		<div id="annual-temperature-display-tc"></div>
+		<div id="annual-temperature-display-tc" class="display-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
@@ -733,7 +733,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" class="full-ds"></div>
 		<div id="height-sun-air-temperature-example-tb" class="full-tb"></div>
-		<div id="height-sun-air-temperature-example-tc" class="full-tc"></div>
+		<div id="height-sun-air-temperature-example-tc" class="split-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">
