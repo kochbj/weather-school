@@ -92,7 +92,7 @@ textarea { width: 95%; height: 4em; }
 	background-color: #e8f0f3; height: 405px; overflow: hidden; padding: 0; position: absolute; top: 65px; width: 100%;
 	box-shadow: 0px 0px 4px #999;
 }
-.child.activity > .workarea > * {/* overflow: auto; */position: absolute; /*top: 0px;*/ /*bottom: 0px;*/ /*width: 100%;*/ }
+.child.activity > .workarea > * {overflow: auto; position: absolute; /*top: 0px;*/ /*bottom: 0px;*/ /*width: 100%;*/ }
 
 .child.activity > .workonly {
 	bottom: 0; left: 0; overflow: visible; padding: 0 5px; position: absolute; right: 0; top: 65px; z-index: 50;
