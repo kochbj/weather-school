@@ -80,7 +80,7 @@ function createTable(data, wInstance) {
 		if (data[idxSeries].seriesMeta.dataSort) {
 			data[idxSeries].data.sort(data[idxSeries].seriesMeta.dataSort);
 		}
-		seriesHtml = '<tr class="series-header"><td class="tooltip" title="CRAP" colspan="'+((Object.keys(data[idxSeries].dataMeta)).length)+'">'+data[idxSeries].seriesMeta.label+' ('+data[idxSeries].seriesMeta.lat+', '+data[idxSeries].seriesMeta.lng+')</td></tr>';
+		seriesHtml = '<tr class="series-header"><td class="tooltip" title="TEST" colspan="'+((Object.keys(data[idxSeries].dataMeta)).length)+'">'+data[idxSeries].seriesMeta.label+' ('+data[idxSeries].seriesMeta.lat+', '+data[idxSeries].seriesMeta.lng+')</td></tr>';
 		for (idxData in data[idxSeries].data) {
 			seriesHtml += '<tr class="series-data">';
 			for (datapoint in data[idxSeries].dataMeta) {

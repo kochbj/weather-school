@@ -432,7 +432,8 @@ elevatetable: function(wInstance) {
 			.animate( { height:'50%' } , {step: function(now, fx){
 			wInstance.settings.displayWidgets[0].settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
 			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
-			}}, 1000, "linear");
+			}}, 1000, "linear")
+			.mCustomScrollbar("update");
 }
 }
 function cbTempLatNorthern ( evt ) {
