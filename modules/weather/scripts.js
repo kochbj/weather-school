@@ -21,7 +21,7 @@ function elevate( evt ) {
 	if (wInstance.settings.container.find('.output-table table tbody .header th.selected-for-graph').length==2) {
 		console.log("GOT HERE3");
 		widgetAnimations.elevatetable(evt.data.widget);
-		wInstance.settings.container.find('.output-table table tbody .header').off('click.elevate');
+		wInstance.settings.container.find('.output-table table tbody').off('click.elevate');
 	}
 	});
 	}
@@ -1130,6 +1130,7 @@ var slideInit = {
 							{
 								container : $( '#height-sun-air-temperature-example-tb' ) ,
 								selectForOutput : 2,
+								selectable: ['tempavg','sunAngle'],
 								displayWidgets : [
 									aaasClimateViz.loadWidget(
 										'linechart',

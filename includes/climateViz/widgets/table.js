@@ -7,6 +7,7 @@ function createTable(data, wInstance) {
 	if (wInstance.settings.selectForOutput && typeof(wInstance.selection)=='undefined') {
 		wInstance.selection = [];
 	}
+	if (wInstance.settings.selectable) { wInstance.selectableKeys=[];}
 	tbl = wInstance.settings.container.find('.output-table table tbody');
 	tbl.empty();
 	tblCols = wInstance.settings.container.find('.output-table table colgroup');
@@ -20,34 +21,27 @@ function createTable(data, wInstance) {
 			for (i in wInstance.selection){
 				if (wInstance.selection[i] == datapoint) tbl.find('tr.header th:last-child').addClass('selected-for-graph');
 			}
-		} 
+		}
+	 if (wInstance.settings.selectable){
+	 				for (i in wInstance.settings.selectable){
+				if (wInstance.settings.selectable[i] == datapoint) wInstance.selectableKeys.push(data[seriesKeys[0]].dataMeta[datapoint].label);
+			}
 	}
-	if (wInstance.settings.selectForOutput) {
-		tbl.find( '.header th' ).click( function ( evt, clickId ) {
-			if ( clickId ) {
-				var datapoint = clickId; 
-				var clickIdx = $( this ).closest( 'table' ).find('col').map(function() { return this.id}).get().indexOf(clickId) + 1;
-				
-				if (clickIdx == -1) return;
+	}
 
-				var clickCol= $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + clickIdx + ')' );
-				var clickTh=tbl.find( 'tr.header th:nth-child(' + clickIdx + ')');
-			}
-			else {
-				var clickTh= $(this);
-				var clickIdx = clickTh.index() + 1;
-				var clickCol = clickTh.closest( 'table' ).find( 'colgroup col:nth-child(' + clickIdx + ')' );
-				var datapoint = clickCol.attr( 'id' );
-			}
+	if (wInstance.settings.selectForOutput) {
+		tbl.find( '.header th' ).each( function ( idx, el ) {
+			 if (wInstance.settings.selectable){ if (wInstance.selectableKeys.indexOf($(el).text())==-1) return;}
+			$(el).click( function ( evt ) {
+			var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {
 				wInstance.selection.splice( wInstance.selection.indexOf( datapoint ) , 1 );
-				clickTh.removeClass( 'selected-for-graph' );
-				clickCol.removeClass( 'selected-for-graph' );
-			}
-			else {
+				$( this ).removeClass( 'selected-for-graph' );
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph' );
+			} else {
 				wInstance.selection.push( datapoint );
-				clickTh.addClass( 'selected-for-graph' );
-				clickCol.addClass( 'selected-for-graph' );
+				$( this ).addClass( 'selected-for-graph' );
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph' );
 			}
 			if ( wInstance.settings.selectForOutput && wInstance.selection.length > wInstance.settings.selectForOutput ) {
 				overflowColumn = wInstance.selection.shift();
@@ -75,6 +69,7 @@ function createTable(data, wInstance) {
 			}
 			wInstance._callback( { 'type':'selectData' } );
 		} );
+		});
 		if (wInstance.selection.length == wInstance.settings.selectForOutput) {
 				var dataPass = {};
 				for (idxSeries in data) {
