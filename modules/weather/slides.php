@@ -928,9 +928,12 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>	<p>In this module you will look at the relationship between the hours of daylight at a place and the air temperature at that place.</p></div>
-			<div>	<p>The map above pinpoints Chicago, Illinois. The table above is the same table you saw before. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
+			<div>	<p>The map above pinpoints Chicago, Illinois. </p>
+			</div>
+			<div>
+			The table above is the same table you saw before. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
 			<div>	<p>Click on the Average Air Temperature and Hours of Daylight columns to highlight them.</p></div>
-			<div>	<p>The graph is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is a for a certain value for the hours of daylight on that day.</p></div>
+			<div>	<p>Just like you saw in module G, the graph is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is a for a certain value for the hours of daylight on that day.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>The line that you see going through the scatterplot is called a line of best fit. It represents the straight line (linear) relationship between two variables. It tells you how the maximum height of the Sun in the sky and average daily air temperature are related.</p>
 			</div>
