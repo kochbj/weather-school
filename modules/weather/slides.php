@@ -897,9 +897,9 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>During what months of the year does the United States experience the greatest hours of daylight?</li>
-			<li>During what months of the year does the United States experience the least hours of daylight?</li>
-			<li>What is the relationship between the range of daylight hours at a particular location throughout the year and proximity of that locatoin to the equator?</li>
+			<li>During what months of the year does every place in the United States experience the greatest hours of daylight?</li>
+			<li>During what months of the year does every place in the United States experience the least hours of daylight?</li>
+			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
 		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see how the number of hours of daylight vary at different locations on earth throughout the year.</p>
