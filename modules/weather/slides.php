@@ -780,7 +780,7 @@ At the completion of each module you can check your understanding of the feature
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Find out how the height of the sun in the sky impacts the amount of energy that reaches the earth by viewing the direct vs. indirect diagram on <a href="http://www.astronomy.org/programs/seasons/">this website</a>.</p>
+		<p>Find out how the height of the sun in the sky impacts the amount of energy that reaches the earth by viewing the direct vs. indirect energy diagram on <a href="http://www.astronomy.org/programs/seasons/" target="_blank">this website</a>.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
