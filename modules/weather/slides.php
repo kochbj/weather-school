@@ -902,7 +902,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>What is the relationship between the range of daylight hours at a particular location throughout the year and proximity of that locatoin to the equator?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="##vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see how the number of hours of daylight vary at different locations on earth throughout the year.</p>
+		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see how the number of hours of daylight vary at different locations on earth throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
