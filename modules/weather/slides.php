@@ -902,7 +902,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see an animation showing what parts of the earth experience daylights at noon <span class="tooltip" title="Greenwich Mean Time (GMT) is the time in Greenwich, England. Greenwich England is located at the 0 degree line of longitude.">GMT</span> throughout the year.</p>
+		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see an animation showing what parts of the earth experience daylights at noon <span class="tooltip" title="Greenwich Mean Time (GMT) is the time in Greenwich, England. Greenwich is located at the 0 degree line of longitude.">GMT</span> throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
