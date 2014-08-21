@@ -746,7 +746,7 @@ At the completion of each module you can check your understanding of the feature
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div><p>The line that you see going through the scatterplot is called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the Sun in the sky and average daily temperature are related.</p></div>
 			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler. This is because when the sun is higher in the sky, a greater amount of the sun's energy reaches the earth at that location, heating the air and the earth.</p></div>
-			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a direct relationship between the maximum height of the sun in the sky and average daily temperature in other locations.</p></div>
+			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a positive linear relationship between the maximum height of the sun in the sky and average daily temperature in other locations.</p></div>
 		</div>
 	</div>
 </div>
@@ -766,6 +766,8 @@ At the completion of each module you can check your understanding of the feature
 				<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least ten dates scattered throughout the year.</p>
 				<p>3. Click on Maximum Height of the Sun in the Sky and Average Daily Temperature at the top of the table.</p>
+			</div>
+			<div>
 				<p>4. Click "Line of Best Fit" at the bottom of the page.</p>
 				<p>5. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
 			</div>
@@ -777,8 +779,8 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>Describe the relationship between the maximum height of the Sun in the sky and the average daily air temperature at a particular location.</li>
-			<li>Is the relationship between the maximum height of the Sun in the sky and average daily air temperature a direct or indirect relationship?</li>
+			<li>What happens to the average daily air temperature at a location as the maximum height of the Sun in the sky increases?</li>
+			<li>Why is the relationship between the maximum height of the Sun in the sky and average daily air temperature considered a linear relationship?</li>
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
@@ -927,9 +929,11 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			<div>	<p>In this module you will look at the relationship between the hours of daylight at a place and the air temperature at that place.</p></div>
 			<div>	<p>The map above pinpoints Chicago, Illinois. The table above is the same table you saw before. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
-			<div>	<p>Notice that this time Average Air Temperature and Hours of Daylight have been highlighted for you.</p></div>
-			<div>	<p>The graph above shows a scatter plot of the Average Air Temperature and Hours of Daylight variables for the 12 selected dates.</p></div>
+			<div>	<p>Click on the Average Air Temperature and Hours of Daylight columns to highlight them.</p></div>
+			<div>	<p>The graph is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is a for a certain value for the hours of daylight on that day.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
+			<div>	<p>The line that you see going through the scatterplot is called a line of best fit. It represents the straight line (linear) relationship between two variables. It tells you how the maximum height of the Sun in the sky and average daily air temperature are related.</p>
+			</div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
 			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a direct relationship between the hours of daylight and average daily temperature at other locations.</p></div>
 		
@@ -950,6 +954,8 @@ At the completion of each module you can check your understanding of the feature
 			<div>	<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least ten dates scattered throughout the year.</p>
 				<p>3. Click Hours of Daylight and Average Daily Temperature at the top of the table.</p>
+			</div>
+			<div>
 				<p>4. Click "Line of Best Fit" at the bottom of the page.</p>
 				<p>5. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
 			</div>
@@ -962,8 +968,9 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>Describe the relationship between the hours of daylight and the average daily air temperature at a particular location.</li>
-			<li>Is the relationship between the hours of daylight and the average daily air temperature a direct or indirect relationship?</li>
+			<li>What happens to the average daily air temperature at a location as the hours of daylight at that location increase?</li>
+			<li>Why is the relationship between hours of daylight at a location and the average daily air temperature at that location considered a linear relationship?</li>
+			
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
