@@ -739,11 +739,13 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			<div><p>In this module you will look at the relationship between the height of the sun in the sky and air temperature at a given place.</p></div>
 			<div><p>The map above pinpoints Chicago, Illinois. In previous modules the graphs created showed how different variables changed over time. In this module, you will graph two variables to compare them without considering how they change over time.</p></div>
-			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000. Notice that the "Average air temperature" and "Maximum height of the sun in the sky" columns are highlighted.</p></div>
-			<div><p>The graph above is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the average height of the sun in the sky.</p></div>
+			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
+			</div>
+			<div>Click on the "Average air temperature" and "Maximum height of the sun in the sky" columns to highlight them.</p></div>
+			<div><p>The graph is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the average height of the sun in the sky.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div><p>The line that you see going through the scatterplot is a called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the Sun in the sky and average daily temperature are related.</p></div>
-			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler.This is because when the sun is higher in the sky, a greater amount of the sun's energy reaches the earth at that location, heating the air and the earth.</p></div>
+			<div><p>The line that you see going through the scatterplot is called a line of best fit. It represents the staight line (linear) relationship between the two variables. It tells you how the maximum height of the Sun in the sky and average daily temperature are related.</p></div>
+			<div><p>What you can see from this graph is that when the sun is higher in the sky it tends to be warmer, and when the sun is lower in the sky, it tends to be cooler. This is because when the sun is higher in the sky, a greater amount of the sun's energy reaches the earth at that location, heating the air and the earth.</p></div>
 			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is a direct relationship between the maximum height of the sun in the sky and average daily temperature in other locations.</p></div>
 		</div>
 	</div>
