@@ -288,7 +288,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>For most places in the United States, is the pattern of average daily temperature exactly the same from year to year?</li>
 	</ul>
 	<h2><br>Expand Your Knowledge</h2>	
-	<p>How the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php">tilt of the earth's axis</a>, causes annual temperature patterns.</p>
+	<p>How the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">tilt of the earth's axis</a>, causes annual temperature patterns.</p>
 	</div>
 </div>
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Latitude">
