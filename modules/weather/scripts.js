@@ -10,18 +10,28 @@ function widgetScroll ( evt ) {
 	}
 }
 
-function elevate( evt ) {
+function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	console.log(evt.type);
 	if ( evt.type == 'initialize' ) {
 		console.log(wInstance);
-		console.log("GOT HERE1");
 	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
-	if (wInstance.settings.container.find('.output-table table tbody .header th.selected-for-graph').length==2) {
-		console.log("GOT HERE3");
-		widgetAnimations.elevatetable(evt.data.widget);
-		wInstance.settings.container.find('.output-table table tbody').off('click.elevate');
+	//if (evt.data.widget.settings.container.hasClass('elevated')) { evt.data.widget.settings.container.find('.output-table table tbody').off('click.elevate'); return;}	
+	if (evt.data.widget.settings.selectable){ if (evt.data.widget.selectableKeys.indexOf($(this).text())==-1) return;}
+	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph').length==2) {
+		evt.data.widget.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
+		evt.data.widget.settings.container
+			.animate( { height:'50%' } , {step: function(now, fx){
+			evt.data.widget.settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
+			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
+			}}, 1000, "linear", function() {
+			manageScroll( evt.data.widget.settings.container );
+			evt.data.widget.settings.container.children()
+			.css("overflow","auto")
+			.css("overflow","hidden");});
+		evt.data.widget.settings.container.addClass('elevated');
+		evt.data.widget.settings.container.find('.output-table table tbody').off('click.elevate');
 	}
 	});
 	}
@@ -1140,7 +1150,7 @@ var slideInit = {
 										}
 									)
 								] ,
-								callbacks : [ widgetScroll, elevate ]
+								callbacks : [ widgetScroll, elevator ]
 							}
 						)
 					],
@@ -1157,7 +1167,7 @@ var slideInit = {
 						else if (currSlide>=3) {
 							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
 							widgetAnimations.swinggraph(wInstance);
-							widgetAnimations.elevatetable(wInstance);
+							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#height-sun-air-temperature-example .plusslider-pagination li').off('click.animate');
 						}
