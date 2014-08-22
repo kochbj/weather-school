@@ -29,10 +29,19 @@
     background-color: #b0daf0;
 }
 
-.widget.output-table > table col.selected-for-graph {
-    background-color: #e0f0ff;
+.widget.output-table > table col.selected-for-graph-x {
+    background-color: red;
 }
-.widget.output-table > table th.selected-for-graph {
+
+.widget.output-table > table col.selected-for-graph-y {
+    background-color: /*#e0f0ff;*/blue;
+}
+.widget.output-table > table th.selected-for-graph-x {
+    background-color: red;
+    color: white;
+}
+
+.widget.output-table > table th.selected-for-graph-y {
     background-color: #336699;
     color: white;
 }

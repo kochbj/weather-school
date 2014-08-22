@@ -6,6 +6,7 @@ function createTable(data, wInstance) {
 	}
 	if (wInstance.settings.selectForOutput && typeof(wInstance.selection)=='undefined') {
 		wInstance.selection = [];
+		wInstance.curraxis= 'x';
 	}
 	if (wInstance.settings.selectable) { wInstance.selectableKeys=[];}
 	tbl = wInstance.settings.container.find('.output-table table tbody');
@@ -19,7 +20,11 @@ function createTable(data, wInstance) {
 		tbl.find('tr.header').append('<th>'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
 		if (wInstance.settings.selectForOutput && typeof(wInstance.selection)!='undefined'){
 			for (i in wInstance.selection){
-				if (wInstance.selection[i] == datapoint) tbl.find('tr.header th:last-child').addClass('selected-for-graph');
+				if (wInstance.selection[i] == datapoint) {
+					tbl.find('tr.header th:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
+					tblCols.find('col:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
+				 	wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';
+				}	
 			}
 		}
 	 if (wInstance.settings.selectable){
@@ -36,17 +41,22 @@ function createTable(data, wInstance) {
 			var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {
 				wInstance.selection.splice( wInstance.selection.indexOf( datapoint ) , 1 );
-				$( this ).removeClass( 'selected-for-graph' );
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph' );
+				$( this ).removeClass( 'selected-for-graph-'+wInstance.curraxis);
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph-'+wInstance.curraxis);
+				wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';	
 			} else {
+				if (wInstance.selection.length==1) { 
+				tbl.find( 'tr.header th.selected-for-graph-'+wInstance.curraxis).addClass('selected-for-graph-'+wInstance.curraxis=='x' ? 'y' : 'x').removeClass(wInstance.curraxis);
+				}
 				wInstance.selection.push( datapoint );
-				$( this ).addClass( 'selected-for-graph' );
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph' );
+				$( this ).addClass('selected-for-graph-'+wInstance.curraxis);
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph-'+wInstance.curraxis);
+				wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';	
 			}
 			if ( wInstance.settings.selectForOutput && wInstance.selection.length > wInstance.settings.selectForOutput ) {
 				overflowColumn = wInstance.selection.shift();
-				tblCols.find( 'col#'+overflowColumn ).removeClass( 'selected-for-graph' );
-				tbl.find( 'tr.header th:nth-child(' + ( tblCols.find( 'col#'+overflowColumn ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph' );
+				tblCols.find( 'col#'+overflowColumn ).removeClass( 'selected-for-graph-'+wInstance.curraxis );
+				tbl.find( 'tr.header th:nth-child(' + ( tblCols.find( 'col#'+overflowColumn ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph-'+wInstance.curraxis );
 			}
 			if (wInstance.selection.length == wInstance.settings.selectForOutput) {
 				var dataPass = {};

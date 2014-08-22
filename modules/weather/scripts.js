@@ -19,7 +19,8 @@ function elevator( evt ) {
 	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
 	//if (evt.data.widget.settings.container.hasClass('elevated')) { evt.data.widget.settings.container.find('.output-table table tbody').off('click.elevate'); return;}	
 	if (evt.data.widget.settings.selectable){ if (evt.data.widget.selectableKeys.indexOf($(this).text())==-1) return;}
-	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph').length==2) {
+	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-x') && evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-y')) {
+		//evt.data.widget.settings.displayWidgets[0].highChart.xAxis[0].options.title.style.color="red";
 		evt.data.widget.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
 		evt.data.widget.settings.container
 			.animate( { height:'50%' } , {step: function(now, fx){
@@ -425,6 +426,7 @@ var widgetAnimations = {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
 		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
+		console.log(date1, new Date(date1));
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.map.date.addClass('clicked');
@@ -888,7 +890,7 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004, 1 , 1], [2004 , 11 , 30 ] );
 						else if (currSlide >= 2) {
 							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
 							widgetAnimations.swinggraph(wInstance);
@@ -983,9 +985,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-elevation-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
 						else if (currSlide >= 6) {
-							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
+							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-elevation-example .plusslider-pagination li').off('click.animate');
@@ -1045,9 +1047,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-water-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
 						else if (currSlide >= 4) {
-						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 0 , 0], [2004 , 11 , 30 ] );
+						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-water-example .plusslider-pagination li').off('click.animate');
@@ -1251,9 +1253,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example1-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2004 , 0 , 0], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2004 , 1 , 1], [2004 , 11 , 30 ] );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2004 , 0 , 0], [2004 , 11 , 30 ] );
+							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2004 , 1 , 1], [2004 , 11 , 30 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-example1 .plusslider-pagination li').off('click.animate');

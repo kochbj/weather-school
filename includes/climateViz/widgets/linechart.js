@@ -49,7 +49,7 @@ function linechart_instantiate(wInstance) {
 		series : [],
 		title : { text : null },
 		tooltip: { style : { padding : '6px' } },
-		xAxis : { title : { } },
+		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
 		yAxis : { title : { } }
 	}
 	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
