@@ -21,9 +21,9 @@ function createTable(data, wInstance) {
 		if (wInstance.settings.selectForOutput && typeof(wInstance.selection)!='undefined'){
 			for (i in wInstance.selection){
 				if (wInstance.selection[i] == datapoint) {
-					tbl.find('tr.header th:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
-					tblCols.find('col:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
-				 	wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';
+					//tbl.find('tr.header th:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
+					//tblCols.find('col:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
+				 	//wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';
 				}	
 			}
 		}
