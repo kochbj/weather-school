@@ -41,13 +41,12 @@ function createTable(data, wInstance) {
 			var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {
 				wInstance.selection.splice( wInstance.selection.indexOf( datapoint ) , 1 );
-				$( this ).removeClass( 'selected-for-graph-'+wInstance.curraxis);
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph-'+wInstance.curraxis);
-				wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';	
+				$( this ).attr('class', function(i, c){ return c.replace(/(^|\s)selected-for-graph-\S+/g, ''); });
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr('class', function(i, c){ return c.replace(/(^|\s)selected-for-graph-\S+/g, ''); });
 			} else {
-				if (wInstance.selection.length==1) { 
-				tbl.find( 'tr.header th.selected-for-graph-'+wInstance.curraxis).addClass('selected-for-graph-'+(wInstance.curraxis=='x' ? 'y' : 'x')).removeClass(wInstance.curraxis);
-				}
+				//if (wInstance.selection.length==1) { 
+				//tbl.find( 'tr.header th.selected-for-graph-'+wInstance.curraxis).addClass('selected-for-graph-'+(wInstance.curraxis=='x' ? 'y' : 'x')).removeClass(wInstance.curraxis);
+				//}
 				wInstance.selection.push( datapoint );
 				$( this ).addClass('selected-for-graph-'+wInstance.curraxis);
 				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph-'+wInstance.curraxis);
@@ -55,7 +54,7 @@ function createTable(data, wInstance) {
 			}
 			if ( wInstance.settings.selectForOutput && wInstance.selection.length > wInstance.settings.selectForOutput ) {
 				overflowColumn = wInstance.selection.shift();
-				tblCols.find( 'col#'+overflowColumn ).removeClass( 'selected-for-graph-'+wInstance.curraxis );
+				tblCols.find( 'col#'+overflowColumn ).attr('class', function(i, c){ return c.replace(/(^|\s)selected-for-graph-\S+/g, ''); });
 				tbl.find( 'tr.header th:nth-child(' + ( tblCols.find( 'col#'+overflowColumn ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph-'+wInstance.curraxis );
 			}
 			if (wInstance.selection.length == wInstance.settings.selectForOutput) {
