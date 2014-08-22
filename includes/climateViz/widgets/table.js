@@ -46,7 +46,7 @@ function createTable(data, wInstance) {
 				wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';	
 			} else {
 				if (wInstance.selection.length==1) { 
-				tbl.find( 'tr.header th.selected-for-graph-'+wInstance.curraxis).addClass('selected-for-graph-'+wInstance.curraxis=='x' ? 'y' : 'x').removeClass(wInstance.curraxis);
+				tbl.find( 'tr.header th.selected-for-graph-'+wInstance.curraxis).addClass('selected-for-graph-'+(wInstance.curraxis=='x' ? 'y' : 'x')).removeClass(wInstance.curraxis);
 				}
 				wInstance.selection.push( datapoint );
 				$( this ).addClass('selected-for-graph-'+wInstance.curraxis);
