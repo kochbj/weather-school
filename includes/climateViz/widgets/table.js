@@ -45,7 +45,7 @@ function createTable(data, wInstance) {
 
 	if (wInstance.settings.selectForOutput) {
 		tbl.find( '.header th' ).each( function ( idx, el ) {
-			//if (wInstance.settings.selectable){ if (wInstance.selectableKeys.indexOf($(el).text())==-1) return;}
+			if (wInstance.settings.selectable){ if (wInstance.selectableKeys.indexOf($(el).text())==-1) return;}
 			$(el).click( function ( evt ) {
 			var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {

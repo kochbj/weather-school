@@ -19,7 +19,7 @@ function elevator( evt ) {
 	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
 	//if (evt.data.widget.settings.container.hasClass('elevated')) { evt.data.widget.settings.container.find('.output-table table tbody').off('click.elevate'); return;}	
 	if (evt.data.widget.settings.selectable){ if (evt.data.widget.selectableKeys.indexOf($(this).text())==-1) return;}
-	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-x') && evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-y')) {
+	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-x').length>0 && evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-y').length>0) {
 		//evt.data.widget.settings.displayWidgets[0].highChart.xAxis[0].options.title.style.color="red";
 		evt.data.widget.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
 		evt.data.widget.settings.container
