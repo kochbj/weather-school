@@ -6,7 +6,11 @@ function createTable(data, wInstance) {
 	}
 	if (wInstance.settings.selectForOutput && typeof(wInstance.selection)=='undefined') {
 		wInstance.selection = [];
-		wInstance.curraxis= 'x';
+		//wInstance.axis={curr= 'x',x=null,y=null};
+		wInstance.axis={};
+		wInstance.axis.curr='x';
+		wInstance.axis.x=null;
+		wInstance.axis.y=null;
 	}
 	if (wInstance.settings.selectable) { wInstance.selectableKeys=[];}
 	tbl = wInstance.settings.container.find('.output-table table tbody');
@@ -21,9 +25,14 @@ function createTable(data, wInstance) {
 		if (wInstance.settings.selectForOutput && typeof(wInstance.selection)!='undefined'){
 			for (i in wInstance.selection){
 				if (wInstance.selection[i] == datapoint) {
-					//tbl.find('tr.header th:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
-					//tblCols.find('col:last-child').addClass('selected-for-graph-'+wInstance.curraxis);
-				 	//wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';
+					//data[seriesKeys[0]].dataMeta[datapoint].label==wInstance.axis.x;
+					console.log("UPDATE","X",wInstance.axis.x,"Y",wInstance.axis.y,wInstance.selection, tbl.find('tr.header th:last-child'),tblCols.find('col:last-child'));
+					if (data[seriesKeys[0]].dataMeta[datapoint].label==wInstance.axis.x){
+						tbl.find('tr.header th:last-child').addClass('selected-for-graph-x');
+						tblCols.find('col:last-child').addClass('selected-for-graph-x');}
+					else if (data[seriesKeys[0]].dataMeta[datapoint].label==wInstance.axis.y){
+						tbl.find('tr.header th:last-child').addClass('selected-for-graph-y');
+						tblCols.find('col:last-child').addClass('selected-for-graph-y');}
 				}	
 			}
 		}
@@ -36,26 +45,40 @@ function createTable(data, wInstance) {
 
 	if (wInstance.settings.selectForOutput) {
 		tbl.find( '.header th' ).each( function ( idx, el ) {
-			 if (wInstance.settings.selectable){ if (wInstance.selectableKeys.indexOf($(el).text())==-1) return;}
+			//if (wInstance.settings.selectable){ if (wInstance.selectableKeys.indexOf($(el).text())==-1) return;}
 			$(el).click( function ( evt ) {
 			var datapoint = $( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr( 'id' );
 			if ( wInstance.selection.indexOf( datapoint ) !== -1 ) {
 				wInstance.selection.splice( wInstance.selection.indexOf( datapoint ) , 1 );
-				$( this ).attr('class', function(i, c){ return c.replace(/(^|\s)selected-for-graph-\S+/g, ''); });
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).attr('class', function(i, c){ return c.replace(/(^|\s)selected-for-graph-\S+/g, ''); });
+				$( this ).removeClass('selected-for-graph-x selected-for-graph-y');
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass('selected-for-graph-x selected-for-graph-y');
+				(wInstance.axis.x==$(el).text() ? wInstance.axis.x=null : wInstance.axis.y=null);
+				console.log("REMOVE:","X",wInstance.axis.x,"Y",wInstance.axis.y,wInstance.selection);
 			} else {
-				//if (wInstance.selection.length==1) { 
-				//tbl.find( 'tr.header th.selected-for-graph-'+wInstance.curraxis).addClass('selected-for-graph-'+(wInstance.curraxis=='x' ? 'y' : 'x')).removeClass(wInstance.curraxis);
-				//}
+				if (wInstance.selection.length==0) wInstance.axis.curr='x';
+				else if ((wInstance.selection.length==1 && tbl.find( 'tr.header th.selected-for-graph-y').length!=0) || wInstance.selection.length==2) {
+					console.log(tbl.find( 'tr.header th.selected-for-graph-y'));
+					tbl.find( 'tr.header th.selected-for-graph-y').removeClass('selected-for-graph-y').addClass('selected-for-graph-x');
+					$( this ).closest( 'table' ).find( 'colgroup col.selected-for-graph-y').removeClass('selected-for-graph-y').addClass('selected-for-graph-x');
+					console.log("ADDI:","X",wInstance.axis.x,"Y",wInstance.axis.y);
+					wInstance.axis.x=wInstance.axis.y;
+					wInstance.axis.y=null;
+					wInstance.axis.curr='y';
+					console.log("ADDI:","X",wInstance.axis.x,"Y",wInstance.axis.y);
+					}
+				else if (wInstance.selection.length==1  && tbl.find( 'tr.header th.selected-for-graph-x').length!=0)  wInstance.axis.curr='y';
 				wInstance.selection.push( datapoint );
-				$( this ).addClass('selected-for-graph-'+wInstance.curraxis);
-				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph-'+wInstance.curraxis);
-				wInstance.curraxis= wInstance.curraxis=='x' ? 'y' : 'x';	
+				console.log(wInstance.axis.curr,wInstance.axis.y, wInstance.axis.x,$(el).text(),"RIGHT HERE");
+				$( this ).addClass('selected-for-graph-'+wInstance.axis.curr);
+				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph-'+wInstance.axis.curr);
+				(wInstance.axis.curr=='x' ? wInstance.axis.x=$(el).text() : wInstance.axis.y=$(el).text());	
+				wInstance.axis.curr= (wInstance.axis.curr=='x' ? 'y' : 'x');	
+				console.log("ADD:","X",wInstance.axis.x,"Y",wInstance.axis.y,wInstance.selection);
 			}
 			if ( wInstance.settings.selectForOutput && wInstance.selection.length > wInstance.settings.selectForOutput ) {
 				overflowColumn = wInstance.selection.shift();
-				tblCols.find( 'col#'+overflowColumn ).attr('class', function(i, c){ return c.replace(/(^|\s)selected-for-graph-\S+/g, ''); });
-				tbl.find( 'tr.header th:nth-child(' + ( tblCols.find( 'col#'+overflowColumn ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph-'+wInstance.curraxis );
+				tblCols.find( 'col#'+overflowColumn ).removeClass( 'selected-for-graph-x selected-for-graph-y');
+				tbl.find( 'tr.header th:nth-child(' + ( tblCols.find( 'col#'+overflowColumn ).index() + 1 ) + ')' ).removeClass( 'selected-for-graph-x selected-for-graph-y' );
 			}
 			if (wInstance.selection.length == wInstance.settings.selectForOutput) {
 				var dataPass = {};

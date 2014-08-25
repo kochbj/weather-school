@@ -22,7 +22,7 @@ function linechart_instantiate(wInstance) {
 		credits : { enabled : false },
 		legend : {
 			align          : 'right' ,
-			borderWidth    : 0 ,
+			borderWidth    : 1 ,
 			enabled        : true ,
 			floating       : true ,
 			itemCheckboxStyle : { marginLeft : '-115px' } ,
@@ -32,7 +32,7 @@ function linechart_instantiate(wInstance) {
 			symbolPadding  : 0 ,
 			verticalAlign  : 'bottom' ,
 			x              : 0 ,
-			y              : 15
+			y              : 0
 		},
 		plotOptions : {
 			series: {

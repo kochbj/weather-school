@@ -30,19 +30,19 @@
 }
 
 .widget.output-table > table col.selected-for-graph-x {
-    background-color: red;
+    background-color: #EB9999;
 }
 
 .widget.output-table > table col.selected-for-graph-y {
-    background-color: /*#e0f0ff;*/blue;
+    background-color: /*#e0f0ff;*/#A6BACE;
 }
 .widget.output-table > table th.selected-for-graph-x {
-    background-color: red;
+    background-color: #CC0000;
     color: white;
 }
 
 .widget.output-table > table th.selected-for-graph-y {
-    background-color: #336699;
+    background-color: /*#336699*/#4d759e;
     color: white;
 }
 
