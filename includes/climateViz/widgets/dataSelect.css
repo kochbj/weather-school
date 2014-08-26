@@ -117,11 +117,10 @@
 .widget.dataSelect .map-date.year-month-day { max-width: 400px; text-align: right; }
 .widget.dataSelect .map-date.year-month-day > * { text-align: left; }
 .widget.dataSelect .map-date.year-month-day .input { display: inline-block; }
-.widget.dataSelect .map-date.year-month-day .toggle  { position: static; display: inline-block; }
+.widget.dataSelect .map-date.year-month-day .toggle  { position: static; display: inline-block; margin-bottom: -4px; }
 .widget.dataSelect .map-date.year-month-day .input input { width: 70px; text-align: left; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; height: 1.5em }
 .widget.dataSelect .map-date.year-month-day .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
 .widget.dataSelect .map-date.year-month-day > div:hover .input input , .widget.dataSelect .map-date.year-month-day .input input:focus { background-color: rgba(72,116,192,.1); }
-.widget.dataSelect .map-date.year-month-day .toggle { margin-bottom: -4px; }
 
 
 
