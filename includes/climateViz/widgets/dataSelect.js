@@ -167,10 +167,10 @@ function dataSelect_instantiate(wInstance) {
 		switch (wInstance.settings.date.type) {
 			case 'year-month-day-restricted' :
 			case 'year-month-day' :
-				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date(s): </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
-				wInstance.settings.date.type == 'year-month-day-range-double-restricted' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
-				wInstance.map.date.attr( 'title' , 'No date selected' );
+				wInstance.map.date.addClass( 'year-month-day' ).html( '<div class="visual-control inline"><div class="input"><p class ="date-label">Date(s):</p><div class="toggle"></div><input type="text" size="3" placeholder="Select Date " /></div><div class="datepicker"></div></div>' );
+				wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.find('.visual-control').addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
+				wInstance.map.date.ui.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				
@@ -228,17 +228,27 @@ function dataSelect_instantiate(wInstance) {
 						}
 						// FIXME: add sorting of `selectedDates` and update the display (for multiple date selections)
 						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
+						console.log(selectedDates);
 						if (selectedDates.length > 0 && !$(this).parents('.widget.dataSelect .map-date').data('hidden')) {
 							displayStr = '';
 							for (i in selectedDates) {
 								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
 								wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'Selected: '+displayStr );
-								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
 							}
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val('(Hover to See)');
-						} else {
+						} 
+						else if (selectedDates.length > 0){
+							displayStr = '';
+							for (i in selectedDates) {
+								console.log(i);
+								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
+								console.log(displayStr,ui.dpDiv.parents( '.visual-control' ),wInstance.map.date.ui);
+								ui.dpDiv.parents( '.visual-control' ).attr( 'title' , 'Selected: '+displayStr );
+							}
+						}
+						else {
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val( null );
-							wInstance.map.date.attr( 'title' , 'No date selected' );
+							wInstance.map.date.ui.attr( 'title' , 'No date selected' );
 						}
 						ui.dpDiv.parent().datepicker( 'refresh' );
 						_deactivateDpicker();
@@ -279,7 +289,7 @@ function dataSelect_instantiate(wInstance) {
 					var elInput = $( this );
 					if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
-						wInstance.map.date.attr( 'title' , 'No date selected' );
+						wInstance.map.date.ui.attr( 'title' , 'No date selected' );
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
@@ -317,7 +327,7 @@ function dataSelect_instantiate(wInstance) {
 						_deactivateDpicker();
 					}
 					else {
-						_activateDpicker();
+					$( this ).parent( ).find( 'input' ).focus( );
 					}
 				});
 				Dinput.keydown( function ( evt ) {
@@ -492,7 +502,7 @@ function dataSelect_instantiate(wInstance) {
 						_deactivateDpicker();
 					}
 					else {
-						_activateDpicker();
+						$( this ).parent( ).find( 'input' ).focus( );	
 					}
 				});
 				Dinput.focus( function ( evt ) {
@@ -510,7 +520,7 @@ function dataSelect_instantiate(wInstance) {
 				break;
 			case 'year-month-day-range-double' :
 			case 'year-month-day-range-double-restricted':  
-				wInstance.map.date.addClass( 'year-month-day-range-double' ).html( '<div class="visual-control inline"><div class="input date-start"><p class ="date-label">Start:</p><div class="toggle start-toggle"></div><input type="text" size="3" placeholder=" Start Date " /></div><div class="input date-end"><p class ="date-label">  End:</p><div class="toggle end-toggle"></div><input type="text" size="3" placeholder=" End Date " /></div><div class="datepicker"></div></div>' );
+				wInstance.map.date.addClass( 'year-month-day-range-double' ).html( '<div class="visual-control inline"><div class="input date-start"><p class ="date-label">Start:</p><div class="toggle start-toggle"></div><input type="text" size="3" placeholder=" Start Date " /></div><div class="input date-end"><p class ="date-label">&nbsp&nbspEnd:</p><div class="toggle end-toggle"></div><input type="text" size="3" placeholder=" End Date " /></div><div class="datepicker"></div></div>' );
 				wInstance.map.date.find( '.input input' ).autogrow( );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
@@ -567,7 +577,7 @@ function dataSelect_instantiate(wInstance) {
 							if ( wInstance.settings.date.range ) { startDate.setFullYear( startDate.getFullYear() - wInstance.settings.date.range ); }
 							if (!wInstance.map.date.data('hidden')) {
 								displayStr = $.datepicker.formatDate('yy-M-d', startDate) + ' to ' + $.datepicker.formatDate('yy-M-d', endDate);
-								wInstance.map.date.attr( 'title' , 'Selected: '+displayStr );
+								wInstance.map.date.ui.attr( 'title' , 'Selected: '+displayStr );
 								wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'Selected: '+displayStr );
 							}
 						}						
@@ -642,7 +652,7 @@ function dataSelect_instantiate(wInstance) {
 					var elInput = $( this );
 					if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
-						wInstance.map.date.attr( 'title' , 'No date selected' );
+						wInstance.map.date.ui.attr( 'title' , 'No date selected' );
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );

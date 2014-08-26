@@ -9,6 +9,7 @@
   text-align: center;
   width: auto;
 }
+
 .dataSelect-tooltip {font-size:8pt !important; display: none; width: 80px; background-color: #dbd3c1 !important; background-image: none !important; border: none !important;}
 .widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
 .widget.dataSelect .calendar-cover { height: 36px; width: 100%; background-color: transparent; display: none; z-index: 100; bottom: 0; left: 0; position: absolute; cursor:not-allowed;}
@@ -20,7 +21,7 @@
   box-shadow: 0 2px 2px grey;
   padding: 0.25em 10px;
   position: absolute;
-  bottom: .5em;
+  bottom: .75em;
   left: 15px;
   height: .85em;
   font-size: 92%;
@@ -33,7 +34,7 @@
 .widget.dataSelect .map-date {
   position: absolute;
   width: 95%;
-  bottom: 0px;
+  bottom: .25em;
   right: 15px;
 	z-index: 99;
   /* padding: .25em 10px;
@@ -112,6 +113,16 @@
 .widget.dataSelect .map-date.month-day-alt > div:hover .input input , .widget.dataSelect .map-date.month-day-alt .input input:focus { background-color: rgba(72,116,192,.1); }
 .widget.dataSelect .map-date.month-day-alt .toggle { margin-left: -30px; }
 
+/* styles for date control "year-month-day-range-double" selection */
+.widget.dataSelect .map-date.year-month-day { max-width: 400px; text-align: right; }
+.widget.dataSelect .map-date.year-month-day > * { text-align: left; }
+.widget.dataSelect .map-date.year-month-day .input { display: inline-block; }
+.widget.dataSelect .map-date.year-month-day .toggle  { position: static; display: inline-block; }
+.widget.dataSelect .map-date.year-month-day .input input { width: 70px; text-align: left; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; height: 1.5em }
+.widget.dataSelect .map-date.year-month-day .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
+.widget.dataSelect .map-date.year-month-day > div:hover .input input , .widget.dataSelect .map-date.year-month-day .input input:focus { background-color: rgba(72,116,192,.1); }
+.widget.dataSelect .map-date.year-month-day .toggle { margin-bottom: -4px; }
+
 
 
 /* styles for date control "year-month-day-range" selection */
@@ -139,8 +150,8 @@
 .widget.dataSelect .map-date.year-month-day-range-double { max-width: 400px; text-align: right; }
 .widget.dataSelect .map-date.year-month-day-range-double > * { text-align: left; }
 .widget.dataSelect .map-date.year-month-day-range-double .input { display: inline-block; }
-.widget.dataSelect .map-date.year-month-day-range-double .toggle , .widget.dataSelect .map-date.year-month-day-range-alt .start-date, .widget.dataSelect .map-date.year-month-day-range-alt .end-date { position: static; display: inline-block; }
-.widget.dataSelect .map-date.year-month-day-range-double .input input { width: 65px; text-align: center; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; height: 1.5em }
+.widget.dataSelect .map-date.year-month-day-range-double .toggle { position: static; display: inline-block; }
+.widget.dataSelect .map-date.year-month-day-range-double .input input { width: 70px; text-align: left; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; height: 1.5em }
 .widget.dataSelect .map-date.year-month-day-range-double .input.active input { background-color: rgba(255, 255, 168, 0.3) }
 .widget.dataSelect .map-date.year-month-day-range-double .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
 //.widget.dataSelect .map-date.year-month-day-range-double .visual-control .input input :hover { background-color: rgba(72,116,192,.1); }

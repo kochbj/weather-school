@@ -27,7 +27,7 @@ function linechart_instantiate(wInstance) {
 			floating       : true ,
 			itemCheckboxStyle : { marginLeft : '-115px' } ,
 			itemHiddenStyle: { color: '#274b6d' } ,
-			padding        : 4 ,
+			//padding        : 4 ,
 			symbolWidth    : 0 ,
 			symbolPadding  : 0 ,
 			verticalAlign  : 'bottom' ,
