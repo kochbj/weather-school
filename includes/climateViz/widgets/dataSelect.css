@@ -71,7 +71,7 @@
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control.inline .datepicker {
   position: absolute;
   bottom: 28px;
-  right: 2px;
+  right: -15px;
 }
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker { min-height: 198px;  }
 //.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #D0DBE5; }

@@ -167,10 +167,10 @@ function dataSelect_instantiate(wInstance) {
 		switch (wInstance.settings.date.type) {
 			case 'year-month-day-restricted' :
 			case 'year-month-day' :
-				wInstance.map.date.addClass( 'year-month-day' ).html( '<div class="visual-control inline"><div class="input"><p class ="date-label">Date(s):</p><div class="toggle"></div><input type="text" size="3" placeholder="Select Date " /></div><div class="datepicker"></div></div>' );
+				wInstance.map.date.addClass( 'year-month-day' ).html( '<div class="visual-control inline"><div class="input"><p class ="date-label">Date(s):</p><div class="toggle"></div><input type="text" size="3" placeholder="Enter Date " /></div><div class="datepicker"></div></div>' );
 				wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.find('.visual-control').addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.attr( 'title' , 'No date selected' );
+				wInstance.map.date.ui.attr( 'title' , 'No dates selected' );
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				
@@ -229,26 +229,29 @@ function dataSelect_instantiate(wInstance) {
 						// FIXME: add sorting of `selectedDates` and update the display (for multiple date selections)
 						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
 						console.log(selectedDates);
-						if (selectedDates.length > 0 && !$(this).parents('.widget.dataSelect .map-date').data('hidden')) {
+						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
 								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
-								wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'Selected: '+displayStr );
+								wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected: '+ displayStr);
+								wInstance.map.date.ui.tooltip('option','content','Selected: '+ displayStr);
+								//ui.dpDiv.parents( '.visual-control' ).data('ui-tooltip-title' , 'Selected: '+displayStr );
 							}
-							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val('(Hover to See)');
+							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val('Hover to See');
 						} 
-						else if (selectedDates.length > 0){
+						/*else if (selectedDates.length > 0){
 							displayStr = '';
 							for (i in selectedDates) {
 								console.log(i);
 								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
 								console.log(displayStr,ui.dpDiv.parents( '.visual-control' ),wInstance.map.date.ui);
-								ui.dpDiv.parents( '.visual-control' ).attr( 'title' , 'Selected: '+displayStr );
+								ui.dpDiv.parents( '.visual-control' ).data('ui-tooltip-title' , 'Selected: '+displayStr );
 							}
-						}
+						}*/
 						else {
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val( null );
-							wInstance.map.date.ui.attr( 'title' , 'No date selected' );
+								wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');
+								wInstance.map.date.ui.tooltip('option','content','No dates selected');
 						}
 						ui.dpDiv.parent().datepicker( 'refresh' );
 						_deactivateDpicker();
@@ -873,7 +876,7 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
-	$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-15" } } );	
+	$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-83 bottom-13" } } );	
 	$( '.Dstooltip' ).tooltip( "close" );
 	wInstance._callback({'type':'initialize'});
 }
