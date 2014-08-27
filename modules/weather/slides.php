@@ -35,7 +35,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="contents-3" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="contents-text">
-		<p>Modules C-E investigate how temperature varies with three different geographic variables: latitude, elevation and proximity to bodies of water.</p>
+		<p>Modules C-E investigate how temperature varies with three different geographic variables: latitude, elevation, and proximity to bodies of water.</p>
 	</div>
 </div>
 <div id="contents-4" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -151,7 +151,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="annual-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Annual Temperature Patterns">
 	<h2>Learning about Temperature Patterns</h2>
 	<div class="intro-text">
-	<p>In the last module you saw that temperature can change considerably from one day to the next. In this module you will explore how temperature changes over the course of a year and over the course of multiple years. </p>
+	<p>In the last module you saw that temperature can change considerably from one day to the next. In this module you will explore how temperature can change from day to day over the course of an entire year - from winter to spring to summer to fall - and from year to year. </p>
 </div>
 </div>
 <?php /*
