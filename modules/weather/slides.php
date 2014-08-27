@@ -4,7 +4,7 @@
 		<li>Why is it warmer on some days than on other days?</li>
 		<li>Why some months of the year are colder than others?</li>
 		<li>Why is it almost always colder at the North Pole than at the equator?</li>
-		<li>How do large bodies of water and mountains affect temperature?</li>
+		<li>How large bodies of water and mountains affect temperature?</li>
 	</ul>
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.</p>
@@ -12,24 +12,24 @@
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
 	<div class="intro-text">	
-	<p>This website introduces you to a variety of factors that effect trends in air temperature. In a series of modules, you will learn how air masses can cause daily temperature variation, how geographic variables can influence air temperature at any given location, and how solar patterns affect air temperature over time. The modules use daily climate measurements curated by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.</p>
+	<p>This website introduces you to a variety of factors that affect patterns in air temperature. In a series of modules, you will learn how moving air masses can cause day-to-day temperature variation, how geographic factors such as elevation above sea level can influence air temperature at any given location, and how the movement of the earth in relation to the sun can affect air temperature over time. The modules use daily climate measurements collected by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations, both within the United States and around the world, from 1929 to 2010.</p>
 <p>
 Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.</p>
 <p>
-At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about the phenomena causing the trends by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.</p>
+At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about what causes the patterns by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.</p>
 </div> 
 </div>
 <div id="contents-1" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="contents-text">
-		<p> The modules and activities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner. The current module/activity is highlighted in teal.</p>
+		<p> The modules and activities are intended to be completed in the order shown on the right, but you can jump to any module at any time by opening the menu from the top right corner of any page. The current module or activity within a module is highlighted in teal.</p>
 		<p>The next five screens provide brief descriptions of the themes of each of the modules.</p>
 	</div>
 </div>
 <div id="contents-2" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="contents-text">
-		<p>The first two modules focus on variation in air temperature over time. Module A explores temperature changes throughout the day, and module B explores temperature changes over the course of a year.</p>
+		<p>The first two modules focus on variation in air temperature over time. Module A explores temperature changes from day to day over a three week period in April, and module B explores temperature changes over the course of an entire year.</p>
 	</div>
 </div>
 <div id="contents-3" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
