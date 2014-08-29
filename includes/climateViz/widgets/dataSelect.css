@@ -10,7 +10,7 @@
   width: auto;
 }
 
-.dataSelect-tooltip {font-size:8pt !important; display: none; width: 80px; background-color: #dbd3c1 !important; background-image: none !important; border: none !important;}
+.dataSelect-tooltip {font-size:8pt !important; display: none; width: 80px; background-color: #dbd3c1 !important; background-image: none !important; border: none !important; position: fixed !important;}
 .widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
 .widget.dataSelect .calendar-cover { height: 36px; width: 100%; background-color: transparent; display: none; z-index: 100; bottom: 0; left: 0; position: absolute; cursor:not-allowed;}
 .widget.dataSelect .map-canvas { height: 400px; width: 100%; }
@@ -22,7 +22,7 @@
   padding: 0.25em 10px;
   position: absolute;
   bottom: .75em;
-  left: 15px;
+  left: 150px;
   height: .85em;
   font-size: 92%;
 }
@@ -37,8 +37,20 @@
   bottom: .25em;
   right: 15px;
 	z-index: 99;
-  /* padding: .25em 10px;
-  right: 15px; */
+  /* padding: .25em 10px; */
+}
+
+.widget.dataSelect .map-reset {
+  position: absolute;
+  bottom: 11px;
+	height: 22px;
+	background-color: #eb9999;
+	border-radius: 5px;
+	left:5px;
+}
+.widget.dataSelect .map-reset:hover{
+	background-color: #EFADAD;
+
 }
 .widget.dataSelect .map-date .toggle {
   background-image: url("media/calendar.png");
@@ -114,7 +126,7 @@
 .widget.dataSelect .map-date.month-day-alt .toggle { margin-left: -30px; }
 
 /* styles for date control "year-month-day-range-double" selection */
-.widget.dataSelect .map-date.year-month-day { max-width: 400px; text-align: right; }
+.widget.dataSelect .map-date.year-month-day { max-width: 180px; text-align: right; }
 .widget.dataSelect .map-date.year-month-day > * { text-align: left; }
 .widget.dataSelect .map-date.year-month-day .input { display: inline-block; }
 .widget.dataSelect .map-date.year-month-day .toggle  { position: static; display: inline-block; margin-bottom: -4px; }

@@ -10,6 +10,22 @@ function widgetScroll ( evt ) {
 	}
 }
 
+function armRESET( evt ) {
+	if ( !evt ) { evt = { type : null }; }
+	var wInstance = this;
+	console.log("GOT HERE",evt.type, wInstance);
+	if ( evt.type == 'initialize' ) {
+		console.log("GOT HERE",wInstance);
+		wInstance.settings.container.find( '.map-reset' ).on('click', {widget:wInstance}, function(evt){
+			//if (!wInstance.settings.container.hasClass('clicked')) return;
+			evt.data.widget.reset();
+			if (evt.data.widget.settings.displayWidgets[0].type=="linechart") evt.data.widget.settings.displayWidgets[0].loadData();
+			else if (evt.data.widget.settings.displayWidgets[0].type=="table"){
+				evt.data.widget.settings.displayWidgets[0].settings.container.find('.output-table table tbody').empty();
+				evt.data.widget.settings.displayWidgets[0].settings.displayWidgets[0].loadData();}
+		});
+	}
+}
 function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -422,32 +438,32 @@ function cbDailyTempOld ( evt ) {
 
 var widgetAnimations = {
 	placemarkers: function(wInstance,marker1,marker2,date1,date2) {
-		if (wInstance.map.date.hasClass('clicked')) return;
+		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
 		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
 		console.log(date1, new Date(date1));
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.map.date.addClass('clicked');
+		wInstance.settings.container.addClass('clicked');
 		},
 	placetablemarker: function(wInstance,marker,year) {
-		if (wInstance.map.date.hasClass('clicked')) return;
+		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
 		var dateVals=[];
 		wInstance.map.date.data('hidden',false);
 		for (i=0; i<12; i++) dateVals.push(new Date(year,i,15));
 		wInstance.map.date.data( 'value', dateVals);
  		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.map.date.addClass('clicked');
+		wInstance.settings.container.addClass('clicked');
 		},
 	placestations: function(wInstance,marker1,stations,date1,date2) {
-		if (wInstance.map.date.hasClass('clicked')) return;
+		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.map.date.addClass('clicked');
+		wInstance.settings.container.addClass('clicked');
 		},
 	swinggraph: function(wInstance) {
 		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
@@ -1223,7 +1239,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, armRESET ]
 				}
 			);
 		}

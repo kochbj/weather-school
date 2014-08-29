@@ -161,16 +161,16 @@ function dataSelect_instantiate(wInstance) {
 	}
 	
 	wInstance.map.date = wInstance.settings.container.find('.map-date');
-	wInstance.map.date.data('hidden',true); 
 	if (wInstance.settings.date) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
 			case 'year-month-day-restricted' :
 			case 'year-month-day' :
 				wInstance.map.date.addClass( 'year-month-day' ).html( '<div class="visual-control inline"><div class="input"><p class ="date-label">Date(s):</p><div class="toggle"></div><input type="text" size="3" placeholder="Enter Date " /></div><div class="datepicker"></div></div>' );
-				wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.find('.visual-control').addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
+				wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.ui.attr( 'title' , 'No dates selected' );
+				wInstance.map.date.attr( 'title' , 'No dates selected' );
+				wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'No dates selected' );
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				
@@ -233,25 +233,14 @@ function dataSelect_instantiate(wInstance) {
 							displayStr = '';
 							for (i in selectedDates) {
 								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
-								wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected: '+ displayStr);
-								wInstance.map.date.ui.tooltip('option','content','Selected: '+ displayStr);
+								wInstance.settings.date.type == 'year-month-day'? wInstance.map.date.tooltip('option','content','Selected: '+ displayStr) : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected: '+ displayStr);		
 								//ui.dpDiv.parents( '.visual-control' ).data('ui-tooltip-title' , 'Selected: '+displayStr );
 							}
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val('Hover to See');
 						} 
-						/*else if (selectedDates.length > 0){
-							displayStr = '';
-							for (i in selectedDates) {
-								console.log(i);
-								displayStr += ' ' + $.datepicker.formatDate('yy-M-d', selectedDates[i]) + ' ';
-								console.log(displayStr,ui.dpDiv.parents( '.visual-control' ),wInstance.map.date.ui);
-								ui.dpDiv.parents( '.visual-control' ).data('ui-tooltip-title' , 'Selected: '+displayStr );
-							}
-						}*/
 						else {
 							ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val( null );
-								wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');
-								wInstance.map.date.ui.tooltip('option','content','No dates selected');
+								wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
 						}
 						ui.dpDiv.parent().datepicker( 'refresh' );
 						_deactivateDpicker();
@@ -284,15 +273,19 @@ function dataSelect_instantiate(wInstance) {
 					//minDate         : new Date( 1995 , 0 , 1 ) ,
 					//maxDate         : new Date( 1995 , 11 , 31 ) ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
-					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
+					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay,
+					nextText: '',
+					prevText: ''
 				});
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
+				wInstance.map.date.ui.dpDiv.find('.ui-datepicker-header').removeAttr('title');
+				console.log(wInstance.map.date.ui.dpDiv.find('.ui-datepicker-header'));
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
 					if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
-						wInstance.map.date.ui.attr( 'title' , 'No date selected' );
+						wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
@@ -344,7 +337,8 @@ function dataSelect_instantiate(wInstance) {
 						userTouch=true;
 						$( this ).autogrow( );
 						_activateDpicker();
-						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						if ( $( this ).val( ) == '' || typeof($(this).parents('.widget.dataSelect .map-date').data('value'))=='undefined' || $(this).parents('.widget.dataSelect .map-date').data('value').length==0 ) 	var selectedDate = new Date( aaasClimateViz.dateParser( '2000-01-01' ));
+						else var selectedDate= $(this).parents('.widget.dataSelect .map-date').data('value')[$(this).parents('.widget.dataSelect .map-date').data('value').length-1];
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , selectedDate );
 					} )
 					.blur( function ( evt ) {
@@ -887,7 +881,7 @@ function dataSelect_reset () {
 	this.map.date.ui.datepicker( 'setDate' , null );
 	this.map.date.attr( 'title' , 'No date selected' );
 	this.data = {};
-	wInstance._callback({'type':'reset'});
+	//wInstance._callback({'type':'reset'});
 }
 
 // FIXME: make the info display part of the map (i.e. place it in one of the map layers
