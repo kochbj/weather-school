@@ -277,7 +277,9 @@ function dataSelect_instantiate(wInstance) {
 					prevText: ''
 				});
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
-				wInstance.map.date.ui.dpDiv.find('.ui-datepicker-header').removeAttr('title');
+				console.log(wInstance.map.date.ui.dpDiv.find('.ui-datepicker-prev'));
+				wInstance.map.date.ui.dpDiv.find('a').removeAttr('title');
+				//wInstance.map.date.ui.dpDiv.find('span').removeAttr('title');
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );

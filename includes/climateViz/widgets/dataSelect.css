@@ -36,7 +36,7 @@
   position: absolute;
   //width: 95%;
   bottom: .25em;
-  right: 5px;
+  right: 0px;
 	z-index: 99;
   /* padding: .25em 10px; */
 }
@@ -121,7 +121,7 @@
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control.inline .datepicker {
   position: absolute;
   bottom: 28px;
-  right: -15px;
+  right: 0px;
 }
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker { min-height: 198px;  }
 //.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #D0DBE5; }
