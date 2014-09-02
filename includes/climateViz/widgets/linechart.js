@@ -1,99 +1,4 @@
-function linechart_initialize () {
-	$.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts.regression.js');
-	
-	aaasClimateViz.widgetLibrary.linechart.status = 'initialized';
-	aaasClimateViz.widgetLibrary.linechart.load();
-}
 
-function linechart_instantiate(wInstance) {
-	wInstance.chart = {
-		chart : {
-			alignTicks : true,
-			renderTo   : wInstance.settings.container.find('.widget.linechart .canvas')[0],
-			resetZoomButton : {
-				position : {
-					x : -50,
-					y : 0
-				}
-			} ,
-			type       : 'scatter',
-			zoomType   : 'xy'
-		},
-		credits : { enabled : false },
-		legend : {
-			align          : 'right' ,
-			borderWidth    : 0 ,
-			enabled        : true ,
-			floating       : true ,
-			itemCheckboxStyle : { marginLeft : '-115px' } ,
-			itemHiddenStyle: { color: '#274b6d' } ,
-			//padding        : 4 ,
-			symbolWidth    : 0 ,
-			symbolPadding  : 0 ,
-			verticalAlign  : 'bottom' ,
-			x              : 0 ,
-			y              : 5
-		},
-		plotOptions : {
-			series: {
-				animation : false ,
-				lineWidth : 0 ,
-				marker : {
-					enabled : true,
-					states :{ hover: { enabled : true } }
-				} ,
-				showInLegend : false ,
-				states : { hover : { lineWidth : 1 } }
-			} 
-		},
-		series : [],
-		title : { text : null },
-		tooltip: { style : { padding : '6px' } },
-		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
-		yAxis : { title : { } }
-	}
-	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
-		wInstance.chart.tooltip.positioner = function ( labelWidth , labelHeight , point ) {
-			return {
-				x : 4 ,
-				y : this.chart.chartHeight - labelHeight - 2
-			};
-		}
-	}
-	Highcharts.setOptions( {
-		lang : {
-			resetZoom : 'Reset View'
-		}
-	} );
-	wInstance.highChart = new Highcharts.Chart(wInstance.chart);
-	
-	wInstance.loadData = function (data) {
-		this.data = ( this.settings.filter ? this.settings.filter( data ) : data );
-		if ( this.settings.showControls ) {
-			var labels = {};
-			wgtControls = this.settings.container.find( '.controls' );
-			for (series in this.data) {
-				dataSeries = [];
-				dataKeys = Object.keys(this.data[series].dataMeta);
-				chartAxis = ['x','y'];
-				for (idxDataKey in dataKeys) {
-					if (this.data[series].dataMeta[dataKeys[idxDataKey]].label) {
-						labels[chartAxis[idxDataKey]] = this.data[series].dataMeta[dataKeys[idxDataKey]].label;
-					} else {
-						labels[chartAxis[idxDataKey]] = null;
-					}
-				}
-			}
-			wgtControls.html( '<span>Series: ' + this.data[series].seriesMeta.label + '</span> &nbsp; <span>X-Axis: ' + labels.x + '</span> &nbsp; <span>Y-Axis: ' + labels.y + '</span> &nbsp; <button class="graph">Graph It!</button>' );
-			wgtControls.find( '.graph' ).click( function (evt) { createChart( wInstance ); } )
-		} else {
-			createChart( this );
-		}
-	}
-	
-	wInstance.notify = function ( noticeType ) {
-	}
-}
 
 // FIXME: pass in chart property with list of variables to chart, if that doesn't exist just chart first two variables. Any other variables can go in the infobubble for the data point
 // FIXME: Might also have a setting to determine if we want to chart more than two variables (multiple Y-axis)
@@ -231,6 +136,137 @@ function createChart (wInstance) {
 	} );
 }
 
+function linechart_reset(wInstance){
+	console.log("LINECHART",wInstance);
+	wInstance.loadData();
+	for ( i in wInstance.settings.displayWidgets ) {
+		wInstance.settings.displayWidgets[i].notify( 'reset' );
+	}
+	wInstance._callback({'type':'reset'});
+}
 
+function linechart_notify ( noticeType , wInstance ) {
+	wInstance._callback({'type':noticeType});
+	switch ( noticeType ) {
+		case 'loading' :
+			break;
+		case 'ready' :
+			break;
+		case 'data-error' :
+			break;
+		case 'reset' :
+			linechart_reset(wInstance);
+			break;
+	}
+}
+function linechart_instantiate(wInstance) {
+	wInstance.chart = {
+		chart : {
+			alignTicks : true,
+			renderTo   : wInstance.settings.container.find('.widget.linechart .canvas')[0],
+			resetZoomButton : {
+				position : {
+					x : -50,
+					y : 0
+				}
+			} ,
+			type       : 'scatter',
+			zoomType   : 'xy'
+		},
+		credits : { enabled : false },
+		legend : {
+			align          : 'right' ,
+			borderWidth    : 0 ,
+			enabled        : true ,
+			floating       : true ,
+			itemCheckboxStyle : { marginLeft : '-115px' } ,
+			itemHiddenStyle: { color: '#274b6d' } ,
+			//padding        : 4 ,
+			symbolWidth    : 0 ,
+			symbolPadding  : 0 ,
+			verticalAlign  : 'bottom' ,
+			x              : 0 ,
+			y              : 5
+		},
+		plotOptions : {
+			series: {
+				animation : false ,
+				lineWidth : 0 ,
+				marker : {
+					enabled : true,
+					states :{ hover: { enabled : true } }
+				} ,
+				showInLegend : false ,
+				states : { hover : { lineWidth : 1 } }
+			} 
+		},
+		series : [],
+		title : { text : null },
+		tooltip: { style : { padding : '6px' } },
+		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
+		yAxis : { title : { } }
+	}
+	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
+		wInstance.chart.tooltip.positioner = function ( labelWidth , labelHeight , point ) {
+			return {
+				x : 4 ,
+				y : this.chart.chartHeight - labelHeight - 2
+			};
+		}
+	}
+	Highcharts.setOptions( {
+		lang : {
+			resetZoom : 'Reset View'
+		}
+	} );
+	wInstance.highChart = new Highcharts.Chart(wInstance.chart);
+	
+	wInstance.loadData = function (data) {
+		this.data = ( this.settings.filter ? this.settings.filter( data ) : data );
+		if ( this.settings.showControls ) {
+			var labels = {};
+			wgtControls = this.settings.container.find( '.controls' );
+			for (series in this.data) {
+				dataSeries = [];
+				dataKeys = Object.keys(this.data[series].dataMeta);
+				chartAxis = ['x','y'];
+				for (idxDataKey in dataKeys) {
+					if (this.data[series].dataMeta[dataKeys[idxDataKey]].label) {
+						labels[chartAxis[idxDataKey]] = this.data[series].dataMeta[dataKeys[idxDataKey]].label;
+					} else {
+						labels[chartAxis[idxDataKey]] = null;
+					}
+				}
+			}
+			wgtControls.html( '<span>Series: ' + this.data[series].seriesMeta.label + '</span> &nbsp; <span>X-Axis: ' + labels.x + '</span> &nbsp; <span>Y-Axis: ' + labels.y + '</span> &nbsp; <button class="graph">Graph It!</button>' );
+			wgtControls.find( '.graph' ).click( function (evt) { createChart( wInstance ); } )
+		} else {
+			createChart( this );
+		}
+	}
+	
+	wInstance.notify = function ( noticeType ) {
+		linechart_notify( noticeType , this );
+	}
+	wInstance.reset = function(){
+		linechart_reset(this);
+	}
+	wInstance.callbacks = $.extend( {} , wInstance.callbacks , wInstance.settings.callbacks , true );
+	wInstance._callbacks = [];
+	wInstance._callback = function (evt) {
+		for (cbIdx in this.callbacks) {
+			this.callbacks[cbIdx].call(this, evt);
+		}
+		for (cbIdx in this._callbacks) {
+			this._callbacks[cbIdx].call(this, evt);
+		}
+	}
+}
+function linechart_initialize () {
+	$.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts.regression.js');
+	
+	aaasClimateViz.widgetLibrary.linechart.status = 'initialized';
+	aaasClimateViz.widgetLibrary.linechart.load();
+}
 // $.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts/highcharts.js', linechart_initialize);
 $.getScript('http://code.highcharts.com/3/highcharts.src.js', linechart_initialize);

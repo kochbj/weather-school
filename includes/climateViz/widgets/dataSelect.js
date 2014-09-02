@@ -140,8 +140,8 @@ function dataSelect_instantiate(wInstance) {
 		}
 	}
 	
-	wInstance.reset = dataSelect_reset;
-	
+	wInstance.reset = function() {dataSelect_reset(this);};
+	wInstance.settings.container.find('.map-reset').on('click',{wInstance:wInstance},function(evt){ dataSelect_reset(evt.data.wInstance);});
 	wInstance.requestQueue = {};
 	
 	switch (wInstance.settings.data.source) {
@@ -228,7 +228,6 @@ function dataSelect_instantiate(wInstance) {
 						}
 						// FIXME: add sorting of `selectedDates` and update the display (for multiple date selections)
 						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
-						console.log(selectedDates);
 						if (selectedDates.length > 0) {
 							displayStr = '';
 							for (i in selectedDates) {
@@ -279,23 +278,24 @@ function dataSelect_instantiate(wInstance) {
 				});
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
 				wInstance.map.date.ui.dpDiv.find('.ui-datepicker-header').removeAttr('title');
-				console.log(wInstance.map.date.ui.dpDiv.find('.ui-datepicker-header'));
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
-					if ( elInput.val() == '' ) {
+					/*if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
 						wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
-					}
+					}*/
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
+					if ( elInput.val() == '' ) {elInput.val('Hover to See'); usrDate=false; }
 					if ( usrDate !== false ) {
 						usrDate = new Date( usrDate );
 						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
 						dpDiv.datepicker( 'setDate' , usrDate );
 						if ( elInput.val() == '' ) {
-							wInstance.map.date.data( 'value' , [] );
-							dpDiv.datepicker( 'refresh' );
+							elInput.val('Hover to See');
+							//wInstance.map.date.data( 'value' , [] );
+							//dpDiv.datepicker( 'refresh' );
 						}
 						dpDiv.datepicker( 'setDate' , usrDate );
 						var selectedDates = elInput.parents('.widget.dataSelect .map-date').data('value');
@@ -875,13 +875,19 @@ function dataSelect_instantiate(wInstance) {
 	wInstance._callback({'type':'initialize'});
 }
 
-function dataSelect_reset () {
-	for ( markerID in this.markers ) { removeLocation( markerID , this ); }
-	this.map.date.data( 'value' , [] );
-	this.map.date.ui.datepicker( 'setDate' , null );
-	this.map.date.attr( 'title' , 'No date selected' );
-	this.data = {};
-	//wInstance._callback({'type':'reset'});
+function dataSelect_reset (wInstance) {
+	for ( markerID in wInstance.markers ) { removeLocation( markerID , wInstance ); }
+	wInstance.map.date.data( 'value' , [] );
+	wInstance.map.date.ui.datepicker( 'setDate' , null );
+	if (wInstance.settings.date.type == 'year-month-day-restricted') wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected'); 
+	else if (wInstance.settings.date.type == 'year-month-day' )wInstance.map.date.tooltip('option','content','No dates selected');	
+	else wInstance.map.date.attr( 'title' , 'No date selected' );
+	wInstance.data = {};
+	if (typeof(wInstance.currAjax)!='undefined') {wInstance.currAjax.abort();}
+	for ( i in wInstance.settings.displayWidgets ) {
+		wInstance.settings.displayWidgets[i].notify( 'reset' );
+	}
+	wInstance._callback({'type':'reset'});
 }
 
 // FIXME: make the info display part of the map (i.e. place it in one of the map layers
@@ -1172,8 +1178,7 @@ function removeStations ( markerID , wInstance ) {
 
 function stationBasedDataFetch( markerID , stationID , wInstance ) {
 	var dateMin, dateMax, query, queryID;
-	
-	if ( wInstance.markers.count == 0 || !wInstance.map.date || !wInstance.map.date.data('value') ) { return; }
+	if ( wInstance.markers.count == 0 || !wInstance.map.date || !wInstance.map.date.data('value') || wInstance.map.date.data('value').length==0 ) { return; }
 	var date_ranges_selection , date_ranges_array = [];
 	if ( wInstance.map.date && ( date_ranges_selection = wInstance.map.date.data( 'value' ) ) ) {
 		for ( date_ranges_selection_index in date_ranges_selection ) {
@@ -1267,7 +1272,7 @@ function stationBasedDataFetchAjax ( evt ) {
 	if ( !fetchData ) {
 		return;
 	}
-	$.ajax( {
+	wInstance.currAjax = $.ajax( {
 		
 		type     : 'GET' ,
 		url      : this.requestQueue[queryID].query.url ,
@@ -1351,6 +1356,7 @@ function stationBasedDataFetchAjax ( evt ) {
 		// TODO: distinguish between different error types (500, unknown data, network timeout, etc)
 		error : function ( jqXHR , textStatus , errorThrown ) {
 			var widgetIndex = parseInt( $.url( this.url ).param( 'widgetIndex' ) , 10 );
+			if (textStatus=="abort"){ delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ]; return;}
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status = 'fail';
 			aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-error' } );
 			for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
@@ -1376,8 +1382,7 @@ function calculatedSolarDataFetch( evt ) {
 	// FIXME: Is this calculating for all markers instead of the one specified by markerID. Is this what we want?
 	var dateMin, dateMax, sunInfo, sunSettings, sunPower, numhours;
 	var wInstance = this;
-	
-	if ( Object.keys( this.markers ).length == 0 || !this.map.date || !this.map.date.data( 'value' ) ) { return; }
+	if ( Object.keys( this.markers ).length == 0 || !this.map.date || !this.map.date.data( 'value' ) || wInstance.map.date.data('value').length==0 ) { return; }
 	
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficient.
@@ -1550,8 +1555,7 @@ function calculatedSolarDataFetch( evt ) {
 function fetchStats( evt ) {
 	var dateMin, dateMax, query, queryID;
 	var wInstance = this;
-	
-	if ( Object.keys( this.markers ).length == 0 || !this.map.date || !this.map.date.data( 'value' ) ) { return; }
+	if ( Object.keys( this.markers ).length == 0 || !this.map.date || !this.map.date.data( 'value' ) || wInstance.map.date.data('value').length==0 ) { return; }
 	
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficient.
@@ -1611,7 +1615,7 @@ function fetchStatsAjax ( evt ) {
 	if ( !fetchData ) {
 		return;
 	}
-	$.ajax( {
+	wInstance.currAjax = $.ajax( {
 		
 		type     : 'GET' ,
 		url      : this.requestQueue[queryID].query.url ,
@@ -1771,6 +1775,7 @@ function fetchStatsAjax ( evt ) {
 		// TODO: distinguish between different error types (500, unknown data, network timeout, etc)
 		error : function ( jqXHR , textStatus , errorThrown ) {
 			var widgetIndex = parseInt( $.url( this.url ).param( 'widgetIndex' ) , 10 );
+			if (textStatus=="abort"){ delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ]; return;}
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status = 'fail';
 			aaasClimateViz.widgets[widgetIndex]._callback({type:'data-error'});
 			for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {

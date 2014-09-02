@@ -153,6 +153,23 @@ function createTable(data, wInstance) {
 	return;
 }
 
+function table_reset (wInstance) {
+	if (wInstance.settings.selectForOutput) {
+		wInstance.selection = [];
+		wInstance.axis={};
+		wInstance.axis.curr='x';
+		wInstance.axis.x=null;
+		wInstance.axis.y=null;
+	}
+	wInstance.settings.container.find('.output-table table tbody').empty();
+	wInstance.settings.container.find('.output-table table colgroup').empty();
+	wInstance.settings.container.find( '.widget.output-table' ).css( 'min-height' , 'inherit' ).find( '.loading , .error' ).remove();
+	for ( i in wInstance.settings.displayWidgets ) {
+		wInstance.settings.displayWidgets[i].notify( 'reset' );
+	}
+	wInstance._callback({'type':'reset'});
+}
+
 function table_notify ( noticeType , wInstance ) {
 	wInstance._callback({'type':noticeType});
 	switch ( noticeType ) {
@@ -167,8 +184,12 @@ function table_notify ( noticeType , wInstance ) {
 			wInstance.settings.container.find( '.loading' ).remove();
 			wInstance.settings.container.find( '.widget.output-table:not(:has(.error))' ).append( '<div class="error"></div>' );
 			break;
+		case 'reset' :
+			table_reset(wInstance);
+			break;
 	}
 }
+
 
 function table_instantiate ( wInstance ) {
 	wInstance.loadData = function ( data ) {
@@ -177,7 +198,9 @@ function table_instantiate ( wInstance ) {
 	wInstance.notify = function ( noticeType ) {
 		table_notify( noticeType , this );
 	}
-	
+	wInstance.reset = function(){
+		table_reset(this);
+	}
 	wInstance.callbacks = $.extend( {} , wInstance.callbacks , wInstance.settings.callbacks , true );
 	wInstance._callbacks = [];
 	wInstance._callback = function (evt) {

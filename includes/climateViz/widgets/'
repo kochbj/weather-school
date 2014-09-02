@@ -2,7 +2,7 @@
 	<div class="widget-cover"></div>
 	<div class="calendar-cover"></div>
 	<div class="map-canvas"></div>
-	<button class="map-reset" title="RESET"></button>
+	<button class="map-reset">RESET</button>
 	<div class="map-info">
 		<span class="restricted-width">
 			<span class="lat"></span>/<span class="lng"></span> , <span class="elev"></span>
