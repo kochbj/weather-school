@@ -34,9 +34,9 @@
 
 .widget.dataSelect .map-date {
   position: absolute;
-  width: 95%;
+  //width: 95%;
   bottom: .25em;
-  right: 15px;
+  right: 5px;
 	z-index: 99;
   /* padding: .25em 10px; */
 }
@@ -164,7 +164,7 @@
 .widget.dataSelect .map-date.month-day-alt .toggle { margin-left: -30px; }
 
 /* styles for date control "year-month-day-range" selection */
-.widget.dataSelect .map-date.year-month-day { max-width: 180px; text-align: right; }
+.widget.dataSelect .map-date.year-month-day { /*max-width: 180px;*/ text-align: right; }
 .widget.dataSelect .map-date.year-month-day > * { text-align: left; }
 .widget.dataSelect .map-date.year-month-day .input { display: inline-block; }
 .widget.dataSelect .map-date.year-month-day .toggle  { position: static; display: inline-block; margin-bottom: -4px; }
@@ -196,7 +196,7 @@
 
 
 /* styles for date control "year-month-day-range-double" selection */
-.widget.dataSelect .map-date.year-month-day-range-double { max-width: 400px; text-align: right; }
+.widget.dataSelect .map-date.year-month-day-range-double { /*max-width: 400px;*/ text-align: right; }
 .widget.dataSelect .map-date.year-month-day-range-double > * { text-align: left; }
 .widget.dataSelect .map-date.year-month-day-range-double .input { display: inline-block; }
 .widget.dataSelect .map-date.year-month-day-range-double .toggle { position: static; display: inline-block; }
