@@ -882,6 +882,7 @@ function dataSelect_reset (wInstance) {
 	if (wInstance.settings.date.type == 'year-month-day-restricted') wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected'); 
 	else if (wInstance.settings.date.type == 'year-month-day' )wInstance.map.date.tooltip('option','content','No dates selected');	
 	else wInstance.map.date.attr( 'title' , 'No date selected' );
+	wInstance.map.date.find('.input input').val('');
 	wInstance.data = {};
 	if (typeof(wInstance.currAjax)!='undefined') {wInstance.currAjax.abort();}
 	for ( i in wInstance.settings.displayWidgets ) {

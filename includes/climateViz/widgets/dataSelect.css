@@ -29,6 +29,7 @@
 .widget.dataSelect .map-info .full-width .lat , .widget.dataSelect .map-info .full-width .lng , .widget.dataSelect .map-info .full-width .elev { text-align: left; display: inline-block; width: 4.5em; }
 .widget.dataSelect.width-200 .full-width  { display: none; }
 .widget.dataSelect .map-info .restricted-width { margin-left: -15px; display: none; }
+.widget.dataSelect.width-200 .map-date {left: 28px;}
 .widget.dataSelect.width-200 .map-info .restricted-width { display: none; }
 
 .widget.dataSelect .map-date {
