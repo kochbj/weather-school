@@ -272,14 +272,9 @@ function dataSelect_instantiate(wInstance) {
 					//minDate         : new Date( 1995 , 0 , 1 ) ,
 					//maxDate         : new Date( 1995 , 11 , 31 ) ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
-					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay,
-					nextText: '',
-					prevText: ''
+					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				});
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
-				console.log(wInstance.map.date.ui.dpDiv.find('.ui-datepicker-prev'));
-				wInstance.map.date.ui.dpDiv.find('a').removeAttr('title');
-				//wInstance.map.date.ui.dpDiv.find('span').removeAttr('title');
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
@@ -872,7 +867,7 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
-	$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-83 bottom-13" } } );	
+	$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: '.map-date, .calendar-cover' } );	
 	$( '.Dstooltip' ).tooltip( "close" );
 	wInstance._callback({'type':'initialize'});
 }
