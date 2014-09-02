@@ -36,6 +36,7 @@
   width: 95%;
   bottom: .25em;
   right: 15px;
+	left:28px;
 	z-index: 99;
   /* padding: .25em 10px; */
 }
@@ -64,7 +65,7 @@
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
 	border-radius:28px;
-	border:3px solid #942911;
+	//border:3px solid #942911;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -195,7 +196,7 @@
 
 
 /* styles for date control "year-month-day-range-double" selection */
-.widget.dataSelect .map-date.year-month-day-range-double { max-width: 285px; text-align: right; }
+.widget.dataSelect .map-date.year-month-day-range-double { max-width: 400px; text-align: right; }
 .widget.dataSelect .map-date.year-month-day-range-double > * { text-align: left; }
 .widget.dataSelect .map-date.year-month-day-range-double .input { display: inline-block; }
 .widget.dataSelect .map-date.year-month-day-range-double .toggle { position: static; display: inline-block; }
