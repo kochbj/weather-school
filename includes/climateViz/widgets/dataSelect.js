@@ -168,9 +168,10 @@ function dataSelect_instantiate(wInstance) {
 			case 'year-month-day' :
 				wInstance.map.date.addClass( 'year-month-day' ).html( '<div class="visual-control inline"><div class="input"><p class ="date-label">Date(s):</p><div class="toggle"></div><input type="text" size="3" placeholder="Enter Date " /></div><div class="datepicker"></div></div>' );
 				wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
+				//$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: (wInstance.settings.date.type == 'year-month-day' ? '.map-date' : '.calendar-cover') } );	
+				$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: '.map-date, .calendar-cover' } );	
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.map.date.attr( 'title' , 'No dates selected' );
-				wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'No dates selected' );
+				wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				
@@ -343,6 +344,7 @@ function dataSelect_instantiate(wInstance) {
 					} );
 				} else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
 				wInstance.map.date.find( '.input input' ).val( '' );
+				$( '.Dstooltip' ).tooltip( "close" );
 				break;
 			case 'month-day' :
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
@@ -867,8 +869,6 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
-	$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: '.map-date, .calendar-cover' } );	
-	$( '.Dstooltip' ).tooltip( "close" );
 	wInstance._callback({'type':'initialize'});
 }
 

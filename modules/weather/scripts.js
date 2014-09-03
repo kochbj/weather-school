@@ -10,27 +10,6 @@ function widgetScroll ( evt ) {
 	}
 }
 
-function armRESET( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	console.log("GOT HERE",evt.type, wInstance);
-	if ( evt.type == 'initialize' ) {
-		console.log("GOT HERE",wInstance);
-		wInstance.settings.container.find( '.map-reset' ).on('click', {widget:wInstance}, function(evt){
-			//if (!wInstance.settings.container.hasClass('clicked')) return;
-			evt.data.widget.reset();
-			if (evt.data.widget.settings.displayWidgets[0].type=="linechart") evt.data.widget.settings.displayWidgets[0].loadData();
-			//else if (evt.data.widget.settings.displayWidgets[0].type=="table"){
-				//evt.data.widget.settings.displayWidgets[0].reset();
-				/*evt.data.widget.settings.displayWidgets[0].settings.container.find( '.widget.output-table' ).css( 'min-height' , 'inherit' ).find( '.loading , .error' ).remove();	
-				evt.data.widget.settings.displayWidgets[0].settings.container.find('.output-table table tbody').empty();
-				evt.data.widget.settings.displayWidgets[0].settings.container.find('.output-table table colgroup').empty();
-				console.log(evt.data.widget.settings.displayWidgets[0]);*/
-				//evt.data.widget.settings.displayWidgets[0].settings.displayWidgets[0].loadData();
-			//}
-		});
-	}
-}
 function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -1244,7 +1223,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, armRESET ]
+					callbacks : [ mapXvis, ]
 				}
 			);
 		}

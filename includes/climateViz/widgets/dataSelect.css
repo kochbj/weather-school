@@ -12,7 +12,7 @@
 
 .dataSelect-tooltip {font-size:8pt !important; display: none; width: 80px; background-color: #dbd3c1 !important; background-image: none !important; border: none !important; position: fixed !important;}
 .widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
-.widget.dataSelect .calendar-cover { height: 30px; bottom: 36px; width: 100%; background-color: transparent; display: none; z-index: 100; bottom: 0; left: 0; position: absolute; cursor:not-allowed;}
+.widget.dataSelect .calendar-cover { height: 30px; bottom: 3.5px; width: 100%; background-color: transparent; display: none; z-index: 100; left: 0; position: absolute; cursor:not-allowed;}
 .widget.dataSelect .map-canvas { height: 400px; width: 100%; }
 
 .widget.dataSelect .map-info {
@@ -88,7 +88,9 @@
 .widget.dataSelect .map-reset:active {
 	bottom:11px;
 }
-
+.widget.dataSelect .map-reset:focus {
+	outline:0;
+}
 
 .widget.dataSelect .map-date .toggle {
   background-image: url("media/calendar.png");
@@ -147,6 +149,7 @@
 .hasDatepicker.hideNav .ui-datepicker-prev, .hasDatepicker.hideNav .ui-datepicker-next { display: none; }
 
 .widget.dataSelect .map-date .input input { text-align: center; display: inline; }
+.widget.dataSelect .map-date .input input:focus {outline: 0; }
 .widget.dataSelect .map-date .input .date-label { text-align: right; display: inline; }
 
 /* styles for date control "month-day" selection */
