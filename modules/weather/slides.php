@@ -1004,9 +1004,9 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Variable Relationship Explorer</h2>
 	</div>
 	<div class="workarea">
-		<div id="daylight-air-temperature-explore-ds" class="full-ds"></div>
-		<div id="daylight-air-temperature-explore-tb"></div>
-		<div id="daylight-air-temperature-explore-tc" class="full-tc"></div>
+		<div id="variable-relationship-explorer-ds" class="full-ds"></div>
+		<div id="variable-relationship-explorer-tb" class="full-tb"></div>
+		<div id="variable-relationship-explorer-tc" class="split-tc"></div>
 	</div>
 	<div class="instructions">
 		<div class="slider">

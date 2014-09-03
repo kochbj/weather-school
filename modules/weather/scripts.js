@@ -1477,6 +1477,40 @@ var slideInit = {
 			);
 		}
 	},
+	'variable-relationship-explorer' : {
+		is_initialized : false ,
+		initialize : function ( ) {
+			aaasClimateViz.loadWidget(
+				'dataSelect',
+				{
+					data           : { source:'location-stats' , fields:['-sunImage'] },
+					date           : { type:'year-month-day' , max:12 },
+					maxPoints      : 1,
+					container      : $( '#variable-relationship-explorer-ds' ),
+					displayWidgets : [
+						aaasClimateViz.loadWidget(
+							'table',
+							{
+								container : $( '#variable-relationship-explorer-tb' ) ,
+								selectForOutput : 2,
+								displayWidgets : [
+									aaasClimateViz.loadWidget(
+										'linechart',
+										{
+											tooltip   : { position:'fixed' , detail:'short' } ,
+											container : $( '#variable-relationship-explorer-tc' )
+										}
+									)
+								] ,
+								callbacks : [ widgetScroll, elevator ]
+							}
+						)
+					],
+					callbacks : [ mapXvis ]
+				}
+			);
+		}
+	},
 	'relationships-intro2' : {
 		is_initialized : false ,
 		initialize : function ( ) {
