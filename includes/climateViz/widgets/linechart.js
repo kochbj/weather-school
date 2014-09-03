@@ -4,6 +4,7 @@
 // FIXME: Might also have a setting to determine if we want to chart more than two variables (multiple Y-axis)
 // FIXME: Might have instances where we want to map the datetime as a non-timeseries value (e.g. 1-Dec, 22-Dec, 13-Jan instead of 13-Jan, 1-Dec, 22-Dec) (use categories and omit X values?)
 function createChart (wInstance) {
+	console.log(wInstance);
 	var series,dataSeries,seriesName,datearray;
 	/* reset the chart type since it may have been redefined during previous data processing */
 	wInstance.chart.colors = [];
@@ -11,6 +12,8 @@ function createChart (wInstance) {
 	wInstance.chart.plotOptions.series.marker.enabled = true;
 	if (typeof(wInstance.settings.chart) !== "undefined") { $.extend(true, wInstance.chart, wInstance.settings.chart); }
 	wInstance.chart.series = [];
+	var yMin=0;
+	var yMax=100;
 	for (series in wInstance.data) {
 		dataSeries = [];
 		seriesName = wInstance.data[series].seriesMeta.label;
@@ -32,6 +35,8 @@ function createChart (wInstance) {
 				dataX = wInstance.data[series].data[i][dataKeys[0]];
 			}
 			dataY = wInstance.data[series].data[i][dataKeys[1]];
+			yMin=Math.min(yMin,dataY);
+			yMax=Math.max(yMax,dataY);
 			dataSeries.push([dataX,dataY]);
 		}
 		for (idxDataKey in dataKeys) {
@@ -53,13 +58,21 @@ function createChart (wInstance) {
 			} else {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.text = null;
 			}
-			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range) {
+			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range && chartAxis[idxDataKey]=='y') {
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = Math.min(yMin,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0]);
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = Math.max(yMax,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1]);}
+			else if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range && chartAxis[idxDataKey]=='x'){
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0];
-				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];
-			} else {
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];}
+			else if (chartAxis[idxDataKey]=='y') {
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min=yMin; 
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max=yMax; 
+			}
+			else {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = null;
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = null;
 			}
+			console.log(yMin,yMax);
 			wInstance.chart.tooltip.formatter = function () {
 				if ('format' in wInstance.data[series].dataMeta[dataKeys[0]] && typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'object') {
 					xVal = wInstance.data[series].dataMeta[dataKeys[0]].format( (this.series.xAxis.options.type=='datetime'?new Date(this.x):this.x) );
@@ -137,8 +150,9 @@ function createChart (wInstance) {
 }
 
 function linechart_reset(wInstance){
-	console.log("LINECHART",wInstance);
-	wInstance.loadData();
+	wInstance.highChart.destroy();
+	wInstance.highChart = new Highcharts.Chart(wInstance.defaultChart);
+	//wInstance.loadData();
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'reset' );
 	}
@@ -160,7 +174,7 @@ function linechart_notify ( noticeType , wInstance ) {
 	}
 }
 function linechart_instantiate(wInstance) {
-	wInstance.chart = {
+	wInstance.defaultChart = {
 		chart : {
 			alignTicks : true,
 			renderTo   : wInstance.settings.container.find('.widget.linechart .canvas')[0],
@@ -206,6 +220,7 @@ function linechart_instantiate(wInstance) {
 		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
 		yAxis : { title : { } }
 	}
+	wInstance.chart=$.extend( true, {}, wInstance.defaultChart);
 	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
 		wInstance.chart.tooltip.positioner = function ( labelWidth , labelHeight , point ) {
 			return {
@@ -218,7 +233,7 @@ function linechart_instantiate(wInstance) {
 		lang : {
 			resetZoom : 'Reset View'
 		}
-	} );
+	} );	
 	wInstance.highChart = new Highcharts.Chart(wInstance.chart);
 	
 	wInstance.loadData = function (data) {

@@ -1,5 +1,6 @@
 // FIXME: add an option to display separate series as either stacked or side-by-side
 function createTable(data, wInstance) {
+	console.log(wInstance, data);
 	wInstance.data = data;
 	if (wInstance.settings.filter) {
 		data = wInstance.settings.filter(data);

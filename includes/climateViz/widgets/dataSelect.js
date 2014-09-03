@@ -119,7 +119,8 @@ function dataSelect_instantiate(wInstance) {
 	google.maps.event.addListener(wInstance.map, 'mouseout', wInstance.events.pointInfoHide);
 	
 	wInstance.markers = {};
-	
+	wInstance.bounds = new google.maps.LatLngBounds();
+
 	pService = new google.maps.places.PlacesService(wInstance.map);
 	
 	wInstance.callbacks = $.extend( {} , wInstance.callbacks , wInstance.settings.callbacks , true );
@@ -874,6 +875,7 @@ function dataSelect_instantiate(wInstance) {
 
 function dataSelect_reset (wInstance) {
 	for ( markerID in wInstance.markers ) { removeLocation( markerID , wInstance ); }
+	wInstance.bounds = new google.maps.LatLngBounds();	
 	wInstance.map.date.data( 'value' , [] );
 	wInstance.map.date.ui.datepicker( 'setDate' , null );
 	if (wInstance.settings.date.type == 'year-month-day-restricted') wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected'); 
@@ -898,6 +900,36 @@ function pointInfo (e,wInstance) {
 function pointInfoHide (e,wInstance) { /*wInstance.settings.container.find('.map-info').fadeOut('slow')*/ }
 function pointInfoShow (e,wInstance) { /*wInstance.settings.container.find('.map-info').fadeIn('slow')*/ }
 
+
+//addLocation Helper http://jsfiddle.net/john_s/BHHs8/6/
+function getBoundsZoomLevel(wInstance) {
+    var WORLD_DIM = { height: 256, width: 256 };
+    var ZOOM_MAX = 21;
+		var mapCanvas = wInstance.settings.container.find('.map-canvas');
+    function latRad(lat) {
+        var sin = Math.sin(lat * Math.PI / 180);
+        var radX2 = Math.log((1 + sin) / (1 - sin)) / 2;
+        return Math.max(Math.min(radX2, Math.PI), -Math.PI) / 2;
+    }
+
+    function zoom(mapPx, worldPx, fraction) {
+        return Math.floor(Math.log(mapPx / worldPx / fraction) / Math.LN2);
+    }
+
+    var ne = wInstance.bounds.getNorthEast();
+    var sw = wInstance.bounds.getSouthWest();
+
+    var latFraction = (latRad(ne.lat()) - latRad(sw.lat())) / Math.PI;
+    
+    var lngDiff = ne.lng() - sw.lng();
+    var lngFraction = ((lngDiff < 0) ? (lngDiff + 360) : lngDiff) / 360;
+    
+    var latZoom = zoom(mapCanvas.height(), WORLD_DIM.height, latFraction);
+    var lngZoom = zoom(mapCanvas.width(), WORLD_DIM.width, lngFraction);
+
+    return Math.min(latZoom, lngZoom, ZOOM_MAX);
+}
+
 function addLocation (e,wInstance) {
 	if (wInstance.settings.maxPoints && (Object.keys(wInstance.markers)).length >= wInstance.settings.maxPoints) {
 		for (i in wInstance.markers) {
@@ -912,7 +944,6 @@ function addLocation (e,wInstance) {
 		map: wInstance.map,
 		visible:true
 	});
-	
 	if ( typeof( wInstance.settings.maxStations ) == 'undefined' || wInstance.settings.maxStations == 1 ) {
 		marker.color = _colors.colors[ _colors.keys [ ( _colors.currentKey++ % _colors.keys.length ) ] ];
 		// random hex color via http://paulirish.com/2009/random-hex-color-code-snippets/
@@ -945,8 +976,9 @@ function addLocation (e,wInstance) {
 	marker.name = Math.round(e.latLng.lat()*10)/10+','+Math.round(e.latLng.lng()*10)/10;
 	marker.userCoords = new google.maps.LatLng(e.latLng.lat(),e.latLng.lng());
 	wInstance.markers[marker.id] = marker;
-	
-	wInstance.map.panTo(marker.getPosition());
+	wInstance.bounds.extend(marker.position);	
+	wInstance.map.panTo(wInstance.bounds.getCenter());
+	if (getBoundsZoomLevel(wInstance) < wInstance.map.getZoom()) wInstance.map.setZoom(getBoundsZoomLevel(wInstance)-1); 
 	// FIXME: do this only if we're showing stations (?)
 	// setTimeout('aaasClimateViz.widgets['+wInstance.index+'].map.setZoom(5)',1500);
 	
@@ -978,7 +1010,7 @@ function addLocation (e,wInstance) {
 		var contentString = '<div class="infoWindow" style="width:170px; line-height:1.35; overflow:hidden; white-space:nowrap;">';
 		contentString += '<div class="name">'+(this.location.city?this.location.city:'')+'</div><div class="location">'+(this.location.state?this.location.state+', ':'')+(this.location.country?this.location.country:'')+'</div>';
 		contentString += '<div class="user coords">'+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
-		if (!staticmap) contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
+		//if (!staticmap) contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
 		contentString += '</div>';
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString,
@@ -1164,6 +1196,8 @@ function removeLocation ( markerID , wInstance ) {
 	wInstance.markers[markerID].setMap( null );
 	delete wInstance.markers[markerID];
 	delete wInstance.data[markerID];
+	wInstance.bounds = new google.maps.LatLngBounds();
+	for (i in wInstance.markers) wInstance.bounds.extend(wInstance.markers[i].position);
 	// TODO: alert data processing callback if a selected station was removed
 }
 function removeStations ( markerID , wInstance ) {

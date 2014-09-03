@@ -955,7 +955,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbTempLatitude , mapXvis ]
+					callbacks : [ /*cbTempLatitude*/ , mapXvis ]
 				}
 			);
 		}
