@@ -570,7 +570,7 @@ At the completion of each module you can check your understanding of the feature
 			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of Troms and Kautokeino is southeast of Troms.</p>
 			</div>
 			<div>
-				<p>The graph above shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
 				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Troms, which is close to the water, but in the summer, Troms is a little cooler than Kautokeino.</p>
@@ -582,10 +582,10 @@ At the completion of each module you can check your understanding of the feature
 				<p>The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
-				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
+				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large body of water throughout the year is smaller.</p>
 			</div>
 			<div>
-				<p>You will now have a chance to observe the effect of proximity to a large bodies of water on temperature at locations of your choosing. See if other locaitons near large bodies of water experience cooler summers and warmer winters compared to nearby locations further inland.</p>
+				<p>You will now have a chance to observe the effect of proximity to a large body of water on temperature at locations of your choosing. See if other locaitons near a large body of water experience cooler summers and warmer winters compared to nearby locations farther inland.</p>
 			</div>
 			
 		</div>
@@ -612,10 +612,10 @@ At the completion of each module you can check your understanding of the feature
 				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
-				<p>4. Remember to compare locations that are pretty close to each other. If the two locations are too far apart, something other than how close a place is to the water may be responsible for the difference in temperature. For example, the places may be at different latitudes or elevations above sea level.</p>
+				<p>4. When you choose locations, make sure that one of them is not at a much higher elevation than the other one. Coastal areas often have mountains nearby, so when comparing two locations just make sure one of them is not in the mountains and the other at sea level. </p>
 			</div>
 			<div>
-				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
+				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline. You will also see that the effect of proximity to a large body of water is not always the same from place to place. Sometimes it is barely noticeable and other times it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air over the water gets inland.</p>
 			</div>
 			<div>
 				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
@@ -648,9 +648,9 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What effect does a large body of water have on a particular place in the winter?</li>
-			<li>What effect does a large body of water have on a particular place in the summer?</li>
-			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year at a particular place?</li>
+			<li>What is the relationship between proximity to a large body of water and air temperature at that place in the winter?</li>
+			<li>In the summer, what effect does a large body of water have on air temperature over nearby land?</li>
+			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year over nearby land?</li>
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
