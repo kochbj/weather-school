@@ -1279,7 +1279,6 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 					wInstance._callback( {type:'data-ready'} );
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify( 'ready' );
-						console.log("DATA to linechart 1",aaasClimateViz.widgets[widgetIndex].data);
 						wInstance.settings.displayWidgets[i].loadData( wInstance.data );
 					}
 				}
@@ -1290,10 +1289,8 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 
 function stationBasedDataFetchAjax ( evt ) {
 	if (this.running) {
-		console.log("Returning");	
 		return;
 	}
-	console.log("Not Returning");	
 	var wInstance = this;
 	var fetchData = false;
 	for ( queryID in this.requestQueue ) {
@@ -1383,7 +1380,6 @@ function stationBasedDataFetchAjax ( evt ) {
 			aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-ready' } );
 			for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
 				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'ready' );
-				console.log("DATA to linechart2",aaasClimateViz.widgets[widgetIndex].data);
 				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData( aaasClimateViz.widgets[widgetIndex].data );
 			}
 		} ,
@@ -1582,7 +1578,6 @@ function calculatedSolarDataFetch( evt ) {
 		this._callback({type:'data-ready'});
 		for (i in this.settings.displayWidgets) {
 			this.settings.displayWidgets[i].notify('ready');
-			console.log("DATA to linechart3",this.data);
 			this.settings.displayWidgets[i].loadData(this.data);
 		}
 	}
@@ -1628,7 +1623,6 @@ function fetchStats( evt ) {
 				this._callback({type:'data-ready'});
 				for (i in this.settings.displayWidgets) {
 					this.settings.displayWidgets[i].notify('ready');
-					console.log("DATA to linechart4",this.data);
 					this.settings.displayWidgets[i].loadData(this.data);
 				}
 			}
@@ -1805,7 +1799,6 @@ function fetchStatsAjax ( evt ) {
 			aaasClimateViz.widgets[widgetIndex]._callback({type:'data-ready'});
 			for (i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets) {
 				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify('ready');
-				console.log("DATA to linechart5",aaasClimateViz.widgets[widgetIndex].data);
 				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData(aaasClimateViz.widgets[widgetIndex].data);
 			}
 		} ,
