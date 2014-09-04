@@ -325,10 +325,10 @@ At the completion of each module you can check your understanding of the feature
 				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="The part of the Earth's surface between the Tropic of Cancer and the Tropic of Capricorn, which includes the equator. The Tropic of Cancer is located on the line of latitude 23.5 degrees north of the equator. The Tropic of Capricorn is located on the line of latitude 23.5 degrees south of the equator.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
 			</div>
 			<div>
-				<p>You should also see that the difference between the high and low temperatures over the course of a year is less the closer you are to the tropical zone. </p>
+				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year - what we call the range of temperatures - is less the closer you are to the tropical zone. </p>
 			</div>
 			<div>
-				<p>Notice that the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of temperatures at the higher latitude (the <span class="lat-high">higher</span> line) is greater than the range of temperatures at the lower latitude. Another way to say this is that the line that is closer to the tropical zone (the <span class="lat-low">lower</span> line) is a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">higher</span> line).</p>
+				<p>Notice that the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of temperatures at the higher latitude (the <span class="lat-high">lower</span> line) is greater than the range of temperatures at the lower latitude (the upper line). This makes the line that is closer to the tropical zone (the <span class="lat-low">upper</span> line) a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">lower</span> line).</p>
 			</div>
 					</div>
 		<div class="questionBox">
