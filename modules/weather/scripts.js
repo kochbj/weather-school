@@ -1,3 +1,8 @@
+function createUTCDate(dateStr) {
+		var date = new Date(dateStr);
+    return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()/*, date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()*/); 
+    }
+		
 function widgetScroll ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	switch ( evt.type ) {
@@ -38,19 +43,6 @@ function elevator( evt ) {
 	});
 	}
 }
-function locExSample ( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , new Date( 1995 , 5 , 22 ) );
-			wInstance.map.date.ui.find('.ui-state-active').click();
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71 , -74.0 ) } );
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 24.55 , -81.78 ) } );
-		} , 1000 );
-	}
-}
 function cbDaylightEx1 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -58,8 +50,8 @@ function cbDaylightEx1 ( evt ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap: true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 0 , 0 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 11 , 30 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();*/
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);	
 		} , 1000 );
@@ -73,8 +65,8 @@ function cbDaylightEx2 ( evt ) {
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 44.70 , -73.45 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1] ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 12 , 31] ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
@@ -87,8 +79,8 @@ function cbDaylightEx3 ( evt ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 5.07 , -74.53 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1 ]) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 12 , 31 ]) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
@@ -101,71 +93,13 @@ function cbDaylightEx4 ( evt ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 0.15 , -78.35 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1 ]) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 12 , 31 ]) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
 	}
 }
-function cbRelation2 ( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			wInstance.map.date.find( '.start-date .datepicker' ).datepicker( 'setDate' , new Date( 1999 , 8 , 22 ) );
-			wInstance.map.date.find( '.end-date .datepicker' ).datepicker( 'setDate' , new Date( 2001 , 11 , 31 ) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71 , -74.0 ) } );
-		} , 1000 );
-	}
-}
-function cbRelation3 ( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			wInstance.map.date.data( 'value' , [ new Date(1995,0,15) , new Date(1995,1,15) , new Date(1995,2,15) , new Date(1995,3,15) , new Date(1995,4,15) , new Date(1995,5,15) , new Date(1995,6,15) , new Date(1995,7,15) , new Date(1995,8,15) , new Date(1995,9,15) , new Date(1995,10,15) , new Date(1995,11,15) ] );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71 , -74.0 ) } );
-		} , 1000 );
-	}
-}
-function cbBonaire ( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 39.18 , -76.67 ) } );
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 12.16 , -68.23 ) } );
-		} , 1000 );
-	}
-}
-/*function cbHeightSunAirTempEx (evt) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		//console.log(wInstance);
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
-			var dateVals=[];
-			wInstance.map.date.data('hidden',false);
-			for (i=0; i<12; i++) dateVals.push(new Date(2000,i,15));
-			wInstance.map.date.data( 'value', dateVals);
- 			wInstance.map.date.ui.find('.ui-state-active').click();
-		} , 1000 );
-		setTimeout( function() {
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunAngle']);
-			//console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
-			}, 15000	);
-	}
-}
-*/
 function cbHeightSunAirTempEx (evt) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
 	if ( !evt ) { evt = { type : null }; }
@@ -179,7 +113,6 @@ function cbHeightSunAirTempEx (evt) {
 	} , 1000 );
 	}
 }
-
 function cbDaylightAirTempEx (evt) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
 	if ( !evt ) { evt = { type : null }; }
@@ -193,30 +126,6 @@ function cbDaylightAirTempEx (evt) {
 	} , 1000 );
 	}
 }
-
-/*function cbDaylightAirTempEx (evt) {
-	if ( !evt ) { evt = { type : null }; }
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		//console.log(wInstance);
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 41.87 , -87.61 ), staticmap:true } );
-			var dateVals=[];
-			wInstance.map.date.data('hidden',false);
-			for (i=0; i<12; i++) dateVals.push(new Date(2000,i,15));
-			wInstance.map.date.data( 'value', dateVals);
- 			wInstance.map.date.ui.find('.ui-state-active').click();
-		} , 1000 );
-		setTimeout( function() {
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['sunHours']);
-			$(wInstance.settings.displayWidgets[0].settings.container.find('.output-table table tbody .header th')[0]).trigger('click',['tempavg']);
-			//console.log(wInstance.settings.container.find('.output-table table tbody .header th'));
-			}, 15000	);
-	}
-}
-*/
-
 function cbRelationSunEnergy ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
@@ -339,7 +248,7 @@ function cbDailyTempEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.data('value',[[new Date( 2001 , 0 , 1 ),new Date( 2002 , 0 , 1 )]]);
+		wInstance.map.date.data('value',[[createUTCDate( [2001 , 1 , 1] ),createUTCDate( [2002 , 1 , 1 ])]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
@@ -354,8 +263,8 @@ function cbHeightSunEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71, -74.01 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 1 , 1] ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 12 , 31 ]) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
@@ -420,14 +329,152 @@ function cbDailyTempOld ( evt ) {
 	}
 }
 
+
+function cbTempLatNorthern ( evt ) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	//console.log(wInstance);
+	if ( evt.type == 'initialize' ) {
+	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+	/*wInstance.settings.animate= function(evt){
+				//console.log(wInstance);
+				//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
+				var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
+				if (currSlide == 1) widgetAnimations.placemarkers(wInstance, new google.maps.LatLng( 49.886083,-97.152921 ), new google.maps.LatLng( 29.461029,-98.697739 ), createUTCDate( 2001 , 0 , 0 ), createUTCDate( 2001 , 11 , 30 ) );
+				if (currSlide == 3) widgetAnimations.swinggraph(wInstance);
+				//console.log("GOT HERE");
+	}*/
+	setTimeout( function ( ) {
+		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+		//$( '#slider-navigation .prev' ).one('click', function() { $( '#slider-navigation .next' ).off("click",TempLatNorthernCl1);});}
+	//else if (currentSlideIndex==1){
+	//	TempLatNorthern(evt ={wInstance:wInstance});
+	//}
+		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 49.886083,-97.152921 ), staticmap: true } );
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 29.461029,-98.697739 ), staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2001 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2001 , 11 , 30 ) );
+ 		wInstance.map.date.ui.find('.ui-state-active').click();*/
+	} , 1000 );
+	}
+}
+
+function cbTempLatSouthern ( evt ) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	if ( evt.type == 'initialize' ) {
+	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+	setTimeout( function ( ) {
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -17.800000,-63.166670 ), staticmap: true } );
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -31.398930,-64.182129 ), staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1] ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 12 , 31] ) );
+ 		wInstance.map.date.ui.find('.ui-state-active').click();
+		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+	} , 1000 );
+	}
+}	
+
+function cbElevExample ( evt ) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	if ( evt.type == 'initialize' ) {
+	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+	setTimeout( function ( ) {
+		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+		////console.log(wInstance.map.widget);
+		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 27.71,85.33 ), stationNames: ["TINGRI", "GORAKHPUR"], staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 11 , 30 ) );
+ 		wInstance.map.date.ui.find('.ui-state-active').click();
+//		setTimeout( function () {
+//		google.maps.event.clearListeners(wInstance.map, 'click');
+//		wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true}); }, 2000 );*/
+	} , 1000 );
+	}
+}	
+function cbLargeBodiesWaterExample ( evt ) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	if ( evt.type == 'initialize' ) {
+	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+	setTimeout( function ( ) {
+		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+/*////console.log(wInstance.map.widget);
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 69.38,20.71 ), stationNames: ["TROMSO", "KAUTOKEINO"], staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 11 , 30 ) );
+ 		wInstance.map.date.ui.find('.ui-state-active').click();*/
+	} , 1000 );
+	}
+}	
+
+function cbTempLatitude ( evt ) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	var markerKeys;
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	var instrSlider = this.settings.container.parents( '.child' ).find( '.instructions .slider' )[0].sliderObj;
+	var hasMarker = ( ( markerKeys = Object.keys( this.markers ) ).length > 0 ? true : false );
+	var hasDate = ( !this.map.date || !this.map.date.data( 'value' ) ? false : true );
+	if ( evtType[0] == 'user' && [ 'select' , 'remove' ].indexOf( evtType[1] ) !== -1 ) {
+		if ( !hasMarker ) {
+			instrSlider.toSlide( 1 );
+		} else if ( hasMarker && !hasDate ) {
+			instrSlider.toSlide( 2 );
+		}
+	} else if ( evtType[0] == 'data' && evtType[1] == 'ready' && instrSlider.currentSlideIndex < 3 ) {
+		instrSlider.toSlide( 3 );
+		// FIXME: should we disable this callback here, we don't need to go back to the previous slides at this point?
+	} else {
+		//if ( instrSlider.currentSlideIndex == 2 ) {
+		//	instrSlider.toSlide( 3 );
+		//} else if ( instrSlider.currentSlideIndex == 3 ) {
+		//	this.settings.maxPoints = 2;
+		//	instrSlider.toSlide( 4 );
+		//} else if ( !instrSlider.currentSlideIndex == 4 ) {
+		//	this.settings.maxPoints = 2;
+		//	instrSlider.toSlide( 4 );
+		//}
+	}
+	if ( typeof(markerKeys) !== 'undefined' && markerKeys.length == 2) {
+		var colorText = [];
+		for (colorKey in _colors.colors ) {
+			if ( _colors.colors[colorKey] == this.markers[ markerKeys[0] ].color ) {
+				colorText.push( _colors.legend[colorKey] );
+			}
+			if ( _colors.colors[colorKey] == this.markers[ markerKeys[1] ].color ) {
+				colorText.push( _colors.legend[colorKey] );
+			}
+		}
+		if ( this.markers[ markerKeys[0] ].userCoords.lat( ) > this.markers[ markerKeys[1] ].userCoords.lat( ) ) {
+			this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( colorText[0] );
+			this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( colorText[1] );
+		} else {
+			this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( colorText[1] );
+			this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( colorText[0] );
+		}
+	} else {
+		this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( 'higher' );
+		this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( 'lower' );
+	}
+}
 var widgetAnimations = {
 	placemarkers: function(wInstance,marker1,marker2,date1,date2) {
 		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
 		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
-		console.log(date1, new Date(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , createUTCDate(date1));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , createUTCDate(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
 		},
@@ -436,7 +483,7 @@ var widgetAnimations = {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
 		var dateVals=[];
 		wInstance.map.date.data('hidden',false);
-		for (i=0; i<12; i++) dateVals.push(new Date(year,i,15));
+		for (i=1; i<13; i++) dateVals.push(createUTCDate([year,i,15]));
 		wInstance.map.date.data( 'value', dateVals);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
@@ -444,8 +491,8 @@ var widgetAnimations = {
 	placestations: function(wInstance,marker1,stations,date1,date2) {
 		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , createUTCDate(date1));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , createUTCDate(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
 		},
@@ -504,145 +551,6 @@ var widgetAnimations = {
 		wInstance.settings.container.addClass('elevated');
 }
 }
-function cbTempLatNorthern ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	//console.log(wInstance);
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	/*wInstance.settings.animate= function(evt){
-				//console.log(wInstance);
-				//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
-				var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-				if (currSlide == 1) widgetAnimations.placemarkers(wInstance, new google.maps.LatLng( 49.886083,-97.152921 ), new google.maps.LatLng( 29.461029,-98.697739 ), new Date( 2001 , 0 , 0 ), new Date( 2001 , 11 , 30 ) );
-				if (currSlide == 3) widgetAnimations.swinggraph(wInstance);
-				//console.log("GOT HERE");
-	}*/
-	setTimeout( function ( ) {
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-		//$( '#slider-navigation .prev' ).one('click', function() { $( '#slider-navigation .next' ).off("click",TempLatNorthernCl1);});}
-	//else if (currentSlideIndex==1){
-	//	TempLatNorthern(evt ={wInstance:wInstance});
-	//}
-		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 49.886083,-97.152921 ), staticmap: true } );
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 29.461029,-98.697739 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2001 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2001 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();*/
-	} , 1000 );
-	}
-}
-
-function cbTempLatSouthern ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -17.800000,-63.166670 ), staticmap: true } );
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -31.398930,-64.182129 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 1000 );
-	}
-}	
-
-function cbElevExample ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-		////console.log(wInstance.map.widget);
-		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 27.71,85.33 ), stationNames: ["TINGRI", "GORAKHPUR"], staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-//		setTimeout( function () {
-//		google.maps.event.clearListeners(wInstance.map, 'click');
-//		wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true}); }, 2000 );*/
-	} , 1000 );
-	}
-}	
-function cbLargeBodiesWaterExample ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-/*////console.log(wInstance.map.widget);
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 69.38,20.71 ), stationNames: ["TROMSO", "KAUTOKEINO"], staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 		wInstance.map.date.ui.find('.ui-state-active').click();*/
-	} , 1000 );
-	}
-}	
-
-function cbTempLatitude ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	var markerKeys;
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	var instrSlider = this.settings.container.parents( '.child' ).find( '.instructions .slider' )[0].sliderObj;
-	var hasMarker = ( ( markerKeys = Object.keys( this.markers ) ).length > 0 ? true : false );
-	var hasDate = ( !this.map.date || !this.map.date.data( 'value' ) ? false : true );
-	if ( evtType[0] == 'user' && [ 'select' , 'remove' ].indexOf( evtType[1] ) !== -1 ) {
-		if ( !hasMarker ) {
-			instrSlider.toSlide( 1 );
-		} else if ( hasMarker && !hasDate ) {
-			instrSlider.toSlide( 2 );
-		}
-	} else if ( evtType[0] == 'data' && evtType[1] == 'ready' && instrSlider.currentSlideIndex < 3 ) {
-		instrSlider.toSlide( 3 );
-		// FIXME: should we disable this callback here, we don't need to go back to the previous slides at this point?
-	} else {
-		//if ( instrSlider.currentSlideIndex == 2 ) {
-		//	instrSlider.toSlide( 3 );
-		//} else if ( instrSlider.currentSlideIndex == 3 ) {
-		//	this.settings.maxPoints = 2;
-		//	instrSlider.toSlide( 4 );
-		//} else if ( !instrSlider.currentSlideIndex == 4 ) {
-		//	this.settings.maxPoints = 2;
-		//	instrSlider.toSlide( 4 );
-		//}
-	}
-	if ( typeof(markerKeys) !== 'undefined' && markerKeys.length == 2) {
-		var colorText = [];
-		for (colorKey in _colors.colors ) {
-			if ( _colors.colors[colorKey] == this.markers[ markerKeys[0] ].color ) {
-				colorText.push( _colors.legend[colorKey] );
-			}
-			if ( _colors.colors[colorKey] == this.markers[ markerKeys[1] ].color ) {
-				colorText.push( _colors.legend[colorKey] );
-			}
-		}
-		if ( this.markers[ markerKeys[0] ].userCoords.lat( ) > this.markers[ markerKeys[1] ].userCoords.lat( ) ) {
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( colorText[0] );
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( colorText[1] );
-		} else {
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( colorText[1] );
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( colorText[0] );
-		}
-	} else {
-		this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( 'higher' );
-		this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( 'lower' );
-	}
-}
-
 /**
  * Widget initialization object.
  *
@@ -651,103 +559,6 @@ function cbTempLatitude ( evt ) {
 **/
 
 var slideInit = {
-	'locationExplorer-sample' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'location-stats' },
-					date           : { type:'month-day' , max:1 },
-					maxPoints      : 2,
-					container      : $( '#dataSelector-sample' ),
-					readOnly       : true ,
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'statspanel',
-							{
-								container : $( '#statspanel-sample' ) ,
-								callbacks : [ widgetScroll ]
-							}
-						)
-					],
-					callbacks : [ locExSample ]
-				}
-			);
-		}
-	} ,
-	'locationExplorer' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'location-stats' },
-					date           : { type:'month-day' , max:1 },
-					maxPoints      : 1,
-					container      : $( '#dataSelector1' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'statspanel',
-							{
-								container : $( '#statspanel1' ) ,
-								callbacks : [ widgetScroll ]
-							}
-						)
-					],
-					callbacks : [ locExInstruct , mapXvis ]
-				}
-			);
-		}
-	} ,
-	'locationExplorer2' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'location-stats' },
-					date           : { type:'month-day' , max:1 },
-					maxPoints      : 2,
-					container      : $( '#dataSelector2' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'statspanel',
-							{
-								container : $( '#statspanel2' ) ,
-								callbacks : [ widgetScroll ]
-							}
-						)
-					],
-					callbacks : [ mapXvis ]
-				}
-			);
-		}
-	} ,
-	'locationExplorer3' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'location-stats' },
-					date           : { type:'month-day' , max:1 },
-					maxPoints      : 2,
-					container      : $( '#dataSelector3' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'statspanel',
-							{
-								container : $( '#statspanel3' ) ,
-								callbacks : [ widgetScroll ]
-							}
-						)
-					],
-					callbacks : [  mapXvis ]
-				}
-			);
-		}
-	} ,
 	'locationExplorer-tryit' : {
 		is_initialized : false ,
 		initialize : function ( ) {
@@ -791,8 +602,8 @@ var slideInit = {
 								//Need to select larger range for annual temperature. Filter then reduces this for daily.
 								filter : function ( data ) {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
-									var DailyDateStart = new Date( 2000, 3, 1 );
-									var DailyDateEnd = new Date( 2000, 3, 25 );
+									var DailyDateStart = createUTCDate( [2000, 4, 1] );
+									var DailyDateEnd = createUTCDate( [2000, 4, 25] );
 									filteredData = {};
 									for ( dataID in data ) {
 										filteredData[dataID] = { data:[] , dataMeta:data[dataID].dataMeta , seriesMeta:data[dataID].seriesMeta };
@@ -890,9 +701,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004, 1 , 1], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004, 1 , 1], [2004 , 12 , 31 ] );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2001 , 0 , 0], [2001 , 11 , 30 ] );
+							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004 , 1 , 1], [2004 , 12 , 31 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-lat-northern .plusslider-pagination li').off('click.animate');
@@ -985,9 +796,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-elevation-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
 						else if (currSlide >= 6) {
-							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
+							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-elevation-example .plusslider-pagination li').off('click.animate');
@@ -1047,9 +858,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-water-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
 						else if (currSlide >= 4) {
-						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 11 , 30 ] );
+						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-water-example .plusslider-pagination li').off('click.animate');
@@ -1253,9 +1064,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example1-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2004 , 1 , 1], [2004 , 11 , 30 ] );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2004 , 1 , 1], [2004 , 12 , 31 ] );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2004 , 1 , 1], [2004 , 11 , 30 ] );
+							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2004 , 1 , 1], [2004 , 12, 31 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-example1 .plusslider-pagination li').off('click.animate');
@@ -1507,130 +1318,6 @@ var slideInit = {
 						)
 					],
 					callbacks : [ mapXvis ]
-				}
-			);
-		}
-	},
-	'relationships-intro2' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'gsod' },
-					date           : { type:'year-month-day-range' },
-					maxPoints      : 1,
-					container      : $( '#relations-intro2-map' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#relations-intro2-graph' )
-							}
-						)
-					],
-					callbacks : [ cbRelation2 ]
-				}
-			);
-		}
-	} ,
-	'relationships-intro3' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'sunangle' , fields:['sunAngle','sunEnergyT'] },
-					date           : { type:'month-day' },
-					maxPoints      : 1,
-					container      : $( '#relations-intro3-map' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#relations-intro3-graph' )
-							}
-						)
-					],
-					callbacks : [ cbRelation3 ]
-				}
-			);
-		}
-	} ,
-	'relationships-bonaire' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					date           : { type:'year-month-day-range' },
-					maxPoints      : 2,
-					container      : $( '#relations-bonaire-map' ),
-					data : { source:function( evt ) {
-						this.data['bonair-to-baltimore'] = {
-							seriesMeta : {
-								series : 'bonair-to-baltimore',
-								label : 'Bonaire to Baltimore',
-								seriesSort : function (a,b) { return 0; },
-								dataSort : function (a,b) { return a.date.getTime()-b.date.getTime(); }
-							},
-							dataMeta : {
-								altitude : { type : 'float' , label : 'Altitude' , range: [0,50000] , format : function ( val ) { return Math.round( val ) + ' Feet'; } },
-								temp : { type : 'float' , label : 'Temperature' , range : [-100,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
-							},
-							data : [{altitude:0,temp:80},{altitude:10000,temp:50},{altitude:20000,temp:20},{altitude:30000,temp:-30},{altitude:40000,temp:-75}],
-						};
-						for (i in this.settings.displayWidgets) {
-							this.settings.displayWidgets[i].notify('ready');
-							this.settings.displayWidgets[i].loadData(this.data);
-						}
-					} },
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'linechart',
-							{
-								tooltip   : { position:'fixed' , detail:'short' } ,
-								container : $( '#relations-bonaire-graph' )
-							}
-						)
-					],
-					callbacks : [ cbBonaire ]
-				}
-			);
-		}
-	} ,
-	'relationships-sun-energy' : {
-		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
-				'dataSelect',
-				{
-					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'month-day' , max:12 },
-					maxPoints      : 1,
-					container      : $( '#variables-selection-2' ),
-					displayWidgets : [
-						aaasClimateViz.loadWidget(
-							'table',
-							{
-								container : $( '#variables-table-2' ) ,
-								selectForOutput : 2,
-								displayWidgets : [
-									aaasClimateViz.loadWidget(
-										'linechart',
-										{
-											tooltip   : { position:'fixed' , detail:'short' } ,
-											container : $( '#variables-graph-2' )
-										}
-									)
-								] ,
-								callbacks : [ widgetScroll ]
-							}
-						)
-					],
-					callbacks : [ cbRelationSunEnergy ]
 				}
 			);
 		}

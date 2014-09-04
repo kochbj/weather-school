@@ -152,7 +152,7 @@ function createChart (wInstance) {
 function linechart_reset(wInstance){
 	wInstance.highChart.destroy();
 	wInstance.highChart = new Highcharts.Chart(wInstance.defaultChart);
-	//wInstance.loadData();
+	//linechart_instantiate(wInstance);
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'reset' );
 	}

@@ -44,6 +44,11 @@ function dataSelect_initialize() {
 	aaasClimateViz.widgetLibrary.dataSelect.load();
 }
 
+function createUTCDate(dateStr) {
+		var date = new Date(dateStr);
+    return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()/*, date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()*/); 
+    }
+		
 function dataSelect_instantiate(wInstance) {
 	var myLatlng = new google.maps.LatLng(38,-95);
 	pointInfo({latLng:myLatlng},wInstance);
@@ -206,7 +211,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.events = {
 					onSelect : function ( value , ui ) {
 						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
-						var selectedDate = new Date(ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val() != '' ? ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val() : null) ; 
+						var selectedDate = createUTCDate(ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val() != '' ? ui.dpDiv.parents( '.visual-control' ).find( '.input input' ).val() : null) ; 
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
 						if (typeof(selectedDates) !== 'array' && typeof(selectedDates) !== 'object') {
 							selectedDates = [];
@@ -250,7 +255,7 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay : function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
-						var testDate = new Date();
+						var testDate = createUTCDate();
 						for (i in selectedDates) {
 							/* Enable date so it can be deselected. Set style to be highlighted. */
 							testDate.setTime( selectedDates[i].getTime() );
@@ -270,9 +275,9 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date( 2000 , 0 , 1 ) ,
-					//minDate         : new Date( 1995 , 0 , 1 ) ,
-					//maxDate         : new Date( 1995 , 11 , 31 ) ,
+					defaultDate     : createUTCDate([2000 , 1 , 1 ]) ,
+					//minDate         : createUTCDate( 1995 , 0 , 1 ) ,
+					//maxDate         : createUTCDate( 1995 , 11 , 31 ) ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				});
@@ -288,7 +293,7 @@ function dataSelect_instantiate(wInstance) {
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
 					if ( elInput.val() == '' ) {elInput.val('Hover to See'); usrDate=false; }
 					if ( usrDate !== false ) {
-						usrDate = new Date( usrDate );
+						usrDate = createUTCDate( usrDate );
 						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
 						dpDiv.datepicker( 'setDate' , usrDate );
 						if ( elInput.val() == '' ) {
@@ -336,7 +341,7 @@ function dataSelect_instantiate(wInstance) {
 						userTouch=true;
 						$( this ).autogrow( );
 						_activateDpicker();
-						if ( $( this ).val( ) == '' || typeof($(this).parents('.widget.dataSelect .map-date').data('value'))=='undefined' || $(this).parents('.widget.dataSelect .map-date').data('value').length==0 ) 	var selectedDate = new Date( aaasClimateViz.dateParser( '2000-01-01' ));
+						if ( $( this ).val( ) == '' || typeof($(this).parents('.widget.dataSelect .map-date').data('value'))=='undefined' || $(this).parents('.widget.dataSelect .map-date').data('value').length==0 ) 	var selectedDate = createUTCDate( aaasClimateViz.dateParser( '2000-01-01' ));
 						else var selectedDate= $(this).parents('.widget.dataSelect .map-date').data('value')[$(this).parents('.widget.dataSelect .map-date').data('value').length-1];
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , selectedDate );
 					} )
@@ -384,7 +389,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.events = {
 					onSelect : function ( value , ui ) {
 						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
-						var selectedDate = new Date(2000,ui.selectedMonth,ui.selectedDay);
+						var selectedDate = createUTCDate(2000,ui.selectedMonth,ui.selectedDay);
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
 						if (typeof(selectedDates) !== 'array' && typeof(selectedDates) !== 'object') {
 							selectedDates = [];
@@ -424,7 +429,7 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay : function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
-						var testDate = new Date();
+						var testDate = createUTCDate();
 						for (i in selectedDates) {
 							/* Enable date so it can be deselected. Set style to be highlighted. */
 							testDate.setTime( selectedDates[i].getTime() );
@@ -443,9 +448,9 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : false ,
 					changeYear      : false ,
 					showButtonPanel : false ,
-					defaultDate     : new Date( 1995 , 0 , 1 ) ,
-					minDate         : new Date( 1995 , 0 , 1 ) ,
-					maxDate         : new Date( 1995 , 11 , 31 ) ,
+					defaultDate     : createUTCDate([ 1995 , 0 , 1] ) ,
+					minDate         : createUTCDate( 1995 , 0 , 1 ) ,
+					maxDate         : createUTCDate( 1995 , 11 , 31 ) ,
 					buttonImageOnly : true ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
@@ -465,7 +470,7 @@ function dataSelect_instantiate(wInstance) {
 						usrDate = aaasClimateViz.dateParser( elInput.val() + ' 1995' );
 					}
 					if ( usrDate !== false ) {
-						usrDate = new Date( usrDate );
+						usrDate = createUTCDate( usrDate );
 						// make sure the year is 1995 (fixed year used by this control during selection)
 						usrDate.setFullYear( 1995 );
 						wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , usrDate );
@@ -565,18 +570,16 @@ function dataSelect_instantiate(wInstance) {
 				
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
-						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
-						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
+						var startDate = createUTCDate( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
+						var endDate = createUTCDate( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
 							if ( wInstance.settings.date.range ) { endDate.setFullYear( endDate.getFullYear() + wInstance.settings.date.range ); }
 							if ( wInstance.settings.date.range ) { startDate.setFullYear( startDate.getFullYear() - wInstance.settings.date.range ); }
-							if (!wInstance.map.date.data('hidden')) {
-								displayStr = $.datepicker.formatDate('yy-M-d', startDate) + ' to ' + $.datepicker.formatDate('yy-M-d', endDate);
-								wInstance.map.date.ui.attr( 'title' , 'Selected: '+displayStr );
-								wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'Selected: '+displayStr );
-							}
+							displayStr = $.datepicker.formatDate('yy-M-d', startDate) + ' to ' + $.datepicker.formatDate('yy-M-d', endDate);
+							wInstance.map.date.ui.attr( 'title' , 'Selected: '+displayStr );
+							wInstance.settings.container.find('.calendar-cover').attr( 'title' , 'Selected: '+displayStr );
 						}						
 						else if ( startDate === null || endDate === null || startDate >= endDate || $( this ).parents( '.map-date' ).find( '.input input' ).val() == '' ) {
 							wInstance.map.date.attr( 'title' , 'No date selected' );
@@ -602,7 +605,7 @@ function dataSelect_instantiate(wInstance) {
 							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  endDate) ;
 						}
 						ui.dpDiv.parents( '.map-date' ).find( '.toggle.active' ).each( function ( idx , el ) { 
-							//var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).parent().find('input').val( ) == '' ? '2000-01-01' : $( this ).parent().find('input').val( ) ) );
+							//var selectedDate = createUTCDate( aaasClimateViz.dateParser( $( this ).parent().find('input').val( ) == '' ? '2000-01-01' : $( this ).parent().find('input').val( ) ) );
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , value );
 							_deactivateDpicker($( this )); } );
 						//part of closing properly 
@@ -611,8 +614,8 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay: function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
 						var selectedDates = $(this).parents('.map-date').data('value');
-						var testDateStart = new Date();
-						var testDateEnd = new Date();
+						var testDateStart = createUTCDate();
+						var testDateEnd = createUTCDate();
 						for (i in selectedDates) {
 							/* Enable date so it can be deselected. Set style to be highlighted */
 							testDateStart.setTime( selectedDates[0][0].getTime() );
@@ -635,10 +638,10 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date(2000,0,1) ,
+					defaultDate     : createUTCDate([2000,1,1]) ,
 					/* should be set based on data source
-					minDate         : new Date(1995,0,1) ,
-					maxDate         : new Date(1995,11,31) ,
+					minDate         : createUTCDate(1995,0,1) ,
+					maxDate         : createUTCDate(1995,11,31) ,
 					*/
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
@@ -654,7 +657,7 @@ function dataSelect_instantiate(wInstance) {
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
 					if ( usrDate !== false ) {
-						usrDate = new Date( usrDate );
+						usrDate = createUTCDate( usrDate );
 						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
 						dpDiv.datepicker( 'setDate' , usrDate );
 						if ( elInput.val() == '' ) {
@@ -701,7 +704,7 @@ function dataSelect_instantiate(wInstance) {
 					.focus( function ( evt ) {
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
-						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						var selectedDate = createUTCDate( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , selectedDate );
 					} )
 					.blur( function ( evt ) {
@@ -720,8 +723,8 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.wInstance = wInstance;
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
-						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
-						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
+						var startDate = createUTCDate( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
+						var endDate = createUTCDate( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
 						if ( startDate === null || endDate === null || startDate >= endDate || $( this ).parents( '.map-date' ).find( '.input input' ).val() == '' ) {
 							wInstance.map.date.attr( 'title' , 'No date selected' );
 							$( this ).parents( '.widget.dataSelect .map-date' ).data(
@@ -749,8 +752,8 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay: function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
 						var selectedDates = $(this).parents('.map-date').data('value');
-						var testDateStart = new Date();
-						var testDateEnd = new Date();
+						var testDateStart = createUTCDate();
+						var testDateEnd = createUTCDate();
 						for (i in selectedDates) {
 							/* Enable date so it can be deselected. Set style to be highlighted */
 							testDateStart.setTime( selectedDates[0][0].getTime() );
@@ -772,10 +775,10 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date(2000,0,1) ,
+					defaultDate     : createUTCDate(2000,1,1) ,
 					/* should be set based on data source
-					minDate         : new Date(1995,0,1) ,
-					maxDate         : new Date(1995,11,31) ,
+					minDate         : createUTCDate(1995,0,1) ,
+					maxDate         : createUTCDate(1995,11,31) ,
 					*/
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
@@ -791,7 +794,7 @@ function dataSelect_instantiate(wInstance) {
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
 					if ( usrDate !== false ) {
-						usrDate = new Date( usrDate );
+						usrDate = createUTCDate( usrDate );
 						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
 						dpDiv.datepicker( 'setDate' , usrDate );
 						if ( elInput.val() == '' ) {
@@ -832,7 +835,7 @@ function dataSelect_instantiate(wInstance) {
 						$( this ).autogrow( );
 						$( this ).parents( '.visual-control' ).find( '.input' ).removeClass( 'active' );
 						$( this ).parent( ).addClass( 'active' );
-						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						var selectedDate = createUTCDate( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , selectedDate );
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeIn();
 					} )
@@ -846,7 +849,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
 				wInstance.map.date.ui.wInstance = wInstance;
 				var dates = '';
-				for ( yearInterval = 1920 ; yearInterval <= ( currentYear = ( new Date() ).getFullYear( ) ) ; yearInterval++ ) {
+				for ( yearInterval = 1920 ; yearInterval <= ( currentYear = ( createUTCDate() ).getFullYear( ) ) ; yearInterval++ ) {
 					dates += '<option value="'+yearInterval+'">'+yearInterval+'</option>';
 				}
 				dates += '<option value="" selected="selected">Select a year</option>';
@@ -854,8 +857,8 @@ function dataSelect_instantiate(wInstance) {
 					if ( $( this ).val( ) == '' ) {
 						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , [] );
 					} else {
-						var startDate = new Date( $( this ).val( ) , 0 , 1 );
-						var endDate = new Date( $( this ).val( ) , 11 , 31 );
+						var startDate = createUTCDate( $( this ).val( ) , 1 , 1 );
+						var endDate = createUTCDate( $( this ).val( ) , 12 , 31 );
 						if ( wInstance.settings.date.range ) { endDate.setFullYear( endDate.getFullYear() + wInstance.settings.date.range ); }
 						if ( wInstance.settings.date.range ) { startDate.setFullYear( startDate.getFullYear() - wInstance.settings.date.range ); }
 						$( this ).parents( '.widget.dataSelect .map-date' ).data(
@@ -1069,8 +1072,8 @@ function refreshStations ( evt ) {
 		}
 	} else {
 		date_ranges_array.push( {
-			begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
-			end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
+			begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : createUTCDate ( 2000 , 0 , 1 ) ),
+			end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : createUTCDate ( 2000 , 11 , 31 ) )
 		} );
 	}
 	// fix datetimes to strings in an attempt to avoid timezone adjustments
@@ -1228,8 +1231,8 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 		}
 	} else {
 		date_ranges_array.push( {
-			begin : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
-			end   : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
+			begin : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : createUTCDate ( 2000 , 0 , 1 ) ),
+			end   : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : createUTCDate ( 2000 , 11 , 31 ) )
 		} );
 	}
 	// fix datetimes to strings in an attempt to avoid timezone adjustments
@@ -1366,7 +1369,7 @@ function stationBasedDataFetchAjax ( evt ) {
 				for (dataPoint in series.dataMeta) {
 					switch (dataPoint) {
 						case 'date_recorded' :
-							dataVal.date_recorded = (new Date(aaasClimateViz.dateParser(servermsg.results[0].station.data[data_index].date_recorded)));
+							dataVal.date_recorded = (createUTCDate(aaasClimateViz.dateParser(servermsg.results[0].station.data[data_index].date_recorded)));
 							break;
 						case 'temp' :
 							dataVal.temp = ( isNaN( parseFloat(servermsg.results[0].station.data[data_index].temp) ) ? null : parseFloat(servermsg.results[0].station.data[data_index].temp) );
@@ -1375,6 +1378,7 @@ function stationBasedDataFetchAjax ( evt ) {
 				}
 				series.data.push(dataVal);
 			}
+			console.log("GETTING HERE",wInstance.currAjax);	
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ servermsg.query.queryID ].data = series;
 			aaasClimateViz.widgets[widgetIndex].data[mid+'::'+sid].seriesMeta = series.seriesMeta;
 			aaasClimateViz.widgets[widgetIndex].data[mid+'::'+sid].dataMeta = series.dataMeta;
@@ -1494,12 +1498,12 @@ function calculatedSolarDataFetch( evt ) {
 			}
 		} else {
 			date_ranges_array.push( {
-				begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
-				end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
+				begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : createUTCDate ( 2000 , 0 , 1 ) ),
+				end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : createUTCDate ( 2000 , 11 , 31 ) )
 			} );
 		}
 		
-		var insertDate = new Date();
+		var insertDate = createUTCDate();
 		for ( date_range_idx in date_ranges_array ) {
 			dateMin = date_ranges_array[date_range_idx].begin;
 			dateMax = date_ranges_array[date_range_idx].end;
@@ -1550,7 +1554,7 @@ function calculatedSolarDataFetch( evt ) {
 				for (dataPoint in series.dataMeta) {
 					switch (dataPoint) {
 						case 'date' :
-							dataVal.date = new Date( insertDate.getTime( ) );
+							dataVal.date = createUTCDate( insertDate.getTime( ) );
 							break;
 						case 'lat' :
 							dataVal.lat = this.markers[mid].getPosition().lat();
@@ -1662,7 +1666,7 @@ function fetchStatsAjax ( evt ) {
 		success : function( servermsg , textStatus , jqXHR ) {
 			var widgetIndex = parseInt( servermsg.query.widgetIndex , 10 );
 			var mid = servermsg.results[0].mid;
-			var doty = new Date(aaasClimateViz.dateParser(servermsg.query.doty));
+			var doty = createUTCDate(aaasClimateViz.dateParser(servermsg.query.doty));
 			var sunSettings = {
 				input_longitude         : 0 /*new String(Math.abs(servermsg.query.lng))*/ ,
 				input_east_west         : (servermsg.query.lng < 0 ? "West" : "East") ,
@@ -1762,7 +1766,7 @@ function fetchStatsAjax ( evt ) {
 			for (dataPoint in series.dataMeta) {
 				switch (dataPoint) {
 					case 'date' :
-						dataVal.date = ( new Date( aaasClimateViz.dateParser( servermsg.query.doty ) ) );
+						dataVal.date = ( createUTCDate( aaasClimateViz.dateParser( servermsg.query.doty ) ) );
 						break;
 					case 'lat' :
 						dataVal.lat = parseFloat( servermsg.query.lat );
