@@ -355,16 +355,16 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>Now lets look at two locations in the Southern Hemisphere. On the map above Santa Cruz de la Sierra, a city in Boliva, and Cordoba, a city in Argentina, are pinpointed. These two locations are about 1,000 miles apart.</p>
+				<p>Now let's look at two locations in the Southern Hemisphere. On the map above, Santa Cruz de la Sierra, a city in Boliva, and Cordoba, a city in Argentina, are pinpointed. These two locations are about 1,000 miles apart.</p>
 			</div>
 			<div>
-				<p>The graph above shows the average daily temperatures in Santa Cruz de la Sierra and Cordoba from December 31, 2003 to December 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Santa Cruz de la Sierra and Cordoba from December 31, 2003 to December 30, 2004.</p>
 			</div>
 			<div>
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is <i>colder</i> almost every day of the year in the place that is farther south.</p>
 			</div>
 			<div>
-				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther north (farther from the tropical zone).</p>
+				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther south (farther from the tropical zone).</p>
 			</div>
 			<div>
 				
@@ -427,10 +427,10 @@ At the completion of each module you can check your understanding of the feature
 	<ul>
 		<li>In the Northern Hemisphere, what is the relationship between how far north you are and temperature?</li>
 		<li>In the Southern Hemisphere, what is the relationship between how far south you are and temperature?</li>
-		<li>What is the relationship between the distance of a location from the equator (latitude) and its average daily temperature?</li>
+		<li>What is the relationship between how far a place is from the equator (latitude) and its average daily temperature?</li>
 	</ul>
 	<h2>Expand Your Knowledge</h2>	
-	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> affects the temperature of a place.</p>
+	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> is related to the temperature of a place.</p>
 	</div>
 </div>
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Elevation">
@@ -438,7 +438,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">	
 	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
 	<p>
-	In this activity, you are going to use the maps to find out if how far a place is above sea level affects the air temperature at that place.</p>
+	In this activity, you are going to use the maps to find out if how far a place is above sea level is related to the air temperature at that place.</p>
 	</div>
 </div>
 <div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
@@ -452,17 +452,18 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will see how elevation affects air temperature.</p>
+				<p>In this activity you will see how elevation is related to air temperature.</p>
 			</div>
 			<div>
-				<p>The map is centered on the Himalayas, a mountain range between India and China which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, Nepal is pinpointed. Zoom two times. The yellow dots represent the 20 closet reporting stations to Kathmandu.<p>
+				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal, is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
+				<p>
 			</div>
 			<div>
 				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
 			</div>
 		
 			<div>
-			<p>Hover over the stations labeled Tingri, Tibet (northest of Kathmandu) and Gorakhpur, India (southwest of Kathmandu). How do their elevations compare? </p>
+			<p>Hover over the stations labeled Tingri (northest of Kathmandu in Tibet) and Gorakhpur (southwest of Kathmandu in India). How do their elevations compare? </p>
 			</div>
 			<div>
 				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
@@ -479,10 +480,10 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 		
 			<div>
-				<p>You should see that even though both places have a similar rise and fall of tempeartures, the place at the higher elevation (Tingri) has a consistently lower temperatures throughout the year.</p>
+				<p>You should see that even though both places have a similar pattern of rising and falling tempeartures throughout the year, the place at the higher elevation (Tingri) has a consistently lower temperature throughout the year.</p>
 			</div>
 			<div>
-				<p>You will now have a chance to observe the effect of elevation on temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
+				<p>You will now have a chance to observe the relationship between elevation and temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
 			</div>
 		</div>
 	</div>
@@ -499,14 +500,14 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			
 			<div>
-				<p>1. Think of a location with high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore.</p>
+				<p>1. Think about places where there are very high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore. As you move the cursor around the map, notice that the elevation appears in the menu bar just above this text below the map.</p>
 			</div>
 			<div>
-				<p>2. Click on a specific location on the map. Remember that the 20 closest reporting stations appear as yellow dots around the location you chose. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both the reporting stations to highlight them.</p>
+				<p>2. Click on a specific location on the map. Remember that the 20 closest reporting stations appear as yellow dots around the location you chose. You can zoom in closer on the map to get a better look at where those reporting stations are. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both reporting stations to highlight them.</p>
 	
 			</div>
 			<div>	
-				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>3. Now click on the Start calendar to choose a starting date and the End calendar to choose an ending date. Pick dates at least one year apart. If you get a graph for only one of the locations, it may be because no data was reported at that station. Just click on another dot until you get a temperature graph for two different locations.</p>
 			
 				
 			</div>
@@ -531,11 +532,11 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>As the elevation of a particular location increases, what happens to the average daily temperature of that location?</li>
+			<li>As the elevation at a particular location increases, what happens to the average daily temperature of that location?</li>
 	
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Find out why <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a> effects air temperature.</p>
+		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
@@ -543,7 +544,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">	
 	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
-	In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	In this activity, you are going to try to find out whether or not the air temperature at a place is related to how close the place is to a large body of water.</p>
 	</div>
 </div>
 <div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Water" data-slide-parent-id="temperature-water-intro">
@@ -557,16 +558,16 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>	
-				<p>In this activity, you are going to see what effect being close to a large body of water has on air temperature at a place.</p>
+				<p>Are air temperature and how close a place is to a body of water related?</p>
 			</div>
 			<div>	
 				<p>The map pinpoints Troms, a city in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Troms and in Kautokeino, a small town in Norway about 125 miles southeast of Troms.</p>
 			</div>
 			<div>
-			<p>Zoom two times.The yellow dots represent the 20 closest reporting stations to Troms. </p>
+			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 closest reporting stations to Troms. </p>
 			</div>
 			<div>
-			<p>Click on the reporting stations labeled Tromso and Kautokeino. </p>
+			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of Troms and Kautokeino is southeast of Troms.</p>
 			</div>
 			<div>
 				<p>The graph above shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
