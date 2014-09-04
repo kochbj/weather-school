@@ -141,7 +141,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
 	<h2><br><br>Expand Your Knowledge</h2>	
-	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>. Learn how <a href="http://www.enviropedia.org.uk/Weather/Movement_of_Air.php" target="_blank">air masses move</a> because of temperature and pressure differences in the atmosphere.</p>
+	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>.</p>
 	</div>
 	<div class="completed-text">
 		<p> Hit the next button to continue to the next module or select a different one to explore from the menu. </p>
@@ -284,17 +284,17 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 	<h2>Quiz Yourself:</h2>	
 	<ul>
-		<li>For most places in the United States, does the average daily temperature change in a consistent pattern throughout the year? If so, describe the pattern.</li>
-		<li>For most places in the United States, is the pattern of average daily temperature exactly the same from year to year?</li>
+		<li>For the places that you looked at in the United States, can you observe a pattern in how the average daily temperature changes throughout the year? If so, describe the pattern.</li>
+		<li>For the places that you looked at in the United States, is the pattern of average daily temperature change exactly the same from year to year?</li>
 	</ul>
 	<h2><br>Expand Your Knowledge</h2>	
-	<p>How the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">tilt of the earth's axis</a>, causes annual temperature patterns.</p>
+	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">annual temperature patterns</a>?</p>
 	</div>
 </div>
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Latitude">
 	<h2>Temperature and Latitude</h2>
 	<div class="intro-text">	
-	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator has an effect on the pattern of daily average temperature.</p>
+	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, has an effect on the pattern of daily average temperature.</p>
 	</div>
 </div>
 <div id="temperature-lat-northern" class="activity" data-slide-type="normal" data-slide-title="Northern Hemisphere" data-slide-parent-id="temperature-lat-intro">
@@ -312,7 +312,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>In this activity you will look at the relationship between latitude and daily average temperature.</p>
 			</div>
 			<div>
-				<p>In the map above Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
+				<p>In the map above, Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
 			</div>
 			<div>			
 				<p>The graph shows the average daily temperatures in Winnipeg and San Antonio from December 31, 2003 to December 30, 2004. </p>
@@ -322,7 +322,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
-				<p>As a general rule, in the northern hemisphere, places that are farther south (<span class="tooltip" title="The relationship between latitude and temperature is true north of the tropical zone in the northern hemisphere and south of the tropical zone in the southern hemisphere. There is a slightly different pattern inside the tropical region that depends on what time of year it is. {Show the location of the Tropic of Cancer and the Tropic of Capricorn in relation to the equator}">closer to the tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
+				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="The part of the Earth's surface between the Tropic of Cancer and the Tropic of Capricorn, which includes the equator. The Tropic of Cancer is located on the line of latitude 23.5 degrees north of the equator. The Tropic of Capricorn is located on the line of latitude 23.5 degrees south of the equator.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
 			</div>
 			<div>
 				<p>You should also see that the difference between the high and low temperatures over the course of a year is less the closer you are to the tropical zone. </p>
