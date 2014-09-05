@@ -1719,14 +1719,14 @@ function fetchStatsAjax ( evt ) {
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 				//lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 				//lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
-				tempavg : { type : 'float' , label : 'Average air temperature' , labelShort : 'Avg Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
+				tempavg : { type : 'float' , label : 'Average air temperature (°F)' , labelShort : 'Avg Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) ; } },
 				//tempmin : { type : 'float' , label : 'Average low temperature' , labelShort : 'Avg Lo Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
 				//tempmax : { type : 'float' , label : 'Average high temperature' , labelShort : 'Avg Hi Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F' ; } },
-				sunAngle : { type : 'float' , label : 'Max height of sun in sky' , labelShort : 'Max Sun Angle' , range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
-				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hrs Light' , range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + ' hours'; } },
+				sunAngle : { type : 'float' , label : 'Max height of sun in sky (°)' , labelShort : 'Max Sun Angle' , range : [0,90] , format : function ( val ) { return Math.round( val ); } },
+				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hrs Light' , range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ); } },
 				//sunEnergy : { type : 'float' , label : 'Energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' Watt-hours per meter<sup>2</sup> per day' ); } },
-				sunEnergy : { type : 'float' , label : 'Energy from sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' kWh/m<sup>2</sup>/d' ); } },
-				sunEnergyT : { type : 'float' , label : 'Energy from sun (theoretical)' , labelShort : 'Avg Sun Energy (T)' , range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' kWh/m<sup>2</sup>/d'; } },
+				sunEnergy : { type : 'float' , label : 'Daily recorded energy from sun (W-h/m<sup>2</sup>/d)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val)  ); } },
+				sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun (W-h/m<sup>2</sup>/d)' , labelShort : 'Avg Sun Energy (T)' , range : [0,10000] , format : function ( val ) { return Math.round( val ); } },
 				sunImage : { type : 'string' , label : 'How the sun appears at its highest point' , labelShort : 'Sun Appearance' , format : function ( val ) { return '<img src="' + val + '" />'; } }
 			};
 			if (aaasClimateViz.widgets[widgetIndex].settings.data.fields && aaasClimateViz.widgets[widgetIndex].settings.data.fields.length > 0) {

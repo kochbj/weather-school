@@ -174,7 +174,6 @@ function linechart_notify ( noticeType , wInstance ) {
 	}
 }
 function linechart_instantiate(wInstance) {
-	console.log(wInstance.settings.container.width());
 	wInstance.defaultChart = {
 		chart : {
 			alignTicks : true,

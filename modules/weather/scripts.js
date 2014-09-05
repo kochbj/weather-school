@@ -22,10 +22,8 @@ function elevator( evt ) {
 	if ( evt.type == 'initialize' ) {
 		console.log(wInstance);
 	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
-	//if (evt.data.widget.settings.container.hasClass('elevated')) { evt.data.widget.settings.container.find('.output-table table tbody').off('click.elevate'); return;}	
 	if (evt.data.widget.settings.selectable){ if (evt.data.widget.selectableKeys.indexOf($(this).text())==-1) return;}
 	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-x').length>0 && evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-y').length>0) {
-		//evt.data.widget.settings.displayWidgets[0].highChart.xAxis[0].options.title.style.color="red";
 		evt.data.widget.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
 		evt.data.widget.settings.container
 			.animate(
@@ -33,15 +31,11 @@ function elevator( evt ) {
 				{
 						step: function(now, fx){
 							evt.data.widget.settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
-							//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
 						},
-						duration: 1000,
+						duration: 500,
 						easing: "linear",
 						complete: function() {
 								manageScroll( evt.data.widget.settings.container );
-								evt.data.widget.settings.container.children()
-										.css("overflow","auto")
-										.css("overflow","hidden");
 						}
 				}
 		);

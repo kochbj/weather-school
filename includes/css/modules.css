@@ -25,7 +25,7 @@ textarea { width: 95%; height: 4em; }
 
 #slider-menu .ui-accordion { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; border-radius: 0px; } 
 #slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px;  }
-#slider-menu .ui-accordion .ui-accordion-header-active { background-color: rgba(170, 192, 202, .9); solid #999999; solid #999999; margin 0px; padding 0px; color: #eeff86 !important; text-shadow: 0px 0px 4px #666; box-shadow: 0px 1px 1px #666; }
+#slider-menu .ui-accordion .ui-accordion-header-active { background-color: rgba(170, 192, 202, .9); solid #999999; solid #999999; margin 0px; padding 0px; color: /*#eeff86*/ #ccffcc !important; text-shadow: 0px 0px 4px #666; box-shadow: 0px 1px 1px #666; }
 #slider-menu a.completed {color: DimGray !important; }
 #slider-menu .ui-accordion .ui-accordion-header:last-of-type {border-top: 1px solid black; }
 #slider-menu .ui-accordion .ui-accordion-header:first-of-type {border-bottom: 1px solid black; }
@@ -35,7 +35,7 @@ textarea { width: 95%; height: 4em; }
 #slider-menu .ui-accordion .ui-accordion-content ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; overflow: visible; }
 #slider-menu .ui-accordion .ui-accordion-content li { list-style: none; display: block; margin: 0px; border-top: 1px solid #999999; z-index:99; }
 #slider-menu .ui-accordion .ui-accordion-content a { display: block; padding: .6em 2.5em; color: black; z-index:99; text-decoration: none; font-size: 10pt; }
-#slider-menu a:hover {color: #eeff86 !important; background-color: rgba(170, 192, 202, .9);text-shadow: 0px 0px 4px #666; }
+#slider-menu a:hover {color: /*#eeff86*/ #ccffcc !important; background-color: rgba(170, 192, 202, .9);text-shadow: 0px 0px 4px #666; }
 #slider-menu a.current { background-color: rgba(145, 177, 192, .9) !important; }
 
 /*
