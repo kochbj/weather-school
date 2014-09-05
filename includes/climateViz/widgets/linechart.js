@@ -178,6 +178,7 @@ function linechart_instantiate(wInstance) {
 		chart : {
 			alignTicks : true,
 			renderTo   : wInstance.settings.container.find('.widget.linechart .canvas')[0],
+			width : wInstance.settings.container.find('.widget.linechart .canvas')[0].width,
 			resetZoomButton : {
 				position : {
 					x : -50,
