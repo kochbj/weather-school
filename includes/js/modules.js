@@ -40,10 +40,6 @@ function ctrlSlider_cb ( psobj ) {
 	location.hash = '#'+id;
 	
 	/* Initialize the slide if necessary. */
-	//console.log(jQuery('#slider-navigation .next').data('events'));
-	//console.log(jQuery(psobj.$currentSlide.find('.plusslider-pagination li').data('events')));
-	console.log(slideInit,id);
-	//console.log(slideInit.hasOwnPropery(id));
 	$('#slider-navigation .next').off('click.animate');
 	if ( slideInit.hasOwnProperty( id ) && !slideInit[id].is_initialized ) {
 		slideInit[id].initialize();
@@ -62,7 +58,6 @@ function ctrlSlider_cb ( psobj ) {
 	if (psobj.$currentSlide.attr( 'data-slide-type' ) == "key" ) { 
 		$("[data-slide-parent-id='"+id+"']").each( function ( idx, el ) {
 				var instrSlider = $(el).find( '.instructions .slider' );
-				console.log(el.id);
 				if (instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined' && slideInit[el.id].is_initialized ) instrSlider[0].sliderObj.toSlide( '0' );
 			});
 	}

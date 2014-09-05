@@ -141,8 +141,9 @@ function dataSelect_instantiate(wInstance) {
 		}
 	}
 	
-	wInstance.reset = function() {dataSelect_reset(this);};
-	wInstance.settings.container.find('.map-reset').on('click',{wInstance:wInstance},function(evt){ dataSelect_reset(evt.data.wInstance);});
+	wInstance.reset = function() {dataSelect_reset.call(wInstance);};
+	
+	wInstance.settings.container.find('.map-reset').on('click',{wInstance:wInstance},function(evt){ wInstance.reset(); });
 	wInstance.requestQueue = {};
 	
 	switch (wInstance.settings.data.source) {
@@ -598,12 +599,12 @@ function dataSelect_instantiate(wInstance) {
 						ui.dpDiv.parents( '.map-date' ).find( '.datepicker' ).datepicker( 'refresh' );
 						ui.dpDiv.parents( '.map-date' ).find( '.input input' ).autogrow( );
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && !wInstance.map.date.data('hidden')) {
-							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , startDate);
-							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  endDate) ;
+							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : wInstance.map.date.find( '.date-start input' ) } ).datepicker( 'setDate' , startDate);
+							wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : wInstance.map.date.find( '.date-end input' ) } ).datepicker( 'setDate' ,  endDate) ;
 						}
 						ui.dpDiv.parents( '.map-date' ).find( '.toggle.active' ).each( function ( idx , el ) { 
 							//var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).parent().find('input').val( ) == '' ? '2000-01-01' : $( this ).parent().find('input').val( ) ) );
-						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , value );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' ) } ).datepicker( 'setDate' , value );
 							_deactivateDpicker($( this )); } );
 						//part of closing properly 
 						wInstance._callback({type:'user-select-date'});
@@ -702,7 +703,7 @@ function dataSelect_instantiate(wInstance) {
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
 						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
-						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , selectedDate );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' ) } ).datepicker( 'setDate' , selectedDate );
 					} )
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
@@ -833,7 +834,7 @@ function dataSelect_instantiate(wInstance) {
 						$( this ).parents( '.visual-control' ).find( '.input' ).removeClass( 'active' );
 						$( this ).parent( ).addClass( 'active' );
 						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
-						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' } ).datepicker( 'setDate' , selectedDate );
+						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' ) } ).datepicker( 'setDate' , selectedDate );
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).fadeIn();
 					} )
 					.blur( function ( evt ) {
@@ -873,7 +874,8 @@ function dataSelect_instantiate(wInstance) {
 	wInstance._callback({'type':'initialize'});
 }
 
-function dataSelect_reset (wInstance) {
+function dataSelect_reset () {
+	var wInstance = this;
 	for ( markerID in wInstance.markers ) { removeLocation( markerID , wInstance ); }
 	wInstance.bounds = new google.maps.LatLngBounds();	
 	wInstance.map.date.data( 'value' , [] );

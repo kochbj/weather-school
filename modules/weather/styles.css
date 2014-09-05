@@ -52,7 +52,7 @@
 //.workarea .split-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
 //.workarea .split-tc { right: 0px; left: 36%; width: 64%; top: 50%; bottom: 0px;}
 
-.workarea .full-tb { right: 0px; left: 100%; width: 64%; top: 0px;  display: none;}
+.workarea .full-tb { right: 0px; left: 100%; width: 64%; height:100%;  display: none;}
 .workarea .full-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
 .workarea .split-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
 
@@ -75,7 +75,7 @@
 
 #temperature-elevation-intro {background-image: url(assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg);}
 #temperature-elevation-intro h2 {background-color: #E5DAD6;}
-#temperature-elevation-intro .intro-text {background-color: #677b8d; top:235px;}
+#temperature-elevation-intro .intro-text {background-color: #8595A4 /*#677b8d*/; top:235px;}
 
 #temperature-water-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
 #temperature-water-intro h2 {background-color: #438dca;}
@@ -95,7 +95,7 @@
 
 #daylight-air-temperature-intro {background-image: url(assets/introduction/Libya_Sunset.jpg);}
 #daylight-air-temperature-intro h2 {background-color: #f4c3c2; }
-#daylight-air-temperature-intro .intro-text {background-color: #674b47; opacity: .9; top:445px;}
+#daylight-air-temperature-intro .intro-text {background-color: #856F6C /*#674b47*/; opacity: .9; top:445px;}
 
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
 #data-tools-intro h2 {background-color:#cbbaab;}
