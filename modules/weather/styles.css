@@ -46,7 +46,7 @@
 
 .workarea .full-ds { left: 0px; right: 0px; }
 .workarea .full-tc { right: 0px; left: 100%; width:64%; height:100%; display: none;}
-.workarea .display-tc { left: 0px; right: 0px; }
+.workarea .display-tc { height: 100%; width: 100%; }
 
 //.workarea .split-tb { right: 0px; left: 36%; width: 64%; bottom: 50% !important; top: 0px; border-bottom:1px dashed grey;}
 //.workarea .split-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
