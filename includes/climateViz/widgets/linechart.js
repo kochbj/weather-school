@@ -174,11 +174,13 @@ function linechart_notify ( noticeType , wInstance ) {
 	}
 }
 function linechart_instantiate(wInstance) {
+	console.log(wInstance.settings.container.width());
 	wInstance.defaultChart = {
 		chart : {
 			alignTicks : true,
 			renderTo   : wInstance.settings.container.find('.widget.linechart .canvas')[0],
-			width : wInstance.settings.container.find('.widget.linechart .canvas')[0].width,
+			height : wInstance.settings.container.height(),
+			width : wInstance.settings.container.width(),
 			resetZoomButton : {
 				position : {
 					x : -50,
