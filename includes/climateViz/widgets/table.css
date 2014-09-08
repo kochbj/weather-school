@@ -75,5 +75,5 @@
 	left: 0px;
     min-height: 200px;
 }
-.table-tooltip { font-size:8pt !important; position: fixed !important; }
+.table-tooltip { font-size:8pt !important;  }
 //.table-tooltip.ui-tooltip-content {height: 90px;}
