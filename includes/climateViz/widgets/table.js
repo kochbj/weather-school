@@ -25,7 +25,7 @@ function createTable(data, wInstance) {
 		tblCols.append('<col id="'+datapoint+'">');
 		tbl.find('tr.header').append('<th title="">'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
 		if ('tooltip' in data[seriesKeys[0]].dataMeta[datapoint]) {
-			tbl.find('tr.header th:last-child').tooltip({tooltipClass:'table-tooltip', show: {effect: "fadeIn", duration: 500 ,delay:1000}, position: {my: "center top", at: "center bottom"}, content: data[seriesKeys[0]].dataMeta[datapoint].tooltip});
+			tbl.find('tr.header th:last-child').tooltip({tooltipClass:'table-tooltip', show: {effect: "fadeIn", duration: 500 ,delay:1000}, position: {my: "center bottom", at: "center top"}, content: data[seriesKeys[0]].dataMeta[datapoint].tooltip});
 			console.log(data[seriesKeys[0]].dataMeta[datapoint].tooltip);
 		}
 		console.log(data[seriesKeys[0]].dataMeta[datapoint]);
