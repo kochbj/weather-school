@@ -19,10 +19,16 @@ function createTable(data, wInstance) {
 	tblCols = wInstance.settings.container.find('.output-table table colgroup');
 	tblCols.empty();
 	seriesKeys = Object.keys(data);
+	for (idxSeries in data) { tbl.append('<tr class="series-header"><td colspan="'+((Object.keys(data[idxSeries].dataMeta)).length)+'">'+data[idxSeries].seriesMeta.label+' ('+data[idxSeries].seriesMeta.lat+', '+data[idxSeries].seriesMeta.lng+')</td></tr>');}
 	tbl.append('<tr class="header"></tr>');
 	for (datapoint in data[seriesKeys[0]].dataMeta) {
 		tblCols.append('<col id="'+datapoint+'">');
-		tbl.find('tr.header').append('<th>'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
+		tbl.find('tr.header').append('<th title="">'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
+		if ('tooltip' in data[seriesKeys[0]].dataMeta[datapoint]) {
+			tbl.find('tr.header th:last-child').tooltip({tooltipClass:'table-tooltip', show: {effect: "fadeIn", duration: 500 ,delay:1000}, position: {my: "center top", at: "center bottom"}, content: data[seriesKeys[0]].dataMeta[datapoint].tooltip});
+			console.log(data[seriesKeys[0]].dataMeta[datapoint].tooltip);
+		}
+		console.log(data[seriesKeys[0]].dataMeta[datapoint]);
 		if (wInstance.settings.selectForOutput && typeof(wInstance.selection)!='undefined'){
 			for (i in wInstance.selection){
 				if (wInstance.selection[i] == datapoint) {
@@ -133,7 +139,7 @@ function createTable(data, wInstance) {
 		if (data[idxSeries].seriesMeta.dataSort) {
 			data[idxSeries].data.sort(data[idxSeries].seriesMeta.dataSort);
 		}
-		seriesHtml = '<tr class="series-header"><td class="tooltip" title="TEST" colspan="'+((Object.keys(data[idxSeries].dataMeta)).length)+'">'+data[idxSeries].seriesMeta.label+' ('+data[idxSeries].seriesMeta.lat+', '+data[idxSeries].seriesMeta.lng+')</td></tr>';
+		var seriesHtml = '';
 		for (idxData in data[idxSeries].data) {
 			seriesHtml += '<tr class="series-data">';
 			for (datapoint in data[idxSeries].dataMeta) {
@@ -149,7 +155,6 @@ function createTable(data, wInstance) {
 		}
 		tbl.append(seriesHtml);
 	}
-	$( '.tooltip' ).tooltip( { } );		
 	wInstance._callback({'type':'dataReady'});
 	return;
 }
