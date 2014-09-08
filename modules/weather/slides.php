@@ -660,7 +660,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
 	<h2>Height of the Sun in the Sky</h2>
 	<div class="intro-text">
-	<p>In the last three modules you saw that latitude, elevation, and proximity to water has an effect on the temperature at that place. In this module you will see that how high the sun is in the sky at a place changes throughout the year.</p>
+	<p>In the last three modules you saw that there is a relationship between the air temperature at a place and its latitude, elevation, and proximity to a large body of water. In the next two modules you will see that how high the sun is in the sky at a place changes throughout the year and that this is something else that is related to the temperature at that place.</p>
 	</div>	
 </div>
 <div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Example: Height of the Sun in the Sky" data-slide-parent-id="height-sun-intro">
@@ -680,12 +680,12 @@ At the completion of each module you can check your understanding of the feature
 				<p>The graph shows the <span class="tooltip" title="Maximum height of the sun in the sky is the highest the sun gets on a given day. It is measured as an angle, which can range from zero degrees to 90 degrees.">maximum height of the sun in the sky</span> in New York City for each day of the year.</p>
 			</div>
 			<div>
-				<p>You should see the same pattern that you saw for the graphs of temperature rising and falling throughout the year. What you won't see is the jagged pattern of day-to-day changes that you saw for temperature. </p>
+				<p>What you see in this graph is the same pattern of increasing and then decreasing that you saw for the graphs of temperature rising and falling throughout the year. What you don't see is the jagged pattern of day-to-day changes that you saw for temperature. </p>
 			</div>
 			<div>
 				<p>How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
 			</div>
-			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky at locations and dates of your choosing. See if other locations in the United States have similar annual sun patterns compared to New York City.</p>
+			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky at locations and dates of your choosing. See if other locations in the United States have similar annual patterns as New York City.</p>
 			</div>
 		</div>
 	</div>
@@ -718,7 +718,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="#vis-sim-eliptic"target="_blank">Seasons Simulator</a>, to see how the location of the earth at different times of the year causes the maximum angle of the sun in the sky to change in a cyclical pattern.</p>
+		<p>Use <a href="#vis-sim-eliptic"target="_blank">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern. (When using the simulator, first move the observer to the set the observer's latitude; then slowly move the date slider back and forth to see how changing the date affects the angle of the sun at the observer's latitude. Note that the yellow dot represents the place where the sun strikes the earth at a 90 degree angle.)</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
