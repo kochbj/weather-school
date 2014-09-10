@@ -987,8 +987,10 @@ At the completion of each module you can check your understanding of the feature
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
 	<h2>Additional Data Tools</h2>
 	<div class="intro-text">
-	<p>In the previous modules you used a number of tools to view daily climate data from around the world in order to see how factors such as temperature, maximum height of the sun in the sky, and number of hours of daylight change over the course of the year. You also learned how factors, such as elevation, proximity to water, maximum height of the sun in the sky, and hours of daylight are related to air temperature. Here, you can continue to explore how different weather factors are related to each other and to air temperature.  You can also see how the earth’s position relative to the sun changes throughout the year. The changing position of the earth relative to the sun causes many of the patterns and relationships you previously explored. </p>
-	<p>In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	<p>In the previous modules, you learned how factors, such as elevation, proximity to water, maximum height of the sun in the sky, and hours of daylight are related to air temperature. Here, you can use the <b>Variable Relationship Explorer</b> to continue to explore how different weather factors are related to each other and to air temperature.</p><br>
+
+ <p>You also learned how factors such as air temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. Here, you can use the <b>Seasons Simulator</b> to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.  You can also use the <b>Daylight Hours Explorer</b> to visualize how the number of hours of daylight change throughout the year at different degrees of latitude.</p>
+
 	</div>
 </div>
 <div id="location-data-finder" class="activity" data-slide-type="tool" data-slide-title="Location Data Finder" data-slide-parent-id="data-tools-intro">
