@@ -942,7 +942,7 @@ At the completion of each module you can check your understanding of the feature
 			<div>	<p>The line of best fit that you see going through the scatterplot represents the straight-line (linear) relationship between the number of hours of daylight and the average daily temperature. It tells you how the maximum height of the Sun in the sky and average daily air temperature are related.</p>
 			</div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
-			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a direct relationship between the hours of daylight and average daily temperature at other locations.</p></div>
+			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a relationship between the hours of daylight and average daily temperature at other locations.</p></div>
 		
 		</div>
 	</div>
