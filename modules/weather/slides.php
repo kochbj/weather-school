@@ -738,8 +738,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>In this module you will look at the relationship between the height of the sun in the sky and air temperature at a given place.</p></div>
-			<div><p>The map above pinpoints Chicago, Illinois. In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun. In this module, you will graph the relationship between two variables both of which change over time.</p></div>
+			<div><p>Are air temperature and the height of the sun in the sky related? This module looks at average daily air temperature and the height of the sun in the sky for 12 specific dates in Chicago, Illinois to find out. </p></div>
+			<div><p>In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun. In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
 			</div>
 			<div>Click first on the "Maximum height of the sun in the sky," and then "Average air temperature" columns to highlight them. The Maximum height of the sun in the sky column should be highlighted red and the average air temperature column should be highlighted blue.</p></div>
