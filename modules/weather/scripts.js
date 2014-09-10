@@ -1067,9 +1067,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example1-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2003 , 1 , 1], [2004 , 12 , 31 ] );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, [2003 , 1 , 1], [2005 , 1 , 1 ] );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2003 , 1 , 1], [2004 , 12, 31 ] );
+							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, [2003 , 1 , 1], [2005 , 1, 1 ] );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-example1 .plusslider-pagination li').off('click.animate');
