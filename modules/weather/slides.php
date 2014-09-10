@@ -829,8 +829,10 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
+			<div>Now we are going to see what happen to the hours of daylight when we look at a place that is north of New York City. Plattsburgh, New York, which is about 300 miles north of New York City, is pinpointed on the map. 
 			<div>
-				<p>In the illustration  above, the hours of daylight for Plattsburg, New York is plotted on the same  graph as New York City.  Plattsburgh is  about 300 miles north of New York City.</p>
+			<div>
+				<p>In the illustration  above, the hours of daylight for Plattsburgh is plotted on the same  graph as New York City.</p>
 			</div>
 			<div>
 				<p>Notice that in  late December there are only 8.8 hours of daylight in Plattsburg, a little <em>less</em> than the 9.2 hours that you saw in  New York City. But in late June, there are 15.6 hours of daylight in  Plattsburgh, a little <em>more</em> than the  15.1 hours that there are in New York City.</p>
