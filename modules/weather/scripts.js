@@ -253,7 +253,7 @@ function cbDailyTempEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.data('value',[[createUTCDate( [2001 , 1 , 1] ),createUTCDate( [2002 , 1 , 1 ])]]);
+		wInstance.map.date.data('value',[[createUTCDate( "2000-01-01T17:00:00Z" ),createUTCDate("2002-01-01T17:00:00Z")]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
@@ -607,8 +607,9 @@ var slideInit = {
 								//Need to select larger range for annual temperature. Filter then reduces this for daily.
 								filter : function ( data ) {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
-									var DailyDateStart = createUTCDate( [2000, 4, 1] );
-									var DailyDateEnd = createUTCDate( [2000, 4, 25] );
+									var DailyDateStart = createUTCDate("2000-04-1T17:00:00Z" );
+									var DailyDateEnd = createUTCDate( "2000-04-31T17:00:00Z" );
+									console.log(DailyDateStart,DailyDateEnd);
 									filteredData = {};
 									for ( dataID in data ) {
 										filteredData[dataID] = { data:[] , dataMeta:data[dataID].dataMeta , seriesMeta:data[dataID].seriesMeta };
