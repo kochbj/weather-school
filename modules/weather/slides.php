@@ -829,8 +829,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>Now we are going to see what happen to the hours of daylight when we look at a place that is north of New York City. Plattsburgh, New York, which is about 300 miles north of New York City, is pinpointed on the map. 
-			<div>
+			<div><p>Now we are going to see what happen to the hours of daylight when we look at a place that is north of New York City. Plattsburgh, New York, which is about 300 miles north of New York City, is pinpointed on the map. </p>
+			</div>
 			<div>
 				<p>In the illustration  above, the hours of daylight for Plattsburgh is plotted on the same  graph as New York City.</p>
 			</div>
