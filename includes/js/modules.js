@@ -58,7 +58,7 @@ function ctrlSlider_cb ( psobj ) {
 	if (psobj.$currentSlide.attr( 'data-slide-type' ) == "key" ) { 
 		$("[data-slide-parent-id='"+id+"']").each( function ( idx, el ) {
 				var instrSlider = $(el).find( '.instructions .slider' );
-				if (instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined' && slideInit[el.id].is_initialized ) instrSlider[0].sliderObj.toSlide( '0' );
+				if (instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined' && slideInit.hasOwnProperty( id ) && slideInit[el.id].is_initialized ) instrSlider[0].sliderObj.toSlide( '0' );
 			});
 	}
 
