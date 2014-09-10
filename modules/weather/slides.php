@@ -714,7 +714,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>For any place in the United States, how does the maximum height of the Sun in the sky during winter compare to the maximum height of the Sun in the sky during summer?</li>
+			<li>For any place in the United States, how does the maximum height of the sun in the sky during winter compare to the maximum height of the sun in the sky during summer?</li>
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
@@ -742,10 +742,10 @@ At the completion of each module you can check your understanding of the feature
 			<div><p>In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun. In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
 			</div>
-			<div>Click first on the "Maximum height of the sun in the sky," and then "Average air temperature" columns to highlight them. The Maximum height of the sun in the sky column should be highlighted red and the average air temperature column should be highlighted blue.</p></div>
+			<div>Click first on the "Maximum height of sun in sky," and then "Average air temperature" columns to highlight them. The Maximum height of the sun in the sky column should be highlighted red and the average air temperature column should be highlighted blue.</p></div>
 			<div><p>The graph is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the maximum height of the sun in the sky. The first column selected will always be the X-axis and the second column selected will always be the Y-axis.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div><p>The line that you see going through the scatterplot is called a line of best fit. It represents the staight-line (linear) relationship between the two variables. It tells you how the maximum height of the Sun in the sky and average daily temperature are related.</p></div>
+			<div><p>The line that you see going through the scatterplot is called a line of best fit. It represents the staight-line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
 			<div><p>What you can see from this graph is at the time of the year when the maximum height of the sun in the sky is greater it tends to be warmer, and at the times of the year when the sun is lower in the sky, it tends to be cooler. This is because when the sun is higher in the sky, a greater amount of the sun's energy reaches the earth at that location, heating the air and the earth.</p></div>
 			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See if there is also a positive linear relationship between the maximum height of the sun in the sky and average daily temperature in other locations that you saw in Chicago.</p></div>
 		</div>
@@ -766,7 +766,7 @@ At the completion of each module you can check your understanding of the feature
 			<div>
 				<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least ten dates scattered throughout the year.</p>
-				<p>3. Click on Maximum Height of the Sun in the Sky and Average Daily Temperature at the top of the table.</p>
+				<p>3. Click first on Maximum height of the Sun in the Sky and then Average daily temperature at the top of the table.</p>
 			</div>
 			<div>
 				<p>4. Click "Line of Best Fit" at the bottom of the page.</p>
@@ -780,8 +780,8 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What happens to the average daily air temperature at a location as the maximum height of the Sun in the sky increases?</li>
-			<li>Why is the relationship between the maximum height of the Sun in the sky and average daily air temperature considered a linear relationship?</li>
+			<li>What happens to the average daily air temperature at a location as the maximum height of the sun in the sky increases?</li>
+			<li>Why is the relationship between the maximum height of the sun in the sky and average daily air temperature called a linear relationship?</li>
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
@@ -791,7 +791,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
 	<h2>Hours of Daylight</h2>
 	<div class="intro-text">
-	<p>In the last module you saw that there is a relationship between the height of the Sun in the sky and air temperature. When the Sun is high in the sky it tends to be warmer than when teh sun is low in the sky.</p>
+	<p>In the last module you saw that there is a relationship between the height of the sun in the sky and air temperature. When the sun is high in the sky it tends to be warmer than when the sun is low in the sky.</p>
 	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
 	</div>
 </div>
