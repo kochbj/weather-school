@@ -366,7 +366,7 @@ function decimalToRomanSimple(value) {
 			$('#accordion').append('<div><ul></ul></div>');
 			var menuidxx=1;
 		$("[data-slide-parent-id='"+$( el ).attr( 'id')+"']").each( function (idxx, ell) {
-			if ($( ell ).attr( 'data-slide-title' ) == "Module Complete") return true;
+			if ($( ell ).attr( 'data-slide-title' ) == "Module Complete" || $( ell ).attr( 'hidden' )) return true;
 			else if ($( ell ).attr( 'data-slide-type' ) == "tool") $('#accordion > div:last-child > ul').append( '<li><a href="#' + $( ell ).attr( 'id' ) + '">' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
 			else $('#accordion > div:last-child > ul').append( '<li><a href="#' + $( ell ).attr( 'id' ) + '">' + decimalToRomanSimple(menuidxx) + '. ' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
 			menuidxx+=1;

@@ -1020,14 +1020,50 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="vis-sim-eliptic" class="activity" data-slide-type="tool" data-slide-title="Rotation Simulator" data-slide-parent-id="data-tools-intro">
+
+<div id="vis-sim-daylight" class="activity" data-slide-type="tool" data-slide-title="Daylight Hours Explorer" data-slide-parent-id="data-tools-intro">
+	<div class="header">
+		<h2>Daylight Hours Explorer</h2>
+	</div>
+	<div class="workarea" style="background-color:#CCCCCC;">
+	<div align="center" style = "position:relative;">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405">
+				<param name="movie" value="assets/sim/daylighthoursexplorer.swf" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405">
+					<!--<![endif]-->
+					<p>flash animation</p>
+					<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+</div>
+<div class="instructions">
+		<div class="slider">
+			<div><p>Now choose one location and see what happens at that location at 12 different times of the year. After your selection click on the SAVE button to save your results. You will make a table and some graphs of the data for the place your selected.</p></div>
+			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
+			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
+		</div>
+	</div>
+
+</div>
+<div id="vis-sim-eliptic-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
+	<h2 style="margin-left: 25px;">Seasons and Ecliptic Simulator</h2>
+	<div class="scrollable">
+	<p style="margin-left: 15px;">You have now seen that air temperature in a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
+	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
+	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
+</div>
+</div>
+<div id="vis-sim-eliptic" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Seasons and Ecliptic Simulator</h2>
 	</div>
 	<div class="workonly">
 	<div align="center">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
-				<param name="movie" value="media/sims/vis-sim-eliptic.swf" />
+				<param name="movie" value="assets/sim/vis-sim-eliptic.swf" />
 				<!--[if !IE]>-->
 				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-eliptic.swf" width="906" height="635">
 					<!--<![endif]-->
@@ -1039,25 +1075,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 </div>
 </div>
-<div id="vis-sim-daylight" class="activity" data-slide-type="tool" data-slide-title="Daylight Simulator" data-slide-parent-id="data-tools-intro">
-	<div class="header">
-		<h2>Daylight Simulator</h2>
-	</div>
-	<div class="workonly">
-	<div align="center">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
-				<param name="movie" value="media/sims/daylightsimulator.swf" />
-				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/daylightsimulator.swf" width="906" height="635">
-					<!--<![endif]-->
-					<p>flash animation</p>
-					<!--[if !IE]>-->
-				</object>
-				<!--<![endif]-->
-			</object>
-		</div>
-</div>
-</div>
+
 <div id="data-tools-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="data-tools-intro">
 	<h2>Module Complete</h2>
 	<div class="completed-text">

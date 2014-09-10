@@ -1069,21 +1069,19 @@ function refreshStations ( evt ) {
 				} );
 			}
 		}
-	} 
-	else {console.log("THIS IS A POSSIBLITY");}
-	/*else {
+	} else {
 		date_ranges_array.push( {
 			begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
 			end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
 		} );
-	}*/
- console.log("DATE RANGES SELECTION",date_ranges_selection);
+	}
 	// fix datetimes to strings in an attempt to avoid timezone adjustments
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
 		date_ranges_array[i].end = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].end ) + ' ' + date_ranges_array[i].end.toLocaleTimeString();
 	}
 	var canSelectStation = ( ('maxStations' in this.settings) && this.settings.maxStations > 0 );
+	//wInstance.map.setZoom(5);
 	var query = {
 		mid          : evt.data.marker.id,
 		lat          : evt.data.marker.getPosition().lat(),
@@ -1099,8 +1097,6 @@ function refreshStations ( evt ) {
 		success : function( servermsg ) {
 			console.log("REFRESH STATIONS",servermsg);
 			wInstance.markers[servermsg[0].mid].stations = servermsg[0].stations;
-			wInstance.markers[servermsg[0].mid].sindex = servermsg[0].sindex;
-			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0]
 			for ( i in wInstance.markers[servermsg[0].mid].stations ) {
 				wInstance.markers[servermsg[0].mid].stations[i].marker = new google.maps.Marker( {
 					position : new google.maps.LatLng( wInstance.markers[servermsg[0].mid].stations[i].lat , wInstance.markers[servermsg[0].mid].stations[i].lng ), 
@@ -1233,20 +1229,17 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 				} );
 			}
 		}
-	} /*else {
+	} else {
 		date_ranges_array.push( {
 			begin : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
 			end   : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
 		} );
-	}*/
- else console.log("THIS CAN ACTUALLY HAPPEN 2");
-	//function checkYearsatStation(date_ranges_array,wInstance);	
- // fix datetimes to strings in an attempt to avoid timezone adjustments
+	}
+	// fix datetimes to strings in an attempt to avoid timezone adjustments
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
 		date_ranges_array[i].end = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].end ) + ' ' + date_ranges_array[i].end.toLocaleTimeString();
 	}
-	console.log("SECOND",date_ranges_array);
 	
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficent.
@@ -1296,33 +1289,6 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 		}
 	}
 }
-
-/*function checkAvailableYears (dateArray wInstance){
-	for ( i in dateArray ) {
-		var begin = dateArray[i].begin.getFullYear();
-		var end= dateArray[i].end.getFullYear();
-		for (var range =[]; (end - begin ) > 0; begin +=1) range.push(begin);
-		for (markerID in wInstance.markers) { //for each marker
-			var yearsMissing={};
-			var missingStr='';
-			for (i in range){ // for each year	
-				for (station in wInstance.markers[markerID].stations){//got each station
-					yearsMissing[station]=[];
-					for (y in range){
-						if (typeof(wInstance.markers[markerID].stations[station]['gsod_years'][y]) == 'undefined' || !wInstance.markers[markerID].stations[station]['gsod_years'][y]['has_data']) yearsMissing[station]push(y); //list missing years
-					}
-				}
-			}
-			for (station in yearsMissing){
-				if (yearsMissing[station].length/range.length <= .4) missingStr=wInstance.markers[markerID].stations[station].name+ ": Data is not available for more than 60% of the dates you selected. We reccomend you select a new date range.";
-				else {
-					missingStr= wInstance.markers[markerID].stations[station].name+ ": Data is not available at this station in"
-					for (y in yearsMissing[station])
-				}	
-			}
-		}
-	}
-}*/
 
 function stationBasedDataFetchAjax ( evt ) {
 	if (this.running) {

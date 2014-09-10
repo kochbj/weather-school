@@ -92,11 +92,9 @@ if ( !file_exists( $data_id.'.data' ) || ( $stations_local = @unserialize( file_
 		}
 	}
 	$stations_local = array();
-	$stations_order = array();
 	foreach ($closest as $station_id => $station_distance) {
 		$stations[$station_id]['distance'] = $station_distance;
 		$stations_local[$station_id] = $stations[$station_id];
-		$stations_order[] = $station_id;
 	}
 	file_put_contents( $data_id.'.data' , serialize( $stations_local ) );
 	unlink( $data_id.'.lock' );
@@ -104,8 +102,7 @@ if ( !file_exists( $data_id.'.data' ) || ( $stations_local = @unserialize( file_
 
 $data[] = array(
 	'mid' => $mid,
-	'stations' => $stations_local,
-	'sindex' => $stations_order
+	'stations' => $stations_local
 );
 
 echo (isset($_GET['callback']) ? $_GET['callback'].'('.json_encode($data).')' : json_encode($data));
