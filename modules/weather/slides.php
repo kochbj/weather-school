@@ -309,7 +309,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will look at the relationship between latitude and daily average temperature.</p>
+				<p>In this activity you will look at the relationship between latitude and daily average temperature in the northern hemisphere.</p>
 			</div>
 			<div>
 				<p>In the map above, Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
@@ -452,7 +452,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will see how elevation is related to air temperature.</p>
+				<p>Are air temperature and how high a place is above sea level related? This activity looks at air temperatures at two locations with different elevations to find out.</p>
 			</div>
 			<div>
 				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal, is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
@@ -558,7 +558,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>	
-				<p>Are air temperature and how close a place is to a body of water related?</p>
+				<p>Are air temperature and how close a place is to a body of water related? This activity looks at air tempeartures at two locations that are different distances from a large body of water to find out.</p>
 			</div>
 			<div>	
 				<p>The map pinpoints Troms, a city in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Troms and in Kautokeino, a small town in Norway about 125 miles southeast of Troms.</p>
@@ -806,7 +806,7 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>Now  let&rsquo;s look at how the number of hours of daylight changes at different places  over the course of a year.</div>
+			<div>In the next four activities you will look at how the number of hours of daylight changes at two locations in New York State and two location in South America  over the course of a year.</div>
 			<div>The map above pinpoints Morningside Heights, a section of New York City.</div>
 			<div>The  graph shows the number of hours of daylight at Morningside  Heights for a two-year period, from January 1, 2003 to January 1, 2005.</div>
 			<div>You can see the exact  number of hours of daylight on any particular day by hovering over different  parts of the curve with the cursor. </div>
@@ -931,7 +931,7 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>	<p>In this module you will look at the relationship between the hours of daylight at a place and the air temperature at that place.</p></div>
+			<div>	<p>Are air temperature and number of hours of daylight at a given plance related? This activity looks at average daily air temperature and the number of hours of daylight for 12 specific dates in Chicago, Illinois to find out.</p></div>
 			<div>	<p>The map above pinpoints Chicago, Illinois. </p>
 			</div>
 			<div>
