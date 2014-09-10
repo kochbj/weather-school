@@ -1,5 +1,7 @@
 function createUTCDate(dateStr) {
 		var date = new Date(dateStr);
+		console.log("DATESTR",dateStr);
+		console.log(date);
     return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()/*, date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()*/); 
     }
 		
