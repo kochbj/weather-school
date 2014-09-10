@@ -855,8 +855,8 @@ At the completion of each module you can check your understanding of the feature
 				<p>Now we are going to see what happens to the hours of daylight when we look at a place that is  quite a bit south of New York City. </p>
 				<p>The place we have chosen in Columbia, South America.</p>
 			</div>
-			<div><p>Notice how flat  the curve is getting? In late December there is just a little less than 12  hours of daylight, and in late June, there is just a little more than 12 hours  of daylight. In late March (the first day of spring) and in late September (the  first day of fall), there are 12 hours of daylight, just as there are in New  York City.</p></div>
-			<div>Another way to describe the difference in daylight at these different places is to say that the range in daylight hours is different from place to place. The annual range of daylight hours in Columbia, which is near the equator in South America, is very small; its quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
+			<div><p>Notice how flat the curve is? In late December there are just a little fewer than 12  hours of daylight, and in late June, there are just a little more than 12 hours  of daylight. In late March (the first day of spring) and in late September (the  first day of fall), there are 12 hours of daylight, just as there are in New  York City.</p></div>
+			<div>Another way to describe the difference in daylight at these different places is to say that the range in daylight hours is different from place to place. The annual range of daylight hours in Columbia, which is near the equator in South America, is very small; it is quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
 			</div>
 		</div>
 	</div>
@@ -877,7 +877,7 @@ At the completion of each module you can check your understanding of the feature
 			<div><p>Now the curve is  completely flat. There are 12 hours of daylight all year long. There is no variation in how much daylight there is.</div> 
 			<div>Of course, the amount of <em>sunlight</em> can change from day to day.  Some days are cloudy and some days are sunny, but the sun rises and sets at the  same time each day at the equator so that the number of hours of daylight is  always the same.</div>
 			<div>It&rsquo;s only when you get away from the equator that you notice a  change in the number of daylight hours as the seasons change.</p></div>
-			<div>You will now have a chance to compare the hours of daylight throughout the year at two different locations of your choice. See if the range of daylight hours decreases with proximity to the equator.</div>
+			<div>You will now have a chance to compare the hours of daylight throughout the year at two different locations of your choice. See if the range of daylight hours get smaller the closer a place is to the equator and larger the farther a place is from the equator.</div>
 		</div>
 	</div>
 </div>
@@ -905,12 +905,12 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>During what months of the year does every place in the United States experience the greatest hours of daylight?</li>
-			<li>During what months of the year does every place in the United States experience the least hours of daylight?</li>
+			<li>During what months of the year do places in the United States experience the greatest number of hours of daylight? Is that true everywhere in the world?</li>
+			<li>During what months of the year do places in the United States experience the least number hours of daylight? Is that true everywhere in the world?</li>
 			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see an animation showing what parts of the earth experience daylights at noon <span class="tooltip" title="Greenwich Mean Time (GMT) is the time in Greenwich, England. Greenwich is located at the 0 degree line of longitude.">GMT</span> throughout the year.</p>
+		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
@@ -936,10 +936,10 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 			<div>
 			The table above is the same table you saw before. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
-			<div>	<p>Click on the Average Air Temperature and Hours of Daylight columns to highlight them.</p></div>
-			<div>	<p>Just like you saw in module G, the graph is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is a for a certain value for the hours of daylight on that day.</p></div>
+			<div>	<p>Click first on the Hours of daylight column and then on the Average air temperature column to highlight them.</p></div>
+			<div>	<p>Just as you saw in module G, what you see here is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain number of hours of daylight on that day.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div>	<p>The line that you see going through the scatterplot is called a line of best fit. It represents the straight line (linear) relationship between two variables. It tells you how the maximum height of the Sun in the sky and average daily air temperature are related.</p>
+			<div>	<p>The line of best fit that you see going through the scatterplot represents the straight-line (linear) relationship between the number of hours of daylight and the average daily temperature. It tells you how the maximum height of the Sun in the sky and average daily air temperature are related.</p>
 			</div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
 			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a direct relationship between the hours of daylight and average daily temperature at other locations.</p></div>
@@ -960,7 +960,7 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			<div>	<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least ten dates scattered throughout the year.</p>
-				<p>3. Click Hours of Daylight and Average Daily Temperature at the top of the table.</p>
+				<p>3. First click Hours of daylight and then click Average daily temperature at the top of the table.</p>
 			</div>
 			<div>
 				<p>4. Click "Line of Best Fit" at the bottom of the page.</p>
@@ -976,7 +976,7 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Quiz Yourself:</h2>	
 		<ul>
 			<li>What happens to the average daily air temperature at a location as the hours of daylight at that location increase?</li>
-			<li>Why is the relationship between hours of daylight at a location and the average daily air temperature at that location considered a linear relationship?</li>
+			<li>Why is the relationship between hours of daylight at a location and the average daily air temperature at that location called a linear relationship?</li>
 			
 
 		</ul>
