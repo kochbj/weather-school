@@ -1,10 +1,9 @@
-function createUTCDate(dateStr) {
+/*function new Date(dateStr) {
 		var date = new Date(dateStr);
 		console.log("DATESTR",dateStr);
 		console.log(date);
-    return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()/*, date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()*/); 
-    }
-		
+    return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()); 
+    }*/	
 function widgetScroll ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	switch ( evt.type ) {
@@ -55,8 +54,8 @@ function cbDaylightEx1 ( evt ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap: true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 11 , 30 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();*/
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);	
 		} , 1000 );
@@ -70,8 +69,8 @@ function cbDaylightEx2 ( evt ) {
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 44.70 , -73.45 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1] ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 12 , 31] ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1] ) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z" ) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
@@ -84,8 +83,8 @@ function cbDaylightEx3 ( evt ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 5.07 , -74.53 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1 ]) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 12 , 31 ]) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1 ]) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 12 , 31 ]) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
@@ -98,8 +97,8 @@ function cbDaylightEx4 ( evt ) {
 		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 		setTimeout( function ( ) {
 			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 0.15 , -78.35 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1 ]) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 12 , 31 ]) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1 ]) );
+			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 12 , 31 ]) );
  			wInstance.map.date.ui.find('.ui-state-active').click();
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		} , 1000 );
@@ -253,7 +252,7 @@ function cbDailyTempEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
-		wInstance.map.date.data('value',[[createUTCDate( "2000-01-01T17:00:00Z" ),createUTCDate("2002-01-01T17:00:00Z")]]);
+		wInstance.map.date.data('value',[[new Date( "2001-01-01T17:00:00Z" ),new Date("2002-01-01T17:00:00Z")]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
@@ -268,8 +267,8 @@ function cbHeightSunEx ( evt ) {
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71, -74.01 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 1 , 1] ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 12 , 31 ]) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( "2004-01-01T17:00:00Z" ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z") );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
@@ -347,7 +346,7 @@ function cbTempLatNorthern ( evt ) {
 				//console.log(wInstance);
 				//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 				var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-				if (currSlide == 1) widgetAnimations.placemarkers(wInstance, new google.maps.LatLng( 49.886083,-97.152921 ), new google.maps.LatLng( 29.461029,-98.697739 ), createUTCDate( 2001 , 0 , 0 ), createUTCDate( 2001 , 11 , 30 ) );
+				if (currSlide == 1) widgetAnimations.placemarkers(wInstance, new google.maps.LatLng( 49.886083,-97.152921 ), new google.maps.LatLng( 29.461029,-98.697739 ), new Date( 2001 , 0 , 0 ), new Date( 2001 , 11 , 30 ) );
 				if (currSlide == 3) widgetAnimations.swinggraph(wInstance);
 				//console.log("GOT HERE");
 	}*/
@@ -359,8 +358,8 @@ function cbTempLatNorthern ( evt ) {
 	//}
 		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 49.886083,-97.152921 ), staticmap: true } );
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 29.461029,-98.697739 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2001 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2001 , 11 , 30 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2001 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2001 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();*/
 	} , 1000 );
 	}
@@ -376,8 +375,8 @@ function cbTempLatSouthern ( evt ) {
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -17.800000,-63.166670 ), staticmap: true } );
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -31.398930,-64.182129 ), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate([ 2004 , 1 , 1] ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( [2004 , 12 , 31] ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1] ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z" ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
@@ -395,8 +394,8 @@ function cbElevExample ( evt ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 		////console.log(wInstance.map.widget);
 		/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 27.71,85.33 ), stationNames: ["TINGRI", "GORAKHPUR"], staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 11 , 30 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 //		setTimeout( function () {
 //		google.maps.event.clearListeners(wInstance.map, 'click');
@@ -415,8 +414,8 @@ function cbLargeBodiesWaterExample ( evt ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 /*////console.log(wInstance.map.widget);
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 69.38,20.71 ), stationNames: ["TROMSO", "KAUTOKEINO"], staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 0 , 0 ) );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  createUTCDate( 2004 , 11 , 30 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();*/
 	} , 1000 );
 	}
@@ -478,8 +477,8 @@ var widgetAnimations = {
 		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
 		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , createUTCDate(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , createUTCDate(date2 ));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
 		},
@@ -488,7 +487,7 @@ var widgetAnimations = {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
 		var dateVals=[];
 		wInstance.map.date.data('hidden',false);
-		for (i=1; i<13; i++) dateVals.push(createUTCDate([year,i,15]));
+		for (i=1; i<13; i++) dateVals.push(new Date( year.toString()+"-"+"00".substring(0, 2-i.toString().length)+i.toString()+"-15T17:00:00Z" ));
 		wInstance.map.date.data( 'value', dateVals);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
@@ -496,8 +495,8 @@ var widgetAnimations = {
 	placestations: function(wInstance,marker1,stations,date1,date2) {
 		if (wInstance.settings.container.hasClass('clicked')) return;
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , createUTCDate(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , createUTCDate(date2 ));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
 		},
@@ -607,8 +606,8 @@ var slideInit = {
 								//Need to select larger range for annual temperature. Filter then reduces this for daily.
 								filter : function ( data ) {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
-									var DailyDateStart = createUTCDate("2000-04-1T17:00:00Z" );
-									var DailyDateEnd = createUTCDate( "2000-04-31T17:00:00Z" );
+									var DailyDateStart = new Date("2000-04-01T17:00:00Z" );
+									var DailyDateEnd = new Date( "2000-04-25T17:00:00Z" );
 									console.log(DailyDateStart,DailyDateEnd);
 									filteredData = {};
 									for ( dataID in data ) {
@@ -707,9 +706,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004, 1 , 1], [2004 , 12 , 31 ] );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004, 1 , 1], "2004-12-31T17:00:00Z" );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], [2004 , 1 , 1], [2004 , 12 , 31 ] );
+							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-lat-northern .plusslider-pagination li').off('click.animate');
@@ -802,9 +801,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-elevation-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
+						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 						else if (currSlide >= 6) {
-							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
+							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-elevation-example .plusslider-pagination li').off('click.animate');
@@ -864,9 +863,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-water-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
+						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 						else if (currSlide >= 4) {
-						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], [2004 , 1 , 1], [2004 , 12 , 31 ] );
+						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-water-example .plusslider-pagination li').off('click.animate');
