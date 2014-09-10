@@ -738,7 +738,7 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Are air temperature and the height of the sun in the sky related? This module looks at average daily air temperature and the height of the sun in the sky for 12 specific dates in Chicago, Illinois to find out. </p></div>
+			<div><p>Are air temperature and the height of the sun in the sky at a given place related? This activity looks at average daily air temperatures and the height of the sun in the sky for 12 specific dates in Chicago, Illinois to find out. </p></div>
 			<div><p>In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun. In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
 			</div>
@@ -806,7 +806,7 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>In the next four activities you will look at how the number of hours of daylight changes at two locations in New York State and two location in South America  over the course of a year.</div>
+			<div>In the next four activities you will look at how the number of hours of daylight changes at four different locations (New York City, Plattsburgh, NY, and locations in Columbia and Equador) over the course of a year.</div>
 			<div>The map above pinpoints Morningside Heights, a section of New York City.</div>
 			<div>The  graph shows the number of hours of daylight at Morningside  Heights for a two-year period, from January 1, 2003 to January 1, 2005.</div>
 			<div>You can see the exact  number of hours of daylight on any particular day by hovering over different  parts of the curve with the cursor. </div>
