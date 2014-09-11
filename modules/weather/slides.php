@@ -1064,6 +1064,7 @@ At the completion of each module you can check your understanding of the feature
 			<div><p>Adjust the latitude closer to the equator. What happens to the range of daylight hours throughout the year?</p>
 			</div>
 			<div><p>Just as you saw in module H, the closer a location is to the equator, the smaller the range of daylight hours throughout the year.</p>
+			</div>
 			<div></p>Adjust the latitude further from the equator. What happens to the range of daylight hours?</p>
 			</div>
 			<div><p>Just as you saw in module H, the further a location is from the equator, the larger the range of daylight hours throughout the year.</p>
