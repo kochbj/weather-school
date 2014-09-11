@@ -1069,6 +1069,8 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 			<div><p>Just as you saw in module H, the further a location is from the equator, the larger the range of daylight hours throughout the year.</p>
 			</div>
+			<div><p>Continue to adjust the latitude or pinpointed date until you are ready to try the next data tool.</p>
+			</div>
 		</div>
 	</div>
 
