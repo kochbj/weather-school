@@ -1016,8 +1016,10 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>You used the Variable Relationship Explorer in modules G and I to see how average daily air temperature was related to both the height of the sun in the sky and the number of hours of daylight at a particular place. You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location, the daily recorded energy from the sun and the daily theoretical energy from the sun, which were not explored in the modules. </p></div>
-			<div><p>In this activity you can use see how two variables are related to each other. You will be able to choose to view two variables at a time from five total variables. The five variables include the three variables you have already looked at (average air temperature, maximum height of the sun in the sky, and hours of daylight) and two additional variables (daily recorded energy from the sun and daily theoretical energy from the sun). The next slide has directions for using the Variable Relationship Explorer.</p></div>
+			<div><p>You used the Variable Relationship Explorer in modules G and I to see how average daily air temperature was related to both the height of the sun in the sky and the number of hours of daylight at a particular place.</p> 
+			<p>You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location, the daily recorded energy from the sun and the daily theoretical energy from the sun, which were not explored in the modules. </p></div>
+			<div><p>In this activity you can use see how two variables are related to each other. You will be able to choose to view two variables at a time from five total variables.</p> 
+				<p>The five variables include the three variables you have already looked at (average air temperature, maximum height of the sun in the sky, and hours of daylight) and two additional variables (daily recorded energy from the sun and daily theoretical energy from the sun). The next slide has directions for using the Variable Relationship Explorer.</p></div>
 			<div>	<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
 				<p>3. Decide which two variables you would like to compare from the five variables listed as the column titles.</p></div>
