@@ -1016,9 +1016,16 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Now choose one location and see what happens at that location at 12 different times of the year. After your selection click on the SAVE button to save your results. You will make a table and some graphs of the data for the place your selected.</p></div>
-			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
-			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
+			<div><p>You used the Variable Relationship Explorer in modules G and I to see how average daily air temperature was related to both the height of the sun in the sky and the number of hours of daylight at a particular place. You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location, the daily recorded energy from the sun and the daily theoretical energy from the sun, which were not explored in the modules. </p></div>
+			<div><p>In this activity you can use see how two variables are related to each other. You will be able to choose to view two variables at a time from five total variables. The five variables include the three variables you have already looked at (average air temperature, maximum height of the sun in the sky, and hours of daylight) and two additional variables (daily recorded energy from the sun and daily theoretical energy from the sun). The next slide has directions for using the Variable Relationship Explorer.</p></div>
+			<div>	<p>1. Choose a location anywhere in the world.</p>
+				<p>2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
+				<p>3. Decide which two variables you would like to compare from the five variables listed as the column titles.</p></div>
+			<div>	<p>4. Click the column of the variable you would like to be on the X-axis.</p>
+				<p>5. Click the column of the variable you would like to be on teh Y-axis.</p>
+				<p>6. Click "Line of Best Fit" at the bottom of the page.</p>
+				<p>7. Is there a positive linear relationship between the two variables?</p>
+			</div>
 		</div>
 	</div>
 </div>
