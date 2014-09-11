@@ -1058,7 +1058,7 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			<div><p>The Daylight Hours Explorer allows you to view the number of hours of daylight throughout the year at different degrees of latitude. </p>
 			</div>
-			<div><p>The graph on the right shows the number of hours of daylight throughout the year for a certain degree of latitude on earth. The red dot represents the number of hours of daylight for one particular day at that degree of latitude. </p></div>
+			<div><p>The graph on the left shows the number of hours of daylight throughout the year for a certain degree of latitude on earth. The red dot represents the number of hours of daylight for one particular day at that degree of latitude. </p></div>
 			<div><p>Look at the picture of the globe in the lower right corner. The yellow line on the globe shows the degree of latitude that the graph represents. </p></div>
 			<div><p>The settings panel on the upper right side allows you to adjust the degree of latitude that the graph currently displays or the specific day pinpointed in red on the graph. </p></div>
 			<div><p>Adjust the latitude closer to the equator. What happens to the range of daylight hours throughout the year?</p>
