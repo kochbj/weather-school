@@ -1056,9 +1056,9 @@ At the completion of each module you can check your understanding of the feature
 </div>
 <div class="instructions">
 		<div class="slider">
-			<div><p>Now choose one location and see what happens at that location at 12 different times of the year. After your selection click on the SAVE button to save your results. You will make a table and some graphs of the data for the place your selected.</p></div>
-			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
-			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
+			<div><p>The graph on the right shows the hours of daylight throughout the year at a given degree of latitude on earth. The red dot represents the number of hours of daylight for one specific day at a time. </p></div>
+			<div><p>Look at the picture of the globe in the lower right corner. The yellow line on the globe shows the degree of latitude that the graph represents. </p></div>
+			<div><p>The settings panel on the upper right side allows you to adjust the degree of latitude represented on the graph or the specific day pinpointed in red on the graph. </p></div>
 		</div>
 	</div>
 
