@@ -455,7 +455,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>Are air temperature and how high a place is above sea level related? This activity looks at air temperatures at two locations with different elevations to find out.</p>
 			</div>
 			<div>
-				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal, is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
+				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal (pictured in the module introduction), is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
 				<p>
 			</div>
 			<div>
@@ -561,28 +561,28 @@ At the completion of each module you can check your understanding of the feature
 				<p>Are air temperature and how close a place is to a body of water related? This activity looks at air tempeartures at two locations that are different distances from a large body of water to find out.</p>
 			</div>
 			<div>	
-				<p>The map pinpoints Troms, a city in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Troms and in Kautokeino, a small town in Norway about 125 miles southeast of Troms.</p>
+				<p>The map pinpoints a fjord in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Tromso, one of the northernmost cities on earth (shown in the module introduction), and in Kautokeino, a small village about 125 miles southeast of Tromso.</p>
 			</div>
 			<div>
-			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 closest reporting stations to Troms. </p>
+			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 reporting stations closest to the fjord. </p>
 			</div>
 			<div>
-			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of Troms and Kautokeino is southeast of Troms.</p>
+			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of the fjord and Kautokeino is southeast.</p>
 			</div>
 			<div>
-				<p>The graph shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
-				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Troms, which is close to the water, but in the summer, Troms is a little cooler than Kautokeino.</p>
+				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Tromso, which is close to the water, but in the summer, Tromso is a little cooler than Kautokeino.</p>
 			</div>
 			<div>
-				<p>You should also notice that the line on the graph for Troms, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water.</p>
+				<p>You should also notice that the line on the graph for Tromso, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water.</p>
 			</div>
 			<div>
 				<p>The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
-				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large body of water throughout the year is smaller.</p>
+				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of proximity to a large body of water on temperature at locations of your choosing. See if other locaitons near a large body of water experience cooler summers and warmer winters compared to nearby locations farther inland.</p>
