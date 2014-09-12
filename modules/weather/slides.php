@@ -16,7 +16,7 @@
 <p>
 Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.</p>
 <p>
-At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about what causes the patterns by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.</p>
+At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about what causes the patterns by following the links in the <b>Expand Your Knowledge:</b> section. Click the next arrow to begin a brief introduction to each module.</p>
 </div> 
 </div>
 <div id="contents-1" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -140,11 +140,8 @@ At the completion of each module you can check your understanding of the feature
 		<li>Does the average temperature at a place change from day to day in a regular pattern or are there both up and down changes from day to day?</li>
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
-	<h2><br><br>Expand Your Knowledge</h2>	
+	<h2><br><br>Expand Your Knowledge:</h2>	
 	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>.</p>
-	</div>
-	<div class="completed-text">
-		<p> Hit the next button to continue to the next module or select a different one to explore from the menu. </p>
 	</div>
 </div>
 
@@ -287,7 +284,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>For the places that you looked at in the United States, can you observe a pattern in how the average daily temperature changes throughout the year? If so, describe the pattern.</li>
 		<li>For the places that you looked at in the United States, is the pattern of average daily temperature change exactly the same from year to year?</li>
 	</ul>
-	<h2><br>Expand Your Knowledge</h2>	
+	<h2><br>Expand Your Knowledge:</h2>	
 	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">annual temperature patterns</a>?</p>
 	</div>
 </div>
@@ -429,7 +426,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>In the Southern Hemisphere, what is the relationship between how far south you are and temperature?</li>
 		<li>What is the relationship between how far a place is from the equator (latitude) and its average daily temperature?</li>
 	</ul>
-	<h2>Expand Your Knowledge</h2>	
+	<h2>Expand Your Knowledge:</h2>	
 	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> is related to the temperature of a place.</p>
 	</div>
 </div>
@@ -535,7 +532,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>As the elevation at a particular location increases, what happens to the average daily temperature of that location?</li>
 	
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
@@ -653,7 +650,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year over nearby land?</li>
 	
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">properties of water</a> cause large bodies of water to have a moderating effect on air temperature over nearby land.</p>
 	</div>
 	</div>
@@ -717,7 +714,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>For any place in the United States, how does the maximum height of the sun in the sky during winter compare to the maximum height of the sun in the sky during summer?</li>
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
@@ -784,7 +781,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>Why is the relationship between the maximum height of the sun in the sky and average daily air temperature called a linear relationship?</li>
 
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
 	</div>
 </div>
@@ -909,7 +906,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>During what months of the year do places in the United States experience the least number hours of daylight? Is that true everywhere in the world?</li>
 			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-daylight">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
@@ -980,7 +977,7 @@ At the completion of each module you can check your understanding of the feature
 			
 
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out how the  <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
 	</div>
 </div>
