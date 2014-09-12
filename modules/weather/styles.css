@@ -22,9 +22,10 @@
 .module-complete { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
 .module-complete > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }
 .module-complete ul { list-style-image: url(assets/introduction/bullet.png); }
-.module-complete ul li { font-weight: bold; margin: .85em; }
+.module-complete ul li { margin-bottom: 10px; }
 .module-complete .guiding-questions { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
 .module-complete .completed-text { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
+.module-complete .guiding-questions > p {margin-left:30px;}
 //.module-complete .completed-text {width: 53%; font-size:90%; margin-left: 50px; margin-top: 135px; }
 
 .module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
@@ -99,7 +100,7 @@
 
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
 #data-tools-intro h2 {background-color:#cbbaab;}
-#data-tools-intro .intro-text {background-color:#cbbaab; top:430px;}
+#data-tools-intro .intro-text {background-color:#cbbaab; top:190px;}
 
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }

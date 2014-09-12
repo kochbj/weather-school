@@ -1,0 +1,234 @@
+.shield { cursor: not-allowed; background-color: transparent; position: absolute; left: 0px; top: 0px; bottom: 0px; z-index: 1000; }
+.split-tb-shield { cursor: not-allowed; background-color: transparent;  right: 0px; left: 36%; width: 62.2% !important; bottom: 50% !important; top: 0px !important; z-index: 1000; }
+
+#introduction { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#introduction > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }
+#introduction ul { list-style-image: url(assets/introduction/bullet.png); }
+#introduction ul li { font-weight: bold; margin: .85em; }
+#introduction .p1 { text-align: center; margin: 2em 8em; }
+#introduction .invite { background-color: rgba(142,171,197,.4); padding: 1em 2em 1em .5em; display: inline-block; text-align: right; margin-left: 12em; }
+
+#the-sun { background-image: url(assets/sun/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
+#the-sun h2 { font-weight: normal; background-color: #6F7171; font-size: 160%; margin-top: 4em; padding-bottom: 0.5em; padding-left: 20px; }
+#the-sun p { margin: .25em; padding-left: 20px; }
+
+#sun-position { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; }
+#sun-position h2 { font-size: 180%; font-weight: normal; padding: .25em .5em; margin: .5em; }
+#sun-position table { margin: .5em 0em 0em 2em; }
+#sun-position td { padding: 1em; }
+#sun-position td:nth-child(2) { padding-top: 0em; }
+#sun-position td .caption { font-size: 80%; }
+
+.module-complete { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+.module-complete > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }
+.module-complete ul { list-style-image: url(assets/introduction/bullet.png); }
+.module-complete ul li { margin-bottom: 10px; }
+.module-complete .guiding-questions { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
+.module-complete .completed-text { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
+//.module-complete .completed-text {width: 53%; font-size:90%; margin-left: 50px; margin-top: 135px; }
+
+.module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+.module-intro h2 { opacity: .7; font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+.module-intro .intro-text {position:absolute; top: 230px; opacity: .7; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em;}
+.module-intro .intro-text p {margin: 15px 0 0 0;}
+.module-intro .contents-text {position:absolute; top: 230px; opacity: .7; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em; margin-left: 15px; width:470px; background-color:  #B7CCE0;}
+.module-intro .intro-text p {margin: 15px 0 0 0;}
+
+
+#activity-intro { background-image: url(assets/activity-intro/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
+#activity-intro h3 { font-weight: normal; background-color: #919191; font-size: 160%; margin-top: 4em; padding: .5em 0em .5em 20px; }
+#activity-intro p { margin: 0; padding-left: 20px; }
+
+.workarea .shield { width: 36%; }
+
+//.workarea .restricted-ds { left: 0px; width: 36%;}
+//.workarea .restricted-tc { right: 0px; left: 36%; width: 64%; }
+
+.workarea .full-ds { left: 0px; right: 0px; }
+.workarea .full-tc { right: 0px; left: 100%; width:64%; height:100%; display: none;}
+.workarea .display-tc { height: 100%; width: 100%; }
+
+//.workarea .split-tb { right: 0px; left: 36%; width: 64%; bottom: 50% !important; top: 0px; border-bottom:1px dashed grey;}
+//.workarea .split-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
+//.workarea .split-tc { right: 0px; left: 36%; width: 64%; top: 50%; bottom: 0px;}
+
+.workarea .full-tb { right: 0px; left: 100%; width: 64%; height:100%;  display: none;}
+.workarea .full-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
+.workarea .split-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
+
+//.workarea .split-tc.unrestricted{display: none; }
+//.workarea .split-tb.unrestricted{display: none; }
+
+#contents-intro .intro-text {background-color: #b9cee1; margin: 20px; top: 140px;}
+
+#daily-temperature-intro {background-image: url(assets/introduction/MoscowColdFront.jpg);}
+#daily-temperature-intro h2 {background-color:#c3c9d0; } 
+#daily-temperature-intro .intro-text {background-color:#949EAB; top:230px; }
+
+#annual-temperature-intro {background-image: url(assets/introduction/Seasons2010.jpg);}
+#annual-temperature-intro h2 {background-color:#dad9d6; opacity: .9; } 
+#annual-temperature-intro .intro-text {background-color:#dad9d6; top: 450px; opacity: .9; }
+
+#temperature-lat-intro {background-image: url(assets/introduction/Rj_north_york_moors.jpg);}
+#temperature-lat-intro h2 {background-color: #aabcd3;}
+#temperature-lat-intro .intro-text {background-color: #9f6345; top:425px; opacity: .9;}
+
+#temperature-elevation-intro {background-image: url(assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg);}
+#temperature-elevation-intro h2 {background-color: #E5DAD6;}
+#temperature-elevation-intro .intro-text {background-color: #8595A4 /*#677b8d*/; top:235px;}
+
+#temperature-water-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
+#temperature-water-intro h2 {background-color: #438dca;}
+#temperature-water-intro .intro-text {background-color: #E3E3E3; top:403px;}
+
+#height-sun-intro {background-image: url(assets/introduction/Sunset_TreeNeedAttribution.jpg);}
+#height-sun-intro h2 {background-color:#dc8a61;}
+#height-sun-intro .intro-text {background-color: #F28252; top: 125px;}
+
+#height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
+#height-sun-air-temperature-intro h2 {background-color:#4b6e8c;}
+#height-sun-air-temperature-intro .intro-text {background-color: #bb8f76; top: 560px;}
+
+#daylight-intro {background-image: url(assets/introduction/Sunset_at_Halong_Bay.jpg);}
+#daylight-intro h2 {background-color:#8c4048;}
+#daylight-intro .intro-text {background-color: #a5666b; top:180px;}
+
+#daylight-air-temperature-intro {background-image: url(assets/introduction/Libya_Sunset.jpg);}
+#daylight-air-temperature-intro h2 {background-color: #f4c3c2; }
+#daylight-air-temperature-intro .intro-text {background-color: #856F6C /*#674b47*/; opacity: .9; top:445px;}
+
+#data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
+#data-tools-intro h2 {background-color:#cbbaab;}
+#data-tools-intro .intro-text {background-color:#cbbaab; top:190px;}
+
+//#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
+//#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }
+
+//#annual-temperature-explore #annual-temperature-explore-ds { left: 0px; right: 0px; }
+//#annual-temperature-explore #annual-temperature-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#temperature-lat-northern #temperature-lat-northern-ds { left: 0px; right: 0px; width: 36%}
+//#temperature-lat-northern #temperature-lat-northern-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#temperature-lat-southern #temperature-lat-southern-ds { left: 0px; right: 0px; width 36%}
+//#temperature-lat-southern #temperature-lat-southern-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#temperature-lat-explore #temperature-lat-explore-ds { left: 0px; right: 0px; }
+//#temperature-lat-explore #temperature-lat-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#temperature-elevation-example #temperature-elevation-example-ds { left: 0px; width: 36%; overflow: none;}
+//#temperature-elevation-example #temperature-elevation-example-tc { right: 0px; left: 36%; width: 64% }
+
+//#temperature-elevation-explore #temperature-elevation-explore-ds { left: 0px; right: 0px; }
+//#temperature-elevation-explore #temperature-elevation-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#temperature-water-example #temperature-water-example-ds { left: 0px; right: 0px; width: 36% }
+//#temperature-water-example #temperature-water-example-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#temperature-water-explore #temperature-water-explore-ds { left: 0px; right: 0px; }
+//#temperature-water-explore #temperature-water-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#height-sun-example #height-sun-example-ds { left: 0px; right: 0px; width 36%}
+//#height-sun-example #height-sun-example-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#height-sun-explore #height-sun-explore-ds { left: 0px; right: 0px; }
+//#height-sun-explore #height-sun-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#height-sun-air-temperature-example #height-sun-air-temperature-example-ds { left: 0px; right: 0px; }
+//#height-sun-air-temperature-example #height-sun-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+//#height-sun-air-temperature-example #height-sun-air-temperature-example-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+
+//#height-sun-air-temperature-explore #height-sun-air-temperature-explore-ds { left: 0px; right: 0px; width: 36%}
+//#height-sun-air-temperature-explore #height-sun-air-temperature-explore-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+//#height-sun-air-temperature-explore #height-sun-air-temperature-explore-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+/*
+#daylight-example1 #daylight-example1-ds { left: 0px; width: 36%; }
+#daylight-example1 #daylight-example2-tc{ right: 0px; width: 63%; padding: 10px; }
+
+#daylight-example2 #daylight-example2-ds { left: 0px; width: 36%; }
+#daylight-example2 #daylight-example2-tc{ right: 0px; width: 63%; padding: 10px; }
+
+#daylight-example3 #daylight-example3-ds { left: 0px; width: 36%; }
+#daylight-example3 #daylight-example3-tc{ right: 0px; width: 63%; padding: 10px; }
+
+#daylight-example4 #daylight-example4-ds { left: 0px; width: 36%; }
+#daylight-example4 #daylight-example4-tc{ right: 0px; width: 63%; padding: 10px; }
+*/
+
+
+//#daylight-explore #daylight-explore-ds { left: 0px; right: 0px; }
+//#daylight-explore #daylight-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
+
+//#daylight-air-temperature-example #daylight-air-temperature-example-ds { left: 0px; right: 0px; }
+//#daylight-air-temperature-example #daylight-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+//#daylight-air-temperature-example #daylight-air-temperature-example-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+
+//#daylight-air-temperature-explore #daylight-air-temperature-explore-ds { left: 0px; right: 0px; }
+//#daylight-air-temperature-explore #daylight-air-temperature-explore-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+//#daylight-air-temperature-explore #daylight-air-temperature-explore-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+
+
+#locationExplorer-sample .workarea .shield { width: 36%; }
+#locationExplorer-sample #dataSelector-sample { left: 0px; width: 35%; }
+#locationExplorer-sample #statspanel-sample { right: 0px; width: 63%; padding: 10px; }
+
+#locationExplorer #dataSelector1 { left: 0px; right: 0px; }
+#locationExplorer #statspanel1 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#locationExplorer2 #dataSelector2 { left: 0px; right: 0px; }
+#locationExplorer2 #statspanel2 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#locationExplorer3 #dataSelector3 { left: 0px; right: 0px; }
+#locationExplorer3 #statspanel3 { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#locationExplorer-tryit #dataSelector-tryit { left: 0px; right: 0px; }
+#locationExplorer-tryit #statspanel-tryit { right: 0px; left: 100%; display: none; padding: 10px; }
+
+#temperature-water-lesson { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-water-lesson > * { margin: .85em 2em; }
+#temperature-water-lesson h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+
+#temperature-review { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#temperature-review > * { margin: .85em 2em; }
+#temperature-review h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+#temperature-review > .mCustomScrollBox { margin: 0em 1.5em 0em 0em; }
+#temperature-review > .mCustomScrollBox > .mCSB_container { margin: 0em; }
+#temperature-review > .mCustomScrollBox > .mCSB_container > * { margin: .85em 2em; }
+#temperature-review > .mCustomScrollBox > .mCSB_container > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+
+
+
+
+#relationships-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+#relationships-intro > * { margin: .85em 2em; }
+#relationships-intro h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+
+#relationships-intro2 .workarea .shield { width: 36%; }
+#relationships-intro2 #relations-intro2-map { left: 0px; width: 35%; }
+#relationships-intro2 #relations-intro2-graph { right: 0px; width: 63%; padding: 10px; }
+
+#relationships-intro3 .workarea .shield { width: 36%; }
+#relationships-intro3 #relations-intro3-map { left: 0px; width: 35%; }
+#relationships-intro3 #relations-intro3-graph { right: 0px; width: 63%; padding: 10px; }
+
+#relationships-bonaire .workarea .shield { width: 36%; }
+#relationships-bonaire #relations-bonaire-map { left: 0px; width: 35%; }
+#relationships-bonaire #relations-bonaire-graph { right: 0px; width: 63%; padding: 10px; }
+
+#relationships-sun-energy #variables-selection-2 { left: 0px; right: 0px; }
+#relationships-sun-energy #variables-table-2 { right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
+#relationships-sun-energy #variables-graph-2 { right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
+
+#models-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info1 { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info2 { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info3 { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-info4 { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
+
+#models-interstitial1 { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }

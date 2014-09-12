@@ -455,7 +455,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>Are air temperature and how high a place is above sea level related? This activity looks at air temperatures at two locations with different elevations to find out.</p>
 			</div>
 			<div>
-				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal (pictured in the module introduction), is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
+				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal pictured in the introduction, is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
 				<p>
 			</div>
 			<div>
