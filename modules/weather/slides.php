@@ -718,7 +718,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern. (When using the simulator, first move the observer to the set the observer's latitude; then slowly move the date slider back and forth to see how changing the date affects the angle of the sun at the observer's latitude. Note that the yellow dot represents the place where the sun strikes the earth at a 90 degree angle.)</p>
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
@@ -785,7 +785,7 @@ At the completion of each module you can check your understanding of the feature
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Find out how the height of the sun in the sky impacts the amount of energy that reaches the earth by viewing the direct vs. indirect energy diagram on <a href="http://www.astronomy.org/programs/seasons/" target="_blank">this website</a>.</p>
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -1079,7 +1079,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="vis-sim-eliptic-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
 	<h2 style="margin-left: 25px;">Seasons and Ecliptic Simulator</h2>
 	<div class="scrollable">
-	<p style="margin-left: 15px;">The Seasons Simulator allows you to see how the changing position of the earth throughout the year causes the angle that the sun's rays hit the earth to also change throughout the year. The animation on the left shows how the earth's position relative to the sun changes throughout the year. The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left. The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations. You can move the stick figure and use the calendar to change the day in order to view the angle that the sun's rays hit the earth at different locations and times of the year.</p>
+	<p style="margin-left: 15px;">The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. The animation on the left shows how the earth's position relative to the sun changes throughout the year. The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left. The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations. You can move the stick figure and use the calendar to change the day in order to view the angle that the sun's rays hit the earth at different locations and times of the year.</p>
 	<p style="margin-left: 15px;">Why does the maximum height of the sun in the sky changes throughout the year?</p>
 	<p style="margin-left: 15px;">Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Watch how the angle that the sun's rays hit the earth change throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
 	<p style="margin-left: 15px;">Why is the height of the sun in the sky related to air temperature?</p>
