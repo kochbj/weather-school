@@ -140,7 +140,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>Does the average temperature at a place change from day to day in a regular pattern or are there both up and down changes from day to day?</li>
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
-	<h2><br><br>Expand Your Knowledge:</h2>	
+	<h2>Expand Your Knowledge:</h2>	
 	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>.</p>
 	</div>
 </div>
@@ -284,7 +284,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>For the places that you looked at in the United States, can you observe a pattern in how the average daily temperature changes throughout the year? If so, describe the pattern.</li>
 		<li>For the places that you looked at in the United States, is the pattern of average daily temperature change exactly the same from year to year?</li>
 	</ul>
-	<h2><br>Expand Your Knowledge:</h2>	
+	<h2>Expand Your Knowledge:</h2>	
 	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">annual temperature patterns</a>?</p>
 	</div>
 </div>
