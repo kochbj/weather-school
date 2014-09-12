@@ -1080,9 +1080,9 @@ At the completion of each module you can check your understanding of the feature
 	<h2 style="margin-left: 25px;">Seasons and Ecliptic Simulator</h2>
 	<div class="scrollable">
 	<p style="margin-left: 15px;">The following</p>
-	<p style="margin-left: 15px;"><b>Why does the maximum height of the sun in the sky changes throughout the year?</b></p>
+	<p style="margin-left: 15px;">Why does the maximum height of the sun in the sky changes throughout the year?</p>
 	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
-	<p style="margin-left: 15px;"><b>Why is the height of the sun in the sky related to air temperature?<b></p>
+	<p style="margin-left: 15px;">Why is the height of the sun in the sky related to air temperature?</p>
 	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
 </div>
 </div>
