@@ -981,7 +981,7 @@ At the completion of each module you can check your understanding of the feature
 
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Learn how the  <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html"targetarget="about_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
+		<p>Learn how the  <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
 	</div>
 </div>
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
