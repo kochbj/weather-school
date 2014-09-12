@@ -1080,8 +1080,8 @@ At the completion of each module you can check your understanding of the feature
 	<h2 style="margin-left: 25px;">Seasons and Ecliptic Simulator</h2>
 	<div class="scrollable">
 	<p style="margin-left: 15px;">You have now seen that air temperature in a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
-	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
-	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
+	<p style="margin-left: 15px;"><b>Use the Seasons Simulator to see how why the maximum height of the sun in the sky changes throughout the year</b><br>As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
+	<p style="margin-left: 15px;"><b> Use the Seasons Simulator to see how the height of the sun the sky causes variations in the intensity of sunlight hitting the earth<b><br>To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
 </div>
 </div>
 <div id="vis-sim-eliptic" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
