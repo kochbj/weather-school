@@ -910,7 +910,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="#vis-sim-daylight">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-daylight">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
