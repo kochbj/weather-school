@@ -718,7 +718,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge</h2>	
-		<p>Use <a href="#vis-sim-eliptic">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern. (When using the simulator, first move the observer to the set the observer's latitude; then slowly move the date slider back and forth to see how changing the date affects the angle of the sun at the observer's latitude. Note that the yellow dot represents the place where the sun strikes the earth at a 90 degree angle.)</p>
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern. (When using the simulator, first move the observer to the set the observer's latitude; then slowly move the date slider back and forth to see how changing the date affects the angle of the sun at the observer's latitude. Note that the yellow dot represents the place where the sun strikes the earth at a 90 degree angle.)</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
