@@ -992,10 +992,10 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">
 	<p>In this section you can use the <b>Variable Relationship Explorer</b>, the <b>Daylight Hours Explorer</b>, and the <b>Seasons Simulator</b> to continue to find patterns in data as well as explore the causes of some patterns you previously identified.</p><br>
 	<b>Variable Relationship Explorer</b><br>
-	In the previous modules, you learned how factors, such as elevation, proximity to water, maximum height of the sun in the sky, and hours of daylight are related to air temperature. You can use the Variable Relationship Explorer to continue to explore how different weather factors are related to each other and to air temperature.<br><br>
+	 Use the Variable Relatoinship Explorer to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
 	
 	<b>Seasons Simulator</b><br>
- In the previous modules, you also learned how factors such as air temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. You can use the Seasons Simulator to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.<br><br>
+ In the previous modules, you learned how factors such as air temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. Use the Seasons Simulator to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.<br><br>
  	<b>Daylight Hours Explorer</b><br>
  	Use the Daylight Hours Explorer to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.</p>
 
