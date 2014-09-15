@@ -561,13 +561,13 @@ At the completion of each module you can check your understanding of the feature
 				<p>Are air temperature and how close a place is to a body of water related? This activity looks at air tempeartures at two locations that are different distances from a large body of water to find out.</p>
 			</div>
 			<div>	
-				<p>The map pinpoints a fjord in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Tromso, one of the northernmost cities on earth (shown in the module introduction), and in Kautokeino, a small village about 125 miles southeast of Tromso.</p>
+				<p>The marker is placed in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Tromso, one of the northernmost cities on earth (shown in the module introduction), and in Kautokeino, a small village about 125 miles southeast of Tromso.</p>
 			</div>
 			<div>
-			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 reporting stations closest to the fjord. </p>
+			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 reporting stations closest to the marker. </p>
 			</div>
 			<div>
-			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of the fjord and Kautokeino is southeast.</p>
+			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of the marker and Kautokeino is southeast.</p>
 			</div>
 			<div>
 				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
