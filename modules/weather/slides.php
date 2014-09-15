@@ -615,7 +615,10 @@ At the completion of each module you can check your understanding of the feature
 				<p>4. When you choose locations, make sure that one of them is not at a much higher elevation than the other one. Coastal areas often have mountains nearby, so when comparing two locations just make sure one of them is not in the mountains and the other at sea level. </p>
 			</div>
 			<div>
-				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline. You will also see that the effect of proximity to a large body of water is not always the same from place to place. Sometimes it is barely noticeable and other times it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air over the water gets inland.</p>
+				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
+			</div>
+			<div>
+				<p>You will also see that the effect of proximity to a large body of water is not always the same from place to place. Sometimes it is barely noticeable and other times it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air over the water gets inland.</p>
 			</div>
 			<div>
 				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
