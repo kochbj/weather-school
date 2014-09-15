@@ -40,11 +40,8 @@ if (!isset($mid, $sid) && count($date_ranges) == 0) {
 	exit();
 }
 
-$date_data = array();
-foreach ($date_ranges as $date_range) {
-	$datetime_min = date_create(date('Y-m-d',$date_range['begin']));
-	$datetime_max = date_create(date('Y-m-d',$date_range['end']));
-	$interval = date_diff($datetime_min, $datetime_max);
+/*foreach ($date_ranges as $date_range) {
+
 	// $num_days = (int) $interval->format('%a');
 	// FIXME %a is broken on windows when using PHP compiled with VC6 http://bugs.php.net/bug.php?id=51184
 	$num_days = (int) round(abs($date_range['end']-$date_range['begin'])/(60*60*24))+1;
@@ -55,9 +52,26 @@ foreach ($date_ranges as $date_range) {
 		);
 		$current_date->modify('+1 day');
 	}
-}
+}*/
 
 foreach ($date_ranges as $date_range) {
+	$date_data = array();
+	$datetime_min = date_create(date('Y-m-d',$date_range['begin']));
+	$datetime_max = date_create(date('Y-m-d',$date_range['end']));
+	$interval = date_diff($datetime_min, $datetime_max);
+	// $num_days = (int) $interval->format('%a');
+	// FIXME %a is broken on windows when using PHP compiled with VC6 http://bugs.php.net/bug.php?id=51184
+	$num_days = (int) round(abs($date_range['end']-$date_range['begin'])/(60*60*24))+1;
+	$current_date = $datetime_min;
+	while ($current_date->format('U') <= $datetime_max->format('U')) {
+		$date_data[$current_date->format('Y-m-d')] =
+			array_combine($data_columns,array_fill(0,count($data_columns),NULL)
+		);
+		$date_data[$current_date->format('Y-m-d')]['date_recorded']= $current_date->format('Y-m-d');
+		$current_date->modify('+1 day');
+	}
+
+
 	// FIXME can we check here to see if it's necessary to request a recordings update?
 	file_get_contents('http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data/noaa/recordings_gsod.php?dbid=' . urlencode($dbid) . '&year_min=' . date('Y',$date_range['begin']) . '&year_max=' . date('Y',$date_range['end']));
 	// FIXME: this is *really* insecure
@@ -80,13 +94,16 @@ foreach ($date_ranges as $date_range) {
 		while ($record = mysql_fetch_assoc($recordset)) {
 			$data_value = array();
 			foreach ($data_columns as $data_column) {
-				$data_value[$data_column] = $record[$data_column];
+				$date_data[$record['date_recorded']][$data_column] = $record[$data_column];
+				//$data_value[$data_column] = $record[$data_column];
 			}
-			$data['results'][key($data['results'])]['station']['data'][] = $data_value;
+			//$data['results'][key($data['results'])]['station']['data'][] = $data_value;
+			//$data['results'][key($data['results'])]['station']['data'][] = $date_data[$record['date_recorded']];
 		}
+		$data['results'][key($data['results'])]['station']['data'] = array_values($date_data);
 	}
 }
-
+//echo ("CRAP" . json_encode($date_data) . json_encode($date_ranges));
 echo (isset($_GET['callback']) ? $_GET['callback'].'('.json_encode($data).')' : json_encode($data));
 exit();
 ?>
