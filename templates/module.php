@@ -13,6 +13,7 @@
 	
 <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.plusslider/css/plusslider.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.chosen/chosen.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.plusslider/css/minimal.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.mCustomScrollbar/jquery.mCustomScrollbar.css" />
 	
@@ -29,7 +30,7 @@
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 	<script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>
 
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.regex-selector.js"></script>
@@ -37,6 +38,7 @@
 	<script type='text/javascript' src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.mousewheel.min.js"></script>
 	<script type='text/javascript' src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.plusslider/js/jquery.plusslider.js"></script>
 	<script type='text/javascript' src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.mCustomScrollbar/jquery.mCustomScrollbar.min.js"></script>
+	<script type='text/javascript' src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.chosen/chosen.jquery.js"></script>
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.cookie.js"></script>
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery-ui.multidatespicker.js"></script>
 <script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.bind-first-0.2.3.js"></script>

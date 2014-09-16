@@ -32,8 +32,17 @@ var _colors = {
 };
 _colors.keys = Object.keys( _colors.colors );
 _colors.keys.sort( function ( a , b ) { return ( Math.random( ) < 0.5 ? -1 : 1 ); } );
+	var updateDatepickerOriginal = $.datepicker._updateDatepicker;
+	$.datepicker._updateDatepicker = function(){
+  var response = updateDatepickerOriginal.apply(this,arguments);
+  $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
+	return response;
+};
+
 
 function dataSelect_initialize() {
+
+	
 	$.getScript("http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox.js");
 	elevation = new google.maps.ElevationService();
 	geocoder = new google.maps.Geocoder();
@@ -271,7 +280,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date( 2000 , 0 , 1 ) ,
+					defaultDate     : new Date( [2000 , 1 , 1] ) ,
 					//minDate         : new Date( 1995 , 0 , 1 ) ,
 					//maxDate         : new Date( 1995 , 11 , 31 ) ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
@@ -636,11 +645,12 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date(2000,0,1) ,
+					defaultDate     : new Date([2000,1,1]) ,
 					/* should be set based on data source
 					minDate         : new Date(1995,0,1) ,
 					maxDate         : new Date(1995,11,31) ,
 					*/
+				 	yearRange:"1928:+nn",
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				} );
@@ -1097,10 +1107,15 @@ function refreshStations ( evt ) {
 		dataType : 'jsonp json' /* because of IE */,
 		data     : query,
 		success : function( servermsg ) {
-			console.log("REFRESH STATIONS",servermsg);
+			console.log("REFRESH STATIONS",servermsg,wInstance.markers);
 			wInstance.markers[servermsg[0].mid].stations = servermsg[0].stations;
 			wInstance.markers[servermsg[0].mid].sindex = servermsg[0].sindex;
-			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0]
+			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0];
+			if (!canSelectStation) {
+				wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.slice(0,-6)+'<div class="location">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div></div>';
+		 		wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
+				setTimeout(function() {wInstance.markers[servermsg[0].mid].infoWindow.close();}, 2000);
+			}
 			for ( i in wInstance.markers[servermsg[0].mid].stations ) {
 				wInstance.markers[servermsg[0].mid].stations[i].marker = new google.maps.Marker( {
 					position : new google.maps.LatLng( wInstance.markers[servermsg[0].mid].stations[i].lat , wInstance.markers[servermsg[0].mid].stations[i].lng ), 
@@ -1242,11 +1257,12 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
  else console.log("THIS CAN ACTUALLY HAPPEN 2");
 	//function checkYearsatStation(date_ranges_array,wInstance);	
  // fix datetimes to strings in an attempt to avoid timezone adjustments
+	console.log("SECOND",date_ranges_array, wInstance);
+	checkAvailableYears(date_ranges_array,wInstance);
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
 		date_ranges_array[i].end = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].end ) + ' ' + date_ranges_array[i].end.toLocaleTimeString();
 	}
-	console.log("SECOND",date_ranges_array);
 	
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficent.
@@ -1296,33 +1312,62 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 		}
 	}
 }
+function compareDateranges (station) {
+var outputStr='';
+var retVal = {};
+var startDate= new Date([1,1,1990]);
+var endDate = new Date([12,31,1990]); 
+var current = new Date(startDate);
+console.log(station['gsod_years'][current.getFullYear()]['has_data']);
+console.log(station['gsod_years'][current.getFullYear()]['months'].length);
 
-/*function checkAvailableYears (dateArray wInstance){
+ while (current <= endDate) {
+	if (!station['gsod_years'][current.getFullYear()]['has_data']) retVal[current.getFullYear()]=['All'];
+	else if (station['gsod_years'][current.getFullYear()]['months'].length!=0) {
+		retVal[current.getFullYear()]=[];
+		if (retVal[current.getFullYear()].indexOf(current.getMonth())==-1 ) retVal[current.getFullYear()].push(current.getMonth());
+	}
+  current = (current.getMonth() == 11 ?  new Date(current.getFullYear() + 1, 0, 1) : new Date(current.getFullYear(), current.getMonth() + 1, 1) );
+ }
+ console.log(retVal);
+ return retVal;
+}
+
+function checkAvailableYears (dateArray, wInstance){
 	for ( i in dateArray ) {
 		var begin = dateArray[i].begin.getFullYear();
 		var end= dateArray[i].end.getFullYear();
-		for (var range =[]; (end - begin ) > 0; begin +=1) range.push(begin);
+		var missingArray={};
+		var range =[];
+		for (var j = begin; j <=end; j++) range.push(j);
 		for (markerID in wInstance.markers) { //for each marker
-			var yearsMissing={};
-			var missingStr='';
-			for (i in range){ // for each year	
+			missingArray[markerID]={};
+			missingArray[markerID]['missingStr']='';
+			missingArray[markerID]['stations']={}
+			for (y in range){ // for each year	
 				for (station in wInstance.markers[markerID].stations){//got each station
-					yearsMissing[station]=[];
-					for (y in range){
-						if (typeof(wInstance.markers[markerID].stations[station]['gsod_years'][y]) == 'undefined' || !wInstance.markers[markerID].stations[station]['gsod_years'][y]['has_data']) yearsMissing[station]push(y); //list missing years
-					}
+					if (typeof(missingArray[markerID].stations[station]) == 'undefined')  missingArray[markerID].stations[station]=[];
+					missingArray[markerID].stations[station].push(range[y]);
+					console.log(wInstance.markers[markerID].stations[station],!wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]);
+					if (typeof(wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]) == 'undefined' || !wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]['has_data']) missingArray[markerID].stations[station].push(range[y]); //list missing years
 				}
 			}
-			for (station in yearsMissing){
-				if (yearsMissing[station].length/range.length <= .4) missingStr=wInstance.markers[markerID].stations[station].name+ ": Data is not available for more than 60% of the dates you selected. We reccomend you select a new date range.";
+		}
+		console.log(range, missingArray);
+	}
+}
+			/*for (station in yearsMissing){
+				if (yearsMissing[station].length/range.length <= .4) missingStr=wInstance.markers[markerID].stations[station].name+ ": Data is not available for most of the years selected. We reccomend you select a new date range.";
 				else {
-					missingStr= wInstance.markers[markerID].stations[station].name+ ": Data is not available at this station in"
-					for (y in yearsMissing[station])
+					missingStr= wInstance.markers[markerID].stations[station].name+ ": Data is not available at this station in "
+					for (y in yearsMissing[station]) missingStr+=y;
+					console.log()
 				}	
 			}
 		}
 	}
-}*/
+}
+*/
 
 function stationBasedDataFetchAjax ( evt ) {
 	if (this.running) {
