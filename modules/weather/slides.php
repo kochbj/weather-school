@@ -798,7 +798,7 @@ At the completion of each module you can check your understanding of the feature
 	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
 	</div>
 </div>
-<div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight I" data-slide-parent-id="daylight-intro">
+<div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Exploring Daylight" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 1</h2>
 	</div>
@@ -821,7 +821,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-example2" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight II" data-slide-parent-id="daylight-intro">
+<div id="daylight-example2" class="activity" data-slide-type="normal" data-slide-title="Daylight Farther from the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 2</h2>
 	</div>
@@ -843,7 +843,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-example3" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight III" data-slide-parent-id="daylight-intro">
+<div id="daylight-example3" class="activity" data-slide-type="normal" data-slide-title="Daylight Closer to the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 3</h2>
 	</div>
@@ -864,7 +864,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-example4" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight IV" data-slide-parent-id="daylight-intro">
+<div id="daylight-example4" class="activity" data-slide-type="normal" data-slide-title="Daylight at the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 4</h2>
 	</div>
