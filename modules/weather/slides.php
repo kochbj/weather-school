@@ -16,7 +16,7 @@
 <p>
 Each module begins with a guided <b>Activity</b> to illustrate a pattern in air temperature or a variable affecting it. This is followed by an open-ended <b>Try It</b> section. In the <b>Try It</b> section, you can further explore the featured pattern by picking different locations in Google Maps and choosing your own dates.</p>
 <p>
-At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about what causes the patterns by following the links in the <b>Expand Your Knowledge</b> section. Click the next arrow to begin a brief introduction to each module.</p>
+At the completion of each module you can check your understanding of the featured pattern by answering the <b>Quiz Yourself</b> questions. You can learn more about what causes the patterns by following the links in the <b>Expand Your Knowledge:</b> section. Click the next arrow to begin a brief introduction to each module.</p>
 </div> 
 </div>
 <div id="contents-1" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -140,11 +140,8 @@ At the completion of each module you can check your understanding of the feature
 		<li>Does the average temperature at a place change from day to day in a regular pattern or are there both up and down changes from day to day?</li>
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
-	<h2><br><br>Expand Your Knowledge</h2>	
+	<h2>Expand Your Knowledge:</h2>	
 	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>.</p>
-	</div>
-	<div class="completed-text">
-		<p> Hit the next button to continue to the next module or select a different one to explore from the menu. </p>
 	</div>
 </div>
 
@@ -287,7 +284,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>For the places that you looked at in the United States, can you observe a pattern in how the average daily temperature changes throughout the year? If so, describe the pattern.</li>
 		<li>For the places that you looked at in the United States, is the pattern of average daily temperature change exactly the same from year to year?</li>
 	</ul>
-	<h2><br>Expand Your Knowledge</h2>	
+	<h2>Expand Your Knowledge:</h2>	
 	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">annual temperature patterns</a>?</p>
 	</div>
 </div>
@@ -429,7 +426,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>In the Southern Hemisphere, what is the relationship between how far south you are and temperature?</li>
 		<li>What is the relationship between how far a place is from the equator (latitude) and its average daily temperature?</li>
 	</ul>
-	<h2>Expand Your Knowledge</h2>	
+	<h2>Expand Your Knowledge:</h2>	
 	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> is related to the temperature of a place.</p>
 	</div>
 </div>
@@ -455,8 +452,11 @@ At the completion of each module you can check your understanding of the feature
 				<p>Are air temperature and how high a place is above sea level related? This activity looks at air temperatures at two locations with different elevations to find out.</p>
 			</div>
 			<div>
-				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal, is pinpointed. The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
-				<p>
+				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal pictured in the introduction, is pinpointed.</p>
+			</div>
+			<div>
+				<p>The yellow dots represent the 20 closest reporting stations to Kathmandu. Zoom in two clicks to get a closer look at where those reporting stations are located.
+				</p>
 			</div>
 			<div>
 				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
@@ -535,7 +535,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>As the elevation at a particular location increases, what happens to the average daily temperature of that location?</li>
 	
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
@@ -561,28 +561,28 @@ At the completion of each module you can check your understanding of the feature
 				<p>Are air temperature and how close a place is to a body of water related? This activity looks at air tempeartures at two locations that are different distances from a large body of water to find out.</p>
 			</div>
 			<div>	
-				<p>The map pinpoints Troms, a city in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Troms and in Kautokeino, a small town in Norway about 125 miles southeast of Troms.</p>
+				<p>The marker is placed in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Tromso, one of the northernmost cities on earth (shown in the module introduction), and in Kautokeino, a small village about 125 miles southeast of Tromso.</p>
 			</div>
 			<div>
-			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 closest reporting stations to Troms. </p>
+			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 reporting stations closest to the marker. </p>
 			</div>
 			<div>
-			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of Troms and Kautokeino is southeast of Troms.</p>
+			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of the marker and Kautokeino is southeast.</p>
 			</div>
 			<div>
-				<p>The graph shows the average daily temperatures in Troms and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
-				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Troms, which is close to the water, but in the summer, Troms is a little cooler than Kautokeino.</p>
+				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Tromso, which is close to the water, but in the summer, Tromso is a little cooler than Kautokeino.</p>
 			</div>
 			<div>
-				<p>You should also notice that the line on the graph for Troms, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water.</p>
+				<p>You should also notice that the line on the graph for Tromso, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water.</p>
 			</div>
 			<div>
 				<p>The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
-				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large body of water throughout the year is smaller.</p>
+				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to observe the effect of proximity to a large body of water on temperature at locations of your choosing. See if other locaitons near a large body of water experience cooler summers and warmer winters compared to nearby locations farther inland.</p>
@@ -615,7 +615,10 @@ At the completion of each module you can check your understanding of the feature
 				<p>4. When you choose locations, make sure that one of them is not at a much higher elevation than the other one. Coastal areas often have mountains nearby, so when comparing two locations just make sure one of them is not in the mountains and the other at sea level. </p>
 			</div>
 			<div>
-				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline. You will also see that the effect of proximity to a large body of water is not always the same from place to place. Sometimes it is barely noticeable and other times it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air over the water gets inland.</p>
+				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren’t many reporting stations right on the shoreline.</p>
+			</div>
+			<div>
+				<p>You will also see that the effect of proximity to a large body of water is not always the same from place to place. Sometimes it is barely noticeable and other times it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air over the water gets inland.</p>
 			</div>
 			<div>
 				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
@@ -653,7 +656,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year over nearby land?</li>
 	
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
+		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">properties of water</a> cause large bodies of water to have a moderating effect on air temperature over nearby land.</p>
 	</div>
 	</div>
@@ -717,8 +720,8 @@ At the completion of each module you can check your understanding of the feature
 			<li>For any place in the United States, how does the maximum height of the sun in the sky during winter compare to the maximum height of the sun in the sky during summer?</li>
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
-		<p>Use <a href="#vis-sim-eliptic"target="_blank">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern. (When using the simulator, first move the observer to the set the observer's latitude; then slowly move the date slider back and forth to see how changing the date affects the angle of the sun at the observer's latitude. Note that the yellow dot represents the place where the sun strikes the earth at a 90 degree angle.)</p>
+		<h2>Expand Your Knowledge:</h2>	
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
@@ -784,8 +787,8 @@ At the completion of each module you can check your understanding of the feature
 			<li>Why is the relationship between the maximum height of the sun in the sky and average daily air temperature called a linear relationship?</li>
 
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
-		<p>Find out how the height of the sun in the sky impacts the amount of energy that reaches the earth by viewing the direct vs. indirect energy diagram on <a href="http://www.astronomy.org/programs/seasons/" target="_blank">this website</a>.</p>
+		<h2>Expand Your Knowledge:</h2>	
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -795,7 +798,7 @@ At the completion of each module you can check your understanding of the feature
 	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
 	</div>
 </div>
-<div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight I" data-slide-parent-id="daylight-intro">
+<div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Exploring Daylight" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 1</h2>
 	</div>
@@ -818,7 +821,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-example2" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight II" data-slide-parent-id="daylight-intro">
+<div id="daylight-example2" class="activity" data-slide-type="normal" data-slide-title="Daylight Farther from the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 2</h2>
 	</div>
@@ -840,7 +843,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-example3" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight III" data-slide-parent-id="daylight-intro">
+<div id="daylight-example3" class="activity" data-slide-type="normal" data-slide-title="Daylight Closer to the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 3</h2>
 	</div>
@@ -861,7 +864,7 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-example4" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Daylight IV" data-slide-parent-id="daylight-intro">
+<div id="daylight-example4" class="activity" data-slide-type="normal" data-slide-title="Daylight at the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
 		<h2>Daylight Example 4</h2>
 	</div>
@@ -909,8 +912,8 @@ At the completion of each module you can check your understanding of the feature
 			<li>During what months of the year do places in the United States experience the least number hours of daylight? Is that true everywhere in the world?</li>
 			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
-		<p>Use the <a href="#vis-sim-daylight"target="_blank">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
+		<h2>Expand Your Knowledge:</h2>	
+		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-daylight">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
@@ -980,15 +983,22 @@ At the completion of each module you can check your understanding of the feature
 			
 
 		</ul>
-		<h2>Expand Your Knowledge</h2>	
-		<p>How <a href="http://en.wikipedia.org/wiki/Atmospheric_pressure">Atmospheric Pressure</a>, changes in pressure, sadfsdafsdf, asdfsdfaetc impacts daily temperature patterns.</p>
+		<h2>Expand Your Knowledge:</h2>	
+		<p>Find out how the  <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
 	</div>
 </div>
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
 	<h2>Additional Data Tools</h2>
 	<div class="intro-text">
-	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
-	<p>In this activity, you are going to try to find out whether or not how close a place is to a large body of water affects the air temperature at that place.</p>
+	<p>In this section you can use the <b>Variable Relationship Explorer</b>, the <b>Daylight Hours Explorer</b>, and the <b>Seasons Simulator</b> to continue to find patterns in data as well as explore the causes of some patterns you previously identified.</p><br>
+	<b>Variable Relationship Explorer</b><br>
+	 Use the Variable Relatoinship Explorer to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
+	
+	<b>Seasons Simulator</b><br>
+ In the previous modules, you learned how factors such as air temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. Use the Seasons Simulator to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.<br><br>
+ 	<b>Daylight Hours Explorer</b><br>
+ 	Use the Daylight Hours Explorer to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.</p>
+
 	</div>
 </div>
 <div id="location-data-finder" class="activity" data-slide-type="tool" data-slide-title="Location Data Finder" data-slide-parent-id="data-tools-intro">
@@ -1014,9 +1024,22 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Now choose one location and see what happens at that location at 12 different times of the year. After your selection click on the SAVE button to save your results. You will make a table and some graphs of the data for the place your selected.</p></div>
-			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
-			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
+			<div><p>You used the Variable Relationship Explorer in modules G and I to see how average daily air temperature was related to both the height of the sun in the sky and the number of hours of daylight at a particular place.</p> 
+		</div>
+		<div>
+			<p>You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location, the daily recorded energy from the sun and the daily theoretical energy from the sun, which were not explored in the modules. </p></div>
+		<div>	<p>In this activity you can see how two variables are related to each other. You will be able to choose to view two variables at a time from five total variables.</p> 
+		</div>
+		<div>
+				<p>The five variables include the three variables you have already looked at (average air temperature, maximum height of the sun in the sky, and hours of daylight) and two additional variables (daily recorded energy from the sun and daily theoretical energy from the sun). The next slide has directions for using the Variable Relationship Explorer.</p></div>
+			<div>	<p>1. Choose a location anywhere in the world.</p>
+				<p>2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
+				<p>3. Decide which two variables you would like to compare from the five variables listed as the column titles.</p></div>
+			<div>	<p>4. Click the column of the variable you would like to be on the X-axis.</p>
+				<p>5. Click the column of the variable you would like to be on teh Y-axis.</p>
+				<p>6. Click "Line of Best Fit" at the bottom of the page.</p>
+				<p>7. Is there a positive linear relationship between the two variables?</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -1041,9 +1064,21 @@ At the completion of each module you can check your understanding of the feature
 </div>
 <div class="instructions">
 		<div class="slider">
-			<div><p>Now choose one location and see what happens at that location at 12 different times of the year. After your selection click on the SAVE button to save your results. You will make a table and some graphs of the data for the place your selected.</p></div>
-			<div><p>Select  &ldquo;Maximum Angle of the Sun&rdquo; and &ldquo;Average solar energy&rdquo; as the two variables that  you would like to graph to see if there is a relationship between those two  variables. To choose a variable, click on the heading for the column where the  values of that variable appear.</p></div>
-			<div><p>Then  click on [Graph it] to create a graph of these two variables.</p></div>
+			<div><p>The Daylight Hours Explorer allows you to view the number of hours of daylight throughout the year at different degrees of latitude. </p>
+			</div>
+			<div><p>The graph on the left shows the number of hours of daylight throughout the year for a certain degree of latitude on earth. The red dot represents the number of hours of daylight for one particular day at that degree of latitude. </p></div>
+			<div><p>Look at the picture of the globe in the lower right corner. The yellow line on the globe shows the degree of latitude that the graph represents. </p></div>
+			<div><p>The settings panel on the upper right side allows you to adjust the degree of latitude that the graph currently displays or the specific day pinpointed in red on the graph. </p></div>
+			<div><p>Adjust the latitude closer to the equator. What happens to the range of daylight hours throughout the year?</p>
+			</div>
+			<div><p>Just as you saw in module H, the closer a location is to the equator, the smaller the range of daylight hours throughout the year.</p>
+			</div>
+			<div></p>Adjust the latitude further from the equator. What happens to the range of daylight hours?</p>
+			</div>
+			<div><p>Just as you saw in module H, the further a location is from the equator, the larger the range of daylight hours throughout the year.</p>
+			</div>
+			<div><p>Continue to adjust the latitude or pinpointed date until you are ready to try the next data tool.</p>
+			</div>
 		</div>
 	</div>
 
@@ -1051,9 +1086,11 @@ At the completion of each module you can check your understanding of the feature
 <div id="vis-sim-eliptic-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
 	<h2 style="margin-left: 25px;">Seasons and Ecliptic Simulator</h2>
 	<div class="scrollable">
-	<p style="margin-left: 15px;">You have now seen that air temperature in a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
-	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
-	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
+	<p>The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. The animation on the left shows how the earth's position relative to the sun changes throughout the year. The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left. The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations. You can move the stick figure and use the calendar to change the day in order to view the angle that the sun's rays hit the earth at different locations and times of the year.</p>
+	<p>Why does the maximum height of the sun in the sky changes throughout the year?</p>
+	<p>Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Notice that the angle that the sun's rays hit the earth changes throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
+	<p>Why is the height of the sun in the sky related to air temperature?</p>
+	<p>Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
 </div>
 </div>
 <div id="vis-sim-eliptic" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">

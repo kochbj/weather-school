@@ -362,13 +362,13 @@ function decimalToRomanSimple(value) {
 				$('#accordion').append( '<a href="#' + $( el ).attr( 'id' ) + '"> &nbsp &nbsp ' + $( el ).data( 'slide-group-title' ) + '</a>' );
 				 //$('#accordion a:last-child').css( { 'border-top':'2px solid black'});
 				}
-			else $('#accordion').append( '<a id="' + $( el ).attr( 'id' ) + '-menu-link" href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a>' );
+			else $('#accordion').append( '<a href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a>' );
 			$('#accordion').append('<div><ul></ul></div>');
 			var menuidxx=1;
 		$("[data-slide-parent-id='"+$( el ).attr( 'id')+"']").each( function (idxx, ell) {
 			if ($( ell ).attr( 'data-slide-title' ) == "Module Complete" || $( ell ).attr( 'hidden' )) return true;
-			else if ($( ell ).attr( 'data-slide-type' ) == "tool") $('#accordion > div:last-child > ul').append( '<li><a id="' + $( ell ).attr( 'id' ) + '-menu-link" href="#' + $( ell ).attr( 'id' ) + '">' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
-			else $('#accordion > div:last-child > ul').append( '<li><a id="' + $( ell ).attr( 'id' ) + '-menu-link" href="#' + $( ell ).attr( 'id' ) + '">' + decimalToRomanSimple(menuidxx) + '. ' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
+			else if ($( ell ).attr( 'data-slide-type' ) == "tool") $('#accordion > div:last-child > ul').append( '<li><a href="#' + $( ell ).attr( 'id' ) + '">' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
+			else $('#accordion > div:last-child > ul').append( '<li><a href="#' + $( ell ).attr( 'id' ) + '">' + decimalToRomanSimple(menuidxx) + '. ' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
 			menuidxx+=1;
 			});
 		$('#accordion').accordion('refresh');

@@ -11,13 +11,3 @@
 includes/climateViz/php/data/noaa/data_file_cache/offline/gsod/1991/.listing
 
 includes/climateViz/php/data/noaa/data_file_cache/offline/gsod/1990/.listing
-
-*.swp
-
-includes/climateViz/php/.config.php.swp
-
-includes/climateViz/php/.data-station.php.swp
-
-includes/climateViz/php/data/noaa/data_file_cache/gsod.fix_missing.php
-
-includes/climateViz/php/data/noaa/gsod.fix_missing.php
