@@ -35,7 +35,8 @@ _colors.keys.sort( function ( a , b ) { return ( Math.random( ) < 0.5 ? -1 : 1 )
 	var updateDatepickerOriginal = $.datepicker._updateDatepicker;
 	$.datepicker._updateDatepicker = function(){
   var response = updateDatepickerOriginal.apply(this,arguments);
-  $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
+  console.log("ARGUMENTS",arguments)
+	$('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
 	return response;
 };
 
