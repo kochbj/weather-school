@@ -721,7 +721,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-intro-menu-link').click()">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
@@ -788,7 +788,7 @@ At the completion of each module you can check your understanding of the feature
 
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-eliptic-intro">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-intro-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -913,7 +913,7 @@ At the completion of each module you can check your understanding of the feature
 			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a href="http://weatherschool.aaas.org/modules/weather/#vis-sim-daylight">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-daylight-menu-link').click()">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
@@ -1083,8 +1083,8 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 
 </div>
-<div id="vis-sim-eliptic-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
-	<h2 style="margin-left: 25px;">Seasons and Ecliptic Simulator</h2>
+<div id="vis-sim-seasons-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
+	<h2 style="margin-left: 25px;">Seasons Simulator</h2>
 	<div class="scrollable">
 	<p>The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. The animation on the left shows how the earth's position relative to the sun changes throughout the year. The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left. The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations. You can move the stick figure and use the calendar to change the day in order to view the angle that the sun's rays hit the earth at different locations and times of the year.</p>
 	<p>Why does the maximum height of the sun in the sky changes throughout the year?</p>
@@ -1093,16 +1093,16 @@ At the completion of each module you can check your understanding of the feature
 	<p>Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
 </div>
 </div>
-<div id="vis-sim-eliptic" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons and Ecliptic Simulator" data-slide-parent-id="data-tools-intro">
+<div id="vis-sim-seasons" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
-		<h2>Seasons and Ecliptic Simulator</h2>
+		<h2>Seasons Simulator</h2>
 	</div>
 	<div class="workonly">
 	<div align="center">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
-				<param name="movie" value="assets/sim/vis-sim-eliptic.swf" />
+				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
 				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-eliptic.swf" width="906" height="635">
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="635">
 					<!--<![endif]-->
 					<p>flash animation</p>
 					<!--[if !IE]>-->

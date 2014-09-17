@@ -84,6 +84,7 @@ foreach ($date_ranges as $date_range) {
 		mysql_real_escape_string(date('Y-m-d',$date_range['begin'])),
 		mysql_real_escape_string(date('Y-m-d',$date_range['end']))
 	);
+	$data['results'][key($data['results'])]['station']['data']=array();
 	$recordset = mysql_query($query);
 	if ($recordset) {
 		$data['results'][] = array(
@@ -103,7 +104,6 @@ foreach ($date_ranges as $date_range) {
 		$data['results'][key($data['results'])]['station']['data'] = array_values($date_data);
 	}
 }
-//echo ("CRAP" . json_encode($date_data) . json_encode($date_ranges));
 echo (isset($_GET['callback']) ? $_GET['callback'].'('.json_encode($data).')' : json_encode($data));
 exit();
 ?>
