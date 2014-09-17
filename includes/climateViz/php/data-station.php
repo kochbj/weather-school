@@ -84,7 +84,6 @@ foreach ($date_ranges as $date_range) {
 		mysql_real_escape_string(date('Y-m-d',$date_range['begin'])),
 		mysql_real_escape_string(date('Y-m-d',$date_range['end']))
 	);
-	$data['results'][key($data['results'])]['station']['data']=array();
 	$recordset = mysql_query($query);
 	if ($recordset) {
 		$data['results'][] = array(
