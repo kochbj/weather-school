@@ -40,16 +40,14 @@ $.datepicker._updateDatepicker = function(){
 	return response;
 };
 function drop_missing_warning(wInstance, color) {
-	console.log(wInstance.settings.container.find('.missing-data-warning').is(':animated'));
 	//while (wInstance.settings.container.find('.missing-data-warning').is(':animated')){ continue;}
 
 	wInstance.settings.container.find('.missing-data-warning').css('color', color);
-	var currtop=	wInstance.settings.container.find('.missing-data-warning').css('top');
 	wInstance.settings.container.find('.missing-data-warning')
 	.animate( { top : '0px' } , {duration: 1000, easing: "linear"})
 	.delay(3000)
-	.animate( { top : currtop } , {duration: 1000, easing: "linear"});
-	console.log('RAN THIS BITCH', wInstance,currtop);
+	.animate( { top : '-52px' } , {duration: 1000, easing: "linear"});
+	console.log('RAN THIS BITCH', wInstance,color);
 }
 
 
