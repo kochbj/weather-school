@@ -40,10 +40,7 @@ $.datepicker._updateDatepicker = function(){
 	return response;
 };
 function drop_missing_warning(wInstance, color) {
-	if (wInstance.settings.container.find('.missing-data-warning').is(':animated')){
-		setTimeout(drop_missing_warning(wInstance, color),5000);
-		return;
-	}
+	while (wInstance.settings.container.find('.missing-data-warning').is(':animated')){ continue;}
 
 	wInstance.settings.container.find('.missing-data-warning').css('color', color);
 	var currtop=	wInstance.settings.container.find('.missing-data-warning').css('top');
