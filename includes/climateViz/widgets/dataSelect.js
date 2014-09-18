@@ -39,7 +39,13 @@ $.datepicker._updateDatepicker = function(){
   $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
 	return response;
 };
-function drop_missing_warning(wInstance) {
+function drop_missing_warning(wInstance, color) {
+	if (wInstance.settings.container.find('.missing-data-warning').is(':animated')){
+		setTimeout(drop_missing_warning(wInstance, color),5000);
+		return;
+	}
+
+	wInstance.settings.container.find('.missing-data-warning').css('color', color);
 	var currtop=	wInstance.settings.container.find('.missing-data-warning').css('top');
 	wInstance.settings.container.find('.missing-data-warning')
 	.animate( { top : '0px' } , {duration: 1000, easing: "linear"})
@@ -1408,7 +1414,7 @@ function stationBasedDataFetchAjax ( evt ) {
 			var mid = servermsg.results[0].mid;
 			var sid = servermsg.results[0].sid;
 
-			if (servermsg.results[0].station.missing) drop_missing_warning(wInstance);
+			if (servermsg.results[0].station.missing) drop_missing_warning(wInstance, aaasClimateViz.widgets[widgetIndex].markers[mid].stations[sid].marker.icon.fillColor);
 
 			var series = {
 				seriesMeta : {
