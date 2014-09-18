@@ -89,9 +89,11 @@ foreach ($date_ranges as $date_range) {
 		$data['results'][] = array(
 			'mid' => $mid,
 			'sid' => $sid,
-			'station' => array('dbid'=>$dbid,'data'=>array())
+			'station' => array('dbid'=>$dbid,'data'=>array(), 'missing'=>TRUE)
 		);
+		$recordcount=0;
 		while ($record = mysql_fetch_assoc($recordset)) {
+			$recordcount+=1;
 			$data_value = array();
 			foreach ($data_columns as $data_column) {
 				$date_data[$record['date_recorded']][$data_column] = $record[$data_column];
@@ -100,6 +102,7 @@ foreach ($date_ranges as $date_range) {
 			//$data['results'][key($data['results'])]['station']['data'][] = $data_value;
 			//$data['results'][key($data['results'])]['station']['data'][] = $date_data[$record['date_recorded']];
 		}
+		if ($recordcount == count($date_data)) { $data['results'][key($data['results'])]['station']['missing'] = FALSE;  }
 		$data['results'][key($data['results'])]['station']['data'] = array_values($date_data);
 	}
 }

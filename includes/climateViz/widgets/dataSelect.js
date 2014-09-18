@@ -32,12 +32,21 @@ var _colors = {
 };
 _colors.keys = Object.keys( _colors.colors );
 _colors.keys.sort( function ( a , b ) { return ( Math.random( ) < 0.5 ? -1 : 1 ); } );
-	var updateDatepickerOriginal = $.datepicker._updateDatepicker;
-	$.datepicker._updateDatepicker = function(){
+
+var updateDatepickerOriginal = $.datepicker._updateDatepicker;
+$.datepicker._updateDatepicker = function(){
   var response = updateDatepickerOriginal.apply(this,arguments);
   $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
 	return response;
 };
+function drop_missing_warning(wInstance) {
+	var currtop=	wInstance.settings.container.find('.missing-data-warning').css('top');
+	wInstance.settings.container.find('.missing-data-warning')
+	.animate( { top : '0px' } , {duration: 1000, easing: "linear"})
+	.delay(3000)
+	.animate( { top : currtop } , {duration: 1000, easing: "linear"});
+	console.log('RAN THIS BITCH', wInstance,currtop);
+}
 
 
 function dataSelect_initialize() {
@@ -1394,10 +1403,12 @@ function stationBasedDataFetchAjax ( evt ) {
 		data     : this.requestQueue[queryID].query ,
 		
 		success : function( servermsg ) {
-			console.log("stationBasedDataFetchAjax",servermsg);
+			console.log("stationBasedDataFetchAjax",evt,servermsg);
 			var widgetIndex = parseInt( servermsg.query.widgetIndex , 10 );
 			var mid = servermsg.results[0].mid;
 			var sid = servermsg.results[0].sid;
+
+			if (servermsg.results[0].station.missing) drop_missing_warning(wInstance);
 
 			var series = {
 				seriesMeta : {
