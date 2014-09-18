@@ -12,7 +12,9 @@
 
 .dataSelect-tooltip {font-size:8pt !important; display: none; width: 80px; background-color: #dbd3c1 !important; background-image: none !important; border: none !important; position: fixed !important;}
 .widget.dataSelect .widget-cover { height: 400px; width: 100%; background-color: transparent; display: none; z-index: 98; top: 0; left: 0; position: absolute;}
-.widget.dataSelect .missing-data-warning {background-color: white; color:red; z-index:97; top:-52px; position: absolute; left:50%; width: 300px; padding:5px; border: 1px grey; border-radius: 0 0 4px 0; border-style: none solid solid none; text-align: center; height: 40px;}
+//.widget.dataSelect .missing-data-warning {background-color: white; color:red; z-index:97; top:-52px; position: absolute; left:50%; width: 300px; padding:5px; border: 1px grey; border-radius: 0 0 4px 0; border-style: none solid solid none; text-align: center; height: 40px;}
+.widget.dataSelect .missing-data-warning {background-color: white; color:red; z-index:97; top:-52px; position: absolute; left:0; width: 316px; padding-left :5px; padding-right: 5px; border-bottom: 1px solid red; text-align: center; height: 40px;}
+
 .widget.dataSelect .calendar-cover { height: 30px; bottom: 3.5px; width: 100%; background-color: transparent; display: none; z-index: 100; left: 0; position: absolute; cursor:not-allowed;}
 .widget.dataSelect .map-canvas { height: 400px; width: 100%; }
 
