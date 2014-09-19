@@ -914,7 +914,8 @@ function dataSelect_reset () {
 	
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'reset' );
-	}});
+	}
+	});
 
 	wInstance._callback({'type':'reset'});
 }
@@ -1287,10 +1288,11 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 	wInstance.data = {};
 	
 	wInstance._callback({type:'data-load'});
+		$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(function(){
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'loading' );
 	}
-	
+		});
 	for ( mid in wInstance.markers ) {
 		// wInstance.data[mid] = { stations:{} };
 		for ( sid in wInstance.markers[mid].stations ) {
