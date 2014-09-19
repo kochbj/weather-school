@@ -286,4 +286,4 @@ function linechart_initialize () {
 	aaasClimateViz.widgetLibrary.linechart.load();
 }
 // $.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts/highcharts.js', linechart_initialize);
-$.getScript('http://code.highcharts.com/3/highcharts.src.js', linechart_initialize);
+$.getScript('http://code.highcharts.com/4/highcharts.src.js', linechart_initialize);
