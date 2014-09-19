@@ -163,7 +163,7 @@ var aaasClimateViz = aaasClimateViz || {
 	loadWidget : function ( widgetName , settings ) {
 		settings.instantiate_promise=$.Deferred();
 		if ( typeof( this.widgetLibrary[widgetName] ) == 'undefined' || typeof( settings.container ) == 'undefined' ) {
-			settings.instantiate_promise.fail();
+			settings.instantiate_promise.reject();
 			settings.instantiate_promise = settings.instantiate_promise.promise();
 			return false;
 		}

@@ -910,9 +910,12 @@ function dataSelect_reset () {
 	wInstance.map.date.find('.input input').val('');
 	wInstance.data = {};
 	if (typeof(wInstance.currAjax)!='undefined') {wInstance.currAjax.abort();}
+	$.when(apply($, wInstance.wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise}))).done(function(){
+	
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'reset' );
-	}
+	}});
+
 	wInstance._callback({'type':'reset'});
 }
 
