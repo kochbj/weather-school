@@ -48,7 +48,6 @@ function drop_missing_warning(wInstance, color) {
 	.animate( { top : '0px' } , {duration: 1000, easing: "linear"})
 	.delay(3000)
 	.animate( { top : '-52px' } , {duration: 1000, easing: "linear"});
-	console.log('RAN THIS BITCH', wInstance,color);
 }
 	);
 }
@@ -136,7 +135,8 @@ function dataSelect_instantiate(wInstance) {
 			pointInfoShow(e,wInstance);
 		}
 	}
-	google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation);
+	$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation));
+//google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation);
 	google.maps.event.addListener(wInstance.map, 'mousemove', wInstance.events.pointInfo);
 	google.maps.event.addListener(wInstance.map, 'mouseover', wInstance.events.pointInfoShow);
 	google.maps.event.addListener(wInstance.map, 'mouseout', wInstance.events.pointInfoHide);
@@ -910,13 +910,9 @@ function dataSelect_reset () {
 	wInstance.map.date.find('.input input').val('');
 	wInstance.data = {};
 	if (typeof(wInstance.currAjax)!='undefined') {wInstance.currAjax.abort();}
-	$.when(apply($, wInstance.wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise}))).done(function(){
-	
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'reset' );
 	}
-	});
-
 	wInstance._callback({'type':'reset'});
 }
 
@@ -1288,11 +1284,10 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 	wInstance.data = {};
 	
 	wInstance._callback({type:'data-load'});
-		$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(function(){
 	for ( i in wInstance.settings.displayWidgets ) {
 		wInstance.settings.displayWidgets[i].notify( 'loading' );
 	}
-		});
+	
 	for ( mid in wInstance.markers ) {
 		// wInstance.data[mid] = { stations:{} };
 		for ( sid in wInstance.markers[mid].stations ) {
