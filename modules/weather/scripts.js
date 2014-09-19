@@ -341,6 +341,7 @@ function cbTempLatNorthern ( evt ) {
 	var wInstance = this;
 	//console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
+	console.log('YES FIRST');
 	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	/*wInstance.settings.animate= function(evt){
 				//console.log(wInstance);
@@ -351,7 +352,7 @@ function cbTempLatNorthern ( evt ) {
 				//console.log("GOT HERE");
 	}*/
 	setTimeout( function ( ) {
-		$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));
+		$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done(function () { console.log('YES!'); $( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate); });
 		//$( '#slider-navigation .prev' ).one('click', function() { $( '#slider-navigation .next' ).off("click",TempLatNorthernCl1);});}
 	//else if (currentSlideIndex==1){
 	//	TempLatNorthern(evt ={wInstance:wInstance});
