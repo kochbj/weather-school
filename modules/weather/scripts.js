@@ -264,14 +264,15 @@ function cbHeightSunEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
+	$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done(function() {
+		//setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71, -74.01 ), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( "2004-01-01T17:00:00Z" ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z") );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 1000 );
+	//} , 1000 );
+	});
 	}
 }
 function cbDailyTempOld ( evt ) {
