@@ -2,7 +2,7 @@
 if (typeof(jQuery) == 'undefined') {
 	(function() {
 		var jq = document.createElement('script'); jq.type = 'text/javascript'; jq.async = true;
-		jq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js';
+		jq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js';
 		var jqref = document.getElementsByTagName('script')[0]; jqref.parentNode.insertBefore(jq, jqref);
 		
 		// http://topsecretproject.finitestatemachine.com/2009/09/how-to-load-javascript-and-css-dynamically-with-jquery/
@@ -161,7 +161,10 @@ var aaasClimateViz = aaasClimateViz || {
 	},
 	
 	loadWidget : function ( widgetName , settings ) {
+		settings.instantiate_promise=$.Deferred();
 		if ( typeof( this.widgetLibrary[widgetName] ) == 'undefined' || typeof( settings.container ) == 'undefined' ) {
+			settings.instantiate_promise.fail();
+			settings.instantiate_promise = settings.instantiate_promise.promise();
 			return false;
 		}
 		if ( typeof( settings.container.widget ) == 'undefined' ) {
@@ -215,6 +218,8 @@ var aaasClimateViz = aaasClimateViz || {
 				this.widgetLibrary[widgetName].load();
 			}
 		}
+		settings.instantiate_promise.resolve();
+		settings.instantiate_promise = settings.instantiate_promise.promise();
 		return settings.container.widget;
 	}
 };

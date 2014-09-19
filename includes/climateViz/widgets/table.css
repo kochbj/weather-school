@@ -35,7 +35,7 @@
 }
 
 .widget.output-table > table col.selected-for-graph-y {
-    background-color: #A6BACE;
+    background-color: #A2B3E4;
 }
 .widget.output-table > table th.selected-for-graph-x {
     background-color: #CC0000;
@@ -43,7 +43,7 @@
 }
 
 .widget.output-table > table th.selected-for-graph-y {
-    background-color: #4d759e;
+    background-color: #1640BC;
     color: white;
 }
 

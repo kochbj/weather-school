@@ -351,7 +351,7 @@ function cbTempLatNorthern ( evt ) {
 				//console.log("GOT HERE");
 	}*/
 	setTimeout( function ( ) {
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
+		$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));
 		//$( '#slider-navigation .prev' ).one('click', function() { $( '#slider-navigation .next' ).off("click",TempLatNorthernCl1);});}
 	//else if (currentSlideIndex==1){
 	//	TempLatNorthern(evt ={wInstance:wInstance});
@@ -361,7 +361,7 @@ function cbTempLatNorthern ( evt ) {
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2001 , 0 , 0 ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2001 , 11 , 30 ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();*/
-	} , 1000 );
+	} , 1 );
 	}
 }
 

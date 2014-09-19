@@ -74,12 +74,12 @@ function createChart (wInstance) {
 			}
 			console.log(yMin,yMax);
 			wInstance.chart.tooltip.formatter = function () {
-				if ('format' in wInstance.data[series].dataMeta[dataKeys[0]] && typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'object') {
+				if (typeof(wInstance.data[series].dataMeta[dataKeys[0]]) != 'undefined' && 'format' in wInstance.data[series].dataMeta[dataKeys[0]] && typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'object') {
 					xVal = wInstance.data[series].dataMeta[dataKeys[0]].format( (this.series.xAxis.options.type=='datetime'?new Date(this.x):this.x) );
 				} else {
 					xVal = this.x;
 				}
-				if ('format' in wInstance.data[series].dataMeta[dataKeys[1]] && typeof(wInstance.data[series].dataMeta[dataKeys[1]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[1]].format) == 'object') {
+				if (typeof(wInstance.data[series].dataMeta[dataKeys[1]]) != 'undefined' && 'format' in wInstance.data[series].dataMeta[dataKeys[1]] && typeof(wInstance.data[series].dataMeta[dataKeys[1]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[1]].format) == 'object') {
 					yVal = wInstance.data[series].dataMeta[dataKeys[1]].format( (this.series.yAxis.options.type=='datetime'?new Date(this.y):this.y) );
 				} else {
 					yVal = this.y;
@@ -195,8 +195,8 @@ function linechart_instantiate(wInstance) {
 			borderWidth    : 0 ,
 			enabled        : true ,
 			floating       : true ,
-			itemCheckboxStyle : { marginLeft : '-115px' } ,
-			itemHiddenStyle: { color: '#274b6d' } ,
+			itemCheckboxStyle : { marginLeft : '-130px', top: '173px'  } ,
+			//itemHiddenStyle: { color: '#274b6d' } ,
 			//padding        : 4 ,
 			symbolWidth    : 0 ,
 			symbolPadding  : 0 ,
@@ -213,14 +213,14 @@ function linechart_instantiate(wInstance) {
 					states :{ hover: { enabled : true } }
 				} ,
 				showInLegend : false ,
-				states : { hover : { lineWidth : 1 } }
+				states : { hover : { lineWidth : 1, halo: null  } }
 			} 
 		},
 		series : [],
 		title : { text : null },
-		tooltip: { style : { padding : '6px' } },
+		tooltip: { style : { padding : '6px' }, shape: 'square', borderRadius: 8},
 		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
-		yAxis : { title : { } }
+		yAxis : { title : { style:{color:'#1640BC'} } }
 	}
 	wInstance.chart=$.extend( true, {}, wInstance.defaultChart);
 	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
