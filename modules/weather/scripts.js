@@ -566,8 +566,8 @@ var widgetAnimations = {
 var slideInit = {
 	'locationExplorer-tryit' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'location-stats' },
@@ -590,8 +590,8 @@ var slideInit = {
 	} ,
 	'daily-temperature-example' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -654,15 +654,16 @@ var slideInit = {
 		is_initialized : false ,
 		initialize : function ( ) {
 		if (!(slideInit['daily-temperature-example'].is_initialized)) {
-			slideInit['daily-temperature-example'].initialize();
+			var widgets =slideInit['daily-temperature-example'].initialize();
 			slideInit['daily-temperature-example'].is_initialized=true;
 		}
+		return widgets;
 		}
 	} ,
 	'annual-temperature-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -685,8 +686,8 @@ var slideInit = {
 	} ,
 	'temperature-lat-northern' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -721,8 +722,8 @@ var slideInit = {
 	} ,
 	'temperature-lat-southern' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -755,8 +756,8 @@ var slideInit = {
 	} ,
 	'temperature-lat-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -779,8 +780,8 @@ var slideInit = {
 	} ,
 	'temperature-elevation-example' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -816,8 +817,8 @@ var slideInit = {
 	} ,
 	'temperature-elevation-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -841,8 +842,8 @@ var slideInit = {
 	} ,
 	'temperature-water-example' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -878,8 +879,8 @@ var slideInit = {
 	} ,
 	'temperature-water-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'gsod' },
@@ -903,8 +904,8 @@ var slideInit = {
 	} ,
 	'height-sun-example' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunAngle'] },
@@ -937,8 +938,8 @@ var slideInit = {
 	},
 	'height-sun-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunAngle'] },
@@ -961,8 +962,8 @@ var slideInit = {
 	},
 	'height-sun-air-temperature-example' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
@@ -1013,8 +1014,8 @@ var slideInit = {
 	},
 	'height-sun-air-temperature-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
@@ -1047,8 +1048,8 @@ var slideInit = {
 	},
 	'daylight-example1' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
@@ -1084,8 +1085,8 @@ var slideInit = {
 	} ,
 	'daylight-example2' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
@@ -1118,8 +1119,8 @@ var slideInit = {
 	} ,
 	'daylight-example3' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
@@ -1152,8 +1153,8 @@ var slideInit = {
 	} ,
 	'daylight-example4' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours'] },
@@ -1186,8 +1187,8 @@ var slideInit = {
 	} ,
 	'daylight-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'sunangle' , fields:['date','sunHours',] },
@@ -1210,8 +1211,8 @@ var slideInit = {
 	} ,
 	'daylight-air-temperature-example' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
@@ -1262,8 +1263,8 @@ var slideInit = {
 	},
 	'daylight-air-temperature-explore' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
@@ -1296,8 +1297,8 @@ var slideInit = {
 	},
 	'variable-relationship-explorer' : {
 		is_initialized : false ,
-		initialize : function ( ) {
-			aaasClimateViz.loadWidget(
+		initialize : function ( ) { 
+			return aaasClimateViz.loadWidget(
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },

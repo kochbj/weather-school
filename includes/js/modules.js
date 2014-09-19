@@ -42,11 +42,8 @@ function ctrlSlider_cb ( psobj ) {
 	/* Initialize the slide if necessary. */
 	$('#slider-navigation .next').off('click.animate');
 	if ( slideInit.hasOwnProperty( id ) && !slideInit[id].is_initialized ) {
-		slideInit[id].initialize();
-		psobj.$currentSlide.find('.plusslider-pagination li').on('click.animate', function(evt){
-			$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
-			$('#slider-navigation .next').trigger('click.animate');
-			});
+		var wInstance = slideInit[id].initialize();
+		console.log(wInstance);
 		slideInit[id].is_initialized = true;
 	}
 	else if (slideInit.hasOwnProperty( id ) && typeof(aaasClimateViz.widgets[aaasClimateViz.widgetLookup[location.hash+'-ds']])!='undefined' && typeof(aaasClimateViz.widgets[aaasClimateViz.widgetLookup[location.hash+'-ds']].settings.animate)!='undefined'){
@@ -134,7 +131,17 @@ function ctrlSlider_cb ( psobj ) {
 
 	/* keep user from hitting next before page load */
 	$( '#slider-navigation .next' ).off('click',nextClickevt);
-	$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
+	
+	if (typeof(wInstance)!='undefined'){
+		$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(function () {	
+			psobj.$currentSlide.find('.plusslider-pagination li').on('click.animate', function(evt){
+					$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
+					$('#slider-navigation .next').trigger('click.animate');
+					});
+			$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
+		});
+	}
+	else $( '#slider-navigation .next' ).onFirst('click',nextClickevt);
 	$( '#slider-navigation .prev' ).off('click',prevClickevt);
 	$( '#slider-navigation .prev' ).on('click',prevClickevt);
 	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
@@ -163,7 +170,7 @@ function locationUpdate ( ) {
 	);
 	$( '.you-are-here .screen-num' ).html( ctrlSlider.currentSlideIndex + 1 );
 	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
-	$( '#slider-navigation .next' ).off('click',nextClickevt);
+	$( '#slider-navigation .next' ).off('click',nextClickevt);	
 	$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
 	$( '#slider-navigation .prev' ).off('click',prevClickevt);
 	$( '#slider-navigation .prev' ).on('click',prevClickevt);
