@@ -163,16 +163,13 @@ function cbDaylightEx4 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 0.15 , -78.35 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1 ]) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 12 , 31 ]) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done(function () {
+			widgetAnimations.placemarkers(wInstance, [ 0.15,-78.35 ],null, "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-		} , 1000 );
+			});
 	}
 }
+
 function cbHeightSunAirTempEx (evt) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
 	if ( !evt ) { evt = { type : null }; }
