@@ -128,7 +128,7 @@ function ctrlSlider_cb ( psobj ) {
 	/* keep user from hitting next before page load */
 	$( '#slider-navigation .next' ).off('click',nextClickevt);
 	if (typeof(wInstance)!='undefined'){
-		$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(function () {	
+		//$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(function () {	
 			if (typeof(wInstance.settings.animate!='undefined')){
 				$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
 				$( '#slider-navigation .next' ).on('click.animate', wInstance.settings.animate);
@@ -138,7 +138,7 @@ function ctrlSlider_cb ( psobj ) {
 					$('#slider-navigation .next').trigger('click.animate');
 					});	
 		$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
-		});
+		//});
 	}
 	else $( '#slider-navigation .next' ).onFirst('click',nextClickevt);
 	$( '#slider-navigation .prev' ).off('click',prevClickevt);
