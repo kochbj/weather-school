@@ -209,10 +209,10 @@ function linechart_instantiate(wInstance) {
 				lineWidth : 0 ,
 				marker : {
 					enabled : true,
-					states :{ hover: { enabled : true } }
+					states :{ hover: { enabled : true, radiusPlus: null  } }
 				} ,
 				showInLegend : false ,
-				states : { hover : { lineWidth : 1, halo: null  } }
+				states : { hover : { lineWidth : 1, halo: null } }
 			} 
 		},
 		series : [],
