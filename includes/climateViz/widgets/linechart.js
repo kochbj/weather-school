@@ -218,7 +218,7 @@ function linechart_instantiate(wInstance) {
 		},
 		series : [],
 		title : { text : null },
-		tooltip: { style : { padding : '6px' }, shape: 'square', animation: false },
+		//tooltip: { style : { padding : '6px' }, shape: 'square', animation: false },
 		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
 		yAxis : { title : { style:{color:'#1640BC'} } }
 	}
