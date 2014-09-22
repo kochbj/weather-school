@@ -24,10 +24,10 @@
 }
 
 .widget.output-table > table .header {
-    background-color: #6699cc;
+    background-color: wheat;
 }
 .widget.output-table > table .series-header {
-    background-color: #b0daf0;
+    background-color: #dbd3c1;
 }
 
 .widget.output-table > table col.selected-for-graph-x {
@@ -59,7 +59,7 @@
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
-    min-height: 200px;
+  //  min-height: 200px;
 }
 
 .widget.output-table .error {
