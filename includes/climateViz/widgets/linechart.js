@@ -73,7 +73,7 @@ function createChart (wInstance) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = null;
 			}
 			console.log(yMin,yMax);
-			wInstance.chart.tooltip.formatter = function () {
+			/*wInstance.chart.tooltip.formatter = function () {
 				if (typeof(wInstance.data[series].dataMeta[dataKeys[0]]) != 'undefined' && 'format' in wInstance.data[series].dataMeta[dataKeys[0]] && typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'object') {
 					xVal = wInstance.data[series].dataMeta[dataKeys[0]].format( (this.series.xAxis.options.type=='datetime'?new Date(this.x):this.x) );
 				} else {
@@ -91,7 +91,7 @@ function createChart (wInstance) {
 						this.series.xAxis.options.title.text + ': ' + xVal + '<br>' +
 						this.series.yAxis.options.title.text + ': ' + yVal;
 				}
-			};
+			};*/
 		}
 		wInstance.chart.series.push({name : seriesName , data : dataSeries});
 		if (wInstance.chart.chart.type == 'scatter' && dataSeries.length > 1) {
@@ -218,7 +218,7 @@ function linechart_instantiate(wInstance) {
 		},
 		series : [],
 		title : { text : null },
-		tooltip: { style : { padding : '6px' }, shape: 'square', borderRadius: 8},
+		tooltip: { style : { padding : '6px' }, shape: 'square', },
 		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
 		yAxis : { title : { style:{color:'#1640BC'} } }
 	}
