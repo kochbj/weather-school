@@ -47,47 +47,116 @@ function elevator( evt ) {
 	});
 	}
 }
+
+var widgetAnimations = {
+	placemarkers: function(wInstance,marker1,marker2,date1,date2) {
+		if (wInstance.settings.container.hasClass('clicked')) return;
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
+		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
+		wInstance.map.date.ui.find('.ui-state-active').click();
+		wInstance.settings.container.addClass('clicked');
+		},
+	placetablemarker: function(wInstance,marker,year) {
+		if (wInstance.settings.container.hasClass('clicked')) return;
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
+		var dateVals=[];
+		wInstance.map.date.data('hidden',false);
+		for (i=1; i<13; i++) dateVals.push(new Date( year.toString()+"-"+"00".substring(0, 2-i.toString().length)+i.toString()+"-15T17:00:00Z" ));
+		wInstance.map.date.data( 'value', dateVals);
+ 		wInstance.map.date.ui.find('.ui-state-active').click();
+		wInstance.settings.container.addClass('clicked');
+		},
+	placestations: function(wInstance,marker1,stations,date1,date2) {
+		if (wInstance.settings.container.hasClass('clicked')) return;
+		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
+		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
+		wInstance.map.date.ui.find('.ui-state-active').click();
+		wInstance.settings.container.addClass('clicked');
+		},
+	swinggraph: function(wInstance) {
+		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
+				mapCenter = wInstance.map.getCenter();
+		wInstance.settings.container
+			.css( { 'width':'auto' } )
+			.animate(
+				{ right:'64%' } ,
+				1000 ,
+				function ( ) {
+					google.maps.event.trigger(wInstance.map, 'resize');
+				}
+			)
+			.find( '.widget.dataSelect' ).addClass( 'width-200' );
+		wInstance.settings.displayWidgets[0].settings.container
+			.show()
+			.animate( { left:'36%' } , 1000 , 'swing',function() {
+					wInstance.map.setCenter(mapCenter);
+			});
+		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
+		},
+	swingtable: function(wInstance) {
+		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
+				mapCenter = wInstance.map.getCenter();
+		wInstance.settings.container
+			.css( { 'width':'auto' } )
+			.animate(
+				{ right:'64%' } ,
+				1000 ,
+				function ( ) {
+					google.maps.event.trigger(wInstance.map, 'resize');
+				}
+			)
+			.find( '.widget.dataSelect' ).addClass( 'width-200' );
+		wInstance.settings.displayWidgets[0].settings.container
+			.show()
+			.animate( { left:'36%' } , 1000 , 'swing',function() {
+					wInstance.map.setCenter(mapCenter);
+			});
+		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
+		
+		},
+	elevatetable: function(wInstance) {
+		//THIS ONE IS CALLED ON THE TABLE NOT THE DATASELECT
+		if (wInstance.settings.container.hasClass('elevated')) return;
+		wInstance.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
+		wInstance.settings.container
+			.animate( { height:'50%' } , {step: function(now, fx){
+			wInstance.settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
+			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
+			}}, 1000, "linear", function() {wInstance.settings.container.children()
+			.css("overflow","auto")
+			.css("overflow","hidden");});
+		wInstance.settings.container.addClass('elevated');
+	}
+}
+
 function cbDaylightEx1 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			/*google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap: true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( 2004 , 0 , 0 ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( 2004 , 11 , 30 ) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();*/
-		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);	
-		} , 1000 );
+		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));	
 	}
 }
 function cbDaylightEx2 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.81 , -73.96 ), staticmap:true } );
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 44.70 , -73.45 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1] ) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z" ) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done(function () {
+			widgetAnimations.placemarkers(wInstance, [40.81,-73.96], [ 44.70, -73.96 ], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-		} , 1000 );
+			});
 	}
 }
 function cbDaylightEx3 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		setTimeout( function ( ) {
-			google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 5.07 , -74.53 ), staticmap:true } );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1 ]) );
-			wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 12 , 31 ]) );
- 			wInstance.map.date.ui.find('.ui-state-active').click();
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done(function () {
+			widgetAnimations.placemarkers(wInstance, [ 5.07,-74.53 ],null, "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-		} , 1000 );
+			});
 	}
 }
 function cbDaylightEx4 ( evt ) {
@@ -128,55 +197,6 @@ function cbDaylightAirTempEx (evt) {
 	setTimeout( function ( ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	} , 1000 );
-	}
-}
-function cbRelationSunEnergy ( evt ) {
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evtType[0] == 'data' && ( evtType[1] == 'load' || evtType[1] == 'ready' ) && this.settings.displayStatus == 'map' ) {
-		// FIXME: add a resize method to the wInstance so that the resizing can be done there, passing just the width, height, and delay. Let the wInstance take care of the map.
-		mapCenter = this.map.getCenter();
-		this.settings.container
-			.css( { 'border-right':'3px groove gray' , 'width':'auto' } )
-			.animate(
-				{ right:'63%' } ,
-				1000 ,
-				function ( ) {
-					google.maps.event.trigger(wInstance.map, 'resize');
-					wInstance.map.setCenter(mapCenter);
-				}
-			)
-			.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		this.settings.displayWidgets[0].settings.container
-			.show()
-			.css( { 'width':'auto' } )
-			.animate(
-				{ left:'37%' } ,
-				1000 ,
-				'swing' ,
-				function ( ) {
-					if ( wInstance.settings.displayWidgets[0].highChart ) {
-						wInstance.settings.displayWidgets[0].highChart.setSize( $( this ).width( ) , $( this ).height( ) );
-					}
-				}
-			);
-		this.settings.displayWidgets[0].settings.displayWidgets[0].settings.container
-			.show()
-			.css( { 'width':'auto' } )
-			.animate(
-				{ left:'37%' } ,
-				1000 ,
-				'swing' ,
-				function ( ) {
-					if ( wInstance.settings.displayWidgets[0].highChart ) {
-						wInstance.settings.displayWidgets[0].highChart.setSize( $( this ).width( ) , $( this ).height( ) );
-					}
-				}
-			);
-		this.settings.displayStatus = 'vis';
-	} else if ( evtType == 'initialize' ) {
-		this.settings.displayStatus = 'map';
 	}
 }
 
@@ -264,76 +284,17 @@ function cbHeightSunEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done(function() {
-		//setTimeout( function ( ) {
+		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+		setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71, -74.01 ), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( "2004-01-01T17:00:00Z" ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z") );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	//} , 1000 );
+	} , 200 );
 	});
 	}
 }
-function cbDailyTempOld ( evt ) {
-	return;
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	var instrSlider = this.settings.container.parents( '.child' ).find( '.instructions .slider' )[0].sliderObj;
-	if ( evtType[0] == 'user' && [ 'select' , 'remove' ].indexOf( evtType[1] ) !== -1 ) {
-		var instrSlider = this.settings.container.parents( '.child' ).find( '.instructions .slider' )[0].sliderObj;
-		var hasMarker = ( ( markerKeys = Object.keys( this.markers ) ).length > 0 ? true : false );
-		var hasDate = ( !this.map.date || !this.map.date.data( 'value' ) ? false : true );
-		if ( !hasMarker ) {
-			instrSlider.toSlide( 0 );
-		} else if ( hasMarker && !hasDate ) {
-			instrSlider.toSlide( 1 );
-		}
-	} else if ( evtType[0] == 'data' && evtType[1] == 'ready' && instrSlider.currentSlideIndex < 2 ) {
-		instrSlider.toSlide( 2 );
-		// FIXME: should we disable this callback here, we don't need to go back to the previous slides at this point?
-	} else if ( evtType[0] == 'initialize' ) {
-		instrSlider.options.currentTimeout = 0;
-		instrSlider.options.afterSlide = function ( psobj ) {
-			if ( [6,7].indexOf( psobj.currentSlideIndex ) !== -1 ) {
-				if ( psobj.options.currentTimeout == 0 ) {
-					psobj.options.currentTimeout = setTimeout(
-						function ( ) {
-							psobj.options.rectHL = wInstance.settings.displayWidgets[0].highChart.renderer.rect(65, 135, 10, 10, 1).attr( { fill:'lightblue' , zIndex:3 , opacity:.4 } ).add( );
-							psobj.options.rectHL.animate( { width:165 , height:165 } , { duration:2000 } );
-						} ,
-						2500
-					);
-				}
-			} else if ( psobj.options.currentTimeout != 0 ) {
-				clearTimeout( psobj.options.currentTimeout );
-				psobj.options.currentTimeout = 0;
-				if ( typeof( psobj.options.rectHL ) == 'object' ) {
-					psobj.options.rectHL.destroy();
-				}
-			}
-			if ( [8,9,10].indexOf( psobj.currentSlideIndex ) !== -1 ) {
-				wInstance.settings.displayWidgets[0].highChart.yAxis[0].setExtremes( 20 , 80 );
-			} else {
-				wInstance.settings.displayWidgets[0].highChart.xAxis[0].setExtremes();
-				wInstance.settings.displayWidgets[0].highChart.yAxis[0].setExtremes();
-			}
-		}
-	} else {
-		//if ( instrSlider.currentSlideIndex == 2 ) {
-		//	instrSlider.toSlide( 3 );
-		//} else if ( instrSlider.currentSlideIndex == 3 ) {
-		//	this.settings.maxPoints = 2;
-		//	instrSlider.toSlide( 4 );
-		//} else if ( !instrSlider.currentSlideIndex == 4 ) {
-		//	this.settings.maxPoints = 2;
-		//	instrSlider.toSlide( 4 );
-		//}
-	}
-}
-
 
 function cbTempLatNorthern ( evt ) {
 	// Since we rely on the evt object it needs to be instantiated if it does not exist
@@ -403,140 +364,6 @@ function cbLargeBodiesWaterExample ( evt ) {
 	}
 }	
 
-function cbTempLatitude ( evt ) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	var markerKeys;
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	var instrSlider = this.settings.container.parents( '.child' ).find( '.instructions .slider' )[0].sliderObj;
-	var hasMarker = ( ( markerKeys = Object.keys( this.markers ) ).length > 0 ? true : false );
-	var hasDate = ( !this.map.date || !this.map.date.data( 'value' ) ? false : true );
-	if ( evtType[0] == 'user' && [ 'select' , 'remove' ].indexOf( evtType[1] ) !== -1 ) {
-		if ( !hasMarker ) {
-			instrSlider.toSlide( 1 );
-		} else if ( hasMarker && !hasDate ) {
-			instrSlider.toSlide( 2 );
-		}
-	} else if ( evtType[0] == 'data' && evtType[1] == 'ready' && instrSlider.currentSlideIndex < 3 ) {
-		instrSlider.toSlide( 3 );
-		// FIXME: should we disable this callback here, we don't need to go back to the previous slides at this point?
-	} else {
-		//if ( instrSlider.currentSlideIndex == 2 ) {
-		//	instrSlider.toSlide( 3 );
-		//} else if ( instrSlider.currentSlideIndex == 3 ) {
-		//	this.settings.maxPoints = 2;
-		//	instrSlider.toSlide( 4 );
-		//} else if ( !instrSlider.currentSlideIndex == 4 ) {
-		//	this.settings.maxPoints = 2;
-		//	instrSlider.toSlide( 4 );
-		//}
-	}
-	if ( typeof(markerKeys) !== 'undefined' && markerKeys.length == 2) {
-		var colorText = [];
-		for (colorKey in _colors.colors ) {
-			if ( _colors.colors[colorKey] == this.markers[ markerKeys[0] ].color ) {
-				colorText.push( _colors.legend[colorKey] );
-			}
-			if ( _colors.colors[colorKey] == this.markers[ markerKeys[1] ].color ) {
-				colorText.push( _colors.legend[colorKey] );
-			}
-		}
-		if ( this.markers[ markerKeys[0] ].userCoords.lat( ) > this.markers[ markerKeys[1] ].userCoords.lat( ) ) {
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( colorText[0] );
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( colorText[1] );
-		} else {
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( colorText[1] );
-			this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( colorText[0] );
-		}
-	} else {
-		this.settings.container.parents( '.child' ).find( '.instructions .lat-high' ).html( 'higher' );
-		this.settings.container.parents( '.child' ).find( '.instructions .lat-low' ).html( 'lower' );
-	}
-}
-var widgetAnimations = {
-	placemarkers: function(wInstance,marker1,marker2,date1,date2) {
-		if (wInstance.settings.container.hasClass('clicked')) return;
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), staticmap: true } );
-		if (marker2 != null) google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker2[0],marker2[1]), staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
-		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.settings.container.addClass('clicked');
-		},
-	placetablemarker: function(wInstance,marker,year) {
-		if (wInstance.settings.container.hasClass('clicked')) return;
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
-		var dateVals=[];
-		wInstance.map.date.data('hidden',false);
-		for (i=1; i<13; i++) dateVals.push(new Date( year.toString()+"-"+"00".substring(0, 2-i.toString().length)+i.toString()+"-15T17:00:00Z" ));
-		wInstance.map.date.data( 'value', dateVals);
- 		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.settings.container.addClass('clicked');
-		},
-	placestations: function(wInstance,marker1,stations,date1,date2) {
-		if (wInstance.settings.container.hasClass('clicked')) return;
-		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
-		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
-		wInstance.map.date.ui.find('.ui-state-active').click();
-		wInstance.settings.container.addClass('clicked');
-		},
-	swinggraph: function(wInstance) {
-		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
-				mapCenter = wInstance.map.getCenter();
-		wInstance.settings.container
-			.css( { 'width':'auto' } )
-			.animate(
-				{ right:'64%' } ,
-				1000 ,
-				function ( ) {
-					google.maps.event.trigger(wInstance.map, 'resize');
-				}
-			)
-			.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		wInstance.settings.displayWidgets[0].settings.container
-			.show()
-			.animate( { left:'36%' } , 1000 , 'swing',function() {
-					wInstance.map.setCenter(mapCenter);
-			});
-		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
-		},
-	swingtable: function(wInstance) {
-		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
-				mapCenter = wInstance.map.getCenter();
-		wInstance.settings.container
-			.css( { 'width':'auto' } )
-			.animate(
-				{ right:'64%' } ,
-				1000 ,
-				function ( ) {
-					google.maps.event.trigger(wInstance.map, 'resize');
-				}
-			)
-			.find( '.widget.dataSelect' ).addClass( 'width-200' );
-		wInstance.settings.displayWidgets[0].settings.container
-			.show()
-			.animate( { left:'36%' } , 1000 , 'swing',function() {
-					wInstance.map.setCenter(mapCenter);
-			});
-		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
-		
-		},
-	elevatetable: function(wInstance) {
-		//THIS ONE IS CALLED ON THE TABLE NOT THE DATASELECT
-		if (wInstance.settings.container.hasClass('elevated')) return;
-		wInstance.settings.displayWidgets[0].settings.container.css("border-top","1px dashed grey");
-		wInstance.settings.container
-			.animate( { height:'50%' } , {step: function(now, fx){
-			wInstance.settings.displayWidgets[0].settings.container.css("bottom", -1*(now-50)+"%");
-			//wInstance.settings.displayWidgets[0].settings.displayWidgets[0].highChart.setSize( 50 , 100);
-			}}, 1000, "linear", function() {wInstance.settings.container.children()
-			.css("overflow","auto")
-			.css("overflow","hidden");});
-		wInstance.settings.container.addClass('elevated');
-}
-}
 /**
  * Widget initialization object.
  *

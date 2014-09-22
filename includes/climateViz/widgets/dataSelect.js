@@ -67,6 +67,15 @@ function dataSelect_initialize() {
 }
 
 function dataSelect_instantiate(wInstance) {
+	var widgetFamily=[];
+	function getChildWidget (wInstance,widgetFamily) {
+		widgetFamily.push(wInstance);
+		if (typeof(wInstance.settings.displayWidgets)=='undefined' || wInstance.settings.displayWidgets.length==0 )	return;
+		for (i in wInstance.settings.displayWidgets) getChildWidget(wInstance.settings.displayWidgets[i],widgetFamily);
+	}
+	getChildWidget(wInstance,widgetFamily);
+	wInstance.settings.widgetFamily=widgetFamily;
+
 	var myLatlng = new google.maps.LatLng(38,-95);
 	pointInfo({latLng:myLatlng},wInstance);
 	var myOptions = {
@@ -135,12 +144,12 @@ function dataSelect_instantiate(wInstance) {
 			pointInfoShow(e,wInstance);
 		}
 	}
-	$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation));
-//google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation);
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+	google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation)
 	google.maps.event.addListener(wInstance.map, 'mousemove', wInstance.events.pointInfo);
 	google.maps.event.addListener(wInstance.map, 'mouseover', wInstance.events.pointInfoShow);
 	google.maps.event.addListener(wInstance.map, 'mouseout', wInstance.events.pointInfoHide);
-	
+	});
 	wInstance.markers = {};
 	wInstance.bounds = new google.maps.LatLngBounds();
 

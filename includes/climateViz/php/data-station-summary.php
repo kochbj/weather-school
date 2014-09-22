@@ -82,7 +82,9 @@ $data['results'][] = array(
 		'temp_avg'   => $temp_avg ,
 		'temp_max'   => $temp_max ,
 		'temp_min'   => $temp_min ,
-		'avg_energy' => $avg_energy
+		'avg_energy' => $avg_energy,
+		'gdistance' => $stations_gsod[$station_gsod]['distance'],
+		'ndistance' => $stations_nsrdb
 	)
 );
 
