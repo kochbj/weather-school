@@ -73,7 +73,7 @@ function createChart (wInstance) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = null;
 			}
 			console.log(yMin,yMax);
-			wInstance.chart.tooltip.formatter = function () {
+			/*wInstance.chart.tooltip.formatter = function () {
 				if (typeof(wInstance.data[series].dataMeta[dataKeys[0]]) != 'undefined' && 'format' in wInstance.data[series].dataMeta[dataKeys[0]] && typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'function' || typeof(wInstance.data[series].dataMeta[dataKeys[0]].format) == 'object') {
 					xVal = wInstance.data[series].dataMeta[dataKeys[0]].format( (this.series.xAxis.options.type=='datetime'?new Date(this.x):this.x) );
 				} else {
@@ -91,7 +91,7 @@ function createChart (wInstance) {
 						this.series.xAxis.options.title.text + ': ' + xVal + '<br>' +
 						this.series.yAxis.options.title.text + ': ' + yVal;
 				}
-			};
+			};*/
 		}
 		wInstance.chart.series.push({name : seriesName , data : dataSeries});
 		if (wInstance.chart.chart.type == 'scatter' && dataSeries.length > 1) {
@@ -223,14 +223,14 @@ function linechart_instantiate(wInstance) {
 		yAxis : { title : { style:{color:'#1640BC'} } }
 	}
 	wInstance.chart=$.extend( true, {}, wInstance.defaultChart);
-	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
+	/*if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
 		wInstance.chart.tooltip.positioner = function ( labelWidth , labelHeight , point ) {
 			return {
 				x : 4 ,
 				y : this.chart.chartHeight - labelHeight - 2
 			};
 		}
-	}
+	}*/
 	Highcharts.setOptions( {
 		lang : {
 			resetZoom : 'Reset View'
