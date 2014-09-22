@@ -223,14 +223,14 @@ function linechart_instantiate(wInstance) {
 		yAxis : { title : { style:{color:'#1640BC'} } }
 	}
 	wInstance.chart=$.extend( true, {}, wInstance.defaultChart);
-	/*if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
+	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
 		wInstance.chart.tooltip.positioner = function ( labelWidth , labelHeight , point ) {
 			return {
 				x : 4 ,
 				y : this.chart.chartHeight - labelHeight - 2
 			};
 		}
-	}*/
+	}
 	Highcharts.setOptions( {
 		lang : {
 			resetZoom : 'Reset View'
