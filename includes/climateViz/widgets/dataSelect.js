@@ -1139,7 +1139,7 @@ function refreshStations ( evt ) {
 			if (!canSelectStation) {
 				wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.slice(0,-6)+'<div class="location">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div></div>';
 		 		wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
-				setTimeout(function() {wInstance.markers[servermsg[0].mid].infoWindow.close();}, 2000);
+				//setTimeout(function() {wInstance.markers[servermsg[0].mid].infoWindow.close();}, 2000);
 			}
 			for ( i in wInstance.markers[servermsg[0].mid].stations ) {
 				wInstance.markers[servermsg[0].mid].stations[i].marker = new google.maps.Marker( {
