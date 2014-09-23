@@ -663,7 +663,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
 	<h2>Height of the Sun in the Sky</h2>
 	<div class="intro-text">
-	<p>In the last three modules you saw that there is a relationship between the temperature at a place and its latitude, elevation, and proximity to a large body of water. In the next two modules you will see that how high the sun is in the sky at a place changes throughout the year and that this is something else that is related to the temperature at that place.</p>
+	<p>In the last three modules you saw that there is a relationship between the temperature at a place and its latitude, elevation, and proximity to a large body of water. In the next two modules you will first see that how high the sun is in the sky at a place changes throughout the year. You will then see that the height of the sun in the sky is something else that is related to the temperature at that place.</p>
 	</div>	
 </div>
 <div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Height of the Sun in the Sky over a One-Year Period" data-slide-parent-id="height-sun-intro">
@@ -683,7 +683,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>The graph shows the <span class="tooltip" title="Maximum height of the sun in the sky is the highest the sun gets on a given day. It is measured as an angle, which can range from zero degrees to 90 degrees.">maximum height of the sun in the sky</span> in New York City for each day of the year.</p>
 			</div>
 			<div>
-				<p>What you see in this graph is the same pattern of increasing and then decreasing that you saw for the graphs of temperature rising and falling throughout the year. What you don't see is the jagged pattern of day-to-day changes that you saw for temperature. </p>
+				<p>What you see in this graph is the same pattern of increasing and then decreasing shape that you saw for the graphs of temperature rising and falling throughout the year. What you don't see is the jagged pattern of day-to-day changes that you saw for temperature. </p>
 			</div>
 			<div>
 				<p>How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
@@ -742,7 +742,9 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div><p>Are temperature and the height of the sun in the sky at a given place related? This activity looks at average daily temperatures and the height of the sun in the sky for 12 specific dates in Chicago, Illinois to find out. </p></div>
-			<div><p>In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun. In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
+			<div><p>In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun.</p>
+			</div>
+			<div><p>In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
 			</div>
 			<div>Click first on the "Maximum height of sun in sky," and then "Average air temperature" columns to highlight them. The Maximum height of the sun in the sky column should be highlighted red and the average air temperature column should be highlighted blue.</p></div>
