@@ -837,7 +837,7 @@ At the completion of each module you can check your understanding of the feature
 			<div><p>Now we are going to see what happen to the hours of daylight when we look at a place that is north of New York City. Plattsburgh, New York, which is about 300 miles north of New York City, is pinpointed on the map. </p>
 			</div>
 			<div>
-				<p>In the illustration  above, the hours of daylight for Plattsburgh is plotted on the same  graph as New York City.</p>
+				<p>In the graph  above, the hours of daylight for Plattsburgh is plotted on the same  graph as New York City.</p>
 			</div>
 			<div>
 				<p>Notice that in  late December there are only 8.8 hours of daylight in Plattsburg, a little <em>less</em> than the 9.2 hours that you saw in  New York City. But in late June, there are 15.6 hours of daylight in  Plattsburgh, a little <em>more</em> than the  15.1 hours that there are in New York City.</p>
@@ -857,8 +857,8 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>Now we are going to see what happens to the hours of daylight when we look at a place that is  quite a bit south of New York City. </p>
-				<p>The place we have chosen in Columbia, South America.</p>
+				<p>Now we are going to see what happens to the hours of daylight when we look at a place that is  quite a bit south of New York City.</p>
+				<p>The place we have chosen is in Columbia, South America.</p>
 			</div>
 			<div><p>Notice how flat the curve is? In late December there are just a little fewer than 12  hours of daylight, and in late June, there are just a little more than 12 hours  of daylight. In late March (the first day of spring) and in late September (the  first day of fall), there are 12 hours of daylight, just as there are in New  York City.</p></div>
 			<div>Another way to describe the difference in daylight at these different places is to say that the range in daylight hours is different from place to place. The annual range of daylight hours in Columbia, which is near the equator in South America, is very small; it is quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
@@ -946,7 +946,7 @@ At the completion of each module you can check your understanding of the feature
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>The line of best fit that you see going through the scatterplot represents the straight-line (linear) relationship between the number of hours of daylight and the average daily temperature. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p>
 			</div>
-			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
+			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler. This makes sense because the longer the day, the longer the earth and air around the earth are absorbing energy from the sun.</p></div>
 			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a relationship between the hours of daylight and average daily temperature at other locations.</p></div>
 		
 		</div>
@@ -980,7 +980,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What happens to the average daily temperature at a location as the hours of daylight at that location increase?</li>
+			<li>What happens to the average daily temperature at a location as the hours of daylight increase?</li>
 			<li>Why is the relationship between hours of daylight at a location and the average daily temperature at that location called a linear relationship?</li>
 			
 
@@ -994,7 +994,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">
 	<p>In this section you can use the <b>Variable Relationship Explorer</b>, the <b>Daylight Hours Explorer</b>, and the <b>Seasons Simulator</b> to continue to find patterns in data as well as explore the causes of some patterns you previously identified.</p><br>
 	<b>Variable Relationship Explorer</b><br>
-	 Use the Variable Relatoinship Explorer to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
+	 Use the Variable Relationship Explorer to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
 	
 	<b>Seasons Simulator</b><br>
  In the previous modules, you learned how factors such as temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. Use the Seasons Simulator to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.<br><br>
@@ -1089,12 +1089,11 @@ At the completion of each module you can check your understanding of the feature
 	<h2 style="margin-left: 25px;">Seasons Simulator</h2>
 	<div class="scrollable">
 	<p>The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. There are 3 separate, but related animations in the simulator:</p>
-	<p><b>Left Animation</b><br>
-	The animation on the left shows how the earth's position relative to the sun changes throughout the year.</p>
-	<p><b>Upper Right Animation</b><br>
-	The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left.</p> 
-	<p><b>Lower Right Animation</b><br>
-	The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations.</p>
+	<ul>
+		<li>The animation on the <b>left</b> shows how the earth's position relative to the sun changes throughout the year.</li>
+		<li>The animation in the <b>upper right</b> shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left.</li>
+		<li>The animation on the <b>lower right</b> shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations.</li>
+	</ul>
 	<p><b>Instructions</b></p>
 	<p><b>Change the date</b><br>
 	The calendar at the bottom has a movable red marker to select the date depicted in all the animations.</p>
