@@ -801,11 +801,11 @@ var slideInit = {
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
-						else if (currSlide == 2) {
+						else if (currSlide == 3) {
 							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
 							widgetAnimations.swinggraph(wInstance);
 						}
-						else if (currSlide>=3) {
+						else if (currSlide>=4) {
 							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
 							widgetAnimations.swinggraph(wInstance);
 							//widgetAnimations.elevatetable(wInstance);
