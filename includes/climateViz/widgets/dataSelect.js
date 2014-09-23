@@ -144,12 +144,12 @@ function dataSelect_instantiate(wInstance) {
 			pointInfoShow(e,wInstance);
 		}
 	}
-	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+	//$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
 	google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation)
 	google.maps.event.addListener(wInstance.map, 'mousemove', wInstance.events.pointInfo);
 	google.maps.event.addListener(wInstance.map, 'mouseover', wInstance.events.pointInfoShow);
 	google.maps.event.addListener(wInstance.map, 'mouseout', wInstance.events.pointInfoHide);
-	});
+	//});
 	wInstance.markers = {};
 	wInstance.bounds = new google.maps.LatLngBounds();
 
@@ -919,9 +919,11 @@ function dataSelect_reset () {
 	wInstance.map.date.find('.input input').val('');
 	wInstance.data = {};
 	if (typeof(wInstance.currAjax)!='undefined') {wInstance.currAjax.abort();}
-	for ( i in wInstance.settings.displayWidgets ) {
-		wInstance.settings.displayWidgets[i].notify( 'reset' );
-	}
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+		for ( i in wInstance.settings.displayWidgets ) {
+			wInstance.settings.displayWidgets[i].notify( 'reset' );
+		}
+	});
 	wInstance._callback({'type':'reset'});
 }
 
@@ -1293,10 +1295,11 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 	wInstance.data = {};
 	
 	wInstance._callback({type:'data-load'});
-	for ( i in wInstance.settings.displayWidgets ) {
-		wInstance.settings.displayWidgets[i].notify( 'loading' );
-	}
-	
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+		for ( i in wInstance.settings.displayWidgets ) {
+			wInstance.settings.displayWidgets[i].notify( 'loading' );
+		}
+	});
 	for ( mid in wInstance.markers ) {
 		// wInstance.data[mid] = { stations:{} };
 		for ( sid in wInstance.markers[mid].stations ) {
@@ -1326,10 +1329,12 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 					wInstance.data[mid+'::'+sid].dataMeta = wInstance.requestQueue[queryID].data.dataMeta;
 					$.merge( wInstance.data[mid+'::'+sid].data, wInstance.requestQueue[queryID].data.data);
 					wInstance._callback( {type:'data-ready'} );
+					$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify( 'ready' );
 						wInstance.settings.displayWidgets[i].loadData( wInstance.data );
-					}
+						}
+					});
 				}
 			// }
 		}
@@ -1486,10 +1491,12 @@ function stationBasedDataFetchAjax ( evt ) {
 			$.merge(aaasClimateViz.widgets[widgetIndex].data[mid+'::'+sid].data, series.data);
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ servermsg.query.queryID ].status = 'success';
 			aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-ready' } );
-			for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
-				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'ready' );
-				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData( aaasClimateViz.widgets[widgetIndex].data );
-			}
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
+					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'ready' );
+					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData( aaasClimateViz.widgets[widgetIndex].data );
+				}
+			});
 		} ,
 		
 		// TODO: distinguish between different error types (500, unknown data, network timeout, etc)
@@ -1498,9 +1505,11 @@ function stationBasedDataFetchAjax ( evt ) {
 			if (textStatus=="abort"){ delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ]; return;}
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status = 'fail';
 			aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-error' } );
-			for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
-				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
-			}
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
+					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
+				}
+			});
 			// FIXME: use a jQuery-based dialog instead of the browser window so we can limit to one alert
 			if ( $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1 && confirm( 'There was an error retrieving data. Would you like to try again?' ) ) {
 				aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-refresh' } );
@@ -1528,9 +1537,11 @@ function calculatedSolarDataFetch( evt ) {
 	this.data = { };
 	
 	this._callback( { type:'data-load' } );
-	for (i in this.settings.displayWidgets) {
-		this.settings.displayWidgets[i].notify('loading');
-	}
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+		for (i in this.settings.displayWidgets) {
+			this.settings.displayWidgets[i].notify('loading');
+		}
+	});
 	
 	for (mid in this.markers) {
 		this.data[mid] = {seriesMeta:{},dataMeta:{},data:[]};
@@ -1684,10 +1695,12 @@ function calculatedSolarDataFetch( evt ) {
 		this.data[mid].dataMeta = series.dataMeta;
 		$.merge(this.data[mid].data, series.data);
 		this._callback({type:'data-ready'});
-		for (i in this.settings.displayWidgets) {
-			this.settings.displayWidgets[i].notify('ready');
-			this.settings.displayWidgets[i].loadData(this.data);
-		}
+		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+			for (i in this.settings.displayWidgets) {
+				this.settings.displayWidgets[i].notify('ready');
+				this.settings.displayWidgets[i].loadData(this.data);
+			}
+		});
 	}
 }
 
@@ -1700,9 +1713,11 @@ function fetchStats( evt ) {
 	// We need to build a better data handler because this is extremely inefficient.
 	this.data = {};
 	this._callback({type:'data-load'});
-	for (i in this.settings.displayWidgets) {
-		this.settings.displayWidgets[i].notify('loading');
-	}
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+		for (i in this.settings.displayWidgets) {
+			this.settings.displayWidgets[i].notify('loading');
+		}
+	});
 	
 	// FIXME: we should first generate simulated data, then retrieve the actual data so that the site dashboard is filled out quickly
 	for (mid in this.markers) {
@@ -1729,10 +1744,12 @@ function fetchStats( evt ) {
 				this.data[mid].dataMeta = this.requestQueue[queryID].data.dataMeta;
 				$.merge(this.data[mid].data, this.requestQueue[queryID].data.data);
 				this._callback({type:'data-ready'});
-				for (i in this.settings.displayWidgets) {
-					this.settings.displayWidgets[i].notify('ready');
-					this.settings.displayWidgets[i].loadData(this.data);
-				}
+				$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+					for (i in this.settings.displayWidgets) {
+						this.settings.displayWidgets[i].notify('ready');
+						this.settings.displayWidgets[i].loadData(this.data);
+					}
+				});
 			}
 		}
 	}
@@ -1906,10 +1923,12 @@ function fetchStatsAjax ( evt ) {
 			$.merge(aaasClimateViz.widgets[widgetIndex].data[mid].data, series.data);
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ servermsg.query.queryID ].status = 'success';
 			aaasClimateViz.widgets[widgetIndex]._callback({type:'data-ready'});
-			for (i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets) {
-				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify('ready');
-				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData(aaasClimateViz.widgets[widgetIndex].data);
-			}
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+				for (i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets) {
+					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify('ready');
+					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData(aaasClimateViz.widgets[widgetIndex].data);
+				}
+			});
 		} ,
 		
 		// TODO: distinguish between different error types (500, unknown data, network timeout, etc)
@@ -1918,9 +1937,11 @@ function fetchStatsAjax ( evt ) {
 			if (textStatus=="abort"){ delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ]; return;}
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status = 'fail';
 			aaasClimateViz.widgets[widgetIndex]._callback({type:'data-error'});
-			for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
-				aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
-			}
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
+					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
+				}
+			});
 			// FIXME: use a jQuery-based dialog instead of the browser window so we can limit to one alert
 			if ( $.inArray( aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status , ['fail','init'] ) != -1 && confirm( 'There was an error retrieving data. Would you like to try again?' ) ) {
 				aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-refresh' } );

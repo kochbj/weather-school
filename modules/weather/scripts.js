@@ -266,7 +266,6 @@ function cbDailyTempEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
 	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
 		wInstance.map.date.data('value',[[new Date( "2001-01-01T17:00:00Z" ),new Date("2002-01-01T17:00:00Z")]]);
@@ -300,7 +299,8 @@ function cbTempLatNorthern ( evt ) {
 	var wInstance = this;
 	//console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
-	$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));
+	//$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));
+	$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	}
 }
 
@@ -310,7 +310,7 @@ function cbTempLatSouthern ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done(function() {
+	//$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done(function() {
 	//setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -17.800000,-63.166670 ), staticmap: true } );
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -31.398930,-64.182129 ), staticmap: true } );
@@ -319,7 +319,7 @@ function cbTempLatSouthern ( evt ) {
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	//} , 1000 );
-	});
+	//});
 	}
 }	
 
