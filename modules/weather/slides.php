@@ -1086,7 +1086,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="vis-sim-seasons-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<h2 style="margin-left: 25px;">Seasons Simulator</h2>
 	<div class="scrollable">
-	<p>The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. There are 3 separate, but related animation in the simulator.</p>
+	<p>The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. There are 3 separate, but related animations in the simulator:</p>
 	<p><b>Left Animation</b><br>
 	The animation on the left shows how the earth's position relative to the sun changes throughout the year.</p>
 	<p><b>Upper Right Animation</b><br>
@@ -1099,10 +1099,10 @@ At the completion of each module you can check your understanding of the feature
 	<p><b>Change the location</b><br>
 	You can move the stick figure in the upper right to change the location depicted in the lower right.</p>
 	<b>Use the Seasons Simulator to expand your knowledge of questions from modules F and G:</b>
-	<p>Why does the maximum height of the sun in the sky changes throughout the year?</p>
-	<p>Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Notice that the angle that the sun's rays hit the earth changes throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
-	<p>Why is the height of the sun in the sky related to air temperature?</p>
-	<p>Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
+	<p><b>Why does the maximum height of the sun in the sky changes throughout the year?</b><br>
+	Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Notice that the angle that the sun's rays hit the earth changes throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
+	<p><b>Why is the height of the sun in the sky related to air temperature?</b><br>
+	Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
 </div>
 </div>
 <div id="vis-sim-seasons" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
