@@ -1095,11 +1095,11 @@ At the completion of each module you can check your understanding of the feature
 		<li>The animation on the <b>lower right</b> shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations.</li>
 	</ul>
 	<p><b>Instructions</b></p>
-	<p><b>Change the date</b><br>
-	The calendar at the bottom has a movable red marker to select the date depicted in all the animations.</p>
-	<p><b>Change the location</b><br>
-	You can move the stick figure in the upper right to change the location depicted in the lower right.</p>
-	<b>Use the Seasons Simulator to expand your knowledge of questions from modules F and G:</b>
+	<ul>
+		<li><b>Change the date</b> with the calendar at the bottom. Move the red marker to select the date depicted in all the animations.</li>
+		<li><b>Change the location</b> by moving the stick figure in the upper right to change the latitude depicted in the lower right.</li>
+	</ul>
+	<p><b>Use the Seasons Simulator to expand your knowledge of questions from modules F and G:</b></p>
 	<p><b>Why does the maximum height of the sun in the sky changes throughout the year?</b><br>
 	Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Notice that the angle that the sun's rays hit the earth changes throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
 	<p><b>Why is the height of the sun in the sky related to temperature?</b><br>
