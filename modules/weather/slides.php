@@ -383,9 +383,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="temperature-lat-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Temperature versus Latitude" data-slide-parent-id="temperature-lat-intro">
+<div id="temperature-lat-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Latitude and Temperature" data-slide-parent-id="temperature-lat-intro">
 	<div class="header">
-		<h2>Try It: Temperature versus Latitude</h2>
+		<h2>Try It: Latitude and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="temperature-lat-explore-ds" class="full-ds"></div>
@@ -430,8 +430,8 @@ At the completion of each module you can check your understanding of the feature
 	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> is related to the temperature of a place.</p>
 	</div>
 </div>
-<div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Elevation">
-	<h2>Temperature and Elevation</h2>
+<div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Elevation and Temperature">
+	<h2>Elevation and Temperature</h2>
 	<div class="intro-text">	
 	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
 	<p>
@@ -488,9 +488,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="temperature-elevation-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
+<div id="temperature-elevation-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Elevation &amp; Temperature" data-slide-parent-id="temperature-elevation-intro">
 	<div class="header">
-		<h2>Try It: Temperature versus Elevation</h2>
+		<h2>Try It: Elevation and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="temperature-elevation-explore-ds" class="full-ds"></div>
@@ -539,8 +539,8 @@ At the completion of each module you can check your understanding of the feature
 		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
-<div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature and Large Bodies of Water">
-	<h2>Temperature and Large Bodies of Water</h2>
+<div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
+	<h2>Large Bodies of Water and Temperature</h2>
 	<div class="intro-text">	
 	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
@@ -591,9 +591,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="temperature-water-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Exploring Temperature &amp; Large Bodies of Water" data-slide-parent-id="temperature-water-intro">
+<div id="temperature-water-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Large Bodies of Water &amp; Temperature" data-slide-parent-id="temperature-water-intro">
 	<div class="header">
-		<h2>Try It: Temperature and Large Bodies of Water</h2>
+		<h2>Try It: Large Bodies of Water and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="temperature-water-explore-ds" class="full-ds"></div>
@@ -724,15 +724,15 @@ At the completion of each module you can check your understanding of the feature
 		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-intro-menu-link').click()">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
-<div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Air Temperature">
-	<h2>Height of the Sun in the Sky and Air Temperature</h2>
+<div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Temperature">
+	<h2>Height of the Sun in the Sky and Temperature</h2>
 	<div class="intro-text">
 	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
 	</div>	
 </div>
-<div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
+<div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
-		<h2>Example: Height of the Sun in the Sky and Air Temperature</h2>
+		<h2>Example: Height of the Sun in the Sky and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" class="full-ds"></div>
@@ -754,9 +754,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="height-sun-air-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Height of the Sun in the Sky and Air Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
+<div id="height-sun-air-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
-		<h2>Try It: Height of the Sun in the Sky and Air Temperature</h2>
+		<h2>Try It: Height of the Sun in the Sky and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-explore-ds" class="full-ds"></div>
@@ -800,7 +800,7 @@ At the completion of each module you can check your understanding of the feature
 </div>
 <div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Exploring Daylight" data-slide-parent-id="daylight-intro">
 	<div class="header">
-		<h2>Daylight Example 1</h2>
+		<h2>Exploring Daylight</h2>
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
@@ -823,7 +823,7 @@ At the completion of each module you can check your understanding of the feature
 </div>
 <div id="daylight-example2" class="activity" data-slide-type="normal" data-slide-title="Daylight Farther from the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
-		<h2>Daylight Example 2</h2>
+		<h2>Daylight Farther from the Equator</h2>
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
@@ -845,7 +845,7 @@ At the completion of each module you can check your understanding of the feature
 </div>
 <div id="daylight-example3" class="activity" data-slide-type="normal" data-slide-title="Daylight Closer to the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
-		<h2>Daylight Example 3</h2>
+		<h2>Daylight Closer to the Equator</h2>
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
@@ -866,7 +866,7 @@ At the completion of each module you can check your understanding of the feature
 </div>
 <div id="daylight-example4" class="activity" data-slide-type="normal" data-slide-title="Daylight at the Equator" data-slide-parent-id="daylight-intro">
 	<div class="header">
-		<h2>Daylight Example 4</h2>
+		<h2>Daylight at the Equator</h2>
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
@@ -884,9 +884,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Exploring Daylight" data-slide-parent-id="daylight-intro">
+<div id="daylight-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Daylight at Two Locations" data-slide-parent-id="daylight-intro">
 	<div class="header">
-		<h2>Daylight Exploration</h2>
+		<h2>Try It: Daylight at Two Locations</h2>
 	</div>
 	<div class="workarea">
 		<div id="daylight-explore-ds" class="full-ds"></div>
@@ -916,16 +916,16 @@ At the completion of each module you can check your understanding of the feature
 		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-daylight-menu-link').click()">Daylight Simulator</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
-<div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Air Temperature">
-	<h2>Hours of Daylight and Air Temperature</h2>
+<div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Temperature">
+	<h2>Hours of Daylight and Temperature</h2>
 	<div class="intro-text">
 	<p>In the last module you saw that the hours of daylight at a location changes over the course of the year in a way that is very similar to the pattern for changes in air temperature and maximum height of the Sun in the sky. You have also seen that there is a relationship between the maximum height of the Sun in the sky and air temperature. The higher the Sun in the sky, the warmer it tends to be.</p>
 	<p>In this module you will look at the relationship between hours of daylight and air temperature at a given place. You will see if hours of daylight at a place is related to air temperature at that place.</p>
 	</div>
 </div>
-<div id="daylight-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Hours of Daylight and Air Temperature" data-slide-parent-id="daylight-air-temperature-intro">
+<div id="daylight-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Hours of Daylight and Temperature" data-slide-parent-id="daylight-air-temperature-intro">
 	<div class="header">
-		<h2>Example: Hours of Daylight and Air Temperature</h2>
+		<h2>Example: Hours of Daylight and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="daylight-air-temperature-example-ds" class="full-ds"></div>
@@ -950,9 +950,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="daylight-air-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Hours of Daylight and Air Temperature" data-slide-parent-id="daylight-air-temperature-intro">
+<div id="daylight-air-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Hours of Daylight and Temperature" data-slide-parent-id="daylight-air-temperature-intro">
 	<div class="header">
-		<h2>Try It: Hours of Daylight and Air Temperature</h2>
+		<h2>Try It: Hours of Daylight and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="daylight-air-temperature-explore-ds" class="full-ds"></div>
