@@ -2,9 +2,9 @@
 	<h2>Did you ever wonder&#8230;</h2>
 	<ul>
 		<li>Why is it warmer on some days than on other days?</li>
-		<li>Why some months of the year are colder than others?</li>
+		<li>Why are some months of the year are colder than others?</li>
 		<li>Why is it almost always colder at the North Pole than at the equator?</li>
-		<li>How large bodies of water and mountains affect temperature?</li>
+		<li>How do large bodies of water and mountains affect temperature?</li>
 	</ul>
 	<p class="p1">Learning how and why the earth’s air temperature varies throughout the year and around the globe is the first step in understanding weather and climate.</p>
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.</p>
