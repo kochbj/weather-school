@@ -161,10 +161,10 @@ var aaasClimateViz = aaasClimateViz || {
 	},
 	
 	loadWidget : function ( widgetName , settings ) {
-		var deferred =$.Deferred();
+		settings.deferred =$.Deferred();
+		settings.instantiate_promise = settings.deferred.promise();
 		if ( typeof( this.widgetLibrary[widgetName] ) == 'undefined' || typeof( settings.container ) == 'undefined' ) {
-			deferred.reject();
-			settings.instantiate_promise = deferred.promise();
+			settings.deferred.reject();
 			return false;
 		}
 		if ( typeof( settings.container.widget ) == 'undefined' ) {
@@ -218,8 +218,7 @@ var aaasClimateViz = aaasClimateViz || {
 				this.widgetLibrary[widgetName].load();
 			}
 		}
-		deferred.resolve();
-		settings.instantiate_promise = deferred.promise();
+		//settings.deferred.resolve();
 		console.log(settings.container.widget);
 		return settings.container.widget;
 	}

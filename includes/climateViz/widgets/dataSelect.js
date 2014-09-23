@@ -904,6 +904,7 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
+	wInstance.settings.deferred.resolve();
 	wInstance._callback({'type':'initialize'});
 }
 
@@ -1112,7 +1113,6 @@ function refreshStations ( evt ) {
 			end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
 		} );
 	}*/
- console.log("DATE RANGES SELECTION",date_ranges_selection);
 	// fix datetimes to strings in an attempt to avoid timezone adjustments
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
@@ -1282,7 +1282,6 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
  else console.log("THIS CAN ACTUALLY HAPPEN 2");
 	//function checkYearsatStation(date_ranges_array,wInstance);	
  // fix datetimes to strings in an attempt to avoid timezone adjustments
-	console.log("SECOND",date_ranges_array, wInstance);
 	checkAvailableYears(date_ranges_array,wInstance);
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
@@ -1295,7 +1294,7 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 	wInstance.data = {};
 	
 	wInstance._callback({type:'data-load'});
-	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 		for ( i in wInstance.settings.displayWidgets ) {
 			wInstance.settings.displayWidgets[i].notify( 'loading' );
 		}
