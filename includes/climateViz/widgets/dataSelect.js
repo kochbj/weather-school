@@ -144,7 +144,7 @@ function dataSelect_instantiate(wInstance) {
 			pointInfoShow(e,wInstance);
 		}
 	}
-	//$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+	//$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 	google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation)
 	google.maps.event.addListener(wInstance.map, 'mousemove', wInstance.events.pointInfo);
 	google.maps.event.addListener(wInstance.map, 'mouseover', wInstance.events.pointInfoShow);
@@ -904,7 +904,7 @@ function dataSelect_instantiate(wInstance) {
 	} else {
 		wInstance.map.date.hide();
 	}
-	wInstance.settings.deferred.resolve();
+	wInstance.settings._deferred.resolve();
 	wInstance._callback({'type':'initialize'});
 }
 
@@ -920,7 +920,7 @@ function dataSelect_reset () {
 	wInstance.map.date.find('.input input').val('');
 	wInstance.data = {};
 	if (typeof(wInstance.currAjax)!='undefined') {wInstance.currAjax.abort();}
-	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 		for ( i in wInstance.settings.displayWidgets ) {
 			wInstance.settings.displayWidgets[i].notify( 'reset' );
 		}
@@ -1328,7 +1328,7 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 					wInstance.data[mid+'::'+sid].dataMeta = wInstance.requestQueue[queryID].data.dataMeta;
 					$.merge( wInstance.data[mid+'::'+sid].data, wInstance.requestQueue[queryID].data.data);
 					wInstance._callback( {type:'data-ready'} );
-					$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+					$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify( 'ready' );
 						wInstance.settings.displayWidgets[i].loadData( wInstance.data );
@@ -1380,7 +1380,6 @@ function checkAvailableYears (dateArray, wInstance){
 				}
 			}
 		}
-		console.log(range, missingArray);
 	}
 }
 			/*for (station in yearsMissing){
@@ -1490,7 +1489,7 @@ function stationBasedDataFetchAjax ( evt ) {
 			$.merge(aaasClimateViz.widgets[widgetIndex].data[mid+'::'+sid].data, series.data);
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ servermsg.query.queryID ].status = 'success';
 			aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-ready' } );
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'ready' );
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData( aaasClimateViz.widgets[widgetIndex].data );
@@ -1504,7 +1503,7 @@ function stationBasedDataFetchAjax ( evt ) {
 			if (textStatus=="abort"){ delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ]; return;}
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status = 'fail';
 			aaasClimateViz.widgets[widgetIndex]._callback( { type:'data-error' } );
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
 				}
@@ -1535,10 +1534,11 @@ function calculatedSolarDataFetch( evt ) {
 	// We need to build a better data handler because this is extremely inefficient.
 	this.data = { };
 	
-	this._callback( { type:'data-load' } );
-	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
-		for (i in this.settings.displayWidgets) {
-			this.settings.displayWidgets[i].notify('loading');
+	this._callback( { type:'data-load' } )
+	console.log(this);
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
+		for (i in wInstance.settings.displayWidgets) {
+			wInstance.settings.displayWidgets[i].notify('loading');
 		}
 	});
 	
@@ -1694,10 +1694,10 @@ function calculatedSolarDataFetch( evt ) {
 		this.data[mid].dataMeta = series.dataMeta;
 		$.merge(this.data[mid].data, series.data);
 		this._callback({type:'data-ready'});
-		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
-			for (i in this.settings.displayWidgets) {
-				this.settings.displayWidgets[i].notify('ready');
-				this.settings.displayWidgets[i].loadData(this.data);
+		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
+			for (i in wInstance.settings.displayWidgets) {
+				wInstance.settings.displayWidgets[i].notify('ready');
+				wInstance.settings.displayWidgets[i].loadData(wInstance.data);
 			}
 		});
 	}
@@ -1712,9 +1712,9 @@ function fetchStats( evt ) {
 	// We need to build a better data handler because this is extremely inefficient.
 	this.data = {};
 	this._callback({type:'data-load'});
-	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
-		for (i in this.settings.displayWidgets) {
-			this.settings.displayWidgets[i].notify('loading');
+	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
+		for (i in wInstance.settings.displayWidgets) {
+			wInstance.settings.displayWidgets[i].notify('loading');
 		}
 	});
 	
@@ -1743,10 +1743,10 @@ function fetchStats( evt ) {
 				this.data[mid].dataMeta = this.requestQueue[queryID].data.dataMeta;
 				$.merge(this.data[mid].data, this.requestQueue[queryID].data.data);
 				this._callback({type:'data-ready'});
-				$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
-					for (i in this.settings.displayWidgets) {
-						this.settings.displayWidgets[i].notify('ready');
-						this.settings.displayWidgets[i].loadData(this.data);
+				$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
+					for (i in wInstance.settings.displayWidgets) {
+						wInstance.settings.displayWidgets[i].notify('ready');
+						wInstance.settings.displayWidgets[i].loadData(wInstance.data);
 					}
 				});
 			}
@@ -1922,7 +1922,7 @@ function fetchStatsAjax ( evt ) {
 			$.merge(aaasClimateViz.widgets[widgetIndex].data[mid].data, series.data);
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ servermsg.query.queryID ].status = 'success';
 			aaasClimateViz.widgets[widgetIndex]._callback({type:'data-ready'});
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 				for (i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets) {
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify('ready');
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData(aaasClimateViz.widgets[widgetIndex].data);
@@ -1936,7 +1936,7 @@ function fetchStatsAjax ( evt ) {
 			if (textStatus=="abort"){ delete aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ]; return;}
 			aaasClimateViz.widgets[widgetIndex].requestQueue[ $.url( this.url ).param( 'queryID' ) ].status = 'fail';
 			aaasClimateViz.widgets[widgetIndex]._callback({type:'data-error'});
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
+			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'data-error' );
 				}

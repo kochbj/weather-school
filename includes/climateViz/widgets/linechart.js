@@ -278,7 +278,7 @@ function linechart_instantiate(wInstance) {
 			this._callbacks[cbIdx].call(this, evt);
 		}
 	}
-	wInstance.settings.deferred.resolve();
+	wInstance.settings._deferred.resolve();
 	
 }
 function linechart_initialize () {

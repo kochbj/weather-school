@@ -217,7 +217,7 @@ function table_instantiate ( wInstance ) {
 			this._callbacks[cbIdx].call(this, evt);
 		}
 	}
-	
+	wInstance.settings._deferred.resolve();	
 	wInstance._callback({'type':'initialize'});
 }
 

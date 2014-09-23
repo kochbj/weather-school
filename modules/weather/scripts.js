@@ -136,37 +136,31 @@ function cbDaylightEx1 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));	
+		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	}
 }
 function cbDaylightEx2 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done(function () {
 			widgetAnimations.placemarkers(wInstance, [40.81,-73.96], [ 44.70, -73.96 ], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-			});
 	}
 }
 function cbDaylightEx3 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done(function () {
 			widgetAnimations.placemarkers(wInstance, [ 5.07,-74.53 ],null, "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-			});
 	}
 }
 function cbDaylightEx4 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-			$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done(function () {
 			widgetAnimations.placemarkers(wInstance, [ 0.15,-78.35 ],null, "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-			});
 	}
 }
 
@@ -177,10 +171,7 @@ function cbHeightSunAirTempEx (evt) {
 	var wInstance = this;
 	//console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
-	this.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-	setTimeout( function ( ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 1000 );
 	}
 }
 function cbDaylightAirTempEx (evt) {
@@ -280,15 +271,11 @@ function cbHeightSunEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-		$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { x.settings.instantiate_promise})).done( function() {
-		setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 40.71, -74.01 ), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date( "2004-01-01T17:00:00Z" ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z") );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 200 );
-	});
 	}
 }
 
@@ -297,9 +284,7 @@ function cbTempLatNorthern ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
-	//console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
-	//$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done($( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate));
 	$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	}
 }
@@ -310,16 +295,12 @@ function cbTempLatSouthern ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	//$.when(wInstance.settings.instantiate_promise && wInstance.settings.displayWidgets[0].instantiate_promise ).done(function() {
-	//setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -17.800000,-63.166670 ), staticmap: true } );
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( -31.398930,-64.182129 ), staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' ,  new Date([ 2004 , 1 , 1] ) );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' ,  new Date( "2004-12-31T17:00:00Z" ) );
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	//} , 1000 );
-	//});
 	}
 }	
 
