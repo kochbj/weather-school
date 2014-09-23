@@ -1094,7 +1094,7 @@ At the completion of each module you can check your understanding of the feature
 		<li>The animation in the <b>upper right</b> shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left.</li>
 		<li>The animation on the <b>lower right</b> shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations.</li>
 	</ul>
-	<p><b>Instructions</b></p>
+	<p><b>Instructions:</b></p>
 	<ul>
 		<li><b>Change the date</b> with the calendar at the bottom. Move the red marker to select the date depicted in all the animations.</li>
 		<li><b>Change the location</b> by moving the stick figure in the upper right to change the latitude depicted in the lower right.</li>
