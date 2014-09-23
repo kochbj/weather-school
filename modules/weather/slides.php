@@ -288,7 +288,7 @@ At the completion of each module you can check your understanding of the feature
 	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">annual temperature patterns</a>?</p>
 	</div>
 </div>
-<div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Temperature and Latitude">
+<div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Latitude and Temperature">
 	<h2>Temperature and Latitude</h2>
 	<div class="intro-text">	
 	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, has an effect on the pattern of daily average temperature.</p>
