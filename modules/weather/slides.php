@@ -539,17 +539,17 @@ At the completion of each module you can check your understanding of the feature
 		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
-<div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature Near Large Bodies of Water">
-	<h2>Temperature Near Large Bodies of Water</h2>
+<div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
+	<h2>Large Bodies of Water and Temperature</h2>
 	<div class="intro-text">	
 	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
 	In this activity, you are going to try to find out whether or not the air temperature at a place is related to how close the place is to a large body of water.</p>
 	</div>
 </div>
-<div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Water" data-slide-parent-id="temperature-water-intro">
+<div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Temperature Near Large Bodies of Water" data-slide-parent-id="temperature-water-intro">
 	<div class="header">
-		<h2>Temperature and Large Bodies of Water</h2>
+		<h2>Temperature Near Large Bodies of Water</h2>
 	</div>
 	<div class="workarea">
 		<div id="temperature-water-example-ds" class="full-ds"></div>
