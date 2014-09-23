@@ -94,9 +94,9 @@ At the completion of each module you can check your understanding of the feature
 <p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the air temperature changes from day to day at different places around the world.</p>
 	</div>
 </div>
-<div id="daily-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Daily Temperature Variation over a Two Week Period" data-slide-parent-id="daily-temperature-intro">
+<div id="daily-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Daily Temperature Variation over a Three Week Period" data-slide-parent-id="daily-temperature-intro">
 	<div class="header">
-		<h2>Daily Variations in Temperature</h2>
+		<h2>Daily Temperature Variation over a Three Week Period</h2>
 	</div>
 	<div class="workarea">
 		<?php /* <div class="shield"></div> */ ?>
@@ -216,9 +216,9 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 </div>
  */ ?>
-<div id="annual-temperature-display" class="activity" data-slide-type="normal" data-slide-title="Review a three-year period of temperature recordings" data-slide-parent-id="annual-temperature-intro">
+<div id="annual-temperature-display" class="activity" data-slide-type="normal" data-slide-title="Temperature over a Three-Year Period" data-slide-parent-id="annual-temperature-intro">
 	<div class="header">
-		<h2>Review three-year period of temperature recordings</h2>
+		<h2>Temperature over a Three-Year Period</h2>
 	</div>
 	<div class="workarea">
 		<div id="annual-temperature-display-tc" class="display-tc"></div>
@@ -252,9 +252,9 @@ At the completion of each module you can check your understanding of the feature
 		</div>
 	</div>
 </div>
-<div id="annual-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Charting Temperatures" data-slide-parent-id="annual-temperature-intro">
+<div id="annual-temperature-explore" class="activity tryit" data-slide-type="normal" data-slide-title="Try It: Annual Temperature Patterns" data-slide-parent-id="annual-temperature-intro">
 	<div class="header">
-		<h2>Try It: Chart Temperature</h2>
+		<h2>Try It: Annual Temperature Patterns</h2>
 	</div>
 	<div class="workarea">
 		<div id="annual-temperature-explore-ds" class="full-ds"></div>
@@ -438,9 +438,9 @@ At the completion of each module you can check your understanding of the feature
 	In this activity, you are going to use the maps to find out if how far a place is above sea level is related to the air temperature at that place.</p>
 	</div>
 </div>
-<div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Exploring Temperature &amp; Elevation" data-slide-parent-id="temperature-elevation-intro">
+<div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Temperature at Two Elevations" data-slide-parent-id="temperature-elevation-intro">
 	<div class="header">
-		<h2>Temperature and Elevation</h2>
+		<h2>Temperature at Two Elevations</h2>
 	</div>
 	<div class="workarea">
 		<div id="temperature-elevation-example-ds" class="full-ds"></div>
@@ -539,8 +539,8 @@ At the completion of each module you can check your understanding of the feature
 		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
-<div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
-	<h2>Large Bodies of Water and Temperature</h2>
+<div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Temperature Near Large Bodies of Water">
+	<h2>Temperature Near Large Bodies of Water</h2>
 	<div class="intro-text">	
 	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
@@ -666,9 +666,9 @@ At the completion of each module you can check your understanding of the feature
 	<p>In the last three modules you saw that there is a relationship between the air temperature at a place and its latitude, elevation, and proximity to a large body of water. In the next two modules you will see that how high the sun is in the sky at a place changes throughout the year and that this is something else that is related to the temperature at that place.</p>
 	</div>	
 </div>
-<div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Example: Height of the Sun in the Sky" data-slide-parent-id="height-sun-intro">
+<div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Height of the Sun in the Sky over a One-Year Period" data-slide-parent-id="height-sun-intro">
 	<div class="header">
-		<h2>Example: Height of the Sun in the Sky</h2>
+		<h2>Height of the Sun in the Sky over a One-Year Period</h2>
 	</div>
 	<div class="workarea">
 		<div id="height-sun-example-ds" class="full-ds"></div>
@@ -730,9 +730,9 @@ At the completion of each module you can check your understanding of the feature
 	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
 	</div>	
 </div>
-<div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
+<div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Comparing Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
-		<h2>Example: Height of the Sun in the Sky and Temperature</h2>
+		<h2>Comparing Height of the Sun in the Sky and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" class="full-ds"></div>
@@ -923,9 +923,9 @@ At the completion of each module you can check your understanding of the feature
 	<p>In this module you will look at the relationship between hours of daylight and air temperature at a given place. You will see if hours of daylight at a place is related to air temperature at that place.</p>
 	</div>
 </div>
-<div id="daylight-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Step By Step: Hours of Daylight and Temperature" data-slide-parent-id="daylight-air-temperature-intro">
+<div id="daylight-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Comparing Hours of Daylight and Temperature" data-slide-parent-id="daylight-air-temperature-intro">
 	<div class="header">
-		<h2>Example: Hours of Daylight and Temperature</h2>
+		<h2>Comparing Hours of Daylight and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="daylight-air-temperature-example-ds" class="full-ds"></div>
