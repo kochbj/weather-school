@@ -1087,17 +1087,17 @@ At the completion of each module you can check your understanding of the feature
 	<h2 style="margin-left: 25px;">Seasons Simulator</h2>
 	<div class="scrollable">
 	<p>The Seasons Simulator on the next slide shows how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. There are 3 separate, but related animation in the simulator.</p>
-	<b>Left Animation</b>
-	<p>The animation on the left shows how the earth's position relative to the sun changes throughout the year.</p>
-	<b>Upper Right Animation</b>
-	<p>The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left.</p> 
-	<b>Lower Right Animation</b>
-	<p>The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations.</p>
-	<b>Instructions</b><br>
-	<b>Change the date</b>
-	<p>The calendar at the bottom has a movable red marker to select the date depicted in all the animations.</p>
-	<b>Change the location</b>
-	<p>You can move the stick figure in the upper right to change the location depicted in the lower right.</p>
+	<p><b>Left Animation</b><br>
+	The animation on the left shows how the earth's position relative to the sun changes throughout the year.</p>
+	<p><b>Upper Right Animation</b><br>
+	The animation in the upper right shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left.</p> 
+	<p><b>Lower Right Animation</b><br>
+	The animation on the lower right shows the angle that the suns rays hit the earth at the location of the stick figure in the upper right and on the same day modeled in the other two animations.</p>
+	<p><b>Instructions</b></p>
+	<p><b>Change the date</b><br>
+	The calendar at the bottom has a movable red marker to select the date depicted in all the animations.</p>
+	<p><b>Change the location</b><br>
+	You can move the stick figure in the upper right to change the location depicted in the lower right.</p>
 	<b>Use the Seasons Simulator to expand your knowledge of questions from modules F and G:</b>
 	<p>Why does the maximum height of the sun in the sky changes throughout the year?</p>
 	<p>Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Notice that the angle that the sun's rays hit the earth changes throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
