@@ -29,7 +29,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="contents-2" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="contents-text">
-		<p>The first two modules focus on variation in air temperature over time. Module A explores temperature changes from day to day over a three week period in April, and module B explores temperature changes over the course of an entire year.</p>
+		<p>The first two modules focus on variation in temperature over time. Module A explores temperature changes from day to day over a three week period in April, and module B explores temperature changes over the course of an entire year.</p>
 	</div>
 </div>
 <div id="contents-3" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -41,7 +41,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="contents-4" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Table of Contents</h2>
 	<div class="contents-text">
-		<p>Modules F and G explore how air temperature is affected by changes in the height of the sun in the sky throughout the year.</p>
+		<p>Modules F and G explore how temperature is affected by changes in the height of the sun in the sky throughout the year.</p>
 	</div>
 </div>
 <div id="contents-5" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
@@ -91,7 +91,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
 	<h2>Learning about Daily Temperature Changes</h2>
 	<div class="intro-text">
-<p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the air temperature changes from day to day at different places around the world.</p>
+<p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the temperature changes from day to day at different places around the world.</p>
 	</div>
 </div>
 <div id="daily-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Daily Temperature Variation over a Three Week Period" data-slide-parent-id="daily-temperature-intro">
@@ -106,7 +106,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints Washington, DC, and the graph shows the <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect air temperature data every hour, and some collect air temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span> in Washington, DC from April 1, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
+				<p>The map above pinpoints Washington, DC, and the graph shows the <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span> in Washington, DC from April 1, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
 			</div>
 			<div>
 				<p>If you hover the mouse over the line on the graph, the date and temperature for each point of the line appear. You can see how much change there is in the average temperature from day to day.</p>
@@ -123,7 +123,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="daily-temperature-air" class="activity" data-slide-type="normal" data-slide-title="Movement of Air" data-slide-parent-id="daily-temperature-intro">
 	<h2 style="margin-left: 25px;">The Effects of Air Movement on Temperature</h2>
 	<div class="scrollable">
-	<p style="margin-left: 15px;">You have now seen that air temperature in a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
+	<p style="margin-left: 15px;">You have now seen that temperature in a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
 	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
 	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
 	<div style="text-align: center; display: block;">
@@ -235,7 +235,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>You should see that the temperature rises and falls consistently throughout each year. But is it always the same? Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a section of the graph in more detail, just drag a box around it. You can always zoom back out by hitting "Reset View".</p>
 			</div>
 			<div>
-				<p>In some years the coldest day falls in December. In others it falls in January. The warmest day can fall in July or August. Note that the actual temperature varies between these warmest days as well. The warmest day in 2002 is warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
+				<p>In some years, the coldest day falls in December. In others, it falls in January. The warmest day can fall in July or August. Note that the actual temperature varies between these warmest days as well. The warmest day in 2002 is warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
 			</div>
 			
 			<div>
@@ -243,7 +243,7 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 				
 			<div>
-				<p>The line is jagged because air temperature varies from day to day. Because of daily temperature variation, not every July 1st is going to have the same air temperature and not every July 2nd is going to have the same air temperature. If the difference in temperature from day to day is not always the same, then the annual temperature pattern will be different from year to year as well.</p>
+				<p>The line is jagged because temperature varies from day to day. Because of daily temperature variation, not every July 1st is going to have the same temperature and not every July 2nd is going to have the same temperature. If the difference in temperature from day to day is not always the same, then the annual temperature pattern will be different from year to year as well.</p>
 			</div>
 		
 			<div>
@@ -267,7 +267,7 @@ At the completion of each module you can check your understanding of the feature
 					<p>1. Choose a place on the map. Choose a range of dates that covers more than just a single year. You can make the range of dates up to five years long.</p>
 			</div>
 			<div>
-					<p>2. Observe the pattern in air temperature at that place.</p>
+					<p>2. Observe the pattern in temperature at that place.</p>
 					<p>3. Repeat this activity for as many different locations as you like before moving to the next activity.</p>
 			
 			
@@ -291,7 +291,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Latitude and Temperature">
 	<h2>Latitude and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the last module, you saw how air temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, has an effect on the pattern of daily average temperature.</p>
+	<p>In the last module, you saw how temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, has an effect on the pattern of daily average temperature.</p>
 	</div>
 </div>
 <div id="temperature-lat-northern" class="activity" data-slide-type="normal" data-slide-title="Northern Hemisphere" data-slide-parent-id="temperature-lat-intro">
@@ -368,7 +368,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
 			</div>
 			<div>
-				<p>You will now have a chance to compare annual air temperature patterns at two locations that you choose. See if the relationship between latitude and air temperature you observed in these examples exists in other locations. </p>
+				<p>You will now have a chance to compare annual temperature patterns at two locations that you choose. See if the relationship between latitude and temperature you observed in these examples exists in other locations. </p>
 			</div>
 		</div>
 		<div class="questionBox">
@@ -401,7 +401,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>2. Now use the calendar to choose a date range. Choose two dates that are one year apart. For example, you could choose January 1, 2000 and December 31, 2000.</p>
 			</div>
 			<div>
-				<p>3. Choose two other places and see if the pattern holds in those places too. Just make sure they are far enough apart so that differences in air temperature are large enough to show up on the graph. Try as many additional pairs of places as you would like.</p>
+				<p>3. Choose two other places and see if the pattern holds in those places too. Just make sure they are far enough apart so that differences in temperature are large enough to show up on the graph. Try as many additional pairs of places as you would like.</p>
 			</div>
 		</div>
 		<div class="questionBox">
@@ -433,9 +433,9 @@ At the completion of each module you can check your understanding of the feature
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Elevation and Temperature">
 	<h2>Elevation and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the previous activity, you saw that the air temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
+	<p>In the previous activity, you saw that the temperature at a place is related to the latitude of the place. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
 	<p>
-	In this activity, you are going to use the maps to find out if how far a place is above sea level is related to the air temperature at that place.</p>
+	In this activity, you are going to use the maps to find out if how far a place is above sea level is related to the temperature at that place.</p>
 	</div>
 </div>
 <div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Temperature at Two Elevations" data-slide-parent-id="temperature-elevation-intro">
@@ -449,7 +449,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>Are air temperature and how high a place is above sea level related? This activity looks at air temperatures at two locations with different elevations to find out.</p>
+				<p>Are temperature and how high a place is above sea level related? This activity looks at temperatures at two locations with different elevations to find out.</p>
 			</div>
 			<div>
 				<p>The map is centered on the Himalayas, a mountain range between India and China, which is home to the planet's highest peaks, including Mt. Everest. Kathmandu, the capital of Nepal pictured in the introduction, is pinpointed.</p>
@@ -459,11 +459,11 @@ At the completion of each module you can check your understanding of the feature
 				</p>
 			</div>
 			<div>
-				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the higest and lowest elevations.<p>
+				<p>Because of the mountain range, there is a wide variation in the elevation of these reporting stations. Hover over the reporting stations to see if you can find the highest and lowest elevations.<p>
 			</div>
 		
 			<div>
-			<p>Hover over the stations labeled Tingri (northest of Kathmandu in Tibet) and Gorakhpur (southwest of Kathmandu in India). How do their elevations compare? </p>
+			<p>Hover over the stations labeled Tingri (northeast of Kathmandu in Tibet) and Gorakhpur (southwest of Kathmandu in India). How do their elevations compare? </p>
 			</div>
 			<div>
 				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
@@ -500,14 +500,14 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			
 			<div>
-				<p>1. Think about places where there are very high mountains. You may want to try the Rocky Mountains in the United States, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore. As you move the cursor around the map, notice that the elevation appears in the menu bar just above this text below the map.</p>
+				<p>1. Think about places where there are very high mountains. You may want to try the Rocky Mountains in North America, the Alps in Europe, or the Andes in South America. Use the map above to zoom in on the location you would like to explore. As you move the cursor around the map, notice that the elevation appears in the menu bar just above this text below the map.</p>
 			</div>
 			<div>
 				<p>2. Click on a specific location on the map. Remember that the 20 closest reporting stations appear as yellow dots around the location you chose. You can zoom in closer on the map to get a better look at where those reporting stations are. Mouse over each of the yellow dots until you find two reporting stations that have a significant difference in elevation. (At least 1,000 feet.) Click on both reporting stations to highlight them.</p>
 	
 			</div>
 			<div>	
-				<p>3. Now click on the Start calendar to choose a starting date and the End calendar to choose an ending date. Pick dates at least one year apart. If you get a graph for only one of the locations, it may be because no data was reported at that station. Just click on another dot until you get a temperature graph for two different locations.</p>
+				<p>3. Now click on the "Start" calendar to choose a starting date and the End calendar to choose an ending date. Pick dates at least one year apart. If you get a graph for only one of the locations, it may be because no data was reported at that station. Just click on another dot until you get a temperature graph for two different locations.</p>
 			
 				
 			</div>
@@ -536,15 +536,15 @@ At the completion of each module you can check your understanding of the feature
 	
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Find out why air temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
+		<p>Find out why temperature is realted to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
 	<h2>Large Bodies of Water and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the previous activities, you saw that the air temperature at a place is related to how far the place is from the tropical zone (its latitude) and that air temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
+	<p>In the previous activities, you saw that the temperature at a place is related to how far the place is from the tropical zone (its latitude) and that temperature at a place is related to how far the place is above sea level (its elevation). The higher the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
-	In this activity, you are going to try to find out whether or not the air temperature at a place is related to how close the place is to a large body of water.</p>
+	In this activity, you are going to try to find out whether or not the temperature at a place is related to how close the place is to a large body of water.</p>
 	</div>
 </div>
 <div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Temperature Near Large Bodies of Water" data-slide-parent-id="temperature-water-intro">
@@ -558,7 +558,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>	
-				<p>Are air temperature and how close a place is to a body of water related? This activity looks at air tempeartures at two locations that are different distances from a large body of water to find out.</p>
+				<p>Are temperature and how close a place is to a body of water related? This activity looks at air tempeartures at two locations that are different distances from a large body of water to find out.</p>
 			</div>
 			<div>	
 				<p>The marker is placed in northern Norway on the Norwegian Sea.  In this activity you will explore the temperature patterns in Tromso, one of the northernmost cities on earth (shown in the module introduction), and in Kautokeino, a small village about 125 miles southeast of Tromso.</p>
@@ -573,13 +573,13 @@ At the completion of each module you can check your understanding of the feature
 				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
 			</div>
 			<div>
-				<p>What you see here is that in the winter and early spring Kautokeino, the place that is farther from the water, is quite a bit colder than Tromso, which is close to the water, but in the summer, Tromso is a little cooler than Kautokeino.</p>
+				<p>What you see here is that in the winter and early spring in Kautokeino, the place that is farther from the water, is quite a bit colder than Tromso, which is close to the water, but in the summer, Tromso is a little cooler than Kautokeino.</p>
 			</div>
 			<div>
-				<p>You should also notice that the line on the graph for Tromso, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water. There is a bigger range between high and low temperatures during the year in the place that is farther from the water.</p>
+				<p>You should also notice that the line on the graph for Tromso, the place that is closer to the water, is flatter than the line for Kautokeino, the place that is farther from the water.</p> 
 			</div>
 			<div>
-				<p>The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
+				<p>In other words, there is a bigger range between high and low temperatures during the year in the place that is farther from the water. The high temperature for the year is higher and the low temperature is lower when you are farther from a large body of water.</p>
 			</div>
 			<div>
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
@@ -609,7 +609,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>2. The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
 			</div>
 			<div>
-				<p>3. Now click on the start calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>3. Now click on the "Start" calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
 				<p>4. When you choose locations, make sure that one of them is not at a much higher elevation than the other one. Coastal areas often have mountains nearby, so when comparing two locations just make sure one of them is not in the mountains and the other at sea level. </p>
@@ -663,7 +663,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
 	<h2>Height of the Sun in the Sky</h2>
 	<div class="intro-text">
-	<p>In the last three modules you saw that there is a relationship between the air temperature at a place and its latitude, elevation, and proximity to a large body of water. In the next two modules you will see that how high the sun is in the sky at a place changes throughout the year and that this is something else that is related to the temperature at that place.</p>
+	<p>In the last three modules you saw that there is a relationship between the temperature at a place and its latitude, elevation, and proximity to a large body of water. In the next two modules you will see that how high the sun is in the sky at a place changes throughout the year and that this is something else that is related to the temperature at that place.</p>
 	</div>	
 </div>
 <div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Height of the Sun in the Sky over a One-Year Period" data-slide-parent-id="height-sun-intro">
@@ -727,7 +727,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Temperature">
 	<h2>Height of the Sun in the Sky and Temperature</h2>
 	<div class="intro-text">
-	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the pattern of changes in air temperature. In this module you will look at the relationship between height of the sun in the sky and air temperature at a given place.</p>
+	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the pattern of changes in temperature. In this module you will look at the relationship between height of the sun in the sky and temperature at a given place.</p>
 	</div>	
 </div>
 <div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Comparing Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
@@ -741,7 +741,7 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>Are air temperature and the height of the sun in the sky at a given place related? This activity looks at average daily air temperatures and the height of the sun in the sky for 12 specific dates in Chicago, Illinois to find out. </p></div>
+			<div><p>Are temperature and the height of the sun in the sky at a given place related? This activity looks at average daily temperatures and the height of the sun in the sky for 12 specific dates in Chicago, Illinois to find out. </p></div>
 			<div><p>In previous modules the graphs showed how temperature or height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun. In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
 			</div>
@@ -783,8 +783,8 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What happens to the average daily air temperature at a location as the maximum height of the sun in the sky increases?</li>
-			<li>Why is the relationship between the maximum height of the sun in the sky and average daily air temperature called a linear relationship?</li>
+			<li>What happens to the average daily temperature at a location as the maximum height of the sun in the sky increases?</li>
+			<li>Why is the relationship between the maximum height of the sun in the sky and average daily temperature called a linear relationship?</li>
 
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
@@ -794,7 +794,7 @@ At the completion of each module you can check your understanding of the feature
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
 	<h2>Hours of Daylight</h2>
 	<div class="intro-text">
-	<p>In the last module you saw that there is a relationship between the height of the sun in the sky and air temperature. When the sun is high in the sky it tends to be warmer than when the sun is low in the sky.</p>
+	<p>In the last module you saw that there is a relationship between the height of the sun in the sky and temperature. When the sun is high in the sky it tends to be warmer than when the sun is low in the sky.</p>
 	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
 	</div>
 </div>
@@ -814,9 +814,9 @@ At the completion of each module you can check your understanding of the feature
 			<div>The  graph shows the number of hours of daylight at Morningside  Heights for a two-year period, from January 1, 2003 to January 1, 2005.</div>
 			<div>You can see the exact  number of hours of daylight on any particular day by hovering over different  parts of the curve with the cursor. </div>
 			<div>Notice  that the hours of daylight changes throughout the year at this location.  On the first day of fall (September 22) there are about 12 hours of daylight, in late June there are about 15 hours of daylight, and in late December there are just over 9 hours of daylight.</div>
-			<div>Also  notice that the line is not jagged like the line for air temperature was. The  change in the number of hours of daylight is about the same from day to day.</div>
+			<div>Also  notice that the line is not jagged like the line for temperature was. The  change in the number of hours of daylight is about the same from day to day.</div>
 			<div>Remember that we are talking about hours of &ldquo;daylight,&rdquo; not hours of  &ldquo;sunlight.&rdquo; Because some days are rainy or cloudy and others are clear, there  are big changes in the number of hours of sunlight each day, but the time the sun rises and sets changes very gradually from day to day.</div>
-			<div>Remember that when you looked at the graph for air temperature, there was variation not only from day to day but also from year to year. Is that also true for the number of hours of daylight? What can you say about the change in hours of daylight at a place on a particular date (for example, October 1st) from one year to the next?</div>
+			<div>Remember that when you looked at the graph for temperature, there was variation not only from day to day but also from year to year. Is that also true for the number of hours of daylight? What can you say about the change in hours of daylight at a place on a particular date (for example, October 1st) from one year to the next?</div>
 			<div>What you should see is that the number of hours of daylight does not change from year to year. There are the same number of hours of daylight on October 1st, no matter what year it is.</div>
 		</div>
 	</div>
@@ -919,8 +919,8 @@ At the completion of each module you can check your understanding of the feature
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Temperature">
 	<h2>Hours of Daylight and Temperature</h2>
 	<div class="intro-text">
-	<p>In the last module you saw that the hours of daylight at a location changes over the course of the year in a way that is very similar to the pattern for changes in air temperature and maximum height of the Sun in the sky. You have also seen that there is a relationship between the maximum height of the Sun in the sky and air temperature. The higher the Sun in the sky, the warmer it tends to be.</p>
-	<p>In this module you will look at the relationship between hours of daylight and air temperature at a given place. You will see if hours of daylight at a place is related to air temperature at that place.</p>
+	<p>In the last module you saw that the hours of daylight at a location changes over the course of the year in a way that is very similar to the pattern for changes in temperature and maximum height of the sun in the sky. You have also seen that there is a relationship between the maximum height of the sun in the sky and temperature. The higher the sun in the sky, the warmer it tends to be.</p>
+	<p>In this module you will look at the relationship between hours of daylight and temperature at a given place. You will see if hours of daylight at a place is related to temperature at that place.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Comparing Hours of Daylight and Temperature" data-slide-parent-id="daylight-air-temperature-intro">
@@ -934,15 +934,15 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div>	<p>Are air temperature and the number of hours of daylight at a given place related? This activity looks at average daily air temperature and the number of hours of daylight for 12 specific dates in Chicago, Illinois to find out.</p></div>
+			<div>	<p>Are temperature and the number of hours of daylight at a given place related? This activity looks at average daily temperature and the number of hours of daylight for 12 specific dates in Chicago, Illinois to find out.</p></div>
 			<div>	<p>The map above pinpoints Chicago, Illinois. </p>
 			</div>
 			<div>
 			The table above is the same table you saw before. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
-			<div>	<p>Click first on the Hours of daylight column and then on the Average air temperature column to highlight them. The Hours of daylight column should be highlighted red and the Average air temperature column should be highlighted blue.</p></div>
+			<div>	<p>Click first on the "Hours of daylight" column and then on the "Average air temperature" column to highlight them. The Hours of daylight column should be highlighted red and the Average air temperature column should be highlighted blue.</p></div>
 			<div>	<p>Just as you saw in module G, what you see here is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain number of hours of daylight on that day.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div>	<p>The line of best fit that you see going through the scatterplot represents the straight-line (linear) relationship between the number of hours of daylight and the average daily temperature. It tells you how the maximum height of the Sun in the sky and average daily air temperature are related.</p>
+			<div>	<p>The line of best fit that you see going through the scatterplot represents the straight-line (linear) relationship between the number of hours of daylight and the average daily temperature. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p>
 			</div>
 			<div>	<p>You can see from this graph that when the days are longer it tends to be wamer, and when the days are shorter, it tends to be cooler.</p></div>
 			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a relationship between the hours of daylight and average daily temperature at other locations.</p></div>
@@ -978,8 +978,8 @@ At the completion of each module you can check your understanding of the feature
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What happens to the average daily air temperature at a location as the hours of daylight at that location increase?</li>
-			<li>Why is the relationship between hours of daylight at a location and the average daily air temperature at that location called a linear relationship?</li>
+			<li>What happens to the average daily temperature at a location as the hours of daylight at that location increase?</li>
+			<li>Why is the relationship between hours of daylight at a location and the average daily temperature at that location called a linear relationship?</li>
 			
 
 		</ul>
@@ -995,7 +995,7 @@ At the completion of each module you can check your understanding of the feature
 	 Use the Variable Relatoinship Explorer to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
 	
 	<b>Seasons Simulator</b><br>
- In the previous modules, you learned how factors such as air temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. Use the Seasons Simulator to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.<br><br>
+ In the previous modules, you learned how factors such as temperature, maximum height of the sun in the sky, and number of hours of daylight change in a regular pattern over the course of the year. Use the Seasons Simulator to see how the earth’s position relative to the sun also changes in a regular pattern throughout the year. The changing position of the earth relative to the sun causes many of the patterns you previously explored.<br><br>
  	<b>Daylight Hours Explorer</b><br>
  	Use the Daylight Hours Explorer to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.</p>
 
@@ -1024,7 +1024,7 @@ At the completion of each module you can check your understanding of the feature
 	</div>
 	<div class="instructions">
 		<div class="slider">
-			<div><p>You used the Variable Relationship Explorer in modules G and I to see how average daily air temperature was related to both the height of the sun in the sky and the number of hours of daylight at a particular place.</p> 
+			<div><p>You used the Variable Relationship Explorer in modules G and I to see how average daily temperature was related to both the height of the sun in the sky and the number of hours of daylight at a particular place.</p> 
 		</div>
 		<div>
 			<p>You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location, the daily recorded energy from the sun and the daily theoretical energy from the sun, which were not explored in the modules. </p></div>
@@ -1101,7 +1101,7 @@ At the completion of each module you can check your understanding of the feature
 	<b>Use the Seasons Simulator to expand your knowledge of questions from modules F and G:</b>
 	<p><b>Why does the maximum height of the sun in the sky changes throughout the year?</b><br>
 	Place the stick figure at a latitude between 25 and 50 degrees latitude. Start the animation to change the date shown in the animations. Notice that the angle that the sun's rays hit the earth changes throughout the year. This angle corresponds to changing heights of the sun in the sky.</p>
-	<p><b>Why is the height of the sun in the sky related to air temperature?</b><br>
+	<p><b>Why is the height of the sun in the sky related to temperature?</b><br>
 	Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
 </div>
 </div>
