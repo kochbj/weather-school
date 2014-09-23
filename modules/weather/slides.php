@@ -747,7 +747,7 @@ At the completion of each module you can check your understanding of the feature
 			<div><p>In this module, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, Illinois.</p></div>
 			<div><p>The chart above shows data from Chicago for 12 specific dates in the year 2000.</p>
 			</div>
-			<div>Click first on the "Maximum height of sun in sky," and then "Average air temperature" columns to highlight them. The Maximum height of the sun in the sky column should be highlighted red and the average air temperature column should be highlighted blue.</p></div>
+			<div>Click first on the "Maximum height of sun in sky," and then "Average air temperature" columns to highlight them. The Maximum height of the sun in the sky column should be highlighted red and the average air temperature column should be highlighted blue. If you make a mistake and the colors are switched, you can re-click to unselect and try again.</p></div>
 			<div><p>The graph is called a scatterplot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain value for the maximum height of the sun in the sky. The first column selected will always be the X-axis and the second column selected will always be the Y-axis.</p></div>
 			<div><p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div><p>The line that you see going through the scatterplot is called a line of best fit. It represents the staight-line (linear) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
