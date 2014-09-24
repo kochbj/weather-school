@@ -144,12 +144,11 @@ function dataSelect_instantiate(wInstance) {
 			pointInfoShow(e,wInstance);
 		}
 	}
-	//$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 	google.maps.event.addListener(wInstance.map, 'click', wInstance.events.addLocation)
 	google.maps.event.addListener(wInstance.map, 'mousemove', wInstance.events.pointInfo);
 	google.maps.event.addListener(wInstance.map, 'mouseover', wInstance.events.pointInfoShow);
 	google.maps.event.addListener(wInstance.map, 'mouseout', wInstance.events.pointInfoHide);
-	//});
+	
 	wInstance.markers = {};
 	wInstance.bounds = new google.maps.LatLngBounds();
 
@@ -968,7 +967,13 @@ function getBoundsZoomLevel(wInstance) {
     return Math.min(latZoom, lngZoom, ZOOM_MAX);
 }
 
+//var addLocdeferred=$.Deferred();
+//wInstance._addLocpromise=addLocdeferred.promise();
+//addLocdeferred.resolve();
 function addLocation (e,wInstance) {
+	wInstance._addLocpromise.done( function() {
+	var addLocdeferred=$.Deferred();
+	wInstance._addLocpromise=addLocdeferred.promise();
 	if (wInstance.settings.maxPoints && (Object.keys(wInstance.markers)).length >= wInstance.settings.maxPoints) {
 		for (i in wInstance.markers) {
 			removeLocation(i,wInstance);
@@ -1066,6 +1071,8 @@ function addLocation (e,wInstance) {
 		}
 	});
 	geocoder.geocode( { latLng:marker.position } , function(results, status) { marker.init(results,status,e.staticmap); } );
+	addLocdeferred.resolve();
+	});
 }
 
 function createListItem (marker) {
@@ -1089,7 +1096,7 @@ function refreshStations ( evt ) {
 	wInstance = this;
 	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
 	// TODO: implement station removal as a separate callback routine?
-	//removeStations( evt.data.marker.id , this );
+	removeStations( evt.data.marker.id , this );
 	
 	var date_ranges_selection , date_ranges_array = [];
 	if ( this.map.date && ( date_ranges_selection = this.map.date.data( 'value' ) ) ) {

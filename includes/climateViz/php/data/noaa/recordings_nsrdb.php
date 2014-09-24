@@ -2,6 +2,8 @@
 require_once('../../config.php');
 require("../../Tar.php");
 
+exit;
+
 $dbid = isset($_GET['dbid']) ? $_GET['dbid'] : '72405013743';
 
 $log = array();
