@@ -971,7 +971,7 @@ function getBoundsZoomLevel(wInstance) {
 //wInstance._addLocpromise=addLocdeferred.promise();
 //addLocdeferred.resolve();
 function addLocation (e,wInstance) {
-	wInstance._addLocpromise.done( function() {
+	//wInstance._addLocpromise.done( function() {
 	var addLocdeferred=$.Deferred();
 	wInstance._addLocpromise=addLocdeferred.promise();
 	if (wInstance.settings.maxPoints && (Object.keys(wInstance.markers)).length >= wInstance.settings.maxPoints) {
@@ -1071,8 +1071,8 @@ function addLocation (e,wInstance) {
 		}
 	});
 	geocoder.geocode( { latLng:marker.position } , function(results, status) { marker.init(results,status,e.staticmap); } );
-	addLocdeferred.resolve();
-	});
+	//addLocdeferred.resolve();
+	//});
 }
 
 function createListItem (marker) {
