@@ -1,6 +1,8 @@
 <?php
 require_once(realpath(dirname(__FILE__).'/../../config.php'));
 
+exit;
+
 $stations_gsod_file = 'ftp://ftp.ncdc.noaa.gov/pub/data/gsod/ish-history.csv';
 $stations_gsod_file_cache = dirname(__FILE__).'/data_file_cache/stations.cache.txt';
 
