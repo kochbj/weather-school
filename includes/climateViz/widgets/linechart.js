@@ -218,8 +218,8 @@ function linechart_instantiate(wInstance) {
 		series : [],
 		title : { text : null },
 		tooltip: { style : { padding : 0 }, shape: 'square', useHTML: true, },
-		xAxis : { lineColor: '#ACACAC', title : { style:{color:'#CC0000'} }  },
-		yAxis : { title : { style:{color:'#1640BC'} } }
+		xAxis : { lineColor: '#ACACAC', title : { useHTML: true,  style:{color:'#CC0000'} }  },
+		yAxis : { title : { useHTML: true, style:{color:'#1640BC'} } }
 	}
 	wInstance.chart=$.extend( true, {}, wInstance.defaultChart);
 	if ( wInstance.settings.tooltip && wInstance.settings.tooltip.position && wInstance.settings.tooltip.position == 'fixed' ) {
