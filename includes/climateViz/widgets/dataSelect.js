@@ -4,28 +4,28 @@ var places;
 var pService;
 var _colors = {
 	legend : {
-		'00ffff' : 'aqua',
+		//'00ffff' : 'aqua',
 		'3366cc' : 'blue',
 		'33cc33' : 'green',
-		'00ff00' : 'light green',
+		//'00ff00' : 'light green',
 		'cc3333' : 'red',
-		'cccc33' : 'dark yellow',
+		//'cccc33' : 'dark yellow',
 		'ffa500' : 'orange',
 		'cc66cc' : 'purple',
-		'ff6666' : 'pink',
-		'60b0b0' : 'teal'
+		//'ff6666' : 'pink',
+		//'60b0b0' : 'teal'
 	} ,
 	colors : {
-		'00ffff' : '#00ffff',
+		//'00ffff' : '#00ffff',
 		'3366cc' : '#3366cc',
 		'33cc33' : '#33cc33',
-		'00ff00' : '#00ff00',
+		//'00ff00' : '#00ff00',
 		'cc3333' : '#cc3333',
-		'cccc33' : '#cccc33',
+		//'cccc33' : '#cccc33',
 		'ffa500' : '#ffa500',
 		'cc66cc' : '#cc66cc',
-		'ff6666' : '#ff6666',
-		'60b0b0' : '#60b0b0'
+		//'ff6666' : '#ff6666',
+		//'60b0b0' : '#60b0b0'
 	} ,
 	keys       : [] ,
 	currentKey : 0
