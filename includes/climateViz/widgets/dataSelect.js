@@ -1435,7 +1435,7 @@ function stationBasedDataFetchAjax ( evt ) {
 			var mid = servermsg.results[0].mid;
 			var sid = servermsg.results[0].sid;
 
-			if (servermsg.results[0].station.missing) drop_missing_warning(wInstance, aaasClimateViz.widgets[widgetIndex].markers[mid].stations[sid].marker.icon.fillColor);
+			if (servermsg.results[0].station.missing >= .2) drop_missing_warning(wInstance, aaasClimateViz.widgets[widgetIndex].markers[mid].stations[sid].marker.icon.fillColor);
 
 			var series = {
 				seriesMeta : {
