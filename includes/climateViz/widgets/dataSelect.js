@@ -967,13 +967,9 @@ function getBoundsZoomLevel(wInstance) {
     return Math.min(latZoom, lngZoom, ZOOM_MAX);
 }
 
-//var addLocdeferred=$.Deferred();
-//wInstance._addLocpromise=addLocdeferred.promise();
-//addLocdeferred.resolve();
 function addLocation (e,wInstance) {
-	//wInstance._addLocpromise.done( function() {
-	var addLocdeferred=$.Deferred();
-	wInstance._addLocpromise=addLocdeferred.promise();
+	wInstance._addLocdeferred=new $.Deferred();
+	//var addLocpromise=wInstance._addLocdeferred.promise();
 	if (wInstance.settings.maxPoints && (Object.keys(wInstance.markers)).length >= wInstance.settings.maxPoints) {
 		for (i in wInstance.markers) {
 			removeLocation(i,wInstance);
@@ -1063,7 +1059,7 @@ function addLocation (e,wInstance) {
 			infowindow.open(wInstance.map,this);
 		});
 		this.infoWindow = infowindow;
-		
+		//$.when(wInstance._addLocdeferred).done(console.log("YAY"));
 		wInstance._callback({type:'user-select-location',data:{marker:marker,stationNames:e.stationNames}});
 		if (staticmap) {
 			google.maps.event.clearListeners(wInstance.map, 'click');
@@ -1071,7 +1067,6 @@ function addLocation (e,wInstance) {
 		}
 	});
 	geocoder.geocode( { latLng:marker.position } , function(results, status) { marker.init(results,status,e.staticmap); } );
-	//addLocdeferred.resolve();
 	//});
 }
 
@@ -1091,7 +1086,7 @@ function syncList (marker) {
 }
 
 function refreshStations ( evt ) {
-	console.log("refreshStations",evt.data,this.markers);
+	console.log("refreshStations",evt,evt.data,this.markers);
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
 	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
@@ -1248,6 +1243,7 @@ function refreshStations ( evt ) {
 	} );
 }
 function removeLocation ( markerID , wInstance ) {
+	if (typeof(wInstance.markers[markerID])=='undefined') return
 	removeStations( markerID , wInstance );
 	wInstance.markers[markerID].setVisible( false );
 	wInstance.markers[markerID].setMap( null );
@@ -1255,9 +1251,11 @@ function removeLocation ( markerID , wInstance ) {
 	delete wInstance.data[markerID];
 	wInstance.bounds = new google.maps.LatLngBounds();
 	for (i in wInstance.markers) wInstance.bounds.extend(wInstance.markers[i].position);
+	//wInstance._addLocdeferred.resolve();
 	// TODO: alert data processing callback if a selected station was removed
 }
 function removeStations ( markerID , wInstance ) {
+	if (typeof(wInstance.markers[markerID])=='undefined') return;
 	for ( i in wInstance.markers[markerID].stations ) {
 		wInstance.markers[markerID].stations[i].marker.setVisible( false );
 		wInstance.markers[markerID].stations[i].marker.setMap( null );
@@ -1292,7 +1290,6 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
  else console.log("THIS CAN ACTUALLY HAPPEN 2");
 	//function checkYearsatStation(date_ranges_array,wInstance);	
  // fix datetimes to strings in an attempt to avoid timezone adjustments
-	checkAvailableYears(date_ranges_array,wInstance);
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
 		date_ranges_array[i].end = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].end ) + ' ' + date_ranges_array[i].end.toLocaleTimeString();
