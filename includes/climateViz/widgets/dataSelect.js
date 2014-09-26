@@ -41,7 +41,7 @@ $.datepicker._updateDatepicker = function(){
 };
 function drop_missing_warning(wInstance, color) {
 	//while (wInstance.settings.container.find('.missing-data-warning').is(':animated')){ continue;}
-
+	if (wInstance.settings.container.find('.missing-data-warning').css('color')==color && wInstance.settings.container.find('.missing-data-warning').is(':animated')) return;
 	wInstance.settings.container.find('.missing-data-warning').promise().done(function () {
 	wInstance.settings.container.find('.missing-data-warning')
 	.css('color', color)

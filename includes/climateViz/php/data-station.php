@@ -102,7 +102,8 @@ foreach ($date_ranges as $date_range) {
 			//$data['results'][key($data['results'])]['station']['data'][] = $data_value;
 			//$data['results'][key($data['results'])]['station']['data'][] = $date_data[$record['date_recorded']];
 		}
-		$data['results'][key($data['results'])]['station']['missing'] = (1.0-($recordcount/count($date_data));
+		$date_data_length = count($date_data);
+		$data['results'][key($data['results'])]['station']['missing'] = (1.0-($recordcount/$date_data_length));
 		$data['results'][key($data['results'])]['station']['data'] = array_values($date_data);
 	}
 }
