@@ -473,7 +473,7 @@ At the completion of each module you can check your understanding of the feature
 			</div>
 					
 			<div>
-				<p>The graph shows the average daily temperatures in Tingri (14,108 feet above sea level) and Gorakhpur (253 feet above sea level) from December 31, 2003 to December 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Tingri (14,108 feet above sea level) and Gorakhpur (253 feet above sea level) from January 1, 2004 to December 31, 2004.</p>
 			</div>
 			<div>
 				<p>What do you notice about the graph of the temperatures at the two locations?</p> 
