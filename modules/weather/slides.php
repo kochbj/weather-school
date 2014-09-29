@@ -355,7 +355,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>Now let's look at two locations in the Southern Hemisphere. On the map above, Santa Cruz de la Sierra, a city in Boliva, and Cordoba, a city in Argentina, are pinpointed. These two locations are about 1,000 miles apart.</p>
 			</div>
 			<div>
-				<p>The graph shows the average daily temperatures in Santa Cruz de la Sierra and Cordoba from December 31, 2003 to December 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Santa Cruz de la Sierra and Cordoba from January 1, 2004 to December 31, 2004.</p>
 			</div>
 			<div>
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is <i>colder</i> almost every day of the year in the place that is farther south.</p>
