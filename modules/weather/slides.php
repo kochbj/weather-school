@@ -312,7 +312,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>In the map above, Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
 			</div>
 			<div>			
-				<p>The graph shows the average daily temperatures in Winnipeg and San Antonio from December 31, 2003 to December 30, 2004. </p>
+				<p>The graph shows the average daily temperatures in Winnipeg and San Antonio from January 1, 2004 to December 31, 2004. </p>
 			</div>
 			<div>
 				<p>Look at the pattern of temperatures at the two places.</p>
