@@ -900,10 +900,10 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			
 			<div>	<p>1. Choose a range of dates that covers between two and three years. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
-				<p>2. Choose two locations to create a graph to see the difference in the length of day at those two locations.</p>
 			</div>
 			<div>
-				<p>3. Repeat the activity as many times as you like.</p>
+				<p>2. Choose two locations to create a graph to see the difference in the length of day at those two locations.</p>
+				<p>3. Repeat the activity as many times as you like before moving on to the next activity.</p>
 			</div>
 		
 		</div>
