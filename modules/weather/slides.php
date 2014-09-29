@@ -264,7 +264,7 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			<div>
 				
-					<p>1. Choose a place on the map. Choose a range of dates that covers more than just a single year. Click the "Start" calendar and click on a date to choose the starting date. Click on the "End" calendar and click on a date to choose the ending date. You can make the range of dates up to five years long.</p>
+					<p>1. Choose a place on the map. Choose a range of dates that covers more than just a single year. Click the "Start" calendar then click a specific date to choose the starting date. Click the "End" calendar then click a specific date to choose the ending date. You can make the range of dates up to five years long.</p>
 			</div>
 			<div>
 					<p>2. Observe the pattern in temperature at that place.</p>
