@@ -570,7 +570,7 @@ At the completion of each module you can check your understanding of the feature
 			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of the marker and Kautokeino is southeast.</p>
 			</div>
 			<div>
-				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from December 31, 2003 to Dec. 30, 2004.</p>
+				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from January 1, 2004 to Dec. 31, 2004.</p>
 			</div>
 			<div>
 				<p>What you see here is that in the winter and early spring in Kautokeino, the place that is farther from the water, is quite a bit colder than Tromso, which is close to the water, but in the summer, Tromso is a little cooler than Kautokeino.</p>
