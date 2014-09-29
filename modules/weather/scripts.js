@@ -534,7 +534,7 @@ var slideInit = {
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
-						else if (currSlide >= 6) {
+						else if (currSlide >= 8) {
 							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "2004-01-01T17:00:00Z", "2004-12-31T17:00:00Z" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
