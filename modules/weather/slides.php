@@ -106,7 +106,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints Washington, DC, and the graph shows the <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span> in Washington, DC from April 2, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
+				<p>The map above pinpoints Washington, DC, and the graph shows the <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span> in Washington, DC from April 2, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way. (Hover over the words "average daily temperatures" to learn more about that particular term and any other underlined term in these modules.)</p>
 			</div>
 			<div>
 				<p>If you hover the mouse over the line on the graph, the date and temperature for each point of the line appear. You can see how much change there is in the average temperature from day to day.</p>
