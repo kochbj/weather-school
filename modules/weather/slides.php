@@ -707,7 +707,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>1. Choose a place anywhere in the world.</p>
 				<p>2. Choose a range of dates spanning at least a year. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
 			</div>
-			<dvi>
+			<div>
 				<p>3. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
 			</div>
 		
