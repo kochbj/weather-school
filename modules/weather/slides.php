@@ -398,7 +398,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>1. Choose two places on the map that are directly north and south of each other (on the same <span class="tooltip" title="Any imaginary arc running from the North Pole to the South Pole, used to locate a place east or west of the prime meridian. The prime meridian is an arc that runs from the North Pole to the South Pole through Greenwich, England. It is defined as the zero line of longitude. New York City is located at 74 degrees west longitude, that is, 74 degrees west of the prime meridian.">line of longitude</span>) and at least <span class="tooltip" title="To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.">1000 miles</span> apart.</p>
 			</div>
 			<div>
-				<p>2. Now use the calendar to choose a date range. Choose two dates that are one year apart. For example, you could choose January 1, 2000 and December 31, 2000.</p>
+				<p>2. Now use the calendar to choose a date range. Choose two dates that are one year apart.  For example, you could choose January 1, 2000 and December 31, 2000. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
 			</div>
 			<div>
 				<p>3. Choose two other places and see if the pattern holds in those places too. Just make sure they are far enough apart so that differences in temperature are large enough to show up on the graph. Try as many additional pairs of places as you would like.</p>
@@ -507,7 +507,7 @@ At the completion of each module you can check your understanding of the feature
 	
 			</div>
 			<div>	
-				<p>3. Now click on the "Start" calendar to choose a starting date and the End calendar to choose an ending date. Pick dates at least one year apart. If you get a graph for only one of the locations, it may be because no data was reported at that station. Just click on another dot until you get a temperature graph for two different locations.</p>
+				<p>3. Now click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date. Pick dates at least one year apart. If you get a graph for only one of the locations, it may be because no data was reported at that station. Just click on another dot until you get a temperature graph for two different locations.</p>
 			
 				
 			</div>
@@ -609,7 +609,7 @@ At the completion of each module you can check your understanding of the feature
 				<p>2. The 20 closest reporting stations appear as yellow dots around the location you chose. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is further inland. Click on both reporting stations to highlight them.</p>
 			</div>
 			<div>
-				<p>3. Now click on the "Start" calendar to choose a starting date and the end calendar to choose an ending date. Pick dates at least one year apart.</p>
+				<p>3. Now click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date. Pick dates at least one year apart.</p>
 			</div>
 			<div>
 				<p>4. When you choose locations, make sure that one of them is not at a much higher elevation than the other one. Coastal areas often have mountains nearby, so when comparing two locations just make sure one of them is not in the mountains and the other at sea level. </p>
@@ -705,7 +705,7 @@ At the completion of each module you can check your understanding of the feature
 		<div class="slider">
 			<div>
 				<p>1. Choose a place anywhere in the world.</p>
-				<p>2. Choose a range of dates spanning at least a year.</p>
+				<p>2. Choose a range of dates spanning at least a year. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
 				<p>3. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
 			</div>
 		
@@ -897,7 +897,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="instructions">
 		<div class="slider">
 			
-			<div>	<p>1. Choose a range of dates that covers between two and three years.</p>
+			<div>	<p>1. Choose a range of dates that covers between two and three years. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
 				<p>2. Choose two locations to create a graph to see the difference in the length of day at those two locations.</p>
 				<p>3. Repeat the activity as many times as you like.</p>
 			</div>
