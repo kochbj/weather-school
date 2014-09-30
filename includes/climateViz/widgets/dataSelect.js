@@ -1092,7 +1092,7 @@ function refreshStations ( evt ) {
 	if ( !evt.data || !evt.data.marker ) {
 		//stationBasedDataFetch( false , false , this ); return;
 		for (i in wInstance.markers) {
-			refreshStations({marker:wInstance.markers[i]});
+			refreshStations({type:'user-select-location',data:{marker:wInstance.markers[i]}});
 		}
 		return;
 	}
