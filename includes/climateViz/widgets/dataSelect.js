@@ -1089,7 +1089,12 @@ function refreshStations ( evt ) {
 	console.log("refreshStations",evt,evt.data,this.markers);
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
-	if ( !evt.data || !evt.data.marker ) { stationBasedDataFetch( false , false , this ); return; }
+	if ( !evt.data || !evt.data.marker ) {
+		//stationBasedDataFetch( false , false , this ); return;
+		for (i in wInstance.markers) {
+			refreshStations({marker:wInstance.markers[i]});
+		}
+	}
 	// TODO: implement station removal as a separate callback routine?
 	removeStations( evt.data.marker.id , this );
 	
