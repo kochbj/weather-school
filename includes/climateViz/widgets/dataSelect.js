@@ -1094,6 +1094,7 @@ function refreshStations ( evt ) {
 		for (i in wInstance.markers) {
 			refreshStations({marker:wInstance.markers[i]});
 		}
+		return;
 	}
 	// TODO: implement station removal as a separate callback routine?
 	removeStations( evt.data.marker.id , this );
