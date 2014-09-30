@@ -1110,12 +1110,12 @@ function refreshStations ( evt ) {
 		}
 	} 
 	//else { stationBasedDataFetch( false , false , this ); return; };
-	/*else {
+	else {
 		date_ranges_array.push( {
 			begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
 			end   : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
 		} );
-	}*/
+	}
 	// fix datetimes to strings in an attempt to avoid timezone adjustments
 	for ( i in date_ranges_array ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
