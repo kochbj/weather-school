@@ -1147,7 +1147,7 @@ function refreshStations ( evt ) {
 			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0];
 			if (!canSelectStation) {
 				console.log(wInstance.markers[servermsg[0].mid].infoWindow);
-								if (typeof(wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)==null) {
+								if (typeof(wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)==null)) {
 													wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.slice(0,-6)+'<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div></div>';
 								}
 								else {
