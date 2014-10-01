@@ -1146,7 +1146,7 @@ function refreshStations ( evt ) {
 			wInstance.markers[servermsg[0].mid].sindex = servermsg[0].sindex;
 			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0];
 			if (!canSelectStation) {
-				console.log(Instance.markers[servermsg[0].mid].infoWindow);
+				console.log(wInstance.markers[servermsg[0].mid].infoWindow);
 				wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.slice(0,-6)+'<div class="location">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div></div>';
 		 		if (wInstance.settings.date.type.split('-').slice(-1)!="restricted"){
 					wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
