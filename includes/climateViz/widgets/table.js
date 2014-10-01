@@ -24,11 +24,9 @@ function createTable(data, wInstance) {
 	for (datapoint in data[seriesKeys[0]].dataMeta) {
 		tblCols.append('<col id="'+datapoint+'">');
 		tbl.find('tr.header').append('<th title="">'+data[seriesKeys[0]].dataMeta[datapoint].label+'</th>');
-		if ('tooltip' in data[seriesKeys[0]].dataMeta[datapoint]) {
-			tbl.find('tr.header th:last-child').tooltip({tooltipClass:'table-tooltip', show: {effect: "fadeIn", duration: 500 ,delay:1000}, position: {my: "center bottom", at: "center top"}, content: data[seriesKeys[0]].dataMeta[datapoint].tooltip});
-			console.log(data[seriesKeys[0]].dataMeta[datapoint].tooltip);
+		if ('info' in data[seriesKeys[0]].dataMeta[datapoint]) {
+			tbl.find('tr.header th:last-child').tooltip({tooltipClass:'table-tooltip', show: {effect: "fadeIn", duration: 500 ,delay:1000}, position: {my: "center bottom", at: "center top"}, content: data[seriesKeys[0]].dataMeta[datapoint].info});
 		}
-		console.log(data[seriesKeys[0]].dataMeta[datapoint]);
 		if (wInstance.settings.selectForOutput && typeof(wInstance.selection)!='undefined'){
 			for (i in wInstance.selection){
 				if (wInstance.selection[i] == datapoint) {

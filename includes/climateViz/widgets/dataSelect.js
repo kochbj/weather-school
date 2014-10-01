@@ -1048,7 +1048,7 @@ function addLocation (e,wInstance) {
 		
 		var contentString = '<div class="infoWindow" style="width:170px; line-height:1.35; overflow:hidden; white-space:nowrap;">';
 		contentString += '<div class="name">'+(this.location.city?this.location.city:'')+'</div><div class="location">'+(this.location.state?this.location.state+', ':'')+(this.location.country?this.location.country:'')+'</div>';
-		contentString += '<div class="user coords">'+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'</div>';
+		contentString += '<div class="user coords">'+Math.abs(Math.round(marker.userCoords.lat()*100)/100)+(marker.userCoords.lat()<0?'S':'N')+' , '+Math.abs(Math.round(marker.userCoords.lng()*100)/100)+(marker.userCoords.lng()<0?'W':'E')+'<div class="station"></div></div>';
 		//if (!staticmap) contentString += '<div class="remove-link"><a href="#" onclick="event.preventDefault(); event.stopPropagation(); removeLocation(\''+this.id+'\',aaasClimateViz.widgets['+wInstance.index+']);">remove this marker</a></div>';
 		contentString += '</div>';
 		var infowindow = new google.maps.InfoWindow({
@@ -1086,10 +1086,11 @@ function syncList (marker) {
 }
 
 function refreshStations ( evt ) {
+	var canSelectStation = ( ('maxStations' in this.settings) && this.settings.maxStations > 0 );
 	console.log("refreshStations",evt,evt.data,this.markers);
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
-	if ( !evt.data || !evt.data.marker ) {
+	if ( (!evt.data || !evt.data.marker) && !canSelectStation ) {
 		//stationBasedDataFetch( false , false , this ); return;
 		for (i in wInstance.markers) {
 			wInstance._callback({type:'user-select-location',data:{marker:wInstance.markers[i]}});
@@ -1127,7 +1128,6 @@ function refreshStations ( evt ) {
 		date_ranges_array[i].begin = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].begin ) + ' ' + date_ranges_array[i].begin.toLocaleTimeString();
 		date_ranges_array[i].end = $.datepicker.formatDate( 'yy-mm-dd' , date_ranges_array[i].end ) + ' ' + date_ranges_array[i].end.toLocaleTimeString();
 	}
-	var canSelectStation = ( ('maxStations' in this.settings) && this.settings.maxStations > 0 );
 	var query = {
 		mid          : evt.data.marker.id,
 		lat          : evt.data.marker.getPosition().lat(),
@@ -1146,14 +1146,11 @@ function refreshStations ( evt ) {
 			wInstance.markers[servermsg[0].mid].sindex = servermsg[0].sindex;
 			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0];
 			if (!canSelectStation) {
-				console.log(wInstance.markers[servermsg[0].mid].infoWindow);
-								if (typeof(wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)==null)) {
-													wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.slice(0,-6)+'<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div></div>';
-								}
-								else {
-				wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.replace(/<div class="station">([^<]*)<\/div>/,'<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div>');
-								}
-		 		if (wInstance.settings.date.type.split('-').slice(-1)!="restricted"){
+				var newstationContent='<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div>'
+				var oldstationContent=  wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)[0];
+				console.log(oldstationContent);
+				wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.replace(/<div class="station">([^<]*)<\/div>/,newstationContent);
+		 		if (wInstance.settings.date.type.split('-').slice(-1)!="restricted" && newstationContent != oldstationContent){
 					wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
 					setTimeout(function() {wInstance.markers[servermsg[0].mid].infoWindow.close();}, 2000);
 				}
@@ -1458,8 +1455,8 @@ function stationBasedDataFetchAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date_recorded : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , format : function ( dateObj , dateFormat ) { if ( !dateFormat ) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate( dateFormat , dateObj ); } , highchart : { axis : { dateTimeLabelFormats : { second:'%b %e' , minute:'%b %e' , hour:'%b %e' , day:'%b %e' , week:'%b %e' , month:'%b %e' , year:'%b %e' } } } },
-				temp : { type : 'float' , label : 'Average air temperature' , labelShort : 'Average temperature (°F)' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } }
+				date_recorded : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day',	format : function ( dateObj , dateFormat ) { if ( !dateFormat ) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate( dateFormat , dateObj ); } , highchart : { axis : { dateTimeLabelFormats : { second:'%b %e' , minute:'%b %e' , hour:'%b %e' , day:'%b %e' , week:'%b %e' , month:'%b %e' , year:'%b %e' } } } },
+				temp : { type : 'float' , label : 'Average air temperature' , labelShort : 'Average temperature (°F)' , tooltip:'Avg temp',  range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } }
 			};
 			if (aaasClimateViz.widgets[widgetIndex].settings.data.fields && aaasClimateViz.widgets[widgetIndex].settings.data.fields.length > 0) {
 				var dpInclude = [];
@@ -1575,13 +1572,13 @@ function calculatedSolarDataFetch( evt ) {
 			data : [],
 		};
 		var dataPoints = {
-			date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
+			date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
 			// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
-			lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
-			lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
-			sunAngle : { type : 'float' , label : 'Maximum height of the sun in the sky' , labelShort : 'Max height of sun ( ° )' , range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
-			sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , range : [0,24] , format : function ( val ) {  return ( Math.round( val * 10 ) / 10 ) + ' hours'; } },
-			sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Theo energy (W-h/m<sup>2</sup>/d)' , range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' Watt-hours per meter<sup>2</sup> per day'; } },
+			lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , tooltip: 'Lat', range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
+			lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , tooltip: 'Lat',  range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
+			sunAngle : { type : 'float' , label : 'Maximum height of the sun in the sky' , labelShort : 'Max height of sun (°)', tooltip:'Max height sun', range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
+			sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , tooltip: 'Hrs light', range : [0,24] , format : function ( val ) {  return ( Math.round( val * 10 ) / 10 ) + ' hours'; } },
+			sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Theo energy (W-h/m<sup>2</sup>/d)' , tooltip: 'Theo energy', range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' Watt-hours per meter<sup>2</sup> per day'; } },
 			sunImage : { type : 'string' , label : 'How the sun appears at its highest point' , labelShort : 'Sun Appearance' , format : function ( val ) { return '<img src="' + val + '" />'; } }
 		};
 		if (this.settings.data.fields && this.settings.data.fields.length > 0) {
@@ -1857,18 +1854,18 @@ function fetchStatsAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date : { type : 'datetime' , label : 'Date' , labelShort : 'Date' , format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy-M-d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
+				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy-M-d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 				//lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 				//lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
-				tempavg : { type : 'float' , label : 'Average air temperature' , labelShort : 'Average temperature (°F)' , range: [0,100] , format : function ( val ) { return Math.round( val )  + '°F'; }, tooltip: "The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect air temperature data every hour, and some collect air temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date." },
+				tempavg : { type : 'float' , label : 'Average air temperature' , labelShort : 'Average temperature (°F)' , tooltip: 'Avg temp', range: [0,100] , format : function ( val ) { return Math.round( val )  + '°F'; }, info: "The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect air temperature data every hour, and some collect air temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date." },
 				//tempmin : { type : 'float' , label : 'Average low temperature' , labelShort : 'Avg Lo Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
 				//tempmax : { type : 'float' , label : 'Average high temperature' , labelShort : 'Avg Hi Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F' ; } },
-				sunAngle : { type : 'float' , label : 'Max height of sun in sky' , labelShort : 'Max height of sun ( ° )' , range : [0,90] , format : function ( val ) { return Math.round( val ) + '°'; }, tooltip: '<img height="75" width="75" style="float:right; vertical-align:top;" src="'+aaasClimateViz.settings.__libraryURI + '/widgets/media/45-degrees-sun.png"/>The maximum height of the sun in the sky is the maximum angle sun reaches with respect to a person on earth and the eastern horizon.' },
-				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ); } },
+				sunAngle : { type : 'float' , label : 'Max height of sun in sky' , labelShort : 'Max height of sun (°)', tooltip: 'Max height sun', range : [0,90] , format : function ( val ) { return Math.round( val ) + '°'; }, info: '<img height="75" width="75" style="float:right; vertical-align:top;" src="'+aaasClimateViz.settings.__libraryURI + '/widgets/media/45-degrees-sun.png"/>The maximum height of the sun in the sky is the maximum angle sun reaches with respect to a person on earth and the eastern horizon.' },
+				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , tooltip: 'Hrs light', range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ); } },
 				//sunEnergy : { type : 'float' , label : 'Energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' Watt-hours per meter<sup>2</sup> per day' ); } },
-				sunEnergy : { type : 'float' , label : 'Daily recorded energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Rec energy (W-h/m<sup>2</sup>/d)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val)  ); }, tooltip: 'Watt-hours per meter squared per day is the total amount of solar energy (watts) that struck the earth\'s surface over the course of the day on that date at that location. It is measured using rea; solar panels, so it may differ from the theoretical number because of cloud cover.'  },
-				sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Theo energy (W-h/m<sup>2</sup>/d)' , range : [0,10000] , format : function ( val ) { return Math.round( val ); }, tooltip: 'Watt-hours per meter squared per day is the total amount of solar energy (watts) that struck the earth\'s surface over the course of the day on that date at that location. This amount is calculated from the angle that the sun\'s rays hit that location at that time of year.' },
+				sunEnergy : { type : 'float' , label : 'Daily recorded energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Rec energy (W-h/m<sup>2</sup>/d)' , tooltip: 'Rec energy', range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val)  ); }, info: 'Watt-hours per meter squared per day is the total amount of solar energy (watts) that struck the earth\'s surface over the course of the day on that date at that location. It is measured using rea; solar panels, so it may differ from the theoretical number because of cloud cover.'  },
+				sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Theo energy (W-h/m<sup>2</sup>/d)' , tooltip: 'Theo energy', range : [0,10000] , format : function ( val ) { return Math.round( val ); }, info: 'Watt-hours per meter squared per day is the total amount of solar energy (watts) that struck the earth\'s surface over the course of the day on that date at that location. This amount is calculated from the angle that the sun\'s rays hit that location at that time of year.' },
 				sunImage : { type : 'string' , label : 'How the sun appears at its highest point' , labelShort : 'Sun Appearance' , format : function ( val ) { return '<img src="' + val + '" />'; } }
 			};
 			if (aaasClimateViz.widgets[widgetIndex].settings.data.fields && aaasClimateViz.widgets[widgetIndex].settings.data.fields.length > 0) {

@@ -53,8 +53,10 @@ function createChart (wInstance) {
 			}
 			if (wInstance.settings.tooltip && wInstance.settings.tooltip.detail && wInstance.settings.tooltip.detail == 'short' && wInstance.data[series].dataMeta[dataKeys[idxDataKey]].labelShort) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.text = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].labelShort;
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.tooltiptext = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].tooltip;
 			} else if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].label) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.text = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].label;
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.tooltiptext = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].tooltip;
 			} else {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.text = null;
 			}
@@ -84,7 +86,7 @@ function createChart (wInstance) {
 					yVal = this.y;
 				}
 				if ( wInstance.settings.tooltip && wInstance.settings.tooltip.detail && wInstance.settings.tooltip.detail == 'short' ) {
-					return this.series.xAxis.options.title.text + ': ' + xVal + ' ¦ ' + this.series.yAxis.options.title.text + ': ' + yVal;
+					return this.series.xAxis.options.title.tooltiptext + ': ' + xVal + ' ¦ ' + this.series.yAxis.options.title.tooltiptext + ': ' + yVal;
 				} else {
 					return '<b>'+ this.series.name +'</b><br/>'+
 						this.series.xAxis.options.title.text + ': ' + xVal + '<br>' +
