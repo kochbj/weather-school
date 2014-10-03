@@ -1255,7 +1255,7 @@ function refreshStations ( evt ) {
 	if ( (!evt.data || !evt.data.marker) ) {
 		//stationBasedDataFetch( false , false , this ); return;
 		for (i in wInstance.markers) {
-			wInstance._callback({type:'user-select-location',data:{marker:wInstance.markers[i]}});
+			if (!canSelectStation) wInstance._callback({type:'user-select-location',data:{marker:wInstance.markers[i]}});
 		}
 		return;
 	}
