@@ -1025,6 +1025,30 @@ var slideInit = {
 			);
 		}
 	},
+	'location-data-finder' : {
+		is_initialized : false ,
+		initialize : function ( ) {
+			aaasClimateViz.loadWidget(
+				'dataSelect',
+				{
+					data           : { source:'location-stats' },
+					date           : { type:'month-day' , max:1 },
+					maxPoints      : 1,
+					container      : $( '#location-data-finder-ds' ),
+					displayWidgets : [
+						aaasClimateViz.loadWidget(
+							'statspanel',
+							{
+								container : $( '#location-data-finder-sp' ) ,
+								callbacks : [ widgetScroll ]
+							}
+						)
+					],
+					callbacks : [ mapXvis ]
+				}
+			);
+		}
+	},
 	'variable-relationship-explorer' : {
 		is_initialized : false ,
 		initialize : function ( ) { 
@@ -1032,7 +1056,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'year-month-day' , max:12 },
+					date           : { type:'month-day' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#variable-relationship-explorer-ds' ),
 					displayWidgets : [

@@ -1014,8 +1014,8 @@ At the completion of each module you can check your understanding of the feature
 		<h2>Location Data Finder</h2>
 	</div>
 	<div class="workarea">
-		<div id="dataSelector-tryit"></div>
-		<div id="statspanel-tryit"></div>
+		<div id="location-data-finder-ds" class="full-ds"></div>
+		<div id="location-data-finder-sp" class="full-sp"></div>
 	</div>
 	<div class="instructions">
 		<p>You can explore more places and times of the year above. Go to the next page to continue to a new activity.</p>

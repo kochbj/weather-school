@@ -54,6 +54,7 @@
 .workarea .full-tb > .mCustomScrollBox > .mCSB_container { margin-right: 15px; }
 .workarea .split-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
 
+.workarea .full-sp { right: 0px; left: 100%; width: 64%; height:100%;  display: none;}
 //.workarea .split-tc.unrestricted{display: none; }
 //.workarea .split-tb.unrestricted{display: none; }
 

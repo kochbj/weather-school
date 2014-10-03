@@ -5,6 +5,7 @@
 .widget.statspanel table {
 	border: 1px solid #666;
 	border-collapse: collapse;
+	width: 100%;
 }
 .widget.statspanel table th,
 .widget.statspanel table td {
@@ -12,7 +13,6 @@
 	border: 1px solid #666;
 	vertical-align: top;
 	text-align: left;
-	max-width: 250px;
 }
 .widget.statspanel table td .legend {
 	font-size: 78%;
@@ -25,16 +25,7 @@
 	margin: 0em 1em;
 }
 .widget.statspanel table .sunAngle img {
-	width: 250px;
-}
-.widget.statspanel table .sunAngle .angle-val.positioned {
-	background-color: rgba(255,255,255,0);
-	padding: 3px;
-	border-radius: 6px;
-}
-
-.widget.statspanel table .sunAngle td {
-	position: relative;
+	width: 100%;
 }
 
 .widget.statspanel .readings-note {
