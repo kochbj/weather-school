@@ -1033,7 +1033,7 @@ var slideInit = {
 				{
 					data           : { source:'location-stats' },
 					date           : { type:'month-day' , max:1 },
-					maxPoints      : 1,
+					maxPoints      : 2,
 					container      : $( '#location-data-finder-ds' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(

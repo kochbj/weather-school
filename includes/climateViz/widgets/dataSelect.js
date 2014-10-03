@@ -201,10 +201,12 @@ function dataSelect_instantiate(wInstance) {
 				case 'month-day-restricted' :
 				case 'month-day' :
 				wInstance.map.date.addClass( 'month-day' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
-				wInstance.settings.date.type == 'month-day' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
-				$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: '.map-date, .calendar-cover' } );	
+				if ( wInstance.settings.date.max != 1 ) {
+					wInstance.settings.date.type == 'month-day' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
+					$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: '.map-date, .calendar-cover' } );
+					wInstance.settings.date.type == 'month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');
+				}
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
-				wInstance.settings.date.type == 'month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected')	
 				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
 				wInstance.map.date.ui.wInstance = wInstance;
 				//used for closing and opening datepicker
@@ -217,7 +219,7 @@ function dataSelect_instantiate(wInstance) {
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
-						tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
 				 	}
 				};
 				_deactivateDpicker = function () {
@@ -225,8 +227,7 @@ function dataSelect_instantiate(wInstance) {
 						$( '.widget-cover' ).hide();
 						tog.removeClass( 'active' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
-						tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
-						console.log(tog.parents( '.map-date' ));	
+						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
 				};
 				_activateDpicker = function () {
 						tog.addClass( 'active' );
@@ -256,14 +257,16 @@ function dataSelect_instantiate(wInstance) {
 						selectedDates.push(selectedDate);
 						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
 						
-						if (selectedDates.length > 0) {
-							displayStr = '';
-							for (i in selectedDates) {
-								displayStr += ' ' + $.datepicker.formatDate('M dd', selectedDates[i]) + '<br>';
-								wInstance.settings.date.type == 'month-day'? wInstance.map.date.tooltip('option','content','Selected:<br>'+ displayStr) : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected:<br>'+ displayStr);							}
-						} 
-						else {
-								wInstance.settings.date.type == 'month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
+						if ( wInstance.settings.date.max != 1 ) {
+							if (selectedDates.length > 0) {
+								displayStr = '';
+								for (i in selectedDates) {
+									displayStr += ' ' + $.datepicker.formatDate('M dd', selectedDates[i]) + '<br>';
+									wInstance.settings.date.type == 'month-day'? wInstance.map.date.tooltip('option','content','Selected:<br>'+ displayStr) : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected:<br>'+ displayStr);							}
+							}	 
+							else {
+									wInstance.settings.date.type == 'month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
+							}
 						}
 						ui.dpDiv.parent().datepicker( 'refresh' );
 						_deactivateDpicker();
@@ -1881,8 +1884,7 @@ function calculatedSolarDataFetch( evt ) {
 function fetchStats( evt ) {
 	var dateMin, dateMax, query, queryID;
 	var wInstance = this;
-	if ( Object.keys( this.markers ).length == 0 || !this.map.date || !this.map.date.data( 'value' ) || wInstance.map.date.data('value').length==0 ) { return; }
-	
+	if ( Object.keys( this.markers ).length == 0 || !this.map.date || typeof(this.map.date.data( 'value' ))=='undefined' || wInstance.map.date.data('value').length==0 ) { return; }	
 	// FIXME: There isn't currently a way to only fetch needed data. So we'll first delete all data and rebuild the data cache.
 	// We need to build a better data handler because this is extremely inefficient.
 	this.data = {};
@@ -1921,6 +1923,7 @@ function fetchStats( evt ) {
 				$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify('ready');
+						console.log("GOT THIS NOTIFY");
 						wInstance.settings.displayWidgets[i].loadData(wInstance.data);
 					}
 				});
