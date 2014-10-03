@@ -32,7 +32,7 @@
 .widget.dataSelect .map-info .full-width .lat , .widget.dataSelect .map-info .full-width .lng , .widget.dataSelect .map-info .full-width .elev { text-align: left; display: inline-block; width: 4.5em; }
 .widget.dataSelect.width-200 .full-width  { display: none; }
 .widget.dataSelect .map-info .restricted-width { margin-left: -15px; display: none; }
-.widget.dataSelect.width-200 .map-date {left: 28px;}
+//.widget.dataSelect.width-200 .map-date {left: 28px;}
 .widget.dataSelect.width-200 .map-info .restricted-width { display: none; }
 
 .widget.dataSelect .map-date {
@@ -160,11 +160,21 @@
 .widget.dataSelect .map-date .input input:focus {outline: 0; }
 .widget.dataSelect .map-date .input .date-label { text-align: right; display: inline; }
 
-/* styles for date control "month-day" selection */
+/*styles for date control "month-day" selection
 .widget.dataSelect .map-date.month-day { max-width: 200px; }
 .widget.dataSelect .map-date.month-day .title { background-color: #cce0ff; }
 .widget.dataSelect .map-date.month-day input { width: 95%; margin: .15em 0em; }
 .widget.dataSelect .map-date.month-day .visual-control .datepicker { position: static; }
+*/
+
+/* styles for date control "year-month-day-range" selection */
+.widget.dataSelect .map-date.month-day { /*max-width: 180px;*/ text-align: right; }
+.widget.dataSelect .map-date.month-day > * { text-align: left; }
+.widget.dataSelect .map-date.month-day .input { display: inline-block; }
+.widget.dataSelect .map-date.month-day .toggle  { position: static; display: inline-block; margin-bottom: -4px; }
+.widget.dataSelect .map-date.month-day .input input { width: 70px; text-align: left; min-width: 3.25em; padding: .15em .25em; background-color: transparent; border: none; border: 2px solid transparent; border-radius: 10px; height: 1.5em }
+.widget.dataSelect .map-date.month-day .visual-control { height: 20px; padding: 2px; background-color: transparent; border-radius: 10px; overflow: hidden; }
+.widget.dataSelect .map-date.month-day > div:hover .input input , .widget.dataSelect .map-date.month-day .input input:focus { background-color: rgba(72,116,192,.1); }
 
 /* styles for date control "month-day-alt" selection */
 .widget.dataSelect .map-date.month-day-alt { max-width: 200px; text-align: right; }

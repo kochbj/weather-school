@@ -37,6 +37,7 @@ var updateDatepickerOriginal = $.datepicker._updateDatepicker;
 $.datepicker._updateDatepicker = function(){
   var response = updateDatepickerOriginal.apply(this,arguments);
   $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
+	console.log($('#'+arguments[0].id).find('select'));
 	return response;
 };
 function drop_missing_warning(wInstance, color) {
@@ -197,6 +198,164 @@ function dataSelect_instantiate(wInstance) {
 	if (wInstance.settings.date) {
 		wInstance.map.date.html( '<div class="toggle"></div><div class="datepicker"></div>' );
 		switch (wInstance.settings.date.type) {
+				case 'month-day-restricted' :
+				case 'month-day' :
+				wInstance.map.date.addClass( 'month-day' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
+				wInstance.settings.date.type == 'month-day' ? wInstance.map.date.addClass('Dstooltip'): wInstance.settings.container.find('.calendar-cover').addClass('Dstooltip');
+				$( '.Dstooltip' ).tooltip( {tooltipClass: "dataSelect-tooltip", position: { at: "right-98 bottom-17" }, items: '.map-date, .calendar-cover' } );	
+				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
+				wInstance.settings.date.type == 'month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected')	
+				wInstance.map.date.ui.addClass( wInstance.map.date.width() > 200 ? 'width-410' : 'width-200' );
+				wInstance.map.date.ui.wInstance = wInstance;
+				//used for closing and opening datepicker
+				var tog = wInstance.map.date.find( '.toggle' );
+				var Dinput= wInstance.map.date.find( '.input input' );
+				_togoutside = function(e) {
+					var ele = $(e.target);
+					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						tog.removeClass('active');
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+						tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+				 	}
+				};
+				_deactivateDpicker = function () {
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						tog.removeClass( 'active' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+						tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						console.log(tog.parents( '.map-date' ));	
+				};
+				_activateDpicker = function () {
+						tog.addClass( 'active' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
+						$( '.widget-cover' ).show();
+						$( document ).on('click',_togoutside);
+				};
+				wInstance.map.date.ui.events = {
+					onSelect : function ( value , ui ) {
+						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
+						var selectedDate = new Date(2000,ui.selectedMonth,ui.selectedDay);
+						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
+						if (typeof(selectedDates) !== 'array' && typeof(selectedDates) !== 'object') {
+							selectedDates = [];
+						}
+						/* Remove the date if it already exists */
+						for (i in selectedDates) {
+							if ( selectedDate.getTime() == selectedDates[i].getTime() ) {
+								selectedDates.splice(i,1);
+								console.log(selectedDates);
+							}
+						}
+							/* Check to see if the max number of dates have been selected and remove the date at the top of the array if so */
+						if (wInstance.settings.date.max && selectedDates.length == wInstance.settings.date.max) {
+							selectedDates.shift();
+						}
+						selectedDates.push(selectedDate);
+						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
+						
+						if (selectedDates.length > 0) {
+							displayStr = '';
+							for (i in selectedDates) {
+								displayStr += ' ' + $.datepicker.formatDate('M dd', selectedDates[i]) + '<br>';
+								wInstance.settings.date.type == 'month-day'? wInstance.map.date.tooltip('option','content','Selected:<br>'+ displayStr) : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected:<br>'+ displayStr);							}
+						} 
+						else {
+								wInstance.settings.date.type == 'month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
+						}
+						ui.dpDiv.parent().datepicker( 'refresh' );
+						_deactivateDpicker();
+						wInstance._callback({type:'user-select-date'});
+					} ,
+					beforeShowDay : function ( dateObj ) {
+						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
+						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
+						var testDate = new Date();
+						for (i in selectedDates) {
+							/* Enable date so it can be deselected. Set style to be highlighted. */
+							testDate.setTime( selectedDates[i].getTime() );
+							testDate.setFullYear( 1995 );
+							if ( dateObj.getTime() == testDate.getTime() ) {
+								return [true,"selected"];
+							}
+						}
+						/* Dates not in the array are left enabled, but with no extra style */
+						return [true, ""];
+					}
+				}
+				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
+					altField        : wInstance.map.date.find( '.input input' ) ,
+					altFormat       : 'MM dd' ,
+					changeMonth     : true ,
+					changeYear      : false ,
+					showButtonPanel : false ,
+					//defaultDate     : new Date( 1995 , 0 , 1 ) ,
+					minDate         : new Date( [ 1995 , 1 , 1 ] ) ,
+					maxDate         : new Date( [ 1995 , 12 , 31] ) ,
+					buttonImageOnly : true ,
+					onSelect        : wInstance.map.date.ui.events.onSelect ,
+					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
+				});
+				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
+				wInstance.map.date.ui.dpDiv.hide();
+
+				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
+					var usrDate = aaasClimateViz.dateParser( $(this).val() );
+					if ($(this).val()=='' || usrDate == false ) return;
+					usrDate = new Date(usrDate);
+					console.log(usrDate);
+					usrDate.setFullYear( 1995 );
+					wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , usrDate );
+					
+					wInstance.map.date.ui.events.onSelect.call(
+							wInstance.map.date.ui.dpDiv[0] ,
+							$.datepicker.formatDate( 'mm/dd/yy' , usrDate ) ,
+							{
+								selectedDay   : usrDate.getDate() ,
+								selectedMonth : usrDate.getMonth() ,
+								dpDiv         : $( wInstance.map.date.ui.dpDiv.find( 'div.ui-datepicker-inline' ) )
+							}
+					);
+				});
+				
+				wInstance.map.date.ui.find('.ui-datepicker').addClass('hideYear');
+				if (wInstance.settings.date.max > 1) { wInstance.map.date.ui.addClass('hideNav'); }
+				
+				if (wInstance.settings.date.type == 'month-day') {	
+				tog.click( function ( evt ) {
+					if ( $( this ).hasClass( 'active' ) ) {
+						_deactivateDpicker();
+					}
+					else {
+					$( this ).parent( ).find( 'input' ).focus( );
+					}
+				});
+				wInstance.map.date.ui.find( '.input input' ).keydown( function ( evt ) {
+					 var keycode = (evt.keyCode ? evt.keyCode : evt.which);
+					 if(keycode == '13'){
+						$( this ).blur();
+						_deactivateDpicker(); 
+					 }
+				} );
+					Dinput.focus( function ( evt ) {
+						$( this ).autogrow( );
+						_activateDpicker();
+						if (typeof($(this).parents('.widget.dataSelect .map-date').data('value'))!='undefined' && $(this).parents('.widget.dataSelect .map-date').data('value').length!=0 ) {
+							var selectedDate= new Date( $(this).parents('.widget.dataSelect .map-date').data('value')[$(this).parents('.widget.dataSelect .map-date').data('value').length-1] );
+							selectedDate.setFullYear(1995);
+							$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , selectedDate );
+						}
+						else $( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , new Date(1,0,1995) );
+					} )
+					.blur( function ( evt ) {
+						$( this ).autogrow( );
+					} );
+				} else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
+				wInstance.map.date.find( '.input input' ).val( '' );
+				$( '.Dstooltip' ).tooltip( "close" );
+			break;
 			case 'year-month-day-restricted' :
 			case 'year-month-day' :
 				wInstance.map.date.addClass( 'year-month-day' ).html( '<div class="visual-control inline"><div class="input"><p class ="date-label">Date(s):</p><div class="toggle"></div><input type="text" size="3" placeholder="Enter Date " /></div><div class="datepicker"></div></div>' );
@@ -295,7 +454,6 @@ function dataSelect_instantiate(wInstance) {
 						return [true, ""];
 					}
 				}
-				var userTouch = false;
 				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
 					altField        : wInstance.map.date.find( '.input input' ) ,
 					altFormat       : 'yy M dd' ,
@@ -312,6 +470,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
+					console.log("THIS IS RUNNING");
 					/*if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
 						wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
@@ -1854,7 +2013,7 @@ function fetchStatsAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy-M-d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
+				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'MM d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e' } } } },
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 				//lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 				//lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },

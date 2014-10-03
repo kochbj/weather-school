@@ -697,7 +697,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'year-month-day-restricted' , max:12 },
+					date           : { type:'month-day-restricted' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#height-sun-air-temperature-example-ds' ),
 					displayWidgets : [
@@ -749,7 +749,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'year-month-day' , max:12 },
+					date           : { type:'month-day' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#height-sun-air-temperature-explore-ds' ),
 					displayWidgets : [
@@ -946,7 +946,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'year-month-day-restricted' , max:12 },
+					date           : { type:'month-day-restricted' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#daylight-air-temperature-example-ds' ),
 					displayWidgets : [
@@ -998,7 +998,7 @@ var slideInit = {
 				'dataSelect',
 				{
 					data           : { source:'location-stats' , fields:['-sunImage'] },
-					date           : { type:'year-month-day' , max:12 },
+					date           : { type:'month-day' , max:12 },
 					maxPoints      : 1,
 					container      : $( '#daylight-air-temperature-explore-ds' ),
 					displayWidgets : [
