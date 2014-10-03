@@ -1252,7 +1252,7 @@ function refreshStations ( evt ) {
 	console.log("refreshStations",evt,evt.data,this.markers);
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
-	if ( (!evt.data || !evt.data.marker) || !canSelectStation ) {
+	if ( (!evt.data || !evt.data.marker) ) {
 		//stationBasedDataFetch( false , false , this ); return;
 		for (i in wInstance.markers) {
 			wInstance._callback({type:'user-select-location',data:{marker:wInstance.markers[i]}});
