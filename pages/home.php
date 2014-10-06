@@ -8,8 +8,10 @@
 	<li>Guided activites to exemplify how to use the interactive maps and graphing tools to explore targeted concepts.
 	<li>“Quiz Yourself” questions at the end of each module to review module concepts</li>
 	<li>Dynamic models of the Earth-Sun system to help explain what happens as the Earth spins on its axis and rotates around the Sun over the course of the year</li>
+	/*
 	<li>Features for saving, viewing, and printing out responses to questions in the module—for a single user or a group of users in a classroom setting (requires account set-up)</li>
 	<li>Easy-to-use tutorials to update your knowledge of map reading, longitude and latitude, and basic graphing of linear relationships. </li>
+	*/
 </ul> 
 <p>Designed primarily for middle and high school students and their teachers, WeatherSchool @ AAAS.org can also be used by anyone with an interest in learning more about weather and climate.</p>
 
