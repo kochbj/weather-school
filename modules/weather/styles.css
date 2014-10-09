@@ -26,13 +26,25 @@
 .module-complete .guiding-questions > p {margin-left:30px;}
 
 .module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
-.module-intro h2 { opacity: .7; font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
-.module-intro .intro-text {position:absolute; top: 230px; opacity: .7; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em;}
+.module-intro h2 { font-weight: normal; background-color: rgba(142, 171, 197, .7); padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
+.module-intro .intro-text {position:absolute; top: 230px; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em;}
 .module-intro .intro-text p {margin: 15px 0 0 0;}
-.module-intro .contents-text {position:absolute; top: 230px; opacity: .7; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em; margin-left: 15px; width:470px; background-color:  #B7CCE0;}
+.module-intro .contents-text {position:absolute; top: 230px; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em; margin-left: 15px; width:470px; background-color:  rgba(183, 204, 224, .7);}
 .module-intro .intro-text p {margin: 15px 0 0 0;}
+.module-intro .photo-caption {
+	right: 0px;
+	position: absolute;
+	font-size: 40%;
 
-
+	}
+.module-intro .photo-caption a {color: black}
+.module-intro .photo-caption.side-caption {
+	transform-origin:right;
+	transform: rotate(-90deg) translateY(-.5em);
+}
+.module-intro .photo-caption.bottom-caption {
+	bottom: 0px;
+}
 #activity-intro { background-image: url(assets/activity-intro/earth-from-space.jpg); background-repeat: no-repeat; background-size: cover; font-size: 140%; }
 #activity-intro h3 { font-weight: normal; background-color: #919191; font-size: 160%; margin-top: 4em; padding: .5em 0em .5em 20px; }
 #activity-intro p { margin: 0; padding-left: 20px; }
@@ -62,43 +74,46 @@
 
 #daily-temperature-intro {background-image: url(assets/introduction/MoscowColdFront.jpg);}
 #daily-temperature-intro h2 {background-color:#c3c9d0; } 
-#daily-temperature-intro .intro-text {background-color:#949EAB; top:230px; }
+#daily-temperature-intro .intro-text, #daily-temperature-intro .photo-caption {background-color:rgba(148, 158, 171, .7);}
+//#daily-temperature-intro .intro-text {top:230px;}
 
 #annual-temperature-intro {background-image: url(assets/introduction/Seasons2010.jpg);}
-#annual-temperature-intro h2 {background-color:#dad9d6; opacity: .9; } 
-#annual-temperature-intro .intro-text {background-color:#dad9d6; top: 450px; opacity: .9; }
+#annual-temperature-intro h2,#annual-temperature-intro .intro-text, #annual-temperature-intro .photo-caption {background-color:rgba(218, 217, 214, .9); } 
+#annual-temperature-intro .intro-text {top: 450px;}
 
 #temperature-lat-intro {background-image: url(assets/introduction/Rj_north_york_moors.jpg);}
-#temperature-lat-intro h2 {background-color: #aabcd3;}
-#temperature-lat-intro .intro-text {background-color: #9f6345; top:425px; opacity: .9;}
-
+#temperature-lat-intro h2 {background-color: rgba(170, 188, 211, .3);}
+#temperature-lat-intro .intro-text,#temperature-lat-intro .photo-caption {background-color: rgba(159, 99, 69, .9);}
+#temperature-lat-intro .intro-text {top:425px; }
 #temperature-elevation-intro {background-image: url(assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg);}
 #temperature-elevation-intro h2 {background-color: #E5DAD6;}
 #temperature-elevation-intro .intro-text {background-color: #8595A4 /*#677b8d*/; top:235px;}
 
 #temperature-water-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
-#temperature-water-intro h2 {background-color: #438dca;}
-#temperature-water-intro .intro-text {background-color: #E3E3E3; top:403px;}
+#temperature-water-intro h2, #temperature-water-intro .photo-caption {background-color: rgba(67, 141, 202, .5);}
+#temperature-water-intro .photo-caption {top: 60px;}
+#temperature-water-intro .intro-text {background-color:rgba(227, 227, 227, .8); top:435px;}
 
 #height-sun-intro {background-image: url(assets/introduction/Sunset_TreeNeedAttribution.jpg);}
 #height-sun-intro h2 {background-color:#dc8a61;}
 #height-sun-intro .intro-text {background-color: #F28252; top: 125px;}
 
 #height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
-#height-sun-air-temperature-intro h2 {background-color:#4b6e8c;}
-#height-sun-air-temperature-intro .intro-text {background-color: #bb8f76; top: 560px;}
+#height-sun-air-temperature-intro h2 {background-color:rgba(75, 110, 140, .7);}
+#height-sun-air-temperature-intro .intro-text {background-color: rgba(187, 143, 118, .7); top: 560px;}
 
 #daylight-intro {background-image: url(assets/introduction/Sunset_at_Halong_Bay.jpg);}
-#daylight-intro h2 {background-color:#8c4048;}
-#daylight-intro .intro-text {background-color: #a5666b; top:180px;}
+#daylight-intro h2 {background-color: rgba(140, 64, 72, .45);}
+#daylight-intro .intro-text, #daylight-intro .photo-caption {background-color: rgba(165, 102, 107, .7);}
+#daylight-intro .intro-text { top:180px;}
 
 #daylight-air-temperature-intro {background-image: url(assets/introduction/Libya_Sunset.jpg);}
-#daylight-air-temperature-intro h2 {background-color: #f4c3c2; }
-#daylight-air-temperature-intro .intro-text {background-color: #856F6C /*#674b47*/; opacity: .9; top:445px;}
+#daylight-air-temperature-intro h2 {background-color: rgba(244, 195, 194, .9); }
+#daylight-air-temperature-intro .intro-text {background-color: rgba(133, 111, 108, .85); top:452px;}
 
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
-#data-tools-intro h2 {background-color:#cbbaab;}
-#data-tools-intro .intro-text {background-color:#cbbaab; top:190px;}
+#data-tools-intro h2, #data-tools-intro .intro-text, #data-tools-intro .photo-caption {background-color:rgba(203, 186, 171, .9);}
+#data-tools-intro .intro-text { top:150px;}
 
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }

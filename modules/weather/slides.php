@@ -93,6 +93,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">
 <p>From your own observations, you have probably noticed that temperature can vary from one day to the next. In this module you will get a better idea of how much the temperature changes from day to day at different places around the world.</p>
 	</div>
+	<div class="photo-caption bottom-caption">"Cold front over Moscow on January 1, 2014" by Ivan Vtorov [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ACold_front_over_Moscow_on_January_1%2C_2014.jpg">via Wikimedia Commons</a></div>
 </div>
 <div id="daily-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Daily Temperature Variation over a Three Week Period" data-slide-parent-id="daily-temperature-intro">
 	<div class="header">
@@ -152,72 +153,8 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">
 	<p>In the last module you saw that temperature can change considerably from one day to the next. In this module you will explore how temperature can change from day to day over the course of an entire year - from winter to spring to summer to fall - and from year to year. </p>
 </div>
+<div class="photo-caption bottom-caption">By Eirik Solheim [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://eirikso.com/myimages/">via eirikso.com</a></div>
 </div>
-<?php /*
-<div id="temperature-select" class="activity" data-slide-type="normal" data-slide-title="Exploring Temperature Patterns Step by Step" data-slide-parent-id="annual-temperature-intro">
-	<div class="header">
-		<h2>Temperature Patterns, step by step</h2>
-	</div>
-	<div class="workarea">
-		<div id="dataSelector4"></div>
-		<div id="tempchart1"></div>
-	</div>
-	<div class="instructions">
-		<div class="slider">
-			<div>
-				<p>First choose a location on the map by clicking on that location.</p>
-			</div>
-			<div>
-				<p>Now use the calendar to choose a year.</p>
-			</div>
-			<div>
-				<p>What you see here is a graph of the average daily temperatures that were reported at [the selected location] for [the selected year].</p>
-				<p>Temperature can be read on the y-axis (the vertical axis), and time of year can be read on the x-axis (the horizontal axis).</p>
-			</div>
-			<div>
-				<p>The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect air temperature data every hour, and some collect air temperature data less often.  But however many measurements that were taken, the number you see is the <span class="tooltip" title="average is a mean of the measurements and that the mean is calculated by adding together all the measurements and dividing by the number of measurements.">average</span> of them for that date. You may see that there are some days when there were no data reported at that station, perhaps  because there was no one to record it or because the measuring equipment was not working.</p>
-			</div>
-			<div>
-				<p>Notice that the temperature rises and falls throughout the year.  You should also notice that the temperature goes up and down from day to day in a jagged way.  The curve is not perfectly smooth.  This is because even though there is an overall trend in how the temperature increases or decreases throughout the year, there is also variation in that pattern of increasing and decreasing from day to day.</p>
-			</div>
-			
-			<div>
-				<p>Next let's look more closely at this day-to-day variation.</p>
-			</div>
-			<div>
-				<p>As you can see above, the first part of the graph has been highlighted. This allows you to zoom in and look at a smaller part of the curve more closely.</p>
-				<p>When you want to zoom in, all you have to do is place your cursor at one corner of the rectangle that you want to look at, click and hold at that spot, and drag the cursor to cover the area you want to highlight. If you make a mistake, you can just click on “reset zoom” and try again.</p>
-			</div>
-			
-			<div>
-				<p>Now let's view the graph after we've zoomed in.</p>
-			</div>
-			<div>
-				<p>In the image above, just the temperatures for days in January are included. </p>
-			</div>
-			<div>
-				<p>By hovering over a date, you can see the average temperature reported for that day.</p>
-			</div>
-			<div>
-				<p>You can also see how much change there is in the average temperature from day to day. Notice that in this example, on January 20, 2000, the average temperature for that day was 25.5o F.  But the day before, on January 19, the average temperature was 41.7 o F. That’s a big change in one day. The only thing that could cause that much change is cold air moving in from another location.</p>
-			</div>
-			
-			<div>
-				<p>Now you try it. Highlight just the month of January as shown on the previous page.</p>
-			</div>
-			<div>
-				<p>Move the cursor to see what the temperature is on the individual days.</p>
-			</div>
-			<div>
-				<p>Highlight other parts of the graph to observe day-to-day patterns.</p>
-			</div>
-			<div>
-				<p>Choose different locations and different times of the year to see how the temperature changes at those locations during the year.</p>
-			</div>
-		</div>
-	</div>
-</div>
- */ ?>
 <div id="annual-temperature-display" class="activity" data-slide-type="normal" data-slide-title="Temperature over a Three-Year Period" data-slide-parent-id="annual-temperature-intro">
 	<div class="header">
 		<h2>Temperature over a Three-Year Period</h2>
@@ -295,6 +232,7 @@ At the completion of each module you can check your understanding of the feature
 	<div class="intro-text">	
 	<p>In the last module, you saw how temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, has an effect on the pattern of daily average temperature.</p>
 	</div>
+<div class="photo-caption bottom-caption">By R Jordan [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ARj_north_york_moors.jpg">via Wikimedia Commons</a></div>
 </div>
 <div id="temperature-lat-northern" class="activity" data-slide-type="normal" data-slide-title="Northern Hemisphere" data-slide-parent-id="temperature-lat-intro">
 	<div class="header">
@@ -548,6 +486,7 @@ At the completion of each module you can check your understanding of the feature
 	<p>
 	In this activity, you are going to try to find out whether or not the temperature at a place is related to how close the place is to a large body of water.</p>
 	</div>
+	<div class="photo-caption side-caption">By Ragnilius. (Image: Tromso, NO) [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3APanorama_fjellheisen-improved.jpg">via Wikimedia Commons</a></div>
 </div>
 <div id="temperature-water-example" class="activity" data-slide-type="normal" data-slide-title="Temperature Near Large Bodies of Water" data-slide-parent-id="temperature-water-intro">
 	<div class="header">
@@ -803,6 +742,7 @@ At the completion of each module you can check your understanding of the feature
 	<p>In the last module you saw that there is a relationship between the height of the sun in the sky and temperature. When the sun is high in the sky it tends to be warmer than when the sun is low in the sky.</p>
 	<p>In this module you will look more closely at how the number of hours of daylight changes at different places over the course of a year.</p>
 	</div>
+	<div class="photo-caption bottom-caption">"Sunset at Halong Bay" by Ha Long Bucht [<a href="http://creativecommons.org/licenses/by-sa/2.0">CC-BY-SA-2.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ASunset_at_Halong_Bay.jpg">via Wikimedia Commons</a></div>
 </div>
 <div id="daylight-example1" class="activity" data-slide-type="normal" data-slide-title="Exploring Daylight" data-slide-parent-id="daylight-intro">
 	<div class="header">
@@ -1008,6 +948,7 @@ At the completion of each module you can check your understanding of the feature
  	Use the Daylight Hours Explorer to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.</p>
 
 	</div>
+	<div class="photo-caption bottom-caption">By Kaushik.chug [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3AGears.JPG">via Wikimedia Commons</a></div>
 </div>
 <div id="location-data-finder" class="activity" data-slide-type="tool" data-slide-title="Location Data Finder" data-slide-parent-id="data-tools-intro">
 	<div class="header">
