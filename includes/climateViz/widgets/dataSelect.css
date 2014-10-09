@@ -63,7 +63,6 @@
 	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
 	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
 	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
 	background-color:#d0451b;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
@@ -77,6 +76,7 @@
 	height: 20px;
 	width:20px;
 	position:absolute;
+	display:none;
 }
 .widget.dataSelect .map-reset :hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
@@ -85,7 +85,6 @@
 	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
 	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
 	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
 	background-color:#bc3315;
 }
 .widget.dataSelect .map-reset:active {

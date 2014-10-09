@@ -355,6 +355,7 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
+					wInstance.settings.container.find('.map-reset').show();
 				} else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
 				wInstance.map.date.find( '.input input' ).val( '' );
 				$( '.Dstooltip' ).tooltip( "close" );
@@ -537,6 +538,7 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
+					wInstance.settings.container.find('.map-reset').show();
 				} else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
 				wInstance.map.date.find( '.input input' ).val( '' );
 				$( '.Dstooltip' ).tooltip( "close" );
@@ -902,6 +904,8 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
+				console.log(wInstance);	
+				wInstance.settings.container.find('.map-reset').show();
 				}
 				else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
 				wInstance.map.date.find( '.input input' ).val( '' );
