@@ -1318,12 +1318,14 @@ function refreshStations ( evt ) {
 			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0];
 			if (!canSelectStation) {
 				var newstationContent='<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div>'
-				var oldstationContent=  wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)[0];
-				console.log(oldstationContent);
-				wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.replace(/<div class="station">([^<]*)<\/div>/,newstationContent);
-		 		if (wInstance.settings.date.type.split('-').slice(-1)!="restricted" && newstationContent != oldstationContent){
-					wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
-					setTimeout(function() {wInstance.markers[servermsg[0].mid].infoWindow.close();}, 2000);
+				if (typeof(wInstance.markers[servermsg[0].mid].infoWindow) != 'undefined') {
+					var oldstationContent=  wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)[0];
+					console.log(oldstationContent);
+					wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.replace(/<div class="station">([^<]*)<\/div>/,newstationContent);
+		 			if (wInstance.settings.date.type.split('-').slice(-1)!="restricted" && newstationContent != oldstationContent){
+						wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
+						setTimeout(function() {wInstance.markers[servermsg[0].mid].infoWindow.close();}, 2000);
+					}
 				}
 			}
 			for ( i in wInstance.markers[servermsg[0].mid].stations ) {
