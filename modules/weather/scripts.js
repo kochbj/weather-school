@@ -58,10 +58,11 @@ var widgetAnimations = {
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
-		}, 100);
+		}, 500);
 		},
 	placetablemarker: function(wInstance,marker,year) {
 		if (wInstance.settings.container.hasClass('clicked')) return;
+		setTimeout(function(){
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
 		var dateVals=[];
 		wInstance.map.date.data('hidden',false);
@@ -69,14 +70,17 @@ var widgetAnimations = {
 		wInstance.map.date.data( 'value', dateVals);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
+		}, 500);
 		},
 	placestations: function(wInstance,marker1,stations,date1,date2) {
 		if (wInstance.settings.container.hasClass('clicked')) return;
+		setTimeout(function(){
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker1[0],marker1[1]), stationNames: stations, staticmap: true } );
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-start input' } ).datepicker( 'setDate' , new Date(date1));
 		wInstance.map.date.find('.datepicker' ).datepicker('option' , { altField : '.date-end input' } ).datepicker( 'setDate' , new Date(date2 ));
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
+		}, 500);
 		},
 	swinggraph: function(wInstance) {
 		if (wInstance.settings.displayWidgets[0].settings.container.hasClass('moved')) return;
@@ -232,7 +236,7 @@ function cbDailyTempEx ( evt ) {
 		wInstance.map.date.data('value',[[new Date( "2001-01-01T17:00:00Z" ),new Date("2002-01-01T17:00:00Z")]]);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 100 );
+	} , 500 );
 	}
 }
 function cbHeightSunEx ( evt ) {
