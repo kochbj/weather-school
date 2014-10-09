@@ -1,5 +1,6 @@
-body { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; background-color: black; }
-input[type=text] , textarea { font-family: ComingSoon, Helvetica, Arial, sans-serif; font-size: 92%; }
+//body { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; background-color: black; }
+body { font-family: 'Open Sans', sans-serif; font-size: 12pt; font-weight:350; background-color: black; }
+input[type=text] , textarea {  font-family: 'Open Sans', sans-serif; font-style:italic; font-weight:300; background-color: black;  font-size: 92%; }
 textarea { width: 95%; height: 4em; }
 
 .you-are-here { color: #999999; text-align: center; }
@@ -23,7 +24,8 @@ textarea { width: 95%; height: 4em; }
 
 
 
-#slider-menu .ui-accordion { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; border-radius: 0px;  } 
+//#slider-menu .ui-accordion { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; border-radius: 0px;  } 
+#slider-menu .ui-accordion { font-family: 'Open Sans', sans-serif; font-size: 12pt; border-radius: 0px; }
 #slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px; text-decoration:none;  }
 #slider-menu .ui-accordion .ui-accordion-header-active { background-color: rgba(170, 192, 202, .9); solid #999999; solid #999999; margin 0px; padding 0px; color: /*#eeff86*/ #ccffcc !important; text-shadow: 0px 0px 4px #666; box-shadow: 0px 1px 1px #666; }
 #slider-menu a.completed {color: DimGray !important; }
