@@ -1135,7 +1135,6 @@ function getBoundsZoomLevel(wInstance) {
 
 function addLocation (e,wInstance) {
 	wInstance._addLocdeferred=new $.Deferred();
-	//var addLocpromise=wInstance._addLocdeferred.promise();
 	if (wInstance.settings.maxPoints && (Object.keys(wInstance.markers)).length >= wInstance.settings.maxPoints) {
 		for (i in wInstance.markers) {
 			removeLocation(i,wInstance);

@@ -131,7 +131,7 @@ function ctrlSlider_cb ( psobj ) {
 		//$.when.apply($, wInstance.settings.displayWidgets.map(function (x) { x.settings.instantiate_promise})).done(function () {	
 			if (typeof(wInstance.settings.animate!='undefined')){
 				$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
-				$( '#slider-navigation .next' ).on('click.animate', wInstance.settings.animate);
+				//$( '#slider-navigation .next' ).on('click.animate', wInstance.settings.animate);
 			}
 			psobj.$currentSlide.find('.plusslider-pagination li').on('click.animate', function(evt){
 					$('#slider-navigation .next').data("currSlide",psobj.$currentSlide.find( '.instructions .slider' )[0].sliderObj.currentSlideIndex);
