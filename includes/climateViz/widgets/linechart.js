@@ -24,6 +24,7 @@ function createChart (wInstance) {
 		dataKeys = Object.keys(wInstance.data[series].dataMeta);
 		chartAxis = ['x','y'];
 		for (i in wInstance.data[series].data) {
+			console.log("GOT HERE1");
 			if (wInstance.data[series].dataMeta[dataKeys[0]].type == 'datetime') {
 				dataX = wInstance.data[series].data[i][dataKeys[0]].getTime();
 				wInstance.chart.chart.type = 'line';
@@ -36,6 +37,7 @@ function createChart (wInstance) {
 			dataSeries.push([dataX,dataY]);
 		}
 		for (idxDataKey in dataKeys) {
+			console.log("GOT HERE2");
 			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].type == 'datetime') {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].type = 'datetime';
 				if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].highchart.axis.dateTimeLabelFormats) {
