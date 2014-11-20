@@ -72,7 +72,7 @@ function createChart (wInstance) {
 			}*/
 		 	if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range ) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0];
-				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = yMax,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];}
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];}
 			else {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = null;
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = null;
