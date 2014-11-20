@@ -71,6 +71,7 @@ function createChart (wInstance) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max=yMax; 
 			}*/
 		 	if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range ) {
+				console.log(wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range, "RANGE");	
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0];
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];}
 			else {
