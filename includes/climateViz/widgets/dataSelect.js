@@ -1666,6 +1666,8 @@ function stationBasedDataFetchAjax ( evt ) {
 							break;
 						case 'temp' :
 							dataVal.temp = ( isNaN( parseFloat(servermsg.results[0].station.data[data_index].temp) ) ? null : parseFloat(servermsg.results[0].station.data[data_index].temp) );
+							series.dataMeta['temp'].range[0] = Math.min(series.dataMeta['temp'].range[0],dataVal.temp);
+							series.dataMeta['temp'].range[1] = Math.max(series.dataMeta['temp'].range[1],dataVal.temp);
 							break;
 					}
 				}
