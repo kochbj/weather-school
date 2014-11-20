@@ -12,6 +12,8 @@ function createChart (wInstance) {
 	wInstance.chart.plotOptions.series.marker.enabled = true;
 	if (typeof(wInstance.settings.chart) !== "undefined") { $.extend(true, wInstance.chart, wInstance.settings.chart); }
 	wInstance.chart.series = [];
+	var yMin=0;
+	var yMax=100;
 	for (series in wInstance.data) {
 		dataSeries = [];
 		seriesName = wInstance.data[series].seriesMeta.label;
@@ -24,7 +26,6 @@ function createChart (wInstance) {
 		dataKeys = Object.keys(wInstance.data[series].dataMeta);
 		chartAxis = ['x','y'];
 		for (i in wInstance.data[series].data) {
-			console.log("GOT HERE1");
 			if (wInstance.data[series].dataMeta[dataKeys[0]].type == 'datetime') {
 				dataX = wInstance.data[series].data[i][dataKeys[0]].getTime();
 				wInstance.chart.chart.type = 'line';
@@ -34,10 +35,11 @@ function createChart (wInstance) {
 				dataX = wInstance.data[series].data[i][dataKeys[0]];
 			}
 			dataY = wInstance.data[series].data[i][dataKeys[1]];
+			yMin=Math.min(yMin,dataY);
+			yMax=Math.max(yMax,dataY);
 			dataSeries.push([dataX,dataY]);
 		}
 		for (idxDataKey in dataKeys) {
-			console.log("GOT HERE2");
 			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].type == 'datetime') {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].type = 'datetime';
 				if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].highchart.axis.dateTimeLabelFormats) {
@@ -58,10 +60,16 @@ function createChart (wInstance) {
 			} else {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.text = null;
 			}
-			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range) {
-				console.log("range", wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range);
-				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0]);
-				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1]);}
+			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range && chartAxis[idxDataKey]=='y') {
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = Math.min(yMin,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0]);
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = Math.max(yMax,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1]);}
+			else if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range && chartAxis[idxDataKey]=='x'){
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0];
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];}
+			else if (chartAxis[idxDataKey]=='y') {
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min=yMin; 
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max=yMax; 
+			}
 			else {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = null;
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = null;

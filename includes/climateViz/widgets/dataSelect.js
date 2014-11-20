@@ -2079,8 +2079,6 @@ function fetchStatsAjax ( evt ) {
 						break;
 					case 'tempavg' :
 						dataVal.tempavg = parseFloat( servermsg.results[0].station.temp_avg );
-						series.dataMeta['tempavg'].range[0] = Math.min(series.dataMeta['tempavg'].range[0],dataVal.tempavg);
-						series.dataMeta['tempavg'].range[1] = Math.max(series.dataMeta['tempavg'].range[1],dataVal.tempavg);
 						break;
 					/*case 'tempmin' :
 						dataVal.tempmin = parseFloat( servermsg.results[0].station.temp_min );
