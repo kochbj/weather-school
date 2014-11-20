@@ -37,7 +37,6 @@ function createChart (wInstance) {
 			dataY = wInstance.data[series].data[i][dataKeys[1]];
 			yMin=Math.min(yMin,dataY);
 			yMax=Math.max(yMax,dataY);
-			if (wInstance.data[series].dataMeta[dataKeys[0]].type == 'datetime')
 			dataSeries.push([dataX,dataY]);
 		}
 		for (idxDataKey in dataKeys) {
@@ -62,10 +61,8 @@ function createChart (wInstance) {
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].title.text = null;
 			}
 			if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range && chartAxis[idxDataKey]=='y') {
-				if (dataKeys[idxDataKey] == 'sunHours') yMax = 25;
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = Math.min(yMin,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0]);
-				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = Math.max(yMax,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1]);
-			}
+				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = Math.max(yMax,wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1]);}
 			else if (wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range && chartAxis[idxDataKey]=='x'){
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].min = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[0];
 				wInstance.chart[chartAxis[idxDataKey]+'Axis'].max = wInstance.data[series].dataMeta[dataKeys[idxDataKey]].range[1];}

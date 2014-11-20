@@ -37,6 +37,7 @@ var updateDatepickerOriginal = $.datepicker._updateDatepicker;
 $.datepicker._updateDatepicker = function(){
   var response = updateDatepickerOriginal.apply(this,arguments);
   $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
+	console.log($('#'+arguments[0].id).find('select'));
 	return response;
 };
 function drop_missing_warning(wInstance, color) {
@@ -246,6 +247,7 @@ function dataSelect_instantiate(wInstance) {
 						for (i in selectedDates) {
 							if ( selectedDate.getTime() == selectedDates[i].getTime() ) {
 								selectedDates.splice(i,1);
+								console.log(selectedDates);
 							}
 						}
 							/* Check to see if the max number of dates have been selected and remove the date at the top of the array if so */
@@ -306,6 +308,7 @@ function dataSelect_instantiate(wInstance) {
 					var usrDate = aaasClimateViz.dateParser( $(this).val() );
 					if ($(this).val()=='' || usrDate == false ) return;
 					usrDate = new Date(usrDate);
+					console.log(usrDate);
 					usrDate.setFullYear( 1995 );
 					wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , usrDate );
 					
@@ -471,6 +474,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
+					console.log("THIS IS RUNNING");
 					/*if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
 						wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
@@ -900,6 +904,7 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
+				console.log(wInstance);	
 				wInstance.settings.container.find('.map-reset').show();
 				}
 				else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
@@ -1219,6 +1224,7 @@ function addLocation (e,wInstance) {
 			infowindow.open(wInstance.map,this);
 		});
 		this.infoWindow = infowindow;
+		//$.when(wInstance._addLocdeferred).done(console.log("YAY"));
 		wInstance._callback({type:'user-select-location',data:{marker:marker,stationNames:e.stationNames}});
 		if (staticmap) {
 			google.maps.event.clearListeners(wInstance.map, 'click');
@@ -1527,6 +1533,8 @@ var retVal = {};
 var startDate= new Date([1,1,1990]);
 var endDate = new Date([12,31,1990]); 
 var current = new Date(startDate);
+console.log(station['gsod_years'][current.getFullYear()]['has_data']);
+console.log(station['gsod_years'][current.getFullYear()]['months'].length);
 
  while (current <= endDate) {
 	if (!station['gsod_years'][current.getFullYear()]['has_data']) retVal[current.getFullYear()]=['All'];
@@ -1536,6 +1544,7 @@ var current = new Date(startDate);
 	}
   current = (current.getMonth() == 11 ?  new Date(current.getFullYear() + 1, 0, 1) : new Date(current.getFullYear(), current.getMonth() + 1, 1) );
  }
+ console.log(retVal);
  return retVal;
 }
 
@@ -1554,6 +1563,7 @@ function checkAvailableYears (dateArray, wInstance){
 				for (station in wInstance.markers[markerID].stations){//got each station
 					if (typeof(missingArray[markerID].stations[station]) == 'undefined')  missingArray[markerID].stations[station]=[];
 					missingArray[markerID].stations[station].push(range[y]);
+					console.log(wInstance.markers[markerID].stations[station],!wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]);
 					if (typeof(wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]) == 'undefined' || !wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]['has_data']) missingArray[markerID].stations[station].push(range[y]); //list missing years
 				}
 			}
@@ -1598,6 +1608,7 @@ function stationBasedDataFetchAjax ( evt ) {
 		data     : this.requestQueue[queryID].query ,
 		
 		success : function( servermsg ) {
+			console.log("stationBasedDataFetchAjax",evt,servermsg,wInstance.markers);
 			var widgetIndex = parseInt( servermsg.query.widgetIndex , 10 );
 			var mid = servermsg.results[0].mid;
 			var sid = servermsg.results[0].sid;
@@ -1712,6 +1723,7 @@ function calculatedSolarDataFetch( evt ) {
 	this.data = { };
 	
 	this._callback( { type:'data-load' } )
+	console.log(this);
 	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 		for (i in wInstance.settings.displayWidgets) {
 			wInstance.settings.displayWidgets[i].notify('loading');
@@ -1921,6 +1933,7 @@ function fetchStats( evt ) {
 				$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify('ready');
+						console.log("GOT THIS NOTIFY");
 						wInstance.settings.displayWidgets[i].loadData(wInstance.data);
 					}
 				});
