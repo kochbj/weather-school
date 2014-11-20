@@ -11,3 +11,6 @@
 includes/climateViz/php/data/noaa/data_file_cache/offline/gsod/1991/.listing
 
 includes/climateViz/php/data/noaa/data_file_cache/offline/gsod/1990/.listing
+includes/climateViz/widgets/dataSelect.js~
+includes/climateViz/widgets/linechart.js~
+modules/weather/slides.php~
