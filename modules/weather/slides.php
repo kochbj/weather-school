@@ -1049,10 +1049,10 @@ At the end of each module you can check your understanding by answering the <b>Q
 	</div>
 	<div class="workonly">
 		<div align="center">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550">
 				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
 				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="635">
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="550">
 					<!--<![endif]-->
 					<p>flash animation</p>
 					<!--[if !IE]>-->
@@ -1061,7 +1061,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</object>
 		</div>
 	</div>
-	<div class="instructions">
+	<div class="instructions" style="height: 70px;">
 		<div class="slider">
 			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
 			</div>
