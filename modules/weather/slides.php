@@ -1065,6 +1065,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
 			</div>
+			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
+			</div>
 		</div>
 	</div>	
 </div>
