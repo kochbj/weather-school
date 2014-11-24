@@ -1021,12 +1021,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 	Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
 </div>
 </div>
+<?php /*
 <div id="vis-sim-seasons" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
 	<div class="workonly">
-	<div align="center">
+		<div align="center">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
 				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
 				<!--[if !IE]>-->
@@ -1038,9 +1039,35 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<!--<![endif]-->
 			</object>
 		</div>
+	</div>
 </div>
+*/
+?>
+<div id="vis-sim-seasons" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
+	<div class="header">
+		<h2>Seasons Simulator</h2>
+	</div>
+	<div class="workonly">
+		<div align="center">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="635">
+				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="635">
+					<!--<![endif]-->
+					<p>flash animation</p>
+					<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+	</div>
+	<div class="instructions">
+		<div class="slider">
+			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
+			</div>
+		</div>
+	</div>	
 </div>
-
 <div id="data-tools-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="data-tools-intro">
 	<h2>Module Complete</h2>
 	<div class="completed-text">
