@@ -1,12 +1,12 @@
 //body { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; background-color: black; }
-body { font-family: 'Open Sans', sans-serif; font-size: 100%; font-weight:350; background-color: black; /*width: 910px; height:700px; overflow:hidden; */margin: 0px auto; }
+body { font-family: 'Open Sans', sans-serif; font-size: 100%; font-weight:350; background-color: black; /*width: 910px; height:700px;*/ overflow:hidden; margin: 18px auto 0px; position: relative; }
 //input[type=text] , textarea {  font-family: 'Open Sans', sans-serif; font-style:italic; font-weight:300; background-color: black;  font-size: 92%; }
 textarea { width: 95%; height: 4em; }
 
 .you-are-here { color: #999999; text-align: center; }
 .you-are-here * { margin: 0px; }
 
-#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px auto; margin-top:18px; overflow: hidden; padding: 0px; background-color: #dadada; }
+#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px auto; overflow: hidden; padding: 0px; background-color: #dadada; }
 
 .plusslider { background-color: #ffffff; }
 .plusslider .child {  }
