@@ -1,12 +1,12 @@
 //body { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; background-color: black; }
-body { font-family: 'Open Sans', sans-serif; font-size: 12pt; font-weight:350; background-color: black; }
-input[type=text] , textarea {  font-family: 'Open Sans', sans-serif; font-style:italic; font-weight:300; background-color: black;  font-size: 92%; }
+body { font-family: 'Open Sans', sans-serif; font-size: 100%; font-weight:350; background-color: black; /*width: 910px; height:700px; overflow:hidden; */margin: 0px auto; }
+//input[type=text] , textarea {  font-family: 'Open Sans', sans-serif; font-style:italic; font-weight:300; background-color: black;  font-size: 92%; }
 textarea { width: 95%; height: 4em; }
 
 .you-are-here { color: #999999; text-align: center; }
 .you-are-here * { margin: 0px; }
 
-#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px auto; overflow: hidden; padding: 0px; background-color: #dadada; }
+#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px auto; margin-top:18px; overflow: hidden; padding: 0px; background-color: #dadada; }
 
 .plusslider { background-color: #ffffff; }
 .plusslider .child {  }
@@ -24,19 +24,19 @@ textarea { width: 95%; height: 4em; }
 
 
 
-//#slider-menu .ui-accordion { font-family: CartoGothicStdBook, "Trebuchet MS", Helvetica, Arial, sans-serif; font-size: 12pt; border-radius: 0px;  } 
-#slider-menu .ui-accordion { font-family: 'Open Sans', sans-serif; font-size: 12pt; border-radius: 0px; }
+#slider-menu .ui-accordion { font-family: 'Open Sans', sans-serif; font-size: 100%; border-radius: 0px; }
 #slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px; text-decoration:none;  }
 #slider-menu .ui-accordion .ui-accordion-header-active { background-color: rgba(170, 192, 202, .9); solid #999999; solid #999999; margin 0px; padding 0px; color: /*#eeff86*/ #ccffcc !important; text-shadow: 0px 0px 4px #666; box-shadow: 0px 1px 1px #666; }
 #slider-menu a.completed {color: DimGray !important; }
 #slider-menu .ui-accordion .ui-accordion-header:last-of-type {border-top: 1px solid black; }
+#slider-menu .ui-accordion .ui-accordion-header:nth-last-of-type(2) {border-top: 1px solid black; }
 #slider-menu .ui-accordion .ui-accordion-header:first-of-type {border-bottom: 1px solid black; }
 
 #slider-menu .ui-accordion .ui-accordion-header a { display: block; padding: .6em; color: black; z-index:99; text-decoration:none; }
 #slider-menu .ui-accordion .ui-accordion-content {background: none; line-height: 1; padding: 0px; border-radius: 0px; text-decoration: none;}
 #slider-menu .ui-accordion .ui-accordion-content ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; overflow: visible; }
 #slider-menu .ui-accordion .ui-accordion-content li { list-style: none; display: block; margin: 0px; border-top: 1px solid #999999; z-index:99; }
-#slider-menu .ui-accordion .ui-accordion-content a { display: block; padding: .6em 2.5em; color: black; z-index:99; text-decoration: none; font-size: 10pt; }
+#slider-menu .ui-accordion .ui-accordion-content a { display: block; padding: .6em 2.5em; color: black; z-index:99; text-decoration: none; font-size: 85%; }
 #slider-menu a:hover {color: /*#eeff86*/ #ccffcc !important; background-color: rgba(170, 192, 202, .9);text-shadow: 0px 0px 4px #666; }
 #slider-menu a.current { background-color: rgba(145, 177, 192, .9) !important; }
 
@@ -67,7 +67,7 @@ textarea { width: 95%; height: 4em; }
 #slider-menu a.completed {color: DimGray; }
 */
 #slider-menu .you-are-here { position: absolute; bottom: 0px; color: #999999; text-align: center; }
-#slider-navigation .prev, #slider-navigation .next { z-index: 90; position: absolute; bottom: 20px; background-color: #d1dce5; font-size: 18pt; font-weight: bold; cursor: pointer; border-color: #91b1c0; border-style: solid; }
+#slider-navigation .prev, #slider-navigation .next { z-index: 90; position: absolute; bottom: 20px; background-color: #d1dce5; font-size: 125%; font-weight: bold; cursor: pointer; border-color: #91b1c0; border-style: solid; }
 #slider-navigation .prev { left: 0px; padding: 10px 10px 10px 5px; border-radius: 0px 30px 30px 0px; border-width: 2px 2px 2px 0px; z-index: 100; }
 #slider-navigation .next { right: 0px; padding: 10px 5px 10px 10px; border-radius: 30px 0px 0px 30px; border-width: 2px 0px 2px 2px; z-index:100; }
 
@@ -107,6 +107,7 @@ textarea { width: 95%; height: 4em; }
 	margin: 15px 50px; height: 200px; overflow: hidden; left: 0px; right: 0px;
 	font-size: 125%; line-height: 1.4em;
 }
+.child.activity.tryit > .instructions p {padding-left: 1.15em; text-indent:-1.15em;}
 /* .child.activity > .instructions ol , .child.activity .instructions ul { overflow: auto; max-height: 100%; padding: 0em; margin: .25em; display: block; }
 .child.activity > .instructions li { display: block; padding: 0em; margin: .65em .25em; } */
 .child.activity > .instructions .instructNav { color: orange; text-decoration: none; cursor: pointer; margin: 0em 1em; }

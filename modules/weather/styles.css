@@ -27,9 +27,9 @@
 
 .module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
 .module-intro h2 { font-weight: normal; background-color: rgba(142, 171, 197, .7); padding: 1em .5em; display: inline-block; font-size: 160%; margin: .5em 0em; }
-.module-intro .intro-text {position:absolute; top: 230px; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em;}
+.module-intro .intro-text {position:absolute; top: 230px; left:0; right:0; padding: 0px 30px 15px 30px; }
 .module-intro .intro-text p {margin: 15px 0 0 0;}
-.module-intro .contents-text {position:absolute; top: 230px; left:0; right:0; padding: 0px 30px 15px 30px; text-indent:1.5em; margin-left: 15px; width:470px; background-color:  rgba(183, 204, 224, .7);}
+.module-intro .contents-text {position:absolute; top: 230px; left:0; right:0; padding: 0px 30px 15px 30px; margin-left: 15px; width:470px; background-color:  rgba(183, 204, 224, .7);}
 .module-intro .intro-text p {margin: 15px 0 0 0;}
 .module-intro .photo-caption {
 	right: 0px;

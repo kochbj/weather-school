@@ -81,7 +81,7 @@ function ctrlSlider_cb ( psobj ) {
 			$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) + 4 } , 450, function() {$('#slider-menu').addClass( 'active' );} );
 			//$( '#slider-menu a').removeClass('current');
 			$('#slider-menu a').removeClass('ui-accordion-header-active');
-			switch(id) {
+			/*switch(id) {
 				case 'contents-2':
 					$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
 					$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
@@ -102,7 +102,7 @@ function ctrlSlider_cb ( psobj ) {
 				case 'contents-6':
 					$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
 					break;
-							}
+							}*/
 					}, 100);
 	}
 	/*close menu if open */
@@ -160,7 +160,8 @@ function locationUpdate ( ) {
 		instruction = instrSlider.currentSlideIndex + 1;
 	}
 	if (section == 1) section="INTRO";
-	else if (section == $( '[data-slide-type=key]' ).length) section="TOOLS";
+	else if (section == $( '[data-slide-type=key]' ).length-1) section="TOOLS";
+	else if (section == $( '[data-slide-type=key]' ).length) section="ABOUT";
 	else section = String.fromCharCode( section + 64 - 1 );
 	$( '.you-are-here .screen-id' ).html(
 		'Screen: ' + section +
@@ -364,9 +365,9 @@ function decimalToRomanSimple(value) {
 }
 
 		$('[data-slide-type=key]').each( function (idx, el) {
-			if ($( el ).attr( 'id' ) == "introduction" || $( el ).attr( 'id' ) == "data-tools-intro") {
+			if ($( el ).attr( 'id' ) == "introduction" || $( el ).attr( 'id' ) == "data-tools-intro" || $( el ).attr( 'id' ) == "about" ) {
 				$('#accordion').append( '<a id="' + $( el ).attr( 'id' ) + '-menu-link" href="#' + $( el ).attr( 'id' ) + '"> &nbsp &nbsp ' + $( el ).data( 'slide-group-title' ) + '</a>' );
-				}
+				}	
 			else $('#accordion').append( '<a id="' + $( el ).attr( 'id' ) + '-menu-link" href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a>' );
 			$('#accordion').append('<div><ul></ul></div>');
 			var menuidxx=1;

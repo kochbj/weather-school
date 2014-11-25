@@ -581,7 +581,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Height of the Sun in the Sky Over a One-Year Period" data-slide-parent-id="height-sun-intro">
 	<div class="header">
 		<h2>Height of the Sun in the Sky Over a One-Year Period</h2>
-	</div>An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator, When it is expressed in terms of latitude, the tropical zone extends from 23.5o north latitude to 23.5o south latitude.
+	</div>
 	<div class="workarea">
 		<div id="height-sun-example-ds" class="full-ds"></div>
 		<div id="height-sun-example-tc" class="full-tc"></div>
@@ -901,8 +901,6 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<ul>
 			<li>What happens to the average daily temperature at a location as the hours of daylight increase?</li>
 			<li>Why is the relationship between the number of hours of daylight at a location and the average daily temperature at that location called a linear relationship?</li>
-			
-
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out how the <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
@@ -1072,9 +1070,19 @@ At the end of each module you can check your understanding by answering the <b>Q
 </div>
 <div id="data-tools-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="data-tools-intro">
 	<h2>Module Complete</h2>
-	<div class="completed-text">
+	<div class="guiding-questions">
 		<p> If you're done exploring variables, select the next module you would like to explore from the menu. </p>
 	</div>
+</div>
+<div id="about" class="module-intro" data-slide-type="key" data-slide-title="about" data-slide-group-title="About">
+	<h2>About WeatherSchool@AAAS</h2>
+	<div class="intro-text">	
+	<p>Weatherschool@AAAS introduces you to a variety of factors that affect patterns in air temperature. In a series of modules, you will learn how moving air masses can cause day-to-day temperature variation, how geographic factors such as elevation above sea level can influence temperature at any given location, and how the movement of the earth in relation to the sun can affect temperature over the course of a year. The modules use Google Maps to interact with daily measurements collected by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations between 1929 and 2010 in the United States and around the world.</p>
+<p>
+Each module begins with a guided activity designed to illustrate a temperature pattern or a variable affecting that pattern. This is followed by an open-ended <b>Try It</b> activity. In the <b>Try It</b> activity, you can further explore the featured pattern by picking different locations on the maps and choosing different dates.</p>
+<p>
+At the end of each module you can check your understanding by answering the <b>Quiz Yourself</b> questions or learn more by following the <b>Expand Your Knowledge</b> links.</p>
+</div> 
 </div>
 <?php
 /*
