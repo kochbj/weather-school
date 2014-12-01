@@ -32,7 +32,9 @@ var _colors = {
 };
 _colors.keys = Object.keys( _colors.colors );
 _colors.keys.sort( function ( a , b ) { return ( Math.random( ) < 0.5 ? -1 : 1 ); } );
-
+_date_sort_asc = function(date1, date2) {
+	return (date1 > date2)? 1 : (date1<date2) ? -1 : 0;
+	}
 var updateDatepickerOriginal = $.datepicker._updateDatepicker;
 $.datepicker._updateDatepicker = function(){
   var response = updateDatepickerOriginal.apply(this,arguments);
@@ -212,6 +214,7 @@ function dataSelect_instantiate(wInstance) {
 				//used for closing and opening datepicker
 				var tog = wInstance.map.date.find( '.toggle' );
 				var Dinput= wInstance.map.date.find( '.input input' );
+				var userTouch= false;
 				_togoutside = function(e) {
 					var ele = $(e.target);
 					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
@@ -239,6 +242,7 @@ function dataSelect_instantiate(wInstance) {
 					onSelect : function ( value , ui ) {
 						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
 						var selectedDate = new Date(2000,ui.selectedMonth,ui.selectedDay);
+						console.log("SELECTED DATE", selectedDate);
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
 						if (typeof(selectedDates) !== 'array' && typeof(selectedDates) !== 'object') {
 							selectedDates = [];
@@ -251,17 +255,18 @@ function dataSelect_instantiate(wInstance) {
 							}
 						}
 							/* Check to see if the max number of dates have been selected and remove the date at the top of the array if so */
-						if (wInstance.settings.date.max && selectedDates.length == wInstance.settings.date.max) {
+						if (userTouch && wInstance.settings.date.max && selectedDates.length == wInstance.settings.date.max) {
 							selectedDates.shift();
 						}
-						selectedDates.push(selectedDate);
+						if (userTouch) selectedDates.push(selectedDate);
 						$( this ).parents( '.widget.dataSelect .map-date' ).data( 'value' , selectedDates );
 						
 						if ( wInstance.settings.date.max != 1 ) {
 							if (selectedDates.length > 0) {
 								displayStr = '';
-								for (i in selectedDates) {
-									displayStr += ' ' + $.datepicker.formatDate('M dd', selectedDates[i]) + '<br>';
+								var displayDates = $.extend(true,[], selectedDates).sort(_date_sort_asc);
+								for (i in displayDates) {
+									displayStr += ' ' + $.datepicker.formatDate('M dd', displayDates[i]) + '<br>';
 									wInstance.settings.date.type == 'month-day'? wInstance.map.date.tooltip('option','content','Selected:<br>'+ displayStr) : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','Selected:<br>'+ displayStr);							}
 							}	 
 							else {
@@ -294,7 +299,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : false ,
 					showButtonPanel : false ,
-					//defaultDate     : new Date( 1995 , 1 , 1 ) ,
+					defaultDate     : new Date( 1995 , 1 , 1 ) ,
 					minDate         : new Date( [ 1995 , 1 , 1 ] ) ,
 					maxDate         : new Date( [ 1995 , 12 , 31] ) ,
 					buttonImageOnly : true ,
@@ -347,6 +352,7 @@ function dataSelect_instantiate(wInstance) {
 					Dinput.focus( function ( evt ) {
 						$( this ).autogrow( );
 						_activateDpicker();
+						userTouch=true;
 						if (typeof($(this).parents('.widget.dataSelect .map-date').data('value'))!='undefined' && $(this).parents('.widget.dataSelect .map-date').data('value').length!=0 ) {
 							var selectedDate= new Date( $(this).parents('.widget.dataSelect .map-date').data('value')[$(this).parents('.widget.dataSelect .map-date').data('value').length-1] );
 							selectedDate.setFullYear(1995);

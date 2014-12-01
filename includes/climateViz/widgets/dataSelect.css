@@ -130,6 +130,7 @@
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker { min-height: 198px;  }
 //.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #D0DBE5; }
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline table { background-color: #e4e9ca; padding: 0 }
+.widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker .ui-state-active, .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker .ui-widget-content .ui-state-active { background: #dadada; background-image: url("media/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x ; }
 .widget.dataSelect .map-date .visual-control .datepicker .ui-datepicker-inline .ui-datepicker-header { background-color: #dbd3c1; background-image: none; }
 
 .widget.dataSelect .map-date .datepicker, .widget.dataSelect .map-date .visual-control.inline {
@@ -140,6 +141,11 @@
 }
 .widget.dataSelect .map-date .datepicker.fullwidth {
   left: 2px;
+}
+
+.ui-datepicker .selected a {
+background-color: #99ccff !important;
+background-image: none !important;
 }
 .widget.dataSelect .map-date .datepicker .ui-datepicker-group {
 	margin: 0px 2px;
