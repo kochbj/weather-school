@@ -294,7 +294,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : false ,
 					showButtonPanel : false ,
-					defaultDate     : new Date( 1995 , 1 , 1 ) ,
+					//defaultDate     : new Date( 1995 , 1 , 1 ) ,
 					minDate         : new Date( [ 1995 , 1 , 1 ] ) ,
 					maxDate         : new Date( [ 1995 , 12 , 31] ) ,
 					buttonImageOnly : true ,
