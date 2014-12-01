@@ -729,13 +729,13 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-air-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 						else if (currSlide == 3) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
 						}
 						else if (currSlide>=4) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
 							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
@@ -978,13 +978,13 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-air-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 						else if (currSlide == 2) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
 						}
 						else if (currSlide>=3) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 2000 );
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
 							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
