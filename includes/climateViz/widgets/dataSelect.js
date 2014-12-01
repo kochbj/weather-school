@@ -545,7 +545,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.find( '.input input' ).val( '' );
 				$( '.Dstooltip' ).tooltip( "close" );
 				break;
-			case 'month-day' :
+			case 'month-day-old' :
 				wInstance.map.date.addClass( 'month-day-alt' ).html( '<div class="date-selection"><div class="visual-control inline"><div class="input"><p class ="date-label">Date: </p><input type="text" size="3" placeholder="Select a Day" /></div><div class="datepicker"></div></div><div class="toggle"></div></div>' );
 				wInstance.map.date.attr( 'title' , 'No date selected' );
 				wInstance.map.date.ui = wInstance.map.date.find('.visual-control');
@@ -839,7 +839,7 @@ function dataSelect_instantiate(wInstance) {
 					minDate         : new Date(1995,0,1) ,
 					maxDate         : new Date(1995,11,31) ,
 					*/
-				 	yearRange:"1928:+nn",
+				 	yearRange:"1928:2010",
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				} );
@@ -901,7 +901,7 @@ function dataSelect_instantiate(wInstance) {
 					.focus( function ( evt ) {
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
-						var selectedDate = $( this ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
+						var selectedDate = $( this ).val( ) != '' ? moment( $( this ).val(), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' ) } ).datepicker( 'setDate' , selectedDate );
 					} )
 					.blur( function ( evt ) {
