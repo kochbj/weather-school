@@ -352,7 +352,7 @@ function dataSelect_instantiate(wInstance) {
 							selectedDate.setFullYear(1995);
 							$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , selectedDate );
 						}
-						//else $( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , new Date(1,0,1995) );
+						else $( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , moment("January 01 2000","MMMMDDYYYY").toDate() );
 					} )
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
