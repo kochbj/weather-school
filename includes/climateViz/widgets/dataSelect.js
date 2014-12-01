@@ -275,7 +275,7 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay : function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
-	)				var testDate = new Date();
+					var testDate = new Date();
 						for (i in selectedDates) {
 							/* Enable date so it can be deselected. Set style to be highlighted. */
 							testDate.setTime( selectedDates[i].getTime() );
