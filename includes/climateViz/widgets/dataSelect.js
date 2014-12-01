@@ -275,7 +275,7 @@ function dataSelect_instantiate(wInstance) {
 					beforeShowDay : function ( dateObj ) {
 						// http://stackoverflow.com/questions/1452066/jquery-ui-datepicker-multiple-date-selections
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
-						var testDate = new Date();
+	)				var testDate = new Date();
 						for (i in selectedDates) {
 							/* Enable date so it can be deselected. Set style to be highlighted. */
 							testDate.setTime( selectedDates[i].getTime() );
@@ -352,7 +352,7 @@ function dataSelect_instantiate(wInstance) {
 							selectedDate.setFullYear(1995);
 							$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , selectedDate );
 						}
-						else $( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , moment("January 01 2000","MMMMDDYYYY").toDate() );
+						else $( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'setDate' , moment("January 01 1995","MMMMDDYYYY").toDate() );
 					} )
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
