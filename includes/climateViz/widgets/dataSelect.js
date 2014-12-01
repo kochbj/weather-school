@@ -305,10 +305,11 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
-					var usrDate = moment( $( this ).val( ), 'MM dd' ).toDate() ;
+					console.log("IT CHANGED TO THIS", $( this ).val( ) );
+					var usrDate = moment( $( this ).val( ), 'MMMDD' ).toDate() ;
 					//var usrDate = aaasClimateViz.dateParser( $(this).val() );
 					if ($(this).val()=='' || usrDate == false ) return;
-					usrDate = new Date(usrDate);
+					//usrDate = new Date(usrDate);
 					console.log(usrDate);
 					usrDate.setFullYear( 1995 );
 					wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , usrDate );
