@@ -305,7 +305,8 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
-					var usrDate = aaasClimateViz.dateParser( $(this).val() );
+					var usrDate = moment( $( this ).val( ), 'YYYYMMMMDD' ).toDate() ;
+					//var usrDate = aaasClimateViz.dateParser( $(this).val() );
 					if ($(this).val()=='' || usrDate == false ) return;
 					usrDate = new Date(usrDate);
 					console.log(usrDate);
@@ -480,7 +481,8 @@ function dataSelect_instantiate(wInstance) {
 						wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
 					}*/
-					var usrDate = aaasClimateViz.dateParser( elInput.val() );
+					var usrDate = moment( $( elInput ).val( ), 'YYYYMMMMDD' ).toDate() ;
+					//var usrDate = aaasClimateViz.dateParser( elInput.val() );
 					if ( elInput.val() == '' ) {elInput.val('Hover to See'); usrDate=false; }
 					if ( usrDate !== false ) {
 						usrDate = new Date( usrDate );
@@ -761,8 +763,9 @@ function dataSelect_instantiate(wInstance) {
 				
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
-						var startDate = new Date( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) ) : null );
-						var endDate = new Date( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? aaasClimateViz.dateParser( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) ) : null );
+						var startDate = $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
+						var endDate = $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
+						console.log("SELECTING DATE",startDate,endDate, moment($( this ).parents( '.map-date' ).find( '.date-end input' ).val( ),'YYYYMMMMDD'));	
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
@@ -831,7 +834,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date([2000,1,1]) ,
+					defaultDate     : new Date(2000,0,1) ,
 					/* should be set based on data source
 					minDate         : new Date(1995,0,1) ,
 					maxDate         : new Date(1995,11,31) ,
@@ -898,7 +901,7 @@ function dataSelect_instantiate(wInstance) {
 					.focus( function ( evt ) {
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
-						var selectedDate = new Date( aaasClimateViz.dateParser( $( this ).val( ) == '' ? '2000-01-01' : $( this ).val( ) ) );
+						var selectedDate = $( this ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' ) } ).datepicker( 'setDate' , selectedDate );
 					} )
 					.blur( function ( evt ) {
