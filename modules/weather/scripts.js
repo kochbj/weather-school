@@ -66,7 +66,8 @@ var widgetAnimations = {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng(marker[0],marker[1]), staticmap: true } );
 		var dateVals=[];
 		wInstance.map.date.data('hidden',false);
-		for (i=1; i<13; i++) dateVals.push(new Date( year.toString()+"-"+"00".substring(0, 2-i.toString().length)+i.toString()+"-15T17:00:00Z" ));
+		//for (i=1; i<13; i++) dateVals.push(new Date( year.toString()+"-"+"00".substring(0, 2-i.toString().length)+i.toString()+"-15T17:00:00Z" ));
+		for (i=1; i<13; i++) dateVals.push(moment(year.toString()+"-"+"00".substring(0, 2-i.toString().length)+i.toString()+"-15T17:00:00Z" ).toDate());
 		wInstance.map.date.data( 'value', dateVals);
  		wInstance.map.date.ui.find('.ui-state-active').click();
 		wInstance.settings.container.addClass('clicked');
