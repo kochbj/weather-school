@@ -294,7 +294,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : false ,
 					showButtonPanel : false ,
-					//defaultDate     : new Date( 1995 , 0 , 1 ) ,
+					defaultDate     : new Date( 1995 , 1 , 1 ) ,
 					minDate         : new Date( [ 1995 , 1 , 1 ] ) ,
 					maxDate         : new Date( [ 1995 , 12 , 31] ) ,
 					buttonImageOnly : true ,
@@ -305,7 +305,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
-					var usrDate = moment( $( this ).val( ), 'YYYYMMMMDD' ).toDate() ;
+					var usrDate = moment( $( this ).val( ), 'MM dd' ).toDate() ;
 					//var usrDate = aaasClimateViz.dateParser( $(this).val() );
 					if ($(this).val()=='' || usrDate == false ) return;
 					usrDate = new Date(usrDate);
