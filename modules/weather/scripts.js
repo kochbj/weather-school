@@ -456,7 +456,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -550,7 +550,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ /*cbTempLatitude*/ , mapXvis ]
+					callbacks : [ /*cbTempLatitude*/ , mapXvis, resetMap ]
 				}
 			);
 		}
@@ -612,7 +612,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -674,7 +674,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -732,7 +732,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -981,7 +981,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -1067,7 +1067,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -1091,7 +1091,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -1125,7 +1125,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
