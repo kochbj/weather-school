@@ -245,6 +245,7 @@ function resetMap ( evt ) {
 				function ( ) {
 					google.maps.event.trigger(wInstance.map, 'resize');
 					wInstance.map.panTo(mapCenter);
+					wInstance.map.setZoom(3);
 					wInstance.settings.container.find( '.widget.dataSelect' ).removeClass( 'width-200' );
 				}
 			)
