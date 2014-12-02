@@ -20,7 +20,7 @@ function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	console.log(evt.type);
-	if ( evt.type == 'initialize' ) {
+	if ( evt.type == 'initialize' || evt.type == 'reset' ) {
 		console.log(wInstance);
 	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
 	if (evt.data.widget.settings.selectable){ if (evt.data.widget.selectableKeys.indexOf($(this).text())==-1) return;}
@@ -99,7 +99,7 @@ var widgetAnimations = {
 		wInstance.settings.displayWidgets[0].settings.container
 			.show()
 			.animate( { left:'36%' } , 1000 , 'swing',function() {
-					wInstance.map.setCenter(mapCenter);
+					wInstance.map.panTo(mapCenter);
 			});
 		wInstance.settings.displayWidgets[0].settings.container.addClass('moved');
 		},
@@ -192,13 +192,15 @@ function cbDaylightAirTempEx (evt) {
 	}
 }
 
+
+
 function mapXvis ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evtType[0] == 'data' && ( evtType[1] == 'load' || evtType[1] == 'ready' ) && this.settings.displayStatus == 'map' ) {
 		// FIXME: add a resize method to the wInstance so that the resizing can be done there, passing just the width, height, and delay. Let the wInstance take care of the map.
-		mapCenter = this.map.getCenter();
+		var mapCenter = this.map.getCenter();
 		this.settings.container
 			.css( { 'width':'auto' } )
 			.animate(
@@ -208,11 +210,13 @@ function mapXvis ( evt ) {
 					google.maps.event.trigger(wInstance.map, 'resize');
 				}
 			)
-			.find( '.widget.dataSelect' ).addClass( 'width-200' );
+			.find('.map-date.Dstooltip').tooltip('close');
+			wInstance.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
+			console.log("CRAP",this.settings.container);
 		this.settings.displayWidgets[0].settings.container
 			.show()
 			.animate( { left:'36%' } , 1000 , 'swing',function() {
-					wInstance.map.setCenter(mapCenter);
+					wInstance.map.panTo(mapCenter);
 			});
 		if (typeof( this.settings.displayWidgets[0].settings.displayWidgets ) != 'undefined'  && this.settings.displayWidgets[0].settings.displayWidgets.length==1 ) {
 			this.settings.displayWidgets[0].settings.displayWidgets[0].settings.container
@@ -222,6 +226,44 @@ function mapXvis ( evt ) {
 		}
 		this.settings.displayStatus = 'vis';
 	} else if ( evtType == 'initialize' ) {
+		this.settings.displayStatus = 'map';
+	}
+}
+
+function resetMap ( evt ) {
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	if ( evt.type=='reset' && this.settings.displayStatus == 'vis' ) {
+		// FIXME: add a resize method to the wInstance so that the resizing can be done there, passing just the width, height, and delay. Let the wInstance take care of the map.
+		var mapCenter = new google.maps.LatLng(38,-95);
+		this.settings.container
+			.css( { 'width':'auto' } )
+			.animate(
+				{ right:'0%' } ,
+				1000 ,
+				function ( ) {
+					google.maps.event.trigger(wInstance.map, 'resize');
+					wInstance.map.panTo(mapCenter);
+					wInstance.settings.container.find( '.widget.dataSelect' ).removeClass( 'width-200' );
+				}
+			)
+			.find('.map-date.Dstooltip').tooltip('close');
+		this.settings.displayWidgets[0].settings.container
+			.hide()
+			.css( 'left','100%' );
+		if (typeof( this.settings.displayWidgets[0].settings.displayWidgets ) != 'undefined'  && this.settings.displayWidgets[0].settings.displayWidgets.length==1 ) {
+			this.settings.displayWidgets[0].settings.container
+				.css('height','100%')
+				.removeClass('elevated');
+			this.settings.displayWidgets[0].settings.displayWidgets[0].settings.container
+			.hide()
+			.css( 'left','100%' )
+			.css( 'bottom','-50%' )
+			.css ('border-top','0px');
+
+			//console.log(this.settings.displayWidgets[0].settings);
+		}
 		this.settings.displayStatus = 'map';
 	}
 }
@@ -776,7 +818,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}

@@ -1251,7 +1251,7 @@ function createListItem (marker) {
 	mlName.appendTo(mlBlock);
 	mlCoords = $('<div class="m'+marker.id+'-coords">('+Math.abs(Math.round(marker.userCoords.lat()*10)/10)+(marker.userCoords.lat()<0?'S':'N')+','+Math.abs(Math.round(marker.userCoords.lng()*10)/10)+(marker.userCoords.lng()<0?'W':'E')+')</div>')
 	mlCoords.appendTo(mlBlock);
-	mlBlock.click(function (evt) { if (!$('.view.map').hasClass('on')) { $('.view.map').click(); } map.setCenter(marker.userCoords); marker.infoWindow.open(map,marker); });
+	mlBlock.click(function (evt) { if (!$('.view.map').hasClass('on')) { $('.view.map').click(); } map.panTo(marker.userCoords); marker.infoWindow.open(map,marker); });
 	mlBlock.appendTo($('.locationList')).css('opacity', 0).animate({'opacity':1}, 'slow').css('cursor','pointer');
 	marker.setTitle(marker.name);
 }
