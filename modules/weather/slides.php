@@ -414,7 +414,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>1. Now you can explore other places where there are very high mountains, such as the Rocky Mountains in North America, the Alps in Europe, or the Andes in South America. Zoom in on the location you would like to explore on the map. As you move the cursor around the map, notice that the elevation appears in the information bar just below the map.</p>
 			</div>
 			<div>
-				<p>2. Click on a specific location on the map. Remember that the 20 closest reporting stations appear as yellow dots around the selected location. Zoom in to get a better look at where those reporting stations are. Hover over each of the yellow dots until you find two reporting stations that have a significant difference in elevation (at least 1,000 feet). Click on both stations to highlight them.</p>
+				<p>2. Click on a specific location on the map. Remember that the 20 closest reporting stations appear as yellow dots around the selected location. Zoom in to get a better look at where those reporting stations are. Hover over each of the yellow dots until you find two reporting stations that have a significant difference in elevation (at least 1,000 feet). Click on both stations to highlight them. You can click on more than two stations, but then the graph may be harder to read.</p>
 	
 			</div>
 			<div>	
