@@ -86,7 +86,7 @@
 #temperature-lat-intro .intro-text,#temperature-lat-intro .photo-caption {background-color: rgba(159, 99, 69, .9);}
 #temperature-lat-intro .intro-text {top:425px; }
 #temperature-elevation-intro {background-image: url(assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg);}
-#temperature-elevation-intro h2 {background-color: #E5DAD6;}
+#temperature-elevation-intro h2 {background-color: #E5DAD6; opacity: .8;}
 #temperature-elevation-intro .intro-text {background-color: #8595A4 /*#677b8d*/; top:235px;}
 
 #temperature-water-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}

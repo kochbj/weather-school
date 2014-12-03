@@ -21,7 +21,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 </div> 
 </div>
 <div id="contents-1" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
-	<h2>Table of Contents</h2>
+	<h2>Menu</h2>
 	<div class="contents-text">
 		<p> The modules and activities listed in the menu on the right are intended to be completed in the order shown, but you can jump to any module at any time. Simply click on the menu tab at the top right of any page and then click on the module or activity you want. The module or activity you are currently using will be highlighted.</p>		
 	</div>
@@ -91,7 +91,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 ?>
 
 <div id="daily-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Daily Temperature Changes">
-	<h2>Learning about Daily Temperature Changes</h2>
+	<h2>Daily Temperature Changes</h2>
 	<div class="intro-text">
 <p>You already know that temperature can vary from one day to the next. In this module you will get a better idea of how much the temperature changes from day to day at different places around the world.</p>
 	</div>
@@ -109,7 +109,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints Washington, DC. The graph on the following screen shows the <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span> in Washington, DC over a three-week period. If you hover over the underlined words, average daily temperatures, you can learn more about that particular term and any other underlined term in these modules.</p>
+				<p>The map above pinpoints Washington, DC. The graph on the following screen shows the average daily temperatures in Washington, DC over a three-week period. If you hover over the underlined words, <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span>, you can learn more about that particular term and any other underlined term in these modules.</p>
 			</div>
 			<div><p>The graph shows the average daily temperatures in Washington, DC from April 2, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
 			</div>
@@ -153,7 +153,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="annual-temperature-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Annual Temperature Patterns">
 	<h2>Annual Temperature Patterns</h2>
 	<div class="intro-text">
-	<p>In the last module you saw that temperature can change considerably from one day to the next. In this module you will explore how temperature can change from day to day over the course of an entire year - from winter to spring to summer to fall - and from year to year. </p>
+	<p>In the last module you saw that temperature can change considerably from one day to the next. In this module you will explore how temperature can change from day to day over the course of an entire year--from winter to spring to summer to fall--and from year to year. </p>
 </div>
 <div class="photo-caption bottom-caption">By Eirik Solheim [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://eirikso.com/myimages/">via eirikso.com</a></div>
 </div>
@@ -205,7 +205,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 			<div>
 				
-					<p>1. Choose a place on the map. Choose starting and ending dates that cover more than just a single year. Click the "Start" calendar then click a specific date to choose the starting date. Click the "End" calendar then click a specific date to choose the ending date. You can make p to five years long.</p>
+					<p>1. Choose a place on the map. Choose starting and ending dates that cover more than just a single year. Click the "Start" calendar then click a specific date to choose the starting date. Click the "End" calendar then click a specific date to choose the ending date.</p>
 			</div>
 			<div>
 					<p>2. Observe the temperature pattern at that place.</p>
@@ -230,7 +230,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Latitude and Temperature">
 	<h2>Latitude and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the last module, you saw how temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, is related to the pattern of daily average temperature at that place.</p>
+	<p>In the last module, you saw how temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, is related to the pattern of average daily temperature at that place.</p>
 	</div>
 <div class="photo-caption bottom-caption">By R Jordan [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ARj_north_york_moors.jpg">via Wikimedia Commons</a></div>
 </div>
@@ -246,7 +246,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will look at the relationship between latitude and daily average temperature in the northern hemisphere.</p>
+				<p>In this activity you will look at the relationship between latitude and average daily temperature in the northern hemisphere.</p>
 			</div>
 			<div>
 				<p>In the map above, Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
@@ -259,10 +259,10 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
-				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator, When it is expressed in terms of latitude, the tropical zone extends from 23.5o north latitude to 23.5o south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
+				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
 			</div>
 			<div>
-				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year - what we call the range of temperatures - is less the closer you are to the tropical zone. </p>
+				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year--what we call the range of temperatures--is less the closer you are to the tropical zone. </p>
 			</div>
 			<div>
 				<p>Notice that the range of temperatures at the location that is closer to the tropical zone (the <span class="lat-high">lower</span> line) is greater than the range of temperatures at the lower latitude (the upper line). This makes the line that is closer to the tropical zone (the <span class="lat-low">upper</span> line) a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">lower</span> line).</p>
@@ -374,13 +374,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 		
 			<div>
-			<p>Hover over the stations labeled Tingri (northeast of Kathmandu in Tibet) and Gorakhpur (southwest of Kathmandu in India). How do their elevations compare? </p>
+			<p>Find the stations labeled Tingri (northeast of Kathmandu in Tibet) and Gorakhpur (southwest of Kathmandu in India). How do their elevations compare? </p>
 			</div>
 			<div>
 				<p>Tingri is about 14,000 feet above sea level, whereas Gorakhpur is only about 250 feet above sea level.</p>
 			</div>
 			<div>
-			<p> Click on the reporting stations in Tingri and Gorakhpur. Then move to the next page</p>
+			<p> Click on the reporting stations in Tingri and Gorakhpur. Then move to the next page.</p>
 			</div>
 					
 			<div>
@@ -479,7 +479,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<p>Zoom two or three clicks to get a closer look.The yellow dots represent the 20 reporting stations closest to the marker. </p>
 			</div>
 			<div>
-			<p>Click on the reporting stations labeled Tromso and Kautokeino. Tromso is northwest of the marker and Kautokeino is southeast.</p>
+			<p>Find the reporting stations labeled Tromso and Kautokeino and click on them. Tromso is northwest of the marker and Kautokeino is southeast.</p>
 			</div>
 			<div>
 				<p>The graph shows the average daily temperatures in Tromso and in Kautokeino from January 1, 2004 to Dec. 31, 2004.</p>
@@ -645,9 +645,9 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the annual changes in temperature. In this module you will look at the relationship between height of the sun in the sky and temperature at a given place.</p>
 	</div>	
 </div>
-<div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Comparing Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
+<div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Relationship Between Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
-		<h2>Comparing Height of the Sun in the Sky and Temperature</h2>
+		<h2>Relationship Between Height of the Sun in the Sky and Temperature</h2>
 	</div>
 	<div class="workarea">
 		<div id="height-sun-air-temperature-example-ds" class="full-ds"></div>

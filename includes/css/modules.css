@@ -6,7 +6,7 @@ textarea { width: 95%; height: 4em; }
 .you-are-here { color: #999999; text-align: center; }
 .you-are-here * { margin: 0px; }
 
-#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px auto; overflow: hidden; padding: 0px; background-color: #dadada; }
+#slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px 15px; overflow: hidden; padding: 0px; background-color: #dadada; }
 
 .plusslider { background-color: #ffffff; }
 .plusslider .child {  }
@@ -21,8 +21,13 @@ textarea { width: 95%; height: 4em; }
 	font-size: 85%; line-height: .65em;
 	transform: rotate(-90deg) translateY(-.95em); transform-origin: center;
 }
+#slider-menu .access-control:hover {color: #ccffcc; }
 
-
+#feedback {
+	cursor: pointer; background-color: rgba(145,177,192,1); border-radius: 0 0 4px 0; z-index: 99; padding: 4px; line-height: 7px; position: absolute; margin: 0 15px; left: 0px;
+	font-size: 70%;
+}
+#feedback:hover { color: #ccffcc; }
 
 #slider-menu .ui-accordion { font-family: 'Open Sans', sans-serif; font-size: 100%; border-radius: 0px; }
 #slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px; text-decoration:none;  }

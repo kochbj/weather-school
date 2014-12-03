@@ -17,7 +17,7 @@
 
 <table style="margin: 1.65em auto; width: 65%;"><tr valign="top" align="center">
 	<td width="50%">
-		<p><a href="modules/weather/" class="button" onclick="window.open(this.href,'module','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes');return false;">Start using the module</a></p>
+		<p><a href="modules/weather/" class="button" onclick="window.open(this.href,'module','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start using the module</a></p>
 	</td>
 	<td width="50%">
 		<?php if ( $login ) { ?>
