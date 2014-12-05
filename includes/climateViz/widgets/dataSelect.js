@@ -388,7 +388,6 @@ function dataSelect_instantiate(wInstance) {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
-						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
 				 	}
 				};
@@ -396,12 +395,10 @@ function dataSelect_instantiate(wInstance) {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						tog.removeClass( 'active' );
-						tog.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
 					};
 				_activateDpicker = function () {
 						tog.addClass( 'active' );
-						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
 						$( '.widget-cover' ).show();
 						$( document ).on('click',_togoutside);
