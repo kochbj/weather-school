@@ -385,7 +385,7 @@ var slideInit = {
 								//Need to select larger range for annual temperature. Filter then reduces this for daily.
 								filter : function ( data ) {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
-									var DailyDateStart = new Date("2000-04-01T17:00:00Z" );
+									var DailyDateStart = new Date("2000-04-02T17:00:00Z" );
 									var DailyDateEnd = new Date( "2000-04-25T17:00:00Z" );
 									console.log(DailyDateStart,DailyDateEnd);
 									filteredData = {};
