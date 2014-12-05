@@ -1756,7 +1756,7 @@ function calculatedSolarDataFetch( evt ) {
 			data : [],
 		};
 		var dataPoints = {
-			date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e %Y' } } } },
+			date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month : '%b %e %y', year : '%b %e %Y' } } } },
 			// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 			lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , tooltip: 'Lat', range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 			lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , tooltip: 'Lat',  range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
@@ -2038,7 +2038,7 @@ function fetchStatsAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'MM d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month: '%b %e', year : '%b %e %Y' } } } },
+				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'MM d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month : '%b %e %y', year : '%b %e %Y' } } } },
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 				//lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 				//lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
