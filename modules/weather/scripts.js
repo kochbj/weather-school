@@ -387,12 +387,12 @@ var slideInit = {
 									var wInstance = aaasClimateViz.widgets[this.container.widget.index+2];
 									var DailyDateStart = new Date("2000-04-02T17:00:00Z" );
 									var DailyDateEnd = new Date( "2000-04-25T17:00:00Z" );
-									console.log(DailyDateStart,DailyDateEnd);
+									console.log("DATETEST",DailyDateStart.setHours(0,0,0,0),DailyDateEnd.setHours(0,0,0,0));
 									filteredData = {};
 									for ( dataID in data ) {
 										filteredData[dataID] = { data:[] , dataMeta:data[dataID].dataMeta , seriesMeta:data[dataID].seriesMeta };
 										for ( i in data[dataID].data ) {
-											if ( data[dataID].data[i].date_recorded >= DailyDateStart && data[dataID].data[i].date_recorded <= DailyDateEnd ) {
+											if ( data[dataID].data[i].date_recorded.setHours(0,0,0,0) >= DailyDateStart.setHours(0,0,0,0) && data[dataID].data[i].date_recorded.setHours(0,0,0,0) <= DailyDateEnd.setHours(0,0,0,0) ) {
 												filteredData[dataID].data.push( data[dataID].data[i] );
 											}
 										}
