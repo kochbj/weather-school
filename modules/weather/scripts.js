@@ -389,7 +389,6 @@ var slideInit = {
 									var DailyDateStart = moment("April 02 2000","MMMMDDYYYY").toDate();
 									var DailyDateEnd = moment("April 25 2000","MMMMDDYYYY").toDate();
 									//var DailyDateEnd = new Date( "2000-04-25T17:00:00Z" );
-									console.log("DATETEST",DailyDateStart.setHours(0,0,0,0),DailyDateEnd.setHours(0,0,0,0));
 									filteredData = {};
 									for ( dataID in data ) {
 										filteredData[dataID] = { data:[] , dataMeta:data[dataID].dataMeta , seriesMeta:data[dataID].seriesMeta };

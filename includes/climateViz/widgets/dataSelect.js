@@ -1634,7 +1634,7 @@ function stationBasedDataFetchAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date_recorded : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day',	format : function ( dateObj , dateFormat ) { if ( !dateFormat ) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate( dateFormat , dateObj ); } , highchart : { axis : { dateTimeLabelFormats : { second:'%b %e' , minute:'%b %e' , hour:'%b %e' , day:'%b %e' , week:'%b %e' , month:'%b %e \'%y' , year:'%b %e %Y' } } } },
+				date_recorded : { type : 'datetime' , label : 'Day of the year' , labelShort : 'Day', tooltip: 'Day',	format : function ( dateObj , dateFormat ) { if ( !dateFormat ) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate( dateFormat , dateObj ); } , highchart : { axis : { dateTimeLabelFormats : { second:'%b %e' , minute:'%b %e' , hour:'%b %e' , day:'%b %e' , week:'%b %e' , month:'%b %e \'%y' , year:'%b %e %Y' } } } },
 				temp : { type : 'float' , label : 'Average air temperature' , labelShort : 'Average temperature (°F)' , tooltip:'Avg temp',  range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } }
 			};
 			if (aaasClimateViz.widgets[widgetIndex].settings.data.fields && aaasClimateViz.widgets[widgetIndex].settings.data.fields.length > 0) {
@@ -1753,7 +1753,7 @@ function calculatedSolarDataFetch( evt ) {
 			data : [],
 		};
 		var dataPoints = {
-			date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day' , tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month : '%b %e \'%y', year : '%b %e %Y' } } } },
+			date : { type : 'datetime' , label : 'Day of the year' , labelShort : 'Day' , tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month : '%b %e \'%y', year : '%b %e %Y' } } } },
 			// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 			lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , tooltip: 'Lat', range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 			lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , tooltip: 'Lat',  range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
@@ -2035,7 +2035,7 @@ function fetchStatsAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'MM d'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month : '%b %e \'%y', year : '%b %e %Y' } } } },
+				date : { type : 'datetime' , label : 'Day of the year' , labelShort : 'Day', tooltip: 'Day', format : function (dateObj, dateFormat) { if (!dateFormat) { dateFormat = 'M dd'; }; return $.datepicker.formatDate(dateFormat, dateObj); } , highchart : { axis : { dateTimeLabelFormats : { second : '%b %e', minute: '%b %e', hour : '%b %e', day : '%b %e', week : '%b %e', month : '%b %e \'%y', year : '%b %e %Y' } } } },
 				// FIXME: modify lat/lng format to use E/W, N/S instead of +/- (will require a formatter function)
 				//lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 				//lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
@@ -2043,7 +2043,7 @@ function fetchStatsAjax ( evt ) {
 				//tempmin : { type : 'float' , label : 'Average low temperature' , labelShort : 'Avg Lo Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } },
 				//tempmax : { type : 'float' , label : 'Average high temperature' , labelShort : 'Avg Hi Temp' , range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F' ; } },
 				sunAngle : { type : 'float' , label : 'Max height of sun in sky' , labelShort : 'Max height of sun (°)', tooltip: 'Max height sun', range : [0,90] , format : function ( val ) { return Math.round( val ) + '°'; }, info: '<img height="75" width="75" style="float:right; vertical-align:top;" src="'+aaasClimateViz.settings.__libraryURI + '/widgets/media/45-degrees-sun.png"/>The maximum height of the sun in the sky is the maximum angle sun reaches with respect to a person on earth and the eastern horizon.' },
-				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , tooltip: 'Hrs light', range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ); } },
+				sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , tooltip: 'Hrs light', range : [0,24] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ).toFixed(1); } },
 				//sunEnergy : { type : 'float' , label : 'Energy from the sun (recorded)' , labelShort : 'Avg Sun Energy (M)' , range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val) + ' Watt-hours per meter<sup>2</sup> per day' ); } },
 				sunEnergy : { type : 'float' , label : 'Daily recorded energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Rec energy (W-h/m<sup>2</sup>/d)' , tooltip: 'Rec energy', range : [0,10000] , format : function ( val ) { return ( isNaN( val ) ? '<i>No record</i>' : Math.round(val)  ); }, info: 'Watt-hours per meter squared per day is the total amount of solar energy (watts) that struck the earth\'s surface over the course of the day on that date at that location. It is measured using rea; solar panels, so it may differ from the theoretical number because of cloud cover.'  },
 				sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Theo energy (W-h/m<sup>2</sup>/d)' , tooltip: 'Theo energy', range : [0,10000] , format : function ( val ) { return Math.round( val ); }, info: 'Watt-hours per meter squared per day is the total amount of solar energy (watts) that struck the earth\'s surface over the course of the day on that date at that location. This amount is calculated from the angle that the sun\'s rays hit that location at that time of year.' },

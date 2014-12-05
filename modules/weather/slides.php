@@ -212,7 +212,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 					<p>2. Observe the temperature pattern at that place.</p>
-					<p>3. Repeat this activity for as many different locations as you like before moving to the next activity.</p>
+					<p>3. Repeat this activity for as many different locations as you like before moving to the next activity. You can push the red button to reset your dates and markers.</p>
 			</div>
 		
 		</div>
@@ -624,7 +624,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 				<p>3. Repeat this activity choosing a location within the tropical zone. Notice that you will see a different pattern. Why do you see that different pattern?</p>
-				<p>4. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
+				<p>4. Repeat this activity for as many locations as you like before moving on to the next activity. You can push the red button to reset your dates and markers.</p>
 			</div>
 		
 		</div>
@@ -693,7 +693,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 				<p>4. Click "Line of Best Fit" at the bottom right corner of the graph.</p>
-				<p>5. Repeat this activity for as many locations as you like.</p>
+				<p>5. Repeat this activity for as many locations as you like. You can push the red button to reset your dates and markers.</p>
 			</div>
 		</div>
 	</div>
@@ -820,7 +820,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 				<p>2. Choose two locations to create a graph to see the difference in the number of hours of daylight at those two locations. If you select a place that is very far north or very far south (within about 1500 miles of the north or south poles), you will see that at some times of the year the number of hours of daylight at that place is zero and at other times of the year there is daylight all day long.</p>
-				<p>3. Repeat the activity as many times as you like before moving on to the next activity.</p>
+				<p>3. Repeat the activity as many times as you like before moving on to the next activity. You can push the red button to reset your dates and markers.</p>
 			</div>
 		
 		</div>
@@ -891,7 +891,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 				<p>4. Click "Line of Best Fit" at the bottom of the page.</p>
-				<p>5. Repeat this activity for as many locations as you like before moving on to the next activity.</p>
+				<p>5. Repeat this activity for as many locations as you like before moving on to the next activity. You can push the red button to reset your dates and markers.</p>
 			</div>
 		
 		</div>
