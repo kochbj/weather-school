@@ -435,7 +435,7 @@ var slideInit = {
 		initialize : function ( ) {
 		if (!(slideInit['daily-temperature-example'].is_initialized)) {
 			var widgets =slideInit['daily-temperature-example'].initialize();
-			slideInit['daily-temperature-example'].is_initialized=true;
+			slideInit['daily-temperature-example'].is_initialized=false;
 		}
 		return widgets;
 		}
