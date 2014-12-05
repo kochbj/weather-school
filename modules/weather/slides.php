@@ -1,3 +1,6 @@
+<div id="coverslide">
+	<h2>WeatherSchool @ AAAS</h2>
+</div>
 <div id="introduction" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Introduction">
 	<h2>Did you ever wonder&#8230;</h2>
 	<ul>
@@ -518,7 +521,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>1. Use the map above to zoom in on a location near a large body of water that you would like to explore. Click on a specific location on the map.</p>
 			</div>
 			<div>
-				<p>2. The 20 closest reporting stations appear as yellow dots around the location you chose. Zoom in to get a closer look at where the yellow dots are located. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is farther inland. Click on both reporting stations to highlight them.</p>
+				<p>2. The 20 closest reporting stations appear as yellow dots around the location you chose. Zoom in to get a closer look at where the yellow dots are located. Choose one reporting station that is as close to the large body of water as possible. Choose a second reporting station that is farther inland. Click on both reporting stations to highlight them. You can click on more than two stations, but then the graph may be harder to read.</p>
 			</div>
 			<div>
 				<p>3. Now click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date. Pick dates at least one year apart. Then click the right arrow to continue.</p>
