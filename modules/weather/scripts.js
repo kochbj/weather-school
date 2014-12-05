@@ -149,7 +149,7 @@ function cbDaylightEx2 ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-			widgetAnimations.placemarkers(wInstance, [40.81,-73.96], [ 44.70, -73.96 ], "January 01 2004", "December 31 2004" );
+			widgetAnimations.placemarkers(wInstance, [40.81,-73.96], [ 44.70, -73.45 ], "January 01 2004", "December 31 2004" );
 			$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	}
 }

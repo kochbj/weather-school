@@ -1758,7 +1758,7 @@ function calculatedSolarDataFetch( evt ) {
 			lat : { type : 'float' , label : 'Latitude' , labelShort : 'Lat' , tooltip: 'Lat', range: [-90,90] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 ) + '°' + ( val < 0 ? 'S' : 'N' ); } },
 			lng : { type : 'float' , label : 'Longitude' , labelShort : 'Lng' , tooltip: 'Lat',  range: [-180,180] , format : function ( val ) { return ( Math.round( val * 10 ) / 10 )+ '°' + ( val < 0 ? 'W' : 'E' ); } },
 			sunAngle : { type : 'float' , label : 'Maximum height of the sun in the sky' , labelShort : 'Max height of sun (°)', tooltip:'Max height sun', range : [0,90] , format : function ( val ) { return Math.round( val ) + '°' ; } },
-			sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , tooltip: 'Hrs light', range : [0,24] , format : function ( val ) {  return ( Math.round( val * 10 ) / 10 ) + ' hours'; } },
+			sunHours : { type : 'float' , label : 'Hours of daylight' , labelShort : 'Hours of daylight' , tooltip: 'Hrs light', range : [0,24] , format : function ( val ) {  return ( Math.round( val * 10 ) / 10 ).toFixed(1) + ' hours'; } },
 			sunEnergyT : { type : 'float' , label : 'Daily theoretical energy from sun<br>(W-h/m<sup>2</sup>/d)' , labelShort : 'Theo energy (W-h/m<sup>2</sup>/d)' , tooltip: 'Theo energy', range : [0,10000] , format : function ( val ) { return Math.round( val ) + ' Watt-hours per meter<sup>2</sup> per day'; } },
 			sunImage : { type : 'string' , label : 'How the sun appears at its highest point' , labelShort : 'Sun Appearance' , format : function ( val ) { return '<img src="' + val + '" />'; } }
 		};

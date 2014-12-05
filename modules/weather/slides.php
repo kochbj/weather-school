@@ -13,6 +13,8 @@
 	<p class="invite">With WeatherSchool @ AAAS, you can explore some of the major factors that produce variations in air temperature.<br>Click the arrow on the right to get started.</p>
 
 </div>
+<?php
+/*
 <div id="contents-intro" class="module-intro" data-slide-type="normal" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Introduction</h2>
 	<div class="intro-text">	
@@ -23,6 +25,8 @@ Each module begins with a guided activity designed to illustrate a temperature p
 At the end of each module you can check your understanding by answering the <b>Quiz Yourself</b> questions or learn more by following the <b>Expand Your Knowledge</b> links.</p>
 </div> 
 </div>
+ */
+?>
 <div id="contents-1" class="module-intro" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="introduction">
 	<h2>Menu</h2>
 	<div class="contents-text">
@@ -663,12 +667,12 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div><p>In previous modules the graphs showed how both temperature and height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun.</p>
 			</div>
 			<div><p>In this activity, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, IL.</p></div>
-			<div><p>The table above shows data from Chicago for 12 specific dates. For each date, the data you see in the "Average air temperature" and "Daily recorded energy from the sun" is averaged over a period of 10 years. Data in the other columns does not change from year to year.</p>
+			<div><p>The table above shows data from Chicago for 12 specific dates. For each date, the data you see in the "Average air temperature" and "Daily recorded energy from the sun" is averaged over a period of 10 years. Data in the other columns does not change from year to year. You can hover over the column headers for a description of each data type.</p>
 			</div>
 			<div>Select columns in the table in the following order: Click first at the top of the "Maximum height of sun in sky" column to highlight it in red; then click at the top of the "Average air temperature" columns to highlight them in blue. If you make a mistake and the colors are switched, you can re-click to unselect and try again.</p></div>
 			<div><p>The graph shown is called a scatterplot. Each point represents a value for the two variables you highlighted in the table. Data for the first variable you selected will always be shown on the X-axis, and data for the second variable will always be shown on the Y-axis. This graph tells you what the average daily temperature is when the maximum height of the sun in the sky has a particular value.</p></div>
 			<div><p>Click on Line of Best Fit at the bottom right corner of the graph.</p></div>
-			<div><p>The dashed line that runs through the points on the scatterplot is called a line of best fit. It represents the linear (straight-line) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related.</p></div>
+			<div><p>The line that runs through the points on the scatterplot is called a line of best fit. It represents the linear (straight-line) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related and gives you an estimate of what the temperature might be when you what the maximum height of sky is.”.</p></div>
 			<div><p>This graph shows that at the times of the year when the maximum height of the sun in the sky is greater, the temperature in Chicago tends to be warmer, and at the times of the year when the sun is lower in the sky, the temperature tends to be cooler. This is because when the sun is higher in the sky, a greater amount of the sun's energy reaches the earth at that location, heating the air and the earth.</p></div>
 			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See whether other locations show the same relationship between the maximum height of the sun in the sky and average daily temperature that you saw in Chicago.</p></div>
 		</div>
@@ -689,7 +693,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div>
 				<p>1. Click on the map to choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least ten dates scattered throughout the year. Click on the the calendar for each new date you want to choose.</p>
-				<p>3. To create a graph, click first on the column in the table showing maximum height of the sun in the sky and then on the column showing average daily temperature.</p>
+				<p>3. To create a graph, click first on the column in the table showing maximum height of the sun in the sky and then on the column showing average daily temperature. You can hover over the column headers for a description of each data type.</p>
 			</div>
 			<div>
 				<p>4. Click "Line of Best Fit" at the bottom right corner of the graph.</p>
@@ -820,7 +824,9 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 				<p>2. Choose two locations to create a graph to see the difference in the number of hours of daylight at those two locations. If you select a place that is very far north or very far south (within about 1500 miles of the north or south poles), you will see that at some times of the year the number of hours of daylight at that place is zero and at other times of the year there is daylight all day long.</p>
-				<p>3. Repeat the activity as many times as you like before moving on to the next activity. You can push the red button to reset your dates and markers.</p>
+		</div>
+		<div>	
+			<p>3. Repeat the activity as many times as you like before moving on to the next activity. You can push the red button to reset your dates and markers.</p>
 			</div>
 		
 		</div>
@@ -833,7 +839,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<ul>
 			<li>During what months of the year do places in the United States experience the greatest number of hours of daylight? Is that true everywhere in the world?</li>
 			<li>During what months of the year do places in the United States experience the least number of hours of daylight? Is that true everywhere in the world?</li>
-			<li>What happens to the <span class="tooltip" title="The range of a set of numbers is the difference between the largest and the smallest number in the set of numbers.">range</span> of daylight hours the closer a place is to the equator?</li>
+			<li>What happens to the range</span> of daylight hours the closer a place is to the equator?</li>
 			<li>What happens to the range of daylight hours as you get close to the north or south poles?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
@@ -862,11 +868,11 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div>	<p>The map above pinpoints Chicago, IL. </p>
 			</div>
 			<div>
-			The table above is the same one you used in Module G. It shows data from Chicago for 12 specific dates in the year 2000. </p></div>
+			The table above is the same one you used in Module G. It shows data from Chicago averaged over a 30-year period for 12 specific dates. </p></div>
 			<div>	<p>Select columns in the table in the following order: click first on top of the "Hours of daylight" column to highlight it in red; then click on the top of the "Average air temperature" column to highlight it in blue. If you make a mistake and the colors are reversed, you can re-click to unselect and try again.</p></div>
-			<div>	<p>Just as you saw in module G, the graph you see here is called a scatter plot. Each point represents a value for the two variables. It tells you what the average daily temperature is for a certain number of hours of daylight on that day.</p></div>
+			<div>	<p>Just as you saw in module G, the graph you see here is called a scatter plot. Each point represents a value for the two variables.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
-			<div>	<p>The line of best fit that you see going through the scatterplot represents the linear (straight-line) relationship between the two variables you selected in the table. It shows you how the number of hours of daylight and the average daily temperature are related.</p>
+			<div>	<p>The line of best fit that you see going through the scatterplot represents the linear (straight-line) relationship between the two variables you selected in the table. It shows you how the number of hours of daylight and the average daily temperature are related and allows you to estimate what the average temperature might be if you know the hours of daylight.</p>
 			</div>
 			<div>	<p>You can see from this graph that during the time of the year when the days are longer the temperature tends to be warmer, and during the time of year when the days are shorter, the temperature tends to be cooler. This makes sense because the longer the day, the more time there is for the earth and the air around the earth to absorb energy from the sun.</p></div>
 			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a relationship between the hours of daylight and average daily temperature at other locations.</p></div>
@@ -915,7 +921,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<p>In this section you can use the <b>Data Finder</b>, the <b>Variable Relationship Explorer</b>, the <b>Daylight Hours Explorer</b>, and the <b>Seasons Simulator</b> to continue to find patterns in data and explore the causes of some patterns you previously identified.</p><br>
 	<b>Variable Relationship Explorer</b><br>
 	 Use the Variable Relationship Explorer when you want to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
-	<b>Daylight Hours Explorer</b>
+	<b>Data Finder</b><br>You can use the data finder to compare data for two locations on the same date or the same location on two dates.<br><br>
+	<b>Daylight Hours Explorer</b><br>
 	Use the Daylight Hours Explorer when you want to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.<br><br>
 	<b>Seasons Simulator</b><br>
 	Use the Seasons Simulator to see how the earth's position relative to the sun changes in a regular pattern throughout the year and causes many of the patterns you previously explored.
@@ -924,7 +931,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 </div>
 <div id="location-data-finder" class="activity" data-slide-type="tool" data-slide-title="Location Data Finder" data-slide-parent-id="data-tools-intro">
 	<div class="header">
-		<h2>Location Data Finder</h2>
+		<h2>Data Finder</h2>
 	</div>
 	<div class="workarea">
 		<div id="location-data-finder-ds" class="full-ds"></div>
@@ -949,14 +956,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 		</div>
 		<div>
 			<p>You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location--the daily recorded energy from the sun and the daily theoretical energy from the sun. You will now have a chance to explore these variables too.</p></div>
-		<div>	<p>In this activity you will be able to choose any two variables to see how they are related to each other.</p> 
+		<div>	<p>On the next screen, choose any two variables to see how they are related to each other.</p> 
 		</div>
 			<div>	<p>1. Choose a location anywhere in the world.</p>
 				<p>2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
 				<p>3. Decide which two variables you would like to compare from  those five variables listed at the top of the columns.</p></div>
 			<div>	<p>4. First click at the top of the column of the variable you would like to be on the X-axis.</p>
 				<p>5. Next, click at the top of the column of the variable you would like to be on teh Y-axis.</p>
-				<p>6. Click "Line of Best Fit" at the bottom of the page.</p>
 				<p>7. Is there a relationship between the two variables?</p>
 			</div>
 		</div>
@@ -985,26 +991,24 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
 			</div>
-			<div><p>Use the sliding bars in the Settings box in the upper right corner to select a specific degree of latitude and a specific date. The point that is marked on the graph represents the number of hours of daylight for the latitude and date you selected.</p></div>
-			<div><p>The yellow line on the globe in the lower right corner shows the degree of latitude that you have chosen.</p></div>
-			<div><p>Now use the slider bar to choose a degree of latitude that is closer to the equator. What happens to the range in the number of daylight hours throughout the year as you get closer to the equator?</p>
+			<div><p>Use the sliding bars in the Settings box in the upper right corner to select a specific degree of latitude and a specific day of the year. The point that is marked on the graph represents the number of hours of daylight for the latitude and day of the year you selected.</p></div>
+			<div><p>The yellow line on the globe in the lower right corner shows the latitude that you have chosen.</p></div>
+			<div><p>Now use the slider bar to choose a latitude that is closer to the equator. What happens to the range in the number of daylight hours throughout the year as you get closer to the equator?</p>
 			</div>
 			<div><p>Just as you saw in Module H, the closer a location is to the equator, the smaller the range in the number of daylight hours that location has throughout the year.</p>
 			</div>
-			<div></p>Choose a degree of latitude farther from the equator. What happens to the range in the number of daylight hours?</p>
+			<div></p>Choose a latitude farther from the equator. What happens to the range in the number of daylight hours?</p>
 			</div>
 			<div><p>Just as you saw in Module H, the farther a location is from the equator, the larger the range in the number of daylight hours it has throughout the year.</p>
-			</div>
-			<div><p>Continue to choose different degrees of latitude and dates until you are ready to try the next data tool.</p>
 			</div>
 		</div>
 	</div>
 
 </div>
-<div id="vis-sim-seasons-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
+<?php /*<div id="vis-sim-seasons-intro" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<h2 style="margin-left: 25px;">Seasons Simulator</h2>
 	<div class="scrollable">
-	<p>You can use the Seasons Simulator on the next slide to show how the changing position of the earth with respect to the sun causes the angle that the sun's rays hit the earth to also change throughout the year. There are 3 separate, but related animations in the simulator:</p>
+	<p>You can use the Seasons Simulator to show how the changing position of the earth and sun throughout the year changes the angle at which the sun's rays hit the earth. There are 3 separate, but related animations in the simulator:</p>
 	<ul>
 		<li>The animation on the <b>left</b> shows how the earth's position relative to the sun changes throughout the year.</li>
 		<li>The animation in the <b>upper right</b> shows where the sun's rays hit the earth on the particular day that is modeled between the earth and sun on the left.</li>
@@ -1022,7 +1026,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 	Place the stick figure around 50 degrees north. Start the animation. Stop the animation in November or December. Notice that the sun's rays hit the earth at a very small angle and the distance between the rays is very large. When the height of the sun in the sky is very low, the intensity of the sun's rays hitting the earth is smaller. This causes less solar energy to reach the earth. Therefore, the air temperature is lower. </p>
 </div>
 </div>
-<?php /*
+ */
+ /*
 <div id="vis-sim-seasons" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Seasons Simulator</h2>
@@ -1064,9 +1069,23 @@ At the end of each module you can check your understanding by answering the <b>Q
 	</div>
 	<div class="instructions" style="height: 70px;">
 		<div class="slider">
-			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
+			<div>
+				<p>You can use the Seasons Simulator to show how the changing position of the earth and sun throughout the year changes the angle at which the sun's rays hit the earth.</p>
 			</div>
-			<div><p>The Daylight Hours Explorer lets you view the number of hours of daylight throughout the year at different degrees of latitude.</p>
+			<div>
+				<p>Click on "start animation" at the lower right of the simulator. Observe the changes on the screen. Click "stop animation" at any time.</p>
+			</div>
+			<div>
+				<p>Use the red slider on the calendar to change the date. Observe what happens to the position of the earth and the angle of the sun.</p>
+			</div>
+			<div>
+					<p>Click and drag the image of the earth on the left. Observe what happens to the angle of the sunlight on the stick figure and the place where the sun is directly overhead.</p>
+			</div>
+			<div>
+				<p>Click and drag the stick figure to change its latitude. Observe how the angle of the sunlight on the stick figure changes.</p>
+			</div>
+			<div>
+				<p>Continue to explore relationships between time of year, position of the stick figure, and the angle at which the sun strikes the earth and the stick figure.</p>
 			</div>
 		</div>
 	</div>	
@@ -1074,18 +1093,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="data-tools-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="data-tools-intro">
 	<h2>Module Complete</h2>
 	<div class="guiding-questions">
-		<p> If you're done exploring variables, select the next module you would like to explore from the menu. </p>
+		<p> If you're done exploring variables, select a module you would like to explore from the menu. </p>
 	</div>
-</div>
-<div id="about" class="module-intro" data-slide-type="key" data-slide-title="about" data-slide-group-title="About">
-	<h2>About WeatherSchool@AAAS</h2>
-	<div class="intro-text">	
-	<p>Weatherschool@AAAS introduces you to a variety of factors that affect patterns in air temperature. In a series of modules, you will learn how moving air masses can cause day-to-day temperature variation, how geographic factors such as elevation above sea level can influence temperature at any given location, and how the movement of the earth in relation to the sun can affect temperature over the course of a year. The modules use Google Maps to interact with daily measurements collected by the National Oceanographic and Atmospheric Administration (NOAA). The data were collected by local weather stations between 1929 and 2010 in the United States and around the world.</p>
-<p>
-Each module begins with a guided activity designed to illustrate a temperature pattern or a variable affecting that pattern. This is followed by an open-ended <b>Try It</b> activity. In the <b>Try It</b> activity, you can further explore the featured pattern by picking different locations on the maps and choosing different dates.</p>
-<p>
-At the end of each module you can check your understanding by answering the <b>Quiz Yourself</b> questions or learn more by following the <b>Expand Your Knowledge</b> links.</p>
-</div> 
 </div>
 <?php
 /*

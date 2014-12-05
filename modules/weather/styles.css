@@ -23,9 +23,9 @@
 #coverslide h2 {background: rgba(81, 121, 173, .1); top:27%; opacity:.9; text-align: center; color:white; position: relative; font-size: 400%;/* padding: .5em 0em .5em 0em;*/ font-weight:normal; }
 
 .module-complete { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
-.module-complete > h2 { font-weight: normal; background-color: #8eabc5; padding: 1em .5em; display: inline-block; font-size: 160%; }
+.module-complete > h2 { font-weight: normal; background-color: #8eabc5; padding: .7em .5em; display: inline-block; font-size: 160%; }
 .module-complete ul li { margin-bottom: 25px; }
-.module-complete .guiding-questions { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; margin-top: 20px; padding: .01em 1em .01em 1em; }
+.module-complete .guiding-questions { background-color: rgba(142,171,197,.5); width: 53%; font-size:90%; margin-left: 23px; padding: .01em 1em .01em 1em; }
 .module-complete .guiding-questions > p {margin-left:30px;}
 
 .module-intro { background-image: url(assets/introduction/clouds-opaque.jpg); background-repeat: no-repeat; background-size: cover; font-size: 130%; }
