@@ -1637,7 +1637,7 @@ function stationBasedDataFetchAjax ( evt ) {
 				data : [],
 			};
 			var dataPoints = {
-				date_recorded : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day',	format : function ( dateObj , dateFormat ) { if ( !dateFormat ) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate( dateFormat , dateObj ); } , highchart : { axis : { dateTimeLabelFormats : { second:'%b %e' , minute:'%b %e' , hour:'%b %e' , day:'%b %e' , week:'%b %e' , month:'%b %e' , year:'%b %e' } } } },
+				date_recorded : { type : 'datetime' , label : 'Day of the Year' , labelShort : 'Day', tooltip: 'Day',	format : function ( dateObj , dateFormat ) { if ( !dateFormat ) { dateFormat = 'yy M d'; }; return $.datepicker.formatDate( dateFormat , dateObj ); } , highchart : { axis : { dateTimeLabelFormats : { second:'%b %e' , minute:'%b %e' , hour:'%b %e' , day:'%b %e' , week:'%b %e' , month:'%b %e %y' , year:'%b %e %Y' } } } },
 				temp : { type : 'float' , label : 'Average air temperature' , labelShort : 'Average temperature (°F)' , tooltip:'Avg temp',  range: [0,100] , format : function ( val ) { return Math.round( val ) + '°F'; } }
 			};
 			if (aaasClimateViz.widgets[widgetIndex].settings.data.fields && aaasClimateViz.widgets[widgetIndex].settings.data.fields.length > 0) {
