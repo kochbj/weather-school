@@ -1235,7 +1235,7 @@ function addLocation (e,wInstance) {
 		wInstance._callback({type:'user-select-location',data:{marker:marker,stationNames:e.stationNames}});
 		if (staticmap) {
 			google.maps.event.clearListeners(wInstance.map, 'click');
-			wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true});
+			wInstance.map.setOptions({draggable: false, disableDoubleClickZoom: true, scrollwheel:false });
 		}
 	});
 	geocoder.geocode( { latLng:marker.position } , function(results, status) { marker.init(results,status,e.staticmap); } );
