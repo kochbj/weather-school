@@ -76,20 +76,24 @@
 		<h1 style="font-size: 240%;">WeatherSchool @ AAAS <sup>beta</sup></h1>
 	</div>
 	<div class="site-nav-panel">
-		<!--<div class="navigation">
+		<div class="navigation">
 			<ul>
 				<li class="<?php echo ( $page == 'home' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/">Home</a></p></li>
-				<li class="<?php echo ( $page == 'module' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/module">Start the Module</a></p></li>
-				<li class="<?php echo ( $page == 'reports' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/reports">Create &amp; View Reports</a></p></li>
+				<!--<li class="<?php echo ( $page == 'module' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/module">Start the Module</a></p></li>
+				<li class="<?php echo ( $page == 'reports' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/reports">Create &amp; View Reports</a></p></li>-->
+				<li class="<?php echo ( $page == 'about' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/about">About WeatherSchool</a></p></li>
+				<li class="<?php echo ( $page == 'assessments' ? 'selected' : '' ); ?>"><p><a href="http://assessment.aaas.org" target="_blank">Assessments</a></p></li>
+				<li class="<?php echo ( $page == 'standards' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/standards">Standards</a></p></li>
+
 			</ul>
-		</div>-->
+		<!--</div>
 		<div id="userControls">
 			<?php if ( isset( $_SESSION['user'] ) ) { ?>
 			Logged in as <?php echo $_SESSION['user']; ?> (<a href="<?php echo CLIMATE_DIR_WWW; ?>/logout">log out</a>)
 			<?php } else { ?>
 			<a href="<?php echo CLIMATE_DIR_WWW; ?>/login">Login</a> or <a href="<?php echo CLIMATE_DIR_WWW; ?>/register">Register</a>
 			<?php } ?>
-		</div>
+		</div>-->
 	</div>
 	<div id="body">
 		<div id="content">
