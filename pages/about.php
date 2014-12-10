@@ -10,6 +10,7 @@ Each module begins with a guided activity designed to illustrate a temperature p
 At the end of each module you can check your understanding by answering the <b>Quiz Yourself</b> questions or learn more by following the <b>Expand Your Knowledge</b> links.</p>
 <p>
 <table style="margin: 1.65em auto; width: 65%;"><tr valign="top" align="center">
+<?php /*
 	<td width="50%">
 		<p><a href="modules/weather/" class="button" style="font-size:150%;" onclick="window.open(this.href,'module','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start WeatherSchool</a></p>
 	</td>
@@ -22,7 +23,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<?php } ?>
 	</td>-->
 </tr></table>
-
+ */ ?>
 <hr>
 
 <div style="font-size: 88%; margin: 4em;">

@@ -253,7 +253,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will look at the relationship between latitude and average daily temperature in the northern hemisphere.</p>
+				<p>In this activity you will look at the relationship between <span class="tooltip" content="latlng">latitude</span> and average daily temperature in the northern hemisphere.</p>
 			</div>
 			<div>
 				<p>In the map above, Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
@@ -266,13 +266,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
-				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone)</p>
+				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the equator) tend to be warmer than places that are farther north (farther away from the equator). Although it is technically more accurate to say closer or farther from the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span> because the pattern is somewhat different in that area, we will use the equator as our reference line.</p>
 			</div>
 			<div>
 				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year--what we call the range of temperatures--is less the closer you are to the tropical zone. </p>
 			</div>
 			<div>
-				<p>Notice that the range of temperatures at the location that is closer to the tropical zone (the <span class="lat-high">lower</span> line) is greater than the range of temperatures at the lower latitude (the upper line). This makes the line that is closer to the tropical zone (the <span class="lat-low">upper</span> line) a little flatter than the line that is farther from the tropical zone (the <span class="lat-high">lower</span> line).</p>
+				<p>Notice that the range of temperatures at Winnipeg, the location that is farther from the equator (the lower blue line), is greater than the range of temperatures at San Antonio, the location that is closer to the equator (the upper green line). This makes the line that is closer to the equator (the upper line) a little flatter than the line that is farther from the equator (the lower line).</p>
 			</div>
 					</div>
 	</div>
@@ -298,11 +298,11 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is colder almost every day of the year in the place that is farther south.</p>
 			</div>
 			<div>
-				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther south (farther from the tropical zone).</p>
+				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the equator) tend to be warmer than places that are farther south (farther from the equator).</p>
 			</div>
 			<div>
 				
-				<p>Just remember that in both the northern and southern hemisphere, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
+				<p>Just remember that in both the northern and southern hemispheres, places closer to the equator tend to be warmer than places that are farther away from the equator.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to compare annual temperature patterns at two locations that you choose. See if the relationship between latitude and temperature you observed in these examples exists in other locations. </p>
@@ -323,7 +323,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 			
 			<div>
-				<p>1. Choose two places on the map that are directly north and south of each other (on the same <span class="tooltip" title="Any imaginary arc running from the North Pole to the South Pole, used to locate a place east or west of the prime meridian. The prime meridian is an arc that runs from the North Pole to the South Pole through Greenwich, England. It is defined as the zero line of longitude. New York City is located at 74 degrees west longitude, that is, 74 degrees west of the prime meridian.">line of longitude</span>) and at least <span class="tooltip" title="To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.">1000 miles</span> apart.</p>
+				<p>1. Choose two places on the map that are directly north and south of each other (on the same <span class="tooltip" content="latlng">line of longitude</span>) and at least <span class="tooltip" title="To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.">1000 miles</span> apart.</p>
 			</div>
 			<div>
 				<p>2. Now use the calendar to choose a date range. Choose two dates that are one year apart.  For example, you could choose January 1, 2000 and December 31, 2000. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
@@ -434,7 +434,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			
 			</div>
 			<div>
-				<p>Also note that you may have difficulty finding reporting stations at extremely high elevations because those areas are often very remote and not easily accessible by humans.</p>
+				<p style="text-indent: 0em;">Also note that you may have difficulty finding reporting stations at extremely high elevations because those areas are often very remote and not easily accessible by humans.</p>
 			</div>
 			<div>
 				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how much the elevation of a place affects its temperature.</p>
@@ -460,7 +460,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
 	<h2>Large Bodies of Water and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the previous modules, you saw that the temperature at a place is related to how far the place is from the tropical zone (its latitude) and that temperature at a place is related to how far the place is above sea level (its elevation). The greater the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
+	<p>In the previous modules, you saw that the temperature at a place is related to how far the place is from the equator (its latitude) and that temperature at a place is related to how far the place is above sea level (its elevation). The greater the latitude (farther from the equator), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
 	In this module, you are going to find out whether the temperature at a place is related to how close the place is to a large body of water.</p>
 	</div>
@@ -534,7 +534,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>4. When you choose locations, make sure that they are at approximately the same elevation. If one of them is at a much higher elevation than the other one, it will be difficult to tell if the different patterns you see are due to elevation or how close the two places are to a large body of water. Coastal areas often have mountains nearby, so when comparing two locations make sure one of them is not in the mountains and the other at sea level. </p>
 			</div>
 			<div>
-				<p>Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren't many reporting stations right on the shoreline.</p>
+				<p style="text-indent: 0em;">Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren't many reporting stations right on the shoreline.</p>
 			</div>
 			<div>
 				<p>You will also see that the closeness to a large body of water does not always have the same effect on temperature from place to place. At some places the effect is barely noticeable, and at other places it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air that is over the water gets inland.</p>
@@ -599,10 +599,10 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>The map above pinpoints New York City.</p>
 			</div>
 			<div>
-				<p>The graph shows the <span class="tooltip" title="Maximum height of the sun in the sky is the highest the sun gets above the horizon on a given day. It is measured as an angle, which can range from 0 degrees (when the sun does not get above the horizon at all) to 90 degrees (when the sun is directly overhead).">maximum height of the sun in the sky</span> in New York City for each day of the year.</p>
+				<p>The graph shows the <span class="tooltip" content="maxheightsun">maximum height of the sun in the sky</span> in New York City for each day of the year.</p>
 			</div>
 			<div>
-				<p>In this graph you can see that the shape of the line is similar to the shape you saw in the graphs in Module B. The height of the sun increases and then decreases over the course of the year just as temperatures increase and then decrease throughout the year. What you don't see here is the jagged pattern of day-to-day changes that you saw for temperature.</p>
+				<p>In this graph you can see that the shape of the line is similar to the shape you saw in the graphs in Module B. The height of the sun increases and then decreases over the course of the year just as temperature increases and then decreases throughout the year. What you don't see here is the jagged pattern of day-to-day changes that you saw for temperature.</p>
 			</div>
 			<div>
 				<p>How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
@@ -627,7 +627,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>2. Choose a range of dates spanning at least a year. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
 			</div>
 			<div>
-				<p>3. Repeat this activity choosing a location within the tropical zone. Notice that you will see a different pattern. Why do you see that different pattern?</p>
+				<p>3. Repeat this activity choosing a location within the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>. Notice that you will see a different pattern. Why do you see that different pattern? You may find the "Expand Your Knowledge" activity on the next screen will help you answer this question.</p>
 				<p>4. Repeat this activity for as many locations as you like before moving on to the next activity. You can push the red button to reset your dates and markers.</p>
 			</div>
 		
@@ -643,7 +643,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-intro-menu-link').click()">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-menu-link').click()">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Temperature">
@@ -712,7 +712,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-intro-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -975,7 +975,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	</div>
 	<div class="workarea" style="background-color:#CCCCCC;">
 	<div align="center" style = "position:relative;">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405" style="z-index: 98;">
 				<param name="movie" value="assets/sim/daylighthoursexplorer.swf" />
 				<!--[if !IE]>-->
 				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405">
@@ -1049,13 +1049,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 </div>
 */
 ?>
-<div id="vis-sim-seasons" class="activity" data-slide-type="tool" hidden="true" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
+<div id="vis-sim-seasons" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
 	<div class="workonly">
 		<div align="center">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550" style="z-index: 98;">
 				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
 				<!--[if !IE]>-->
 				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="550">
