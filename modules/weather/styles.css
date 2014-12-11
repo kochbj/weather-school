@@ -53,7 +53,8 @@
 #activity-intro p { margin: 0; padding-left: 20px; }
 
 .workarea .shield { width: 36%; }
-.fake-link {cursor: pointer; text-decoration: underline; color: #0000FF;}
+.fake-link {cursor: pointer; /*text-decoration: underline; color: #0000FF;*/ color: #ccffcc; text-shadow:0px 0px 4px #666; }
+.fake-link:hover {text-shadow: none;}
 //.workarea .restricted-ds { left: 0px; width: 36%;}
 //.workarea .restricted-tc { right: 0px; left: 36%; width: 64%; }
 
@@ -116,7 +117,7 @@
 
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
 #data-tools-intro h2, #data-tools-intro .intro-text, #data-tools-intro .photo-caption {background-color:rgba(203, 186, 171, .9);}
-#data-tools-intro .intro-text { top:150px;}
+#data-tools-intro .intro-text { top:130px; font-size:95%}
 
 //#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
 //#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }

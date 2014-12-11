@@ -643,7 +643,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<li>Consider the graph of the average daily temperature throughout the year from module C and the graph of height of the sun in the sky throughout the year from this module. Why is the graph from part C jagged and this graph smooth?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-menu-link').click()">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('seasons-simulator-menu-link').click()">Seasons Simulator</a>, to see how the position of the earth with respect to the sun at different times of the year causes the maximum height of the sun in the sky to change in a repeating pattern.</p>
 	</div>
 </div>
 <div id="height-sun-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky and Temperature">
@@ -712,7 +712,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-seasons-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('seasons-simulator-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -843,7 +843,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<li>What happens to the range of daylight hours as you get close to the north or south poles?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a class="fake-link" onclick="document.getElementById('vis-sim-daylight-menu-link').click()">Daylight Hours Explorer</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('daylight-hours-explorer-menu-link').click()">Daylight Hours Explorer</a>, to see an animation showing how much daylight different parts of the earth experience throughout the year.</p>
 	</div>
 </div>
 <div id="daylight-air-temperature-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight and Temperature">
@@ -918,18 +918,19 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
 	<h2>Additional Data Tools</h2>
 	<div class="intro-text">
-	<p>In this section you can use the <b>Data Finder</b>, the <b>Variable Relationship Explorer</b>, the <b>Daylight Hours Explorer</b>, and the <b>Seasons Simulator</b> to continue to find patterns in data and explore the causes of some patterns you previously identified.</p><br>
-	<b>Variable Relationship Explorer</b><br>
+	<p>In this section you can use tools to continue to find patterns in data and explore the causes of some patterns you previously identified. Some of these tools were developed at AAAS, and others were developed by the <a href="astro.unl.edu">University of Nebraska-Lincoln</a> (UNL). The UNL tools require Adobe Flash player.</p><br>
+	<b><a class="fake-link" onclick="document.getElementById('data-finder-menu-link').click()">Data Finder</a></b><br>You can use the data finder to compare data for two locations on the same date or the same location on two dates.<br><br>
+	<b><a class="fake-link" onclick="document.getElementById('variable-relationship-explorer-menu-link').click()">Variable Relationship Explorer</a></b><br>
 	 Use the Variable Relationship Explorer when you want to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
-	<b>Data Finder</b><br>You can use the data finder to compare data for two locations on the same date or the same location on two dates.<br><br>
-	<b>Daylight Hours Explorer</b><br>
-	Use the Daylight Hours Explorer when you want to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.<br><br>
-	<b>Seasons Simulator</b><br>
-	Use the Seasons Simulator to see how the earth's position relative to the sun changes in a regular pattern throughout the year and causes many of the patterns you previously explored.
-	</div>
+	<b><a class="fake-link" onclick="document.getElementById('daylight-hours-explorer-menu-link').click()">Daylight Hours Explorer</a></b><br>
+	Use the UNL Daylight Hours Explorer when you want to visualize how the number of hours of daylight changes throughout the year at different degrees of latitude.<br><br>
+	<b><a class="fake-link" onclick="document.getElementById('seasons-simulator-menu-link').click()">Seasons Simulator</a></b><br>
+	Use the UNL Seasons Simulator to see how the earth's position relative to the sun changes in a regular pattern throughout the year and causes many of the patterns you previously explored.<br><br>
+	<b><a class="fake-link" onclick="document.getElementById('lat-lng-demo-menu-link').click()">Latitude and Longitude Demonstrator</a></b><br>
+	Use the UNL Latitude and Longitude Demonstrator to gain a better understanding of how geographic coordinates are notated.</div>
 	<div class="photo-caption bottom-caption">By Kaushik.chug [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3AGears.JPG">via Wikimedia Commons</a></div>
 </div>
-<div id="location-data-finder" class="activity" data-slide-type="tool" data-slide-title="Location Data Finder" data-slide-parent-id="data-tools-intro">
+<div id="data-finder" class="activity" data-slide-type="tool" data-slide-title="Data Finder" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Data Finder</h2>
 	</div>
@@ -969,14 +970,15 @@ At the end of each module you can check your understanding by answering the <b>Q
 	</div>
 </div>
 
-<div id="vis-sim-daylight" class="activity" data-slide-type="tool" data-slide-title="Daylight Hours Explorer" data-slide-parent-id="data-tools-intro">
+<div id="daylight-hours-explorer" class="activity" data-slide-type="tool" data-slide-title="Daylight Hours Explorer" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Daylight Hours Explorer</h2>
 	</div>
 	<div class="workarea" style="background-color:#CCCCCC;">
 	<div align="center" style = "position:relative;">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405" style="z-index: 98;">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405">
 				<param name="movie" value="assets/sim/daylighthoursexplorer.swf" />
+			<param name="wmode" value="transparent" />
 				<!--[if !IE]>-->
 				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405">
 					<!--<![endif]-->
@@ -1049,14 +1051,15 @@ At the end of each module you can check your understanding by answering the <b>Q
 </div>
 */
 ?>
-<div id="vis-sim-seasons" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
+<div id="seasons-simulator" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
 	<div class="workonly">
 		<div align="center">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550" style="z-index: 98;">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550">
 				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
+				<param name="wmode" value="opaque" />
 				<!--[if !IE]>-->
 				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="550">
 					<!--<![endif]-->
@@ -1090,6 +1093,33 @@ At the end of each module you can check your understanding by answering the <b>Q
 		</div>
 	</div>	
 </div>
+<div id="lat-lng-demo" class="activity" data-slide-type="tool" data-slide-title="Latitude and Longitude Demonstrator" data-slide-parent-id="data-tools-intro">
+	<div class="header">
+		<h2>Latitude and Longitude Demonstrator</h2>
+	</div>
+	<div class="workarea" style="background-color:#CCCCCC;">
+	<div align="center" style = "position:relative;">
+			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="566" height="405">
+				<param name="movie" value="assets/sim/vis-sim-latlng.swf" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-latlng.swf" width="566" height="405">
+					<!--<![endif]-->
+					<p>flash animation</p>
+					<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+</div>
+<div class="instructions">
+		<div class="slider">
+			<div><p>The Latitude and Longitude Demonstrator will give you practice describing the location of a place in terms of two numbers. One of the numbers is a measure of how far the place is north or south of the equator (latitude), and the other is a measure of how far a place is east or west of the prime meridian (longitude). Knowing how to describe a place in terms of its latitude and longitude will come in handy as you work through these activities because that is how a place's location is identified in these materials.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
+/*
 <div id="data-tools-complete" class="module-complete" data-slide-type="contents" data-slide-title="Module Complete" data-slide-parent-id="data-tools-intro">
 	<h2>Module Complete</h2>
 	<div class="guiding-questions">

@@ -14,9 +14,12 @@ function	nextClickevt ( evt ) {
 			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
 				$(this).data("currSlide",instrSlider.currentSlideIndex);
 				instrSlider.toSlide( 'next' );
-			} else if ( ctrlSlider.currentSlideIndex < ctrlSlider.slideIndexCount ) {
+			} else if ( ctrlSlider.currentSlideIndex /*< ctrlSlider.slideIndexCount*/ ) {
 				$(this).data("currSlide",-1);
-				ctrlSlider.toSlide( 'next' );
+				if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
+					ctrlSlider.toSlide(ctrlSlider.$slides.index($('#data-tools-intro')));				
+				}
+				else ctrlSlider.toSlide( 'next' );
 			}			
 			setTimeout( locationUpdate , 500 );
 			$(this).off('click',nextClickevt);
@@ -28,7 +31,10 @@ function	prevClickevt ( evt ) {
 				instrSlider.toSlide( 'prev' );
 			}
 			else if ( ctrlSlider.currentSlideIndex > 0 ) {
-				ctrlSlider.toSlide( 'prev' );
+				if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
+					ctrlSlider.toSlide(ctrlSlider.$slides.index($('#data-tools-intro')));				
+				}
+				else ctrlSlider.toSlide( 'prev' );
 			}
 			setTimeout( locationUpdate , 500 );
 			$(this).off('click',prevClickevt);
@@ -117,8 +123,11 @@ function ctrlSlider_cb ( psobj ) {
 	if ( psobj.currentSlideIndex == 0 ) {
 		$( '#slider-navigation .prev ').hide();
 		$( '#slider-navigation .next ').show();
-	} else if ( psobj.currentSlideIndex == psobj.slideIndexCount ) {
+	} else if ( psobj.currentSlideIndex == psobj.$slides.index($('#data-tools-intro'))-1	) {
 		$( '#slider-navigation .prev ').show();
+		$( '#slider-navigation .next ').hide();
+	} else if (psobj.$currentSlide.attr('id')=='data-tools-intro'){
+		$( '#slider-navigation .prev ').hide();
 		$( '#slider-navigation .next ').hide();
 	} else {
 		$( '#slider-navigation .prev ').show();
@@ -160,8 +169,7 @@ function locationUpdate ( ) {
 		instruction = instrSlider.currentSlideIndex + 1;
 	}
 	if (section == 1) section="INTRO";
-	else if (section == $( '[data-slide-type=key]' ).length-1) section="TOOLS";
-	else if (section == $( '[data-slide-type=key]' ).length) section="ABOUT";
+	else if (section == $( '[data-slide-type=key]' ).length) section="TOOLS";
 	else section = String.fromCharCode( section + 64 - 1 );
 	$( '.you-are-here .screen-id' ).html(
 		'Screen: ' + section +
@@ -365,7 +373,7 @@ function decimalToRomanSimple(value) {
 }
 
 		$('[data-slide-type=key]').each( function (idx, el) {
-			if ($( el ).attr( 'id' ) == "introduction" || $( el ).attr( 'id' ) == "data-tools-intro" || $( el ).attr( 'id' ) == "about" ) {
+			if ($( el ).attr( 'id' ) == "introduction" || $( el ).attr( 'id' ) == "data-tools-intro"  ) {
 				$('#accordion').append( '<a id="' + $( el ).attr( 'id' ) + '-menu-link" href="#' + $( el ).attr( 'id' ) + '"> &nbsp &nbsp ' + $( el ).data( 'slide-group-title' ) + '</a>' );
 				}	
 			else $('#accordion').append( '<a id="' + $( el ).attr( 'id' ) + '-menu-link" href="#' + $( el ).attr( 'id' ) + '">' + String.fromCharCode( idx + 64 ) + '. ' + $( el ).data( 'slide-group-title' ) + '</a>' );
@@ -414,6 +422,7 @@ function decimalToRomanSimple(value) {
 			$('#slider-menu a').removeClass('ui-accordion-header-active');
 			var instrSlider = $($(this).attr( 'href' )).find( '.instructions .slider' );
 			if ( instrSlider.length > 0 && typeof(instrSlider[0].sliderObj) !== 'undefined') instrSlider[0].sliderObj.toSlide( 0 );
+			$( '#slider-navigation .prev' ).data('prevIndex',ctrlSlider.currentSlideIndex);	
 			ctrlSlider.toSlide( $( $( this ).attr( 'href' ) ).index() );
 			setTimeout( locationUpdate , 500 );
 		} );
