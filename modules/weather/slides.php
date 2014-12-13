@@ -930,19 +930,19 @@ At the end of each module you can check your understanding by answering the <b>Q
 	Use the UNL Latitude and Longitude Demonstrator to gain a better understanding of how geographic coordinates are notated.</div>
 	<div class="photo-caption bottom-caption">By Kaushik.chug [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3AGears.JPG">via Wikimedia Commons</a></div>
 </div>
-<div id="data-finder" class="activity" data-slide-type="tool" data-slide-title="Data Finder" data-slide-parent-id="data-tools-intro">
+<div id="data-finder" class="activity tools" data-slide-type="tool" data-slide-title="Data Finder" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Data Finder</h2>
 	</div>
 	<div class="workarea">
-		<div id="location-data-finder-ds" class="full-ds"></div>
-		<div id="location-data-finder-sp" class="full-sp"></div>
+		<div id="data-finder-ds" class="full-ds"></div>
+		<div id="data-finder-sp" class="full-sp"></div>
 	</div>
 	<div class="instructions">
 		<p>You can explore more places and times of the year above. Go to the next page to continue to a new activity.</p>
 	</div>
 </div>
-<div id="variable-relationship-explorer" class="activity" data-slide-type="tool" data-slide-title="Variable Relationship Explorer" data-slide-parent-id="data-tools-intro">
+<div id="variable-relationship-explorer" class="activity tools" data-slide-type="tool" data-slide-title="Variable Relationship Explorer" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Variable Relationship Explorer</h2>
 	</div>
@@ -970,7 +970,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	</div>
 </div>
 
-<div id="daylight-hours-explorer" class="activity" data-slide-type="tool" data-slide-title="Daylight Hours Explorer" data-slide-parent-id="data-tools-intro">
+<div id="daylight-hours-explorer" class="activity tools" data-slide-type="tool" data-slide-title="Daylight Hours Explorer" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Daylight Hours Explorer</h2>
 	</div>
@@ -1051,7 +1051,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 </div>
 */
 ?>
-<div id="seasons-simulator" class="activity" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
+<div id="seasons-simulator" class="activity tools" data-slide-type="tool" data-slide-title="Seasons Simulator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
@@ -1093,7 +1093,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		</div>
 	</div>	
 </div>
-<div id="lat-lng-demo" class="activity" data-slide-type="tool" data-slide-title="Latitude and Longitude Demonstrator" data-slide-parent-id="data-tools-intro">
+<div id="lat-lng-demo" class="activity tools" data-slide-type="tool" data-slide-title="Latitude and Longitude Demonstrator" data-slide-parent-id="data-tools-intro">
 	<div class="header">
 		<h2>Latitude and Longitude Demonstrator</h2>
 	</div>

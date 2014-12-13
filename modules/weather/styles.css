@@ -53,7 +53,7 @@
 #activity-intro p { margin: 0; padding-left: 20px; }
 
 .workarea .shield { width: 36%; }
-.fake-link {cursor: pointer; /*text-decoration: underline; color: #0000FF;*/ color: #ccffcc; text-shadow:0px 0px 4px #666; }
+.fake-link {cursor: pointer;  color: #D3DDE3; text-shadow:0px 0px 4px #666; }
 .fake-link:hover {text-shadow: none;}
 //.workarea .restricted-ds { left: 0px; width: 36%;}
 //.workarea .restricted-tc { right: 0px; left: 36%; width: 64%; }
@@ -71,6 +71,7 @@
 .workarea .split-tc { right: 0px; left: 36%; width: 64%; bottom: -50%;  height:50%; /*border-top:1px dashed grey;*/ }
 
 .workarea .full-sp { right: 0px; left: 100%; width: 64%; height:100%;  display: none;}
+.workarea .full-sp > .mCustomScrollBox > .mCSB_container { margin-right: 0px; }
 //.workarea .split-tc.unrestricted{display: none; }
 //.workarea .split-tb.unrestricted{display: none; }
 

@@ -14,7 +14,7 @@ function	nextClickevt ( evt ) {
 			if ( instrSlider && instrSlider.currentSlideIndex < instrSlider.slideIndexCount && !evt.ctrlKey ) {
 				$(this).data("currSlide",instrSlider.currentSlideIndex);
 				instrSlider.toSlide( 'next' );
-			} else if ( ctrlSlider.currentSlideIndex /*< ctrlSlider.slideIndexCount*/ ) {
+			} else if ( ctrlSlider.currentSlideIndex <= ctrlSlider.slideIndexCount ) {
 				$(this).data("currSlide",-1);
 				if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
 					ctrlSlider.toSlide(ctrlSlider.$slides.index($('#data-tools-intro')));				

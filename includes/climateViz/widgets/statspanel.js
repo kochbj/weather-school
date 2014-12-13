@@ -46,7 +46,7 @@ function statspanel_createPanel(data, wInstance) {
 	for (mid in data) { for ( idxData in data[mid].data ) {
 		wInstance.settings.container.find( '.date' ).append( $( '<td>' + data[mid].dataMeta.date.format( data[mid].data[idxData].date ) + '</td>' ) );
 		wInstance.settings.container.find( '.place' ).append( $( '<td>' + data[mid].seriesMeta.label + '<span style="border: 1px solid #999999; display: inline-block; height: 12px; margin: 0 0.5em; width: 12px; background-color: ' + data[mid].seriesMeta.color + '"></span></td>' ) );
-		wInstance.settings.container.find( '.lat' ).append( $( '<td>' + data[mid].dataMeta.lat + '</td>' ) );
+		wInstance.settings.container.find( '.coords' ).append( $( '<td>(' + data[mid].seriesMeta.lat+', '+data[mid].seriesMeta.lng + ')</td>)' ) );
 		// wInstance.settings.container.find('.lng').append( $( '<td>' + data[mid].dataMeta.lng.format(data[mid].data[idxData].lng ) + '</td>' ) );
 		wInstance.settings.container.find( '.sunHours' ).append( $( '<td>' + data[mid].dataMeta.sunHours.format( data[mid].data[idxData].sunHours ) + '</td>' ) );
 		wInstance.settings.container.find( '.sunEnergy' ).append( $( '<td>' + data[mid].dataMeta.sunEnergy.format( data[mid].data[idxData].sunEnergy ) + '</td>' ) );

@@ -1074,7 +1074,7 @@ var slideInit = {
 			);
 		}
 	},
-	'location-data-finder' : {
+	'data-finder' : {
 		is_initialized : false ,
 		initialize : function ( ) {
 			aaasClimateViz.loadWidget(
@@ -1083,13 +1083,13 @@ var slideInit = {
 					data           : { source:'location-stats' },
 					date           : { type:'month-day' , max:1 },
 					maxPoints      : 2,
-					container      : $( '#location-data-finder-ds' ),
+					container      : $( '#data-finder-ds' ),
 					displayWidgets : [
 						aaasClimateViz.loadWidget(
 							'statspanel',
 							{
-								container : $( '#location-data-finder-sp' ) ,
-								callbacks : [ widgetScroll ]
+								container : $( '#data-finder-sp' ) ,
+								callbacks : [ ]
 							}
 						)
 					],
