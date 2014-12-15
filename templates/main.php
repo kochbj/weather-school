@@ -58,7 +58,9 @@
 			});
 		});
 	</script>
-	
+
+
+
 	<?php
 	$__local_js =  dirname( $page ) . DIRECTORY_SEPARATOR . basename( $page , '.php' ) . '.js';
 	if ( file_exists( $__local_js ) ) {

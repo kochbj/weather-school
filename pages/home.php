@@ -1,3 +1,34 @@
+<head>
+<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/owl.carousel.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/owl.carousel.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/owl.theme.css"/>
+<style>
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+</style>
+<script> 
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+  });
+ 
+});
+</script>
+</head>
+
 <h2 style="text-align:center; font-size:175%;">Welcome to WeatherSchool @ AAAS.org!</h2>
 <p style="margin:auto;font-size:125%">
 <br><br>WeatherSchool @ AAAS was developed by researchers at the American Association for the Advancement of Science (AAAS) to help you explore how different factors—time of the year, location, or elevation—work together to produce the day-to-day weather you experience in your local community as well as the overall climate for the region of the world where you live. WeatherSchool can be used by anyone with an interest in weather and climate.
@@ -21,7 +52,7 @@
 	*/ ?>
 <table style="margin: 1.65em auto; width: 65%;"><tr valign="top" align="center">
 	<td width="50%">
-		<p><a href="modules/weather/" class="button" style="font-size:150%;" onclick="window.open(this.href,'module','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start WeatherSchool</a></p>
+		<p><a href="modules/weather/" class="button" style="font-size:150%;" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start WeatherSchool</a></p>
 	</td>
 	<!--<td width="50%">
 		<?php if ( $login ) { ?>
@@ -32,7 +63,18 @@
 		<?php } ?>
 	</td>-->
 </tr></table>
-
+<div id="owl-demo">
+          
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl1.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl2.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl3.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl4.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl5.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl6.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl7.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl8.jpg" alt="Owl Image"></div>
+ 
+</div>	
 <hr>
 
 <div style="font-size: 88%; margin: 4em;">
