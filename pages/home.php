@@ -63,9 +63,14 @@ $(document).ready(function() {
 		<?php } ?>
 	</td>-->
 </tr></table>
+	<p>"<?php
+		$phpfiles = glob(CLIMATE_DIR_WWW , "/includes/media/screenshots/.*");
+//echo "/includes/media/screenshots/*.png";
+		echo count($phpfiles); ?>/test"</p>	
 <div id="owl-demo">
-          
-  <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl1.jpg" alt="Owl Image"></div>
+	
+	<div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/A.1.2.png" alt="Owl Image"></div>
+	<div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl1.jpg" alt="Owl Image"></div>
   <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl2.jpg" alt="Owl Image"></div>
   <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl3.jpg" alt="Owl Image"></div>
   <div class="item"><img src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/owl-carousel/assets/owl4.jpg" alt="Owl Image"></div>
