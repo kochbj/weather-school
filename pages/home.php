@@ -16,7 +16,7 @@ $(document).ready(function() {
  
   $("#slides-demo").owlCarousel({
  
-      autoPlay: 10000, //Set AutoPlay to 3 seconds
+      autoPlay: 20000, //Set AutoPlay to 3 seconds
 			loop: true,
 			items : 5,
       //itemsDesktop : [1199,5],
@@ -49,7 +49,7 @@ $(document).ready(function() {
 </ul> 
 <p>Designed primarily for middle and high school students and their teachers, WeatherSchool @ AAAS.org can also be used by anyone with an interest in learning more about weather and climate.</p>
 	*/ ?>
-<table style="margin: 1.65em auto; width: 65%;"><tr valign="top" align="center">
+<table style="margin: 3em auto; width: 65%;"><tr valign="top" align="center">
 	<td width="50%">
 		<p><a href="modules/weather/" class="button" style="font-size:150%;" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start WeatherSchool</a></p>
 	</td>
@@ -64,23 +64,23 @@ $(document).ready(function() {
 </tr></table>
 <div id="slides-demo">
 	
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/A.1.2.png"></div>
+	<!--<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/A.1.2.jpg"></div>-->
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg"></div>
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/B.1.1.png"></div>
-<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/C.2.2.png"></div>
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/B.1.1.jpg"></div>
+<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/C.2.2.jpg"></div>
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/MoscowColdFront.jpg"></div>	
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/D.1.8.png"></div>
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/E.1.2.png"></div>
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/D.1.8.jpg"></div>
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/E.1.2.jpg"></div>
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/Rj_north_york_moors.jpg"></div>	
 	
-<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/F.1.2.png"></div>
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/G.1.4.png"></div>
+<!--<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/F.1.2.jpg"></div>-->
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/G.1.4.jpg"></div>
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/tromsoneedattribution.jpg"></div>	
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.1.png"></div>
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.3.2.png"></div>
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.1.jpg"></div>
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.3.2.jpg"></div>
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/Sunset_At_Halong_Bay.jpg"></div>	
-	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.4.3.png"></div>
-	<div class="item"><img height="150px"  width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.5.1.png"></div>
+	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.4.3.jpg"></div>
+	<!--<div class="item"><img height="150px"  width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.5.1.jpg"></div>-->
 
 </div>	
 <hr>
@@ -88,7 +88,7 @@ $(document).ready(function() {
 <div style="font-size: 88%; margin: 4em;">
 	<p>Development of this website is supported by grant # NA09SEC4690008 from the U.S. Department of Commerce, National Oceanic and Atmospheric Administration and by grant # NNX09AL72G from the National Aeronautics and Space Administration.</p>
 	<p align="center">
-		<a href="http://www.nasa.gov"><img height="150px" src="media/img/nasa-226x170.jpg" alt="NASA logo" width="82" height="60" border="0" align="absmiddle" style="margin: 0em 35px;" /></a>
-		<a href="http://www.noaa.gov"><img height="150px" src="media/img/noaa-220x220.jpg" alt="NOAA logo" width="68" height="68" border="0" align="absmiddle" style="margin: 0em 35px;" /></a>
+		<a href="http://www.nasa.gov"><img src="media/img/nasa-226x170.jpg" alt="NASA logo" width="82" height="60" border="0" align="absmiddle" style="margin: 0em 35px;" /></a>
+		<a href="http://www.noaa.gov"><img src="media/img/noaa-220x220.jpg" alt="NOAA logo" width="68" height="68" border="0" align="absmiddle" style="margin: 0em 35px;" /></a>
 	</p>
 </div>
