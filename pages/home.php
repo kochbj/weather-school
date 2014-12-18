@@ -67,7 +67,7 @@ $(document).ready(function() {
 	<!--<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/A.1.2.jpg"></div>-->
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg"></div>
 	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/B.1.1.jpg"></div>
-<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/C.2.2.jpg"></div>
+<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/C.1.3.jpg"></div>
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/MoscowColdFront.jpg"></div>	
 	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/D.1.8.jpg"></div>
 	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/E.1.2.jpg"></div>
@@ -78,7 +78,7 @@ $(document).ready(function() {
 <div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/tromsoneedattribution.jpg"></div>	
 	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.1.jpg"></div>
 	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.3.2.jpg"></div>
-<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/Sunset_At_Halong_Bay.jpg"></div>	
+<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/modules/weather/assets/introduction/Sunset_TreeNeedAttribution.jpg"></div>	
 	<div class="item"><img height="150px" width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.4.3.jpg"></div>
 	<!--<div class="item"><img height="150px"  width="195px" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/media/screenshots/TOOLS.5.1.jpg"></div>-->
 

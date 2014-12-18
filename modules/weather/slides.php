@@ -351,7 +351,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Elevation and Temperature">
 	<h2>Elevation and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the previous module, you saw that the temperature and latitude of a place are related. The higher the latitude (farther from the equator), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
+	<p>In the previous module, you saw that the temperature and latitude of a place are related. The higher the latitude (farther from the tropical zone), the colder the place is, and the lower the latitude (closer to the equator), the warmer the place is.</p>
 	<p>
 	In this module, you are going to use the maps to find out if how far a place is above sea level is related to the temperature at that place.</p>
 	</div>
@@ -667,7 +667,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div><p>In previous modules the graphs showed how both temperature and height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun.</p>
 			</div>
 			<div><p>In this activity, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, IL.</p></div>
-			<div><p>The table above shows data from Chicago for 12 specific dates. For each date, the data you see in the "Average air temperature" and "Daily recorded energy from the sun" is averaged over a period of 10 years. Data in the other columns does not change from year to year. You can hover over the column headers for a description of each data type.</p>
+			<div><p>The table above shows data from Chicago for 12 specific dates. For each date, the data you see in the "Average air temperature" and "Daily recorded energy from the sun" is averaged over a period of 30 years. Data in the other columns does not change from year to year. You can hover over the column headers for a description of each data type.</p>
 			</div>
 			<div>Select columns in the table in the following order: Click first at the top of the "Maximum height of sun in sky" column to highlight it in red; then click at the top of the "Average air temperature" columns to highlight them in blue. If you make a mistake and the colors are switched, you can re-click to unselect and try again.</p></div>
 			<div><p>The graph shown is called a scatterplot. Each point represents a value for the two variables you highlighted in the table. Data for the first variable you selected will always be shown on the X-axis, and data for the second variable will always be shown on the Y-axis. This graph tells you what the average daily temperature is when the maximum height of the sun in the sky has a particular value.</p></div>
@@ -919,7 +919,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<h2>Additional Data Tools</h2>
 	<div class="intro-text">
 	<p>In this section you can use tools to continue to find patterns in data and explore the causes of some patterns you previously identified. Some of these tools were developed at AAAS, and others were developed by the <a href="astro.unl.edu">University of Nebraska-Lincoln</a> (UNL). The UNL tools require Adobe Flash player.</p><br>
-	<b><a class="fake-link" onclick="document.getElementById('data-finder-menu-link').click()">Data Finder</a></b><br>You can use the data finder to compare data for two locations on the same date or the same location on two dates.<br><br>
+	<b><a class="fake-link" onclick="document.getElementById('data-finder-menu-link').click()">Data Finder</a></b><br>You can use the Data Finder to compare data averaged over 30 years for two locations on the same day.<br><br>
 	<b><a class="fake-link" onclick="document.getElementById('variable-relationship-explorer-menu-link').click()">Variable Relationship Explorer</a></b><br>
 	 Use the Variable Relationship Explorer when you want to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
 	<b><a class="fake-link" onclick="document.getElementById('daylight-hours-explorer-menu-link').click()">Daylight Hours Explorer</a></b><br>
@@ -927,7 +927,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<b><a class="fake-link" onclick="document.getElementById('seasons-simulator-menu-link').click()">Seasons Simulator</a></b><br>
 	Use the UNL Seasons Simulator to see how the earth's position relative to the sun changes in a regular pattern throughout the year and causes many of the patterns you previously explored.<br><br>
 	<b><a class="fake-link" onclick="document.getElementById('lat-lng-demo-menu-link').click()">Latitude and Longitude Demonstrator</a></b><br>
-	Use the UNL Latitude and Longitude Demonstrator to gain a better understanding of how geographic coordinates are notated.</div>
+	Use the UNL Latitude and Longitude Demonstrator to see how the position of any place on earth can be described using geographic coordinates.</div>
 	<div class="photo-caption bottom-caption">By Kaushik.chug [<a href="http://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3AGears.JPG">via Wikimedia Commons</a></div>
 </div>
 <div id="data-finder" class="activity tools" data-slide-type="tool" data-slide-title="Data Finder" data-slide-parent-id="data-tools-intro">
@@ -939,7 +939,10 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div id="data-finder-sp" class="full-sp"></div>
 	</div>
 	<div class="instructions">
-		<p>You can explore more places and times of the year above. Go to the next page to continue to a new activity.</p>
+		<p>1. To see a table of data averaged over 30 years for a given location on a particular day, first select a location, and then choose a date</p>
+		<p>2. To compare data for two locations on the same date, select a second location. You will see that the data for the second location appears in a seperate column next to the data for the first location.</p>
+		<p>3. You can keep adding new locations, but only two locations will be shown in the table at any one time.</p>
+		<p>4. To choose two new locations and a new date, click on the red reset button and start over.
 	</div>
 </div>
 <div id="variable-relationship-explorer" class="activity tools" data-slide-type="tool" data-slide-title="Variable Relationship Explorer" data-slide-parent-id="data-tools-intro">
@@ -963,8 +966,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
 				<p>3. Decide which two variables you would like to compare from  those five variables listed at the top of the columns.</p></div>
 			<div>	<p>4. First click at the top of the column of the variable you would like to be on the X-axis.</p>
-				<p>5. Next, click at the top of the column of the variable you would like to be on teh Y-axis.</p>
-				<p>7. Is there a relationship between the two variables?</p>
+				<p>5. Next, click at the top of the column of the variable you would like to be on the Y-axis.</p>
+				<p>6. Is there a relationship between the two variables?</p>
 			</div>
 		</div>
 	</div>
