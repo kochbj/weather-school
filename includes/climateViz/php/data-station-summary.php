@@ -7,7 +7,7 @@ $num_stations = (isset($_GET['num_stations']) && is_numeric($_GET['num_stations'
 $doty = (isset($_GET['doty']) && strtotime($_GET['doty']) ? strtotime($_GET['doty']) : strtotime('2000-01-01'));
 
 $data = array('query' => $_GET , 'results' => array());
-$stations_gsod_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005' ) , TRUE );
+$stations_gsod_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1975&date_ranges[0][end]=Dec+31+2005' ) , TRUE );
 //echo 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&date_ranges[0][begin]=Jan+01+1995&date_ranges[0][end]=Dec+31+2005';
 $stations_nsrdb_ret = json_decode( file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data-local-stations.php?mid=' . urlencode($mid) . '&lat=' . urlencode($lat) . '&lng=' . urlencode($lng) . '&num_stations=20&has_nsrdb=1' ) , TRUE );
 //echo '<pre>', print_r($stations_nsrdb_ret,true),'</pre>';
@@ -19,7 +19,7 @@ foreach ( $stations_gsod as $station_id => $station_meta ) {
 	if ( isset( $station_gsod ) ) { break; }
 	if ( array_key_exists( 'gsod_years' , $station_meta ) && is_array( $station_meta['gsod_years'] ) && count( $station_meta['gsod_years'] ) > 0 ) {
 		$has_data = FALSE;
-		for ( $year = 1995 ; $year <= 2006 ; $year++ ) {
+		for ( $year = 1975 ; $year <= 2006 ; $year++ ) {
 			//if (!isset($station_meta['gsod_years'][$year])) {
 			//	error_log(print_r($station_meta,TRUE));
 			//}
@@ -33,7 +33,7 @@ foreach ( $stations_gsod as $station_id => $station_meta ) {
 	}
 	// FIXME can we check here to see if it's necessary to request a recordings update?
 	//file_get_contents('http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data/noaa/recordings_gsod.php?dbid=' . urlencode($station_id) . '&year_min=1995&year_max=2005');
-$sql_stmt = 'SELECT AVG(temp) AS temp, AVG(temp_max) AS temp_max, AVG(temp_min) AS temp_min FROM recordings_gsod WHERE station_id = \'' . $station_id . '\' AND date_recorded >= \'1995-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . '\' GROUP BY RIGHT(date_recorded, 5);';
+$sql_stmt = 'SELECT AVG(temp) AS temp, AVG(temp_max) AS temp_max, AVG(temp_min) AS temp_min FROM recordings_gsod WHERE station_id = \'' . $station_id . '\' AND date_recorded >= \'1975-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . '\' GROUP BY RIGHT(date_recorded, 5);';
 	$recordset = mysql_query( $sql_stmt );
 	if ( $recordset && mysql_num_rows( $recordset ) > 0 ) {
 		$result = mysql_fetch_assoc( $recordset );
@@ -51,7 +51,7 @@ foreach ( $stations_nsrdb as $station_id => $station_meta ) {
 	if ( isset( $station_nsrdb ) || $station_meta['distance'] > 250 ) { break; }
 	if ( array_key_exists( 'nsrdb_years' , $station_meta ) && is_array( $station_meta['nsrdb_years'] ) && count( $station_meta['nsrdb_years'] ) > 0 ) {
 		$has_data = FALSE;
-		for ( $year = 1995 ; $year <= 2006 ; $year++ ) {
+		for ( $year = 1975 ; $year <= 2006 ; $year++ ) {
 			if ( $station_meta['nsrdb_years'][$year]['has_data'] ) {
 				$has_data = TRUE;
 				break;
@@ -61,7 +61,7 @@ foreach ( $stations_nsrdb as $station_id => $station_meta ) {
 	}
 	// FIXME can we check here to see if it's necessary to request a recordings update?
 	//file_get_contents( 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/data/noaa/recordings_nsrdb.php?dbid=' . urlencode($station_id) );
-	$sql_stmt = 'SELECT SUM(metstat_h) AS energy FROM recordings_nsrdb WHERE usafid = ' . substr( $station_id , 0 , 6 ) . ' AND date_recorded >= \'1995-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . ' %\' AND metstat_h <> -9900 GROUP BY SUBSTRING(date_recorded, 1, 10);';
+	$sql_stmt = 'SELECT SUM(metstat_h) AS energy FROM recordings_nsrdb WHERE usafid = ' . substr( $station_id , 0 , 6 ) . ' AND date_recorded >= \'1975-01-01\' AND date_recorded < \'2006-01-01\' AND date_recorded LIKE \'%-' . date('m-d', $doty) . ' %\' AND metstat_h <> -9900 GROUP BY SUBSTRING(date_recorded, 1, 10);';
 	$recordset = mysql_query( $sql_stmt );
 	if ( $recordset && mysql_num_rows( $recordset ) > 0 ) {
 		$result = mysql_fetch_assoc( $recordset );

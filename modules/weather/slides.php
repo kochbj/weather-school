@@ -116,7 +116,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The map above pinpoints Washington, DC. The graph on the following screen shows the average daily temperatures in Washington, DC over a three-week period. If you hover over the underlined words, <span class="tooltip" title="The temperature that you see reported for a given day is the average of the temperature measurements that were taken at that reporting station for that day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span>, you can learn more about that particular term and any other underlined term in these modules.</p>
+				<p>The map above pinpoints Washington, DC. The graph on the following screen shows the average daily temperatures in Washington, DC over a three-week period. If you hover over the underlined words, <span class="tooltip" title="Average daily temperature is the average of the temperature measurements that were taken at reporting stations on a given day. Some stations collect temperature data every hour, and some collect temperature data less often. But however many measurements that were taken, the number you see is the average of them for that date.">average daily temperatures</span>, you can learn more about that particular term and any other underlined term in these modules.</p>
 			</div>
 			<div><p>The graph shows the average daily temperatures in Washington, DC from April 2, 2000 to April 25, 2000. Notice that the temperature goes up and down from day to day in a jagged way.</p>
 			</div>
@@ -174,7 +174,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>The graph above shows how average daily temperature in Washington DC changed between January 1, 2000 and January 1, 2003.</p>
+				<p>The graph above shows how average daily temperature in Washington, DC changed between January 1, 2000 and January 1, 2003.</p>
 			</div>
 			<div>
 				<p>What do you notice? Does the graph have a pattern? How often does the pattern repeat? </p>
@@ -183,7 +183,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>You should see that the temperature rises and falls consistently throughout each year. But is the pattern always exactly the same? Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a section of the graph in more detail, just use your cursor to drag a box around it. You can always zoom back out by clicking on Reset View at the top right side of the graph.</p>
 			</div>
 			<div>
-				<p>In some years, the coldest day may be in December. In others, it may be in January. The warmest day is usually in July or August. Note that the high and low temperatures vary from year to year as well. The warmest day in 2002 was warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
+				<p>In some years in Washington, DC, the coldest day may be in December. In others, it may be in January. The warmest day is usually in July or August. Note that the high and low temperatures vary from year to year as well. The warmest day in 2002 was warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
 			</div>
 			
 			<div>
@@ -195,7 +195,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 		
 			<div>
-				<p>You will now have a chance to observe annual temperature patterns at locations and dates of your choosing. See if other locations in the United States have annual temperature patterns of warmer summers and cooler winters. Do the daily temperatures show variation when you look at them over a period of serveral years?</p>
+				<p>You will now have a chance to observe annual temperature patterns at locations and dates of your choosing. See if other locations in the United States have annual temperature patterns of warmer summers and cooler winters. When you look at the annual temperature patterns over a period of several years, do the day-to-day changes look exactly the same each year?</p>
 			</div>
 		</div>
 	</div>
@@ -237,7 +237,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Latitude and Temperature">
 	<h2>Latitude and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the last module, you saw how temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the equator, is related to the pattern of average daily temperature at that place.</p>
+	<p>In the last module, you saw how temperature changes in a regular pattern over the course of a year. In this module you will see that the latitude of a place, that is, how far north or south a place is from the tropical zone, is related to the pattern of average daily temperature at that place.</p>
 	</div>
 <div class="photo-caption bottom-caption">By R Jordan [<a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> or <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA-3.0</a>], <a href="http://commons.wikimedia.org/wiki/File%3ARj_north_york_moors.jpg">via Wikimedia Commons</a></div>
 </div>
@@ -253,7 +253,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 			<div>
-				<p>In this activity you will look at the relationship between <span class="tooltip" content="latlng">latitude</span> and average daily temperature in the northern hemisphere.</p>
+				<p>In this activity you will look at the relationship between <span class="tooltip" content="latitude">latitude</span> and average daily temperature in the northern hemisphere.</p>
 			</div>
 			<div>
 				<p>In the map above, Winnipeg, Manitoba in Canada and San Antonio, TX in the United States are pinpointed. These two locations are about 1,000 miles apart.</p>
@@ -266,13 +266,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
-				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the equator) tend to be warmer than places that are farther north (farther away from the equator). Although it is technically more accurate to say closer or farther from the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span> because the pattern is somewhat different in that area, we will use the equator as our reference line.</p>
+				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone). Within the tropical zone, the latitude is warmest changes throughout the year. Sometimes it is at the northernmost boundary of the tropical zone, sometimes it is at the equator, and sometimes it is at the souhternmost boundary of the tropical zone.</p>
 			</div>
 			<div>
 				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year--what we call the range of temperatures--is less the closer you are to the tropical zone. </p>
 			</div>
 			<div>
-				<p>Notice that the range of temperatures at Winnipeg, the location that is farther from the equator (the lower blue line), is greater than the range of temperatures at San Antonio, the location that is closer to the equator (the upper green line). This makes the line that is closer to the equator (the upper line) a little flatter than the line that is farther from the equator (the lower line).</p>
+				<p>Notice that the range of temperatures at Winnipeg, the location that is farther from the tropical zone (the lower blue line), is greater than the range of temperatures at San Antonio, the location that is closer to the tropical zone (the upper green line). This makes the line that is closer to the tropical zone (the upper line) a little flatter than the line that is farther from the tropical zone (the lower line).</p>
 			</div>
 					</div>
 	</div>
@@ -298,11 +298,11 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that at these two places, both of which are in the southern hemisphere, it is colder almost every day of the year in the place that is farther south.</p>
 			</div>
 			<div>
-				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the equator) tend to be warmer than places that are farther south (farther from the equator).</p>
+				<p>As a general rule, in the southern hemisphere, places that are farther north (closer to the tropical zone) tend to be warmer than places that are farther south (farther from the tropical zone).</p>
 			</div>
 			<div>
 				
-				<p>Just remember that in both the northern and southern hemispheres, places closer to the equator tend to be warmer than places that are farther away from the equator.</p>
+				<p>Just remember that in both the northern and southern hemispheres, places closer to the tropical zone tend to be warmer than places that are farther away from the tropical zone.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to compare annual temperature patterns at two locations that you choose. See if the relationship between latitude and temperature you observed in these examples exists in other locations. </p>
@@ -342,10 +342,10 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<ul>
 		<li>In the Northern Hemisphere, what is the relationship between how far north a place is and temperature?</li>
 		<li>In the Southern Hemisphere, what is the relationship between how far south a place is and temperature?</li>
-		<li>What is the relationship between how far a place is from the equator (latitude) and its average daily temperature?</li>
+		<li>What is the relationship between how far a place is from the tropical zone (latitude) and its average daily temperature?</li>
 	</ul>
 	<h2>Expand Your Knowledge:</h2>	
-	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the equator</a> is related to the temperature of a place.</p>
+	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the tropical zone</a> is related to the temperature of a place.</p>
 	</div>
 </div>
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Elevation and Temperature">
@@ -460,7 +460,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
 	<h2>Large Bodies of Water and Temperature</h2>
 	<div class="intro-text">	
-	<p>In the previous modules, you saw that the temperature at a place is related to how far the place is from the equator (its latitude) and that temperature at a place is related to how far the place is above sea level (its elevation). The greater the latitude (farther from the equator), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
+	<p>In the previous modules, you saw that the temperature at a place is related to how far the place is from the tropical zone (its latitude) and that temperature at a place is related to how far the place is above sea level (its elevation). The greater the latitude (farther from the tropical zone), the colder the place is, and the higher the elevation of a place, the colder the place is. This assumes, of course, that all other factors are kept constant. Obviously a place in the Rocky Mountains in the summer could be warmer than a place in New York City in the winter.</p>
 	<p>
 	In this module, you are going to find out whether the temperature at a place is related to how close the place is to a large body of water.</p>
 	</div>
