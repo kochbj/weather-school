@@ -10,6 +10,20 @@
   display: block;
   width: 100%;
 }
+#earth-button {
+	cursor:pointer;
+	color:red;
+	
+	height: 175px;
+	width:175px;
+	background: url(/media/img/earthbutton.jpg) no-repeat;	
+	background-size:cover;
+	font-size:215%;
+  line-height: 175px; 
+	box-sizing: border-box;
+	text-align: center;
+	float: right; 
+}
 </style>
 <script> 
 $(document).ready(function() {
@@ -28,9 +42,13 @@ $(document).ready(function() {
 </head>
 
 <h2 style="text-align:center; font-size:175%;">Welcome to WeatherSchool @ AAAS.org!</h2>
-<p style="margin:auto;font-size:125%">
-<br><br>WeatherSchool @ AAAS was developed by researchers at the American Association for the Advancement of Science (AAAS) to help you explore how different factors—time of the year, location, or elevation—work together to produce the day-to-day weather you experience in your local community as well as the overall climate for the region of the world where you live. WeatherSchool can be used by anyone with an interest in weather and climate.
-<p>
+<p style="margin:auto;font-size:175%">
+<br>
+<br>
+<br>
+<a href="modules/weather/" id="earth-button" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">START</a>
+WeatherSchool @ AAAS was developed by researchers at the American Association for the Advancement of Science (AAAS) to help you explore how different factors—time of the year, location, or elevation—work together to produce the day-to-day weather you experience in your local community as well as the overall climate for the region of the world where you live. WeatherSchool can be used by anyone with an interest in weather and climate.
+<br><br></p>
 <?php	/*
 <!--<p>These interactive learning modules let you access data collected mostly by the <a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration</a> (NOAA) and the <a href="http://www.nasa.gov">National Aeronautics and Space Administration</a> (NASA) from weather stations, satellites, and other observation sites on land and sea around the world. These data give you a picture of how different factors—time of the year, location, or elevation, for example—work together to produce the day-to-day weather you experience in your local community  as well as the overall climate for the region of the world where you live (for example, the New England area of the U.S. or the southernmost part of India).</p>
 <p>To help you explore these weather-related factors, WeatherSchool @ AAAS.org  includes the following features:</p>
@@ -48,10 +66,14 @@ $(document).ready(function() {
 </ul> 
 <p>Designed primarily for middle and high school students and their teachers, WeatherSchool @ AAAS.org can also be used by anyone with an interest in learning more about weather and climate.</p>
 	*/ ?>
+
+		
+
 <table style="margin: 3em auto; width: 65%;"><tr valign="top" align="center">
 	<td width="50%">
-		<p><a href="modules/weather/" class="button" style="font-size:150%;" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start WeatherSchool</a></p>
-	</td>
+
+
+</td>
 	<!--<td width="50%">
 		<?php if ( $login ) { ?>
 			<p><a href="reports" class="button">Access your reports</a></p>
