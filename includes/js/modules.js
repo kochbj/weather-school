@@ -477,8 +477,8 @@ $(".tooltip").bind("mouseleave", function (event) {
 			var element = $( this );
 			if ( element.is( "[content]" ) ) {	
 				console.log("TEXT", element);
-				if (element.attr( "content" ) == 'latlng') {
-					return "Any imaginary arc running from the North Pole to the South Pole, used to locate a place east or west of the prime meridian. The prime meridian is an arc that runs from the North Pole to the South Pole through Greenwich, England. It is defined as the zero line of longitude. New York City is located at 74 degrees west longitude, that is, 74 degrees west of the prime meridian. To get a better feel for latitude and longitude, try our <a href='/vis-sim-latlng' target='_blank'>latitude and longitude demonstrator</a>.";
+				if (element.attr( "content" ) == 'latitude') {
+					return "Latitude is a measure of how far a place is north or south of the equator,expressed in degrees. The maximum distance from the equator is 90 degrees, either north or south of the equator. To get a better feel for latitude and longitude, try our <a href='/vis-sim-latlng' target='_blank'>latitude and longitude demonstrator</a>.";
 				}
 			if (element.attr( "content" ) == 'maxheightsun') {
 				return '<img height="100" width="100" style="float:right; vertical-align:top;" src="'+aaasClimateViz.settings.__libraryURI + '/widgets/media/45-degrees-sun.png"/>The maximum height of the sun in the sky is the maximum angle sun reaches with respect to a person on earth and the eastern horizon.';

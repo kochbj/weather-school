@@ -978,18 +978,21 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<h2>Daylight Hours Explorer</h2>
 	</div>
 	<div class="workarea" style="background-color:#CCCCCC;">
-	<div align="center" style = "position:relative;">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405">
+		<script type="text/javascript">
+    swfobject.registerObject("dhsflash", "8");
+    </script>
+<div align="center" style = "position:relative;">
+	<object id="dhsflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405" wmode="opaque">
 				<param name="movie" value="assets/sim/daylighthoursexplorer.swf" />
-			<param name="wmode" value="transparent" />
+				<param name="wmode" value="opaque" />
 				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405">
+				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405" wmode="opaque">
 					<!--<![endif]-->
 					<p>flash animation</p>
 					<!--[if !IE]>-->
 				</object>
 				<!--<![endif]-->
-			</object>
+				</object>``
 		</div>
 </div>
 <div class="instructions">
