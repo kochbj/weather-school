@@ -46,8 +46,8 @@ $(document).ready(function() {
 <br>
 <br>
 <br>
-<a href="modules/weather/" id="earth-button" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">START</a>
-WeatherSchool @ AAAS was developed by researchers at the American Association for the Advancement of Science (AAAS) to help you explore how different factors—time of the year, location, or elevation—work together to produce the day-to-day weather you experience in your local community as well as the overall climate for the region of the world where you live. WeatherSchool can be used by anyone with an interest in weather and climate.
+<a href="modules/weather/" id="earth-button" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;"></a>
+WeatherSchool @ AAAS was developed by researchers at the American Association for the Advancement of Science (AAAS) to help you explore how different factors—time of the year, location, or elevation—work together to produce the day-to-day weather you experience in your local community as well as the overall climate for the region of the world where you live. WeatherSchool can be used by anyone with an interest in weather and climate. <b>Click on the globe to begin.<b>
 <br><br></p>
 <?php	/*
 <!--<p>These interactive learning modules let you access data collected mostly by the <a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration</a> (NOAA) and the <a href="http://www.nasa.gov">National Aeronautics and Space Administration</a> (NASA) from weather stations, satellites, and other observation sites on land and sea around the world. These data give you a picture of how different factors—time of the year, location, or elevation, for example—work together to produce the day-to-day weather you experience in your local community  as well as the overall climate for the region of the world where you live (for example, the New England area of the U.S. or the southernmost part of India).</p>

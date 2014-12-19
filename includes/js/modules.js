@@ -33,13 +33,13 @@ function	prevClickevt ( evt ) {
 			}
 			else if ( ctrlSlider.currentSlideIndex > 0 ) {
 					console.log($( '#slider-navigation .prev' ).data('prevIndex'),"TEST");
-				if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
+				/*if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
 					ctrlSlider.toSlide(ctrlSlider.$slides.index($('#data-tools-intro')));				
 				}
 				//else ctrlSlider.toSlide( 'prev' );
-		 	 else {ctrlSlider.toSlide( $( '#slider-navigation .prev' ).data('prevIndex') != -1 ? $( '#slider-navigation .prev' ).data('prevIndex') : 'prev' );
+		 	 else {ctrlSlider.toSlide( $( '#slider-navigation .prev' ).data('prevIndex') != -1 ? $( '#slider-navigation .prev' ).data('prevIndex') : 'prev' );}*/
+				ctrlSlider.toSlide( $( '#slider-navigation .prev' ).data('prevIndex') != -1 ? $( '#slider-navigation .prev' ).data('prevIndex') : 'prev' );
 			 $( '#slider-navigation .prev' ).data('prevIndex',-1);
-			 }
 			}
 			setTimeout( locationUpdate , 500 );
 			$(this).off('click',prevClickevt);
@@ -486,10 +486,10 @@ $(".tooltip").bind("mouseleave", function (event) {
 					return "Latitude is a measure of how far a place is north or south of the equator,expressed in degrees. The maximum distance from the equator is 90 degrees, either north or south of the equator. To explore how to describe the location of place by its latitude, try the <a class='fake-link' onclick='document.getElementById(&quot;lat-lng-demo-menu-link&quot;).click(); $(&quot;tooltip&quot;).tooltip(&quot;close&quot;);'>latitude and longitude demonstrator</a>.";
 				}
 				else if (element.attr( "content" ) == 'longitude') {
-					return "Longitude is a measure of how far a place is east or west of the prime meridian, expressed in degrees. The prime meridian is an arc that runs from the North Pole to the South Pole through Greenwich, England. The prime meridian is defined as the zero line of longitude. New York City is located at 74 degrees west longitude, that is, 74 degrees west of the prime meridian. To explore how to describe the location of a place by its longitude, try the <a class='fake-link' onclick='document.getElementById(&quot;lat-lng-demo-menu-link&quot;).click(); onclick='document.getElementById(&quot;lat-lng-demo-menu-link&quot;).click(); $(&quot;tooltip&quot;).tooltip(&quot;close&quot;);'>latitude and longitude demonstrator</a>.";
+					return "Longitude is a measure of how far a place is east or west of the prime meridian, expressed in degrees. The prime meridian is an arc that runs from the North Pole to the South Pole through Greenwich, England. The prime meridian is defined as the zero line of longitude. New York City is located at 74 degrees west longitude, that is, 74 degrees west of the prime meridian. To explore how to describe the location of a place by its longitude, try the <a class='fake-link' onclick='document.getElementById(&quot;lat-lng-demo-menu-link&quot;).click(); $(&quot;tooltip&quot;).tooltip(&quot;close&quot;);'>latitude and longitude demonstrator</a>.";
 				}
 			else if (element.attr( "content" ) == 'maxheightsun') {
-				return '<img height="100" width="100" style="float:right; vertical-align:top;" src="'+aaasClimateViz.settings.__libraryURI + '/widgets/media/45-degrees-sun.png"/>The maximum height of the sun in the sky is the maximum angle sun reaches with respect to a person on earth and the eastern horizon.';
+				return '<img height="100" width="100" style="float:right; vertical-align:top;" src="'+aaasClimateViz.settings.__libraryURI + '/widgets/media/45-degrees-sun.png"/>The maximum height of the sun in the sky is the maximum angle the sun reaches with respect to a person on earth and the eastern horizon.';
 //"Maximum height of the sun in the sky is the highest the sun gets above the horizon on a given day. It is measured as an angle, which can range from 0 degrees (when the sun does not get above the horizon at all) to 90 degrees (when the sun is directly overhead).
 				}
 			}

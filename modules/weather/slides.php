@@ -323,7 +323,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 			
 			<div>
-				<p>1. Choose two places on the map that are directly north and south of each other (on the same <span class="tooltip" content="latlng">line of longitude</span>) and at least <span class="tooltip" title="To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.">1000 miles</span> apart.</p>
+				<p>1. Choose two places on the map that are directly north and south of each other (on the same <span class="tooltip" content="longitude">longitude</span>) and at least <span class="tooltip" title="To help you estimate how far apart 1000 miles is, the continental United States is about 3000 miles across from east to west, and it is about 1000 miles from north to south. Another way to estimate distance is by knowing that the earth is about 25,000 miles around. That means the distance from the equator to either the North or South Pole is a little more than 6000 miles.">1000 miles</span> apart.</p>
 			</div>
 			<div>
 				<p>2. Now use the calendar to choose a date range. Choose two dates that are one year apart.  For example, you could choose January 1, 2000 and December 31, 2000. Click on the "Start" calendar to choose a starting date and the "End" calendar to choose an ending date.</p>
