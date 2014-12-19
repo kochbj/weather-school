@@ -16,7 +16,6 @@ $(document).ready(function() {
  
   $("#slides-demo").owlCarousel({
  
-      autoPlay: 20000, //Set AutoPlay to 3 seconds
 			loop: true,
 			items : 5,
       //itemsDesktop : [1199,5],

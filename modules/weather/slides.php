@@ -977,22 +977,21 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Daylight Hours Explorer</h2>
 	</div>
-	<div class="workarea" style="background-color:#CCCCCC;">
+	<div class="workarea" style="background-color:#e4e9ca;">
 		<script type="text/javascript">
-    swfobject.registerObject("dhsflash", "8");
+    swfobject.registerObject("dheflash", "8");
     </script>
 <div align="center" style = "position:relative;">
-	<object id="dhsflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405" wmode="opaque">
+	<object id="dheflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="405" wmode="opaque" bgcolor="#e4e9ca">
 				<param name="movie" value="assets/sim/daylighthoursexplorer.swf" />
-				<param name="wmode" value="opaque" />
 				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405" wmode="opaque">
+				<object type="application/x-shockwave-flash" data="assets/sim/daylighthoursexplorer.swf" width="760" height="405" wmode="opaque" bgcolor="#e4e9ca">
 					<!--<![endif]-->
 					<p>flash animation</p>
 					<!--[if !IE]>-->
 				</object>
 				<!--<![endif]-->
-				</object>``
+				</object>
 		</div>
 </div>
 <div class="instructions">
@@ -1061,13 +1060,15 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
-	<div class="workonly">
+	<div class="workonly" style="background-color:#e4e9ca;">>
 		<div align="center">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550">
+			<script type="text/javascript">
+    		swfobject.registerObject("ssflash", "8");
+    	</script>
+			<object id="ssflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="906" height="550" wmode="opaque" bgcolor="#e4e9ca">
 				<param name="movie" value="assets/sim/vis-sim-seasons.swf" />
-				<param name="wmode" value="opaque" />
 				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="550">
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-seasons.swf" width="906" height="550" wmode="opaque" bgcolor="#e4e9ca">
 					<!--<![endif]-->
 					<p>flash animation</p>
 					<!--[if !IE]>-->
@@ -1103,12 +1104,15 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Latitude and Longitude Demonstrator</h2>
 	</div>
-	<div class="workarea" style="background-color:#CCCCCC;">
+	<div class="workarea" style="background-color:#e4e9ca;">>
 	<div align="center" style = "position:relative;">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="566" height="405">
+			<script type="text/javascript">
+    		swfobject.registerObject("llflash", "8");
+    	</script>
+			<object id="llflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="566" height="405" wmode="opaque" bgcolor="#e4e9ca">
 				<param name="movie" value="assets/sim/vis-sim-latlng.swf" />
 				<!--[if !IE]>-->
-				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-latlng.swf" width="566" height="405">
+				<object type="application/x-shockwave-flash" data="assets/sim/vis-sim-latlng.swf" width="566" height="405" wmode="opaque" bgcolor="#e4e9ca">
 					<!--<![endif]-->
 					<p>flash animation</p>
 					<!--[if !IE]>-->
