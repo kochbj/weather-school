@@ -1060,7 +1060,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
-	<div class="workonly" style="background-color:#e4e9ca;">>
+	<div class="workonly" style="background-color:#e4e9ca;">
 		<div align="center">
 			<script type="text/javascript">
     		swfobject.registerObject("ssflash", "8");
@@ -1104,7 +1104,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Latitude and Longitude Demonstrator</h2>
 	</div>
-	<div class="workarea" style="background-color:#e4e9ca;">>
+	<div class="workarea" style="background-color:#e4e9ca;">
 	<div align="center" style = "position:relative;">
 			<script type="text/javascript">
     		swfobject.registerObject("llflash", "8");
