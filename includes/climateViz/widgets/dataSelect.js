@@ -896,7 +896,7 @@ function dataSelect_instantiate(wInstance) {
 				} );
 				wInstance.map.date.find( '.input input' )
 					.focus( function ( evt ) {
-						console.log("FOCUSSING", this);
+						console.log("FOCUSSING!", this);
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
 						var selectedDate = $( this ).val( ) != '' ? moment( $( this ).val(), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
