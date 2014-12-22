@@ -761,8 +761,8 @@ function dataSelect_instantiate(wInstance) {
 				
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
-						var startDate = $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
-						var endDate = $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
+						var startDate = $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).toDate() : null ;
+						var endDate = $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : null ;
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
