@@ -309,7 +309,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var usrDate = moment( $( this ).val( ), 'MMMDD' ).toDate() ;
 					//var usrDate = aaasClimateViz.dateParser( $(this).val() );
-					if ($(this).val()=='' || usrDate == false ) return;
+					if ($(this).val()=='' || moment( $( this ).val( ), 'MMMDD' ).isValid()==false || usrDate == false ) return;
 					//usrDate = new Date(usrDate);
 					usrDate.setFullYear( 1995 );
 					wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , usrDate );
@@ -761,8 +761,8 @@ function dataSelect_instantiate(wInstance) {
 				
 				wInstance.map.date.ui.events = {
 					onSelect : function (value,ui) {
-						var startDate = $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).toDate() : null ;
-						var endDate = $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : null ;
+						var startDate = $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' && moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).isValid() ? moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).toDate() : null ;
+						var endDate = $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' && moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).isValid() ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : null ;
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
@@ -896,10 +896,10 @@ function dataSelect_instantiate(wInstance) {
 				} );
 				wInstance.map.date.find( '.input input' )
 					.focus( function ( evt ) {
-						console.log("FOCUSSING!", this);
+						console.log("FOCUSSING!!!", this);
 						$( this ).autogrow( );
 						_activateDpicker($( this ).parent().find('.toggle'));
-						var selectedDate = $( this ).val( ) != '' ? moment( $( this ).val(), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
+						var selectedDate = $( this ).val( ) != '' && moment( $( this ).val(), 'YYYYMMMMDD' ).isValid() ? moment( $( this ).val(), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
 						$( this ).parents( '.visual-control' ).find( '.datepicker' ).datepicker( 'option' , { altField : wInstance.map.date.find( '.date-' + ( $( this ).parent( ).hasClass( 'date-start' ) ? 'start' : 'end' ) + ' input' ) } ).datepicker( 'setDate' , selectedDate );
 					} )
 					.blur( function ( evt ) {
