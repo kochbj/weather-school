@@ -1,3 +1,4 @@
+<div style='background-color: #e0f0ff; box-shadow: 1px 1px 2px #A7CBE9; border: 1px solid #daeaf0; border-radius:20px; padding: 10px 30px;'>
 <h2 style="text-align:center; font-size:175%;">About WeatherSchool</h2>
 <p style="margin:auto;font-size:125%">
 <br>
@@ -9,21 +10,7 @@ Each module begins with a guided activity designed to illustrate a temperature p
 <br>
 At the end of each module you can check your understanding by answering the <b>Quiz Yourself</b> questions or learn more by following the <b>Expand Your Knowledge</b> links.</p>
 <p>
-<table style="margin: 1.65em auto; width: 65%;"><tr valign="top" align="center">
-<?php /*
-	<td width="50%">
-		<p><a href="modules/weather/" class="button" style="font-size:150%;" onclick="window.open(this.href,'module','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;">Start WeatherSchool</a></p>
-	</td>
-	<!--<td width="50%">
-		<?php if ( $login ) { ?>
-			<p><a href="reports" class="button">Access your reports</a></p>
-		<?php } else { ?>
-			<p><a href="register" class="button">Register now</a></p>
-			<p class="note">required for classroom use and<br>for saving and viewing your work</p>
-		<?php } ?>
-	</td>-->
-</tr></table>
- */ ?>
+</div>
 <hr>
 
 <div style="font-size: 88%; margin: 4em;">
