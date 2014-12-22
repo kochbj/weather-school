@@ -4,7 +4,6 @@
 // FIXME: Might also have a setting to determine if we want to chart more than two variables (multiple Y-axis)
 // FIXME: Might have instances where we want to map the datetime as a non-timeseries value (e.g. 1-Dec, 22-Dec, 13-Jan instead of 13-Jan, 1-Dec, 22-Dec) (use categories and omit X values?)
 function createChart (wInstance) {
-	console.log(wInstance);
 	var series,dataSeries,seriesName,datearray;
 	/* reset the chart type since it may have been redefined during previous data processing */
 	wInstance.chart.colors = [];
@@ -264,7 +263,6 @@ function linechart_instantiate(wInstance) {
 		} else {
 			createChart( this );
 		}
-		console.log(wInstance.chart);
 	}
 	
 	wInstance.notify = function ( noticeType ) {
