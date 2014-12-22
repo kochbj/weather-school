@@ -1,7 +1,5 @@
 /*function new Date(dateStr) {
 		var date = new Date(dateStr);
-		console.log("DATESTR",dateStr);
-		console.log(date);
     return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()); 
     }*/	
 function widgetScroll ( evt ) {
@@ -19,9 +17,7 @@ function widgetScroll ( evt ) {
 function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
-	console.log(evt.type);
 	if ( evt.type == 'initialize' || evt.type == 'reset' ) {
-		console.log(wInstance);
 	wInstance.settings.container.find('.output-table table tbody').on('click.elevate','.header th', {widget: wInstance},function(evt){
 	if (evt.data.widget.settings.selectable){ if (evt.data.widget.selectableKeys.indexOf($(this).text())==-1) return;}
 	if (evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-x').length>0 && evt.data.widget.settings.container.find('.output-table table tbody .header th.selected-for-graph-y').length>0) {
@@ -175,7 +171,6 @@ function cbHeightSunAirTempEx (evt) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
-	//console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	}
@@ -185,7 +180,6 @@ function cbDaylightAirTempEx (evt) {
 	if ( !evt ) { evt = { type : null }; }
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
-	//console.log(wInstance);
 	if ( evt.type == 'initialize' ) {
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
 	}
@@ -211,7 +205,6 @@ function mapXvis ( evt ) {
 			)
 			.find('.map-date.Dstooltip').tooltip('close');
 			wInstance.settings.container.find( '.widget.dataSelect' ).addClass( 'width-200' );
-			console.log("CRAP",this.settings.container);
 		this.settings.displayWidgets[0].settings.container
 			.show()
 			.animate( { left:'36%' } , 1000 , 'swing',function() {
@@ -221,7 +214,6 @@ function mapXvis ( evt ) {
 			this.settings.displayWidgets[0].settings.displayWidgets[0].settings.container
 			.show()
 			.animate( { left:'36%' } , 1000 , 'swing' );
-			//console.log(this.settings.displayWidgets[0].settings);
 		}
 		this.settings.displayStatus = 'vis';
 	} else if ( evtType == 'initialize' ) {
@@ -262,7 +254,6 @@ function resetMap ( evt ) {
 			.css( 'bottom','-50%' )
 			.css ('border-top','0px');
 
-			//console.log(this.settings.displayWidgets[0].settings);
 		}
 		this.settings.displayStatus = 'map';
 	}

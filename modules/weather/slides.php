@@ -977,7 +977,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Daylight Hours Explorer</h2>
 	</div>
-	<div class="workarea" style="background-color:#e4e9ca;">
+	<div class="workarea tools">
 		<script type="text/javascript">
     swfobject.registerObject("dheflash", "8");
     </script>
@@ -1060,7 +1060,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Seasons Simulator</h2>
 	</div>
-	<div class="workonly" style="background-color:#e4e9ca;">
+	<div class="workarea compressed tools">
 		<div align="center">
 			<script type="text/javascript">
     		swfobject.registerObject("ssflash", "8");
@@ -1077,7 +1077,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</object>
 		</div>
 	</div>
-	<div class="instructions" style="height: 70px;">
+	<div class="instructions compressed">
 		<div class="slider">
 			<div>
 				<p>You can use the Seasons Simulator to show how the changing position of the earth and sun throughout the year changes the angle at which the sun's rays hit the earth.</p>
@@ -1104,7 +1104,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="header">
 		<h2>Latitude and Longitude Demonstrator</h2>
 	</div>
-	<div class="workarea" style="background-color:#e4e9ca;">
+	<div class="workarea tools">
 	<div align="center" style = "position:relative;">
 			<script type="text/javascript">
     		swfobject.registerObject("llflash", "8");

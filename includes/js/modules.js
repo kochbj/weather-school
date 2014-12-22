@@ -32,7 +32,6 @@ function	prevClickevt ( evt ) {
 				instrSlider.toSlide( 'prev' );
 			}
 			else if ( ctrlSlider.currentSlideIndex > 0 ) {
-					console.log($( '#slider-navigation .prev' ).data('prevIndex'),"TEST");
 				/*if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
 					ctrlSlider.toSlide(ctrlSlider.$slides.index($('#data-tools-intro')));				
 				}
@@ -476,12 +475,12 @@ $(".tooltip").bind("mouseleave", function (event) {
 				);
     });	
 	$( '.tooltip' ).tooltip( {
+		tooltipClass: "general-tooltip",
 		position: {my: "center bottom", at: "center top"},
 		items: "[title],[content]",
 		content: function() {
 			var element = $( this );
 			if ( element.is( "[content]" ) ) {	
-				console.log("TEXT", element);
 				if (element.attr( "content" ) == 'latitude') {
 					return "Latitude is a measure of how far a place is north or south of the equator,expressed in degrees. The maximum distance from the equator is 90 degrees, either north or south of the equator. To explore how to describe the location of place by its latitude, try the <a class='fake-link' onclick='document.getElementById(&quot;lat-lng-demo-menu-link&quot;).click(); $(&quot;tooltip&quot;).tooltip(&quot;close&quot;);'>latitude and longitude demonstrator</a>.";
 				}

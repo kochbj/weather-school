@@ -1,6 +1,5 @@
 // FIXME: add an option to display separate series as either stacked or side-by-side
 function createTable(data, wInstance) {
-	console.log(wInstance, data);
 	wInstance.data = data;
 	if (wInstance.settings.filter) {
 		data = wInstance.settings.filter(data);
@@ -31,7 +30,6 @@ function createTable(data, wInstance) {
 			for (i in wInstance.selection){
 				if (wInstance.selection[i] == datapoint) {
 					//data[seriesKeys[0]].dataMeta[datapoint].label==wInstance.axis.x;
-					console.log("UPDATE","X",wInstance.axis.x,"Y",wInstance.axis.y,wInstance.selection, tbl.find('tr.header th:last-child'),tblCols.find('col:last-child'));
 					if (data[seriesKeys[0]].dataMeta[datapoint].label==wInstance.axis.x){
 						tbl.find('tr.header th:last-child').addClass('selected-for-graph-x');
 						tblCols.find('col:last-child').addClass('selected-for-graph-x');}
@@ -58,27 +56,21 @@ function createTable(data, wInstance) {
 				$( this ).removeClass('selected-for-graph-x selected-for-graph-y');
 				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).removeClass('selected-for-graph-x selected-for-graph-y');
 				(wInstance.axis.x==$(el).text() ? wInstance.axis.x=null : wInstance.axis.y=null);
-				console.log("REMOVE:","X",wInstance.axis.x,"Y",wInstance.axis.y,wInstance.selection);
 			} else {
 				if (wInstance.selection.length==0) wInstance.axis.curr='x';
 				else if ((wInstance.selection.length==1 && tbl.find( 'tr.header th.selected-for-graph-y').length!=0) || wInstance.selection.length==2) {
-					console.log(tbl.find( 'tr.header th.selected-for-graph-y'));
 					tbl.find( 'tr.header th.selected-for-graph-y').removeClass('selected-for-graph-y').addClass('selected-for-graph-x');
 					$( this ).closest( 'table' ).find( 'colgroup col.selected-for-graph-y').removeClass('selected-for-graph-y').addClass('selected-for-graph-x');
-					console.log("ADDI:","X",wInstance.axis.x,"Y",wInstance.axis.y);
 					wInstance.axis.x=wInstance.axis.y;
 					wInstance.axis.y=null;
 					wInstance.axis.curr='y';
-					console.log("ADDI:","X",wInstance.axis.x,"Y",wInstance.axis.y);
 					}
 				else if (wInstance.selection.length==1  && tbl.find( 'tr.header th.selected-for-graph-x').length!=0)  wInstance.axis.curr='y';
 				wInstance.selection.push( datapoint );
-				console.log(wInstance.axis.curr,wInstance.axis.y, wInstance.axis.x,$(el).text(),"RIGHT HERE");
 				$( this ).addClass('selected-for-graph-'+wInstance.axis.curr);
 				$( this ).closest( 'table' ).find( 'colgroup col:nth-child(' + ( $( this ).index() + 1 ) + ')' ).addClass( 'selected-for-graph-'+wInstance.axis.curr);
 				(wInstance.axis.curr=='x' ? wInstance.axis.x=$(el).text() : wInstance.axis.y=$(el).text());	
 				wInstance.axis.curr= (wInstance.axis.curr=='x' ? 'y' : 'x');	
-				console.log("ADD:","X",wInstance.axis.x,"Y",wInstance.axis.y,wInstance.selection);
 			}
 			if ( wInstance.settings.selectForOutput && wInstance.selection.length > wInstance.settings.selectForOutput ) {
 				overflowColumn = wInstance.selection.shift();

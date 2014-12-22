@@ -14,24 +14,24 @@ textarea { width: 95%; height: 4em; }
 
 #slider-navigation {  }
 #click-cover{ position: absolute; width: 906px; height: 700px; margin: 0px auto; z-index:98; overflow: visible; padding: 0px; background-color: transparent; display: none; }
-#slider-menu {background-color: /*rgba(209, 220, 227, 0.9);*/ rgba(159, 184, 206, 0.9); border-left: 2px solid #91B1C0; bottom: 0; overflow: visible; position: absolute; right: 0; top: 0; z-index: 99; width: 350px }
+#slider-menu {background-color: /*rgba(209, 220, 227, 0.9);*/ rgba(159, 184, 206, 1); border-left: 2px solid /*#91B1C0*/ rgba(110, 142, 171,.9); bottom: 0; overflow: visible; position: absolute; right: 0; top: 0; z-index: 99; width: 350px }
 
 #slider-menu .access-control {
-	cursor: pointer; background-color: #91B1C0; border-radius: 5px 5px 0 0; left: -18px; padding: 4px; position: absolute; top: 24px;
+	cursor: pointer; background-color: /*#91B1C0*/  rgba(110, 142, 171,1); border-radius: 5px 5px 0 0; left: -18px; padding: 4px; position: absolute; top: 24px;
 	font-size: 85%; line-height: .65em;
 	transform: rotate(-90deg) translateY(-.95em); transform-origin: center;
 }
-#slider-menu .access-control:hover {color: #B8CE9F; }
+#slider-menu .access-control:hover {color: #FFF0C0; }
 
 #feedback {
-	cursor: pointer; background-color: rgba(145,177,192,1); border-radius: 0 0 4px 0; z-index: 99; padding: 4px; line-height: 7px; position: absolute; margin: 0 15px; left: 0px;
+	cursor: pointer; background-color:  rgba(110, 142, 171,1); border-radius: 0 0 4px 0; z-index: 99; padding: 4px; line-height: 7px; position: absolute; margin: 0 15px; left: 0px;
 	font-size: 70%;
 }
-#feedback:hover { color: #B8CE9F; }
+#feedback:hover { color: #FFF0C0; }
 
 #slider-menu .ui-accordion { font-family: 'Open Sans', sans-serif; font-size: 100%; border-radius: 0px; }
 #slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px; text-decoration:none;  }
-#slider-menu .ui-accordion .ui-accordion-header-active { background-color: /*rgba(170, 192, 202, .9) rgba(110, 142, 171,.5);*/ rgba(170, 168, 213, .4); solid #999999; solid #999999; margin 0px; padding 0px; /* color: #eeff86 #FFF0C0)!important;*/ text-shadow: 0px 0px 2px #FFF0C0); box-shadow: 0px 1px 1px #666; }
+#slider-menu .ui-accordion .ui-accordion-header-active { background-color: /*rgba(170, 192, 202, .9) rgba(110, 142, 171,.5);*/ rgba(170, 168, 213, .4); solid #999999; solid #999999; margin 0px; padding 0px; /* color: #eeff86 #FFF0C0)!important;*/ /*text-shadow: 0px 0px 2px #FFF0C0);*/ box-shadow: 0px 1px 1px #666; }
 #slider-menu a.completed {color: DimGray !important; }
 #slider-menu .ui-accordion .ui-accordion-header:last-of-type {border-top: 1px solid black; }
 /*#slider-menu .ui-accordion .ui-accordion-header:nth-last-of-type(2) {border-top: 1px solid black; }*/
@@ -42,8 +42,9 @@ textarea { width: 95%; height: 4em; }
 #slider-menu .ui-accordion .ui-accordion-content ul { display: block; list-style: none; padding: 0px; margin: 0px; height: 100%; overflow: visible; }
 #slider-menu .ui-accordion .ui-accordion-content li { list-style: none; display: block; margin: 0px; border-top: 1px solid #999999; z-index:99; }
 #slider-menu .ui-accordion .ui-accordion-content a { display: block; padding: .6em 2.5em; color: black; z-index:99; text-decoration: none; font-size: 85%; }
-#slider-menu a:hover {color: /*#eeff86 #FFF0C0)!important*/; background-color: /*rgba(170, 192, 202, .7) rgba(110, 142, 171,.5)*/ rgba(170, 168, 213, .4); text-shadow: 0px 0px 1px #FFF0C0; }
 #slider-menu a.current { background-color: rgba(110, 142, 171,.4) !important; }
+#slider-menu a:hover {color: /*#eeff86 #FFF0C0)!important*/; background-color: /*rgba(170, 192, 202, .7) rgba(110, 142, 171,.5)*/ rgba(170, 168, 213, .4) !important; /*text-shadow: 0px 0px 1px #FFF0C0;*/ }
+
 
 /*
 .ui-accordion.ui-state-default .ui-accordion .ui-accordion-header.ui-state-default {
@@ -100,19 +101,22 @@ textarea { width: 95%; height: 4em; }
 	/*background-color: #e8f0f3;*/ background-color: white; height: 405px; overflow: hidden; padding: 0; position: absolute; top: 65px; width: 100%;
 	box-shadow: 0px 0px 4px #999;
 }
+
+.child.activity > .workarea.compressed { height: 548px;}
+.child.activity > .workarea.tools { background-color: #e4e9ca;}
+
+
 .child.activity > .workarea > * {/* overflow: auto; */position: absolute; /*top: 0px;*/ /*bottom: 0px;*/ /*width: 100%;*/ }
 
-.child.activity > .workonly {
-	bottom: 0; left: 0; overflow: visible; padding: 0 5px; position: absolute; right: 0; top: 65px; z-index: 50;
-	background-color: #dbd3c1; overflow: none; padding: 0; position: absolute; top: 65px; width: 100%;
-	box-shadow: 0px 0px 4px #999;
-}
+
 .child.activity > .instructions {
 	color: black;
 	height: 190px; left: 0px; bottom: 0px; overflow: auto; position: absolute; right: 0px; z-index: 50;
 	margin: 15px 50px; height: 200px; overflow: hidden; left: 0px; right: 0px;
 	font-size: 125%; line-height: 1.4em;
 }
+.child.activity > .instructions.compressed { height: 64px;}
+
 .child.activity.tryit > .instructions p {padding-left: 1.15em; text-indent:-1.15em;}
 /* .child.activity > .instructions ol , .child.activity .instructions ul { overflow: auto; max-height: 100%; padding: 0em; margin: .25em; display: block; }
 .child.activity > .instructions li { display: block; padding: 0em; margin: .65em .25em; } */
@@ -140,7 +144,7 @@ textarea { width: 95%; height: 4em; }
 
 
 .tooltip { border-bottom: 1px dashed #003333; cursor: help; }
-
+.general-tooltip > *, .general-tooltip {background:#FFF0C0 !important; padding: 0; margin: .25em; }
 .ui-widget-overlay {
 	background: #666666 url(http://code.jquery.com/ui/1.10.3/themes/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png) 50% 50% repeat;
 	opacity: .5;

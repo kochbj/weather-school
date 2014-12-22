@@ -39,7 +39,6 @@ var updateDatepickerOriginal = $.datepicker._updateDatepicker;
 $.datepicker._updateDatepicker = function(){
   var response = updateDatepickerOriginal.apply(this,arguments);
   $('#'+arguments[0].id).find('select').chosen({disable_search_threshold: 13});
-	console.log($('#'+arguments[0].id).find('select'));
 	return response;
 };
 function drop_missing_warning(wInstance, color) {
@@ -242,7 +241,6 @@ function dataSelect_instantiate(wInstance) {
 					onSelect : function ( value , ui ) {
 						// FIXME: we should automatically adjust the selected date's year from 1995 to 2000
 						var selectedDate = new Date(2000,ui.selectedMonth,ui.selectedDay);
-						console.log("SELECTED DATE", selectedDate);
 						var selectedDates = $(this).parents('.widget.dataSelect .map-date').data('value');
 						if (typeof(selectedDates) !== 'array' && typeof(selectedDates) !== 'object') {
 							selectedDates = [];
@@ -251,7 +249,6 @@ function dataSelect_instantiate(wInstance) {
 						for (i in selectedDates) {
 							if ( selectedDate.getTime() == selectedDates[i].getTime() ) {
 								selectedDates.splice(i,1);
-								console.log(selectedDates);
 							}
 						}
 							/* Check to see if the max number of dates have been selected and remove the date at the top of the array if so */
@@ -310,12 +307,10 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
-					console.log("IT CHANGED TO THIS", $( this ).val( ) );
 					var usrDate = moment( $( this ).val( ), 'MMMDD' ).toDate() ;
 					//var usrDate = aaasClimateViz.dateParser( $(this).val() );
 					if ($(this).val()=='' || usrDate == false ) return;
 					//usrDate = new Date(usrDate);
-					console.log(usrDate);
 					usrDate.setFullYear( 1995 );
 					wInstance.map.date.ui.dpDiv.datepicker( 'setDate' , usrDate );
 					
@@ -479,7 +474,6 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
 					var elInput = $( this );
-					console.log("THIS IS RUNNING");
 					/*if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
 						wInstance.settings.date.type == 'year-month-day' ? wInstance.map.date.tooltip('option','content','No dates selected') : wInstance.settings.container.find('.calendar-cover').tooltip('option','content','No dates selected');	
@@ -769,7 +763,6 @@ function dataSelect_instantiate(wInstance) {
 					onSelect : function (value,ui) {
 						var startDate = $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-start input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
 						var endDate = $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ) != '' ? moment( $( this ).parents( '.map-date' ).find( '.date-end input' ).val( ), 'YYYYMMMMDD' ).toDate() : new Date(2000,0,1) ;
-						console.log("SELECTING DATE",startDate,endDate, moment($( this ).parents( '.map-date' ).find( '.date-end input' ).val( ),'YYYYMMMMDD'));	
 						if (wInstance.settings.date.type == 'year-month-day-range-double-restricted' && typeof( wInstance.map.date.data('value') ) != 'undefined'  && wInstance.map.date.data('value').length==1){
 							startDate= wInstance.map.date.data('value')[0][0];
 							endDate= wInstance.map.date.data('value')[0][1];
@@ -911,7 +904,6 @@ function dataSelect_instantiate(wInstance) {
 					.blur( function ( evt ) {
 						$( this ).autogrow( );
 					} );
-				console.log(wInstance);	
 				wInstance.settings.container.find('.map-reset').show();
 				}
 				else {wInstance.map.date.find( '.input input' ).attr('readonly','readonly'); wInstance.settings.container.find('.calendar-cover').show();}
@@ -1231,7 +1223,6 @@ function addLocation (e,wInstance) {
 			infowindow.open(wInstance.map,this);
 		});
 		this.infoWindow = infowindow;
-		//$.when(wInstance._addLocdeferred).done(console.log("YAY"));
 		wInstance._callback({type:'user-select-location',data:{marker:marker,stationNames:e.stationNames}});
 		if (staticmap) {
 			google.maps.event.clearListeners(wInstance.map, 'click');
@@ -1259,7 +1250,6 @@ function syncList (marker) {
 
 function refreshStations ( evt ) {
 	var canSelectStation = ( ('maxStations' in this.settings) && this.settings.maxStations > 0 );
-	console.log("refreshStations",evt,evt.data,this.markers);
 	// `this` pointing to the execution-time object context, allow closures by assigning `this` to `wInstance`
 	wInstance = this;
 	if ( (!evt.data || !evt.data.marker) ) {
@@ -1293,7 +1283,6 @@ function refreshStations ( evt ) {
 			}
 		}
 	} 
-	//else {console.log("THIS IS A POSSIBLITY");}
 	else {
 		date_ranges_array.push( {
 			begin : ( this.settings['date']['default'] ? this.settings['date']['default'] : new Date ( 2000 , 0 , 1 ) ),
@@ -1318,15 +1307,13 @@ function refreshStations ( evt ) {
 		dataType : 'jsonp json' /* because of IE */,
 		data     : query,
 		success : function( servermsg ) {
-			console.log("REFRESH STATIONS",servermsg,wInstance.markers);
 			wInstance.markers[servermsg[0].mid].stations = servermsg[0].stations;
 			wInstance.markers[servermsg[0].mid].sindex = servermsg[0].sindex;
 			wInstance.markers[servermsg[0].mid].currStation = servermsg[0].sindex[0];
 			if (!canSelectStation) {
-				var newstationContent='<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance)+' km away)</div>'
+				var newstationContent='<div class="station">(reporting from '+Math.round(servermsg[0].stations[servermsg[0].sindex[0]].distance*0.62137)+' mi away)</div>'
 				if (typeof(wInstance.markers[servermsg[0].mid].infoWindow) != 'undefined') {
 					var oldstationContent=  wInstance.markers[servermsg[0].mid].infoWindow.content.match(/<div class="station">([^<]*)<\/div>/)[0];
-					console.log(oldstationContent);
 					wInstance.markers[servermsg[0].mid].infoWindow.content= wInstance.markers[servermsg[0].mid].infoWindow.content.replace(/<div class="station">([^<]*)<\/div>/,newstationContent);
 		 			if (wInstance.settings.date.type.split('-').slice(-1)!="restricted" && newstationContent != oldstationContent){
 						wInstance.markers[servermsg[0].mid].infoWindow.open(wInstance.map,wInstance.markers[servermsg[0].mid]);
@@ -1475,7 +1462,6 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 			end   : ( wInstance.settings['date']['default'] ? wInstance.settings['date']['default'] : new Date ( 2000 , 11 , 31 ) )
 		} );
 	}*/
- else console.log("THIS CAN ACTUALLY HAPPEN 2");
 	//function checkYearsatStation(date_ranges_array,wInstance);	
  // fix datetimes to strings in an attempt to avoid timezone adjustments
 	for ( i in date_ranges_array ) {
@@ -1540,8 +1526,6 @@ var retVal = {};
 var startDate= new Date([1,1,1990]);
 var endDate = new Date([12,31,1990]); 
 var current = new Date(startDate);
-console.log(station['gsod_years'][current.getFullYear()]['has_data']);
-console.log(station['gsod_years'][current.getFullYear()]['months'].length);
 
  while (current <= endDate) {
 	if (!station['gsod_years'][current.getFullYear()]['has_data']) retVal[current.getFullYear()]=['All'];
@@ -1551,7 +1535,6 @@ console.log(station['gsod_years'][current.getFullYear()]['months'].length);
 	}
   current = (current.getMonth() == 11 ?  new Date(current.getFullYear() + 1, 0, 1) : new Date(current.getFullYear(), current.getMonth() + 1, 1) );
  }
- console.log(retVal);
  return retVal;
 }
 
@@ -1570,7 +1553,6 @@ function checkAvailableYears (dateArray, wInstance){
 				for (station in wInstance.markers[markerID].stations){//got each station
 					if (typeof(missingArray[markerID].stations[station]) == 'undefined')  missingArray[markerID].stations[station]=[];
 					missingArray[markerID].stations[station].push(range[y]);
-					console.log(wInstance.markers[markerID].stations[station],!wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]);
 					if (typeof(wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]) == 'undefined' || !wInstance.markers[markerID].stations[station]['gsod_years'][range[y]]['has_data']) missingArray[markerID].stations[station].push(range[y]); //list missing years
 				}
 			}
@@ -1582,7 +1564,6 @@ function checkAvailableYears (dateArray, wInstance){
 				else {
 					missingStr= wInstance.markers[markerID].stations[station].name+ ": Data is not available at this station in "
 					for (y in yearsMissing[station]) missingStr+=y;
-					console.log()
 				}	
 			}
 		}
@@ -1615,7 +1596,6 @@ function stationBasedDataFetchAjax ( evt ) {
 		data     : this.requestQueue[queryID].query ,
 		
 		success : function( servermsg ) {
-			console.log("stationBasedDataFetchAjax",evt,servermsg,wInstance.markers);
 			var widgetIndex = parseInt( servermsg.query.widgetIndex , 10 );
 			var mid = servermsg.results[0].mid;
 			var sid = servermsg.results[0].sid;
@@ -1732,7 +1712,6 @@ function calculatedSolarDataFetch( evt ) {
 	this.data = { };
 	
 	this._callback( { type:'data-load' } )
-	console.log(this);
 	$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 		for (i in wInstance.settings.displayWidgets) {
 			wInstance.settings.displayWidgets[i].notify('loading');
@@ -1942,7 +1921,6 @@ function fetchStats( evt ) {
 				$.when.apply($, wInstance.settings.widgetFamily.map(function (x) { return x.settings.instantiate_promise})).done( function() {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify('ready');
-						console.log("GOT THIS NOTIFY");
 						wInstance.settings.displayWidgets[i].loadData(wInstance.data);
 					}
 				});
@@ -1975,7 +1953,6 @@ function fetchStatsAjax ( evt ) {
 		data     : this.requestQueue[queryID].query ,
 		
 		success : function( servermsg , textStatus , jqXHR ) {
-			console.log("fetchStatsAjax",servermsg);
 			var widgetIndex = parseInt( servermsg.query.widgetIndex , 10 );
 			var mid = servermsg.results[0].mid;
 			var doty = new Date(aaasClimateViz.dateParser(servermsg.query.doty));
@@ -2090,7 +2067,6 @@ function fetchStatsAjax ( evt ) {
 						dataVal.tempavg = parseFloat( servermsg.results[0].station.temp_avg );
 						series.dataMeta['tempavg'].range[0] = Math.min(series.dataMeta['tempavg'].range[0],dataVal.tempavg);
 						series.dataMeta['tempavg'].range[1] = Math.max(series.dataMeta['tempavg'].range[1],dataVal.tempavg);
-						console.log("DATA",series.dataMeta['tempavg'].range,dataVal.tempavg);
 						break;
 					/*case 'tempmin' :
 						dataVal.tempmin = parseFloat( servermsg.results[0].station.temp_min );

@@ -54,7 +54,6 @@ function statspanel_createPanel(data, wInstance) {
 		wInstance.settings.container.find( '.tempavg' ).append( $( '<td>' + data[mid].dataMeta.sunEnergyT.format( data[mid].data[idxData].tempavg ) + '</td>' ) );
 		//wInstance.settings.container.find( '.tempavg' ).append( $( '<td>' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempavg ) + ' <span class="minmax">H ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmax ) + '<br>L ' + data[mid].dataMeta.tempavg.format( data[mid].data[idxData].tempmin ) + '</span></td>' ) );
 		
-		console.log('ANGLE',data[mid].data[idxData].sunAngle);	
 		if (data[mid].data[idxData].sunAngle>=0){
 		wInstance.settings.container.find( '.sunAngle' ).append( $( '<td>' + data[mid].dataMeta.sunImage.format( data[mid].data[idxData].sunImage ) + '<span class="angle-val">' + data[mid].dataMeta.sunAngle.format( data[mid].data[idxData].sunAngle ) + '</span></td>' ) );
 		//position sun angle value

@@ -1,5 +1,7 @@
 <div style='background-color: #e0f0ff; box-shadow: 1px 1px 2px #A7CBE9; border: 1px solid #daeaf0; border-radius:20px; padding: 10px 20px;'>
 <h2 style="text-align:center; font-size:175%;">Learning Goals from American Education Standards</h2>
+<br>
+<hr>
 <div style="display:table; margin:3em auto;">
 <a href="http://www.nextgenscience.org" style = "display: table-cell; vertical-align: middle;"><h3 style="font-size:150%; margin: auto;" >Next Generation Science Standards</h2></a>
 <a href="http://www.nextgenscience.org" style = "display: table-cell; vertical-align: middle;"><img src="media/img/ngsslogo.jpg" height="30px" alt="NGSS logo" style="margin-left: 1em;"  /></a>
