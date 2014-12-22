@@ -1,6 +1,6 @@
-<div id="coverslide">
+<!--<div id="coverslide">
 	<h2>WeatherSchool @ AAAS</h2>
-</div>
+</div>-->
 <div id="introduction" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Introduction">
 	<h2>Did you ever wonder&#8230;</h2>
 	<ul>
