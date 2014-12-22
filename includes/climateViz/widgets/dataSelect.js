@@ -831,7 +831,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : true ,
 					showButtonPanel : false ,
-					defaultDate     : new Date(2000,0,1) ,
+					//defaultDate     : new Date(2000,0,1) ,
 					/* should be set based on data source
 					minDate         : new Date(1995,0,1) ,
 					maxDate         : new Date(1995,11,31) ,
