@@ -220,16 +220,20 @@ function dataSelect_instantiate(wInstance) {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
-						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
-						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function(){
+							Dinput.trigger('change');
+							if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						});
 				 	}
 				};
 				_deactivateDpicker = function () {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						tog.removeClass( 'active' );
-						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut();
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function() {
+						Dinput.trigger('change');
 						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						});
 				};
 				_activateDpicker = function () {
 						tog.addClass( 'active' );
@@ -301,6 +305,16 @@ function dataSelect_instantiate(wInstance) {
 					maxDate         : new Date( [ 1995 , 12 , 31] ) ,
 					buttonImageOnly : true ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
+					onChangeMonthYear: function (year, month, inst) {
+            var curDate = $(this).datepicker("getDate");
+            if (curDate == null)
+            return; 
+            if (curDate.getYear() != year || curDate.getMonth() != month - 1) {
+                curDate.setYear(year);
+                curDate.setMonth(month - 1);
+                $(this).datepicker("setDate", curDate);
+            }
+        	},
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				});
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
@@ -636,7 +650,7 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.find( '.datepicker' ).datepicker( {
 					altField        : wInstance.map.date.find( '.input input' ) ,
 					altFormat       : 'MM dd' ,
-					changeMonth     : false ,
+					changeMonth     : true ,
 					changeYear      : false ,
 					showButtonPanel : false ,
 					defaultDate     : new Date( 1995 , 0 , 1 ) ,
@@ -644,6 +658,7 @@ function dataSelect_instantiate(wInstance) {
 					maxDate         : new Date( 1995 , 11 , 31 ) ,
 					buttonImageOnly : true ,
 					onSelect        : wInstance.map.date.ui.events.onSelect ,
+
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				});
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
@@ -726,11 +741,14 @@ function dataSelect_instantiate(wInstance) {
 					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(e.data.toggle) && !ele.is(e.data.toggle.parent().find('input')) ){
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
-						e.data.toggle.removeClass('active');
+						console.log("TOGOUTSIDE", e.data);
+						var tog = e.data.toggle;
+						tog.removeClass('active');
 						//e.data.toggle.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
-						e.data.toggle.parent().removeClass('active');
-						e.data.toggle.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
-							e.data.toggle.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
+						tog.parent().removeClass('active');
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
+							tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
+							tog.parent().children('input').trigger('change'); console.log(wInstance.map.date.ui,tog)
 						} );
 				 	}
 				};
@@ -743,6 +761,7 @@ function dataSelect_instantiate(wInstance) {
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
 							tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
 							if (typeof(tog2)!=='undefined'){_activateDpicker(tog2);}
+							tog.parent().children('input').trigger('change'); console.log(wInstance.map.date.ui,tog);
 						} );
 					};
 				_activateDpicker = function (tog) {
@@ -755,6 +774,7 @@ function dataSelect_instantiate(wInstance) {
 						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
 						$( '.widget-cover' ).show();
+						console.log("TOGGLE", tog);
 						$( document ).on('click',{ toggle: tog}, _togoutside);
 						tog.parent().addClass('active');
 				};
@@ -837,12 +857,23 @@ function dataSelect_instantiate(wInstance) {
 					maxDate         : new Date(1995,11,31) ,
 					*/
 				 	yearRange:"1928:2010",
-					onSelect        : wInstance.map.date.ui.events.onSelect ,
+					onSelect       	: wInstance.map.date.ui.events.onSelect ,
+					onChangeMonthYear: function (year, month, inst) {
+            var curDate = $(this).datepicker("getDate");
+            if (curDate == null)
+            return; 
+            if (curDate.getYear() != year || curDate.getMonth() != month - 1) {
+                curDate.setYear(year);
+                curDate.setMonth(month - 1);
+                $(this).datepicker("setDate", curDate);
+            }
+        	},
 					beforeShowDay   : wInstance.map.date.ui.events.beforeShowDay
 				} );
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
+					console.log("THIS IS FIRING");
 					var elInput = $( this );
 					if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
@@ -850,6 +881,7 @@ function dataSelect_instantiate(wInstance) {
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
+					console.log("THIS IS FIRING", elInput,usrDate);
 					if ( usrDate !== false ) {
 						usrDate = new Date( usrDate );
 						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
