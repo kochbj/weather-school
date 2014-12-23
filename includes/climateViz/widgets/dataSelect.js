@@ -216,7 +216,7 @@ function dataSelect_instantiate(wInstance) {
 				var userTouch= false;
 				_togoutside = function(e) {
 					var ele = $(e.target);
-					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
+					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-datepicker-header") && !ele.parent().hasClass("ui-datepicker-header") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(tog) && !ele.is(Dinput) ){
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
@@ -737,18 +737,16 @@ function dataSelect_instantiate(wInstance) {
 			//used for widget cover	
 				_togoutside = function(e) {
 					var ele = $(e.target);
-		
-					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(e.data.toggle) && !ele.is(e.data.toggle.parent().find('input')) ){
+					if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-datepicker-header") && !ele.parent().hasClass("ui-datepicker-header") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length && !ele.is(e.data.toggle) && !ele.is(e.data.toggle.parent().find('input')) ){
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
-						console.log("TOGOUTSIDE", e.data);
 						var tog = e.data.toggle;
 						tog.removeClass('active');
 						//e.data.toggle.parents( '.map-date' ).removeClass('width-410').addClass( 'width-200' );
 						tog.parent().removeClass('active');
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
 							tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
-							tog.parent().children('input').trigger('change'); console.log(wInstance.map.date.ui,tog)
+							tog.parent().children('input').trigger('change'); 
 						} );
 				 	}
 				};
@@ -761,7 +759,7 @@ function dataSelect_instantiate(wInstance) {
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut( function() {
 							tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).removeClass("end-active");
 							if (typeof(tog2)!=='undefined'){_activateDpicker(tog2);}
-							tog.parent().children('input').trigger('change'); console.log(wInstance.map.date.ui,tog);
+							tog.parent().children('input').trigger('change'); 
 						} );
 					};
 				_activateDpicker = function (tog) {
@@ -774,7 +772,6 @@ function dataSelect_instantiate(wInstance) {
 						tog.parents( '.map-date' ).removeClass('width-200').addClass( 'width-410' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeIn();
 						$( '.widget-cover' ).show();
-						console.log("TOGGLE", tog);
 						$( document ).on('click',{ toggle: tog}, _togoutside);
 						tog.parent().addClass('active');
 				};
@@ -873,7 +870,6 @@ function dataSelect_instantiate(wInstance) {
 				wInstance.map.date.ui.dpDiv = wInstance.map.date.ui.find( '.datepicker' );
 				wInstance.map.date.ui.dpDiv.hide();
 				wInstance.map.date.ui.find( '.input input' ).change( function ( evt ) {
-					console.log("THIS IS FIRING");
 					var elInput = $( this );
 					if ( elInput.val() == '' ) {
 						wInstance.map.date.data( 'value' , [] );
@@ -881,7 +877,6 @@ function dataSelect_instantiate(wInstance) {
 						wInstance.map.date.ui.dpDiv.datepicker( 'refresh' );
 					}
 					var usrDate = aaasClimateViz.dateParser( elInput.val() );
-					console.log("THIS IS FIRING", elInput,usrDate);
 					if ( usrDate !== false ) {
 						usrDate = new Date( usrDate );
 						var dpDiv = wInstance.map.date.ui.dpDiv.parents( '.visual-control' ).find( '.datepicker' );
