@@ -16,7 +16,7 @@ function	nextClickevt ( evt ) {
 				instrSlider.toSlide( 'next' );
 			} else if ( ctrlSlider.currentSlideIndex <= ctrlSlider.slideIndexCount ) {
 				$(this).data("currSlide",-1);
-				$( '#slider-navigation .prev' ).data('prevIndex',-1);		
+				$( '#slider-navigation .prev' ).data('prevIndex','prev');		
 				if (ctrlSlider.$currentSlide.attr('data-slide-parent-id')=='data-tools-intro'){
 					ctrlSlider.toSlide(ctrlSlider.$slides.index($('#data-tools-intro')));				
 				}
@@ -37,8 +37,9 @@ function	prevClickevt ( evt ) {
 				}
 				//else ctrlSlider.toSlide( 'prev' );
 		 	 else {ctrlSlider.toSlide( $( '#slider-navigation .prev' ).data('prevIndex') != -1 ? $( '#slider-navigation .prev' ).data('prevIndex') : 'prev' );}*/
-				ctrlSlider.toSlide( $( '#slider-navigation .prev' ).data('prevIndex') != -1 ? $( '#slider-navigation .prev' ).data('prevIndex') : 'prev' );
-			 $( '#slider-navigation .prev' ).data('prevIndex',-1);
+				if(typeof($( '#slider-navigation .prev' ).data('prevIndex'))=='undefined') $( '#slider-navigation .prev' ).data('prevIndex','prev');
+				ctrlSlider.toSlide( $( '#slider-navigation .prev' ).data('prevIndex') );
+			 	$( '#slider-navigation .prev' ).data('prevIndex','prev');
 			}
 			setTimeout( locationUpdate , 500 );
 			$(this).off('click',prevClickevt);

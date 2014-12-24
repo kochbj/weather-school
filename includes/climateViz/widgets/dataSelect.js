@@ -221,8 +221,8 @@ function dataSelect_instantiate(wInstance) {
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function(){
-							Dinput.trigger('change');
 							if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+							//Dinput.trigger('change');
 						});
 				 	}
 				};
@@ -231,8 +231,8 @@ function dataSelect_instantiate(wInstance) {
 						$( '.widget-cover' ).hide();
 						tog.removeClass( 'active' );
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function() {
-						Dinput.trigger('change');
 						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						//Dinput.trigger('change');
 						});
 				};
 				_activateDpicker = function () {
@@ -300,7 +300,7 @@ function dataSelect_instantiate(wInstance) {
 					changeMonth     : true ,
 					changeYear      : false ,
 					showButtonPanel : false ,
-					defaultDate     : new Date( 1995 , 1 , 1 ) ,
+					//defaultDate     : new Date( 1995 , 1 , 1 ) ,
 					minDate         : new Date( [ 1995 , 1 , 1 ] ) ,
 					maxDate         : new Date( [ 1995 , 12 , 31] ) ,
 					buttonImageOnly : true ,
