@@ -180,7 +180,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>What do you notice? Does the graph have a pattern? How often does the pattern repeat? </p>
 			</div>
 			<div>
-				<p>You should see that the temperature rises and falls consistently throughout each year. But is the pattern always exactly the same? Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a section of the graph in more detail, just use your cursor to drag a box around it. You can always zoom back out by clicking on Reset View at the top right side of the graph.</p>
+				<p>You should see that the temperature rises and falls consistently throughout each year. But is the pattern always exactly the same? Hover over the line on the graph and find the high and low temperatures each year. If you would like to see a section of the graph in more detail, just use your cursor to click and drag a box around it. You can always zoom back out by clicking on Reset View at the top right side of the graph.</p>
 			</div>
 			<div>
 				<p>In some years in Washington, DC, the coldest day may be in December. In others, it may be in January. The warmest day is usually in July or August. Note that the high and low temperatures vary from year to year as well. The warmest day in 2002 was warmer than the warmest day in either 2000 or 2001. While the pattern is similar from year to year, it is clearly not identical.</p>
@@ -272,7 +272,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year--what we call the range of temperatures--is less the closer you are to the tropical zone. </p>
 			</div>
 			<div>
-				<p>Notice that the range of temperatures at Winnipeg, the location that is farther from the tropical zone (the lower blue line), is greater than the range of temperatures at San Antonio, the location that is closer to the tropical zone (the upper green line). This makes the line that is closer to the tropical zone (the upper line) a little flatter than the line that is farther from the tropical zone (the lower line).</p>
+				<p>Notice that the range of temperatures at Winnipeg, the location that is farther from the tropical zone (the lower line), is greater than the range of temperatures at San Antonio, the location that is closer to the tropical zone (the upper line). This makes the line that is closer to the tropical zone (the upper line) a little flatter than the line that is farther from the tropical zone (the lower line).</p>
 			</div>
 					</div>
 	</div>
@@ -355,6 +355,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<p>
 	In this module, you are going to use the maps to find out if how far a place is above sea level is related to the temperature at that place.</p>
 	</div>
+<div class="photo-caption bottom-caption">Kathmandu [<a href="http://creativecommons.org/licenses/by-sa/2.0" type="_blank">CC-BY-SA-2.0</a>], <a href="http://www.fotopedia.org" type="_blank">via Fotopedia</a></div>
 </div>
 <div id="temperature-elevation-example" class="activity" data-slide-type="normal" data-slide-title="Temperature at Two Elevations" data-slide-parent-id="temperature-elevation-intro">
 	<div class="header">
@@ -537,7 +538,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p style="text-indent: 0em;">Also note that you may have difficulty finding reporting stations that are very close to large bodies of water because there aren't many reporting stations right on the shoreline.</p>
 			</div>
 			<div>
-				<p>You will also see that the closeness to a large body of water does not always have the same effect on temperature from place to place. At some places the effect is barely noticeable, and at other places it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air that is over the water gets inland.</p>
+				<p style="text-indent: 0em;">You will also see that the closeness to a large body of water does not always have the same effect on temperature from place to place. At some places the effect is barely noticeable, and at other places it is very strong. This is because other factors, such as wind direction, can also have an effect on how much of the warmer or cooler air that is over the water gets inland.</p>
 			</div>
 			<div>
 				<p>5. You can repeat this activity as many times as you like until you are satisfied that you have a good understanding of how being close to a large body of water affects the temperature at that place.</p>
@@ -584,6 +585,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="intro-text">
 	<p>In the last three modules you saw that there is a relationship between the temperature at a place and its latitude, elevation, and closeness to a large body of water. In this module you will begin to explore the relationship between the height of the sun in the sky and temperature at a place.</p>
 	</div>	
+<div class="photo-caption bottom-caption"><a href="http://creativecommons.org/licenses/by-sa/2.0" type="_blank">[CC-BY-SA-2.0</a>], <a href="http://www.fotopedia.org" type="_blank">via Fotopedia</a></div>
 </div>
 <div id="height-sun-example" class="activity" data-slide-type="normal" data-slide-title="Height of the Sun in the Sky Over a One-Year Period" data-slide-parent-id="height-sun-intro">
 	<div class="header">
@@ -651,6 +653,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="intro-text">
 	<p>In the last module you saw that the maximum height of the sun in the sky changes over the course of the year in a way that is very similar to the annual changes in temperature. In this module you will look at the relationship between height of the sun in the sky and temperature at a given place.</p>
 	</div>	
+<div class="photo-caption side-caption"><a href="http://creativecommons.org/licenses/by-sa/2.0" type="_blank">[CC-BY-SA-2.0</a>], <a href="http://www.fotopedia.org" type="_blank">via Fotopedia</a></div>
 </div>
 <div id="height-sun-air-temperature-example" class="activity" data-slide-type="normal" data-slide-title="Relationship Between Height of the Sun in the Sky and Temperature" data-slide-parent-id="height-sun-air-temperature-intro">
 	<div class="header">
@@ -763,7 +766,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>The graph shows, the number of hours of daylight for Plattsburgh over a one-year period. Compare this graph to the similar graph for New York City in the previous activity.</p>
 			</div>
 			<div>
-				<p>Notice that in  late December there are only 8.8 hours of daylight in Plattsburg, a little <em>less</em> than the 9.2 hours that you saw  for the same time period in  New York City. But in late June, there are 15.6 hours of daylight in  Plattsburgh, a little <em>more</em> than the  15.1 hours in New York City.</p>
+				<p>Notice that in  late December there are only 8.8 hours of daylight in Plattsburg, a little <em>less</em> than the 9.2 hours for the same time period in  New York City. But in late June, there are 15.6 hours of daylight in  Plattsburgh, a little <em>more</em> than the  15.1 hours in New York City.</p>
 			</div>
 		</div>
 	</div>
@@ -918,7 +921,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">
 	<h2>Additional Data Tools</h2>
 	<div class="intro-text">
-	<p>In this section you can use tools to continue to find patterns in data and explore the causes of some patterns you previously identified. Some of these tools were developed at AAAS, and others were developed by the <a href="astro.unl.edu">University of Nebraska-Lincoln</a> (UNL). The UNL tools require Adobe Flash player.</p><br>
+	<p>In this section you can use tools to continue to find patterns in data and explore the causes of some patterns you previously identified. Some of these tools were developed at AAAS, and others were developed at the <a href="astro.unl.edu" target="_blank">University of Nebraska-Lincoln</a> (UNL). The UNL tools require Adobe Flash player.</p><br>
 	<b><a class="fake-link" onclick="document.getElementById('data-finder-menu-link').click()">Data Finder</a></b><br>You can use the Data Finder to compare data averaged over 30 years for two locations on the same day.<br><br>
 	<b><a class="fake-link" onclick="document.getElementById('variable-relationship-explorer-menu-link').click()">Variable Relationship Explorer</a></b><br>
 	 Use the Variable Relationship Explorer when you want to make a scatter plot of two weather variables of your choosing to see how they are related to each other.<br><br>
@@ -939,11 +942,17 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div id="data-finder-sp" class="full-sp"></div>
 	</div>
 	<div class="instructions">
-		<p>1. To see a table of data averaged over 30 years for a given location on a particular day, first select a location, and then choose a date</p>
-		<p>2. To compare data for two locations on the same date, select a second location. You will see that the data for the second location appears in a seperate column next to the data for the first location.</p>
-		<p>3. You can keep adding new locations, but only two locations will be shown in the table at any one time.</p>
-		<p>4. To choose two new locations and a new date, click on the red reset button and start over.
+		<div class="slider">
+		<div>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">1. To see a table of data averaged over 30 years for a given location on a particular day, first select a location, and then choose a date</p>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">2. To compare data for two locations on the same date, select a second location. You will see that the data for the second location appears in a seperate column next to the data for the first location.</p>
 	</div>
+	<div>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">3. You can keep adding new locations, but only two locations will be shown in the table at any one time.</p>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">4. To choose two new locations and a new date, click on the red reset button and start over.
+	</div>	
+</div>
+</div>
 </div>
 <div id="variable-relationship-explorer" class="activity tools" data-slide-type="tool" data-slide-title="Variable Relationship Explorer" data-slide-parent-id="data-tools-intro">
 	<div class="header">
@@ -962,12 +971,12 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<p>You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location--the daily recorded energy from the sun and the daily theoretical energy from the sun. You will now have a chance to explore these variables too.</p></div>
 		<div>	<p>On the next screen, choose any two variables to see how they are related to each other.</p> 
 		</div>
-			<div>	<p>1. Choose a location anywhere in the world.</p>
-				<p>2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
-				<p>3. Decide which two variables you would like to compare from  those five variables listed at the top of the columns.</p></div>
-			<div>	<p>4. First click at the top of the column of the variable you would like to be on the X-axis.</p>
-				<p>5. Next, click at the top of the column of the variable you would like to be on the Y-axis.</p>
-				<p>6. Is there a relationship between the two variables?</p>
+			<div>	<p style="padding-left:1.5em; text-indent:-1.5em;">1. Choose a location anywhere in the world.</p>
+				<p style="padding-left:1.5em; text-indent:-1.5em;">2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
+				<p style="padding-left:1.5em; text-indent:-1.5em;">3. Decide which two variables you would like to compare from  those five variables listed at the top of the columns.</p></div>
+			<div>	<p style="padding-left:1.5em; text-indent:-1.5em;">4. First click at the top of the column of the variable you would like to be on the X-axis.</p>
+				<p style="padding-left:1.5em; text-indent:-1.5em;">5. Next, click at the top of the column of the variable you would like to be on the Y-axis.</p>
+				<p style="padding-left:1.5em; text-indent:-1.5em;">6. Is there a relationship between the two variables?</p>
 			</div>
 		</div>
 	</div>

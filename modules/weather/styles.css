@@ -90,9 +90,11 @@
 #temperature-lat-intro h2 {background-color: rgba(170, 188, 211, .3);}
 #temperature-lat-intro .intro-text,#temperature-lat-intro .photo-caption {background-color: rgba(159, 99, 69, .9);}
 #temperature-lat-intro .intro-text {top:425px; }
+
 #temperature-elevation-intro {background-image: url(assets/introduction/Kathmandu-Kathmandu_ValleyNeedAttribution.jpg);}
 #temperature-elevation-intro h2 {background-color: #E5DAD6; opacity: .8;}
 #temperature-elevation-intro .intro-text {background-color: #8595A4 /*#677b8d*/; top:235px;}
+#temperature-elevation-intro .photo-caption {background-color: #8595A4; opacity: .8;}
 
 #temperature-water-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
 #temperature-water-intro h2, #temperature-water-intro .photo-caption {background-color: rgba(67, 141, 202, .5);}
@@ -102,6 +104,7 @@
 #height-sun-intro {background-image: url(assets/introduction/Sunset_TreeNeedAttribution.jpg);}
 #height-sun-intro h2 {background-color:#dc8a61;}
 #height-sun-intro .intro-text {background-color: #F28252; top: 125px;}
+#height-sun-intro .photo-caption {background-color: #F28252;}
 
 #height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
 #height-sun-air-temperature-intro h2 {background-color:rgba(75, 110, 140, .7);}
@@ -114,78 +117,11 @@
 
 #daylight-air-temperature-intro {background-image: url(assets/introduction/Libya_Sunset.jpg);}
 #daylight-air-temperature-intro h2 {background-color: rgba(244, 195, 194, .9); }
-#daylight-air-temperature-intro .intro-text {background-color: rgba(133, 111, 108, .85); top:452px;}
+#daylight-air-temperature-intro .intro-text {background-color: rgba(133, 111, 108, .85); }
 
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
 #data-tools-intro h2, #data-tools-intro .intro-text, #data-tools-intro .photo-caption {background-color:rgba(203, 186, 171, .9);}
 #data-tools-intro .intro-text { top:130px; font-size:95%}
-
-//#daily-temperature-example #daily-temperature-example-ds { left: 0px; right: 0px; width: 36% }
-//#daily-temperature-example #daily-temperature-example-tc { right: 0px; padding: 10px; }
-
-//#annual-temperature-explore #annual-temperature-explore-ds { left: 0px; right: 0px; }
-//#annual-temperature-explore #annual-temperature-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#temperature-lat-northern #temperature-lat-northern-ds { left: 0px; right: 0px; width: 36%}
-//#temperature-lat-northern #temperature-lat-northern-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#temperature-lat-southern #temperature-lat-southern-ds { left: 0px; right: 0px; width 36%}
-//#temperature-lat-southern #temperature-lat-southern-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#temperature-lat-explore #temperature-lat-explore-ds { left: 0px; right: 0px; }
-//#temperature-lat-explore #temperature-lat-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#temperature-elevation-example #temperature-elevation-example-ds { left: 0px; width: 36%; overflow: none;}
-//#temperature-elevation-example #temperature-elevation-example-tc { right: 0px; left: 36%; width: 64% }
-
-//#temperature-elevation-explore #temperature-elevation-explore-ds { left: 0px; right: 0px; }
-//#temperature-elevation-explore #temperature-elevation-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#temperature-water-example #temperature-water-example-ds { left: 0px; right: 0px; width: 36% }
-//#temperature-water-example #temperature-water-example-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#temperature-water-explore #temperature-water-explore-ds { left: 0px; right: 0px; }
-//#temperature-water-explore #temperature-water-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#height-sun-example #height-sun-example-ds { left: 0px; right: 0px; width 36%}
-//#height-sun-example #height-sun-example-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#height-sun-explore #height-sun-explore-ds { left: 0px; right: 0px; }
-//#height-sun-explore #height-sun-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#height-sun-air-temperature-example #height-sun-air-temperature-example-ds { left: 0px; right: 0px; }
-//#height-sun-air-temperature-example #height-sun-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
-//#height-sun-air-temperature-example #height-sun-air-temperature-example-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
-
-//#height-sun-air-temperature-explore #height-sun-air-temperature-explore-ds { left: 0px; right: 0px; width: 36%}
-//#height-sun-air-temperature-explore #height-sun-air-temperature-explore-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
-//#height-sun-air-temperature-explore #height-sun-air-temperature-explore-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
-/*
-#daylight-example1 #daylight-example1-ds { left: 0px; width: 36%; }
-#daylight-example1 #daylight-example2-tc{ right: 0px; width: 63%; padding: 10px; }
-
-#daylight-example2 #daylight-example2-ds { left: 0px; width: 36%; }
-#daylight-example2 #daylight-example2-tc{ right: 0px; width: 63%; padding: 10px; }
-
-#daylight-example3 #daylight-example3-ds { left: 0px; width: 36%; }
-#daylight-example3 #daylight-example3-tc{ right: 0px; width: 63%; padding: 10px; }
-
-#daylight-example4 #daylight-example4-ds { left: 0px; width: 36%; }
-#daylight-example4 #daylight-example4-tc{ right: 0px; width: 63%; padding: 10px; }
-*/
-
-
-//#daylight-explore #daylight-explore-ds { left: 0px; right: 0px; }
-//#daylight-explore #daylight-explore-tc { right: 0px; left: 100%; display: none; padding: 10px; }
-
-//#daylight-air-temperature-example #daylight-air-temperature-example-ds { left: 0px; right: 0px; }
-//#daylight-air-temperature-example #daylight-air-temperature-example-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
-//#daylight-air-temperature-example #daylight-air-temperature-example-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
-
-//#daylight-air-temperature-explore #daylight-air-temperature-explore-ds { left: 0px; right: 0px; }
-//#daylight-air-temperature-explore #daylight-air-temperature-explore-tb{ right: 0px; left: 100%; top: 0px; bottom: 50%; display: none; padding: 10px; }
-//#daylight-air-temperature-explore #daylight-air-temperature-explore-tc{ right: 0px; left: 100%; top: 50%; bottom: 0px; display: none; padding: 10px; }
-
 
 #locationExplorer-sample .workarea .shield { width: 36%; }
 #locationExplorer-sample #dataSelector-sample { left: 0px; width: 35%; }

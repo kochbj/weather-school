@@ -150,6 +150,7 @@ UserVoice.push(['autoprompt', {}]);
 		</div>
 	</div>
 		<div id="feedback">feedback?</div>
+		<div id="homebutton" onclick="window.open('','weatherhome').focus()"></div>
 	<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
 <?php /*
 <div id="login" style="display: none;" title="">

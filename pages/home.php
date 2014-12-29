@@ -27,7 +27,8 @@
 </style>
 <script> 
 $(document).ready(function() {
- 
+	window.name="weatherhome";
+	modulewindow=null; 
   $("#slides-demo").owlCarousel({
  
 			loop: true,
@@ -43,7 +44,7 @@ $(document).ready(function() {
 <div style='background-color: #e0f0ff; box-shadow: 1px 1px 2px #A7CBE9; border: 1px solid #daeaf0; border-radius:20px; padding: 10px 20px;'>
 <h2 style="text-align:center; font-size:175%;">Welcome to WeatherSchool @ AAAS.org!</h2>
 <p style="margin: 2em auto;font-size:175%">
-<a href="modules/weather/" id="earth-button" onclick="window.open(this.href,'_blank','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no');return false;"></a>
+<a href="modules/weather/" id="earth-button" onclick=" (modulewindow == null || modulewindow.closed) ? modulewindow = window.open(this.href,'modulewindow','height=740,width=935,menubar=no,location=no,resizable=yes,scrollbars=no,status=no,toolbar=no') : modulewindow.focus(); return false;"></a>
 WeatherSchool @ AAAS was developed by researchers at the American Association for the Advancement of Science (AAAS) to help you explore how different factors—time of the year, location, or elevation—work together to produce the day-to-day weather you experience in your local community as well as the overall climate for the region of the world where you live. WeatherSchool can be used by anyone with an interest in weather and climate. <b>Click on the globe to begin.<b>
 </p>
 <div id="slides-demo">

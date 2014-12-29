@@ -29,6 +29,14 @@ textarea { width: 95%; height: 4em; }
 }
 #feedback:hover { color: #FFF0C0; }
 
+#homebutton {
+	cursor: pointer; background:  rgba(110, 142, 171,1) url(../../media/img/homebutton.png); background-size:cover; border-radius: 0 0 0 1px; z-index: 99; height:15px; width:17px;
+ 	position: absolute; margin: 0 15px; right: 0px; border-radius: 0 0 0 1px;
+	font-size: 70%;
+}
+#homebutton:hover { background:  rgba(110, 142, 171,1) url(../../media/img/homebuttonhighlight.png); background-size:cover; }
+
+
 #slider-menu .ui-accordion { font-family: 'Open Sans', sans-serif; font-size: 100%; border-radius: 0px; }
 #slider-menu .ui-accordion .ui-accordion-header { padding: 0.5em; margin-top: 0px; background:none; border-bottom: 1px solid #999999; color: black; max-width:350px; border-radius: 0px; text-decoration:none;  }
 #slider-menu .ui-accordion .ui-accordion-header-active { background-color: /*rgba(170, 192, 202, .9) rgba(110, 142, 171,.5);*/ rgba(170, 168, 213, .4); solid #999999; solid #999999; margin 0px; padding 0px; /* color: #eeff86 #FFF0C0)!important;*/ /*text-shadow: 0px 0px 2px #FFF0C0);*/ box-shadow: 0px 1px 1px #666; }
