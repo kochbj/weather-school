@@ -99,7 +99,7 @@
 #temperature-water-intro {background-image: url(assets/introduction/tromsoneedattribution.jpg);}
 #temperature-water-intro h2, #temperature-water-intro .photo-caption {background-color: rgba(67, 141, 202, .5);}
 #temperature-water-intro .photo-caption {top: 60px;}
-#temperature-water-intro .intro-text {background-color:rgba(227, 227, 227, .8); top:435px;}
+#temperature-water-intro .intro-text {background-color:rgba(227, 227, 227, .8); top:initial; bottom: 0px;}
 
 #height-sun-intro {background-image: url(assets/introduction/Sunset_TreeNeedAttribution.jpg);}
 #height-sun-intro h2 {background-color:#dc8a61;}
@@ -108,7 +108,7 @@
 
 #height-sun-air-temperature-intro {background-image: url(assets/introduction/Sun_and_SignsNeedAttribution.jpg);}
 #height-sun-air-temperature-intro h2 {background-color:rgba(75, 110, 140, .7);}
-#height-sun-air-temperature-intro .intro-text {background-color: rgba(187, 143, 118, .7); top: 560px;}
+#height-sun-air-temperature-intro .intro-text {background-color: rgba(187, 143, 118, .7); bottom: 0px; top:initial;}
 
 #daylight-intro {background-image: url(assets/introduction/Sunset_at_Halong_Bay.jpg);}
 #daylight-intro h2 {background-color: rgba(140, 64, 72, .45);}
@@ -117,7 +117,7 @@
 
 #daylight-air-temperature-intro {background-image: url(assets/introduction/Libya_Sunset.jpg);}
 #daylight-air-temperature-intro h2 {background-color: rgba(244, 195, 194, .9); }
-#daylight-air-temperature-intro .intro-text {background-color: rgba(133, 111, 108, .85); }
+#daylight-air-temperature-intro .intro-text {background-color: rgba(133, 111, 108, .85); bottom: 0px; top:initial; }
 
 #data-tools-intro {background-image: url(assets/introduction/gears.jpg);}
 #data-tools-intro h2, #data-tools-intro .intro-text, #data-tools-intro .photo-caption {background-color:rgba(203, 186, 171, .9);}
