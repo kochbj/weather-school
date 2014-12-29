@@ -373,8 +373,12 @@ function decimalToRomanSimple(value) {
         value -= decimal[i]; 
         romanNumeral += roman[i]; 
       } 
-    } 
-    return romanNumeral; 
+    }
+	var rNpad=3-romanNumeral.length;
+	romanNumeral+='.';
+	for (var i=0; i<rNpad; i++) { romanNumeral=romanNumeral+" ";  }	 
+   console.log(romanNumeral, i); 
+	 return romanNumeral+' '; 
 }
 
 		$('[data-slide-type=key]').each( function (idx, el) {
@@ -387,7 +391,7 @@ function decimalToRomanSimple(value) {
 		$("[data-slide-parent-id='"+$( el ).attr( 'id')+"']").each( function (idxx, ell) {
 			if ($( ell ).attr( 'data-slide-title' ) == "Module Complete" || $( ell ).attr( 'hidden' )) return true;
 			else if ($( ell ).attr( 'data-slide-type' ) == "tool") $('#accordion > div:last-child > ul').append( '<li><a id="' + $( ell ).attr( 'id' ) + '-menu-link" href="#' + $( ell ).attr( 'id' ) + '">' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
-			else $('#accordion > div:last-child > ul').append( '<li><a id="' + $( ell ).attr( 'id' ) + '-menu-link" href="#' + $( ell ).attr( 'id' ) + '">' + decimalToRomanSimple(menuidxx) + '. ' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
+			else $('#accordion > div:last-child > ul').append( '<li><a id="' + $( ell ).attr( 'id' ) + '-menu-link" href="#' + $( ell ).attr( 'id' ) + '">' + menuidxx + '. ' + $( ell ).attr( 'data-slide-title' ) + '</a></li>' );
 			menuidxx+=1;
 			});
 		$('#accordion').accordion('refresh');

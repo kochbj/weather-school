@@ -266,7 +266,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
-				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone). Within the tropical zone, the latitude is warmest changes throughout the year. Sometimes it is at the northernmost boundary of the tropical zone, sometimes it is at the equator, and sometimes it is at the souhternmost boundary of the tropical zone.</p>
+				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone). Within the tropical zone, the latitude where the temperature is the warmest changes gradually throughout the year. Sometimes it is at the northernmost boundary of the tropical zone, sometimes it is at the equator, and sometimes it is at the southernmost boundary of the tropical zone.</p>
 			</div>
 			<div>
 				<p>You should also notice that the difference between the highest temperature of the year and the lowest temperature of the year--what we call the range of temperatures--is less the closer you are to the tropical zone. </p>
@@ -505,7 +505,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>The reason for these patterns is that the temperature of the water has an effect on the air around it. Because water heats up and cools down more slowly than land, the range in air temperature near large bodies of water throughout the year is smaller.</p>
 			</div>
 			<div>
-				<p>You will now have a chance to observe the effect of proximity to a large body of water on temperature at locations of your choosing. See if other locations near a large body of water experience cooler summers and warmer winters compared to nearby locations farther inland.</p>
+				<p>You will now have a chance to observe the effect of closeness to a large body of water on temperature at locations of your choosing. See if other locations near a large body of water experience cooler summers and warmer winters compared to nearby locations farther inland.</p>
 			</div>
 			
 		</div>
@@ -945,11 +945,11 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 		<div>
 		<p style="padding-left:1.5em; text-indent:-1.5em;">1. To see a table of data averaged over 30 years for a given location on a particular day, first select a location, and then choose a date</p>
-		<p style="padding-left:1.5em; text-indent:-1.5em;">2. To compare data for two locations on the same date, select a second location. You will see that the data for the second location appears in a seperate column next to the data for the first location.</p>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">2. To compare data for two locations on the same day, select a second location. You will see that the data for the second location appears in a seperate column next to the data for the first location.</p>
 	</div>
 	<div>
 		<p style="padding-left:1.5em; text-indent:-1.5em;">3. You can keep adding new locations, but only two locations will be shown in the table at any one time.</p>
-		<p style="padding-left:1.5em; text-indent:-1.5em;">4. To choose two new locations and a new date, click on the red reset button and start over.
+		<p style="padding-left:1.5em; text-indent:-1.5em;">4. To choose two new locations and a new day, click on the red reset button and start over.
 	</div>	
 </div>
 </div>

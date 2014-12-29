@@ -105,9 +105,11 @@
 		</div>
 	</div>
 	<div id="footer">
-		<p>Copyright &copy; <?php echo date( 'Y' ); ?>. American Association for the Advancement of Science. All Rights Reserved
+		<p><a href="mailto:gdeboer@aaas.org?Subject=Question%20about%20WeatherSchool@AAAS"target="_top">Questions? Contact Us</a>
 		<br>
 		<a href="<?php echo CLIMATE_DIR_WWW; ?>/policies">Read our privacy policy and terms of use</a>
+		<br>
+		Copyright &copy; <?php echo date( 'Y' ); ?>. American Association for the Advancement of Science. All Rights Reserved
 		</p>
 	</div>
 	

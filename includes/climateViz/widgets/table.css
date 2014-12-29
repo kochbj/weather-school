@@ -16,9 +16,10 @@
 .widget.output-table > table th {
     border: 1px solid #333333;
     cursor: pointer;
+		min-width:60px;
 }
 .widget.output-table > table td {
-    min-width: 75px;
+    //min-width: 75px;
 		padding: .25em;
     border: 1px solid #333333;
 }
