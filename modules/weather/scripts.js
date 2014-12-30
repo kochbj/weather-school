@@ -275,13 +275,13 @@ function cbDailyTempEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	setTimeout( function ( ) {
+	//setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
 		//wInstance.map.date.data('value',[[new Date( "2001-01-01T17:00:00Z" ),new Date("2002-01-01T17:00:00Z")]]);
  		wInstance.map.date.data('value',[[moment("January 01 2001","MMMMDDYYYY").toDate(),moment("January 01 2002","MMMMDDYYYY").toDate()]]); 
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 500 );
+	//} , 500 );
 	}
 }
 function cbHeightSunEx ( evt ) {
@@ -585,7 +585,7 @@ var slideInit = {
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "January 01 2004", "December 31 2004" );
 						else if (currSlide >= 7) {
-							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "January 01 2004", "December 31 2004" );
+							//widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "January 01 2004", "December 31 2004" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-elevation-example .plusslider-pagination li').off('click.animate');
@@ -647,7 +647,7 @@ var slideInit = {
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "January 01 2004", "December 31 2004" );
 						else if (currSlide >= 4) {
-						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "January 01 2004", "December 31 2004" );
+						 	//widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "January 01 2004", "December 31 2004" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-water-example .plusslider-pagination li').off('click.animate');
@@ -776,14 +776,9 @@ var slideInit = {
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
-						else if (currSlide == 3) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
+						else if (currSlide >= 3) {
+							//widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
-						}
-						else if (currSlide>=4) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
-							widgetAnimations.swinggraph(wInstance);
-							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#height-sun-air-temperature-example .plusslider-pagination li').off('click.animate');
 						}
@@ -853,7 +848,7 @@ var slideInit = {
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, "January 01 2003", "January 01 2005" );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, "January 01 2003", "January 01 2005" );
+							//widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, "January 01 2003", "January 01 2005" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-example1 .plusslider-pagination li').off('click.animate');
@@ -1025,14 +1020,9 @@ var slideInit = {
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
-						else if (currSlide == 2) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
+						else if (currSlide >= 2) {
+							//widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
-						}
-						else if (currSlide>=3) {
-							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
-							widgetAnimations.swinggraph(wInstance);
-							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-air-temperature-example .plusslider-pagination li').off('click.animate');
 						}
