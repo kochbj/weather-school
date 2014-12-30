@@ -14,6 +14,16 @@ function widgetScroll ( evt ) {
 	}
 }
 
+function turnOnNextButton (evt) {
+	// Since we rely on the evt object it needs to be instantiated if it does not exist
+	if ( !evt ) { evt = { type : null }; }
+	var evtType = evt.type.split( '-' );
+	var wInstance = this;
+	if ( evt.type == 'initialize' ) {
+		$( '#slider-navigation .next' ).onFirst('click',nextClickevt);		
+	}
+}
+
 function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -352,7 +362,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis ]
+					callbacks : [ mapXvis, turnOnNextButton ]
 				}
 			);
 		}
@@ -405,7 +415,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDailyTempEx ],
+					callbacks : [ cbDailyTempEx, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daily-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -449,7 +459,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -473,7 +483,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbTempLatNorthern ],
+					callbacks : [ cbTempLatNorthern, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -509,7 +519,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbTempLatSouthern  ],
+					callbacks : [ cbTempLatSouthern, turnOnNextButton  ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-southern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -543,7 +553,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ /*cbTempLatitude*/ , mapXvis, resetMap ]
+					callbacks : [ /*cbTempLatitude*/ , mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -568,7 +578,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbElevExample ],
+					callbacks : [ cbElevExample, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-elevation-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -605,7 +615,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -630,7 +640,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbLargeBodiesWaterExample ],
+					callbacks : [ cbLargeBodiesWaterExample, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-water-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -667,7 +677,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -691,7 +701,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunEx ],
+					callbacks : [ cbHeightSunEx, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -725,7 +735,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -760,7 +770,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunAirTempEx ],
+					callbacks : [ cbHeightSunAirTempEx, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-air-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -811,7 +821,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -836,7 +846,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx1 ],
+					callbacks : [ cbDaylightEx1, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example1-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -872,7 +882,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx2 ],
+					callbacks : [ cbDaylightEx2, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example2-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -906,7 +916,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx3 ],
+					callbacks : [ cbDaylightEx3, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example3-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -940,7 +950,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx4 ],
+					callbacks : [ cbDaylightEx4, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example4-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -1009,7 +1019,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightAirTempEx ],
+					callbacks : [ cbDaylightAirTempEx, turnOnNextButton ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-air-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -1060,7 +1070,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -1084,7 +1094,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
@@ -1118,7 +1128,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap ]
+					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
 				}
 			);
 		}
