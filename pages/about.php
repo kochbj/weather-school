@@ -29,7 +29,7 @@ Abigail Burrows, Senior Project Coordinator<br>
 Barbara Goldstein, Program Associate<br>
 Bernard Koch, Research Assistant<br>
 Mary Koppal, Communications Director<br>
-Francis Molina, Technology Director<br>
+Francis Molina, Ph.D., Technology Director<br>
 Brian Sweeney, Manager, applications development<br>
 Jill Wertheim, Ph.D., Research Associate<br>
 Ted Willard, Project Director

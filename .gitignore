@@ -11,3 +11,4 @@
 includes/climateViz/php/data/noaa/data_file_cache/offline/gsod/1991/.listing
 
 includes/climateViz/php/data/noaa/data_file_cache/offline/gsod/1990/.listing
+*.php~

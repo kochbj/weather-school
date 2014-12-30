@@ -127,7 +127,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>Notice that in this example, on April 9, 2000, the average temperature for that day was 43 degrees Fahrenheit. But the day before, on April 8, the average temperature was 65 degrees Fahrenheit.</p>
 			</div>
 			<div>	
-				<p>That's a big change in one day's time. The second part of this module will help you understand how the temperature in a particular location can change so much from one day to the next. </p>
+				<p>That's a big change in one day's time. The second part of this module will help you understand how the temperature at a particular location can change so much from one day to the next. </p>
 			</div>
 					</div>
 	</div>
@@ -135,7 +135,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 <div id="daily-temperature-air" class="activity" data-slide-type="normal" data-slide-title="Movement of Air" data-slide-parent-id="daily-temperature-intro">
 	<h2 style="margin-left: 25px;">The Movement of Air</h2>
 	<div class="scrollable">
-	<p style="margin-left: 15px;">You have now seen that temperature in a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
+	<p style="margin-left: 15px;">You have now seen that temperature at a particular place can vary considerably from one day to the next. This variation is caused by the movement of large masses of warm and cool air.</p>
 	<p style="margin-left: 15px;">As the wind blows, warmer or cooler air is constantly moving into and out of an area, and this movement of air changes the temperature at that place.</p>
 	<p style="margin-left: 15px;">To see how clouds and, therefore, air move across the United States, click on the following web links. The cloud movement has been speeded up, but you can see from these videos that the air above us is always moving. Sometimes warmer air is moving in from another location and sometimes colder air is moving in. This never ending process goes on continuously around the world.</p>
 	<div style="text-align: center; display: block;">
@@ -212,7 +212,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<div class="slider">
 			<div>
 				
-					<p>1. Choose a place on the map. Choose starting and ending dates that cover more than just a single year. Click the "Start" calendar then click a specific date to choose the starting date. Click the "End" calendar then click a specific date to choose the ending date.</p>
+					<p>1. Choose a place on the map. Choose starting and ending dates that cover more than just a single year. Click the "Start" calendar, and then click a specific date to choose the starting date. Click the "End" calendar, and then click a specific date to choose the ending date.</p>
 			</div>
 			<div>
 					<p>2. Observe the temperature pattern at that place.</p>
@@ -263,7 +263,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 				<p>Look at the pattern of temperatures at the two places.</p>
-				<p>Notice that it is warmer every day of the year in the place that is farther south (the <span class="lat-low">upper</span> line).</p>
+				<p>Notice that it is warmer every day of the year at the place that is farther south (the <span class="lat-low">upper</span> line).</p>
 			</div>
 			<div>
 				<p>As a general rule, in the northern hemisphere, places that are farther south (closer to the <span class="tooltip" title="An area that extends from about 1500 miles north of the equator to 1500 miles south of the equator. When it is expressed in terms of latitude, the tropical zone extends from 23.5° north latitude to 23.5° south latitude.">tropical zone</span>) tend to be warmer than places that are farther north (farther away from the tropical zone). Within the tropical zone, the latitude where the temperature is the warmest changes gradually throughout the year. Sometimes it is at the northernmost boundary of the tropical zone, sometimes it is at the equator, and sometimes it is at the southernmost boundary of the tropical zone.</p>
@@ -609,7 +609,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div>
 				<p>How high the sun gets in the sky changes smoothly from day to day because there is nothing besides the continuous movement of the earth and sun to affect it.</p>
 			</div>
-			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky for locations and dates of your choosing. See if other locations in the United States have annual patterns that are similar to those in New York City.</p>
+			<div>	<p>You will now have a chance to observe annual patterns of the height of the sun in the sky for locations and dates of your choosing. See if other locations have annual patterns that are similar to those in New York City.</p>
 			</div>
 		</div>
 	</div>
@@ -675,7 +675,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div>Select columns in the table in the following order: Click first at the top of the "Maximum height of sun in sky" column to highlight it in red; then click at the top of the "Average air temperature" columns to highlight them in blue. If you make a mistake and the colors are switched, you can re-click to unselect and try again.</p></div>
 			<div><p>The graph shown is called a scatterplot. Each point represents a value for the two variables you highlighted in the table. Data for the first variable you selected will always be shown on the X-axis, and data for the second variable will always be shown on the Y-axis. This graph tells you what the average daily temperature is when the maximum height of the sun in the sky has a particular value.</p></div>
 			<div><p>Click on Line of Best Fit at the bottom right corner of the graph.</p></div>
-			<div><p>The line that runs through the points on the scatterplot is called a line of best fit. It represents the linear (straight-line) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related and gives you an estimate of what the temperature might be when you what the maximum height of sky is.”.</p></div>
+			<div><p>The line that runs through the points on the scatterplot is called a line of best fit. It represents the linear (straight-line) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related and gives you an estimate of what the temperature might be when you know what the maximum height of sky is.</p></div>
 			<div><p>This graph shows that at the times of the year when the maximum height of the sun in the sky is greater, the temperature in Chicago tends to be warmer, and at the times of the year when the sun is lower in the sky, the temperature tends to be cooler. This is because when the sun is higher in the sky, a greater amount of the sun's energy reaches the earth at that location, heating the air and the earth.</p></div>
 			<div><p>You will now have a chance to explore the relationship between the height of the sun in the sky and average daily temperature at locations and dates of your choosing. See whether other locations show the same relationship between the maximum height of the sun in the sky and average daily temperature that you saw in Chicago.</p></div>
 		</div>
@@ -763,7 +763,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div><p>Now we are going to see what happen to the number of hours of daylight when we look at a place that is north of New York City. Plattsburgh, NY, which is about 300 miles north of New York City, is pinpointed on the map. </p>
 			</div>
 			<div>
-				<p>The graph shows, the number of hours of daylight for Plattsburgh over a one-year period. Compare this graph to the similar graph for New York City in the previous activity.</p>
+				<p>The two lines show the number of hours of daylight for Plattsburgh over a one-year period along with the hours of daylight for New York City.</p>
 			</div>
 			<div>
 				<p>Notice that in  late December there are only 8.8 hours of daylight in Plattsburg, a little <em>less</em> than the 9.2 hours for the same time period in  New York City. But in late June, there are 15.6 hours of daylight in  Plattsburgh, a little <em>more</em> than the  15.1 hours in New York City.</p>
@@ -787,7 +787,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 				<p>The place we have chosen is in Colombia in South America.</p>
 			</div>
 			<div><p>Notice how flat the line on the graph is? In late December there are just a little less than 12 hours of daylight, and in late June, there are just a little more than 12 hours of daylight. In late March (the first day of spring) and in late September (the  first day of fall), there are 12 hours of daylight, just as there are in New  York City.</p></div>
-			<div>Another way to describe the difference in the number of hours of daylight at these different places is to say that the range of daylight hours is different from place to place. The annual range of daylight hours in Colombia, which is near the equator in South America, is very small; the range is quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
+			<div>Another way to describe the difference in the number of hours of daylight at these different places is to say that the <i>range</i> of daylight hours is different from place to place. The annual range of daylight hours in Colombia, which is near the equator in South America, is very small; the range is quite a bit larger in New York City; and larger yet in Plattsburgh, NY.
 			</div>
 		</div>
 	</div>
@@ -877,7 +877,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>The line of best fit that you see going through the scatterplot represents the linear (straight-line) relationship between the two variables you selected in the table. It shows you how the number of hours of daylight and the average daily temperature are related and allows you to estimate what the average temperature might be if you know the hours of daylight.</p>
 			</div>
-			<div>	<p>You can see from this graph that during the time of the year when the days are longer the temperature tends to be warmer, and during the time of year when the days are shorter, the temperature tends to be cooler. This makes sense because the longer the day, the more time there is for the earth and the air around the earth to absorb energy from the sun.</p></div>
+			<div>	<p>You can see from this graph that during the time of the year when the days are longer, the temperature tends to be warmer, and during the time of year when the days are shorter, the temperature tends to be cooler. This makes sense because the longer the day, the more time there is for the earth and the air around the earth to absorb energy from the sun.</p></div>
 			<div>	<p>You will now have a chance to explore the relationship between the hours of daylight and average daily temperature at locations of your choosing. See if there is a relationship between the hours of daylight and average daily temperature at other locations.</p></div>
 		
 		</div>
@@ -911,8 +911,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>What happens to the average daily temperature at a location as the hours of daylight increase?</li>
-			<li>Why is the relationship between the number of hours of daylight at a location and the average daily temperature at that location called a linear relationship?</li>
+			<li>What happens to the average temperature at a location as the hours of daylight increase?</li>
+			<li>Why is the relationship between the number of hours of daylight at a location and the average temperature at that location called a linear relationship?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
 		<p>Find out how the <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
@@ -944,8 +944,8 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="instructions">
 		<div class="slider">
 		<div>
-		<p style="padding-left:1.5em; text-indent:-1.5em;">1. To see a table of data averaged over 30 years for a given location on a particular day, first select a location, and then choose a date</p>
-		<p style="padding-left:1.5em; text-indent:-1.5em;">2. To compare data for two locations on the same day, select a second location. You will see that the data for the second location appears in a seperate column next to the data for the first location.</p>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">1. To see a table of data averaged over 30 years for a given location on a particular day, first select a location, and then choose a date.</p>
+		<p style="padding-left:1.5em; text-indent:-1.5em;">2. To compare data for two locations on the same day, select a second location. You will see that the data for the second location appears in a separate column next to the data for the first location.</p>
 	</div>
 	<div>
 		<p style="padding-left:1.5em; text-indent:-1.5em;">3. You can keep adding new locations, but only two locations will be shown in the table at any one time.</p>
@@ -969,8 +969,6 @@ At the end of each module you can check your understanding by answering the <b>Q
 		</div>
 		<div>
 			<p>You may have noticed that the Variable Relationship Explorer provided two additional columns of data for each location--the daily recorded energy from the sun and the daily theoretical energy from the sun. You will now have a chance to explore these variables too.</p></div>
-		<div>	<p>On the next screen, choose any two variables to see how they are related to each other.</p> 
-		</div>
 			<div>	<p style="padding-left:1.5em; text-indent:-1.5em;">1. Choose a location anywhere in the world.</p>
 				<p style="padding-left:1.5em; text-indent:-1.5em;">2. Open the calendar and choose at least 10 dates scattered throughout the year.</p>
 				<p style="padding-left:1.5em; text-indent:-1.5em;">3. Decide which two variables you would like to compare from  those five variables listed at the top of the columns.</p></div>

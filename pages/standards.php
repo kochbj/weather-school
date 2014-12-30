@@ -1,5 +1,5 @@
 <div style='background-color: #e0f0ff; box-shadow: 1px 1px 2px #A7CBE9; border: 1px solid #daeaf0; border-radius:20px; padding: 10px 20px;'>
-<h2 style="text-align:center; font-size:175%;">Learning Goals from the Next Generation Science Standards and Common Core State Standards in Mathematics (CCSS-M)</h2>
+<h2 style="text-align:center; font-size:175%;">Learning Goals from the Next Generation Science Standards (NGSS) and Common Core State Standards in Mathematics (CCSS-M)</h2>
 <br>
 <hr>
 <div style="display:table; margin:2em auto;">
@@ -71,7 +71,7 @@ Patterns in rates of change and other numerical relationships can provide inform
 <h5 style="font-size:120%; margin-bottom:0em;">Investigate patterns of association in bivariate data</h5>
 <ul style="font-size:115%">
 <li>Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as <span style="color:gray;">clustering, outliers, positive or negative association,</span> linear association, and nonlinear association.</li>
-<li>Know that straight lines are widely used to model relationships between two quantitative variables. For scatter plots that suggest a linear association<span style="color:gray;">, informally fit a straight line, and informally assess the model fit by judging the closeness of the data points to the line</span>.  (CCSS-M, p. 56)</li>
+<li>Know that straight lines are widely used to model relationships between two quantitative variables. <span style="color:gray;">For scatter plots that suggest a linear association, informally fit a straight line, and informally assess the model fit by judging the closeness of the data points to the line</span>.  (CCSS-M, p. 56)</li>
 </ul>
 
 <br>
