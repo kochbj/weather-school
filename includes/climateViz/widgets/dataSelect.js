@@ -221,18 +221,18 @@ function dataSelect_instantiate(wInstance) {
 						$( '.widget-cover' ).hide();
 						tog.removeClass('active');
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function(){
+							wInstance.map.date.ui.find('.ui-datepicker-current-day').click();
 							if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
-							//Dinput.trigger('change');
 						});
 				 	}
 				};
 				_deactivateDpicker = function () {
 						$( document ).off('click',_togoutside);
 						$( '.widget-cover' ).hide();
-						tog.removeClass( 'active' );
+						tog.removeClass( 'active' );						
 						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function() {
+						wInstance.map.date.ui.find('.ui-datepicker-current-day').click();
 						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
-						//Dinput.trigger('change');
 						});
 				};
 				_activateDpicker = function () {
@@ -275,7 +275,13 @@ function dataSelect_instantiate(wInstance) {
 							}
 						}
 						ui.dpDiv.parent().datepicker( 'refresh' );
-						_deactivateDpicker();
+						$( document ).off('click',_togoutside);
+						$( '.widget-cover' ).hide();
+						tog.removeClass( 'active' );
+						tog.parents( '.map-date' ).find( '.visual-control .datepicker' ).fadeOut(function() {
+						if ( wInstance.settings.date.max != 1 ) tog.parents( '.map-date' ).find( '.input input' ).val('Hover to See');
+						});
+						//_deactivateDpicker();
 						wInstance._callback({type:'user-select-date'});
 					} ,
 					beforeShowDay : function ( dateObj ) {
