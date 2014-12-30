@@ -1889,6 +1889,8 @@ function calculatedSolarDataFetch( evt ) {
 							break;
 						case 'sunEnergyT' :
 							dataVal.sunEnergyT = ( sunPower.length > 1 ? sunPower.reduce( function( a , b ) { return Math.abs( parseFloat( a ) ) + Math.abs( parseFloat( b ) ); } ) : ( sunPower.length == 1 ? sunPower[0] : 0 ) );
+							series.dataMeta['sunEnergyT'].range[0] = Math.min(series.dataMeta['sunEnergyT'].range[0],dataVal.sunEnergyT);
+							series.dataMeta['sunEnergyT'].range[1] = Math.max(series.dataMeta['sunEnergyT'].range[1],dataVal.sunEnergyT);
 							break;
 						case 'sunImage' :
 							dataVal.sunImage = this.settings.__libraryURI + '/widgets/media/' + ( Math.round( dataVal.sunAngle / 5 ) * 5 ) + '-degrees-sun.png';
@@ -2115,9 +2117,13 @@ function fetchStatsAjax ( evt ) {
 						break;
 					case 'sunEnergy' :
 						dataVal.sunEnergy = parseFloat( servermsg.results[0].station.avg_energy );
+						series.dataMeta['sunEnergy'].range[0] = Math.min(series.dataMeta['sunEnergy'].range[0],dataVal.sunEnergy);
+						series.dataMeta['sunEnergy'].range[1] = Math.max(series.dataMeta['sunEnergy'].range[1],dataVal.sunEnergy);
 						break;
 					case 'sunEnergyT' :
 						dataVal.sunEnergyT = ( sunPower.length > 1 ? sunPower.reduce( function( a , b ) { return Math.abs( parseFloat( a ) ) + Math.abs( parseFloat( b ) ); } ) : ( sunPower.length == 1 ? sunPower[0] : 0 ) );
+						series.dataMeta['sunEnergyT'].range[0] = Math.min(series.dataMeta['sunEnergyT'].range[0],dataVal.sunEnergyT);
+						series.dataMeta['sunEnergyT'].range[1] = Math.max(series.dataMeta['sunEnergyT'].range[1],dataVal.sunEnergyT);
 						break;
 					case 'sunImage' :
 						dataVal.sunImage = aaasClimateViz.settings.__libraryURI + '/widgets/media/' + ( Math.round( dataVal.sunAngle / 5 ) * 5 ) + '-degrees-sun.png';
