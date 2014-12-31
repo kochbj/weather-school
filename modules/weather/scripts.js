@@ -14,16 +14,6 @@ function widgetScroll ( evt ) {
 	}
 }
 
-function turnOnNextButton (evt) {
-	// Since we rely on the evt object it needs to be instantiated if it does not exist
-	if ( !evt ) { evt = { type : null }; }
-	var evtType = evt.type.split( '-' );
-	var wInstance = this;
-	if ( evt.type == 'initialize' ) {
-		$( '#slider-navigation .next' ).onFirst('click',nextClickevt);		
-	}
-}
-
 function elevator( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	var wInstance = this;
@@ -275,13 +265,13 @@ function cbDailyTempEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	//setTimeout( function ( ) {
+	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
 		//wInstance.map.date.data('value',[[new Date( "2001-01-01T17:00:00Z" ),new Date("2002-01-01T17:00:00Z")]]);
  		wInstance.map.date.data('value',[[moment("January 01 2001","MMMMDDYYYY").toDate(),moment("January 01 2002","MMMMDDYYYY").toDate()]]); 
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	//} , 500 );
+	} , 500 );
 	}
 }
 function cbHeightSunEx ( evt ) {
@@ -362,7 +352,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, turnOnNextButton ]
+					callbacks : [ mapXvis ]
 				}
 			);
 		}
@@ -415,7 +405,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDailyTempEx, turnOnNextButton ],
+					callbacks : [ cbDailyTempEx ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daily-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -459,7 +449,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -483,7 +473,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbTempLatNorthern, turnOnNextButton ],
+					callbacks : [ cbTempLatNorthern ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -519,7 +509,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbTempLatSouthern, turnOnNextButton  ],
+					callbacks : [ cbTempLatSouthern  ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-southern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -553,7 +543,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ /*cbTempLatitude*/ , mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ /*cbTempLatitude*/ , mapXvis, resetMap ]
 				}
 			);
 		}
@@ -578,14 +568,14 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbElevExample, turnOnNextButton ],
+					callbacks : [ cbElevExample ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-elevation-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "January 01 2004", "December 31 2004" );
 						else if (currSlide >= 7) {
-							//widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "January 01 2004", "December 31 2004" );
+							widgetAnimations.placestations(wInstance, [ 27.71,85.33 ], ["TINGRI", "GORAKHPUR"], "January 01 2004", "December 31 2004" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-elevation-example .plusslider-pagination li').off('click.animate');
@@ -615,7 +605,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -640,14 +630,14 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbLargeBodiesWaterExample, turnOnNextButton ],
+					callbacks : [ cbLargeBodiesWaterExample ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-water-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "January 01 2004", "December 31 2004" );
 						else if (currSlide >= 4) {
-						 	//widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "January 01 2004", "December 31 2004" );
+						 	widgetAnimations.placestations(wInstance, [ 69.38,20.71 ], ["TROMSO", "KAUTOKEINO"], "January 01 2004", "December 31 2004" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-water-example .plusslider-pagination li').off('click.animate');
@@ -677,7 +667,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -701,7 +691,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunEx, turnOnNextButton ],
+					callbacks : [ cbHeightSunEx ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -735,7 +725,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -770,15 +760,20 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbHeightSunAirTempEx, turnOnNextButton ],
+					callbacks : [ cbHeightSunAirTempEx ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#height-sun-air-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
-						else if (currSlide >= 3) {
-							//widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
+						else if (currSlide == 3) {
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
+						}
+						else if (currSlide>=4) {
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
+							widgetAnimations.swinggraph(wInstance);
+							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#height-sun-air-temperature-example .plusslider-pagination li').off('click.animate');
 						}
@@ -816,7 +811,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -841,14 +836,14 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx1, turnOnNextButton ],
+					callbacks : [ cbDaylightEx1 ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example1-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [40.81 , -73.96], null, "January 01 2003", "January 01 2005" );
 						else if (currSlide >= 2) {
-							//widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, "January 01 2003", "January 01 2005" );
+							widgetAnimations.placemarkers(wInstance, [40.81 , -73.96 ], null, "January 01 2003", "January 01 2005" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-example1 .plusslider-pagination li').off('click.animate');
@@ -877,7 +872,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx2, turnOnNextButton ],
+					callbacks : [ cbDaylightEx2 ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example2-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -911,7 +906,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx3, turnOnNextButton ],
+					callbacks : [ cbDaylightEx3 ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example3-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -945,7 +940,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightEx4, turnOnNextButton ],
+					callbacks : [ cbDaylightEx4 ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-example4-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
@@ -1014,15 +1009,20 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ cbDaylightAirTempEx, turnOnNextButton ],
+					callbacks : [ cbDaylightAirTempEx ],
 					animate: function (evt) {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#daylight-air-temperature-example-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
 						if (currSlide == 1) widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
-						else if (currSlide >= 2) {
-							//widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
+						else if (currSlide == 2) {
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
 							widgetAnimations.swinggraph(wInstance);
+						}
+						else if (currSlide>=3) {
+							widgetAnimations.placetablemarker(wInstance,[ 41.87 , -87.61 ], 1995 );
+							widgetAnimations.swinggraph(wInstance);
+							//widgetAnimations.elevatetable(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#daylight-air-temperature-example .plusslider-pagination li').off('click.animate');
 						}
@@ -1060,7 +1060,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -1084,7 +1084,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}
@@ -1118,7 +1118,7 @@ var slideInit = {
 							}
 						)
 					],
-					callbacks : [ mapXvis, resetMap, turnOnNextButton ]
+					callbacks : [ mapXvis, resetMap ]
 				}
 			);
 		}

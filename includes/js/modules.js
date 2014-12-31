@@ -92,6 +92,28 @@ function ctrlSlider_cb ( psobj ) {
 			$( '#slider-menu').animate( { left : $( '#slider-positioner' ).width( ) - $( '#slider-menu' ).data( 'width' ) + 4 } , 450, function() {$('#slider-menu').addClass( 'active' );} );
 			//$( '#slider-menu a').removeClass('current');
 			$('#slider-menu a').removeClass('ui-accordion-header-active');
+			/*switch(id) {
+				case 'contents-2':
+					$('#slider-menu a[href="#daily-temperature-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#annual-temperature-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-3':
+					$('#slider-menu a[href="#temperature-lat-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#temperature-elevation-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#temperature-water-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-4':
+					$('#slider-menu a[href="#height-sun-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#height-sun-air-temperature-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-5':
+					$('#slider-menu a[href="#daylight-intro"]').addClass('ui-accordion-header-active');
+					$('#slider-menu a[href="#daylight-air-temperature-intro"]').addClass('ui-accordion-header-active');
+					break;
+				case 'contents-6':
+					$('#slider-menu a[href="#data-tools-intro"]').addClass('ui-accordion-header-active');
+					break;
+							}*/
 					}, 100);
 	}
 	/*close menu if open */
@@ -132,7 +154,7 @@ function ctrlSlider_cb ( psobj ) {
 		$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
 		//});
 	}
-	else {$( '#slider-navigation .next' ).onFirst('click',nextClickevt);}
+	else $( '#slider-navigation .next' ).onFirst('click',nextClickevt);
 	$( '#slider-navigation .prev' ).off('click',prevClickevt);
 	$( '#slider-navigation .prev' ).on('click',prevClickevt);
 	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
