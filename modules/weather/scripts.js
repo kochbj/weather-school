@@ -1,7 +1,3 @@
-/*function new Date(dateStr) {
-		var date = new Date(dateStr);
-    return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()); 
-    }*/	
 function widgetScroll ( evt ) {
 	if ( !evt ) { evt = { type : null }; }
 	switch ( evt.type ) {
@@ -265,13 +261,11 @@ function cbDailyTempEx ( evt ) {
 	var evtType = evt.type.split( '-' );
 	var wInstance = this;
 	if ( evt.type == 'initialize' ) {
-	setTimeout( function ( ) {
 		google.maps.event.trigger( wInstance.map , 'click' , { latLng : new google.maps.LatLng( 38.8935965, -77.014576 ), staticmap: true } );
 		//wInstance.map.date.data('value',[[new Date( "2001-01-01T17:00:00Z" ),new Date("2002-01-01T17:00:00Z")]]);
  		wInstance.map.date.data('value',[[moment("January 01 2001","MMMMDDYYYY").toDate(),moment("January 01 2002","MMMMDDYYYY").toDate()]]); 
 		wInstance.map.date.ui.find('.ui-state-active').click();
 		$( '#slider-navigation .next' ).on('click.animate',wInstance.settings.animate);
-	} , 500 );
 	}
 }
 function cbHeightSunEx ( evt ) {

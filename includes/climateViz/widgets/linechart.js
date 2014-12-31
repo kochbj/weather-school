@@ -285,7 +285,7 @@ function linechart_instantiate(wInstance) {
 		}
 	}
 	wInstance.settings._deferred.resolve();
-	
+	wInstance._callback({'type':'instantiate'});	
 }
 function linechart_initialize () {
 	$.getScript(aaasClimateViz.settings.__libraryURI+'/js/highcharts.regression.js');

@@ -86,7 +86,7 @@
 </head>
 <body>
 	<div id="slider-positioner">
-		<script>
+	<script>	
 // Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/IWB0Ty3WEiCebGnplEO0cg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
@@ -149,7 +149,11 @@ UserVoice.push(['autoprompt', {}]);
 			
 		</div>
 	</div>
-		<div id="feedback">feedback?</div>
+		<div id="feedback">help/feedback?</div>
+		<div id="help-tip">Widgets not appearing? Try refreshing (Ctrl/&#8984;+R).</div>
+			<script>
+							$('#feedback').hover( function() { setTimeout( function() {$('#help-tip').show("slide", { direction: "left" }, 1000); },200); }, function() { setTimeout( function() {$('#help-tip').hide("slide", { direction: "left" }, 4000); },0); } );
+		</script>
 		<div id="homebutton" onclick="window.open('','weatherhome').focus()"></div>
 	<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
 <?php /*

@@ -5,7 +5,7 @@ textarea { width: 95%; height: 4em; }
 
 .you-are-here { color: #999999; text-align: center; }
 .you-are-here * { margin: 0px; }
-
+#help-tip { color: #FFF0C0; line-height: 16px; position: absolute; margin: 0 15px; left: 88px; font-size: 70%; display: none; }
 #slider-positioner { position: relative; width: 906px; height: 700px; margin: 0px 15px; overflow: hidden; padding: 0px; background-color: #dadada; }
 
 .plusslider { background-color: #ffffff; }
