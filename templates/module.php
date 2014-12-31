@@ -152,7 +152,7 @@ UserVoice.push(['autoprompt', {}]);
 		<div id="feedback">help/feedback?</div>
 		<div id="help-tip">Widgets not appearing? Try refreshing (Ctrl/&#8984;+R).</div>
 			<script>
-							$('#feedback').hover( function() { setTimeout( function() {$('#help-tip').show("slide", { direction: "left" }, 1000); },200); }, function() { setTimeout( function() {$('#help-tip').hide("slide", { direction: "left" }, 4000); },0); } );
+							$('#feedback').hover( function() { $('#help-tip').finish().delay(300).show("slide", { direction: "left" }, 1000); } , function() { $('#help-tip').delay(3000).hide("slide", { direction: "left" }, 1000); } );
 		</script>
 		<div id="homebutton" onclick="window.open('','weatherhome').focus()"></div>
 	<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
