@@ -33,7 +33,7 @@ function createChart (wInstance) {
 			} else {
 				dataX = wInstance.data[series].data[i][dataKeys[0]];
 			}
-			dataY = wInstance.data[series].data[i][dataKeys[1]];
+			dataY = (wInstance.data[series].dataMeta[dataKeys[1]].type == 'datetime' ?  wInstance.data[series].data[i][dataKeys[1]].getTime() : wInstance.data[series].data[i][dataKeys[1]]);
 			//yMin=Math.min(yMin,dataY);
 			//yMax=Math.max(yMax,dataY);
 			dataSeries.push([dataX,dataY]);
