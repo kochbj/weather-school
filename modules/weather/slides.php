@@ -571,13 +571,13 @@ At the end of each module you can check your understanding by answering the <b>Q
 	<div class="guiding-questions">
 		<h2>Quiz Yourself:</h2>	
 		<ul>
-			<li>In the winter, what effect does a large body of water have on air temperature over nearby land?</li>
-			<li>In the summer, what effect does a large body of water have on air temperature over nearby land?</li>
+			<li>In the winter, what effect does a large body of water have on average air temperature over nearby land?</li>
+			<li>In the summer, what effect does a large body of water have on average air temperature over nearby land?</li>
 			<li>What effect does a large body of water have on the range between high and low temperatures throughout the year over nearby land?</li>
 	
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">properties of water</a> cause large bodies of water to have a moderating effect on air temperature over nearby land.</p>
+		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">properties of water</a> cause large bodies of water to have a moderating effect on average air temperature over nearby land.</p>
 	</div>
 	</div>
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
@@ -670,9 +670,9 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<div><p>In previous modules the graphs showed how both temperature and height of the sun in the sky changed over time in a repeating up and down manner throughout the year. The graphs showed a repeating pattern because of the movement of the earth around the sun.</p>
 			</div>
 			<div><p>In this activity, you will graph the relationship between two variables (temperature and height of the sun in the sky) both of which change over time. The map above pinpoints Chicago, IL.</p></div>
-			<div><p>The table above shows data from Chicago for 12 specific dates. For each date, the data you see in the "Average air temperature" and "Daily recorded energy from the sun" is averaged over a period of 30 years. Data in the other columns does not change from year to year. You can hover over the column headers for a description of each data type.</p>
+			<div><p>The table above shows data from Chicago for 12 specific dates. For each date, the data you see in the "Average temperature" and "Daily recorded energy from the sun" is averaged over a period of 30 years. Data in the other columns does not change from year to year. You can hover over the column headers for a description of each data type.</p>
 			</div>
-			<div>Select columns in the table in the following order: Click first at the top of the "Maximum height of sun in sky" column to highlight it in red; then click at the top of the "Average air temperature" columns to highlight them in blue. If you make a mistake and the colors are switched, you can re-click to unselect and try again.</p></div>
+			<div>Select columns in the table in the following order: Click first at the top of the "Maximum height of sun in sky" column to highlight it in red; then click at the top of the "Average temperature" columns to highlight them in blue. If you make a mistake and the colors are switched, you can re-click to unselect and try again.</p></div>
 			<div><p>The graph shown is called a scatterplot. Each point represents a value for the two variables you highlighted in the table. Data for the first variable you selected will always be shown on the X-axis, and data for the second variable will always be shown on the Y-axis. This graph tells you what the average daily temperature is when the maximum height of the sun in the sky has a particular value.</p></div>
 			<div><p>Click on Line of Best Fit at the bottom right corner of the graph.</p></div>
 			<div><p>The line that runs through the points on the scatterplot is called a line of best fit. It represents the linear (straight-line) relationship between the two variables. It tells you how the maximum height of the sun in the sky and average daily temperature are related and gives you an estimate of what the temperature might be when you know what the maximum height of sky is.</p></div>
@@ -715,7 +715,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Use the <a class="fake-link" onclick="document.getElementById('seasons-simulator-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to air temperature.</p>
+		<p>Use the <a class="fake-link" onclick="document.getElementById('seasons-simulator-menu-link').click()">Seasons Simulator</a>, to see how the height of the sun in the sky is related to average temperature.</p>
 	</div>
 </div>
 <div id="daylight-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Hours of Daylight">
@@ -872,7 +872,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 			<div>
 			The table above is the same one you used in Module G. It shows data from Chicago averaged over a 30-year period for 12 specific dates. </p></div>
-			<div>	<p>Select columns in the table in the following order: click first on top of the "Hours of daylight" column to highlight it in red; then click on the top of the "Average air temperature" column to highlight it in blue. If you make a mistake and the colors are reversed, you can re-click to unselect and try again.</p></div>
+			<div>	<p>Select columns in the table in the following order: click first on top of the "Hours of daylight" column to highlight it in red; then click on the top of the "Average temperature" column to highlight it in blue. If you make a mistake and the colors are reversed, you can re-click to unselect and try again.</p></div>
 			<div>	<p>Just as you saw in module G, the graph you see here is called a scatter plot. Each point represents a value for the two variables.</p></div>
 			<div>	<p>Click Line of Best Fit at the bottom right corner of the page.</p></div>
 			<div>	<p>The line of best fit that you see going through the scatterplot represents the linear (straight-line) relationship between the two variables you selected in the table. It shows you how the number of hours of daylight and the average daily temperature are related and allows you to estimate what the average temperature might be if you know the hours of daylight.</p>
