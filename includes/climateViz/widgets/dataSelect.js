@@ -1546,7 +1546,6 @@ function stationBasedDataFetch( markerID , stationID , wInstance ) {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify( 'ready' );
 						wInstance.settings.displayWidgets[i].loadData( wInstance.data );
-						console.log("wInstance1",wInstance,JSON.stringify(wInstance.data, undefined,2));
 						}
 					});
 				}
@@ -1704,7 +1703,6 @@ function stationBasedDataFetchAjax ( evt ) {
 				for ( i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets ) {
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify( 'ready' );
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData( aaasClimateViz.widgets[widgetIndex].data );
-					console.log("wInstance2",aaasClimateViz.widgets[widgetIndex],JSON.stringify(aaasClimateViz.widgets[widgetIndex].data,  undefined,2));
 				
 				}
 			});
@@ -1912,7 +1910,6 @@ function calculatedSolarDataFetch( evt ) {
 			for (i in wInstance.settings.displayWidgets) {
 				wInstance.settings.displayWidgets[i].notify('ready');
 				wInstance.settings.displayWidgets[i].loadData(wInstance.data);
-				console.log("wInstance3",wInstance,JSON.stringify(wInstance.data, undefined,1));
 			}
 		});
 	}
@@ -1961,7 +1958,6 @@ function fetchStats( evt ) {
 					for (i in wInstance.settings.displayWidgets) {
 						wInstance.settings.displayWidgets[i].notify('ready');
 						wInstance.settings.displayWidgets[i].loadData(wInstance.data);
-						console.log("wInstance4",wInstance,JSON.stringify(wInstance.data, undefined,2));
 					}
 				});
 			}
@@ -2146,7 +2142,6 @@ function fetchStatsAjax ( evt ) {
 				for (i in aaasClimateViz.widgets[widgetIndex].settings.displayWidgets) {
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].notify('ready');
 					aaasClimateViz.widgets[widgetIndex].settings.displayWidgets[i].loadData(aaasClimateViz.widgets[widgetIndex].data);
-					console.log("wInstance5",aaasClimateViz.widgets[widgetIndex],JSON.stringify(aaasClimateViz.widgets[widgetIndex].data,  undefined,2));
 				}
 			});
 		} ,
