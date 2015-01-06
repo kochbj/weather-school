@@ -472,9 +472,9 @@ var slideInit = {
 						var wInstance=aaasClimateViz.widgets[aaasClimateViz.widgetLookup['#temperature-lat-northern-ds']];
 						//if ($( '#slider-navigation .next' ).data('currSlide') == -1) return;
 						var currSlide = $( '#slider-navigation .next' ).data('currSlide')+1;
-						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], "January 01 2004", "December 31 2004" );
+						if (currSlide == 1) widgetAnimations.placemarkers(wInstance, [ 29.461029,-98.697739 ], [49.886083,-97.152921], "January 01 2004", "December 31 2004" );
 						else if (currSlide >= 2) {
-							widgetAnimations.placemarkers(wInstance, [49.886083,-97.152921], [ 29.461029,-98.697739 ], "January 01 2004", "December 31 2004" );
+							widgetAnimations.placemarkers(wInstance, [ 29.461029,-98.697739 ], [49.886083,-97.152921],  "January 01 2004", "December 31 2004" );
 							widgetAnimations.swinggraph(wInstance);
 							$('#slider-navigation .next').off('click.animate');
 							$('#temperature-lat-northern .plusslider-pagination li').off('click.animate');
