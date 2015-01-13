@@ -153,7 +153,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<li>Describe the effect of the movement of large air masses on daily temperature.</li>
 	</ul>
 	<h2>Expand Your Knowledge:</h2>	
-	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank">air masses form</a>.</p>
+	<p>Find out how <a href="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/arms/home.rxml');">air masses form</a>.</p>
 	</div>
 </div>
 
@@ -231,7 +231,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<li>For the places that you looked at in the United States, is the pattern of average daily temperature change exactly the same from year to year?</li>
 	</ul>
 	<h2>Expand Your Knowledge:</h2>	
-	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank">annual temperature patterns</a>?</p>
+	<p>What causes <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php');">annual temperature patterns</a>?</p>
 	</div>
 </div>
 <div id="temperature-lat-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Latitude and Temperature">
@@ -345,7 +345,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 		<li>What is the relationship between how far a place is from the tropical zone (latitude) and its average daily temperature?</li>
 	</ul>
 	<h2>Expand Your Knowledge:</h2>	
-	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity To The Equator" target="_blank">distance from the tropical zone</a> is related to the temperature of a place.</p>
+	<p>Find out why <a href="http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity%20To%20The%20Equator" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://www.ecn.ac.uk/what-we-do/education/tutorials-weather-climate/climate/factors-affecting-climate/#Proximity%20To%20The%20Equator');">distance from the tropical zone</a> is related to the temperature of a place.</p>
 	</div>
 </div>
 <div id="temperature-elevation-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Elevation and Temperature">
@@ -455,7 +455,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Find out why temperature is related to <a href="http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank">elevation</a>.</p>
+		<p>Find out why temperature is related to <a href="https://web.archive.org/web/20140704194609/http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/');">elevation</a>.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">
@@ -577,7 +577,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="-blank">properties of water</a> cause large bodies of water to have a moderating effect on average air temperature over nearby land.</p>
+		<p>Find out how the <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/land-and-water.php');">properties of water</a> cause large bodies of water to have a moderating effect on average air temperature over nearby land.</p>
 	</div>
 	</div>
 <div id="height-sun-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Height of the Sun in the Sky">
@@ -915,7 +915,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			<li>Why is the relationship between the number of hours of daylight at a location and the average temperature at that location called a linear relationship?</li>
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Find out how the <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank">sun's path in the sky</a>, is related to the number of daylight hours.</p>
+		<p>Find out how the <a href="http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://solar.physics.montana.edu/ypop/Classroom/Lessons/Sundials/sunpath.html');">sun's path in the sky</a>, is related to the number of daylight hours.</p>
 	</div>
 </div>
 <div id="data-tools-intro" class="module-intro" data-slide-type="key" data-slide-title="Introduction" data-slide-group-title="Additional Data Tools">

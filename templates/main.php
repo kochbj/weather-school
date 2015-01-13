@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 		
-	<title>Climate Resources ~ Project 2061 ~ AAAS</title>
+	<title>WeatherSchool @ AAAS Home</title>
 
 	<!--<link rel="stylesheet" type="text/css" href="<?php echo CLIMATE_DIR_WWW; ?>/includes/css/fonts/CartoGothicStd/CartoGothicStd.css" />-->
 	<link rel="stylesheet" type="text/css" href="hhtp://fonts.googleapis.com/css?family=Open+Sans"/>
