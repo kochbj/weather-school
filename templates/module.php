@@ -46,15 +46,6 @@
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery-ui.multidatespicker.js"></script>
 <script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/jquery/plugins/jquery.bind-first-0.2.3.js"></script>
 	<script type="text/javascript" src="<?php echo CLIMATE_DIR_WWW; ?>/includes/climateViz/js/controller.js"></script>
-	<script type='text/javascript' src='<?php echo CLIMATE_DIR_WWW; ?>/includes/js/modules.js'></script>
-	
-	<?php
-	$__local_js =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . 'scripts.js';
-	if ( file_exists( $__local_js ) ) {
-		echo '<script type="text/javascript" src="' , CLIMATE_DIR_WWW , str_replace( CLIMATE_DIR , '' , $__local_js ) , '" ></script>';
-	}
-	?>
-	
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,12 +55,7 @@
 		ga('create', 'UA-4074773-4', 'auto');
 		ga('send', 'pageview');
 	</script>
-	
-	<?php if ( isset( $__header  ) ) { echo $__header; } ?>
-	
-</head>
-<body>
-	<div id="slider-positioner">
+	<script type='text/javascript' src='<?php echo CLIMATE_DIR_WWW; ?>/includes/js/modules.js'></script>
 	<script>	
 // Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/IWB0Ty3WEiCebGnplEO0cg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
@@ -112,7 +98,22 @@ UserVoice.push(['addTrigger', '#feedback', { mode: 'contact', trigger_position: 
 
 // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
-</script>
+</script>	
+
+<?php
+	$__local_js =  CLIMATE_DIR . DIRECTORY_SEPARATOR . $handler . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . 'scripts.js';
+	if ( file_exists( $__local_js ) ) {
+		echo '<script type="text/javascript" src="' , CLIMATE_DIR_WWW , str_replace( CLIMATE_DIR , '' , $__local_js ) , '" ></script>';
+	}
+	?>
+	
+
+	
+	<?php if ( isset( $__header  ) ) { echo $__header; } ?>
+	
+</head>
+<body>
+	<div id="slider-positioner">	
 		<div id="slider-navigation">
 			<div id="click-cover" class="cover"></div>	
 				<div id="slider-menu">
@@ -133,12 +134,12 @@ UserVoice.push(['autoprompt', {}]);
 			
 		</div>
 	</div>
-		<div id="feedback">help/feedback?</div>
+		<div id="feedback" onclick="ga('send', 'event', 'button', 'click', 'help/feedback');">help/feedback?</div>
 		<div id="help-tip">Widgets not appearing? Try refreshing (Ctrl/&#8984;+R).</div>
 			<script>
 							$('#feedback').hover( function() { $('#help-tip').finish().delay(300).show("slide", { direction: "left" }, 1000); } , function() { $('#help-tip').delay(3000).hide("slide", { direction: "left" }, 1000); } );
 		</script>
-		<div id="homebutton" onclick="window.open('','weatherhome').focus()"></div>
+		<div id="homebutton" onclick="window.open('','weatherhome').focus(); ga('send', 'event', 'button', 'click', 'homebutton');"></div>
 	<div class="you-are-here"><p><span class="screen-id"></span> (#<span class="screen-num"></span> of <span class="screen-total"></span>)</p></div>
 <?php /*
 <div id="login" style="display: none;" title="">

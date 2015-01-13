@@ -2,7 +2,6 @@
 jQuery.fn.exists = function () {
 	return this.length !== 0 && this;
 }
-
 var ctrlSlider;
 var prevNextInterval;
 var replayData;
@@ -159,6 +158,8 @@ function ctrlSlider_cb ( psobj ) {
 	$( '#slider-navigation .prev' ).on('click',prevClickevt);
 	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
 	//if( typeof(jQuery( '#slider-navigation .prev' ).data( "events" ))==="undefined") $( '#slider-navigation .prev' ).on('click',prevClickevt);
+	 ga('set', 'page', id );
+   ga('send', 'pageview'); 	
 }
 function locationUpdate ( ) {
 	var section , screen , instruction;
@@ -187,6 +188,8 @@ function locationUpdate ( ) {
 	$( '#slider-navigation .next' ).onFirst('click',nextClickevt);
 	$( '#slider-navigation .prev' ).off('click',prevClickevt);
 	$( '#slider-navigation .prev' ).on('click',prevClickevt);
+	ga('set', 'page', 'Screen: ' + section +'.' + screen +( instruction ? '.' + instruction : '' ) );
+	ga('send', 'pageview');
 }
 
 $( function( ) {
