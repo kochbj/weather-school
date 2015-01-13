@@ -158,8 +158,6 @@ function ctrlSlider_cb ( psobj ) {
 	$( '#slider-navigation .prev' ).on('click',prevClickevt);
 	//if( typeof(jQuery( '#slider-navigation .next' ).data( "events" ))==="undefined") $( '#slider-navigation .next' ).on('click',nextClickevt);
 	//if( typeof(jQuery( '#slider-navigation .prev' ).data( "events" ))==="undefined") $( '#slider-navigation .prev' ).on('click',prevClickevt);
-	 ga('set', 'page', id );
-   ga('send', 'pageview'); 	
 }
 function locationUpdate ( ) {
 	var section , screen , instruction;
