@@ -54,9 +54,16 @@
 
 		ga('create', 'UA-4074773-4', 'auto');
 		ga('send', 'pageview');
+
+
+
 	</script>
-	<script type='text/javascript' src='<?php echo CLIMATE_DIR_WWW; ?>/includes/js/modules.js'></script>
-	<script>	
+
+<script type='text/javascript' src='<?php echo CLIMATE_DIR_WWW; ?>/includes/js/modules.js'></script>
+
+//add auto outbounds to all links
+<script>!function(){var t=function(t,e){e?window.open(t,e):window.location.href=t},e=function(t,e,n){t.addEventListener?t.addEventListener(e,n):t.attachEvent('on'+e,function(){n.call(t)})};if(document.getElementsByTagName)for(var n=document.getElementsByTagName('a'),i=document.domain.split('.').reverse()[1]+'.'+document.domain.split('.').reverse()[0],a=0;a<n.length;a++){var o='string'==typeof n[a].getAttribute('href')?n[a].getAttribute('href'):'',r=o.match(i);(o.match(/^https?\:/i)&&!r||o.match(/^mailto\:/i))&&e(n[a],'click',function(e){var n=this.getAttribute('href'),i='string'==typeof this.getAttribute('target')?this.getAttribute('target'):'';console.log('add event',n),ga('send','event','outbound','click',n,{hitCallback:t(n,i)},{nonInteraction:1}),e.preventDefault()})}}();</script>		
+<script>	
 // Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/IWB0Ty3WEiCebGnplEO0cg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
