@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin: http://weatherschool.aaas.org")
 header('Content-type: application/json');
 
 if ( isset( $__content  ) ) {
