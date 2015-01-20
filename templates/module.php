@@ -1,3 +1,6 @@
+<?php
+header("Access-Control-Allow-Origin: http://weatherschool.aaas.org");
+?>
 <!DOCTYPE html>
 <html>
 <head>
