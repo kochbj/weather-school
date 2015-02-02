@@ -455,7 +455,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 	
 		</ul>
 		<h2>Expand Your Knowledge:</h2>	
-		<p>Find out why temperature is related to <a href="https://web.archive.org/web/20140704194609/http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/" target="-blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/');">elevation</a>.</p>
+		<p>Find out why temperature is related to <a href="<?php echo CLIMATE_DIR_WWW; ?>/altitudearticle" target="_blank" onclick="ga('send', 'event', 'outbound', 'click', 'http://www.sciences360.com/index.php/why-does-air-temperature-decrease-with-increasing-altitude-22725/');">elevation</a>.</p>
 	</div>
 </div>
 <div id="temperature-water-intro" data-slide-type="key" class="module-intro" data-slide-title="Introduction" data-slide-group-title="Large Bodies of Water and Temperature">

@@ -73,7 +73,6 @@ header("Access-Control-Allow-Origin: http://weatherschool.aaas.org")
 				<li class="<?php echo ( $page == 'about' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/about">About</a></p></li>
 				<li class="<?php echo ( $page == 'standards' ? 'selected' : '' ); ?>"><p><a href="<?php echo CLIMATE_DIR_WWW; ?>/standards">Standards</a></p></li>
 				<li class="<?php echo ( $page == 'assessments' ? 'selected' : '' ); ?>"><p><a href="http://assessment.aaas.org/topics" target="_blank" onclick="ga('send', 'pageview', '/assessments');">Assessments</a></p></li>
-
 			</ul>
 		<!--</div>
 		<div id="userControls">
