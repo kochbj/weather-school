@@ -399,7 +399,7 @@ At the end of each module you can check your understanding by answering the <b>Q
 			</div>
 		
 			<div>
-				<p>You should see that even though both places have a similar pattern of rising and falling tempeartures throughout the year, the place at the higher elevation (Tingri) has a consistently lower temperature throughout the year.</p>
+				<p>You should see that even though both places have a similar pattern of rising and falling temperatures throughout the year, the place at the higher elevation (Tingri) has a consistently lower temperature throughout the year.</p>
 			</div>
 			<div>
 				<p>You will now have a chance to observe the relationship between elevation and temperature at locations of your choosing. See if other mountain locations experience lower temperatures compared to nearby locations at lower elevations.</p>
