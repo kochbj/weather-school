@@ -4,4 +4,4 @@ This repository contains an old version of the source for [weatherschool.aaas.or
 
 Weather-school is an educational resource to teach middle-school students about weather patterns by the team at AAAS's [Project2061](http://project2061.aaas.org). 
 
-![](./weatherschoolfrontpage.jpg)
+![](https://github.com/kochbj/weather-school/blob/bernie/weatherschoolfrontpage.JPG)
